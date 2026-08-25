@@ -5,6 +5,7 @@ import { ArrowLeft, ArrowRight, Check } from "lucide-react";
 
 import { LogoMark } from "@/components/logo";
 import { Button } from "@/components/ui/button";
+import { HeroForm } from "@/components/hero-form";
 import { getGuide, guides } from "@/lib/guides";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 
@@ -131,14 +132,12 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
           ))}
         </article>
 
-        <section className="mt-14 rounded-[1.75rem] bg-[#173b35] p-7 text-white sm:p-9">
-          <h2 className="text-2xl font-extrabold tracking-[-0.035em]">How visible is your business in AI answers?</h2>
-          <p className="mt-2 max-w-xl text-sm leading-6 text-white/65">
-            Find out in minutes: GetInTheAnswer asks the real questions your customers ask ChatGPT, Claude and Perplexity, and scores your visibility against your competitors. Free, no credit card.
+        <section className="mt-14 rounded-[1.75rem] bg-emerald-50 border border-emerald-100 p-7 sm:p-9">
+          <h2 className="text-2xl font-extrabold tracking-[-0.035em] text-emerald-950">Is your business visible in AI answers?</h2>
+          <p className="mt-2 mb-6 max-w-xl text-sm leading-6 text-emerald-800">
+            Find out in minutes: We ask ChatGPT, Claude and Perplexity the questions your customers ask, and score your visibility against your competitors. Free, no credit card.
           </p>
-          <Button asChild className="mt-6 h-12 rounded-full bg-lime-300 px-6 font-extrabold text-[#173b35] hover:bg-lime-200">
-            <Link href="/onboarding">Run my free scan <ArrowRight className="ml-2 size-4" aria-hidden="true" /></Link>
-          </Button>
+          <HeroForm />
         </section>
 
         <section className="mt-14">
