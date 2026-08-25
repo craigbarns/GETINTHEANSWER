@@ -56,6 +56,7 @@ function normalizeWebsiteUrl(value: string) {
 export default function OnboardingPage() {
   const router = useRouter();
   const [formData, setFormData] = useState<FormData>(initialFormData);
+  const [step, setStep] = useState(1);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -73,8 +74,31 @@ export default function OnboardingPage() {
     if (error) setError(null);
   };
 
+  const handleNext = () => {
+    if (step === 1 && (!formData.companyName || !formData.websiteUrl)) {
+      setError("Please fill out your business name and website.");
+      return;
+    }
+    if (step === 2 && (!formData.city || !formData.industry)) {
+      setError("Please fill out your city and industry.");
+      return;
+    }
+    setError(null);
+    setStep((s) => s + 1);
+  };
+
+  const handleBack = () => {
+    setError(null);
+    setStep((s) => Math.max(1, s - 1));
+  };
+
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    if (step < 3) {
+      handleNext();
+      return;
+    }
+    
     setError(null);
 
     const normalizedUrl = normalizeWebsiteUrl(formData.websiteUrl);
@@ -215,91 +239,101 @@ export default function OnboardingPage() {
               </div>
             ) : (
             <form className="mt-8 space-y-5" onSubmit={handleSubmit}>
-              <div className="space-y-2">
-                <Label htmlFor="companyName" className="text-sm font-bold">Business name</Label>
-                <Input
-                  id="companyName"
-                  autoComplete="organization"
-                  placeholder="Lakeside Kitchen Co."
-                  value={formData.companyName}
-                  onChange={handleChange}
-                  required
-                  className="h-12 rounded-xl border-foreground/10 bg-white px-4 shadow-sm focus-visible:border-primary"
-                />
-              </div>
+              {step === 1 && (
+                <>
+                  <div className="space-y-2">
+                    <Label htmlFor="companyName" className="text-sm font-bold">Business name</Label>
+                    <Input
+                      id="companyName"
+                      autoComplete="organization"
+                      placeholder="Lakeside Kitchen Co."
+                      value={formData.companyName}
+                      onChange={handleChange}
+                      required
+                      className="h-12 rounded-xl border-foreground/10 bg-white px-4 shadow-sm focus-visible:border-primary"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="websiteUrl" className="text-sm font-bold">Main website</Label>
+                    <Input
+                      id="websiteUrl"
+                      autoComplete="url"
+                      inputMode="url"
+                      placeholder="lakesidekitchen.com"
+                      value={formData.websiteUrl}
+                      onChange={handleChange}
+                      required
+                      aria-describedby="website-help"
+                      className="h-12 rounded-xl border-foreground/10 bg-white px-4 shadow-sm focus-visible:border-primary"
+                    />
+                    <p id="website-help" className="text-xs text-muted-foreground">With or without https://</p>
+                  </div>
+                </>
+              )}
 
-              <div className="space-y-2">
-                <Label htmlFor="email" className="text-sm font-bold">Work email</Label>
-                <Input
-                  id="email"
-                  type="email"
-                  autoComplete="email"
-                  inputMode="email"
-                  placeholder="you@company.com"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  aria-describedby="email-help"
-                  className="h-12 rounded-xl border-foreground/10 bg-white px-4 shadow-sm focus-visible:border-primary"
-                />
-                <p id="email-help" className="text-xs text-muted-foreground">Used to associate this scan with your report and checkout if you upgrade.</p>
-              </div>
+              {step === 2 && (
+                <>
+                  <div className="grid gap-5 sm:grid-cols-2">
+                    <div className="min-w-0 space-y-2">
+                      <Label htmlFor="city" className="text-sm font-bold">Primary city</Label>
+                      <Input
+                        id="city"
+                        autoComplete="address-level2"
+                        placeholder="Austin"
+                        value={formData.city}
+                        onChange={handleChange}
+                        required
+                        className="h-12 rounded-xl border-foreground/10 bg-white px-4 shadow-sm focus-visible:border-primary"
+                      />
+                    </div>
+                    <div className="min-w-0 space-y-2">
+                      <Label htmlFor="industry" className="text-sm font-bold">Industry</Label>
+                      <Input
+                        id="industry"
+                        placeholder="Kitchen remodeling"
+                        value={formData.industry}
+                        onChange={handleChange}
+                        required
+                        className="h-12 rounded-xl border-foreground/10 bg-white px-4 shadow-sm focus-visible:border-primary"
+                      />
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="flex items-baseline justify-between gap-3">
+                      <Label htmlFor="services" className="text-sm font-bold">Main services</Label>
+                      <span className="text-xs font-medium text-muted-foreground">Optional</span>
+                    </div>
+                    <Textarea
+                      id="services"
+                      placeholder="Custom kitchens, full remodels, cabinet design…"
+                      value={formData.services}
+                      onChange={handleChange}
+                      className="min-h-24 resize-none rounded-xl border-foreground/10 bg-white px-4 py-3 shadow-sm focus-visible:border-primary"
+                    />
+                  </div>
+                </>
+              )}
 
-              <div className="space-y-2">
-                <Label htmlFor="websiteUrl" className="text-sm font-bold">Main website</Label>
-                <Input
-                  id="websiteUrl"
-                  autoComplete="url"
-                  inputMode="url"
-                  placeholder="lakesidekitchen.com"
-                  value={formData.websiteUrl}
-                  onChange={handleChange}
-                  required
-                  aria-describedby="website-help"
-                  className="h-12 rounded-xl border-foreground/10 bg-white px-4 shadow-sm focus-visible:border-primary"
-                />
-                <p id="website-help" className="text-xs text-muted-foreground">With or without https://</p>
-              </div>
-
-              <div className="grid gap-5 sm:grid-cols-2">
-                <div className="min-w-0 space-y-2">
-                  <Label htmlFor="city" className="text-sm font-bold">Primary city</Label>
-                  <Input
-                    id="city"
-                    autoComplete="address-level2"
-                    placeholder="Austin"
-                    value={formData.city}
-                    onChange={handleChange}
-                    required
-                    className="h-12 rounded-xl border-foreground/10 bg-white px-4 shadow-sm focus-visible:border-primary"
-                  />
-                </div>
-                <div className="min-w-0 space-y-2">
-                  <Label htmlFor="industry" className="text-sm font-bold">Industry</Label>
-                  <Input
-                    id="industry"
-                    placeholder="Kitchen remodeling"
-                    value={formData.industry}
-                    onChange={handleChange}
-                    required
-                    className="h-12 rounded-xl border-foreground/10 bg-white px-4 shadow-sm focus-visible:border-primary"
-                  />
-                </div>
-              </div>
-
-              <div className="space-y-2">
-                <div className="flex items-baseline justify-between gap-3">
-                  <Label htmlFor="services" className="text-sm font-bold">Main services</Label>
-                  <span className="text-xs font-medium text-muted-foreground">Optional</span>
-                </div>
-                <Textarea
-                  id="services"
-                  placeholder="Custom kitchens, full remodels, cabinet design…"
-                  value={formData.services}
-                  onChange={handleChange}
-                  className="min-h-24 resize-none rounded-xl border-foreground/10 bg-white px-4 py-3 shadow-sm focus-visible:border-primary"
-                />
-              </div>
+              {step === 3 && (
+                <>
+                  <div className="space-y-2">
+                    <Label htmlFor="email" className="text-sm font-bold">Work email</Label>
+                    <Input
+                      id="email"
+                      type="email"
+                      autoComplete="email"
+                      inputMode="email"
+                      placeholder="you@company.com"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
+                      aria-describedby="email-help"
+                      className="h-12 rounded-xl border-foreground/10 bg-white px-4 shadow-sm focus-visible:border-primary"
+                    />
+                    <p id="email-help" className="text-xs text-muted-foreground">Used to associate this scan with your report and checkout if you upgrade.</p>
+                  </div>
+                </>
+              )}
 
               {error && (
                 <div className="flex items-start gap-3 rounded-xl border border-red-200 bg-red-50 p-3.5 text-sm font-semibold text-red-800" role="alert" aria-live="polite">
@@ -308,9 +342,16 @@ export default function OnboardingPage() {
                 </div>
               )}
 
-              <Button className="h-14 w-full rounded-xl text-base font-extrabold shadow-lg shadow-primary/12" type="submit">
-                Start my free analysis <ArrowRight className="ml-2 size-5" aria-hidden="true" />
-              </Button>
+              <div className="flex items-center gap-3">
+                {step > 1 && (
+                  <Button type="button" variant="outline" className="h-14 px-6 rounded-xl border-foreground/10" onClick={handleBack}>
+                    Back
+                  </Button>
+                )}
+                <Button className="h-14 flex-1 rounded-xl text-base font-extrabold shadow-lg shadow-primary/12" type="submit">
+                  {step < 3 ? "Next step" : "Start my free analysis"} <ArrowRight className="ml-2 size-5" aria-hidden="true" />
+                </Button>
+              </div>
 
               <p className="flex items-center justify-center gap-2 text-center text-xs leading-5 text-muted-foreground">
                 <Sparkles className="size-3.5 shrink-0 text-emerald-700" aria-hidden="true" />
