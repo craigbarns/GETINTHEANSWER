@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { HeroForm } from "@/components/hero-form";
 import { LogoMark } from "@/components/logo";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 
@@ -224,27 +225,7 @@ export default function Home() {
                 GetInTheAnswer tests the queries that matter for your business, benchmarks your competitors and turns the results into concrete actions.
               </p>
 
-              <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-                <Button asChild size="lg" className="h-14 rounded-full px-7 text-base shadow-lg shadow-primary/15">
-                  <Link
-                    href="/onboarding"
-                    data-analytics-event="select_content"
-                    data-analytics-label="hero_free_scan"
-                  >
-                    Start my free analysis
-                    <ArrowRight className="ml-2 size-5" aria-hidden="true" />
-                  </Link>
-                </Button>
-                <Button asChild size="lg" variant="outline" className="h-14 rounded-full border-foreground/15 bg-white/60 px-7 text-base">
-                  <Link
-                    href="#demo"
-                    data-analytics-event="select_content"
-                    data-analytics-label="hero_sample_report"
-                  >
-                    Explore a report
-                  </Link>
-                </Button>
-              </div>
+              <HeroForm />
 
               <div className="mt-7 flex flex-wrap gap-x-5 gap-y-2 text-sm font-medium text-muted-foreground">
                 <span className="flex items-center gap-1.5"><CheckCircle2 className="size-4 text-emerald-600" aria-hidden="true" /> No credit card required</span>
