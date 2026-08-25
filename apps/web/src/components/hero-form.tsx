@@ -20,8 +20,8 @@ export function HeroForm() {
   };
 
   return (
-    <div className="mt-9 flex flex-wrap gap-3">
-      <form onSubmit={handleSubmit} className="flex flex-1 basis-[100%] min-w-0 flex-col sm:flex-row sm:basis-auto gap-3">
+    <div className="mt-9 flex flex-col gap-3 lg:flex-row lg:flex-wrap">
+      <form onSubmit={handleSubmit} className="flex flex-1 min-w-fit flex-col sm:flex-row gap-3">
         <input
           type="text"
           value={company}
