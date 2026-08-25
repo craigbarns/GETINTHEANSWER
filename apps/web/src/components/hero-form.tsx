@@ -21,14 +21,14 @@ export function HeroForm() {
 
   return (
     <div className="mt-9 flex flex-col gap-3 lg:flex-row">
-      <form onSubmit={handleSubmit} className="flex flex-1 flex-col sm:flex-row gap-3">
+      <form onSubmit={handleSubmit} className="flex flex-1 min-w-0 flex-col sm:flex-row gap-3">
         <input
           type="text"
           value={company}
           onChange={(e) => setCompany(e.target.value)}
           placeholder="Enter your business name..."
           required
-          className="h-14 w-full flex-1 rounded-full border-2 border-foreground/15 bg-white/80 px-6 text-base shadow-sm focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all"
+          className="h-14 w-full min-w-[200px] flex-1 rounded-full border-2 border-foreground/15 bg-white/80 px-6 text-base shadow-sm focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all"
         />
         <Button type="submit" size="lg" className="h-14 shrink-0 rounded-full px-7 text-base shadow-lg shadow-primary/15">
           Start free analysis
