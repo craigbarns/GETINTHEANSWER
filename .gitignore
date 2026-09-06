@@ -13,3 +13,6 @@ prospects.csv
 outreach_state.json
 outreach_queue.csv
 outreach_results.txt
+
+# Prospect list derived from scans — third-party business data
+prospects_from_scans.csv
