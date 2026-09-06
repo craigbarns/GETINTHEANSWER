@@ -1,0 +1,100 @@
+{
+  "industry": "lawyers",
+  "city": "miami-fl",
+  "cityLabel": "Miami, FL",
+  "query": "Top personal injury lawyer in Miami, FL with a proven track record",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Lipcon & Lipcon, P.A",
+        "Shaked Law Personal Injury Lawyers",
+        "Dolan Dobrinsky Rosenblum Bluestein, LLP",
+        "gyc law firm"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Lipcon & Lipcon, P.A",
+        "Dolan Dobrinsky Rosenblum Bluestein, LLP",
+        "Shaked Law Personal Injury Lawyers"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Dolan Dobrinsky Rosenblum Bluestein, LLP",
+        "Lipcon & Lipcon, P.A",
+        "Shaked Law Personal Injury Lawyers",
+        "Hickey Law Firm, P.A"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Perkins Personal Injury Lawyers",
+        "Leesfield & Partners",
+        "Gerson & Schwartz Accident & Injury Lawyers"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Dolan Dobrinsky Rosenblum Bluestein, LLP",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Lipcon & Lipcon, P.A",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Shaked Law Personal Injury Lawyers",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Gerson & Schwartz Accident & Injury Lawyers",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Hickey Law Firm, P.A",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Leesfield & Partners",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Perkins Personal Injury Lawyers",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "gyc law firm",
+      "engines": [
+        "ChatGPT"
+      ]
+    }
+  ],
+  "totalNamed": 14
+}

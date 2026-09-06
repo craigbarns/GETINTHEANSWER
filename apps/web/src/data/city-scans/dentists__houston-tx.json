@@ -1,0 +1,137 @@
+{
+  "industry": "dentists",
+  "city": "houston-tx",
+  "cityLabel": "Houston, TX",
+  "query": "Best cosmetic dentist for porcelain veneers in Houston, TX",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Cosmetic Dentistry by Dr. Ned Shimizu",
+        "Tamborello Dental",
+        "John H Krell, DDS",
+        "Konig Center for Cosmetic & Comprehensive Dentistry",
+        "The Houston Dentists"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Cosmetic Dentistry by Dr. Ned Shimizu",
+        "The Houston Dentists (Dr. Kathy Frazar)",
+        "Coleman Dental (Dr. Scott Coleman)",
+        "Konig Center for Cosmetic & Comprehensive Dentistry",
+        "John H. Krell, D.D.S"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Cosmetic Dentistry by Dr. Ned Shimizu",
+        "The Houston Dentists",
+        "Konig Center for Cosmetic & Comprehensive Dentistry",
+        "Coleman Dental",
+        "John H. Krell D.D.S"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Sapphire Smiles",
+        "Tieken Smiles Dentistry",
+        "Dr. Terri Alani",
+        "Smile Texas",
+        "Houston Cosmetic Dentists"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Cosmetic Dentistry by Dr. Ned Shimizu",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "John H Krell, DDS",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Konig Center for Cosmetic & Comprehensive Dentistry",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "The Houston Dentists",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Coleman Dental",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Coleman Dental (Dr. Scott Coleman)",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Dr. Terri Alani",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Houston Cosmetic Dentists",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Sapphire Smiles",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Smile Texas",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Tamborello Dental",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "The Houston Dentists (Dr. Kathy Frazar)",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Tieken Smiles Dentistry",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 20
+}

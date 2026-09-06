@@ -1,0 +1,155 @@
+{
+  "industry": "real-estate-agents",
+  "city": "dallas-tx",
+  "cityLabel": "Dallas, TX",
+  "query": "Who is the best real estate agent to sell a luxury home in Dallas, TX?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Bryan Crawford - Briggs Freeman Sotheby’s International Realty",
+        "Christine Danuser - Danuser Rado Group at Compass",
+        "Ace Lahli - Lahli Porpino Group at Compass",
+        "Jeannie Anderson - Compass",
+        "Kelsey Bond - Tracy Tutor Team at Compass"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Bryan Crawford - Briggs Freeman Sotheby's International Realty",
+        "Christine Danuser - Compass (Danuser Rado Group)",
+        "Ace Lahli - Compass (Lahli Porpino Group)",
+        "Jeannie Anderson - Compass",
+        "Kelsey Bond - Compass (Tracy Tutor Team)"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Bryan Crawford of Briggs Freeman Sotheby's International Realty",
+        "Christine Danuser of Compass",
+        "Ace Lahli of Compass",
+        "Jeannie Anderson of Compass",
+        "Kelsey Bond of Compass"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Richard Alderman at Allie Beth Allman & Associates",
+        "Ben Caballero of HomesUSA.com",
+        "Susan Georgeson",
+        "Allie Beth Allman & Associates"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Bryan Crawford - Briggs Freeman Sotheby’s International Realty",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Jeannie Anderson - Compass",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Ace Lahli - Compass (Lahli Porpino Group)",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Ace Lahli - Lahli Porpino Group at Compass",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Ace Lahli of Compass",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Allie Beth Allman & Associates",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Ben Caballero of HomesUSA.com",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Bryan Crawford of Briggs Freeman Sotheby's International Realty",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Christine Danuser - Compass (Danuser Rado Group)",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Christine Danuser - Danuser Rado Group at Compass",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Christine Danuser of Compass",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Jeannie Anderson of Compass",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Kelsey Bond - Compass (Tracy Tutor Team)",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Kelsey Bond - Tracy Tutor Team at Compass",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Kelsey Bond of Compass",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Richard Alderman at Allie Beth Allman & Associates",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Susan Georgeson",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 19
+}

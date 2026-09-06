@@ -1,0 +1,129 @@
+{
+  "industry": "lawyers",
+  "city": "los-angeles-ca",
+  "cityLabel": "Los Angeles, CA",
+  "query": "Top personal injury lawyer in Los Angeles, CA with a proven track record",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Brian Panish",
+        "Scott J. Corwin",
+        "Garo Mardirossian",
+        "Andrew Ellis",
+        "Jacoby & Meyers"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Brian Panish",
+        "Garo Mardirossian",
+        "Scott J. Corwin",
+        "Andrew Ellis",
+        "Jacoby & Meyers"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Brian Panish",
+        "Garo Mardirossian",
+        "Scott J. Corwin",
+        "Andrew Ellis",
+        "Jacoby & Meyers"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Panish | Shea | Ravipudi LLP",
+        "The Dominguez Firm",
+        "The Reeves Law Group",
+        "Haleh Shekarchian",
+        "John C. Ye",
+        "Arash Khorsandi"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Andrew Ellis",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Brian Panish",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Garo Mardirossian",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Jacoby & Meyers",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Scott J. Corwin",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Arash Khorsandi",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Haleh Shekarchian",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "John C. Ye",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Panish | Shea | Ravipudi LLP",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "The Dominguez Firm",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "The Reeves Law Group",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 21
+}

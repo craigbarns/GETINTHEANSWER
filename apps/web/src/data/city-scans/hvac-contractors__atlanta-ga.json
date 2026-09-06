@@ -1,0 +1,136 @@
+{
+  "industry": "hvac-contractors",
+  "city": "atlanta-ga",
+  "cityLabel": "Atlanta, GA",
+  "query": "Who offers 24/7 emergency AC repair near me in Atlanta, GA?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Cool Air Mechanical",
+        "Pure Air Atlanta",
+        "Full Speed Heating & Air",
+        "R.S. Andrews"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Cool Air Mechanical",
+        "Pure Air Atlanta",
+        "Full Speed Heating & Air",
+        "Indoor Experts Heating & Air Conditioning",
+        "R.S. Andrews"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Cool Air Mechanical",
+        "Pure Air Atlanta",
+        "Full Speed Heating & Air",
+        "Indoor Experts Heating & Air Conditioning",
+        "R.S. Andrews"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "United Air Temp",
+        "Cool Air Mechanical",
+        "Peachtree Service Experts",
+        "Aire Serv",
+        "Shumate Heating & Air",
+        "Atlanta AC Rescue",
+        "Precision Heating & Air",
+        "MR. HVAC"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Cool Air Mechanical",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Full Speed Heating & Air",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Pure Air Atlanta",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "R.S. Andrews",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Indoor Experts Heating & Air Conditioning",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Aire Serv",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Atlanta AC Rescue",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "MR. HVAC",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Peachtree Service Experts",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Precision Heating & Air",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Shumate Heating & Air",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "United Air Temp",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 22
+}

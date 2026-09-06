@@ -1,0 +1,84 @@
+{
+  "industry": "real-estate-agents",
+  "city": "atlanta-ga",
+  "cityLabel": "Atlanta, GA",
+  "query": "Who is the best real estate agent to sell a luxury home in Atlanta, GA?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Chase Mizell",
+        "Shanna Bradley"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Chase Mizell",
+        "Shanna Bradley",
+        "Shanna Smith"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Chase Mizell",
+        "Shanna Bradley",
+        "Marc Castillo"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Debra Johnston",
+        "Carson Cowan",
+        "Chase Mizell"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Chase Mizell",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Shanna Bradley",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Carson Cowan",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Debra Johnston",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Marc Castillo",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Shanna Smith",
+      "engines": [
+        "Claude"
+      ]
+    }
+  ],
+  "totalNamed": 11
+}

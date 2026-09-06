@@ -1,0 +1,148 @@
+{
+  "industry": "hvac-contractors",
+  "city": "chicago-il",
+  "cityLabel": "Chicago, IL",
+  "query": "Who offers 24/7 emergency AC repair near me in Chicago, IL?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "All Temp Heating & Air Conditioning",
+        "Five Star HVAC Chicago",
+        "King Heating",
+        "SAVA HVAC",
+        "Bernie's Heating & A/C"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "All Temp Heating & Air Conditioning",
+        "King Heating",
+        "Five Star HVAC Chicago",
+        "SAVA HVAC",
+        "Bernie's Heating & A/C"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "All Temp Heating & Air Conditioning",
+        "King Heating",
+        "Five Star HVAC Chicago",
+        "SAVA HVAC",
+        "Bernie's Heating & A/C Service"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Deljo Heating & Cooling",
+        "American Weathermakers",
+        "Heatmasters",
+        "Chicago HVAC Repair Doctor",
+        "Citywide Emergency HVAC Service",
+        "BESCO Air",
+        "Four Seasons Heating and Air Conditioning",
+        "G & R Heating and Air"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "All Temp Heating & Air Conditioning",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Five Star HVAC Chicago",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "King Heating",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "SAVA HVAC",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Bernie's Heating & A/C",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "American Weathermakers",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "BESCO Air",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Bernie's Heating & A/C Service",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Chicago HVAC Repair Doctor",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Citywide Emergency HVAC Service",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Deljo Heating & Cooling",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Four Seasons Heating and Air Conditioning",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "G & R Heating and Air",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Heatmasters",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 23
+}

@@ -1,0 +1,123 @@
+{
+  "industry": "real-estate-agents",
+  "city": "los-angeles-ca",
+  "cityLabel": "Los Angeles, CA",
+  "query": "Who is the best real estate agent to sell a luxury home in Los Angeles, CA?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Aaron Kirman",
+        "Jade Mills",
+        "Drew Fenton",
+        "Ben Bacal"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Jade Mills",
+        "Aaron Kirman",
+        "Drew Fenton",
+        "Ben Bacal"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Aaron Kirman - Christie's International Real Estate | Southern California",
+        "Jade Mills - Coldwell Banker",
+        "Drew Fenton - Carolwood",
+        "Ben Bacal"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Kurt Rappaport",
+        "Aaron Kirman",
+        "Jade Mills",
+        "Blair Chang",
+        "Josh Flagg",
+        "Sally Forster Jones"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Aaron Kirman",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Ben Bacal",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Jade Mills",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Drew Fenton",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Aaron Kirman - Christie's International Real Estate | Southern California",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Blair Chang",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Drew Fenton - Carolwood",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Jade Mills - Coldwell Banker",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Josh Flagg",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Kurt Rappaport",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Sally Forster Jones",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 18
+}

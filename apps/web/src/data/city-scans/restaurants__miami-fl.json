@@ -1,0 +1,130 @@
+{
+  "industry": "restaurants",
+  "city": "miami-fl",
+  "cityLabel": "Miami, FL",
+  "query": "Best romantic Italian restaurant with outdoor seating in Miami, FL",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Bellagio Terrace",
+        "Contessa",
+        "Prime Italian",
+        "Dolce Italian",
+        "Bella"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Casa Tua",
+        "Contessa",
+        "Prime Italian",
+        "Bellagio Terrace"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Bellagio Terrace South Beach",
+        "Contessa",
+        "Dolce Italian",
+        "Forte dei Marmi",
+        "Prime Italian"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Il Gabbiano",
+        "Prime Italian",
+        "Macchialina",
+        "Il Pastaiolo",
+        "Osteria Positano"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Prime Italian",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Contessa",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Bellagio Terrace",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Dolce Italian",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Bella",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Bellagio Terrace South Beach",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Casa Tua",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Forte dei Marmi",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Il Gabbiano",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Il Pastaiolo",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Macchialina",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Osteria Positano",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 19
+}

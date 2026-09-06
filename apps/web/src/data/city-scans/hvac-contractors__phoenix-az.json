@@ -1,0 +1,148 @@
+{
+  "industry": "hvac-contractors",
+  "city": "phoenix-az",
+  "cityLabel": "Phoenix, AZ",
+  "query": "Who offers 24/7 emergency AC repair near me in Phoenix, AZ?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Goettl Air Conditioning and Plumbing",
+        "Viking HVAC",
+        "Air Flow",
+        "Desert Oasis AC Services",
+        "Discount AC & Refrigeration"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Goettl Air Conditioning and Plumbing",
+        "Viking HVAC",
+        "Air Flow",
+        "Emergency Air",
+        "Desert Oasis AC Services"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Goettl",
+        "Viking HVAC",
+        "Air Flow",
+        "Discount AC & Refrigeration",
+        "Desert Oasis AC Services"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Western Sky Mechanical",
+        "Goettl Air Conditioning and Plumbing",
+        "Wolfgang’s Cooling, Heating & Plumbing",
+        "Morehart Air Conditioning & Heating",
+        "Yeti Pros",
+        "We Fix It",
+        "DeGeorge Plumbing & HVAC",
+        "Chas Roberts"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Air Flow",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Desert Oasis AC Services",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Goettl Air Conditioning and Plumbing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Viking HVAC",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Discount AC & Refrigeration",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Chas Roberts",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "DeGeorge Plumbing & HVAC",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Emergency Air",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Goettl",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Morehart Air Conditioning & Heating",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "We Fix It",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Western Sky Mechanical",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Wolfgang’s Cooling, Heating & Plumbing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Yeti Pros",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 23
+}

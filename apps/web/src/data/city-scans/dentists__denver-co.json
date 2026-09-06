@@ -1,0 +1,147 @@
+{
+  "industry": "dentists",
+  "city": "denver-co",
+  "cityLabel": "Denver, CO",
+  "query": "Best cosmetic dentist for porcelain veneers in Denver, CO",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Dr. Charles Barotz",
+        "Smile Colorado",
+        "Dr. Robin Asbury at Metro Smiles Concierge Dentistry",
+        "Dr. Kyle F. Long",
+        "Albion Aesthetic Dentistry"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Almeida & Bell Dental",
+        "Dr. Charles Barotz - Barotz Dental",
+        "Smile Colorado",
+        "Dr. Kyle F. Long DDS",
+        "Albion Aesthetic Dentistry"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Barotz Dental",
+        "Smile Colorado",
+        "Dr. Kyle F. Long DDS. PC",
+        "Avenue Dental Studio",
+        "Albion Aesthetic Dentistry"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Almeida & Bell Dental",
+        "Denver Dentistry (AAD)",
+        "Cherry Creek Dentistry",
+        "Cherry Creek Restorative Dentistry",
+        "Rock Ridge Dental Center"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Albion Aesthetic Dentistry",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Smile Colorado",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Almeida & Bell Dental",
+      "engines": [
+        "Claude",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Avenue Dental Studio",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Barotz Dental",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Cherry Creek Dentistry",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Cherry Creek Restorative Dentistry",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Denver Dentistry (AAD)",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Dr. Charles Barotz",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Dr. Charles Barotz - Barotz Dental",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Dr. Kyle F. Long",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Dr. Kyle F. Long DDS",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Dr. Kyle F. Long DDS. PC",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Dr. Robin Asbury at Metro Smiles Concierge Dentistry",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Rock Ridge Dental Center",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 20
+}

@@ -1,0 +1,129 @@
+{
+  "industry": "lawyers",
+  "city": "austin-tx",
+  "cityLabel": "Austin, TX",
+  "query": "Top personal injury lawyer in Austin, TX with a proven track record",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Michael Guajardo",
+        "Joe Lopez Law",
+        "Adam Loewy",
+        "Jay Doyle"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Guajardo Injury Law",
+        "Personal Injury Lawyer",
+        "Joe Lopez Law",
+        "Law Offices of Jay Doyle"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Guajardo Injury Law",
+        "The Law Offices of Jay Doyle, P.C",
+        "Joe Lopez Law"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Thomas J. Henry Law",
+        "Howry Breen & Herman LLP",
+        "FVF Law Firm",
+        "Adam Loewy / Loewy Law Firm",
+        "Danny Daniel"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Joe Lopez Law",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Guajardo Injury Law",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Adam Loewy",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Adam Loewy / Loewy Law Firm",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Danny Daniel",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "FVF Law Firm",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Howry Breen & Herman LLP",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Jay Doyle",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Law Offices of Jay Doyle",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Michael Guajardo",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Personal Injury Lawyer",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "The Law Offices of Jay Doyle, P.C",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Thomas J. Henry Law",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 16
+}

@@ -1,0 +1,113 @@
+{
+  "industry": "restaurants",
+  "city": "houston-tx",
+  "cityLabel": "Houston, TX",
+  "query": "Best romantic Italian restaurant with outdoor seating in Houston, TX",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "La Griglia",
+        "Amalfi Ristorante Italiano & Bar",
+        "Potente",
+        "Sorrento Ristorante",
+        "AMORE Italian Restaurant"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "La Griglia",
+        "Sorrento Ristorante",
+        "Amalfi Ristorante Italiano & Bar"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "La Griglia",
+        "Amalfi Ristorante Italiano & Bar",
+        "AMORE Italian Restaurant",
+        "Sorrento Ristorante",
+        "Potente"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Trattoria Sofia",
+        "Potente",
+        "Bari Ristorante",
+        "Il Bracco",
+        "Zanti River Oaks"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Amalfi Ristorante Italiano & Bar",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "La Griglia",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Potente",
+      "engines": [
+        "ChatGPT",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Sorrento Ristorante",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "AMORE Italian Restaurant",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Bari Ristorante",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Il Bracco",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Trattoria Sofia",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Zanti River Oaks",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 18
+}

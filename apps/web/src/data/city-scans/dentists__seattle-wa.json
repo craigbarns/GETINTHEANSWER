@@ -1,0 +1,127 @@
+{
+  "industry": "dentists",
+  "city": "seattle-wa",
+  "cityLabel": "Seattle, WA",
+  "query": "Best cosmetic dentist for porcelain veneers in Seattle, WA",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Advanced Cosmetic & Implant Dentistry",
+        "Smile Ballard",
+        "Green Lake Cosmetic Dentistry",
+        "Jahyun Koo DDS"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Advanced Cosmetic & Implant Dentistry",
+        "Smile Ballard",
+        "Green Lake Cosmetic Dentistry",
+        "North Seattle Smiles",
+        "Aesthetic Dental Associates"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Advanced Cosmetic & Implant Dentistry",
+        "Smile Ballard",
+        "Green Lake Cosmetic Dentistry",
+        "North Seattle Smiles",
+        "Aesthetic Dental Associates"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Seattle Specialty Dentistry",
+        "Smile Ballard / Dr. Curalli",
+        "Green Lake Cosmetic Dentistry",
+        "4th & Seneca Dental",
+        "Seattle Dental Studio",
+        "Cindy Tseng, DDS"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Green Lake Cosmetic Dentistry",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Advanced Cosmetic & Implant Dentistry",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Smile Ballard",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Aesthetic Dental Associates",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "North Seattle Smiles",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "4th & Seneca Dental",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Cindy Tseng, DDS",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Jahyun Koo DDS",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Seattle Dental Studio",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Seattle Specialty Dentistry",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Smile Ballard / Dr. Curalli",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 20
+}

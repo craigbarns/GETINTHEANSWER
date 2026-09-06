@@ -1,0 +1,111 @@
+{
+  "industry": "restaurants",
+  "city": "seattle-wa",
+  "cityLabel": "Seattle, WA",
+  "query": "Best romantic Italian restaurant with outdoor seating in Seattle, WA",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "La Fontana Siciliana",
+        "STELLA at Hotel Sorrento",
+        "Il Terrazzo Carmine",
+        "Piatti Seattle"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "La Fontana Siciliana",
+        "STELLA at Hotel Sorrento",
+        "Bar Cantinetta - Capitol Hill"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "La Fontana Siciliana",
+        "STELLA at Hotel Sorrento",
+        "Il Terrazzo Carmine",
+        "Piatti Seattle",
+        "Bar Cantinetta - Capitol Hill"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Il Terrazzo Carmine",
+        "The Pink Door",
+        "Il Bistro",
+        "Spinasse",
+        "Barolo"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Il Terrazzo Carmine",
+      "engines": [
+        "ChatGPT",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "La Fontana Siciliana",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "STELLA at Hotel Sorrento",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Bar Cantinetta - Capitol Hill",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Piatti Seattle",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Barolo",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Il Bistro",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Spinasse",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "The Pink Door",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 17
+}

@@ -1,0 +1,137 @@
+{
+  "industry": "real-estate-agents",
+  "city": "seattle-wa",
+  "cityLabel": "Seattle, WA",
+  "query": "Who is the best real estate agent to sell a luxury home in Seattle, WA?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Betsy Q. Terry - Ewing & Clark Inc",
+        "Bob Bennion - Compass",
+        "Roy Towse - Compass",
+        "Tere Foster and Moya Skillman - Team Foster"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Tere Foster",
+        "Bob Bennion",
+        "Roy Towse",
+        "Betsy Q. Terry"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Team Foster Skillman",
+        "Ewing & Clark Inc",
+        "Bennion + Company",
+        "Compass"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Maggie Sun",
+        "Elena Rodriguez",
+        "Phil Greely"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Bennion + Company",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Betsy Q. Terry",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Betsy Q. Terry - Ewing & Clark Inc",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Bob Bennion",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Bob Bennion - Compass",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Compass",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Elena Rodriguez",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Ewing & Clark Inc",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Maggie Sun",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Phil Greely",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Roy Towse",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Roy Towse - Compass",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Team Foster Skillman",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Tere Foster",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Tere Foster and Moya Skillman - Team Foster",
+      "engines": [
+        "ChatGPT"
+      ]
+    }
+  ],
+  "totalNamed": 15
+}

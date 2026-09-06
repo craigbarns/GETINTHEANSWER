@@ -1,0 +1,113 @@
+{
+  "industry": "restaurants",
+  "city": "austin-tx",
+  "cityLabel": "Austin, TX",
+  "query": "Best romantic Italian restaurant with outdoor seating in Austin, TX",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Olive & June",
+        "La Traviata",
+        "Il Brutto",
+        "Juliet Italian Kitchen"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Olive & June",
+        "Il Brutto",
+        "La Traviata",
+        "Juliet Italian Kitchen"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Olive & June",
+        "La Traviata",
+        "Intero Restaurant",
+        "Il Brutto",
+        "Juliet Italian Kitchen"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Asti Trattoria",
+        "Siena Ristorante Toscana",
+        "Juliet Italian Kitchen",
+        "Patrizi’s",
+        "Intero"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Juliet Italian Kitchen",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Il Brutto",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "La Traviata",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Olive & June",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Asti Trattoria",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Intero",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Intero Restaurant",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Patrizi’s",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Siena Ristorante Toscana",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 18
+}

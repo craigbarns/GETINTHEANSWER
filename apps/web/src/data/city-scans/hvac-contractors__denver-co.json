@@ -1,0 +1,148 @@
+{
+  "industry": "hvac-contractors",
+  "city": "denver-co",
+  "cityLabel": "Denver, CO",
+  "query": "Who offers 24/7 emergency AC repair near me in Denver, CO?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Fix-it 24/7 Plumbing, Heating, Air & Electric",
+        "One Hour Heating & Air Conditioning",
+        "Mitchell Heating",
+        "MileHi HVAC",
+        "On Time Heat & Air"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Fix-it 24/7 Plumbing, Heating, Air & Electric",
+        "Mitchell Heating",
+        "One Hour Heating & Air Conditioning®",
+        "MileHi HVAC",
+        "On Time Heat & Air"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Fix-it 24/7 Plumbing, Heating, Air & Electric",
+        "MileHi HVAC",
+        "Mitchell Heating",
+        "One Hour Air Conditioning & Heating®",
+        "Summit Heating, A/C, Plumbing & Electrical"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Done Plumbing, Heating, Cooling & Electric",
+        "Right Away Heating & Cooling",
+        "On Time Heat & Air",
+        "Denver’s Best Heating & AC Repair",
+        "Roots Heating and Air",
+        "Aire Serv of Denver",
+        "Blue Sky Plumbing, Heating, Cooling & Electric",
+        "Squeak’s Plumbing, Heating & Air"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Fix-it 24/7 Plumbing, Heating, Air & Electric",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "MileHi HVAC",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Mitchell Heating",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "On Time Heat & Air",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "One Hour Heating & Air Conditioning",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Aire Serv of Denver",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Blue Sky Plumbing, Heating, Cooling & Electric",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Denver’s Best Heating & AC Repair",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Done Plumbing, Heating, Cooling & Electric",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "One Hour Air Conditioning & Heating®",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Right Away Heating & Cooling",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Roots Heating and Air",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Squeak’s Plumbing, Heating & Air",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Summit Heating, A/C, Plumbing & Electrical",
+      "engines": [
+        "Gemini"
+      ]
+    }
+  ],
+  "totalNamed": 23
+}

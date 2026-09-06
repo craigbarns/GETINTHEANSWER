@@ -1,0 +1,108 @@
+{
+  "industry": "real-estate-agents",
+  "city": "austin-tx",
+  "cityLabel": "Austin, TX",
+  "query": "Who is the best real estate agent to sell a luxury home in Austin, TX?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Kumara Wilcoxon",
+        "Lisa Copeland",
+        "Eric Moreland",
+        "Leah Petri",
+        "Keith Trigaci"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Kumara Wilcoxon",
+        "Lisa Copeland",
+        "Eric Moreland",
+        "Leah Petri"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Kumara Wilcoxon",
+        "Lisa Copeland",
+        "Eric Moreland",
+        "Leah Petri",
+        "Keith Trigaci"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Kumara Wilcoxon",
+        "The Keenan Group",
+        "Johnny Ronca",
+        "Kathryn Scarborough"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Kumara Wilcoxon",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Eric Moreland",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Leah Petri",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Lisa Copeland",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Keith Trigaci",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Johnny Ronca",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Kathryn Scarborough",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "The Keenan Group",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 18
+}

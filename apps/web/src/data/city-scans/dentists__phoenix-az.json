@@ -1,0 +1,143 @@
+{
+  "industry": "dentists",
+  "city": "phoenix-az",
+  "cityLabel": "Phoenix, AZ",
+  "query": "Best cosmetic dentist for porcelain veneers in Phoenix, AZ",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Dentique",
+        "Innovative Dentistry Biltmore",
+        "Phoenix Dental Studio",
+        "Biltmore Commons Dental Care",
+        "Atrium Dental"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Dentique by Dr. Rashmi Bhatnagar",
+        "Innovative Dentistry Biltmore - Dr. Jennifer Ebner",
+        "Biltmore Commons Dental Care",
+        "Phoenix Dental Studio - Dr. Aaron Verbarg",
+        "Zapata Dental - Dr. Rick Zapata"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Dentique by Dr. B",
+        "Innovative Dentistry Biltmore",
+        "Phoenix Dental Studio",
+        "Zapata Dental"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Dentique by Dr. Craig S. Spodak",
+        "Biltmore Innovative Dentistry",
+        "Harris Dental",
+        "Scottsdale Smile Center"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Biltmore Commons Dental Care",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Innovative Dentistry Biltmore",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Phoenix Dental Studio",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Atrium Dental",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Biltmore Innovative Dentistry",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Dentique",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Dentique by Dr. B",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Dentique by Dr. Craig S. Spodak",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Dentique by Dr. Rashmi Bhatnagar",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Harris Dental",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Innovative Dentistry Biltmore - Dr. Jennifer Ebner",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Phoenix Dental Studio - Dr. Aaron Verbarg",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Scottsdale Smile Center",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Zapata Dental",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Zapata Dental - Dr. Rick Zapata",
+      "engines": [
+        "Claude"
+      ]
+    }
+  ],
+  "totalNamed": 18
+}

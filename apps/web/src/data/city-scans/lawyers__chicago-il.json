@@ -1,0 +1,112 @@
+{
+  "industry": "lawyers",
+  "city": "chicago-il",
+  "cityLabel": "Chicago, IL",
+  "query": "Top personal injury lawyer in Chicago, IL with a proven track record",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Clifford Law Offices",
+        "Salvi, Schostok & Pritchard P.C",
+        "Rapoport Weisberg & Sims P.C",
+        "Loevy & Loevy",
+        "Willens & Baez"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Clifford Law Offices",
+        "Salvi, Schostok & Pritchard P.C",
+        "Rapoport Weisberg & Sims P.C",
+        "Willens & Baez",
+        "Loevy + Loevy"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Clifford Law Offices",
+        "Salvi, Schostok & Pritchard P.C",
+        "Rapoport Weisberg & Sims P.C",
+        "Loevy + Loevy",
+        "Willens & Baez"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Clifford Law Offices",
+        "Salvi, Schostok & Pritchard P.C",
+        "Corboy & Demetrio",
+        "Smith LaCien LLP",
+        "Malman Law"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Clifford Law Offices",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Salvi, Schostok & Pritchard P.C",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Loevy & Loevy",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Rapoport Weisberg & Sims P.C",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Willens & Baez",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Corboy & Demetrio",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Malman Law",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Smith LaCien LLP",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 20
+}

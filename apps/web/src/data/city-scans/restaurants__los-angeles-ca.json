@@ -1,0 +1,118 @@
+{
+  "industry": "restaurants",
+  "city": "los-angeles-ca",
+  "cityLabel": "Los Angeles, CA",
+  "query": "Best romantic Italian restaurant with outdoor seating in Los Angeles, CA",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Cafe Amici",
+        "Angelini Osteria",
+        "Terroni Beverly",
+        "Il Cielo",
+        "Ca' Del Sole"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Il Cielo",
+        "Cafe Amici",
+        "Angelini Osteria"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Cafe Amici",
+        "Il Cielo",
+        "Angelini Osteria",
+        "Ca' Del Sole",
+        "Terroni Beverly"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Fia",
+        "Cento",
+        "Cosetta",
+        "Casalena",
+        "Sogno Toscano"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Angelini Osteria",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Cafe Amici",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Il Cielo",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Ca' Del Sole",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Terroni Beverly",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Casalena",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Cento",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Cosetta",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Fia",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Sogno Toscano",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 18
+}

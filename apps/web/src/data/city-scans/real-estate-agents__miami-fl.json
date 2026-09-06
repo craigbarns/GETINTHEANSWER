@@ -1,0 +1,150 @@
+{
+  "industry": "real-estate-agents",
+  "city": "miami-fl",
+  "cityLabel": "Miami, FL",
+  "query": "Who is the best real estate agent to sell a luxury home in Miami, FL?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Dora Puig - Luxe Living Realty",
+        "Jeff Miller - Jeff Miller Group",
+        "Abraham Ash",
+        "Joanna Jimenez - The Opes Group at Compass",
+        "Michele Redlich - Coldwell Banker"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Dora Puig",
+        "Abraham Ash",
+        "Jeff Miller",
+        "Michele Redlich",
+        "Joanna Jimenez"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Luxe Living Realty",
+        "Jeff Miller Group",
+        "Coldwell Banker Global Luxury",
+        "The Opes Group at Compass",
+        "Michele Redlich"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "David Siddons",
+        "The Jills Zeder Group",
+        "Ivan & Mike Team",
+        "Dora Puig"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Abraham Ash",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Dora Puig",
+      "engines": [
+        "Claude",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Michele Redlich",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Coldwell Banker Global Luxury",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "David Siddons",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Dora Puig - Luxe Living Realty",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Ivan & Mike Team",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Jeff Miller",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Jeff Miller - Jeff Miller Group",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Jeff Miller Group",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Joanna Jimenez",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Joanna Jimenez - The Opes Group at Compass",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Luxe Living Realty",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Michele Redlich - Coldwell Banker",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "The Jills Zeder Group",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "The Opes Group at Compass",
+      "engines": [
+        "Gemini"
+      ]
+    }
+  ],
+  "totalNamed": 19
+}

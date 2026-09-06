@@ -1,0 +1,153 @@
+{
+  "industry": "hvac-contractors",
+  "city": "houston-tx",
+  "cityLabel": "Houston, TX",
+  "query": "Who offers 24/7 emergency AC repair near me in Houston, TX?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "75 Degree AC",
+        "Service Experts Houston",
+        "One Hour Air Conditioning & Heating® of Houston",
+        "Titan HVAC Houston",
+        "House Pro Air Conditioning"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "75 Degree AC",
+        "Titan HVAC",
+        "Service Experts",
+        "One Hour Heat and Air",
+        "House Pro AC"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "75 Degree AC",
+        "Service Experts Houston",
+        "One Hour Air Conditioning & Heating® of Houston",
+        "Titan HVAC Houston",
+        "House Pro Air Conditioning"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Adams Air",
+        "Service Experts Houston",
+        "Abacus Plumbing, Air Conditioning & Electrical",
+        "Aire Serv of Houston Northwest",
+        "Louii’s AC",
+        "75 Degree AC",
+        "Horizon Air Solutions",
+        "Houston HVAC Repair"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "75 Degree AC",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Service Experts Houston",
+      "engines": [
+        "ChatGPT",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "House Pro Air Conditioning",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "One Hour Air Conditioning & Heating® of Houston",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Titan HVAC Houston",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Abacus Plumbing, Air Conditioning & Electrical",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Adams Air",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Aire Serv of Houston Northwest",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Horizon Air Solutions",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "House Pro AC",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Houston HVAC Repair",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Louii’s AC",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "One Hour Heat and Air",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Service Experts",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Titan HVAC",
+      "engines": [
+        "Claude"
+      ]
+    }
+  ],
+  "totalNamed": 23
+}

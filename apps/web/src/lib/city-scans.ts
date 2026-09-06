@@ -67,6 +67,86 @@ export function hasCityScan(industrySlug: string, citySlug: string): boolean {
   return getCityScan(industrySlug, citySlug) !== null;
 }
 
+export interface EngineStat {
+  engine: string;
+  answers: number;
+  namesGiven: number;
+  averagePerAnswer: number;
+}
+
+export interface BenchmarkStats {
+  scans: number;
+  industries: number;
+  cities: number;
+  engineAnswers: number;
+  distinctBusinesses: number;
+  /** Businesses named by exactly one engine, as a share of all named. */
+  soleMentionShare: number;
+  /** Businesses named by every engine that answered, as a share of all named. */
+  unanimousShare: number;
+  averageBusinessesPerScan: number;
+  engines: EngineStat[];
+  firstScanDate: string;
+  lastScanDate: string;
+}
+
+/**
+ * Aggregate every published scan into figures the study page renders.
+ *
+ * Computed at build time from the scan files themselves, so the published
+ * numbers cannot drift from the data behind them.
+ */
+export function getBenchmarkStats(): BenchmarkStats | null {
+  const scans = getScannedPairs()
+    .map((pair) => getCityScan(pair.industry, pair.city))
+    .filter((scan): scan is CityScan => scan !== null);
+
+  if (!scans.length) return null;
+
+  const engineTotals = new Map<string, { answers: number; namesGiven: number }>();
+  let distinct = 0;
+  let sole = 0;
+  let unanimous = 0;
+
+  for (const scan of scans) {
+    const answering = scan.engines.length;
+    for (const entry of scan.engines) {
+      const row = engineTotals.get(entry.engine) ?? { answers: 0, namesGiven: 0 };
+      row.answers += 1;
+      row.namesGiven += entry.businesses.length;
+      engineTotals.set(entry.engine, row);
+    }
+    for (const business of scan.businesses) {
+      distinct += 1;
+      if (business.engines.length === 1) sole += 1;
+      if (answering > 1 && business.engines.length === answering) unanimous += 1;
+    }
+  }
+
+  const dates = scans.map((scan) => scan.scannedAt).sort();
+
+  return {
+    scans: scans.length,
+    industries: new Set(scans.map((s) => s.industry)).size,
+    cities: new Set(scans.map((s) => s.city)).size,
+    engineAnswers: [...engineTotals.values()].reduce((sum, row) => sum + row.answers, 0),
+    distinctBusinesses: distinct,
+    soleMentionShare: distinct ? Math.round((sole / distinct) * 100) : 0,
+    unanimousShare: distinct ? Math.round((unanimous / distinct) * 100) : 0,
+    averageBusinessesPerScan: Math.round((distinct / scans.length) * 10) / 10,
+    engines: [...engineTotals.entries()]
+      .map(([engine, row]) => ({
+        engine,
+        answers: row.answers,
+        namesGiven: row.namesGiven,
+        averagePerAnswer: Math.round((row.namesGiven / row.answers) * 10) / 10,
+      }))
+      .sort((a, b) => b.namesGiven - a.namesGiven),
+    firstScanDate: dates[0],
+    lastScanDate: dates[dates.length - 1],
+  };
+}
+
 export function formatScanDate(iso: string): string {
   const date = new Date(`${iso}T00:00:00Z`);
   if (Number.isNaN(date.getTime())) return iso;

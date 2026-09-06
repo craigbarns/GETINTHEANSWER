@@ -1,0 +1,94 @@
+{
+  "industry": "restaurants",
+  "city": "phoenix-az",
+  "cityLabel": "Phoenix, AZ",
+  "query": "Best romantic Italian restaurant with outdoor seating in Phoenix, AZ",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "L'Amore Restaurant",
+        "Tutti Santi"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "L'Amore Restaurant",
+        "Tutti Santi"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "L'Amore",
+        "Tutti Santi",
+        "Marino's Italian Kitchen & Bar",
+        "Christo's Ristorante"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Cibo",
+        "L’Amore Italian Restaurant",
+        "Tratto"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Tutti Santi",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "L'Amore Restaurant",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Christo's Ristorante",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Cibo",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "L'Amore",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "L’Amore Italian Restaurant",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Marino's Italian Kitchen & Bar",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Tratto",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 11
+}
