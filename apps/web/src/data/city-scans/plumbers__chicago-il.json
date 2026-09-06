@@ -7,28 +7,90 @@
   "engines": [
     {
       "engine": "ChatGPT",
-      "businesses": []
+      "businesses": [
+        "Roto-Rooter",
+        "Baethke Plumbing",
+        "J. Blanton Plumbing",
+        "Goode Plumbing",
+        "Rescue Plumbing"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Roto-Rooter",
+        "Baethke Plumbing",
+        "Callahan Pipe & Drain"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Roto-Rooter",
+        "Baethke Plumbing",
+        "J. Blanton Plumbing",
+        "Callahan Pipe & Drain",
+        "Goode Plumbing"
+      ]
     },
     {
       "engine": "Perplexity",
       "businesses": [
-        "Roto-Rooter Chicago",
         "Rescue Plumbing",
-        "Four Seasons Heating, Air Conditioning, Plumbing, & Electric",
-        "Goode Plumbing",
+        "Roto-Rooter",
+        "Four Seasons Heating, Cooling, Plumbing & Electric",
         "Plumbers 911 Chicago"
       ]
     }
   ],
   "businesses": [
     {
-      "name": "Four Seasons Heating, Air Conditioning, Plumbing, & Electric",
+      "name": "Roto-Rooter",
       "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
         "Perplexity"
       ]
     },
     {
+      "name": "Baethke Plumbing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Callahan Pipe & Drain",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
       "name": "Goode Plumbing",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "J. Blanton Plumbing",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Rescue Plumbing",
+      "engines": [
+        "ChatGPT",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Four Seasons Heating, Cooling, Plumbing & Electric",
       "engines": [
         "Perplexity"
       ]
@@ -38,19 +100,7 @@
       "engines": [
         "Perplexity"
       ]
-    },
-    {
-      "name": "Rescue Plumbing",
-      "engines": [
-        "Perplexity"
-      ]
-    },
-    {
-      "name": "Roto-Rooter Chicago",
-      "engines": [
-        "Perplexity"
-      ]
     }
   ],
-  "totalNamed": 5
+  "totalNamed": 17
 }

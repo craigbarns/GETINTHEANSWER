@@ -7,20 +7,85 @@
   "engines": [
     {
       "engine": "ChatGPT",
-      "businesses": []
+      "businesses": [
+        "Roto-Rooter",
+        "Spencer's Plumbing Services",
+        "Strutton Plumbing",
+        "1-Tom-Plumber"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Spencer's Plumbing Services",
+        "Roto-Rooter Houston",
+        "Strutton Plumbing"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Roto-Rooter",
+        "Strutton Plumbing",
+        "Spencer's Plumbing Services",
+        "1-Tom-Plumber Houston",
+        "Nick's Plumbing"
+      ]
     },
     {
       "engine": "Perplexity",
       "businesses": [
         "Roto-Rooter Houston",
         "Abacus Plumbing, Air Conditioning & Electrical",
-        "Santhoff Plumbing Co",
         "John Moore Services",
+        "Santhoff Plumbing",
         "Village Plumbing, Air & Electric"
       ]
     }
   ],
   "businesses": [
+    {
+      "name": "Spencer's Plumbing Services",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Strutton Plumbing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Roto-Rooter",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Roto-Rooter Houston",
+      "engines": [
+        "Claude",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "1-Tom-Plumber",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "1-Tom-Plumber Houston",
+      "engines": [
+        "Gemini"
+      ]
+    },
     {
       "name": "Abacus Plumbing, Air Conditioning & Electrical",
       "engines": [
@@ -34,13 +99,13 @@
       ]
     },
     {
-      "name": "Roto-Rooter Houston",
+      "name": "Nick's Plumbing",
       "engines": [
-        "Perplexity"
+        "Gemini"
       ]
     },
     {
-      "name": "Santhoff Plumbing Co",
+      "name": "Santhoff Plumbing",
       "engines": [
         "Perplexity"
       ]
@@ -52,5 +117,5 @@
       ]
     }
   ],
-  "totalNamed": 5
+  "totalNamed": 17
 }

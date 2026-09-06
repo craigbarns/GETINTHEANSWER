@@ -7,15 +7,41 @@
   "engines": [
     {
       "engine": "ChatGPT",
-      "businesses": []
+      "businesses": [
+        "Douglas Orr Plumbing",
+        "EZ Plumbing",
+        "Romain's Plumbing",
+        "Roto-Rooter",
+        "Hernandez Plumbing"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Hernandez Plumbing",
+        "Douglas Orr Plumbing",
+        "EZ Plumbing"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Roto-Rooter",
+        "Douglas Orr Plumbing",
+        "EZ Plumbing",
+        "Hernandez Plumbing",
+        "Romain's Plumbing"
+      ]
     },
     {
       "engine": "Perplexity",
       "businesses": [
         "Roto-Rooter Miami",
-        "Douglas Orr Plumbing",
-        "Joe Hillman Plumbers",
-        "Morata Plumbing"
+        "Morata Plumbing",
+        "One Stop Plumbing",
+        "The Plumbers",
+        "Lion Plumbing",
+        "Miami Plumber"
       ]
     }
   ],
@@ -23,11 +49,49 @@
     {
       "name": "Douglas Orr Plumbing",
       "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "EZ Plumbing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Hernandez Plumbing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Romain's Plumbing",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Roto-Rooter",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Lion Plumbing",
+      "engines": [
         "Perplexity"
       ]
     },
     {
-      "name": "Joe Hillman Plumbers",
+      "name": "Miami Plumber",
       "engines": [
         "Perplexity"
       ]
@@ -39,11 +103,23 @@
       ]
     },
     {
+      "name": "One Stop Plumbing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
       "name": "Roto-Rooter Miami",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "The Plumbers",
       "engines": [
         "Perplexity"
       ]
     }
   ],
-  "totalNamed": 4
+  "totalNamed": 19
 }

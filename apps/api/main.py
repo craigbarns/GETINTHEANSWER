@@ -37,7 +37,26 @@ STRIPE_SECRET_KEY = os.getenv("STRIPE_SECRET_KEY", "").strip()
 STRIPE_PRICE_ID = os.getenv("STRIPE_PRICE_ID", "").strip()
 STRIPE_CHECKOUT_LOCALE = os.getenv("STRIPE_CHECKOUT_LOCALE", "en").strip() or "en"
 FRONTEND_URL = os.getenv("FRONTEND_URL", "https://getintheanswer.com").rstrip("/")
-LIVE_MODE = bool(OPENAI_API_KEY)
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "").strip()
+OPENROUTER_BASE_URL = os.getenv("OPENROUTER_BASE_URL", "https://openrouter.ai/api/v1")
+USE_OPENROUTER = bool(OPENROUTER_API_KEY)
+
+# One key, one bill, every engine. The ":online" suffix is the point: without
+# retrieval a model answers "I don't have real-time data" and names no local
+# business at all, so a scan measures training-data recall rather than what a
+# customer actually sees. Perplexity retrieves natively and needs no suffix.
+OR_CHATGPT_MODEL = os.getenv("OR_CHATGPT_MODEL", "openai/gpt-4o-mini:online")
+OR_CLAUDE_MODEL = os.getenv("OR_CLAUDE_MODEL", "anthropic/claude-haiku-4.5:online")
+OR_GEMINI_MODEL = os.getenv("OR_GEMINI_MODEL", "google/gemini-2.5-flash:online")
+OR_PERPLEXITY_MODEL = os.getenv("OR_PERPLEXITY_MODEL", "perplexity/sonar")
+# Query generation, mention extraction and recommendations are text tasks over
+# text we already hold: no retrieval, no ":online", cheaper call.
+OR_UTILITY_MODEL = os.getenv("OR_UTILITY_MODEL", "openai/gpt-4o-mini")
+
+# Model used for every non-engine LLM call.
+TEXT_MODEL = OR_UTILITY_MODEL if USE_OPENROUTER else OPENAI_MODEL
+
+LIVE_MODE = bool(OPENAI_API_KEY or OPENROUTER_API_KEY)
 BILLING_ENABLED = bool(STRIPE_SECRET_KEY and STRIPE_PRICE_ID)
 STRIPE_WEBHOOK_SECRET = os.getenv("STRIPE_WEBHOOK_SECRET", "").strip()
 
@@ -614,7 +633,7 @@ async def generate_queries_llm(client, request: OnboardingRequest) -> Optional[L
     )
     try:
         response = await client.chat.completions.create(
-            model=OPENAI_MODEL,
+            model=TEXT_MODEL,
             messages=[
                 {"role": "system", "content": QUERY_GENERATION_SYSTEM_PROMPT},
                 {"role": "user", "content": f"{details}\n\nGenerate exactly 10 queries."},
@@ -714,7 +733,7 @@ async def extract_mentions_batch(client, brand: str, batch: List[tuple]) -> list
     )
     try:
         response = await client.chat.completions.create(
-            model=OPENAI_MODEL,
+            model=TEXT_MODEL,
             messages=[
                 {"role": "system", "content": EXTRACTION_SYSTEM_PROMPT},
                 {"role": "user", "content": f'Target brand: "{brand}"\n\n{numbered}'},
@@ -789,7 +808,7 @@ async def generate_recommendations_llm(
         )
     try:
         response = await client.chat.completions.create(
-            model=OPENAI_MODEL,
+            model=TEXT_MODEL,
             messages=[
                 {"role": "system", "content": RECOMMENDATION_SYSTEM_PROMPT},
                 {
@@ -828,7 +847,11 @@ async def generate_recommendations_llm(
 async def run_live_scan(site_id: str, request: OnboardingRequest) -> DashboardData:
     from openai import AsyncOpenAI
 
-    client = AsyncOpenAI(api_key=OPENAI_API_KEY)
+    client = (
+        AsyncOpenAI(api_key=OPENROUTER_API_KEY, base_url=OPENROUTER_BASE_URL)
+        if USE_OPENROUTER
+        else AsyncOpenAI(api_key=OPENAI_API_KEY)
+    )
     # The website audit runs alongside query generation — it never blocks the scan.
     site_task = asyncio.create_task(
         audit_site(
@@ -840,44 +863,58 @@ async def run_live_scan(site_id: str, request: OnboardingRequest) -> DashboardDa
     )
     queries = await generate_queries_llm(client, request) or build_queries(request)
 
-    # Each engine gets its own concurrency budget: Perplexity rate-limits hard
-    # above ~3 parallel requests, and a shared semaphore let it starve.
-    engines: list[tuple[str, str, object, int]] = [("ChatGPT", "openai", client, 5)]
-    if ANTHROPIC_API_KEY:
-        from anthropic import AsyncAnthropic
-
-        engines.append(("Claude", "anthropic", AsyncAnthropic(api_key=ANTHROPIC_API_KEY), 5))
-    if PERPLEXITY_API_KEY:
-        engines.append(
-            (
-                "Perplexity",
-                "perplexity",
-                AsyncOpenAI(api_key=PERPLEXITY_API_KEY, base_url="https://api.perplexity.ai"),
-                2,
-            )
-        )
+    # (label, kind, client, model, concurrency). Each engine gets its own
+    # concurrency budget: Perplexity rate-limits hard above ~3 parallel
+    # requests, and a shared semaphore let it starve.
+    engines: list[tuple[str, str, object, Optional[str], int]] = []
     gemini_client = None
-    if GEMINI_API_KEY:
-        gemini_client = httpx.AsyncClient(timeout=90)
-        engines.append(("Gemini", "gemini", gemini_client, 4))
 
-    async def guarded_ask(kind: str, engine_client, query: str, gate: asyncio.Semaphore) -> Optional[str]:
+    if USE_OPENROUTER:
+        # Every engine over one OpenAI-compatible endpoint, all web-grounded.
+        engines = [
+            ("ChatGPT", "openai", client, OR_CHATGPT_MODEL, 4),
+            ("Claude", "openai", client, OR_CLAUDE_MODEL, 4),
+            ("Gemini", "openai", client, OR_GEMINI_MODEL, 4),
+            ("Perplexity", "openai", client, OR_PERPLEXITY_MODEL, 2),
+        ]
+    else:
+        engines.append(("ChatGPT", "openai", client, OPENAI_MODEL, 5))
+        if ANTHROPIC_API_KEY:
+            from anthropic import AsyncAnthropic
+
+            engines.append(("Claude", "anthropic", AsyncAnthropic(api_key=ANTHROPIC_API_KEY), None, 5))
+        if PERPLEXITY_API_KEY:
+            engines.append(
+                (
+                    "Perplexity",
+                    "perplexity",
+                    AsyncOpenAI(api_key=PERPLEXITY_API_KEY, base_url="https://api.perplexity.ai"),
+                    PERPLEXITY_MODEL,
+                    2,
+                )
+            )
+        if GEMINI_API_KEY:
+            gemini_client = httpx.AsyncClient(timeout=90)
+            engines.append(("Gemini", "gemini", gemini_client, None, 4))
+
+    async def guarded_ask(
+        kind: str, engine_client, model: Optional[str], query: str, gate: asyncio.Semaphore
+    ) -> Optional[str]:
         async with gate:
             if kind == "anthropic":
                 return await ask_claude(engine_client, query)
-            if kind == "perplexity":
-                return await ask_engine(engine_client, query, model=PERPLEXITY_MODEL, attempts=3)
             if kind == "gemini":
                 return await ask_gemini(engine_client, query)
-            return await ask_engine(engine_client, query)
+            # Web-grounded calls are slower and rate-limit more, so retry twice.
+            return await ask_engine(engine_client, query, model=model or OPENAI_MODEL, attempts=3)
 
     labels: list[tuple[str, str]] = []
     tasks = []
-    for engine_name, kind, engine_client, concurrency in engines:
+    for engine_name, kind, engine_client, engine_model, concurrency in engines:
         gate = asyncio.Semaphore(concurrency)
         for query in queries:
             labels.append((engine_name, query))
-            tasks.append(guarded_ask(kind, engine_client, query, gate))
+            tasks.append(guarded_ask(kind, engine_client, engine_model, query, gate))
 
     try:
         answers = await asyncio.gather(*tasks)

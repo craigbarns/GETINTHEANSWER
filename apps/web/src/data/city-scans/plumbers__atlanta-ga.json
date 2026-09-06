@@ -7,20 +7,73 @@
   "engines": [
     {
       "engine": "ChatGPT",
-      "businesses": []
+      "businesses": [
+        "Roto-Rooter",
+        "Peach Plumbing & Drain",
+        "R.S. Andrews",
+        "The Plumbers Guild"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Plumb Works Inc",
+        "R.S. Andrews",
+        "Roto-Rooter"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Roto-Rooter",
+        "R.S. Andrews",
+        "Mr. Rooter Plumbing of Atlanta",
+        "Peach Plumbing & Drain",
+        "Atlanta Plumbing Plus"
+      ]
     },
     {
       "engine": "Perplexity",
       "businesses": [
-        "Roto-Rooter Atlanta",
-        "Allgood Plumbing",
+        "Roto-Rooter",
         "Plumb Works Inc",
-        "Henson Plumbing",
-        "R.S. Andrews"
+        "Allgood Plumbing",
+        "Atlanta Plumbing & Drain"
       ]
     }
   ],
   "businesses": [
+    {
+      "name": "Roto-Rooter",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "R.S. Andrews",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Peach Plumbing & Drain",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Plumb Works Inc",
+      "engines": [
+        "Claude",
+        "Perplexity"
+      ]
+    },
     {
       "name": "Allgood Plumbing",
       "engines": [
@@ -28,29 +81,29 @@
       ]
     },
     {
-      "name": "Henson Plumbing",
+      "name": "Atlanta Plumbing & Drain",
       "engines": [
         "Perplexity"
       ]
     },
     {
-      "name": "Plumb Works Inc",
+      "name": "Atlanta Plumbing Plus",
       "engines": [
-        "Perplexity"
+        "Gemini"
       ]
     },
     {
-      "name": "R.S. Andrews",
+      "name": "Mr. Rooter Plumbing of Atlanta",
       "engines": [
-        "Perplexity"
+        "Gemini"
       ]
     },
     {
-      "name": "Roto-Rooter Atlanta",
+      "name": "The Plumbers Guild",
       "engines": [
-        "Perplexity"
+        "ChatGPT"
       ]
     }
   ],
-  "totalNamed": 5
+  "totalNamed": 16
 }

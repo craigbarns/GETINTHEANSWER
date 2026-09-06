@@ -7,20 +7,81 @@
   "engines": [
     {
       "engine": "ChatGPT",
-      "businesses": []
+      "businesses": [
+        "Roto-Rooter",
+        "Done Plumbing, Heating, Cooling & Electric",
+        "Prime Plumbing & Heating",
+        "Christopher’s Plumbing Inc",
+        "Brad Co. Plumbing & Heating"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Christopher's Plumbing Inc",
+        "Prime Plumbing & Heating",
+        "Done! Plumbing, Heating, Cooling & Electric"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Roto-Rooter",
+        "Done! Plumbing, Heating, Cooling & Electric",
+        "Christopher's Plumbing Inc",
+        "Prime Plumbing & Heating",
+        "Brad Co. Plumbing & Heating"
+      ]
     },
     {
       "engine": "Perplexity",
       "businesses": [
         "Blue Sky Plumbing, Heating, Cooling & Electric",
-        "Roto-Rooter",
+        "Roto-Rooter Denver",
         "Mr. Perfect Plumbing",
-        "AAA Service Plumbing, Heating & Electric",
-        "Mr. Rooter Plumbing"
+        "AAA Service Plumbing, Heating & Electric"
       ]
     }
   ],
   "businesses": [
+    {
+      "name": "Christopher’s Plumbing Inc",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Done Plumbing, Heating, Cooling & Electric",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Prime Plumbing & Heating",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Brad Co. Plumbing & Heating",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Roto-Rooter",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
     {
       "name": "AAA Service Plumbing, Heating & Electric",
       "engines": [
@@ -40,17 +101,11 @@
       ]
     },
     {
-      "name": "Mr. Rooter Plumbing",
-      "engines": [
-        "Perplexity"
-      ]
-    },
-    {
-      "name": "Roto-Rooter",
+      "name": "Roto-Rooter Denver",
       "engines": [
         "Perplexity"
       ]
     }
   ],
-  "totalNamed": 5
+  "totalNamed": 17
 }

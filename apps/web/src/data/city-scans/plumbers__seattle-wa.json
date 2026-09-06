@@ -7,7 +7,31 @@
   "engines": [
     {
       "engine": "ChatGPT",
-      "businesses": []
+      "businesses": [
+        "Bob Oates Plumbing, Sewer & Rooter",
+        "Beacon Plumbing",
+        "Mr. Rooter Plumbing",
+        "Bee's Plumbing & Heating"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Bob Oates Plumbing, Sewer & Rooter",
+        "Beacon Plumbing",
+        "Roto-Rooter",
+        "Mr. Rooter Plumbing"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Beacon Plumbing",
+        "Bob Oates Plumbing, Sewer & Rooter",
+        "Mr. Rooter Plumbing",
+        "Bee's Plumbing and Heating",
+        "Gene Johnson Plumbing, Heating, Cooling & Electrical"
+      ]
     },
     {
       "engine": "Perplexity",
@@ -15,12 +39,43 @@
         "Beacon Plumbing",
         "Roto-Rooter Seattle",
         "Bee’s Plumbing & Heating",
-        "Rush Plumbing",
         "Ally Plumbing"
       ]
     }
   ],
   "businesses": [
+    {
+      "name": "Beacon Plumbing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Bob Oates Plumbing, Sewer & Rooter",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Mr. Rooter Plumbing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Bee's Plumbing & Heating",
+      "engines": [
+        "ChatGPT",
+        "Perplexity"
+      ]
+    },
     {
       "name": "Ally Plumbing",
       "engines": [
@@ -28,15 +83,21 @@
       ]
     },
     {
-      "name": "Beacon Plumbing",
+      "name": "Bee's Plumbing and Heating",
       "engines": [
-        "Perplexity"
+        "Gemini"
       ]
     },
     {
-      "name": "Bee’s Plumbing & Heating",
+      "name": "Gene Johnson Plumbing, Heating, Cooling & Electrical",
       "engines": [
-        "Perplexity"
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Roto-Rooter",
+      "engines": [
+        "Claude"
       ]
     },
     {
@@ -44,13 +105,7 @@
       "engines": [
         "Perplexity"
       ]
-    },
-    {
-      "name": "Rush Plumbing",
-      "engines": [
-        "Perplexity"
-      ]
     }
   ],
-  "totalNamed": 5
+  "totalNamed": 17
 }

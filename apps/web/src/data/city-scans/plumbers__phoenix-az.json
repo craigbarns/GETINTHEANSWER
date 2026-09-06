@@ -7,18 +7,93 @@
   "engines": [
     {
       "engine": "ChatGPT",
-      "businesses": []
+      "businesses": [
+        "George Brazil Plumbing & Electrical",
+        "Roto-Rooter",
+        "Goettl Plumbing",
+        "Mr. Rooter Plumbing",
+        "Patriotic Plumbing & Rooter"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "George Brazil Plumbing & Electrical",
+        "Patriotic Plumbing & Rooter",
+        "Goettl Plumbing",
+        "Roto-Rooter"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Goettl Plumbing",
+        "Roto-Rooter",
+        "George Brazil Plumbing & Electrical",
+        "Patriotic Plumbing & Rooter",
+        "Mr. Rooter Plumbing of Phoenix"
+      ]
     },
     {
       "engine": "Perplexity",
       "businesses": [
-        "Parker & Sons",
-        "Roto-Rooter",
-        "Somers Plumbers"
+        "Roto-Rooter Phoenix",
+        "Goettl Phoenix",
+        "Parker & Sons"
       ]
     }
   ],
   "businesses": [
+    {
+      "name": "George Brazil Plumbing & Electrical",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Goettl Plumbing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Patriotic Plumbing & Rooter",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Roto-Rooter",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Goettl Phoenix",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Mr. Rooter Plumbing",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Mr. Rooter Plumbing of Phoenix",
+      "engines": [
+        "Gemini"
+      ]
+    },
     {
       "name": "Parker & Sons",
       "engines": [
@@ -26,17 +101,11 @@
       ]
     },
     {
-      "name": "Roto-Rooter",
-      "engines": [
-        "Perplexity"
-      ]
-    },
-    {
-      "name": "Somers Plumbers",
+      "name": "Roto-Rooter Phoenix",
       "engines": [
         "Perplexity"
       ]
     }
   ],
-  "totalNamed": 3
+  "totalNamed": 17
 }

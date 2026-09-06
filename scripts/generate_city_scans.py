@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Give every /ai-seo-for/<industry>/<city> page something real to say.
 
-Today those 100 pages are one industry template with the city name substituted
-in, so plumbers/austin and plumbers/phoenix are the same document. Google
-indexes them and ranks them around position 79 — indexed, valued at nothing.
+Those pages were one industry template with the city name substituted in, so
+plumbers/austin and plumbers/phoenix were the same document. Google indexed
+them and ranked them around position 79 — indexed, valued at nothing.
 
 This asks the engines one genuine local question per industry x city, records
 which businesses they name, and writes the result to
@@ -11,15 +11,18 @@ apps/web/src/data/city-scans/<industry>__<city>.json. The page then reports a
 measured fact no competitor can copy, and demonstrates the product while doing
 it.
 
-Cost: one question per pair, per engine (~3 calls x 100 pairs), plus one cheap
-extraction call each. Cents, not dollars.
+Everything goes through OpenRouter, and every engine model carries the
+":online" suffix. That suffix is the whole point: asked without retrieval,
+gpt-4o-mini answers "I don't have real-time data" and names nobody, which is
+what produced ten city files with zero ChatGPT results. Perplexity retrieves
+natively and needs no suffix.
+
+Cost: one question per pair per engine, plus one cheap extraction call each.
 
 Usage:
-  export OPENAI_API_KEY=...          # required (asks + extracts)
-  export ANTHROPIC_API_KEY=...       # optional
-  export PERPLEXITY_API_KEY=...      # optional
+  export OPENROUTER_API_KEY=...
   python3 scripts/generate_city_scans.py
-  python3 scripts/generate_city_scans.py --industry plumbers --limit 10
+  python3 scripts/generate_city_scans.py --industry plumbers --force
 """
 
 from __future__ import annotations
@@ -40,9 +43,16 @@ OUT_DIR = ROOT / "apps" / "web" / "src" / "data" / "city-scans"
 INDUSTRIES_TS = ROOT / "apps" / "web" / "src" / "lib" / "industries.ts"
 CITIES_TS = ROOT / "apps" / "web" / "src" / "lib" / "cities.ts"
 
-OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
-ANTHROPIC_MODEL = os.getenv("ANTHROPIC_MODEL", "claude-haiku-4-5")
-PERPLEXITY_MODEL = os.getenv("PERPLEXITY_MODEL", "sonar")
+OPENROUTER_URL = os.getenv("OPENROUTER_BASE_URL", "https://openrouter.ai/api/v1") + "/chat/completions"
+
+# Kept in step with the engine list in apps/api/main.py.
+ENGINES = [
+    ("ChatGPT", os.getenv("OR_CHATGPT_MODEL", "openai/gpt-4o-mini:online")),
+    ("Claude", os.getenv("OR_CLAUDE_MODEL", "anthropic/claude-haiku-4.5:online")),
+    ("Gemini", os.getenv("OR_GEMINI_MODEL", "google/gemini-2.5-flash:online")),
+    ("Perplexity", os.getenv("OR_PERPLEXITY_MODEL", "perplexity/sonar")),
+]
+UTILITY_MODEL = os.getenv("OR_UTILITY_MODEL", "openai/gpt-4o-mini")
 
 # Kept deliberately small and in sync by hand with AGGREGATOR_TOKENS in
 # apps/api/main.py, which stays the source of truth for the product itself.
@@ -54,6 +64,17 @@ AGGREGATORS = {
     "zocdoc", "healthgrades", "reddit", "yellowpagescom", "expedia", "booking",
 }
 AGGREGATOR_HINTS = ("directory", "listing", "marketplace", "aggregator", "platform", "review site")
+
+NETWORK_ERRORS = (
+    urllib.error.URLError,
+    urllib.error.HTTPError,
+    KeyError,
+    IndexError,
+    TypeError,
+    TimeoutError,
+    RuntimeError,
+    json.JSONDecodeError,
+)
 
 
 def normalize(name: str) -> str:
@@ -73,57 +94,47 @@ def is_aggregator(name: str) -> bool:
     return any(hint in lowered for hint in AGGREGATOR_HINTS)
 
 
-def post_json(url: str, payload: dict, headers: dict, timeout: int = 90, attempts: int = 4) -> dict:
-    """POST with backoff on rate limits, and the provider's own error text on failure."""
+def chat(key: str, model: str, messages: list[dict], timeout: int = 150, attempts: int = 4, **extra) -> str:
+    """One OpenRouter chat call, with backoff on rate limits and overload."""
+    payload = {"model": model, "messages": messages, **extra}
     last_error: Exception | None = None
+
     for attempt in range(attempts):
         request = urllib.request.Request(
-            url,
+            OPENROUTER_URL,
             data=json.dumps(payload).encode("utf-8"),
-            headers={"Content-Type": "application/json", **headers},
+            headers={
+                "Content-Type": "application/json",
+                "Authorization": f"Bearer {key}",
+                # OpenRouter attributes traffic with these.
+                "HTTP-Referer": "https://www.getintheanswer.com",
+                "X-Title": "GetInTheAnswer city scans",
+            },
             method="POST",
         )
         try:
             with urllib.request.urlopen(request, timeout=timeout) as response:
-                return json.loads(response.read().decode("utf-8"))
+                data = json.loads(response.read().decode("utf-8"))
+            return data["choices"][0]["message"]["content"] or ""
         except urllib.error.HTTPError as exc:
             body = exc.read().decode("utf-8", "replace")[:300]
             last_error = RuntimeError(f"HTTP {exc.code}: {body}")
-            # 429 and 5xx are worth waiting out; 4xx of our own making are not.
             if exc.code != 429 and exc.code < 500:
                 raise last_error from exc
         except (urllib.error.URLError, TimeoutError) as exc:
             last_error = exc
 
         if attempt < attempts - 1:
-            time.sleep(2 ** attempt * 3)
+            time.sleep(2**attempt * 3)
 
     raise last_error if last_error else RuntimeError("request failed")
 
 
-def ask_openai_compatible(base: str, key: str, model: str, query: str) -> str | None:
+def ask_engine(key: str, model: str, query: str) -> str | None:
     try:
-        data = post_json(
-            f"{base}/chat/completions",
-            {"model": model, "messages": [{"role": "user", "content": query}], "temperature": 0.2},
-            {"Authorization": f"Bearer {key}"},
-        )
-        return data["choices"][0]["message"]["content"]
-    except (urllib.error.URLError, urllib.error.HTTPError, KeyError, IndexError, TimeoutError, RuntimeError, json.JSONDecodeError) as exc:
+        return chat(key, model, [{"role": "user", "content": query}], temperature=0.2, max_tokens=800) or None
+    except NETWORK_ERRORS as exc:
         print(f"    [!] {model}: {exc}")
-        return None
-
-
-def ask_anthropic(key: str, query: str) -> str | None:
-    try:
-        data = post_json(
-            "https://api.anthropic.com/v1/messages",
-            {"model": ANTHROPIC_MODEL, "max_tokens": 800, "messages": [{"role": "user", "content": query}]},
-            {"x-api-key": key, "anthropic-version": "2023-06-01"},
-        )
-        return data["content"][0]["text"]
-    except (urllib.error.URLError, urllib.error.HTTPError, KeyError, IndexError, TimeoutError, RuntimeError, json.JSONDecodeError) as exc:
-        print(f"    [!] {ANTHROPIC_MODEL}: {exc}")
         return None
 
 
@@ -137,19 +148,15 @@ def extract_businesses(key: str, answer: str) -> list[str]:
         'Respond with JSON only: {"businesses": ["Name One", "Name Two"]}'
     )
     try:
-        data = post_json(
-            "https://api.openai.com/v1/chat/completions",
-            {
-                "model": OPENAI_MODEL,
-                "messages": [{"role": "system", "content": system}, {"role": "user", "content": answer[:6000]}],
-                "response_format": {"type": "json_object"},
-                "temperature": 0,
-            },
-            {"Authorization": f"Bearer {key}"},
+        raw = chat(
+            key,
+            UTILITY_MODEL,
+            [{"role": "system", "content": system}, {"role": "user", "content": answer[:6000]}],
+            response_format={"type": "json_object"},
+            temperature=0,
         )
-        parsed = json.loads(data["choices"][0]["message"]["content"])
-        names = parsed.get("businesses") or []
-    except (urllib.error.URLError, urllib.error.HTTPError, KeyError, IndexError, TimeoutError, RuntimeError, json.JSONDecodeError) as exc:
+        names = (json.loads(raw) or {}).get("businesses") or []
+    except NETWORK_ERRORS as exc:
         print(f"    [!] extraction: {exc}")
         return []
 
@@ -157,7 +164,7 @@ def extract_businesses(key: str, answer: str) -> list[str]:
     for name in names:
         if not isinstance(name, str):
             continue
-        name = name.strip(" .,•-")
+        name = name.strip(" .,•-*")
         flat = normalize(name)
         if not name or flat in seen or is_aggregator(name):
             continue
@@ -200,28 +207,16 @@ def parse_cities() -> list[dict]:
     return cities
 
 
-def scan_pair(industry: dict, city: dict, keys: dict) -> dict:
+def scan_pair(industry: dict, city: dict, key: str) -> dict:
     label = f"{city['name']}, {city['stateCode']}"
     query = industry["query"].replace("{city}", label)
     print(f"[*] {industry['slug']} / {city['slug']}")
 
     engines = []
-
-    answer = ask_openai_compatible("https://api.openai.com/v1", keys["openai"], OPENAI_MODEL, query)
-    if answer:
-        engines.append({"engine": "ChatGPT", "businesses": extract_businesses(keys["openai"], answer)})
-
-    if keys.get("anthropic"):
-        answer = ask_anthropic(keys["anthropic"], query)
+    for engine_name, model in ENGINES:
+        answer = ask_engine(key, model, query)
         if answer:
-            engines.append({"engine": "Claude", "businesses": extract_businesses(keys["openai"], answer)})
-
-    if keys.get("perplexity"):
-        answer = ask_openai_compatible(
-            "https://api.perplexity.ai", keys["perplexity"], PERPLEXITY_MODEL, query
-        )
-        if answer:
-            engines.append({"engine": "Perplexity", "businesses": extract_businesses(keys["openai"], answer)})
+            engines.append({"engine": engine_name, "businesses": extract_businesses(key, answer)})
 
     tally: dict[str, dict] = {}
     for entry in engines:
@@ -232,7 +227,11 @@ def scan_pair(industry: dict, city: dict, keys: dict) -> dict:
 
     ranked = sorted(tally.values(), key=lambda row: (-len(row["engines"]), row["name"]))
     named = sum(len(entry["businesses"]) for entry in engines)
-    print(f"    -> {len(engines)} engines, {len(ranked)} distinct businesses named")
+    silent = [e["engine"] for e in engines if not e["businesses"]]
+    print(
+        f"    -> {len(engines)}/{len(ENGINES)} engines answered, "
+        f"{len(ranked)} distinct businesses" + (f", silent: {', '.join(silent)}" if silent else "")
+    )
 
     return {
         "industry": industry["slug"],
@@ -252,16 +251,12 @@ def main() -> int:
     parser.add_argument("--city", help="only this city slug")
     parser.add_argument("--limit", type=int, default=0, help="stop after N pairs")
     parser.add_argument("--force", action="store_true", help="rescan pairs that already have a file")
-    parser.add_argument("--workers", type=int, default=4, help="parallel pairs")
+    parser.add_argument("--workers", type=int, default=3, help="parallel pairs")
     args = parser.parse_args()
 
-    keys = {
-        "openai": os.getenv("OPENAI_API_KEY", "").strip(),
-        "anthropic": os.getenv("ANTHROPIC_API_KEY", "").strip(),
-        "perplexity": os.getenv("PERPLEXITY_API_KEY", "").strip(),
-    }
-    if not keys["openai"]:
-        print("[x] OPENAI_API_KEY is required — it asks one engine and does every extraction.", file=sys.stderr)
+    key = os.getenv("OPENROUTER_API_KEY", "").strip()
+    if not key:
+        print("[x] OPENROUTER_API_KEY is required.", file=sys.stderr)
         return 1
 
     industries = parse_industries()
@@ -291,12 +286,11 @@ def main() -> int:
         print("[=] Nothing to do (use --force to rescan).")
         return 0
 
-    engines_on = ["ChatGPT"] + (["Claude"] if keys["anthropic"] else []) + (["Perplexity"] if keys["perplexity"] else [])
-    print(f"[+] {len(pairs)} pairs to scan across {', '.join(engines_on)}\n")
+    print(f"[+] {len(pairs)} pairs across {', '.join(name for name, _ in ENGINES)} via OpenRouter\n")
 
     written = 0
     with concurrent.futures.ThreadPoolExecutor(max_workers=args.workers) as pool:
-        futures = {pool.submit(scan_pair, i, c, keys): t for i, c, t in pairs}
+        futures = {pool.submit(scan_pair, i, c, key): t for i, c, t in pairs}
         for future in concurrent.futures.as_completed(futures):
             target = futures[future]
             try:

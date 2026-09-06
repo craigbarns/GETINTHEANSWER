@@ -7,34 +7,94 @@
   "engines": [
     {
       "engine": "ChatGPT",
-      "businesses": []
+      "businesses": [
+        "Abacus Plumbing",
+        "Roto-Rooter",
+        "Clarke Kent Plumbing",
+        "Joe Hackney Plumbing"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Clarke Kent Plumbing",
+        "Joe Hackney Professional Plumbing",
+        "Roto-Rooter",
+        "Abacus Plumbing"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Roto-Rooter",
+        "Abacus Plumbing",
+        "Clarke Kent Plumbing",
+        "Joe Hackney — Professional Plumbing & Technical Services"
+      ]
     },
     {
       "engine": "Perplexity",
       "businesses": [
         "Roto-Rooter Austin",
         "Abacus Plumbing",
-        "Austin Emergency Plumbers",
-        "Reliant Plumbing",
-        "ABC Home & Commercial Services"
+        "Austin Plumbing Masters",
+        "Lantz Home Services",
+        "Reliant Plumbing"
       ]
     }
   ],
   "businesses": [
     {
-      "name": "ABC Home & Commercial Services",
-      "engines": [
-        "Perplexity"
-      ]
-    },
-    {
       "name": "Abacus Plumbing",
       "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
         "Perplexity"
       ]
     },
     {
-      "name": "Austin Emergency Plumbers",
+      "name": "Clarke Kent Plumbing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Roto-Rooter",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Austin Plumbing Masters",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Joe Hackney Plumbing",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Joe Hackney Professional Plumbing",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Joe Hackney — Professional Plumbing & Technical Services",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Lantz Home Services",
       "engines": [
         "Perplexity"
       ]
@@ -52,5 +112,5 @@
       ]
     }
   ],
-  "totalNamed": 5
+  "totalNamed": 17
 }

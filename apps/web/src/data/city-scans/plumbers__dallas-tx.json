@@ -7,13 +7,36 @@
   "engines": [
     {
       "engine": "ChatGPT",
-      "businesses": []
+      "businesses": [
+        "James Armstrong Plumbing",
+        "Pure Plumbing DFW",
+        "Dallas Water Restoration",
+        "Baker Brothers Plumbing",
+        "Roto-Rooter"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Baker Brothers",
+        "Dallas Water Restoration",
+        "Roto-Rooter"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "James Armstrong Plumbing",
+        "Baker Brothers Plumbing, Air & Electric",
+        "Dallas Water Restoration",
+        "Roto-Rooter Plumbing Services",
+        "Pure Plumbing DFW"
+      ]
     },
     {
       "engine": "Perplexity",
       "businesses": [
         "Dial One Johnson Plumbing, Cooling & Heating",
-        "Baker Brothers Plumbing, Air & Electric",
         "Roto-Rooter Dallas",
         "Berkeys"
       ]
@@ -21,9 +44,50 @@
   ],
   "businesses": [
     {
+      "name": "Dallas Water Restoration",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "James Armstrong Plumbing",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Pure Plumbing DFW",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Roto-Rooter",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Baker Brothers",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Baker Brothers Plumbing",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
       "name": "Baker Brothers Plumbing, Air & Electric",
       "engines": [
-        "Perplexity"
+        "Gemini"
       ]
     },
     {
@@ -43,7 +107,13 @@
       "engines": [
         "Perplexity"
       ]
+    },
+    {
+      "name": "Roto-Rooter Plumbing Services",
+      "engines": [
+        "Gemini"
+      ]
     }
   ],
-  "totalNamed": 4
+  "totalNamed": 16
 }
