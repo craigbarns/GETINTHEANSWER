@@ -16,3 +16,6 @@ outreach_results.txt
 
 # Prospect list derived from scans — third-party business data
 prospects_from_scans.csv
+
+# Outreach drafts — contain third-party business data
+outreach/drafts/
