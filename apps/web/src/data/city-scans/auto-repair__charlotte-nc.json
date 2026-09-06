@@ -1,0 +1,129 @@
+{
+  "industry": "auto-repair",
+  "city": "charlotte-nc",
+  "cityLabel": "Charlotte, NC",
+  "query": "Best independent auto repair shop in Charlotte, NC for European cars",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Bravo 4 Autowerks",
+        "Charlotte Star Service",
+        "Swedish Garage",
+        "Eurofed Independence",
+        "Eurofed South End"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Eurowise Service",
+        "Bravo 4 Autowerks",
+        "Eurofed Automotive",
+        "Swedish Garage",
+        "Euro Cars Southend"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Eurowise Service",
+        "Bravo 4 Autowerks",
+        "Eurofed Automotive (South Tryon St.)",
+        "Eurofed South End",
+        "Charlotte Star Service"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Eurowise Service",
+        "Dynamic Auto Tune",
+        "Eurofed Automotive",
+        "Euro Cars Southend",
+        "Bravo 4 Autowerks",
+        "Indian Trail Imports"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Bravo 4 Autowerks",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Eurowise Service",
+      "engines": [
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Charlotte Star Service",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Euro Cars Southend",
+      "engines": [
+        "Claude",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Eurofed Automotive",
+      "engines": [
+        "Claude",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Eurofed South End",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Swedish Garage",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Dynamic Auto Tune",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Eurofed Automotive (South Tryon St.)",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Eurofed Independence",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Indian Trail Imports",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 21
+}

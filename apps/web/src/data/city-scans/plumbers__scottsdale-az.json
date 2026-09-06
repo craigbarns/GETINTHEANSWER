@@ -1,0 +1,111 @@
+{
+  "industry": "plumbers",
+  "city": "scottsdale-az",
+  "cityLabel": "Scottsdale, AZ",
+  "query": "Who is the most reliable emergency plumber in Scottsdale, AZ for a burst pipe?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Local Roots AC & Plumbing",
+        "Phoenician Plumbing",
+        "Ryerson Plumbing",
+        "Desert Flow Plumbing",
+        "Mountain AZ Plumbing"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Local Roots AC & Plumbing",
+        "Phoenician Plumbing",
+        "Ryerson Plumbing",
+        "Mountain AZ Plumbing"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Local Roots AC & Plumbing",
+        "Zest Plumbing & Drain",
+        "Phoenician Plumbing",
+        "Ryerson Plumbing",
+        "Mr. Rooter Plumbing of Phoenix Arizona"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Roto-Rooter Plumbing & Water Cleanup",
+        "Omnia Plumbing",
+        "Zest Plumbing & Drain"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Local Roots AC & Plumbing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Phoenician Plumbing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Ryerson Plumbing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Mountain AZ Plumbing",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Zest Plumbing & Drain",
+      "engines": [
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Desert Flow Plumbing",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Mr. Rooter Plumbing of Phoenix Arizona",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Omnia Plumbing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Roto-Rooter Plumbing & Water Cleanup",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 17
+}

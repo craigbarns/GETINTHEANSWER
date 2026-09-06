@@ -1,0 +1,130 @@
+{
+  "industry": "pest-control",
+  "city": "houston-tx",
+  "cityLabel": "Houston, TX",
+  "query": "Best pest control company in Houston, TX for a termite infestation",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Terminix Houston",
+        "Noble Pest & Termite",
+        "Truly Nolen",
+        "EnviroCon Pest",
+        "Houston Prime Pest Control"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "ABC Home & Commercial Services",
+        "Noble Pest & Termite",
+        "Terminix Houston",
+        "EnviroCon Pest"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Terminix",
+        "Houston Prime Pest Control",
+        "Noble Pest & Termite",
+        "EnviroCon Pest Control",
+        "Truly Nolen Pest & Termite Control"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Terminix",
+        "All-Safe Pest & Termite",
+        "ABC Home & Commercial Services",
+        "Holder’s Pest Solutions",
+        "BUGCO Pest Control"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Noble Pest & Termite",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "ABC Home & Commercial Services",
+      "engines": [
+        "Claude",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "EnviroCon Pest",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Houston Prime Pest Control",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Terminix",
+      "engines": [
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Terminix Houston",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "All-Safe Pest & Termite",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "BUGCO Pest Control",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "EnviroCon Pest Control",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Holder’s Pest Solutions",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Truly Nolen",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Truly Nolen Pest & Termite Control",
+      "engines": [
+        "Gemini"
+      ]
+    }
+  ],
+  "totalNamed": 19
+}

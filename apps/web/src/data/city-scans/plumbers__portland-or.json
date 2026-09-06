@@ -1,0 +1,105 @@
+{
+  "industry": "plumbers",
+  "city": "portland-or",
+  "cityLabel": "Portland, OR",
+  "query": "Who is the most reliable emergency plumber in Portland, OR for a burst pipe?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Sarkinen Plumbing",
+        "Lovett Plumbing",
+        "Roto-Rooter",
+        "Vision Plumbing"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Lovett Plumbing",
+        "Sarkinen Plumbing",
+        "D&F Plumbing"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Sarkinen Plumbing",
+        "Roto-Rooter",
+        "Lovett Plumbing",
+        "Portland Plumbing & Drain (Vision Plumbing)"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Roto-Rooter Plumbing & Water Cleanup",
+        "Mr. Rooter Plumbing of Portland",
+        "D&F Plumbing, Heating and Cooling"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Lovett Plumbing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Sarkinen Plumbing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Roto-Rooter",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "D&F Plumbing",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "D&F Plumbing, Heating and Cooling",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Mr. Rooter Plumbing of Portland",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Portland Plumbing & Drain (Vision Plumbing)",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Roto-Rooter Plumbing & Water Cleanup",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Vision Plumbing",
+      "engines": [
+        "ChatGPT"
+      ]
+    }
+  ],
+  "totalNamed": 14
+}

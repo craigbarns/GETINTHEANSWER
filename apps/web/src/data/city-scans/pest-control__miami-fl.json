@@ -1,0 +1,129 @@
+{
+  "industry": "pest-control",
+  "city": "miami-fl",
+  "cityLabel": "Miami, FL",
+  "query": "Best pest control company in Miami, FL for a termite infestation",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "AL-FLEX Exterminators",
+        "Massey Services",
+        "Terminix",
+        "Apex Termite & Pest Miami",
+        "Miami Termite Pros"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "AL-FLEX Exterminators",
+        "Massey Services",
+        "Apex Termite & Pest Miami"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "AL-FLEX Exterminators",
+        "Massey Services",
+        "Orkin",
+        "Apex Termite & Pest Miami",
+        "Miami Termite Pros"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Native Pest Management",
+        "Terminix",
+        "Orkin",
+        "Florida Termite Guys",
+        "Martian Pest Control",
+        "Al-Flex Exterminators",
+        "Flash Termite",
+        "Bye Bye Termites"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "AL-FLEX Exterminators",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Apex Termite & Pest Miami",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Massey Services",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Miami Termite Pros",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Orkin",
+      "engines": [
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Terminix",
+      "engines": [
+        "ChatGPT",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Bye Bye Termites",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Flash Termite",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Florida Termite Guys",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Martian Pest Control",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Native Pest Management",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 21
+}

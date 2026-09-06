@@ -1,0 +1,136 @@
+{
+  "industry": "auto-repair",
+  "city": "houston-tx",
+  "cityLabel": "Houston, TX",
+  "query": "Best independent auto repair shop in Houston, TX for European cars",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Texas German Autohaus",
+        "Bemer Motor Cars",
+        "European Service Center",
+        "Lucas Auto Care",
+        "E1 Garage"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Texas German Autohaus",
+        "Bemer Motor Cars",
+        "Orion Auto Service",
+        "The Garagisti"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Bemer Motor Cars",
+        "Texas German Autohaus",
+        "Orion Auto Service",
+        "Optimum European Auto Repair",
+        "The Garagisti"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Texas German Autohaus",
+        "Alpine Motorworks",
+        "The Garagisti",
+        "European Service Center",
+        "Bemer Motor Cars",
+        "J&T Automotive",
+        "TMJ Bimmers",
+        "DMW Motor Cars"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Bemer Motor Cars",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Texas German Autohaus",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "The Garagisti",
+      "engines": [
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "European Service Center",
+      "engines": [
+        "ChatGPT",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Orion Auto Service",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Alpine Motorworks",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "DMW Motor Cars",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "E1 Garage",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "J&T Automotive",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Lucas Auto Care",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Optimum European Auto Repair",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "TMJ Bimmers",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 22
+}

@@ -1,0 +1,106 @@
+{
+  "industry": "pest-control",
+  "city": "nashville-tn",
+  "cityLabel": "Nashville, TN",
+  "query": "Best pest control company in Nashville, TN for a termite infestation",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "All-American Pest Control",
+        "Orkin",
+        "Massey Services",
+        "Waynes Exterminator"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "All-American Pest Control",
+        "Massey Services",
+        "Orkin",
+        "Waynes Pest Control"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "All-American Pest Control",
+        "Orkin",
+        "Massey Services",
+        "Lookout Pest Control",
+        "Moxie Pest Control"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Terminix",
+        "Orkin",
+        "All-American Pest Control",
+        "Moxie Pest Control"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "All-American Pest Control",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Orkin",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Massey Services",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Moxie Pest Control",
+      "engines": [
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Lookout Pest Control",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Terminix",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Waynes Exterminator",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Waynes Pest Control",
+      "engines": [
+        "Claude"
+      ]
+    }
+  ],
+  "totalNamed": 17
+}

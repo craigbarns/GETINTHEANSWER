@@ -1,0 +1,101 @@
+{
+  "industry": "pest-control",
+  "city": "las-vegas-nv",
+  "cityLabel": "Las Vegas, NV",
+  "query": "Best pest control company in Las Vegas, NV for a termite infestation",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Aspire Pest & Termite Control",
+        "Truly Nolen Pest & Termite Control",
+        "Rentokil",
+        "Terminix",
+        "Preventive Pest Control"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Aspire Pest & Termite Control",
+        "Rentokil",
+        "Pest Control Solutions Inc"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Aspire Pest & Termite Control",
+        "Terminix",
+        "Rentokil",
+        "Truly Nolen Pest & Termite Control",
+        "Preventive Pest Control"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Bulwark Exterminating",
+        "Aspire Pest & Termite Control",
+        "Terminix",
+        "Preventive Pest Control"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Aspire Pest & Termite Control",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Preventive Pest Control",
+      "engines": [
+        "ChatGPT",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Rentokil",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Terminix",
+      "engines": [
+        "ChatGPT",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Truly Nolen Pest & Termite Control",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Bulwark Exterminating",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Pest Control Solutions Inc",
+      "engines": [
+        "Claude"
+      ]
+    }
+  ],
+  "totalNamed": 17
+}

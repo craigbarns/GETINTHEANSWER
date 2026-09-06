@@ -1,0 +1,111 @@
+{
+  "industry": "auto-repair",
+  "city": "las-vegas-nv",
+  "cityLabel": "Las Vegas, NV",
+  "query": "Best independent auto repair shop in Las Vegas, NV for European cars",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Frank's European Service",
+        "BiTurbo Auto Repair",
+        "Desert Oasis European Auto Service",
+        "Euro Master Tek",
+        "European House for Imports"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "BiTurbo Auto Repair",
+        "European Motor Cars (EMC)",
+        "Desert Oasis European Auto Service & Repair"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "BiTurbo Auto Repair",
+        "European Motor Cars",
+        "Desert Oasis European Auto Service & Repair",
+        "Euro Master Tek",
+        "European House for Imports"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "European Motor Cars",
+        "Desert Oasis European Auto Service & Repair",
+        "Frank’s European Service",
+        "German Motors"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "BiTurbo Auto Repair",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Desert Oasis European Auto Service & Repair",
+      "engines": [
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Euro Master Tek",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "European House for Imports",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "European Motor Cars",
+      "engines": [
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Frank's European Service",
+      "engines": [
+        "ChatGPT",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Desert Oasis European Auto Service",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "European Motor Cars (EMC)",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "German Motors",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 17
+}

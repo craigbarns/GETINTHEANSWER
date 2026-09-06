@@ -1,0 +1,103 @@
+{
+  "industry": "auto-repair",
+  "city": "scottsdale-az",
+  "cityLabel": "Scottsdale, AZ",
+  "query": "Best independent auto repair shop in Scottsdale, AZ for European cars",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Scottsdale European Service",
+        "Scottsdale ProTech",
+        "Tech Plus Automotive",
+        "EuroExpert",
+        "Bridwell Automotive Center"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Scottsdale European Service",
+        "EuroExpert",
+        "Tech Plus Automotive",
+        "Bridwell Automotive Center"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Tech Plus Automotive",
+        "Scottsdale European Service",
+        "EuroExpert",
+        "Bridwell Automotive Center",
+        "Scottsdale ProTech"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Beck’s European",
+        "Scottsdale ProTech",
+        "Scottsdale European Service",
+        "Autohaus of North Scottsdale"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Scottsdale European Service",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Bridwell Automotive Center",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "EuroExpert",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Scottsdale ProTech",
+      "engines": [
+        "ChatGPT",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Tech Plus Automotive",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Autohaus of North Scottsdale",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Beck’s European",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 18
+}

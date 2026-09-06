@@ -1,0 +1,143 @@
+{
+  "industry": "hvac-contractors",
+  "city": "san-antonio-tx",
+  "cityLabel": "San Antonio, TX",
+  "query": "Who offers 24/7 emergency AC repair near me in San Antonio, TX?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "All Star Air Conditioning",
+        "Goettl Air Conditioning and Plumbing",
+        "Alamo Air Solutions",
+        "Texas Air Repair",
+        "Matador Cooling and Heating"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Texas Air Repair",
+        "All Star Air Conditioning",
+        "Goettl",
+        "Matador Cooling and Heating LLC",
+        "Alamo Air Solutions"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Goettl",
+        "All Star Air Conditioning",
+        "Alamo Air Solutions",
+        "Matador Cooling and Heating",
+        "Texas Air Repair"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Goettl Air Conditioning and Plumbing",
+        "Wrangler Air Conditioning",
+        "Elmer’s Home Services",
+        "A-OK Services",
+        "Texas Air Repair",
+        "Freedom Air Repair",
+        "24Hr AC Repairs",
+        "Amazing Air Solutions"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Texas Air Repair",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Alamo Air Solutions",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "All Star Air Conditioning",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Goettl",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Goettl Air Conditioning and Plumbing",
+      "engines": [
+        "ChatGPT",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Matador Cooling and Heating",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "24Hr AC Repairs",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "A-OK Services",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Amazing Air Solutions",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Elmer’s Home Services",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Freedom Air Repair",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Matador Cooling and Heating LLC",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Wrangler Air Conditioning",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 23
+}

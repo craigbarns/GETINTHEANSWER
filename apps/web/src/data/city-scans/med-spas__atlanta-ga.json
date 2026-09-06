@@ -1,0 +1,108 @@
+{
+  "industry": "med-spas",
+  "city": "atlanta-ga",
+  "cityLabel": "Atlanta, GA",
+  "query": "Best med spa in Atlanta, GA for Botox and dermal fillers",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "VIVA MD",
+        "ELLEMES Medical Spa",
+        "SkinCeuticals SkinLab Atlanta",
+        "dermani MEDSPA",
+        "Medspa of Atlanta"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "ELLEMES Medical Spa",
+        "VIVA MD",
+        "SkinCeuticals SkinLab Atlanta"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "ELLEMES Medical Spa",
+        "VIVA MD",
+        "dermani MEDSPA®",
+        "SkinCeuticals SkinLab Atlanta",
+        "Medspa of Atlanta"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "ELLEMES Medical Spa",
+        "4Ever Young Med Spa & Wellness Center",
+        "MetroDerm & Center for Plastic Surgery",
+        "Truffles Aesthetics",
+        "SkinCeuticals SkinLab Atlanta"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "ELLEMES Medical Spa",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "SkinCeuticals SkinLab Atlanta",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "VIVA MD",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Medspa of Atlanta",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "dermani MEDSPA",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "4Ever Young Med Spa & Wellness Center",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "MetroDerm & Center for Plastic Surgery",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Truffles Aesthetics",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 18
+}

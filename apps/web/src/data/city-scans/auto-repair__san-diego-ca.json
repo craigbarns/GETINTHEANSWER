@@ -1,0 +1,117 @@
+{
+  "industry": "auto-repair",
+  "city": "san-diego-ca",
+  "cityLabel": "San Diego, CA",
+  "query": "Best independent auto repair shop in San Diego, CA for European cars",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Independent Motorcars",
+        "German Autoworks",
+        "August European",
+        "Dieter’s Motorsports",
+        "Minsky Mercedes & BMW"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Independent Motorcars",
+        "August European",
+        "German Autoworks",
+        "Dieter's",
+        "Minsky Mercedes & BMW"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Independent Motorcars",
+        "German Autoworks",
+        "August European",
+        "Dieter's Motorsports",
+        "Minsky Mercedes & BMW"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Independent Motorcars",
+        "August European",
+        "Baron’s Foreign Car Service",
+        "European Autocare",
+        "Minsky Mercedes And BMW"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "August European",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Independent Motorcars",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "German Autoworks",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Minsky Mercedes & BMW",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Dieter’s Motorsports",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Baron’s Foreign Car Service",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Dieter's",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "European Autocare",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Minsky Mercedes And BMW",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 20
+}

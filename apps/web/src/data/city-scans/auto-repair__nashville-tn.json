@@ -1,0 +1,110 @@
+{
+  "industry": "auto-repair",
+  "city": "nashville-tn",
+  "cityLabel": "Nashville, TN",
+  "query": "Best independent auto repair shop in Nashville, TN for European cars",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "German Performance Options (GPO)",
+        "Rennstahl",
+        "EuroFix",
+        "Import Specialty Service",
+        "EurWerks"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "German Performance Options (GPO)",
+        "Rennstahl",
+        "German Motorworks",
+        "EuroFix"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "German Performance Options (GPO)",
+        "Rennstahl",
+        "German Motorworks",
+        "EuroFix",
+        "Import Specialty Service"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "EurWerks",
+        "Rennstahl",
+        "Mentor Auto Service",
+        "German Motorworks",
+        "GPO Tuning"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Rennstahl",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "EuroFix",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "German Motorworks",
+      "engines": [
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "German Performance Options (GPO)",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "EurWerks",
+      "engines": [
+        "ChatGPT",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Import Specialty Service",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "GPO Tuning",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Mentor Auto Service",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 19
+}

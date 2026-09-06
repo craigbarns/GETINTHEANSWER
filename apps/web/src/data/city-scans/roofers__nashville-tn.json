@@ -1,0 +1,99 @@
+{
+  "industry": "roofers",
+  "city": "nashville-tn",
+  "cityLabel": "Nashville, TN",
+  "query": "Who is the best roofing contractor in Nashville, TN for storm damage repair?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Jewell Roofing & Exteriors",
+        "Tim Leeper Roofing",
+        "Music City Roofers",
+        "MidSouth Construction"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Jewell Roofing & Exteriors",
+        "MidSouth Construction",
+        "Music City Roofers",
+        "Tim Leeper Roofing"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "MidSouth Construction",
+        "Jewell Roofing & Exteriors",
+        "Tim Leeper Roofing",
+        "Music City Roofers"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Phoenix Roofing and Renovations",
+        "MidSouth Construction",
+        "Don Kennedy Roofing",
+        "Southern Roofing Co"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "MidSouth Construction",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Jewell Roofing & Exteriors",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Music City Roofers",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Tim Leeper Roofing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Don Kennedy Roofing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Phoenix Roofing and Renovations",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Southern Roofing Co",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 16
+}

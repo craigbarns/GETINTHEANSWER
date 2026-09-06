@@ -1,0 +1,114 @@
+{
+  "industry": "pest-control",
+  "city": "portland-or",
+  "cityLabel": "Portland, OR",
+  "query": "Best pest control company in Portland, OR for a termite infestation",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "A&A Pest Control",
+        "Terminix",
+        "Deep Roots Pest and Wildlife Innovations",
+        "Moxie Pest Control",
+        "Orkin"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "A&A Pest Control",
+        "Deep Roots Pest and Wildlife Innovations",
+        "Moxie Pest Control"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "A&A Pest Control",
+        "Deep Roots Pest and Wildlife Innovations, LLC",
+        "Natura Pest Control",
+        "Terminix",
+        "Orkin"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "The Killers Pest Control",
+        "EcoGuard Pest Management",
+        "Pointe Pest Control"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "A&A Pest Control",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Deep Roots Pest and Wildlife Innovations",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Moxie Pest Control",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Orkin",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Terminix",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Deep Roots Pest and Wildlife Innovations, LLC",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "EcoGuard Pest Management",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Natura Pest Control",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Pointe Pest Control",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "The Killers Pest Control",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 16
+}

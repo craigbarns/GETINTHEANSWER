@@ -1,0 +1,123 @@
+{
+  "industry": "med-spas",
+  "city": "tampa-fl",
+  "cityLabel": "Tampa, FL",
+  "query": "Best med spa in Tampa, FL for Botox and dermal fillers",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Erasable Med Spa",
+        "LIVIA Medical Spa & Aesthetics",
+        "Melissa Clark, PA-C Aesthetics",
+        "Aspire MedSpa & Beauty Bar",
+        "Ideal Image Tampa"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "LIVIA Medical Spa & Aesthetics",
+        "Aspire MedSpa & Beauty Bar",
+        "Erasable Med Spa"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "LIVIA Medical Spa & Aesthetics",
+        "Erasable Med Spa",
+        "Aspire MedSpa and Beauty Bar",
+        "Melissa Clark, PA-C Aesthetics",
+        "Ultimate Image Cosmetic Medical Center"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "ÉLAN Aesthetics",
+        "Esthetica Medspa Tampa",
+        "Ultimate Image Cosmetic Medical Center",
+        "Bella Excellence",
+        "Tre MedSpa"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Erasable Med Spa",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "LIVIA Medical Spa & Aesthetics",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Aspire MedSpa & Beauty Bar",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Melissa Clark, PA-C Aesthetics",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Ultimate Image Cosmetic Medical Center",
+      "engines": [
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Aspire MedSpa and Beauty Bar",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Bella Excellence",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Esthetica Medspa Tampa",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Ideal Image Tampa",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Tre MedSpa",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "ÉLAN Aesthetics",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 18
+}

@@ -1,0 +1,127 @@
+{
+  "industry": "chiropractors",
+  "city": "seattle-wa",
+  "cityLabel": "Seattle, WA",
+  "query": "Best chiropractor in Seattle, WA for lower back pain and sciatica",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Fremont Spine + Wellness",
+        "Seattle Chiropractic Spine & Injury Center",
+        "Evergreen Chiropractic",
+        "Chiro One"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Fremont Spine + Wellness",
+        "Seattle Chiropractic Spine & Injury Center",
+        "Chiro One - Belltown",
+        "Glacier Chiropractic - Ballard",
+        "Evergreen Chiropractic"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Seattle Chiropractic Spine & Injury Center",
+        "Chiro One",
+        "Fremont Spine + Wellness"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Seattle Chiropractic Spine & Injury Center",
+        "Evergreen Chiropractic",
+        "Fremont Spine + Wellness",
+        "Body Smith Chiropractic",
+        "Seattle Chiropractic and Wellness Group",
+        "Chiro Seattle",
+        "Capitol Hill Chiropractic",
+        "Green Lake Chiropractor / Tangelo Health"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Fremont Spine + Wellness",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Seattle Chiropractic Spine & Injury Center",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Evergreen Chiropractic",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Chiro One",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Body Smith Chiropractic",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Capitol Hill Chiropractic",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Chiro One - Belltown",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Chiro Seattle",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Glacier Chiropractic - Ballard",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Green Lake Chiropractor / Tangelo Health",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Seattle Chiropractic and Wellness Group",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 20
+}

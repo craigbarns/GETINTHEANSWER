@@ -1,0 +1,149 @@
+{
+  "industry": "roofers",
+  "city": "charlotte-nc",
+  "cityLabel": "Charlotte, NC",
+  "query": "Who is the best roofing contractor in Charlotte, NC for storm damage repair?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "WaynCo Roofing",
+        "ARX Roofing & Exteriors",
+        "Masters Roofing",
+        "Merritt Roofing",
+        "Steele Restoration"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "WaynCo Roofing",
+        "Masters Roofing",
+        "ARX Roofing & Exteriors",
+        "Steele Restoration",
+        "Mitten & Company"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "WaynCo Roofing",
+        "ARX Roofing",
+        "Steel Restoration",
+        "Masters Roofing Inc",
+        "Merritt Roofing"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Southern Star Roofing",
+        "Carolina Storm Roofing",
+        "Roof Medic",
+        "Race City Roofing",
+        "Taylor Roofing",
+        "Well Krafted Roofing"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "WaynCo Roofing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "ARX Roofing & Exteriors",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Masters Roofing",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Merritt Roofing",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Steele Restoration",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "ARX Roofing",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Carolina Storm Roofing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Masters Roofing Inc",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Mitten & Company",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Race City Roofing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Roof Medic",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Southern Star Roofing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Steel Restoration",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Taylor Roofing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Well Krafted Roofing",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 21
+}

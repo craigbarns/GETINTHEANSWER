@@ -1,0 +1,138 @@
+{
+  "industry": "hvac-contractors",
+  "city": "las-vegas-nv",
+  "cityLabel": "Las Vegas, NV",
+  "query": "Who offers 24/7 emergency AC repair near me in Las Vegas, NV?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "The Cooling Company",
+        "Bob's Repair",
+        "Sahara Air Conditioning & Heating",
+        "Goettl Air Conditioning and Plumbing",
+        "Evolve Air Conditioning and Heating"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "The Cooling Company",
+        "Bob's Repair",
+        "Goettl",
+        "Evolve Air Conditioning and Heating",
+        "Nevada Residential Services"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "The Cooling Company",
+        "Bob's Repair",
+        "Goettl",
+        "Evolve Air Conditioning and Heating",
+        "Las Vegas AC Repair"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Goettl",
+        "The Cooling Company",
+        "Five Star Mechanical",
+        "Evolve Air Conditioning and Heating",
+        "One Hour Air Conditioning & Heating",
+        "Air Pro Master",
+        "Sahara Air Conditioning & Heating",
+        "Step By Step Heating And Air Conditioning"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Evolve Air Conditioning and Heating",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "The Cooling Company",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Bob's Repair",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Goettl",
+      "engines": [
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Sahara Air Conditioning & Heating",
+      "engines": [
+        "ChatGPT",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Air Pro Master",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Five Star Mechanical",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Goettl Air Conditioning and Plumbing",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Las Vegas AC Repair",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Nevada Residential Services",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "One Hour Air Conditioning & Heating",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Step By Step Heating And Air Conditioning",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 23
+}

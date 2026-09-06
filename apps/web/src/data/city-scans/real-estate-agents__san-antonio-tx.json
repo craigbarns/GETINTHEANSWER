@@ -1,0 +1,126 @@
+{
+  "industry": "real-estate-agents",
+  "city": "san-antonio-tx",
+  "cityLabel": "San Antonio, TX",
+  "query": "Who is the best real estate agent to sell a luxury home in San Antonio, TX?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Patti Nelson",
+        "Cody Miller",
+        "Debra Janes",
+        "Delaine Mathieu",
+        "Debra Sendejo"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Patti Nelson Luxury",
+        "Kuper Sotheby's International Realty",
+        "Keller Williams Luxury",
+        "eXp Realty"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Patti Nelson Luxury",
+        "Kuper Sotheby's International Realty",
+        "Debra Janes",
+        "Delaine Mathieu",
+        "eXp Realty"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Michael Lugo of The Lugo Group",
+        "Cat Lodge",
+        "Jennifer Santrock"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Debra Janes",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Delaine Mathieu",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Kuper Sotheby's International Realty",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Patti Nelson Luxury",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "eXp Realty",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Cat Lodge",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Cody Miller",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Debra Sendejo",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Jennifer Santrock",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Keller Williams Luxury",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Michael Lugo of The Lugo Group",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Patti Nelson",
+      "engines": [
+        "ChatGPT"
+      ]
+    }
+  ],
+  "totalNamed": 17
+}

@@ -1,0 +1,123 @@
+{
+  "industry": "plumbers",
+  "city": "san-diego-ca",
+  "cityLabel": "San Diego, CA",
+  "query": "Who is the most reliable emergency plumber in San Diego, CA for a burst pipe?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "ASI Heating & Air",
+        "Bill Howe Plumbing",
+        "Powers Plumbing",
+        "John Padilla Plumbing",
+        "Plumber in San Diego, CA"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "ASI Heating & Air",
+        "Bill Howe",
+        "Powers Plumbing"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "ASI Heating & Air",
+        "Bill Howe Plumbing",
+        "Powers Plumbing",
+        "Reliable Plumbing & Drain Cleaning Inc",
+        "Plumber in San Diego, CA"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Bill Howe",
+        "Anderson Plumbing",
+        "Roto-Rooter San Diego",
+        "Mauzy",
+        "Black Mountain Plumbing"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "ASI Heating & Air",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Powers Plumbing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Bill Howe",
+      "engines": [
+        "Claude",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Bill Howe Plumbing",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Plumber in San Diego, CA",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Anderson Plumbing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Black Mountain Plumbing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "John Padilla Plumbing",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Mauzy",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Reliable Plumbing & Drain Cleaning Inc",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Roto-Rooter San Diego",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 18
+}

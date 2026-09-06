@@ -1,0 +1,130 @@
+{
+  "industry": "med-spas",
+  "city": "houston-tx",
+  "cityLabel": "Houston, TX",
+  "query": "Best med spa in Houston, TX for Botox and dermal fillers",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Aven Medspa",
+        "River Oaks Galleria Med Spa",
+        "It’s a Secret Med Spa",
+        "Beverly Hills Rejuvenation Center (BHRC)"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "River Oaks Galleria Med Spa",
+        "Beverly Hills Rejuvenation Center (BHRC) River Oaks",
+        "Glow Medical Aesthetics",
+        "Aven Medspa",
+        "It's a Secret Med Spa"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "River Oaks Galleria Med Spa (ROG Medspa)",
+        "Aven Medspa",
+        "Glow Medical Aesthetics",
+        "It’s a Secret Med Spa",
+        "Beverly Hills Rejuvenation Center (BHRC) River Oaks"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "DermaTouch RN",
+        "Dream Aesthetics Medspa",
+        "Persona Med Spa",
+        "Natural Balance Aesthetics",
+        "VG Medical Spa"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Aven Medspa",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "It’s a Secret Med Spa",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Beverly Hills Rejuvenation Center (BHRC) River Oaks",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Glow Medical Aesthetics",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "River Oaks Galleria Med Spa",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Beverly Hills Rejuvenation Center (BHRC)",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "DermaTouch RN",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Dream Aesthetics Medspa",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Natural Balance Aesthetics",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Persona Med Spa",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "River Oaks Galleria Med Spa (ROG Medspa)",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "VG Medical Spa",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 19
+}

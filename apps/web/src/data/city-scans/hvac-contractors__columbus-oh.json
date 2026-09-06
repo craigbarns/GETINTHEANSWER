@@ -1,0 +1,136 @@
+{
+  "industry": "hvac-contractors",
+  "city": "columbus-oh",
+  "cityLabel": "Columbus, OH",
+  "query": "Who offers 24/7 emergency AC repair near me in Columbus, OH?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Service Experts Columbus",
+        "Buckeye Heating, Cooling, Plumbing & Electrical",
+        "Custom Air",
+        "DorMar Heating, Air Conditioning & Plumbing",
+        "Fire & Ice Heating, Cooling, Plumbing & Electrical"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Service Experts Columbus",
+        "Buckeye Heating, Cooling, Plumbing & Electrical",
+        "DorMar Heating, Air Conditioning & Plumbing",
+        "Custom Air",
+        "Fire & Ice Heating, Cooling, Plumbing & Electrical"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Service Experts Columbus",
+        "Buckeye Heating, Cooling, Plumbing & Electrical",
+        "DorMar Heating, Air Conditioning & Plumbing",
+        "Fire & Ice Heating, Cooling, Plumbing & Electrical"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Indoor Temp",
+        "Service Experts Columbus",
+        "The Waterworks",
+        "Right Way Heating & Cooling",
+        "Muetzel Plumbing, Heating & Cooling",
+        "Airtron Columbus",
+        "Logan Services",
+        "Atlas Butler"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Service Experts Columbus",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Buckeye Heating, Cooling, Plumbing & Electrical",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "DorMar Heating, Air Conditioning & Plumbing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Fire & Ice Heating, Cooling, Plumbing & Electrical",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Custom Air",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Airtron Columbus",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Atlas Butler",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Indoor Temp",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Logan Services",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Muetzel Plumbing, Heating & Cooling",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Right Way Heating & Cooling",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "The Waterworks",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 22
+}

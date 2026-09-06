@@ -1,0 +1,142 @@
+{
+  "industry": "dentists",
+  "city": "nashville-tn",
+  "cityLabel": "Nashville, TN",
+  "query": "Best cosmetic dentist for porcelain veneers in Nashville, TN",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Dr. Thomas Nabors",
+        "Dr. David Wickness",
+        "Dr. Dennis Wells",
+        "Dr. Jody Jones",
+        "Beam Smile Design"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Dr. Thomas Nabors, DDS",
+        "Dr. David Wickness, DMD",
+        "Dr. Clint Newman, DDS",
+        "Dr. Dennis Wells, DDS"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Dr. Thomas Nabors",
+        "Dr. David Wickness",
+        "Dr. Dennis Wells",
+        "Dr. Clint Newman",
+        "Dr. Jody Jones"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Dr. Thomas Nabors",
+        "Dr. Clint Newman",
+        "Nations Dental Studio",
+        "Smile On Nashville",
+        "Gulch Dental Studio",
+        "Dennis J. Wells DDS"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Dr. Thomas Nabors",
+      "engines": [
+        "ChatGPT",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Dr. Clint Newman",
+      "engines": [
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Dr. David Wickness",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Dr. Dennis Wells",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Dr. Jody Jones",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Beam Smile Design",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Dennis J. Wells DDS",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Dr. Clint Newman, DDS",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Dr. David Wickness, DMD",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Dr. Dennis Wells, DDS",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Dr. Thomas Nabors, DDS",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Gulch Dental Studio",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Nations Dental Studio",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Smile On Nashville",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 20
+}

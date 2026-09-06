@@ -1,0 +1,127 @@
+{
+  "industry": "dentists",
+  "city": "san-antonio-tx",
+  "cityLabel": "San Antonio, TX",
+  "query": "Best cosmetic dentist for porcelain veneers in San Antonio, TX",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Cosmetic Dental Associates",
+        "M.I. Dental Designs",
+        "Modern Dentistry",
+        "Fountain of Youth Dental",
+        "Pristine Family & Cosmetic Dentistry"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Cosmetic Dental Associates (CDA)",
+        "Cosmetic Dentistry of San Antonio",
+        "Fountain of Youth Dental",
+        "M.I. Dental Designs",
+        "Pristine Family & Cosmetic Dentistry"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Cosmetic Dental Associates",
+        "5 Star Dental Group",
+        "M.I. Dental Designs",
+        "Modern Dentistry",
+        "Fountain of Youth Dental"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Cosmetic Dental Associates",
+        "Cosmetic Dentistry of San Antonio",
+        "Smiles R Us Dental",
+        "Reger Family Dental",
+        "Advanced Dental Associates"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Cosmetic Dental Associates",
+      "engines": [
+        "ChatGPT",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Fountain of Youth Dental",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "M.I. Dental Designs",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Cosmetic Dentistry of San Antonio",
+      "engines": [
+        "Claude",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Modern Dentistry",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Pristine Family & Cosmetic Dentistry",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "5 Star Dental Group",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Advanced Dental Associates",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Cosmetic Dental Associates (CDA)",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Reger Family Dental",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Smiles R Us Dental",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 20
+}

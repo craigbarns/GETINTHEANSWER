@@ -1,0 +1,125 @@
+{
+  "industry": "roofers",
+  "city": "tampa-fl",
+  "cityLabel": "Tampa, FL",
+  "query": "Who is the best roofing contractor in Tampa, FL for storm damage repair?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Tampa Premium Roofing",
+        "Hytz Roofing",
+        "Reese Roofing & Construction",
+        "Rain Right Roofing",
+        "Protek Roofing"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Tampa Premium Roofing",
+        "Hytz Roofing",
+        "Reese Roofing & Construction",
+        "Protek Roofing"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Tampa Premium Roofing",
+        "Hytz Roofing",
+        "Reese Roofing & Construction",
+        "Protek",
+        "Rain Right Roofing"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Westfall Roofing",
+        "Stay-Dry Roofing of Tampa Bay",
+        "RoofClaim",
+        "Southern Pro Restoration",
+        "Integrity Roofing of Florida"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Hytz Roofing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Reese Roofing & Construction",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Tampa Premium Roofing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Protek Roofing",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Rain Right Roofing",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Integrity Roofing of Florida",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Protek",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "RoofClaim",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Southern Pro Restoration",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Stay-Dry Roofing of Tampa Bay",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Westfall Roofing",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 19
+}

@@ -1,0 +1,126 @@
+{
+  "industry": "electricians",
+  "city": "san-antonio-tx",
+  "cityLabel": "San Antonio, TX",
+  "query": "Who is the best licensed electrician in San Antonio, TX for an emergency callout?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Davila Electric",
+        "Mr. Electric",
+        "Pokorski Electric",
+        "5G Electric",
+        "Absolute Power Electrical Contractors"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Absolute Power Electrical Contractors",
+        "Good Times Electric",
+        "Davila Electric"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Mr. Electric of San Antonio",
+        "Davila Electric Co Inc",
+        "Pokorski Electric",
+        "5G Electric",
+        "Keil Electric San Antonio"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Good Times Electric",
+        "Keil Electric",
+        "Mister Sparky of San Antonio",
+        "Wattsmith Electric"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "5G Electric",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Absolute Power Electrical Contractors",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Davila Electric",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Good Times Electric",
+      "engines": [
+        "Claude",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Pokorski Electric",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Davila Electric Co Inc",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Keil Electric",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Keil Electric San Antonio",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Mister Sparky of San Antonio",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Mr. Electric",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Mr. Electric of San Antonio",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Wattsmith Electric",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 17
+}

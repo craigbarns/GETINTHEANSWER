@@ -1,0 +1,111 @@
+{
+  "industry": "chiropractors",
+  "city": "nashville-tn",
+  "cityLabel": "Nashville, TN",
+  "query": "Best chiropractor in Nashville, TN for lower back pain and sciatica",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "The Spine Works",
+        "Advanced Spine & Wellness Chiropractic",
+        "Origin Health & Wellness",
+        "Natural Health Solutions"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "The Spine Works",
+        "Origin Health & Wellness",
+        "Advanced Spine & Wellness Chiropractic",
+        "Natural Health Solution"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Action Spine & Joint",
+        "Sweeney Chiropractic",
+        "Origin Health & Wellness",
+        "The Spine Works",
+        "Advanced Spine & Wellness Chiropractic"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Action Spine & Joint",
+        "Spine and Strength",
+        "The Spineworks",
+        "Green Hills Chiropractic Clinic"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "The Spine Works",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Advanced Spine & Wellness Chiropractic",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Origin Health & Wellness",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Action Spine & Joint",
+      "engines": [
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Green Hills Chiropractic Clinic",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Natural Health Solution",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Natural Health Solutions",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Spine and Strength",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Sweeney Chiropractic",
+      "engines": [
+        "Gemini"
+      ]
+    }
+  ],
+  "totalNamed": 17
+}

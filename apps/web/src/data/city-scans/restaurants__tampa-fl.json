@@ -1,0 +1,110 @@
+{
+  "industry": "restaurants",
+  "city": "tampa-fl",
+  "cityLabel": "Tampa, FL",
+  "query": "Best romantic Italian restaurant with outdoor seating in Tampa, FL",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Jay Luigi",
+        "Donatello",
+        "Esposito's Italian Restaurant & Bar"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Jay Luigi",
+        "Trattoria Pasquale",
+        "Donatello"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Donatello Restaurant",
+        "Rocca",
+        "Jay Luigi"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Rocca",
+        "OLIVIA",
+        "La Casa Della Pasta",
+        "The Brother",
+        "BellaBrava New World Trattoria"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Jay Luigi",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Donatello",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Rocca",
+      "engines": [
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "BellaBrava New World Trattoria",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Donatello Restaurant",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Esposito's Italian Restaurant & Bar",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "La Casa Della Pasta",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "OLIVIA",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "The Brother",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Trattoria Pasquale",
+      "engines": [
+        "Claude"
+      ]
+    }
+  ],
+  "totalNamed": 14
+}

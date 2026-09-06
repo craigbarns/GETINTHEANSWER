@@ -1,0 +1,103 @@
+{
+  "industry": "auto-repair",
+  "city": "denver-co",
+  "cityLabel": "Denver, CO",
+  "query": "Best independent auto repair shop in Denver, CO for European cars",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "DART Auto",
+        "Firo's Autohaus",
+        "Paddock Imports",
+        "Importsports",
+        "AutoImports of Denver"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "DART Auto",
+        "Importsports",
+        "Firo's Autohaus",
+        "AutoImports of Denver"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "DART Auto",
+        "Importsports",
+        "Avalon Motorsports",
+        "Firo's Autohaus",
+        "Paddock Imports"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Bluewater Performance",
+        "Firo’s Autohaus",
+        "DART Auto",
+        "AutoImports of Denver"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "DART Auto",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Firo's Autohaus",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "AutoImports of Denver",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Importsports",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Paddock Imports",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Avalon Motorsports",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Bluewater Performance",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 18
+}

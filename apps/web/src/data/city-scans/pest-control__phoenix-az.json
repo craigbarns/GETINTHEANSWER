@@ -1,0 +1,101 @@
+{
+  "industry": "pest-control",
+  "city": "phoenix-az",
+  "cityLabel": "Phoenix, AZ",
+  "query": "Best pest control company in Phoenix, AZ for a termite infestation",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "ACTION Termite & Pest Control",
+        "Phoenix Pest & Termite Control",
+        "Bill's Pest Termite Control",
+        "City Wide Pest Control",
+        "Arizona Termite Specialists"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Arizona Termite Specialists",
+        "ACTION Termite & Pest Control",
+        "City Wide Pest Control"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "ACTION Termite & Pest Control",
+        "Arizona Termite Specialists",
+        "Bill's Pest Termite Control",
+        "City Wide Pest Control",
+        "Phoenix Pest & Termite Control"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Bulwark Exterminating",
+        "Bill’s Pest Termite Control",
+        "Blue Sky Pest Control",
+        "Arizona Termite Specialists"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Arizona Termite Specialists",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "ACTION Termite & Pest Control",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Bill's Pest Termite Control",
+      "engines": [
+        "ChatGPT",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "City Wide Pest Control",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Phoenix Pest & Termite Control",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Blue Sky Pest Control",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Bulwark Exterminating",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 17
+}

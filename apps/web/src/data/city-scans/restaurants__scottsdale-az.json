@@ -1,0 +1,118 @@
+{
+  "industry": "restaurants",
+  "city": "scottsdale-az",
+  "cityLabel": "Scottsdale, AZ",
+  "query": "Best romantic Italian restaurant with outdoor seating in Scottsdale, AZ",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Toscana - Wood Fired Italian",
+        "Marcellino Ristorante",
+        "Pubblico Italian Eatery",
+        "Virtù Honest Craft",
+        "Sassi Ristorante"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Virtù Honest Craft Restaurant",
+        "Toscana - Wood Fired Italian",
+        "Marcellino Ristorante"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Virtù Honest Craft",
+        "Marcellino Ristorante",
+        "Toscana - Wood Fired Italian",
+        "Pubblico Italian Eatery",
+        "Sassi Ristorante"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Olive & Ivy",
+        "Marcellino Ristorante",
+        "Bel Sito Ristorante",
+        "The Italian Daughter",
+        "La Locanda Ristorante Italiano"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Marcellino Ristorante",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Toscana - Wood Fired Italian",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Pubblico Italian Eatery",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Sassi Ristorante",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Virtù Honest Craft",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Bel Sito Ristorante",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "La Locanda Ristorante Italiano",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Olive & Ivy",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "The Italian Daughter",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Virtù Honest Craft Restaurant",
+      "engines": [
+        "Claude"
+      ]
+    }
+  ],
+  "totalNamed": 18
+}

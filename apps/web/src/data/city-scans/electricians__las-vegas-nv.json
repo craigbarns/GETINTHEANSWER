@@ -1,0 +1,127 @@
+{
+  "industry": "electricians",
+  "city": "las-vegas-nv",
+  "cityLabel": "Las Vegas, NV",
+  "query": "Who is the best licensed electrician in Las Vegas, NV for an emergency callout?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "PDQ Electric",
+        "Elite Connections LLC",
+        "Ampere Electric",
+        "Fowler Electric",
+        "Penny Electric"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Ampere Electric",
+        "Elite Connections LLC",
+        "PDQ Electric",
+        "Stout Electric"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Ampere Electric",
+        "PDQ Electric",
+        "Elite Connections LLC",
+        "Canyon Electric",
+        "Stout Electric"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Fowler Electric",
+        "Big Red Electric Company",
+        "Canyon Electric",
+        "Eco Electric",
+        "Pacific Electric",
+        "Citywide Electric"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Ampere Electric",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Elite Connections LLC",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "PDQ Electric",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Canyon Electric",
+      "engines": [
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Fowler Electric",
+      "engines": [
+        "ChatGPT",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Stout Electric",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Big Red Electric Company",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Citywide Electric",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Eco Electric",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Pacific Electric",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Penny Electric",
+      "engines": [
+        "ChatGPT"
+      ]
+    }
+  ],
+  "totalNamed": 20
+}

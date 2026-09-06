@@ -1,0 +1,113 @@
+{
+  "industry": "dentists",
+  "city": "portland-or",
+  "cityLabel": "Portland, OR",
+  "query": "Best cosmetic dentist for porcelain veneers in Portland, OR",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Advanced Dentistry",
+        "Bridgetown Dental",
+        "Portland Smile Design",
+        "We Fix Smiles",
+        "Portland Dental"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Advanced Dentistry",
+        "Bridgetown Dental",
+        "We Fix Smiles",
+        "Portland Smile Design",
+        "Portland Dental"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Advanced Dentistry",
+        "Bling Dental",
+        "Bridgetown Dental"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Bling Dental",
+        "South Waterfront Dental",
+        "Portland Smile Clinic",
+        "Hollywood Family Dentistry",
+        "We Fix Smiles"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Advanced Dentistry",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Bridgetown Dental",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "We Fix Smiles",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Bling Dental",
+      "engines": [
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Portland Dental",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Portland Smile Design",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Hollywood Family Dentistry",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Portland Smile Clinic",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "South Waterfront Dental",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 18
+}

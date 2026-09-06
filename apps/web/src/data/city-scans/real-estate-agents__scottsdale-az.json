@@ -1,0 +1,112 @@
+{
+  "industry": "real-estate-agents",
+  "city": "scottsdale-az",
+  "cityLabel": "Scottsdale, AZ",
+  "query": "Who is the best real estate agent to sell a luxury home in Scottsdale, AZ?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Mike Domer",
+        "Katrina Barrett",
+        "Marta Walsh",
+        "Nadine De Luca",
+        "Joan Levinson"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Katrina Barrett",
+        "Joan Levinson",
+        "Mike Domer",
+        "Marta Walsh",
+        "Nadine De Luca"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Joan Levinson",
+        "Katrina Barrett",
+        "Mike Domer",
+        "Marta Walsh",
+        "Nadine De Luca"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Darren Tackett / The Tackett Team",
+        "Katrina Barrett",
+        "Mike Domer",
+        "Lauren Whitfield",
+        "Johnathon de Young"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Katrina Barrett",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Mike Domer",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Joan Levinson",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Marta Walsh",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Nadine De Luca",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Darren Tackett / The Tackett Team",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Johnathon de Young",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Lauren Whitfield",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 20
+}

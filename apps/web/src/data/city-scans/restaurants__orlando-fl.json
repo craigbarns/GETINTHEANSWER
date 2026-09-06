@@ -1,0 +1,121 @@
+{
+  "industry": "restaurants",
+  "city": "orlando-fl",
+  "cityLabel": "Orlando, FL",
+  "query": "Best romantic Italian restaurant with outdoor seating in Orlando, FL",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "La Luce - Signia by Hilton Bonnet Creek",
+        "Vincenzo Cucina Italiana",
+        "Maria & Enzo's",
+        "Ciao Italia Ristorante"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Vincenzo Cucina Italiana",
+        "La Luce at Signia by Hilton Bonnet Creek",
+        "Christini's Ristorante Italiano"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Christini's Ristorante Italiano",
+        "La Luce",
+        "Terralina Crafted Italian",
+        "Ciao Italia Ristorante",
+        "Vincenzo Cucina Italiana"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Vincenzo Cucina Italiana",
+        "Christini’s Ristorante Italiano",
+        "North Italia",
+        "Enzo’s on the Lake",
+        "Adriatico Trattoria Italiana"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Vincenzo Cucina Italiana",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Christini's Ristorante Italiano",
+      "engines": [
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Ciao Italia Ristorante",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Adriatico Trattoria Italiana",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Enzo’s on the Lake",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "La Luce",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "La Luce - Signia by Hilton Bonnet Creek",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "La Luce at Signia by Hilton Bonnet Creek",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Maria & Enzo's",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "North Italia",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Terralina Crafted Italian",
+      "engines": [
+        "Gemini"
+      ]
+    }
+  ],
+  "totalNamed": 17
+}

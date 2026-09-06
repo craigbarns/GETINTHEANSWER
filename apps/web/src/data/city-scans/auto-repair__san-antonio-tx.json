@@ -1,0 +1,124 @@
+{
+  "industry": "auto-repair",
+  "city": "san-antonio-tx",
+  "cityLabel": "San Antonio, TX",
+  "query": "Best independent auto repair shop in San Antonio, TX for European cars",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Bavarian Auto Repair",
+        "German & European Auto Repair",
+        "Eurasian Auto Repair",
+        "Bert's Motor Works",
+        "Autobahn Automotive"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Bavarian Auto Repair",
+        "My German Car SA",
+        "Bert's Motor Works",
+        "Autobahn Automotive"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Bavarian Auto Repair",
+        "German & European Auto Repair in San Antonio",
+        "Bert's Motor Works",
+        "Autobahn Automotive",
+        "SA European"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Bert’s Motor Works",
+        "SA European",
+        "Goose Automotive",
+        "Bavarian Auto Repair",
+        "German & European Auto Repair",
+        "Autobahn Automotive",
+        "Das Auto Shop TX"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Autobahn Automotive",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Bavarian Auto Repair",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Bert's Motor Works",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "German & European Auto Repair",
+      "engines": [
+        "ChatGPT",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "SA European",
+      "engines": [
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Das Auto Shop TX",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Eurasian Auto Repair",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "German & European Auto Repair in San Antonio",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Goose Automotive",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "My German Car SA",
+      "engines": [
+        "Claude"
+      ]
+    }
+  ],
+  "totalNamed": 21
+}

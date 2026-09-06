@@ -1,0 +1,132 @@
+{
+  "industry": "med-spas",
+  "city": "scottsdale-az",
+  "cityLabel": "Scottsdale, AZ",
+  "query": "Best med spa in Scottsdale, AZ for Botox and dermal fillers",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "DHH Med Spa",
+        "DermaPrecision",
+        "KORA Aesthetics",
+        "Aesthetic IQ Clinic",
+        "Body Preserve"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "DHH Med Spa",
+        "DermaPrecision",
+        "Esthetic Finesse",
+        "Aesthetic IQ Clinic",
+        "Skin Savvy Aesthetics"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "DHH Med Spa",
+        "Aesthetic IQ Clinic",
+        "DermaPrecision",
+        "Esthetic Finesse"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Adam & Eve Medical Aesthetics",
+        "The Flawless Lab - Medspa",
+        "DHH Med Spa",
+        "Inside Out Aesthetics",
+        "Haus of Confidence",
+        "SkinSpirit"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "DHH Med Spa",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Aesthetic IQ Clinic",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "DermaPrecision",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Esthetic Finesse",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Adam & Eve Medical Aesthetics",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Body Preserve",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Haus of Confidence",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Inside Out Aesthetics",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "KORA Aesthetics",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Skin Savvy Aesthetics",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "SkinSpirit",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "The Flawless Lab - Medspa",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 20
+}

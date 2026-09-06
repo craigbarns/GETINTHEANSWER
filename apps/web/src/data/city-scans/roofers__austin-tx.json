@@ -1,0 +1,115 @@
+{
+  "industry": "roofers",
+  "city": "austin-tx",
+  "cityLabel": "Austin, TX",
+  "query": "Who is the best roofing contractor in Austin, TX for storm damage repair?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Austin Roofing Company",
+        "Altitude Roofing",
+        "Skywall Construction",
+        "Impact Roofing & Renovation",
+        "Driftwood Builders Roofing"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Altitude Roofing",
+        "Serolf Roofing",
+        "Austin Roofing Company",
+        "Skywall Construction",
+        "Impact Roofing & Renovation"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Altitude Roofing",
+        "Driftwood Builders Roofing",
+        "Austin Roofing Company",
+        "Impact Roofing & Renovation",
+        "Skywall Construction"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Driftwood Builders Roofing",
+        "Right On Roof On",
+        "Texas Roof Damage",
+        "Clear Choice Roofing"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Altitude Roofing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Austin Roofing Company",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Driftwood Builders Roofing",
+      "engines": [
+        "ChatGPT",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Impact Roofing & Renovation",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Skywall Construction",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Clear Choice Roofing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Right On Roof On",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Serolf Roofing",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Texas Roof Damage",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 19
+}

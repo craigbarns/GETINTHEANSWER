@@ -1,0 +1,120 @@
+{
+  "industry": "dentists",
+  "city": "orlando-fl",
+  "cityLabel": "Orlando, FL",
+  "query": "Best cosmetic dentist for porcelain veneers in Orlando, FL",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Koyfman Dental",
+        "Dr. John E. Russo, DMD",
+        "Dr. Patricia Roach",
+        "Smile Center of Orlando",
+        "Maple Dentistry"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Maple Dentistry Orlando",
+        "Koyfman Dental",
+        "Orlando Advanced Dentists",
+        "Smile Center of Orlando",
+        "Dr. John E. Russo, DMD"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Maple Dentistry",
+        "Koyfman Dental",
+        "Orlando Advanced Dentists",
+        "Dr. John E. Russo, DMD",
+        "Smile Center of Orlando"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Dr. John E. Russo",
+        "Dr. Patricia Roach at Orlando Advanced Dental",
+        "Koyfman Dental",
+        "East Orlando Dental"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Koyfman Dental",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Dr. John E. Russo, DMD",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Smile Center of Orlando",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Maple Dentistry",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Orlando Advanced Dentists",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Dr. John E. Russo",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Dr. Patricia Roach",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Dr. Patricia Roach at Orlando Advanced Dental",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "East Orlando Dental",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Maple Dentistry Orlando",
+      "engines": [
+        "Claude"
+      ]
+    }
+  ],
+  "totalNamed": 19
+}

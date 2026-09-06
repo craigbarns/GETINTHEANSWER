@@ -1,0 +1,148 @@
+{
+  "industry": "hvac-contractors",
+  "city": "tampa-fl",
+  "cityLabel": "Tampa, FL",
+  "query": "Who offers 24/7 emergency AC repair near me in Tampa, FL?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Hales AC",
+        "Protek HVAC",
+        "Bayonet Plumbing, Heating & Air Conditioning",
+        "Air Masters of Tampa Bay",
+        "Air Rescue"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Hales AC",
+        "Protek HVAC",
+        "Peak HVAC Tampa",
+        "Air 24/7",
+        "Bayonet Plumbing, Heating & Air Conditioning"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Hales AC",
+        "Protek HVAC",
+        "Bayonet Plumbing, Heating & Air Conditioning",
+        "Air Masters of Tampa Bay",
+        "One Hour Air Conditioning & Heating of Tampa"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Air Masters of Tampa Bay",
+        "ACS Home Services",
+        "Gulf Coast Heating & Air",
+        "Del-Air",
+        "Home Therapist",
+        "Hawkins Service Company",
+        "One Hour Air Conditioning & Heating of Tampa",
+        "Cool Today"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Air Masters of Tampa Bay",
+      "engines": [
+        "ChatGPT",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Bayonet Plumbing, Heating & Air Conditioning",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Hales AC",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Protek HVAC",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "One Hour Air Conditioning & Heating of Tampa",
+      "engines": [
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "ACS Home Services",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Air 24/7",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Air Rescue",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Cool Today",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Del-Air",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Gulf Coast Heating & Air",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Hawkins Service Company",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Home Therapist",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Peak HVAC Tampa",
+      "engines": [
+        "Claude"
+      ]
+    }
+  ],
+  "totalNamed": 23
+}

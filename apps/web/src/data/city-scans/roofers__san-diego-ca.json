@@ -1,0 +1,115 @@
+{
+  "industry": "roofers",
+  "city": "san-diego-ca",
+  "cityLabel": "San Diego, CA",
+  "query": "Who is the best roofing contractor in San Diego, CA for storm damage repair?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Christian Roofing",
+        "Raneri & Long Roofing and Solar",
+        "TMC Roofing",
+        "Ford Roofing",
+        "Guardian Roofs"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Guardian Roofs",
+        "Christian Roofing",
+        "Raneri & Long Roofing and Solar",
+        "TMC Roofing",
+        "Ford Roofing"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "TMC Roofing",
+        "Guardian Roofs",
+        "Raneri & Long Roofing and Solar",
+        "Ford Roofing",
+        "Christian Roofing"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "California First Roofing",
+        "RL Roofing",
+        "E Z Solar & Roofing",
+        "Pro Value Contracting"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Christian Roofing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Ford Roofing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Guardian Roofs",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Raneri & Long Roofing and Solar",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "TMC Roofing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "California First Roofing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "E Z Solar & Roofing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Pro Value Contracting",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "RL Roofing",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 19
+}

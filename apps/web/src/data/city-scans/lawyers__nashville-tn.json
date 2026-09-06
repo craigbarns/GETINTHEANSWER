@@ -1,0 +1,115 @@
+{
+  "industry": "lawyers",
+  "city": "nashville-tn",
+  "cityLabel": "Nashville, TN",
+  "query": "Top personal injury lawyer in Nashville, TN with a proven track record",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Daniel L. Clayton",
+        "Randall L. Kinnard",
+        "The Law Offices of John Day, P.C",
+        "Luvell L. Glanton",
+        "Keith Williams Law Group"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Randall L. Kinnard",
+        "Daniel L. Clayton"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Kinnard Law",
+        "Daniel Clayton Law"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Kinnard Law",
+        "Rocky McElhaney Law Firm",
+        "Ponce Law",
+        "John A. Day",
+        "Jim Higgins"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Daniel L. Clayton",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Kinnard Law",
+      "engines": [
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Randall L. Kinnard",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Daniel Clayton Law",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Jim Higgins",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "John A. Day",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Keith Williams Law Group",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Luvell L. Glanton",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Ponce Law",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Rocky McElhaney Law Firm",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "The Law Offices of John Day, P.C",
+      "engines": [
+        "ChatGPT"
+      ]
+    }
+  ],
+  "totalNamed": 14
+}

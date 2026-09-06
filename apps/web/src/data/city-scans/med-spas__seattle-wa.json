@@ -1,0 +1,130 @@
+{
+  "industry": "med-spas",
+  "city": "seattle-wa",
+  "cityLabel": "Seattle, WA",
+  "query": "Best med spa in Seattle, WA for Botox and dermal fillers",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Medspa of Seattle",
+        "Element MedSpa Capitol Hill",
+        "Simplicity Med Spa",
+        "Blue Haven Medical Spa",
+        "Skin Synthesis"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "SkinSpirit",
+        "Element MedSpa",
+        "Medspa of Seattle",
+        "Simplicity Med Spa"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "SkinSpirit Seattle Green Lake",
+        "Simplicity Med Spa",
+        "Skinlogic Med Spa",
+        "Medspa of Seattle",
+        "Skin Synthesis"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Seattle Beauty",
+        "Well Medical Arts",
+        "Bellora Medical Aesthetics",
+        "Skin Synthesis",
+        "Skinlogic Med Spa"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Medspa of Seattle",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Simplicity Med Spa",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Skin Synthesis",
+      "engines": [
+        "ChatGPT",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Skinlogic Med Spa",
+      "engines": [
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Bellora Medical Aesthetics",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Blue Haven Medical Spa",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Element MedSpa",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Element MedSpa Capitol Hill",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Seattle Beauty",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "SkinSpirit",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "SkinSpirit Seattle Green Lake",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Well Medical Arts",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 19
+}

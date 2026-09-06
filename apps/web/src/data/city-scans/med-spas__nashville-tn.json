@@ -1,0 +1,125 @@
+{
+  "industry": "med-spas",
+  "city": "nashville-tn",
+  "cityLabel": "Nashville, TN",
+  "query": "Best med spa in Nashville, TN for Botox and dermal fillers",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "NAKED MD Nashville",
+        "ElaMar Skin",
+        "ONYX Wellness & Aesthetics",
+        "Smiley Aesthetics",
+        "Belcourt Aesthetics"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "NAKED MD Nashville",
+        "Belcourt Aesthetics",
+        "ONYX Wellness & Aesthetics",
+        "The Aesthetics Club Nashville"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "NAKED MD Nashville",
+        "ONYX Wellness & Aesthetics",
+        "Smiley Aesthetics (West Nashville)",
+        "Elan Skin",
+        "The Aesthetics Club Nashville"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "61Five Health & Wellness",
+        "ElaMar Nashville",
+        "Smiley Aesthetics",
+        "The Aesthetics Club Nashville",
+        "Thomas Rose Aesthetics"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "NAKED MD Nashville",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "ONYX Wellness & Aesthetics",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "The Aesthetics Club Nashville",
+      "engines": [
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Belcourt Aesthetics",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Smiley Aesthetics",
+      "engines": [
+        "ChatGPT",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "61Five Health & Wellness",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "ElaMar Nashville",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "ElaMar Skin",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Elan Skin",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Smiley Aesthetics (West Nashville)",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Thomas Rose Aesthetics",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 19
+}

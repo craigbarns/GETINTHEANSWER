@@ -1,0 +1,109 @@
+{
+  "industry": "restaurants",
+  "city": "san-antonio-tx",
+  "cityLabel": "San Antonio, TX",
+  "query": "Best romantic Italian restaurant with outdoor seating in San Antonio, TX",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Battalion",
+        "Zocca Cuisine d'Italia",
+        "Piatti"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Zocca Cuisine d'Italia",
+        "Battalion",
+        "Piatti"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Battalion",
+        "Tre Trattoria",
+        "Zocca Cuisine d'Italia",
+        "Piatti at The Quarry",
+        "Piatti at La Cantera"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Tre Trattoria",
+        "Paesanos Riverwalk",
+        "Piatti La Cantera",
+        "Zocca Cuisine d'Italia",
+        "Luce Ristorante e Enoteca"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Zocca Cuisine d'Italia",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Battalion",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Piatti",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Tre Trattoria",
+      "engines": [
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Luce Ristorante e Enoteca",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Paesanos Riverwalk",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Piatti La Cantera",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Piatti at La Cantera",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Piatti at The Quarry",
+      "engines": [
+        "Gemini"
+      ]
+    }
+  ],
+  "totalNamed": 16
+}

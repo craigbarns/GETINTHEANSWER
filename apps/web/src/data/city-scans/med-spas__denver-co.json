@@ -1,0 +1,127 @@
+{
+  "industry": "med-spas",
+  "city": "denver-co",
+  "cityLabel": "Denver, CO",
+  "query": "Best med spa in Denver, CO for Botox and dermal fillers",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Spa Bella Medispa",
+        "Boujee Nurse",
+        "RESTOR Medical Spa",
+        "The Luxe Room",
+        "Simply Injectables"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Spa Bella Rejuvenating Medispa",
+        "Simply Injectables",
+        "Boujee Nurse",
+        "Raw Rituale",
+        "RESTOR Medical Spa"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Spa Bella Medispa",
+        "Boujee Nurse",
+        "The Luxe Room",
+        "RESTOR Medical Spa",
+        "Injector 5280"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "The Luxe Room – South Denver",
+        "Simply Injectables",
+        "GATTONI Medical Aesthetics",
+        "Spa Bella Medispa",
+        "SkinSpirit Denver-Greenwood Village"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Boujee Nurse",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "RESTOR Medical Spa",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Simply Injectables",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Spa Bella Medispa",
+      "engines": [
+        "ChatGPT",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "The Luxe Room",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "GATTONI Medical Aesthetics",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Injector 5280",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Raw Rituale",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "SkinSpirit Denver-Greenwood Village",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Spa Bella Rejuvenating Medispa",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "The Luxe Room – South Denver",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 20
+}

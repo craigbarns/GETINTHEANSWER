@@ -1,0 +1,125 @@
+{
+  "industry": "pest-control",
+  "city": "san-diego-ca",
+  "cityLabel": "San Diego, CA",
+  "query": "Best pest control company in San Diego, CA for a termite infestation",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Thrasher Pest Control",
+        "License To Kill Pest Control",
+        "American Pest Control",
+        "Truly Nolen Pest & Termite Control",
+        "Vester Pest Control"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Thrasher Pest Control",
+        "License To Kill Pest Control",
+        "Talos Pest Control",
+        "Vester Pest Control",
+        "American Pest Control"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Thrasher Pest Control",
+        "License To Kill Pest Control",
+        "American Pest Control"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Thrasher Pest Control",
+        "Terminix",
+        "Western Exterminator Company",
+        "ECOLA Termite & Pest Control",
+        "Lloyd Pest Control",
+        "D&S Termite & Pest Control"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Thrasher Pest Control",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "American Pest Control",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "License To Kill Pest Control",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Vester Pest Control",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "D&S Termite & Pest Control",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "ECOLA Termite & Pest Control",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Lloyd Pest Control",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Talos Pest Control",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Terminix",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Truly Nolen Pest & Termite Control",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Western Exterminator Company",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 19
+}

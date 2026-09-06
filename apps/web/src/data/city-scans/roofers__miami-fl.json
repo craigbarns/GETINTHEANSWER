@@ -1,0 +1,118 @@
+{
+  "industry": "roofers",
+  "city": "miami-fl",
+  "cityLabel": "Miami, FL",
+  "query": "Who is the best roofing contractor in Miami, FL for storm damage repair?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Extreme Roofing Inc",
+        "Art's Roofing & Construction",
+        "Dr. Roofing FL",
+        "Bessard Roofing",
+        "DR Construction & Roofing"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Dr. Roofing FL",
+        "Art's Roofing & Construction",
+        "Extreme Roofing Inc"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Dr. Roofing FL",
+        "Bessard Roofing",
+        "Art's Roofing & Construction",
+        "Extreme Roofing Inc",
+        "DR Construction & Roofing"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Perkins Roofing",
+        "Salomon Roofing & Waterproofing",
+        "City Roofing",
+        "Top Florida Roofing",
+        "Vizcaya Roofing"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Art's Roofing & Construction",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Dr. Roofing FL",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Extreme Roofing Inc",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Bessard Roofing",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "DR Construction & Roofing",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "City Roofing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Perkins Roofing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Salomon Roofing & Waterproofing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Top Florida Roofing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Vizcaya Roofing",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 18
+}

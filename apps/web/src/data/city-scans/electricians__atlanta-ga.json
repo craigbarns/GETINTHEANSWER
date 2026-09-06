@@ -1,0 +1,125 @@
+{
+  "industry": "electricians",
+  "city": "atlanta-ga",
+  "cityLabel": "Atlanta, GA",
+  "query": "Who is the best licensed electrician in Atlanta, GA for an emergency callout?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Mr. Wise Electric",
+        "Mister Sparky",
+        "Tru Electric",
+        "Bardi",
+        "Kalahari Electrical Services"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Kalahari Electrical Services",
+        "Mr. Wise Electric",
+        "Mister Sparky",
+        "Bardi"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Kalahari Electrical Services",
+        "Mr. Wise Electric",
+        "Bardi",
+        "Mister Sparky® of Atlanta",
+        "Tru Electric"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "RS Andrews",
+        "Pat Murphy Electric",
+        "Mister Sparky Atlanta",
+        "Aardvark Electric",
+        "Kalahari Electrical"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Bardi",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Kalahari Electrical Services",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Mr. Wise Electric",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Mister Sparky",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Tru Electric",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Aardvark Electric",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Kalahari Electrical",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Mister Sparky Atlanta",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Mister Sparky® of Atlanta",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Pat Murphy Electric",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "RS Andrews",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 19
+}

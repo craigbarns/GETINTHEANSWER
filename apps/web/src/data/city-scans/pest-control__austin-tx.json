@@ -1,0 +1,116 @@
+{
+  "industry": "pest-control",
+  "city": "austin-tx",
+  "cityLabel": "Austin, TX",
+  "query": "Best pest control company in Austin, TX for a termite infestation",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Roberts Termite & Pest Control",
+        "Absolute Pest Management",
+        "Prescription Pest",
+        "Terminix",
+        "Orkin"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Prescription Pest",
+        "Absolute Pest Management",
+        "Cowboy Pest Eliminators"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Roberts Termite & Pest Control",
+        "Absolute Pest Management",
+        "Prescription Pest",
+        "Orkin",
+        "ABC Home & Commercial Services"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Bulwark Exterminating",
+        "Accurate Termite and Pest Control",
+        "Terminix",
+        "A-Tex Pest Management"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Absolute Pest Management",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Prescription Pest",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Orkin",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Roberts Termite & Pest Control",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Terminix",
+      "engines": [
+        "ChatGPT",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "A-Tex Pest Management",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "ABC Home & Commercial Services",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Accurate Termite and Pest Control",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Bulwark Exterminating",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Cowboy Pest Eliminators",
+      "engines": [
+        "Claude"
+      ]
+    }
+  ],
+  "totalNamed": 17
+}

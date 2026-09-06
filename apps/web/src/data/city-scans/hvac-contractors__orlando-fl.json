@@ -1,0 +1,163 @@
+{
+  "industry": "hvac-contractors",
+  "city": "orlando-fl",
+  "cityLabel": "Orlando, FL",
+  "query": "Who offers 24/7 emergency AC repair near me in Orlando, FL?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "ServiceOne Air Conditioning & Plumbing",
+        "Our Place Air",
+        "Clear Comfort Orlando",
+        "ProMag",
+        "Frank Gay HVAC Services"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Service One AC",
+        "Apple AC",
+        "Pro Mag Energy Group",
+        "My Infinity Air",
+        "Clear Comfort Orlando"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "ServiceOne Air Conditioning & Plumbing",
+        "Infinity Air & Heat",
+        "ProMag",
+        "Clear Comfort Orlando",
+        "Summit HVAC Orlando"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Clear Comfort Orlando",
+        "Bob Heinmiller AC",
+        "United Air Temp",
+        "Our Place Air",
+        "Del-Air",
+        "Downtown Air and Heat",
+        "Frank Gay Services",
+        "1-AFA HVAC"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Clear Comfort Orlando",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Our Place Air",
+      "engines": [
+        "ChatGPT",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "ProMag",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "ServiceOne Air Conditioning & Plumbing",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "1-AFA HVAC",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Apple AC",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Bob Heinmiller AC",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Del-Air",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Downtown Air and Heat",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Frank Gay HVAC Services",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Frank Gay Services",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Infinity Air & Heat",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "My Infinity Air",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Pro Mag Energy Group",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Service One AC",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Summit HVAC Orlando",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "United Air Temp",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 23
+}

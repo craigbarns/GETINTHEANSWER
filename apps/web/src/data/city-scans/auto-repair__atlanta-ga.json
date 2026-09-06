@@ -1,0 +1,119 @@
+{
+  "industry": "auto-repair",
+  "city": "atlanta-ga",
+  "cityLabel": "Atlanta, GA",
+  "query": "Best independent auto repair shop in Atlanta, GA for European cars",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Freed Performance",
+        "Eurofed Automotive",
+        "Autobahn Performance",
+        "European Automotive Inc",
+        "Buckhead Imports"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Freed Performance",
+        "Autobahn Performance",
+        "Eurofed Automotive",
+        "European Automotive Inc",
+        "Buckhead Imports"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Eurofed Automotive",
+        "Autobahn Performance",
+        "FREED Performance",
+        "Buckhead Imports",
+        "European Automotive Inc"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Solo Motorsports",
+        "Eurofed Automotive",
+        "European Automotive Specialists (EAS Atlanta)",
+        "Autobahn Performance",
+        "European Service Center",
+        "Goldcrest Motorsport"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Autobahn Performance",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Eurofed Automotive",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Buckhead Imports",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "European Automotive Inc",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Freed Performance",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "European Automotive Specialists (EAS Atlanta)",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "European Service Center",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Goldcrest Motorsport",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Solo Motorsports",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 21
+}

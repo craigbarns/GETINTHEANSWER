@@ -1,0 +1,106 @@
+{
+  "industry": "med-spas",
+  "city": "chicago-il",
+  "cityLabel": "Chicago, IL",
+  "query": "Best med spa in Chicago, IL for Botox and dermal fillers",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "ImageLab Med Spa",
+        "Better Med Spa & Wellness",
+        "PURE Medical Spa",
+        "Refine by Tulsi"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Better Med Spa & Wellness",
+        "PURE Medical Spa",
+        "ImageLab Med Spa",
+        "Refine by Tulsi"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Better Med Spa & Wellness",
+        "ImageLab Med Spa",
+        "PURE Medical Spa",
+        "Refine by Tulsi",
+        "SpaDerma Medspa"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "The Confidence Bar",
+        "Essence Medspa & Wellness Center",
+        "PURE Medical Spa",
+        "Better Med Spa"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "PURE Medical Spa",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Better Med Spa & Wellness",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "ImageLab Med Spa",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Refine by Tulsi",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Better Med Spa",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Essence Medspa & Wellness Center",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "SpaDerma Medspa",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "The Confidence Bar",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 17
+}

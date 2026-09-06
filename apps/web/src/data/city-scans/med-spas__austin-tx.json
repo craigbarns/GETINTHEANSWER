@@ -1,0 +1,112 @@
+{
+  "industry": "med-spas",
+  "city": "austin-tx",
+  "cityLabel": "Austin, TX",
+  "query": "Best med spa in Austin, TX for Botox and dermal fillers",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Austin Med Spa",
+        "InjectCo",
+        "BEAUX MedSpa",
+        "Austin Plastic Surgery Institute (APSI)",
+        "SkinSpirit"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "BEAUX MedSpa",
+        "Austin Plastic Surgery Institute (APSI)",
+        "InjectCo",
+        "SkinSpirit",
+        "Austin Med Spa"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Austin Med Spa",
+        "InjectCo",
+        "BEAUX MedSpa",
+        "Austin Plastic Surgery Institute (APSI)",
+        "SkinSpirit"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "SkinSpirit",
+        "Viva Day Spa + Med Spa",
+        "Austin Med Spa",
+        "Secret Med Spa",
+        "Eburnean Med Spa"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Austin Med Spa",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "SkinSpirit",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Austin Plastic Surgery Institute (APSI)",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "BEAUX MedSpa",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "InjectCo",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Eburnean Med Spa",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Secret Med Spa",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Viva Day Spa + Med Spa",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 20
+}

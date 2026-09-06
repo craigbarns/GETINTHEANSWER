@@ -1,0 +1,123 @@
+{
+  "industry": "chiropractors",
+  "city": "san-diego-ca",
+  "cityLabel": "San Diego, CA",
+  "query": "Best chiropractor in San Diego, CA for lower back pain and sciatica",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "San Diego Spine Care",
+        "San Diego Integrative Spine Center",
+        "Spence Chiropractic Center",
+        "Intouch Chiropractic",
+        "Acru Health"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Intouch Chiropractic San Diego",
+        "Dr. Jordan Loewenstein - SD Spine Care",
+        "Spence Chiropractic Center",
+        "San Diego Integrative Spine Center"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "SDSpineCare",
+        "Spence Chiropractic Center",
+        "San Diego Integrative Spine Center",
+        "Acru Health"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Element Wellness Center",
+        "San Diego Sports and Spine",
+        "San Diego Integrative Spine Center",
+        "Spence Chiropractic Center",
+        "Rise Chiropractic"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "San Diego Integrative Spine Center",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Spence Chiropractic Center",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Acru Health",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Dr. Jordan Loewenstein - SD Spine Care",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Element Wellness Center",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Intouch Chiropractic",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Intouch Chiropractic San Diego",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Rise Chiropractic",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "SDSpineCare",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "San Diego Spine Care",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "San Diego Sports and Spine",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 18
+}

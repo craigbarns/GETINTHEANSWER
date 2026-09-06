@@ -1,0 +1,130 @@
+{
+  "industry": "med-spas",
+  "city": "miami-fl",
+  "cityLabel": "Miami, FL",
+  "query": "Best med spa in Miami, FL for Botox and dermal fillers",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Miami Skin + Vein",
+        "Med Aesthetics Miami",
+        "Elite Styles Salon and Med Spa",
+        "Monaco Medical Spa",
+        "Medilight Aesthetic Clinic"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Miami Skin + Vein",
+        "Miami Dermatology and Surgery",
+        "Med Aesthetics Miami",
+        "Medilight Aesthetic Clinic"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "4Beauty Medspa",
+        "Miami Skin + Vein",
+        "Med Aesthetics Miami",
+        "Medilight Aesthetic Clinic",
+        "Monaco Medical Spa"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Miami Skin Spa",
+        "NuYou Medical Aesthetics",
+        "VIIV Wellness Haus",
+        "LUX MedSpa Brickell",
+        "The Aesthetics MD & Wellness"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Med Aesthetics Miami",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Medilight Aesthetic Clinic",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Miami Skin + Vein",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Monaco Medical Spa",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "4Beauty Medspa",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Elite Styles Salon and Med Spa",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "LUX MedSpa Brickell",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Miami Dermatology and Surgery",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Miami Skin Spa",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "NuYou Medical Aesthetics",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "The Aesthetics MD & Wellness",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "VIIV Wellness Haus",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 19
+}

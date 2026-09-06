@@ -1,0 +1,104 @@
+{
+  "industry": "chiropractors",
+  "city": "denver-co",
+  "cityLabel": "Denver, CO",
+  "query": "Best chiropractor in Denver, CO for lower back pain and sciatica",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Reinhardt Chiropractic",
+        "Studholme Chiropractic",
+        "House of Motion Chiropractic",
+        "Denver South Chiropractic & Rehab"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Studholme Chiropractic",
+        "Denver South Chiropractic & Rehab",
+        "Reinhardt Chiropractic",
+        "House of Motion Chiropractic"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Denver South Chiropractic & Rehab",
+        "Studholme Chiropractic",
+        "Reinhardt Chiropractic"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Reinhardt Chiropractic",
+        "MVP Chiropractic & Wellness",
+        "Denver Spine & Performance",
+        "Denver Chiropractic, LLC",
+        "Denver Chiropractic (Recovery & Rehabilitation Center)"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Reinhardt Chiropractic",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Denver South Chiropractic & Rehab",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Studholme Chiropractic",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "House of Motion Chiropractic",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Denver Chiropractic (Recovery & Rehabilitation Center)",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Denver Chiropractic, LLC",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Denver Spine & Performance",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "MVP Chiropractic & Wellness",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 16
+}

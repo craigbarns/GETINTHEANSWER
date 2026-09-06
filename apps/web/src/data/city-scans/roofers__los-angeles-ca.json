@@ -1,0 +1,127 @@
+{
+  "industry": "roofers",
+  "city": "los-angeles-ca",
+  "cityLabel": "Los Angeles, CA",
+  "query": "Who is the best roofing contractor in Los Angeles, CA for storm damage repair?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Guardian Roofs",
+        "True Price Roofing",
+        "Samuel Roofing",
+        "Immaculate Roofing Inc",
+        "Ark Roofing & Construction"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Samuel Roofing",
+        "True Price Roofing",
+        "Ark Roofing & Construction",
+        "Guardian Roofs",
+        "Immaculate Roofing Inc"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Samuel Roofing",
+        "True Price Roofing of Los Angeles",
+        "Immaculate Roofing Inc",
+        "Best LA Roofing",
+        "Ark Roofing & Construction"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "LionRidge Roofing & Roof Repair",
+        "J & J Roofing",
+        "Guardian Roofs",
+        "Overhead Roofing",
+        "Best Rate Roofing"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Ark Roofing & Construction",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Guardian Roofs",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Immaculate Roofing Inc",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Samuel Roofing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "True Price Roofing",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Best LA Roofing",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Best Rate Roofing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "J & J Roofing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "LionRidge Roofing & Roof Repair",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Overhead Roofing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "True Price Roofing of Los Angeles",
+      "engines": [
+        "Gemini"
+      ]
+    }
+  ],
+  "totalNamed": 20
+}

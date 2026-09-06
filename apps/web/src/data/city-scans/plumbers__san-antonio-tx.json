@@ -1,0 +1,121 @@
+{
+  "industry": "plumbers",
+  "city": "san-antonio-tx",
+  "cityLabel": "San Antonio, TX",
+  "query": "Who is the most reliable emergency plumber in San Antonio, TX for a burst pipe?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Aramendia Plumbing, Heating and Air",
+        "J.C. Enriquez Plumbing",
+        "Stultz Plumbing",
+        "Roto-Rooter",
+        "Crown Plumbing & Water Damage Restoration"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Stultz Plumbing",
+        "Goettl Air Conditioning and Plumbing",
+        "Aramendia Plumbing"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Aramendia Plumbing, Heating and Air",
+        "Roto-Rooter",
+        "Stultz Plumbing",
+        "Crown Plumbing & Water Damage Restoration"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Roto-Rooter",
+        "PlumbSmart",
+        "Goettl",
+        "Champion Home Services",
+        "Reliant Plumbing"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Roto-Rooter",
+      "engines": [
+        "ChatGPT",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Stultz Plumbing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Aramendia Plumbing, Heating and Air",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Crown Plumbing & Water Damage Restoration",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Aramendia Plumbing",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Champion Home Services",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Goettl",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Goettl Air Conditioning and Plumbing",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "J.C. Enriquez Plumbing",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "PlumbSmart",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Reliant Plumbing",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 17
+}

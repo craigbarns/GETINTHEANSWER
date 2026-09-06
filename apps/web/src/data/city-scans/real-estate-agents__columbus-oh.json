@@ -1,0 +1,122 @@
+{
+  "industry": "real-estate-agents",
+  "city": "columbus-oh",
+  "cityLabel": "Columbus, OH",
+  "query": "Who is the best real estate agent to sell a luxury home in Columbus, OH?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Dedra Lucas",
+        "Angel Perez",
+        "Michael Jones",
+        "Jamie Curtis",
+        "Kyle Edwards"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Angel Perez",
+        "Jamie Curtis",
+        "Michael Jones"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Jane Coughlin (Coldwell Banker Realty - Coldwell Banker Global Luxury)",
+        "Cece Miller (Cece Miller Real Estate Group)",
+        "Dedra Lucas (Dedra Lucas Real Estate)"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Sandy Raines / The Raines Group",
+        "Nancy Baker (Engel & Volkers)",
+        "The Mancini Group",
+        "The Willcut Group"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Angel Perez",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Jamie Curtis",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Michael Jones",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Cece Miller (Cece Miller Real Estate Group)",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Dedra Lucas",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Dedra Lucas (Dedra Lucas Real Estate)",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Jane Coughlin (Coldwell Banker Realty - Coldwell Banker Global Luxury)",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Kyle Edwards",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Nancy Baker (Engel & Volkers)",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Sandy Raines / The Raines Group",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "The Mancini Group",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "The Willcut Group",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 15
+}

@@ -1,0 +1,127 @@
+{
+  "industry": "plumbers",
+  "city": "las-vegas-nv",
+  "cityLabel": "Las Vegas, NV",
+  "query": "Who is the most reliable emergency plumber in Las Vegas, NV for a burst pipe?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "On Time Service Plumbing",
+        "Active Plumbing",
+        "Uncle E's Plumbing",
+        "Roto-Rooter",
+        "Hire The Hippo"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "On Time Service Plumbing",
+        "Active Plumbing",
+        "Hire The Hippo",
+        "Uncle E's Plumbing",
+        "Rodeo Plumbing"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "On Time Service Plumbing",
+        "Active Plumbing",
+        "Roto-Rooter",
+        "Uncle E's Plumbing",
+        "Rodeo Plumbing"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Hawthorne Plumbing, Heating & Cooling",
+        "Roto-Rooter Las Vegas",
+        "RapidDrain Plumbing Las Vegas",
+        "Monkey Wrench Plumbing",
+        "Ideal Services"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Active Plumbing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "On Time Service Plumbing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Uncle E's Plumbing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Hire The Hippo",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Rodeo Plumbing",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Roto-Rooter",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Hawthorne Plumbing, Heating & Cooling",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Ideal Services",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Monkey Wrench Plumbing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "RapidDrain Plumbing Las Vegas",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Roto-Rooter Las Vegas",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 20
+}

@@ -1,0 +1,142 @@
+{
+  "industry": "lawyers",
+  "city": "las-vegas-nv",
+  "cityLabel": "Las Vegas, NV",
+  "query": "Top personal injury lawyer in Las Vegas, NV with a proven track record",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Eglet Law",
+        "Richard Harris Law Firm",
+        "Howard Injury Law",
+        "Naqvi Law"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Eglet Law",
+        "Harris & Harris Injury Lawyers",
+        "Howard Injury Law",
+        "Richard Harris Law Firm",
+        "Naqvi Law"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Eglet Law",
+        "The Richard Harris Law Firm",
+        "Naqvi Injury Law",
+        "Howard Injury Law"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Ramzy Ladah / Ladah Injury & Car Accident Lawyers",
+        "Benson & Bingham",
+        "Paul Powell Law Firm",
+        "Ace Law Group",
+        "Farhan R. Naqvi / Naqvi Injury Law",
+        "Robert Eglet / Eglet Law",
+        "Ed Bernstein Injury Lawyers"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Eglet Law",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Howard Injury Law",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Naqvi Law",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Richard Harris Law Firm",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Ace Law Group",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Benson & Bingham",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Ed Bernstein Injury Lawyers",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Farhan R. Naqvi / Naqvi Injury Law",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Harris & Harris Injury Lawyers",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Naqvi Injury Law",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Paul Powell Law Firm",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Ramzy Ladah / Ladah Injury & Car Accident Lawyers",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Robert Eglet / Eglet Law",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "The Richard Harris Law Firm",
+      "engines": [
+        "Gemini"
+      ]
+    }
+  ],
+  "totalNamed": 20
+}

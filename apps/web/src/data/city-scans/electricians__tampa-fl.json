@@ -1,0 +1,117 @@
+{
+  "industry": "electricians",
+  "city": "tampa-fl",
+  "cityLabel": "Tampa, FL",
+  "query": "Who is the best licensed electrician in Tampa, FL for an emergency callout?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Second Opinion Electric",
+        "Titan Plumbing & Electric",
+        "Power Bay Tampa",
+        "Mister Sparky",
+        "KoolGator"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Titan Plumbing & Electric",
+        "Second Opinion Electric",
+        "Mr. Electric of Tampa Bay",
+        "Power Bay Tampa",
+        "KoolGator"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Titan Plumbing & Electric",
+        "Mister Sparky® of Tampa",
+        "Second Opinion Electric",
+        "Mr. Electric of Tampa Bay",
+        "Power Bay Tampa"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Kazar’s Electric",
+        "Mr. Electric of Tampa Bay",
+        "Lightning Bay Electric",
+        "Second Opinion Electric",
+        "Mister Sparky of Tampa"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Second Opinion Electric",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Mr. Electric of Tampa Bay",
+      "engines": [
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Power Bay Tampa",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Titan Plumbing & Electric",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "KoolGator",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Mister Sparky® of Tampa",
+      "engines": [
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Kazar’s Electric",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Lightning Bay Electric",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Mister Sparky",
+      "engines": [
+        "ChatGPT"
+      ]
+    }
+  ],
+  "totalNamed": 20
+}

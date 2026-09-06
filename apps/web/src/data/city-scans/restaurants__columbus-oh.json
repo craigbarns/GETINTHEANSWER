@@ -1,0 +1,89 @@
+{
+  "industry": "restaurants",
+  "city": "columbus-oh",
+  "cityLabel": "Columbus, OH",
+  "query": "Best romantic Italian restaurant with outdoor seating in Columbus, OH",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Cento – German Village",
+        "Tony's Italian Ristorante"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Cento – German Village"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Cento – German Village",
+        "Trattoria Roma",
+        "Tony's Italian Ristorante",
+        "Basi Italia"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Basi Italia",
+        "Cento",
+        "Bar Italia",
+        "Trattoria"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Cento – German Village",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Basi Italia",
+      "engines": [
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Tony's Italian Ristorante",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Bar Italia",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Cento",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Trattoria",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Trattoria Roma",
+      "engines": [
+        "Gemini"
+      ]
+    }
+  ],
+  "totalNamed": 11
+}

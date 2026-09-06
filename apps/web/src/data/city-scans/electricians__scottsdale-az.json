@@ -1,0 +1,118 @@
+{
+  "industry": "electricians",
+  "city": "scottsdale-az",
+  "cityLabel": "Scottsdale, AZ",
+  "query": "Who is the best licensed electrician in Scottsdale, AZ for an emergency callout?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Mister Sparky® of Phoenix",
+        "Sparks by Rabbit LLC",
+        "Just Right Electric",
+        "Pokorski Electric",
+        "Dolce Electric"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Pokorski Electric",
+        "Dolce Electric",
+        "Sparks by Rabbit LLC",
+        "Mister Sparky"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Mister Sparky of Phoenix",
+        "Just Right Electric",
+        "Dolce Electric",
+        "Sparks by Rabbit LLC",
+        "Pokorski Electric"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Mister Sparky of Scottsdale/Phoenix",
+        "Ignite Electric",
+        "White Brothers Electric LLC",
+        "RJD Electric Services"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Dolce Electric",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Pokorski Electric",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Sparks by Rabbit LLC",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Just Right Electric",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Mister Sparky® of Phoenix",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Ignite Electric",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Mister Sparky",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Mister Sparky of Scottsdale/Phoenix",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "RJD Electric Services",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "White Brothers Electric LLC",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 18
+}

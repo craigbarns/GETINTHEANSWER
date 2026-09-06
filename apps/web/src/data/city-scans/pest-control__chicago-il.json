@@ -1,0 +1,98 @@
+{
+  "industry": "pest-control",
+  "city": "chicago-il",
+  "cityLabel": "Chicago, IL",
+  "query": "Best pest control company in Chicago, IL for a termite infestation",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Terminix",
+        "Moxie Pest Control",
+        "Orkin",
+        "A1 Pest Master",
+        "Chicago Termite"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "A1 Pest Master",
+        "Terminix",
+        "Orkin",
+        "Moxie Pest Control"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "A1 Pest Master",
+        "Terminix",
+        "Orkin",
+        "Moxie Pest Control",
+        "Chicago Termite"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Orkin",
+        "Terminix",
+        "Chicago Termite",
+        "Eco Tech Pest Control"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Orkin",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Terminix",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "A1 Pest Master",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Chicago Termite",
+      "engines": [
+        "ChatGPT",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Moxie Pest Control",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Eco Tech Pest Control",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 18
+}

@@ -1,0 +1,110 @@
+{
+  "industry": "auto-repair",
+  "city": "columbus-oh",
+  "cityLabel": "Columbus, OH",
+  "query": "Best independent auto repair shop in Columbus, OH for European cars",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Luke's Auto",
+        "Strada Motorwerks",
+        "Oxford Automotive",
+        "German Autowerks",
+        "Performance Automotive"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Strada Motorwerks",
+        "Luke's Auto",
+        "Oxford Automotive",
+        "Performance Automotive",
+        "German Autowerks"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Luke's Auto",
+        "Strada Motorwerks",
+        "Oxford Automotive",
+        "Blagoi's International Car Service",
+        "German Autowerks"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Strada Motorwerks",
+        "Blagoi’s International Car Service",
+        "Mike’s Foreign Car Service",
+        "European Automotive"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Strada Motorwerks",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "German Autowerks",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Luke's Auto",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Oxford Automotive",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Blagoi's International Car Service",
+      "engines": [
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Performance Automotive",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "European Automotive",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Mike’s Foreign Car Service",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 19
+}

@@ -1,0 +1,108 @@
+{
+  "industry": "plumbers",
+  "city": "nashville-tn",
+  "cityLabel": "Nashville, TN",
+  "query": "Who is the most reliable emergency plumber in Nashville, TN for a burst pipe?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Roto-Rooter",
+        "Benjamin Franklin Plumbing® of Nashville",
+        "Nashville Plumbing Co",
+        "Happy Hiller",
+        "Green Hills Plumbing"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Roto-Rooter",
+        "Ironwood Plumbing Nashville",
+        "Green Hills Plumbing",
+        "Nashville Plumbing Co"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Roto-Rooter",
+        "Benjamin Franklin Plumbing® of Nashville",
+        "Nashville Plumbing Co",
+        "Green Hills Plumbing",
+        "Ironwood Plumbing Nashville"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Roto-Rooter Nashville",
+        "Happy Hiller",
+        "Nashville Plumbing Co",
+        "Lucky’s Plumbing Services"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Nashville Plumbing Co",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Green Hills Plumbing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Roto-Rooter",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Benjamin Franklin Plumbing® of Nashville",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Happy Hiller",
+      "engines": [
+        "ChatGPT",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Ironwood Plumbing Nashville",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Lucky’s Plumbing Services",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Roto-Rooter Nashville",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 18
+}

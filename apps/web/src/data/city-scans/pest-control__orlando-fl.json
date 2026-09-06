@@ -1,0 +1,96 @@
+{
+  "industry": "pest-control",
+  "city": "orlando-fl",
+  "cityLabel": "Orlando, FL",
+  "query": "Best pest control company in Orlando, FL for a termite infestation",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Turner Pest Control",
+        "Orkin",
+        "Terminix",
+        "Orlando Termite Control"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Turner Pest Control",
+        "Orkin",
+        "Terminix",
+        "Orlando Termite Control"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Turner Pest Control",
+        "Terminix",
+        "Orkin",
+        "Truly Nolen"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Orkin",
+        "Terminix",
+        "Turner Pest Control",
+        "Truly Nolen",
+        "All American Pest Control"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Orkin",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Terminix",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Turner Pest Control",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Orlando Termite Control",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Truly Nolen",
+      "engines": [
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "All American Pest Control",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 17
+}

@@ -1,0 +1,146 @@
+{
+  "industry": "hvac-contractors",
+  "city": "nashville-tn",
+  "cityLabel": "Nashville, TN",
+  "query": "Who offers 24/7 emergency AC repair near me in Nashville, TN?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Service Experts",
+        "Frog Air",
+        "One Hour Heating & Air Conditioning",
+        "Aire Serv of Nashville",
+        "Alpha HVAC Nashville"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Service Experts",
+        "One Hour Heating & Air Conditioning of Nashville",
+        "Hiller",
+        "Aire Serv of Nashville"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Service Experts",
+        "Frog Air",
+        "Alpha HVAC Nashville",
+        "Aire Serv of Nashville",
+        "A/C Plus Heating & Cooling"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Coolray",
+        "Haskins Heating & Cooling",
+        "Frog Air",
+        "Lee Company",
+        "Cervino Heating & Air",
+        "Happy Hiller",
+        "Busy Bee Plumbing, Heating, & Air Conditioning",
+        "One Hour Heating & Air Conditioning of Nashville"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Aire Serv of Nashville",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Frog Air",
+      "engines": [
+        "ChatGPT",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Service Experts",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Alpha HVAC Nashville",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "One Hour Heating & Air Conditioning of Nashville",
+      "engines": [
+        "Claude",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "A/C Plus Heating & Cooling",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Busy Bee Plumbing, Heating, & Air Conditioning",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Cervino Heating & Air",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Coolray",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Happy Hiller",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Haskins Heating & Cooling",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Hiller",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Lee Company",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "One Hour Heating & Air Conditioning",
+      "engines": [
+        "ChatGPT"
+      ]
+    }
+  ],
+  "totalNamed": 22
+}

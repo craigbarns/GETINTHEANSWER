@@ -1,0 +1,111 @@
+{
+  "industry": "chiropractors",
+  "city": "los-angeles-ca",
+  "cityLabel": "Los Angeles, CA",
+  "query": "Best chiropractor in Los Angeles, CA for lower back pain and sciatica",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Dr. Michael D. Sheps, D.C",
+        "Dr. Steven Becker",
+        "Okhowat Chiropractic",
+        "Wilshire Center Chiropractic"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Dr. Steven Becker",
+        "Dr. Michael D. Sheps, D.C",
+        "Wilshire Center Chiropractic",
+        "Okhowat Chiropractic"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Dr. Steven Becker",
+        "Dr. Michael D. Sheps",
+        "Dr. Okhowat",
+        "The LA Chiropractor",
+        "Wilshire Center Chiropractic"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "The LA Chiropractor",
+        "WestWood Clinic",
+        "Dr. Steven Becker",
+        "Chiropractic Care Center"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Dr. Steven Becker",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Wilshire Center Chiropractic",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Dr. Michael D. Sheps, D.C",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Okhowat Chiropractic",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "The LA Chiropractor",
+      "engines": [
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Chiropractic Care Center",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Dr. Michael D. Sheps",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Dr. Okhowat",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "WestWood Clinic",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 17
+}

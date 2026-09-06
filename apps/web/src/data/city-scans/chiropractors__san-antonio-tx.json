@@ -1,0 +1,104 @@
+{
+  "industry": "chiropractors",
+  "city": "san-antonio-tx",
+  "cityLabel": "San Antonio, TX",
+  "query": "Best chiropractor in San Antonio, TX for lower back pain and sciatica",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Authority Chiropractic",
+        "Pura Vida Chiropractic",
+        "Peterson Chiropractic",
+        "Ambition Chiropractic"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Authority Chiropractic",
+        "Pura Vida Chiropractic",
+        "Peterson Chiropractic"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Authority Chiropractic",
+        "Pura Vida Chiropractic",
+        "Peterson Chiropractic",
+        "Ambition Chiropractic"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "The Golab Center",
+        "Alamo Heights Chiropractic Health Center",
+        "Authority Chiropractic",
+        "Barrows Chiropractic & Wellness Clinic",
+        "Chiropractic Centers of Texas"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Authority Chiropractic",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Peterson Chiropractic",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Pura Vida Chiropractic",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Ambition Chiropractic",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Alamo Heights Chiropractic Health Center",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Barrows Chiropractic & Wellness Clinic",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Chiropractic Centers of Texas",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "The Golab Center",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 16
+}

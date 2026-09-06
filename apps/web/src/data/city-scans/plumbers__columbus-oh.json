@@ -1,0 +1,118 @@
+{
+  "industry": "plumbers",
+  "city": "columbus-oh",
+  "cityLabel": "Columbus, OH",
+  "query": "Who is the most reliable emergency plumber in Columbus, OH for a burst pipe?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Roto-Rooter",
+        "Allegiant Plumbing",
+        "Transit & Flow",
+        "Mr. Rooter Plumbing"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Roto-Rooter",
+        "Allegiant Plumbing",
+        "Transit & Flow",
+        "Mr. Rooter Plumbing"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Roto-Rooter",
+        "Allegiant Plumbing",
+        "Transit & Flow",
+        "Mr. Rooter Plumbing of Columbus",
+        "1-800-Plumber"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "The Waterworks",
+        "Allegiant Plumbing",
+        "Shorty’s Plumbing",
+        "Muetzel",
+        "Roto-Rooter Columbus"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Allegiant Plumbing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Roto-Rooter",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Transit & Flow",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Mr. Rooter Plumbing",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "1-800-Plumber",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Mr. Rooter Plumbing of Columbus",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Muetzel",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Roto-Rooter Columbus",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Shorty’s Plumbing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "The Waterworks",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 18
+}

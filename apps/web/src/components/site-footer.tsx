@@ -16,6 +16,7 @@ export function SiteFooter() {
             <Link className="hover:text-foreground" href="/agency">For Agencies</Link>
             <Link className="hover:text-foreground" href="/tools/schema-generator">Schema Generator</Link>
             <Link className="hover:text-foreground" href="/ai-seo-for">Industries</Link>
+            <Link className="hover:text-foreground" href="/study">Benchmark</Link>
             <Link className="hover:text-foreground" href="/guides">Guides</Link>
             <Link className="hover:text-foreground" href="/onboarding">Run a scan</Link>
             <Link className="hover:text-foreground" href="/legal">Legal</Link>

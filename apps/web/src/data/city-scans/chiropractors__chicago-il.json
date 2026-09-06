@@ -1,0 +1,97 @@
+{
+  "industry": "chiropractors",
+  "city": "chicago-il",
+  "cityLabel": "Chicago, IL",
+  "query": "Best chiropractor in Chicago, IL for lower back pain and sciatica",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Chiropractic Chicago",
+        "Godo Chiropractic",
+        "Lakeside Spine & Wellness",
+        "Choice Chiropractic"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Godo Chiropractic",
+        "Chiropractic Chicago",
+        "Lakeside Spine & Wellness",
+        "Choice Chiropractic"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Chiropractic Chicago",
+        "Godo Chiropractic",
+        "Lakeside Spine & Wellness"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Lakeside Spine & Wellness",
+        "Chicago Spine & Stability",
+        "Advanced Spine & Sports Care",
+        "Chicago Chiropractic & Sports Medicine"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Lakeside Spine & Wellness",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Chiropractic Chicago",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Godo Chiropractic",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Choice Chiropractic",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Advanced Spine & Sports Care",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Chicago Chiropractic & Sports Medicine",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Chicago Spine & Stability",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 15
+}

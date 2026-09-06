@@ -276,6 +276,13 @@ export default async function IndustryCityPage({
                   Check my business <ArrowRight className="ml-2 size-5" aria-hidden="true" />
                 </Link>
               </Button>
+              <p className="mt-4 text-sm text-foreground/60">
+                This is one of many such measurements.{" "}
+                <Link className="font-semibold text-emerald-700 hover:underline" href="/study">
+                  See how often the four engines agree
+                </Link>{" "}
+                across every city and industry we track.
+              </p>
             </div>
           </section>
         )}

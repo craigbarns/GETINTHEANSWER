@@ -1,0 +1,108 @@
+{
+  "industry": "electricians",
+  "city": "denver-co",
+  "cityLabel": "Denver, CO",
+  "query": "Who is the best licensed electrician in Denver, CO for an emergency callout?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Done",
+        "Big Electric",
+        "Range Electric",
+        "The Electricians",
+        "Electric Doctor"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "The Electricians",
+        "Done",
+        "Big Electric",
+        "Range Electric"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "The Electricians",
+        "Done",
+        "Big Electric",
+        "Range Electric"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "The Electricians",
+        "Electrical Relief",
+        "Big Electric",
+        "Nexus",
+        "Piper Electric"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Big Electric",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "The Electricians",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Done",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Range Electric",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Electric Doctor",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Electrical Relief",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Nexus",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Piper Electric",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 18
+}

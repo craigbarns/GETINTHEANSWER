@@ -1,0 +1,142 @@
+{
+  "industry": "real-estate-agents",
+  "city": "nashville-tn",
+  "cityLabel": "Nashville, TN",
+  "query": "Who is the best real estate agent to sell a luxury home in Nashville, TN?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Patricia Straus",
+        "Fiona King",
+        "Lisa Peebles",
+        "Paula Hinegardner",
+        "Caroline Keenan"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Patricia Straus",
+        "Fiona King",
+        "Susan Gregory",
+        "Lisa Peebles",
+        "Caroline Keenan"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Patricia Straus (Straus & Co. | Compass)",
+        "Fiona King (Fridrich & Clark Realty)",
+        "Susan Gregory",
+        "Lisa Peebles (Fridrich & Clark Realty)",
+        "Caroline Keenan"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Patrick Higgins",
+        "The Ashton Real Estate Group",
+        "David Hatef",
+        "Drew Shannon & Co",
+        "Erin Krueger Team"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Caroline Keenan",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Fiona King",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Lisa Peebles",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Patricia Straus",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Susan Gregory",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "David Hatef",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Drew Shannon & Co",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Erin Krueger Team",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Fiona King (Fridrich & Clark Realty)",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Lisa Peebles (Fridrich & Clark Realty)",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Patricia Straus (Straus & Co. | Compass)",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Patrick Higgins",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Paula Hinegardner",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "The Ashton Real Estate Group",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 20
+}

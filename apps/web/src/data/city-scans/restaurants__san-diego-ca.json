@@ -1,0 +1,120 @@
+{
+  "industry": "restaurants",
+  "city": "san-diego-ca",
+  "cityLabel": "San Diego, CA",
+  "query": "Best romantic Italian restaurant with outdoor seating in San Diego, CA",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Allegro Restaurant",
+        "Rovino"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Allegro Restaurant",
+        "Rovino Restaurant",
+        "Vincenzo Cucina and Lounge"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Allegro",
+        "Rovino Restaurant",
+        "Osteria Panevino",
+        "Osteria Romantica"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Catania",
+        "Bencotto Italian Kitchen",
+        "Solare",
+        "Romanella Cucina Romana",
+        "Buona Forchetta"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Allegro Restaurant",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Rovino Restaurant",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Allegro",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Bencotto Italian Kitchen",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Buona Forchetta",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Catania",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Osteria Panevino",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Osteria Romantica",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Romanella Cucina Romana",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Rovino",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Solare",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Vincenzo Cucina and Lounge",
+      "engines": [
+        "Claude"
+      ]
+    }
+  ],
+  "totalNamed": 14
+}

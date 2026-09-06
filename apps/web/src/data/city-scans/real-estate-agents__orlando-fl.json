@@ -1,0 +1,158 @@
+{
+  "industry": "real-estate-agents",
+  "city": "orlando-fl",
+  "cityLabel": "Orlando, FL",
+  "query": "Who is the best real estate agent to sell a luxury home in Orlando, FL?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Linda O'Grady at Premier Sotheby's International Realty",
+        "Eileen Winfrey",
+        "Jules Soapes at Compass",
+        "Ken Pozek at REAL BROKER, LLC",
+        "Rob Stack at SERHANT"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Premier Sotheby's International Realty",
+        "Eileen Sells Orlando",
+        "The Orlando Luxury Homes Team at Compass",
+        "REAL BROKER, LLC",
+        "SERHANT"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Eileen Winfrey (Eileen Sells Orlando)",
+        "Linda O'Grady (Premier Sotheby's International Realty)",
+        "Jules Soapes (Compass - Orlando Luxury Homes Team)",
+        "Ken Pozek (REAL BROKER, LLC)",
+        "Rob Stack (SERHANT.)"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Chris Creegan (Creegan Group)",
+        "Jennifer Wemert",
+        "Matt Davies"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Chris Creegan (Creegan Group)",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Eileen Sells Orlando",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Eileen Winfrey",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Eileen Winfrey (Eileen Sells Orlando)",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Jennifer Wemert",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Jules Soapes (Compass - Orlando Luxury Homes Team)",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Jules Soapes at Compass",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Ken Pozek (REAL BROKER, LLC)",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Ken Pozek at REAL BROKER, LLC",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Linda O'Grady (Premier Sotheby's International Realty)",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Linda O'Grady at Premier Sotheby's International Realty",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Matt Davies",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Premier Sotheby's International Realty",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "REAL BROKER, LLC",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Rob Stack (SERHANT.)",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Rob Stack at SERHANT",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "SERHANT",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "The Orlando Luxury Homes Team at Compass",
+      "engines": [
+        "Claude"
+      ]
+    }
+  ],
+  "totalNamed": 18
+}

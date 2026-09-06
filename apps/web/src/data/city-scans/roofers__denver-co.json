@@ -1,0 +1,132 @@
+{
+  "industry": "roofers",
+  "city": "denver-co",
+  "cityLabel": "Denver, CO",
+  "query": "Who is the best roofing contractor in Denver, CO for storm damage repair?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Precision Exteriors",
+        "Gates Enterprises",
+        "Ernie’s Roofing",
+        "AmeriPro Roofing",
+        "Shamrock Roofing"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Shamrock",
+        "Gates Enterprises",
+        "AmeriPro Roofing",
+        "Ernie's Roofing",
+        "Precision Exteriors"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Gates Enterprises LLC",
+        "Precision Exteriors",
+        "Ernie's Roofing",
+        "AmeriPro Roofing",
+        "Shamrock Roofing"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Roofcorp of Metro Denver",
+        "Cenco Roofing",
+        "Interstate Roofing",
+        "Formula Roofing & Remodeling",
+        "Modern Roofing Group"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "AmeriPro Roofing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Ernie’s Roofing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Precision Exteriors",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Gates Enterprises",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Shamrock Roofing",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Cenco Roofing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Formula Roofing & Remodeling",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Gates Enterprises LLC",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Interstate Roofing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Modern Roofing Group",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Roofcorp of Metro Denver",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Shamrock",
+      "engines": [
+        "Claude"
+      ]
+    }
+  ],
+  "totalNamed": 20
+}

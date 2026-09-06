@@ -1,0 +1,117 @@
+{
+  "industry": "electricians",
+  "city": "chicago-il",
+  "cityLabel": "Chicago, IL",
+  "query": "Who is the best licensed electrician in Chicago, IL for an emergency callout?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Pokorski Electric",
+        "MNC Electric",
+        "Mr. Mighty Electric",
+        "STS Electric",
+        "Jimco Electric"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Mr. Mighty Electric",
+        "STS Electric",
+        "Jimco Electric",
+        "Pokorski Electric",
+        "MNC Electric"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Mr. Mighty Electric",
+        "MNC Electric",
+        "STS Electric",
+        "MCC Electric",
+        "Pokorski Electric"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Chicago Electric Pros",
+        "MCL Electric",
+        "Mr. Mighty Electric",
+        "Four Seasons Heating, Air Conditioning, Plumbing, & Electric",
+        "STS Electric"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Mr. Mighty Electric",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "STS Electric",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "MNC Electric",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Pokorski Electric",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Jimco Electric",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Chicago Electric Pros",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Four Seasons Heating, Air Conditioning, Plumbing, & Electric",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "MCC Electric",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "MCL Electric",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 20
+}

@@ -1,0 +1,138 @@
+{
+  "industry": "hvac-contractors",
+  "city": "charlotte-nc",
+  "cityLabel": "Charlotte, NC",
+  "query": "Who offers 24/7 emergency AC repair near me in Charlotte, NC?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Keystone HVAC Charlotte",
+        "One Hour Heating & Air Conditioning® of Charlotte",
+        "Roland Black",
+        "Morris-Jenkins",
+        "ER Services Heating and Cooling"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "One Hour Heating & Air Conditioning® of Charlotte",
+        "Keystone HVAC Charlotte",
+        "Roland Black",
+        "Morris-Jenkins",
+        "ER Services Heating and Cooling"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "One Hour Heating & Air Conditioning® of Charlotte",
+        "Keystone HVAC Charlotte",
+        "Roland Black",
+        "ER Services Heating and Cooling",
+        "Morris-Jenkins"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "One Hour Heating & Air Conditioning of Charlotte",
+        "Bradham Comfort Services",
+        "Service Experts Charlotte",
+        "South End Plumbing Heating & Air",
+        "Aire Serv Charlotte",
+        "Brothers Heating, Cooling & Plumbing",
+        "Rudy Cools Heating & Air Conditioning",
+        "Total Plumbing Pros"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "One Hour Heating & Air Conditioning® of Charlotte",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "ER Services Heating and Cooling",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Keystone HVAC Charlotte",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Morris-Jenkins",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Roland Black",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Aire Serv Charlotte",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Bradham Comfort Services",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Brothers Heating, Cooling & Plumbing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Rudy Cools Heating & Air Conditioning",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Service Experts Charlotte",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "South End Plumbing Heating & Air",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Total Plumbing Pros",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 23
+}

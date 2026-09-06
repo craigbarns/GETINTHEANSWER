@@ -1,0 +1,123 @@
+{
+  "industry": "lawyers",
+  "city": "columbus-oh",
+  "cityLabel": "Columbus, OH",
+  "query": "Top personal injury lawyer in Columbus, OH with a proven track record",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "The Fitch Law Firm",
+        "Law Offices of Mitchell Alter LLC",
+        "Brian G. Miller Co., LLC",
+        "Donahey Law Firm",
+        "Schiff & Associates"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "The Fitch Law Firm",
+        "Brian G. Miller Co., LLC",
+        "Law Offices of Mitchell Alter LLC",
+        "Schiff & Associates"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "The Fitch Law Firm LLC",
+        "Law Offices of Mitchell Alter LLC",
+        "Oliver Law Office",
+        "Brian G. Miller Co., LLC"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Emery Brett Ledger",
+        "Mike Christensen",
+        "Schiff Law",
+        "Oliver Law Office",
+        "GB Law / Protecting Ohio"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Brian G. Miller Co., LLC",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Law Offices of Mitchell Alter LLC",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Oliver Law Office",
+      "engines": [
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Schiff & Associates",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "The Fitch Law Firm",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Donahey Law Firm",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Emery Brett Ledger",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "GB Law / Protecting Ohio",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Mike Christensen",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Schiff Law",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "The Fitch Law Firm LLC",
+      "engines": [
+        "Gemini"
+      ]
+    }
+  ],
+  "totalNamed": 18
+}

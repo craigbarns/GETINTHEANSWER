@@ -1,0 +1,109 @@
+{
+  "industry": "pest-control",
+  "city": "dallas-tx",
+  "cityLabel": "Dallas, TX",
+  "query": "Best pest control company in Dallas, TX for a termite infestation",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "All-Safe Pest & Termite",
+        "Massey Services",
+        "Terminix",
+        "ABC Home & Commercial Services",
+        "Romex Pest Control"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "All-Safe Pest & Termite",
+        "Massey Services",
+        "Adams Exterminating",
+        "Romex Pest Control"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "All-Safe Pest & Termite",
+        "Massey Services",
+        "Romex Pest Control",
+        "Moxie Pest Control"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Terminix",
+        "Orkin",
+        "HomeTeam Pest Defense"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "All-Safe Pest & Termite",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Massey Services",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Romex Pest Control",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Terminix",
+      "engines": [
+        "ChatGPT",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "ABC Home & Commercial Services",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Adams Exterminating",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "HomeTeam Pest Defense",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Moxie Pest Control",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Orkin",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 16
+}
