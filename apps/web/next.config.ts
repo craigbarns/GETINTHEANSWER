@@ -19,6 +19,20 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: process.cwd(),
   },
+  async redirects() {
+    return [
+      {
+        // The guide that used to live here claimed a 10,000-query study across
+        // 50 cities that was never run, with invented figures to match. It is
+        // gone; /study is the measured version, computed from the scan files.
+        // A 301 rather than a 404 so any link already pointing here lands on
+        // real data.
+        source: "/guides/chatgpt-local-seo-study-2026",
+        destination: "/study",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

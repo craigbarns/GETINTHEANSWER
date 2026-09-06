@@ -17,49 +17,6 @@ export interface Guide {
 
 export const guides: Guide[] = [
   {
-    slug: "chatgpt-local-seo-study-2026",
-    title: "Data Study: How Often Does ChatGPT Recommend the Real Google Maps #1?",
-    metaTitle: "ChatGPT Local SEO Study 2026: Does AI Match Google Maps?",
-    description:
-      "We tested 10,000 local queries across 50 cities and 12 industries to see if ChatGPT and Claude recommend the same businesses as Google Maps. Here are the surprising results.",
-    datePublished: "2026-08-25",
-    readingMinutes: 6,
-    intro: [
-      "Everyone knows how to rank on Google Maps. But when a customer asks ChatGPT or Claude for a local recommendation, do they get the same answer? We ran a massive data study to find out.",
-      "We tested 10,000 local queries (e.g. \"Best plumber in Austin\") across 50 US cities and 12 local service industries. We compared the top 3 businesses recommended by ChatGPT with the top 3 results in the Google Local Pack.",
-    ],
-    sections: [
-      {
-        heading: "Key Finding 1: ChatGPT only matches Google Maps 34% of the time",
-        paragraphs: [
-          "The biggest takeaway is that ranking #1 on Google Maps does NOT guarantee you will be recommended by AI. In 66% of cases, ChatGPT recommended a completely different set of businesses than the Google Local Pack.",
-          "Why? Because Google Maps relies heavily on proximity (how close the searcher is to the business). AI engines, however, rely entirely on 'digital reputation' — how often a business is mentioned positively across the web, regardless of exact coordinates.",
-        ],
-      },
-      {
-        heading: "Key Finding 2: Yelp and Reddit drive Claude's recommendations",
-        paragraphs: [
-          "We found a 82% correlation between a business being recommended by Claude and having a strong presence on Yelp and Reddit. Claude frequently cites \"highly rated on Yelp\" or \"frequently recommended on local forums\" in its answers.",
-          "Local businesses ignoring these platforms are losing massive AI visibility.",
-        ],
-      },
-      {
-        heading: "Key Finding 3: The 'Entity Gap' in Local Services",
-        paragraphs: [
-          "Over 40% of local businesses suffer from an 'Entity Gap'. This means they have a website and a Google Business Profile, but they lack consistent structured data (Schema.org) and mentions on third-party authoritative sites.",
-          "AI engines hallucinate less when they have multiple verifiable sources for the same fact. Businesses with a closed Entity Gap were 3x more likely to be recommended by Perplexity.",
-        ],
-      },
-      {
-        heading: "How to check your own AI Visibility",
-        paragraphs: [
-          "If you rely on Google Maps for leads, you are currently blind to the AI search shift. You need to know exactly which competitors ChatGPT is recommending over you.",
-          "GetInTheAnswer automates this audit: we run real queries in your customers' language, give you a 0–100 score, reveal the exact competitors getting recommended, and provide a prioritized action plan.",
-        ],
-      },
-    ],
-  },
-  {
     slug: "get-recommended-by-chatgpt",
     title: "How to Get Your Business Recommended by ChatGPT",
     metaTitle: "How to Get Recommended by ChatGPT (2026 Guide for Local Businesses)",
