@@ -66,6 +66,7 @@ export default async function IndustryCityPage({
   const formattedCity = `${city.name}, ${city.stateCode}`;
   const localizedQueries = industry.sampleQueries.map((q) => q.replace(/\{city\}/g, formattedCity));
   const scan = getCityScan(industry.slug, city.slug);
+  const silentEngines = scan?.engines.filter((e) => e.businesses.length === 0).map((e) => e.engine) ?? [];
 
   let hash = 0;
   const hashStr = `${slug}-${citySlug}`;
@@ -236,10 +237,11 @@ export default async function IndustryCityPage({
               <p className="mt-1.5 text-lg font-bold text-foreground">“{scan.query}”</p>
 
               <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-                {scan.engines.map((entry) => (
-                  <div key={entry.engine} className="rounded-xl border border-foreground/10 bg-[#f8f8f3] p-4">
-                    <p className="text-sm font-extrabold text-foreground">{entry.engine} named</p>
-                    {entry.businesses.length ? (
+                {scan.engines
+                  .filter((entry) => entry.businesses.length > 0)
+                  .map((entry) => (
+                    <div key={entry.engine} className="rounded-xl border border-foreground/10 bg-[#f8f8f3] p-4">
+                      <p className="text-sm font-extrabold text-foreground">{entry.engine} named</p>
                       <ul className="mt-2.5 space-y-1.5">
                         {entry.businesses.map((name) => (
                           <li key={name} className="flex items-start gap-2 text-sm text-foreground/80">
@@ -248,12 +250,19 @@ export default async function IndustryCityPage({
                           </li>
                         ))}
                       </ul>
-                    ) : (
-                      <p className="mt-2.5 text-sm text-foreground/60">No specific business.</p>
-                    )}
-                  </div>
-                ))}
+                    </div>
+                  ))}
               </div>
+
+              {silentEngines.length > 0 && (
+                <p className="mt-5 rounded-xl border border-foreground/10 bg-[#f8f8f3] p-4 text-sm text-foreground/70">
+                  <span className="font-bold text-foreground">
+                    {silentEngines.join(" and ")} named no specific business at all.
+                  </span>{" "}
+                  An engine that cannot name anyone sends the customer back to a search page — and an
+                  engine that names three sends them straight to a competitor.
+                </p>
+              )}
 
               <p className="mt-6 border-t border-foreground/10 pt-5 text-base font-semibold text-foreground">
                 {scan.businesses.length} {industry.name.toLowerCase()} were named in {city.name}.

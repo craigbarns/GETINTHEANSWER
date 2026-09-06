@@ -1,0 +1,56 @@
+{
+  "industry": "plumbers",
+  "city": "chicago-il",
+  "cityLabel": "Chicago, IL",
+  "query": "Who is the most reliable emergency plumber in Chicago, IL for a burst pipe?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": []
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Roto-Rooter Chicago",
+        "Rescue Plumbing",
+        "Four Seasons Heating, Air Conditioning, Plumbing, & Electric",
+        "Goode Plumbing",
+        "Plumbers 911 Chicago"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Four Seasons Heating, Air Conditioning, Plumbing, & Electric",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Goode Plumbing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Plumbers 911 Chicago",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Rescue Plumbing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Roto-Rooter Chicago",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 5
+}

@@ -1,0 +1,49 @@
+{
+  "industry": "plumbers",
+  "city": "dallas-tx",
+  "cityLabel": "Dallas, TX",
+  "query": "Who is the most reliable emergency plumber in Dallas, TX for a burst pipe?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": []
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Dial One Johnson Plumbing, Cooling & Heating",
+        "Baker Brothers Plumbing, Air & Electric",
+        "Roto-Rooter Dallas",
+        "Berkeys"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Baker Brothers Plumbing, Air & Electric",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Berkeys",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Dial One Johnson Plumbing, Cooling & Heating",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Roto-Rooter Dallas",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 4
+}

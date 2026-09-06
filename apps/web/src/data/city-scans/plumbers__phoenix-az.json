@@ -1,0 +1,42 @@
+{
+  "industry": "plumbers",
+  "city": "phoenix-az",
+  "cityLabel": "Phoenix, AZ",
+  "query": "Who is the most reliable emergency plumber in Phoenix, AZ for a burst pipe?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": []
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Parker & Sons",
+        "Roto-Rooter",
+        "Somers Plumbers"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Parker & Sons",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Roto-Rooter",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Somers Plumbers",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 3
+}

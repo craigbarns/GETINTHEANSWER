@@ -1,0 +1,42 @@
+{
+  "industry": "plumbers",
+  "city": "los-angeles-ca",
+  "cityLabel": "Los Angeles, CA",
+  "query": "Who is the most reliable emergency plumber in Los Angeles, CA for a burst pipe?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": []
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Roto-Rooter Los Angeles",
+        "Expertise Plumbing & Rooter",
+        "Mike Diamond Services"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Expertise Plumbing & Rooter",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Mike Diamond Services",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Roto-Rooter Los Angeles",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 3
+}

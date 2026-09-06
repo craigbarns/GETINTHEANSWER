@@ -1,0 +1,49 @@
+{
+  "industry": "plumbers",
+  "city": "miami-fl",
+  "cityLabel": "Miami, FL",
+  "query": "Who is the most reliable emergency plumber in Miami, FL for a burst pipe?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": []
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Roto-Rooter Miami",
+        "Douglas Orr Plumbing",
+        "Joe Hillman Plumbers",
+        "Morata Plumbing"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Douglas Orr Plumbing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Joe Hillman Plumbers",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Morata Plumbing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Roto-Rooter Miami",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 4
+}

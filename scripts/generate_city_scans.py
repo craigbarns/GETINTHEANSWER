@@ -73,15 +73,32 @@ def is_aggregator(name: str) -> bool:
     return any(hint in lowered for hint in AGGREGATOR_HINTS)
 
 
-def post_json(url: str, payload: dict, headers: dict, timeout: int = 90) -> dict:
-    request = urllib.request.Request(
-        url,
-        data=json.dumps(payload).encode("utf-8"),
-        headers={"Content-Type": "application/json", **headers},
-        method="POST",
-    )
-    with urllib.request.urlopen(request, timeout=timeout) as response:
-        return json.loads(response.read().decode("utf-8"))
+def post_json(url: str, payload: dict, headers: dict, timeout: int = 90, attempts: int = 4) -> dict:
+    """POST with backoff on rate limits, and the provider's own error text on failure."""
+    last_error: Exception | None = None
+    for attempt in range(attempts):
+        request = urllib.request.Request(
+            url,
+            data=json.dumps(payload).encode("utf-8"),
+            headers={"Content-Type": "application/json", **headers},
+            method="POST",
+        )
+        try:
+            with urllib.request.urlopen(request, timeout=timeout) as response:
+                return json.loads(response.read().decode("utf-8"))
+        except urllib.error.HTTPError as exc:
+            body = exc.read().decode("utf-8", "replace")[:300]
+            last_error = RuntimeError(f"HTTP {exc.code}: {body}")
+            # 429 and 5xx are worth waiting out; 4xx of our own making are not.
+            if exc.code != 429 and exc.code < 500:
+                raise last_error from exc
+        except (urllib.error.URLError, TimeoutError) as exc:
+            last_error = exc
+
+        if attempt < attempts - 1:
+            time.sleep(2 ** attempt * 3)
+
+    raise last_error if last_error else RuntimeError("request failed")
 
 
 def ask_openai_compatible(base: str, key: str, model: str, query: str) -> str | None:
@@ -92,7 +109,7 @@ def ask_openai_compatible(base: str, key: str, model: str, query: str) -> str | 
             {"Authorization": f"Bearer {key}"},
         )
         return data["choices"][0]["message"]["content"]
-    except (urllib.error.URLError, urllib.error.HTTPError, KeyError, TimeoutError, json.JSONDecodeError) as exc:
+    except (urllib.error.URLError, urllib.error.HTTPError, KeyError, IndexError, TimeoutError, RuntimeError, json.JSONDecodeError) as exc:
         print(f"    [!] {model}: {exc}")
         return None
 
@@ -105,7 +122,7 @@ def ask_anthropic(key: str, query: str) -> str | None:
             {"x-api-key": key, "anthropic-version": "2023-06-01"},
         )
         return data["content"][0]["text"]
-    except (urllib.error.URLError, urllib.error.HTTPError, KeyError, TimeoutError, json.JSONDecodeError) as exc:
+    except (urllib.error.URLError, urllib.error.HTTPError, KeyError, IndexError, TimeoutError, RuntimeError, json.JSONDecodeError) as exc:
         print(f"    [!] {ANTHROPIC_MODEL}: {exc}")
         return None
 
@@ -132,7 +149,7 @@ def extract_businesses(key: str, answer: str) -> list[str]:
         )
         parsed = json.loads(data["choices"][0]["message"]["content"])
         names = parsed.get("businesses") or []
-    except (urllib.error.URLError, urllib.error.HTTPError, KeyError, TimeoutError, json.JSONDecodeError) as exc:
+    except (urllib.error.URLError, urllib.error.HTTPError, KeyError, IndexError, TimeoutError, RuntimeError, json.JSONDecodeError) as exc:
         print(f"    [!] extraction: {exc}")
         return []
 

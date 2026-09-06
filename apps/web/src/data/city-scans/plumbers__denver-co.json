@@ -1,0 +1,56 @@
+{
+  "industry": "plumbers",
+  "city": "denver-co",
+  "cityLabel": "Denver, CO",
+  "query": "Who is the most reliable emergency plumber in Denver, CO for a burst pipe?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": []
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Blue Sky Plumbing, Heating, Cooling & Electric",
+        "Roto-Rooter",
+        "Mr. Perfect Plumbing",
+        "AAA Service Plumbing, Heating & Electric",
+        "Mr. Rooter Plumbing"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "AAA Service Plumbing, Heating & Electric",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Blue Sky Plumbing, Heating, Cooling & Electric",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Mr. Perfect Plumbing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Mr. Rooter Plumbing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Roto-Rooter",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 5
+}

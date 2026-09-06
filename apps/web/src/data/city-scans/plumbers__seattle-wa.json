@@ -1,0 +1,56 @@
+{
+  "industry": "plumbers",
+  "city": "seattle-wa",
+  "cityLabel": "Seattle, WA",
+  "query": "Who is the most reliable emergency plumber in Seattle, WA for a burst pipe?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": []
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Beacon Plumbing",
+        "Roto-Rooter Seattle",
+        "Bee’s Plumbing & Heating",
+        "Rush Plumbing",
+        "Ally Plumbing"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Ally Plumbing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Beacon Plumbing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Bee’s Plumbing & Heating",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Roto-Rooter Seattle",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Rush Plumbing",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 5
+}

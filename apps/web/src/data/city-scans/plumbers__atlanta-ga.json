@@ -1,0 +1,56 @@
+{
+  "industry": "plumbers",
+  "city": "atlanta-ga",
+  "cityLabel": "Atlanta, GA",
+  "query": "Who is the most reliable emergency plumber in Atlanta, GA for a burst pipe?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": []
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Roto-Rooter Atlanta",
+        "Allgood Plumbing",
+        "Plumb Works Inc",
+        "Henson Plumbing",
+        "R.S. Andrews"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Allgood Plumbing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Henson Plumbing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Plumb Works Inc",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "R.S. Andrews",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Roto-Rooter Atlanta",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 5
+}
