@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { cities } from "@/lib/cities";
+import { getScannedPairs } from "@/lib/city-scans";
 import { guides } from "@/lib/guides";
 import { industries } from "@/lib/industries";
 import { SITE_URL } from "@/lib/site";
@@ -7,17 +7,14 @@ import { SITE_URL } from "@/lib/site";
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
 
-  const cityIndustryUrls: MetadataRoute.Sitemap = [];
-  for (const industry of industries) {
-    for (const city of cities) {
-      cityIndustryUrls.push({
-        url: `${SITE_URL}/ai-seo-for/${industry.slug}/${city.slug}`,
-        lastModified: now,
-        changeFrequency: "monthly" as const,
-        priority: 0.75,
-      });
-    }
-  }
+  // Only pairs carrying a real measured scan. The rest are noindex until
+  // scripts/generate_city_scans.py gives them something of their own to say.
+  const cityIndustryUrls: MetadataRoute.Sitemap = getScannedPairs().map((pair) => ({
+    url: `${SITE_URL}/ai-seo-for/${pair.industry}/${pair.city}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.75,
+  }));
 
   return [
     {

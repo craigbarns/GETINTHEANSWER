@@ -5,6 +5,7 @@ from datetime import datetime, timezone
 import os
 import random
 import re
+import secrets
 import time
 import unicodedata
 import uuid
@@ -128,6 +129,21 @@ def init_db() -> None:
         conn.execute(text("CREATE INDEX IF NOT EXISTS score_history_site_idx ON score_history (site_id, created_at)"))
 
 
+OUTREACH_API_KEY = os.getenv("OUTREACH_API_KEY", "").strip()
+
+
+def is_internal_caller(http_request: Request) -> bool:
+    """True when the caller presents the internal prospecting key.
+
+    Guards both e-mail suppression and the un-redacted scan summary, so the
+    paywall stays intact for the public endpoint.
+    """
+    if not OUTREACH_API_KEY:
+        return False
+    presented = (http_request.headers.get("x-outreach-key") or "").strip()
+    return bool(presented) and secrets.compare_digest(presented, OUTREACH_API_KEY)
+
+
 class OnboardingRequest(BaseModel):
     companyName: str = Field(min_length=2, max_length=120)
     websiteUrl: AnyHttpUrl
@@ -135,6 +151,10 @@ class OnboardingRequest(BaseModel):
     city: str = Field(min_length=2, max_length=100)
     industry: str = Field(min_length=2, max_length=120)
     services: Optional[str] = Field(default=None, max_length=500)
+    # Internal prospecting runs set this to False so that scanning a business we
+    # contacted ourselves never emails them from the transactional domain.
+    # Only honoured for callers presenting a valid X-Outreach-Key header.
+    notify: bool = True
 
 
 class AgencyInquiryRequest(BaseModel):
@@ -1149,7 +1169,9 @@ async def dispatch_scan_emails(dashboard: DashboardData, requester_email: str) -
 
 @app.post("/api/onboarding")
 async def onboard_site(payload: OnboardingRequest, http_request: Request):
-    await enforce_scan_rate_limit(http_request, payload)
+    internal = is_internal_caller(http_request)
+    if not internal:
+        await enforce_scan_rate_limit(http_request, payload)
     try:
         await validate_public_http_url(str(payload.websiteUrl))
     except UnsafeWebsiteUrl as exc:
@@ -1179,8 +1201,23 @@ async def onboard_site(payload: OnboardingRequest, http_request: Request):
         dashboard.unlocked = not BILLING_ENABLED
         save_report(dashboard, email=payload.email)
         record_history(dashboard)
-        asyncio.create_task(dispatch_scan_emails(dashboard, payload.email))
-        return {"site_id": site_id, "status": "completed", "mode": dashboard.mode}
+
+        if payload.notify or not internal:
+            asyncio.create_task(dispatch_scan_emails(dashboard, payload.email))
+
+        response = {"site_id": site_id, "status": "completed", "mode": dashboard.mode}
+        if internal:
+            # Real numbers, so outbound copy can state facts instead of guesses.
+            response["summary"] = {
+                "visibility_score": dashboard.visibility_score,
+                "brand_mentions": dashboard.brand_mentions,
+                "total_queries": dashboard.total_queries,
+                "top_competitor": dashboard.top_competitor,
+                "top_competitor_mentions": dashboard.top_competitor_mentions,
+                "engines_used": dashboard.engines_used,
+                "sample_query": dashboard.queries[0].query if dashboard.queries else None,
+            }
+        return response
     finally:
         SCAN_GATE.release()
 

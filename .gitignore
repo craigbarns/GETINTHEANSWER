@@ -7,3 +7,9 @@ node_modules/
 *.tsbuildinfo
 .env
 .env.local
+
+# Prospecting data — third-party contact details, never in a public repo
+prospects.csv
+outreach_state.json
+outreach_queue.csv
+outreach_results.txt
