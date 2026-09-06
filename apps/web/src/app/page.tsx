@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { HeroForm } from "@/components/hero-form";
 import { LogoMark } from "@/components/logo";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 
@@ -60,6 +61,11 @@ const faqs = [
     answer:
       "We use the business profile you submit, the public content on your homepage and the answers returned by the AI providers to build your report. Your email associates the report with checkout if you upgrade. We do not sell your information.",
   },
+  {
+    question: "Will I be charged US sales tax?",
+    answer:
+      "If sales tax applies, Stripe calculates it from your billing address and shows the exact amount before you subscribe. You always see the full total before confirming payment.",
+  },
 ];
 
 const structuredData = {
@@ -99,12 +105,27 @@ const structuredData = {
       operatingSystem: "Web",
       description:
         "GetInTheAnswer measures how visible a local business is in AI answers from ChatGPT, Claude, Gemini and Perplexity, benchmarks competitors and delivers a prioritized action plan.",
-      offers: {
-        "@type": "Offer",
-        price: "0",
-        priceCurrency: "USD",
-        description: "Free discovery scan — 10 tailored customer questions tested across up to 4 AI engines, no credit card required.",
-      },
+      offers: [
+        {
+          "@type": "Offer",
+          price: "0",
+          priceCurrency: "USD",
+          description: "Free discovery scan — 10 tailored customer questions tested across up to 4 AI engines, no credit card required.",
+        },
+        {
+          "@type": "Offer",
+          name: "Pro Monitoring",
+          url: `${SITE_URL}/#pricing`,
+          price: "29",
+          priceCurrency: "USD",
+          priceSpecification: {
+            "@type": "UnitPriceSpecification",
+            price: "29",
+            priceCurrency: "USD",
+            unitText: "MONTH",
+          },
+        },
+      ],
     },
   ],
 };
@@ -169,7 +190,11 @@ export default function Home() {
           </nav>
 
           <Button asChild className="ml-auto rounded-full px-5 md:ml-7">
-            <Link href="/onboarding">
+            <Link
+              href="/onboarding"
+              data-analytics-event="select_content"
+              data-analytics-label="header_scan"
+            >
               <span className="hidden sm:inline">Analyze my business</span>
               <span className="sm:hidden">Analyze</span>
               <ArrowRight className="ml-2 size-4" aria-hidden="true" />
@@ -184,8 +209,8 @@ export default function Home() {
           <div className="pointer-events-none absolute -left-28 top-24 size-[420px] rounded-full bg-lime-200/35 blur-3xl" aria-hidden="true" />
           <div className="pointer-events-none absolute -right-32 top-8 size-[480px] rounded-full bg-emerald-200/30 blur-3xl" aria-hidden="true" />
 
-          <div className="relative mx-auto grid max-w-7xl items-center gap-14 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[0.92fr_1.08fr] lg:px-10 lg:py-24">
-            <div className="max-w-2xl animate-fade-in-up">
+          <div className="relative mx-auto grid min-w-0 max-w-7xl items-center gap-14 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[0.92fr_1.08fr] lg:px-10 lg:py-24">
+            <div className="min-w-0 max-w-2xl animate-fade-in-up">
               <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-primary/15 bg-white/70 px-3.5 py-2 text-xs font-bold uppercase tracking-[0.12em] text-primary shadow-sm">
                 <Sparkles className="size-3.5 text-lime-600" aria-hidden="true" />
                 AI visibility for local businesses
@@ -200,17 +225,7 @@ export default function Home() {
                 GetInTheAnswer tests the queries that matter for your business, benchmarks your competitors and turns the results into concrete actions.
               </p>
 
-              <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-                <Button asChild size="lg" className="h-14 rounded-full px-7 text-base shadow-lg shadow-primary/15">
-                  <Link href="/onboarding">
-                    Start my free analysis
-                    <ArrowRight className="ml-2 size-5" aria-hidden="true" />
-                  </Link>
-                </Button>
-                <Button asChild size="lg" variant="outline" className="h-14 rounded-full border-foreground/15 bg-white/60 px-7 text-base">
-                  <Link href="#demo">Explore a report</Link>
-                </Button>
-              </div>
+              <HeroForm />
 
               <div className="mt-7 flex flex-wrap gap-x-5 gap-y-2 text-sm font-medium text-muted-foreground">
                 <span className="flex items-center gap-1.5"><CheckCircle2 className="size-4 text-emerald-600" aria-hidden="true" /> No credit card required</span>
@@ -219,7 +234,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="relative mx-auto w-full max-w-2xl animate-fade-in-up lg:mx-0" style={{ animationDelay: "120ms" }}>
+            <div className="relative mx-auto min-w-0 w-full max-w-2xl animate-fade-in-up lg:mx-0" style={{ animationDelay: "120ms" }}>
               <div className="absolute -inset-5 -rotate-2 rounded-[2.25rem] bg-primary/8" aria-hidden="true" />
               <div className="relative overflow-hidden rounded-[1.75rem] border border-foreground/10 bg-[#173b35] p-3 shadow-2xl shadow-primary/20 sm:p-4">
                 <div className="flex items-center justify-between px-3 py-2 text-primary-foreground/65">
@@ -324,7 +339,7 @@ export default function Home() {
             <div className="mt-12 grid gap-5 lg:grid-cols-3">
               {steps.map(({ icon: Icon, number, title, description }) => (
                 <article className="group relative overflow-hidden rounded-3xl border border-foreground/10 bg-[#f8f8f3] p-7 transition-transform hover:-translate-y-1" key={number}>
-                  <span className="absolute right-5 top-3 text-7xl font-black tracking-[-0.08em] text-primary/6">{number}</span>
+                  <span className="absolute right-6 top-6 text-xs font-black uppercase tracking-[0.14em] text-emerald-700">Step {number}</span>
                   <span className="relative flex size-12 items-center justify-center rounded-2xl bg-primary text-primary-foreground shadow-md">
                     <Icon className="size-5" aria-hidden="true" />
                   </span>
@@ -345,7 +360,13 @@ export default function Home() {
                 The report connects every weakness it detects to an editorial or technical action, with a priority and an estimated impact.
               </p>
               <Button asChild size="lg" className="mt-8 h-13 rounded-full bg-lime-300 px-6 text-[#173b35] hover:bg-lime-200">
-                <Link href="/onboarding">Create my first report <ArrowRight className="ml-2 size-5" aria-hidden="true" /></Link>
+                <Link
+                  href="/onboarding"
+                  data-analytics-event="select_content"
+                  data-analytics-label="sample_report_scan"
+                >
+                  Create my first report <ArrowRight className="ml-2 size-5" aria-hidden="true" />
+                </Link>
               </Button>
             </div>
 
@@ -396,15 +417,23 @@ export default function Home() {
                 </div>
                 <div className="mt-auto border-t border-foreground/8 bg-[#f3f4ed] p-6">
                   <Button asChild size="lg" variant="outline" className="h-12 w-full rounded-full bg-white px-6">
-                    <Link href="/onboarding">Try it free <ArrowRight className="ml-2 size-4" aria-hidden="true" /></Link>
+                    <Link
+                      href="/onboarding"
+                      data-analytics-event="select_content"
+                      data-analytics-label="pricing_free"
+                    >
+                      Try it free <ArrowRight className="ml-2 size-4" aria-hidden="true" />
+                    </Link>
                   </Button>
                 </div>
               </div>
 
-              <div className="relative flex flex-col overflow-hidden rounded-[1.75rem] bg-[#173b35] text-white shadow-xl shadow-primary/15">
-                <span className="absolute right-5 top-5 rounded-full bg-lime-300 px-3 py-1 text-[11px] font-black uppercase tracking-[0.08em] text-[#173b35]">Most popular</span>
+              <div data-testid="pricing-pro-card" className="flex flex-col overflow-hidden rounded-[1.75rem] bg-[#173b35] text-white shadow-xl shadow-primary/15">
                 <div className="p-6 sm:p-7">
-                  <p className="text-sm font-extrabold uppercase tracking-[0.12em] text-lime-300">Pro monitoring</p>
+                  <div className="flex flex-col items-start gap-2 xl:flex-row xl:items-center xl:justify-between">
+                    <p className="text-sm font-extrabold uppercase tracking-[0.12em] text-lime-300">Pro monitoring</p>
+                    <span className="shrink-0 whitespace-nowrap rounded-full bg-lime-300 px-3 py-1 text-[11px] font-black uppercase tracking-[0.08em] text-[#173b35]">Most popular</span>
+                  </div>
                   <div className="mt-2 flex items-end gap-2"><span className="text-4xl font-black tracking-[-0.06em]">$29</span><span className="pb-1 text-xs font-semibold text-white/60">/ month · cancel anytime</span></div>
                   <div className="mt-6 grid gap-3 text-sm font-semibold text-white/85">
                     {["Every competitor named", "The engines' actual answers, quoted", "Action plan from live AI answers", "Automatic weekly re-scans", "Score history over time"].map((item) => (
@@ -414,7 +443,13 @@ export default function Home() {
                 </div>
                 <div className="mt-auto border-t border-white/10 p-6">
                   <Button asChild size="lg" className="h-12 w-full rounded-full bg-lime-300 px-6 font-extrabold text-[#173b35] hover:bg-lime-200">
-                    <Link href="/onboarding">Start Pro scan <ArrowRight className="ml-2 size-4" aria-hidden="true" /></Link>
+                    <Link
+                      href="/onboarding"
+                      data-analytics-event="select_content"
+                      data-analytics-label="pricing_pro"
+                    >
+                      Start with a free scan <ArrowRight className="ml-2 size-4" aria-hidden="true" />
+                    </Link>
                   </Button>
                 </div>
               </div>
@@ -431,11 +466,20 @@ export default function Home() {
                 </div>
                 <div className="mt-auto border-t border-foreground/8 bg-[#f3f4ed] p-6">
                   <Button asChild size="lg" variant="outline" className="h-12 w-full rounded-full bg-white px-6">
-                    <Link href="/onboarding">Get Agency access <ArrowRight className="ml-2 size-4" aria-hidden="true" /></Link>
+                    <Link
+                      href="/contact"
+                      data-analytics-event="select_content"
+                      data-analytics-label="pricing_agency_contact"
+                    >
+                      Talk to us <ArrowRight className="ml-2 size-4" aria-hidden="true" />
+                    </Link>
                   </Button>
                 </div>
               </div>
             </div>
+            <p className="mx-auto mt-6 max-w-3xl text-sm font-semibold text-muted-foreground">
+              All prices are in USD. Pro payments are processed securely by Stripe, applicable US sales tax is calculated at checkout, and you can cancel online anytime.
+            </p>
           </div>
         </section>
         <section id="faq" className="scroll-mt-20 border-t border-foreground/8 bg-white py-20 sm:py-28" aria-label="Frequently asked questions">

@@ -71,10 +71,14 @@ Variables principales de l'API :
 - `OPENAI_API_KEY`, `ANTHROPIC_API_KEY`, `PERPLEXITY_API_KEY` : moteurs du scan live.
 - `STRIPE_SECRET_KEY`, `STRIPE_PRICE_ID` : abonnement Pro.
 - `STRIPE_WEBHOOK_SECRET` : signature du webhook Stripe.
+- `STRIPE_CHECKOUT_LOCALE` : langue du Checkout Stripe (`en` par défaut pour le marché US).
 - `FRONTEND_URL` : URL canonique du frontend.
 - `SCAN_RATE_LIMIT` : scans gratuits autorisés par IP, email et domaine sur la fenêtre (3 par défaut).
 - `SCAN_RATE_WINDOW_SECONDS` : fenêtre de limitation (24 heures par défaut).
 - `MAX_CONCURRENT_SCANS` : scans exécutés simultanément par instance API (3 par défaut).
+- `CONTACT_RATE_LIMIT` : demandes Agency autorisées par IP et email sur la fenêtre (5 par défaut).
+- `CONTACT_RATE_WINDOW_SECONDS` : fenêtre de limitation des demandes Agency (24 heures par défaut).
+- `RESEND_API_KEY`, `RESEND_FROM_ADDRESS`, `NOTIFY_EMAIL` : envoi des rapports et des demandes Agency.
 
 Le webhook Stripe doit pointer vers :
 

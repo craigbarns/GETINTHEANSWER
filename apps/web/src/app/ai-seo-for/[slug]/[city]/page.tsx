@@ -67,6 +67,38 @@ export default async function IndustryCityPage({
   const localizedQueries = industry.sampleQueries.map((q) => q.replace(/\{city\}/g, formattedCity));
   const scan = getCityScan(industry.slug, city.slug);
 
+  let hash = 0;
+  const hashStr = `${slug}-${citySlug}`;
+  for (let i = 0; i < hashStr.length; i++) {
+    hash = hashStr.charCodeAt(i) + ((hash << 5) - hash);
+  }
+  hash = Math.abs(hash);
+
+  const h1Templates = [
+    `When ${formattedCity} residents ask an AI for a ${industry.singularName.toLowerCase()}, are you in the answer?`,
+    `Is your ${industry.singularName.toLowerCase()} business the top recommendation for AI users in ${formattedCity}?`,
+    `How ${formattedCity} customers use ChatGPT to find the best ${industry.singularName.toLowerCase()} today.`,
+    `Dominate AI search results for ${industry.singularName.toLowerCase()} services in ${formattedCity}.`
+  ];
+  
+  const descTemplates = [
+    `Learn how top ${industry.name.toLowerCase()} in ${formattedCity} capture high-intent leads directly from ChatGPT, Claude, and Perplexity answers.`,
+    `Discover the exact strategies that ${industry.name.toLowerCase()} in ${formattedCity} use to rank first when locals search using AI assistants.`,
+    `AI engines are replacing traditional search in ${formattedCity}. Find out if your ${industry.singularName.toLowerCase()} practice is visible to thousands of potential clients.`,
+    `Get a competitive edge in ${formattedCity} by optimizing your ${industry.singularName.toLowerCase()} presence for Generative Engine Optimization (GEO).`
+  ];
+
+  const cardTemplates = [
+    `Benchmark your ${industry.singularName.toLowerCase()} business in ${city.name}`,
+    `Get your free AI visibility score for ${city.name}`,
+    `See which ${industry.name.toLowerCase()} rank higher in ${city.name}`,
+    `Test your AI SEO performance in ${city.name}`
+  ];
+
+  const h1Text = h1Templates[hash % h1Templates.length];
+  const descText = descTemplates[hash % descTemplates.length];
+  const cardText = cardTemplates[hash % cardTemplates.length];
+
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
@@ -156,10 +188,10 @@ export default async function IndustryCityPage({
             {formattedCity} · {industry.singularName} AI SEO
           </div>
           <h1 className="mt-4 text-balance text-4xl font-extrabold leading-[1.08] tracking-[-0.045em] sm:text-5xl">
-            When {formattedCity} residents ask an AI for a {industry.singularName.toLowerCase()}, are you in the answer?
+            {h1Text}
           </h1>
           <p className="mt-5 text-lg leading-8 text-muted-foreground">
-            Learn how top {industry.name.toLowerCase()} in {formattedCity} capture high-intent leads directly from ChatGPT, Claude, and Perplexity answers.
+            {descText}
           </p>
         </div>
 
@@ -171,7 +203,7 @@ export default async function IndustryCityPage({
                 {formattedCity} Live Audit
               </span>
               <h2 className="mt-3 text-2xl font-extrabold tracking-tight">
-                Benchmark your {industry.singularName.toLowerCase()} business in {city.name}
+                {cardText}
               </h2>
               <p className="mt-2 text-sm leading-6 text-white/70">
                 We test real local queries in {formattedCity} and reveal which competitor ChatGPT recommends over you.

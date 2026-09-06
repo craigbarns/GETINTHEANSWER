@@ -5,6 +5,7 @@ import { ArrowLeft, ArrowRight, CheckCircle2, HelpCircle, Sparkles, TrendingUp, 
 
 import { LogoMark } from "@/components/logo";
 import { Button } from "@/components/ui/button";
+import { cities } from "@/lib/cities";
 import { getIndustry, industries } from "@/lib/industries";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 
@@ -225,6 +226,22 @@ export default async function IndustryPage({ params }: { params: Promise<{ slug:
                 <h3 className="font-extrabold text-foreground">{item.question}</h3>
                 <p className="mt-3 leading-7 text-muted-foreground">{item.answer}</p>
               </div>
+            ))}
+          </div>
+        </section>
+
+        {/* City Directory (Fix for Orphan Pages) */}
+        <section className="mt-14 border-t border-foreground/10 pt-10">
+          <h2 className="text-xl font-extrabold tracking-[-0.03em]">Explore {industry.name} AI SEO by City</h2>
+          <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
+            {cities.map((city) => (
+              <Link 
+                key={city.slug} 
+                href={`/ai-seo-for/${industry.slug}/${city.slug}`}
+                className="text-sm font-semibold text-muted-foreground hover:text-emerald-700 hover:underline"
+              >
+                {city.name}, {city.stateCode}
+              </Link>
             ))}
           </div>
         </section>

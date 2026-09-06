@@ -17,8 +17,8 @@ import httpx
 import stripe
 from fastapi import FastAPI, Header, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import AnyHttpUrl, BaseModel, Field
-from email_service import NOTIFY_ADDRESS, notify_scan_completed_email, report_ready_email, send_email
+from pydantic import AnyHttpUrl, BaseModel, ConfigDict, Field
+from email_service import NOTIFY_ADDRESS, agency_inquiry_email, notify_scan_completed_email, report_ready_email, send_email
 from site_audit import SiteAudit, UnsafeWebsiteUrl, audit_site, validate_public_http_url
 from sqlalchemy import create_engine, text
 
@@ -35,6 +35,7 @@ GA_API_SECRET = os.getenv("GA_API_SECRET", "").strip()
 DATABASE_URL = os.getenv("DATABASE_URL", "").strip()
 STRIPE_SECRET_KEY = os.getenv("STRIPE_SECRET_KEY", "").strip()
 STRIPE_PRICE_ID = os.getenv("STRIPE_PRICE_ID", "").strip()
+STRIPE_CHECKOUT_LOCALE = os.getenv("STRIPE_CHECKOUT_LOCALE", "en").strip() or "en"
 FRONTEND_URL = os.getenv("FRONTEND_URL", "https://getintheanswer.com").rstrip("/")
 LIVE_MODE = bool(OPENAI_API_KEY)
 BILLING_ENABLED = bool(STRIPE_SECRET_KEY and STRIPE_PRICE_ID)
@@ -54,6 +55,10 @@ MAX_CONCURRENT_SCANS = env_int("MAX_CONCURRENT_SCANS", 3)
 SCAN_GATE = asyncio.Semaphore(MAX_CONCURRENT_SCANS)
 SCAN_RATE_LOCK = asyncio.Lock()
 SCAN_ATTEMPTS: dict[str, deque[float]] = defaultdict(deque)
+CONTACT_RATE_LIMIT = env_int("CONTACT_RATE_LIMIT", 5)
+CONTACT_RATE_WINDOW_SECONDS = env_int("CONTACT_RATE_WINDOW_SECONDS", 24 * 60 * 60)
+CONTACT_RATE_LOCK = asyncio.Lock()
+CONTACT_ATTEMPTS: dict[str, deque[float]] = defaultdict(deque)
 SUBSCRIPTION_ACCESS_STATUSES = {"active", "trialing"}
 
 if STRIPE_SECRET_KEY:
@@ -152,6 +157,18 @@ class OnboardingRequest(BaseModel):
     notify: bool = True
 
 
+class AgencyInquiryRequest(BaseModel):
+    model_config = ConfigDict(str_strip_whitespace=True)
+
+    fullName: str = Field(min_length=2, max_length=100)
+    workEmail: str = Field(min_length=5, max_length=200, pattern=r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
+    companyName: str = Field(min_length=2, max_length=120)
+    websiteUrl: Optional[AnyHttpUrl] = None
+    locationCount: int = Field(ge=2, le=10000)
+    message: Optional[str] = Field(default=None, max_length=2000)
+    companyWebsite: Optional[str] = Field(default="", max_length=200)
+
+
 class QueryResult(BaseModel):
     query: str
     engine: str
@@ -245,6 +262,30 @@ async def enforce_scan_rate_limit(http_request: Request, payload: OnboardingRequ
                 )
         for key in keys:
             SCAN_ATTEMPTS[key].append(now)
+
+
+async def enforce_contact_rate_limit(http_request: Request, payload: AgencyInquiryRequest) -> None:
+    keys = {
+        f"ip:{client_identifier(http_request)}",
+        f"email:{payload.workEmail.strip().lower()}",
+    }
+    now = time.monotonic()
+    cutoff = now - CONTACT_RATE_WINDOW_SECONDS
+
+    async with CONTACT_RATE_LOCK:
+        for key in keys:
+            bucket = CONTACT_ATTEMPTS[key]
+            while bucket and bucket[0] < cutoff:
+                bucket.popleft()
+            if len(bucket) >= CONTACT_RATE_LIMIT:
+                retry_after = max(1, round(bucket[0] + CONTACT_RATE_WINDOW_SECONDS - now))
+                raise HTTPException(
+                    status_code=429,
+                    detail="Agency inquiry limit reached. Please try again later.",
+                    headers={"Retry-After": str(retry_after)},
+                )
+        for key in keys:
+            CONTACT_ATTEMPTS[key].append(now)
 
 
 # In-memory fallback when no database is configured (local development).
@@ -1072,6 +1113,37 @@ def healthcheck():
     }
 
 
+@app.post("/api/contact")
+async def submit_agency_inquiry(payload: AgencyInquiryRequest, http_request: Request):
+    # Bots commonly fill every field. Return a normal-looking response without
+    # sending email so the endpoint cannot be used to create notification spam.
+    if payload.companyWebsite:
+        return {"status": "received"}
+
+    await enforce_contact_rate_limit(http_request, payload)
+    if not NOTIFY_ADDRESS:
+        raise HTTPException(status_code=503, detail="Contact service is not configured")
+
+    subject, html = agency_inquiry_email(
+        payload.fullName,
+        payload.workEmail,
+        payload.companyName,
+        str(payload.websiteUrl) if payload.websiteUrl else None,
+        payload.locationCount,
+        payload.message,
+    )
+    delivered = await send_email(
+        NOTIFY_ADDRESS,
+        subject,
+        html,
+        reply_to=payload.workEmail,
+    )
+    if not delivered:
+        raise HTTPException(status_code=502, detail="Agency inquiry could not be delivered")
+
+    return {"status": "received"}
+
+
 async def dispatch_scan_emails(dashboard: DashboardData, requester_email: str) -> None:
     # Fire-and-forget: a failed or slow email must never affect the scan
     # response, so this runs as a background task and swallows its own errors.
@@ -1171,18 +1243,32 @@ def create_checkout(body: CheckoutRequest):
     if load_report(body.site_id) is None:
         raise HTTPException(status_code=404, detail="Report not found")
 
-    session = stripe.checkout.Session.create(
-        mode="subscription",
-        line_items=[{"price": STRIPE_PRICE_ID, "quantity": 1}],
-        success_url=(
-            f"{FRONTEND_URL}/api/checkout/confirm?site_id={body.site_id}"
-            "&session_id={CHECKOUT_SESSION_ID}"
-        ),
-        cancel_url=f"{FRONTEND_URL}/dashboard?site_id={body.site_id}",
-        customer_email=get_report_email(body.site_id),
-        metadata={"site_id": body.site_id, "ga_client_id": body.ga_client_id or ""},
-        allow_promotion_codes=True,
-    )
+    try:
+        session = stripe.checkout.Session.create(
+            mode="subscription",
+            line_items=[{"price": STRIPE_PRICE_ID, "quantity": 1}],
+            success_url=(
+                f"{FRONTEND_URL}/api/checkout/confirm?site_id={body.site_id}"
+                "&session_id={CHECKOUT_SESSION_ID}"
+            ),
+            cancel_url=f"{FRONTEND_URL}/dashboard?site_id={body.site_id}&checkout=cancelled",
+            client_reference_id=body.site_id,
+            customer_email=get_report_email(body.site_id),
+            locale=STRIPE_CHECKOUT_LOCALE,
+            automatic_tax={"enabled": True},
+            billing_address_collection="required",
+            branding_settings={
+                "display_name": "GetInTheAnswer",
+                "background_color": "#f8f8f3",
+                "button_color": "#173b35",
+                "font_family": "inter",
+            },
+            metadata={"site_id": body.site_id, "ga_client_id": body.ga_client_id or ""},
+            subscription_data={"metadata": {"site_id": body.site_id}},
+            allow_promotion_codes=True,
+        )
+    except stripe.error.StripeError as exc:
+        raise HTTPException(status_code=502, detail="Checkout is temporarily unavailable") from exc
     return {"url": session.url}
 
 
@@ -1281,7 +1367,14 @@ async def report_ga_purchase(client_id: str, session_id: str, amount_total: Opti
                                 "transaction_id": session_id,
                                 "value": (amount_total or 0) / 100,
                                 "currency": "USD",
-                                "items": [{"item_name": "GetInTheAnswer Pro Monitoring"}],
+                                "items": [
+                                    {
+                                        "item_id": "pro_monthly",
+                                        "item_name": "GetInTheAnswer Pro Monitoring",
+                                        "price": (amount_total or 0) / 100,
+                                        "quantity": 1,
+                                    }
+                                ],
                             },
                         }
                     ],
