@@ -6,6 +6,7 @@ import { ArrowRight, CheckCircle2, HelpCircle, MapPin, Zap } from "lucide-react"
 import { LogoMark } from "@/components/logo";
 import { Button } from "@/components/ui/button";
 import { cities, getCity } from "@/lib/cities";
+import { formatScanDate, getCityScan, hasCityScan } from "@/lib/city-scans";
 import { getIndustry, industries } from "@/lib/industries";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 
@@ -32,9 +33,15 @@ export async function generateMetadata({
   const title = `AI SEO for ${industry.name} in ${city.name}, ${city.stateCode} — Get Recommended by ChatGPT`;
   const description = `Discover how ${industry.name.toLowerCase()} in ${city.name}, ${city.stateCode} can rank in ChatGPT, Claude, Gemini, and Perplexity local recommendations. Free AI scan.`;
 
+  // Until a pair has measured data it is the industry template with the city
+  // name swapped in. Keep those out of the index rather than asking Google to
+  // rank 60 near-identical documents.
+  const measured = hasCityScan(industry.slug, city.slug);
+
   return {
     title,
     description,
+    robots: measured ? undefined : { index: false, follow: true },
     alternates: { canonical: `/ai-seo-for/${industry.slug}/${city.slug}` },
     openGraph: {
       title,
@@ -58,6 +65,7 @@ export default async function IndustryCityPage({
 
   const formattedCity = `${city.name}, ${city.stateCode}`;
   const localizedQueries = industry.sampleQueries.map((q) => q.replace(/\{city\}/g, formattedCity));
+  const scan = getCityScan(industry.slug, city.slug);
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -176,6 +184,60 @@ export default async function IndustryCityPage({
             </Button>
           </div>
         </section>
+
+        {/* Measured answers — the only content on this page a competitor cannot copy */}
+        {scan && (
+          <section className="mt-14">
+            <p className="text-sm font-extrabold uppercase tracking-[0.16em] text-emerald-700">
+              Measured on {formatScanDate(scan.scannedAt)}
+            </p>
+            <h2 className="mt-2 text-3xl font-extrabold tracking-[-0.03em]">
+              Who the AI engines actually recommend in {city.name}
+            </h2>
+            <p className="mt-3 max-w-2xl text-base text-foreground/70">
+              We asked {scan.engines.map((e) => e.engine).join(", ")} one question a real customer would
+              ask, and recorded every {industry.singularName.toLowerCase()} they named.
+            </p>
+
+            <div className="mt-6 rounded-2xl border border-foreground/10 bg-white p-6 shadow-sm">
+              <p className="text-sm font-semibold text-foreground/60">The question we asked</p>
+              <p className="mt-1.5 text-lg font-bold text-foreground">“{scan.query}”</p>
+
+              <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                {scan.engines.map((entry) => (
+                  <div key={entry.engine} className="rounded-xl border border-foreground/10 bg-[#f8f8f3] p-4">
+                    <p className="text-sm font-extrabold text-foreground">{entry.engine} named</p>
+                    {entry.businesses.length ? (
+                      <ul className="mt-2.5 space-y-1.5">
+                        {entry.businesses.map((name) => (
+                          <li key={name} className="flex items-start gap-2 text-sm text-foreground/80">
+                            <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-emerald-600" aria-hidden="true" />
+                            <span>{name}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <p className="mt-2.5 text-sm text-foreground/60">No specific business.</p>
+                    )}
+                  </div>
+                ))}
+              </div>
+
+              <p className="mt-6 border-t border-foreground/10 pt-5 text-base font-semibold text-foreground">
+                {scan.businesses.length} {industry.name.toLowerCase()} were named in {city.name}.
+                {" "}
+                <span className="text-foreground/70">
+                  If yours is not one of them, the customers asking this question never hear your name.
+                </span>
+              </p>
+              <Button asChild size="lg" className="mt-5 rounded-full">
+                <Link href={`/onboarding?city=${encodeURIComponent(formattedCity)}&industry=${encodeURIComponent(industry.singularName)}`}>
+                  Check my business <ArrowRight className="ml-2 size-5" aria-hidden="true" />
+                </Link>
+              </Button>
+            </div>
+          </section>
+        )}
 
         {/* Local Queries */}
         <section className="mt-14">
