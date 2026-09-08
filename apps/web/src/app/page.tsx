@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { HeroScanForm } from "@/components/hero-scan-form";
 import { LogoMark } from "@/components/logo";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 
@@ -157,7 +158,7 @@ export default function Home() {
             <Link className="text-sm font-semibold text-muted-foreground transition-colors hover:text-foreground" href="#method">
               How it works
             </Link>
-            <Link className="text-sm font-semibold text-muted-foreground transition-colors hover:text-foreground" href="#demo">
+            <Link className="text-sm font-semibold text-muted-foreground transition-colors hover:text-foreground" href="/sample-report">
               Sample report
             </Link>
             <Link className="text-sm font-semibold text-muted-foreground transition-colors hover:text-foreground" href="#pricing">
@@ -200,17 +201,17 @@ export default function Home() {
                 GetInTheAnswer tests the queries that matter for your business, benchmarks your competitors and turns the results into concrete actions.
               </p>
 
-              <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-                <Button asChild size="lg" className="h-14 rounded-full px-7 text-base shadow-lg shadow-primary/15">
-                  <Link href="/onboarding">
-                    Start my free analysis
-                    <ArrowRight className="ml-2 size-5" aria-hidden="true" />
-                  </Link>
-                </Button>
-                <Button asChild size="lg" variant="outline" className="h-14 rounded-full border-foreground/15 bg-white/60 px-7 text-base">
-                  <Link href="#demo">Explore a report</Link>
-                </Button>
+              <div className="mt-9">
+                <HeroScanForm />
               </div>
+
+              <p className="mt-4 text-sm font-semibold text-muted-foreground">
+                Not ready yet?{" "}
+                <Link className="font-bold text-emerald-700 hover:underline" href="/sample-report">
+                  See a full sample report first
+                </Link>
+                .
+              </p>
 
               <div className="mt-7 flex flex-wrap gap-x-5 gap-y-2 text-sm font-medium text-muted-foreground">
                 <span className="flex items-center gap-1.5"><CheckCircle2 className="size-4 text-emerald-600" aria-hidden="true" /> No credit card required</span>
@@ -344,9 +345,14 @@ export default function Home() {
               <p className="mt-6 max-w-xl text-lg leading-8 text-white/65">
                 The report connects every weakness it detects to an editorial or technical action, with a priority and an estimated impact.
               </p>
-              <Button asChild size="lg" className="mt-8 h-13 rounded-full bg-lime-300 px-6 text-[#173b35] hover:bg-lime-200">
-                <Link href="/onboarding">Create my first report <ArrowRight className="ml-2 size-5" aria-hidden="true" /></Link>
-              </Button>
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+                <Button asChild size="lg" className="h-13 rounded-full bg-lime-300 px-6 text-[#173b35] hover:bg-lime-200">
+                  <Link href="/onboarding">Create my first report <ArrowRight className="ml-2 size-5" aria-hidden="true" /></Link>
+                </Button>
+                <Button asChild size="lg" variant="outline" className="h-13 rounded-full border-white/20 bg-transparent px-6 text-white hover:bg-white/10 hover:text-white">
+                  <Link href="/sample-report">See the full sample report</Link>
+                </Button>
+              </div>
             </div>
 
             <div className="rounded-[1.75rem] border border-white/12 bg-white/7 p-3 backdrop-blur sm:p-5">

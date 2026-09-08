@@ -5,6 +5,7 @@ from datetime import datetime, timezone
 import os
 import random
 import re
+import secrets
 import time
 import unicodedata
 import uuid
@@ -38,6 +39,7 @@ FRONTEND_URL = os.getenv("FRONTEND_URL", "https://getintheanswer.com").rstrip("/
 LIVE_MODE = bool(OPENAI_API_KEY)
 BILLING_ENABLED = bool(STRIPE_SECRET_KEY and STRIPE_PRICE_ID)
 STRIPE_WEBHOOK_SECRET = os.getenv("STRIPE_WEBHOOK_SECRET", "").strip()
+ADMIN_STATS_TOKEN = os.getenv("ADMIN_STATS_TOKEN", "").strip()
 
 
 def env_int(name: str, default: int) -> int:
@@ -1307,6 +1309,133 @@ async def stripe_webhook(
             set_subscription_status_by_id(subscription, status)
 
     return {"received": True}
+
+
+@app.get("/api/admin/stats")
+def admin_stats(
+    days: int = 30,
+    limit: int = 20,
+    x_admin_token: Optional[str] = Header(default=None),
+):
+    """Usage counters for the operator: how many scans ran, by whom, and how many converted.
+
+    Disabled entirely unless ADMIN_STATS_TOKEN is set. A wrong or missing token
+    answers 404 rather than 401, so the route stays invisible to scanners.
+    """
+    if not ADMIN_STATS_TOKEN or not x_admin_token or not secrets.compare_digest(
+        x_admin_token, ADMIN_STATS_TOKEN
+    ):
+        raise HTTPException(status_code=404, detail="Not found")
+
+    days = min(max(days, 1), 365)
+    limit = min(max(limit, 1), 100)
+
+    if db_engine is None:
+        # Without DATABASE_URL, reports live in memory and vanish on every restart.
+        reports = list(MEMORY_DB.values())
+        return {
+            "persistent": False,
+            "warning": "DATABASE_URL is not configured: reports are kept in memory and lost on restart.",
+            "totals": {
+                "scans": len(reports),
+                "unique_emails": len(set(MEMORY_EMAILS.values())),
+                "live_scans": sum(1 for report in reports if report.mode == "live"),
+                "unlocked": sum(1 for report in reports if report.unlocked),
+            },
+            "recent_scans": [
+                {
+                    "email": MEMORY_EMAILS.get(report.site_id),
+                    "company_name": report.company_name,
+                    "city": report.city,
+                    "industry": report.industry,
+                    "mode": report.mode,
+                    "visibility_score": report.visibility_score,
+                    "unlocked": report.unlocked,
+                }
+                for report in reports[-limit:]
+            ],
+        }
+
+    with db_engine.connect() as conn:
+        totals = conn.execute(
+            text(
+                "SELECT count(*) AS scans, "
+                "count(DISTINCT email) AS unique_emails, "
+                "count(*) FILTER (WHERE payload->>'mode' = 'live') AS live_scans, "
+                "count(*) FILTER (WHERE unlocked) AS unlocked, "
+                "count(*) FILTER (WHERE subscription_status = 'active') AS active_subscriptions, "
+                "count(*) FILTER (WHERE created_at > now() - interval '7 days') AS scans_last_7_days, "
+                "count(*) FILTER (WHERE created_at > now() - make_interval(days => :days)) AS scans_in_window, "
+                "min(created_at) AS first_scan, max(created_at) AS last_scan "
+                "FROM reports"
+            ),
+            {"days": days},
+        ).mappings().one()
+
+        per_day = conn.execute(
+            text(
+                "SELECT date_trunc('day', created_at)::date AS day, count(*) AS scans, "
+                "count(DISTINCT email) AS unique_emails "
+                "FROM reports WHERE created_at > now() - make_interval(days => :days) "
+                "GROUP BY 1 ORDER BY 1 DESC"
+            ),
+            {"days": days},
+        ).mappings().all()
+
+        recent = conn.execute(
+            text(
+                "SELECT created_at, email, unlocked, subscription_status, "
+                "payload->>'company_name' AS company_name, "
+                "payload->>'city' AS city, "
+                "payload->>'industry' AS industry, "
+                "payload->>'mode' AS mode, "
+                "(payload->>'visibility_score')::int AS visibility_score "
+                "FROM reports ORDER BY created_at DESC LIMIT :limit"
+            ),
+            {"limit": limit},
+        ).mappings().all()
+
+        repeat_scans = conn.execute(
+            text(
+                "SELECT count(*) FROM (SELECT site_id FROM score_history "
+                "GROUP BY site_id HAVING count(*) > 1) AS tracked"
+            )
+        ).scalar_one()
+
+    return {
+        "persistent": True,
+        "window_days": days,
+        "totals": {
+            "scans": totals["scans"],
+            "unique_emails": totals["unique_emails"],
+            "live_scans": totals["live_scans"],
+            "unlocked": totals["unlocked"],
+            "active_subscriptions": totals["active_subscriptions"],
+            "scans_last_7_days": totals["scans_last_7_days"],
+            "scans_in_window": totals["scans_in_window"],
+            "reports_rescanned": repeat_scans,
+            "first_scan": totals["first_scan"].isoformat() if totals["first_scan"] else None,
+            "last_scan": totals["last_scan"].isoformat() if totals["last_scan"] else None,
+        },
+        "scans_per_day": [
+            {"day": row["day"].isoformat(), "scans": row["scans"], "unique_emails": row["unique_emails"]}
+            for row in per_day
+        ],
+        "recent_scans": [
+            {
+                "created_at": row["created_at"].isoformat() if row["created_at"] else None,
+                "email": row["email"],
+                "company_name": row["company_name"],
+                "city": row["city"],
+                "industry": row["industry"],
+                "mode": row["mode"],
+                "visibility_score": row["visibility_score"],
+                "unlocked": row["unlocked"],
+                "subscription_status": row["subscription_status"],
+            }
+            for row in recent
+        ],
+    }
 
 
 @app.get("/api/dashboard/{site_id}", response_model=DashboardData)
