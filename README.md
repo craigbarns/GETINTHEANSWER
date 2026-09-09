@@ -75,6 +75,14 @@ Variables principales de l'API :
 - `SCAN_RATE_LIMIT` : scans gratuits autorisés par IP, email et domaine sur la fenêtre (3 par défaut).
 - `SCAN_RATE_WINDOW_SECONDS` : fenêtre de limitation (24 heures par défaut).
 - `MAX_CONCURRENT_SCANS` : scans exécutés simultanément par instance API (3 par défaut).
+- `DAILY_SCAN_LIMIT` : plafond de scans démarrés par jour glissant (100 par défaut). Chaque scan
+  coûte une douzaine d'appels LLM facturés : au-delà du plafond l'API répond 503 au lieu de dépenser.
+- `OPENAI_BASE_URL` / `ANTHROPIC_BASE_URL` : à ne définir que pour passer par un revendeur
+  (OpenRouter par exemple). Les SDK lisent ces variables même sans code dédié, donc une valeur
+  oubliée ici redirige — et refacture — tous les scans. `/api/admin/stats` affiche l'hôte réellement
+  appelé dans `engine_endpoints`.
+- `ADMIN_STATS_TOKEN` : active `GET /api/admin/stats` (volume de scans, mode live/simulation,
+  rapports débloqués, budget du jour). Sans ce token, la route répond 404.
 
 Le webhook Stripe doit pointer vers :
 

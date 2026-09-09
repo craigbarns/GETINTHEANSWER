@@ -24,6 +24,11 @@ from sqlalchemy import create_engine, text
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "").strip()
 OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
+# Read explicitly rather than left to the SDK: both clients silently honour these
+# variables, so an OPENAI_BASE_URL pointing at a reseller (OpenRouter and the
+# like) reroutes -- and rebills -- every scan without appearing anywhere in code.
+OPENAI_BASE_URL = os.getenv("OPENAI_BASE_URL", "").strip()
+ANTHROPIC_BASE_URL = os.getenv("ANTHROPIC_BASE_URL", "").strip()
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY", "").strip()
 ANTHROPIC_MODEL = os.getenv("ANTHROPIC_MODEL", "claude-haiku-4-5")
 PERPLEXITY_API_KEY = os.getenv("PERPLEXITY_API_KEY", "").strip()
@@ -52,6 +57,10 @@ def env_int(name: str, default: int) -> int:
 SCAN_RATE_LIMIT = env_int("SCAN_RATE_LIMIT", 3)
 SCAN_RATE_WINDOW_SECONDS = env_int("SCAN_RATE_WINDOW_SECONDS", 24 * 60 * 60)
 MAX_CONCURRENT_SCANS = env_int("MAX_CONCURRENT_SCANS", 3)
+# Hard ceiling on scans started per rolling day. Each scan costs a dozen or more
+# billed LLM calls, and the per-client limits below cannot stop a caller that
+# rotates IPs and throwaway emails, so this is the backstop on the bill.
+DAILY_SCAN_LIMIT = env_int("DAILY_SCAN_LIMIT", 100)
 SCAN_GATE = asyncio.Semaphore(MAX_CONCURRENT_SCANS)
 SCAN_RATE_LOCK = asyncio.Lock()
 SCAN_ATTEMPTS: dict[str, deque[float]] = defaultdict(deque)
@@ -123,6 +132,20 @@ def init_db() -> None:
             )
         )
         conn.execute(text("CREATE INDEX IF NOT EXISTS score_history_site_idx ON score_history (site_id, created_at)"))
+        conn.execute(
+            text(
+                "CREATE TABLE IF NOT EXISTS scan_attempts ("
+                "id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY, "
+                "bucket_key TEXT NOT NULL, "
+                "created_at TIMESTAMPTZ NOT NULL DEFAULT now())"
+            )
+        )
+        conn.execute(
+            text(
+                "CREATE INDEX IF NOT EXISTS scan_attempts_key_idx "
+                "ON scan_attempts (bucket_key, created_at)"
+            )
+        )
 
 
 class OnboardingRequest(BaseModel):
@@ -203,6 +226,76 @@ def client_identifier(http_request: Request) -> str:
     return "unknown"
 
 
+def enforce_scan_rate_limit_db(keys: set[str]) -> None:
+    """Rate limit backed by the database.
+
+    The in-memory buckets below reset on every restart and are per-instance, so a
+    deploy — or a second replica — hands a caller a fresh quota. Counting rows
+    keeps the window honest across both.
+    """
+    with db_engine.begin() as conn:
+        conn.execute(
+            text(
+                "DELETE FROM scan_attempts "
+                "WHERE created_at < now() - make_interval(secs => :window)"
+            ),
+            {"window": SCAN_RATE_WINDOW_SECONDS},
+        )
+        row = conn.execute(
+            text(
+                "SELECT bucket_key, count(*) AS attempts, min(created_at) AS oldest "
+                "FROM scan_attempts "
+                "WHERE bucket_key = ANY(:keys) "
+                "AND created_at > now() - make_interval(secs => :window) "
+                "GROUP BY bucket_key HAVING count(*) >= :limit "
+                "ORDER BY attempts DESC LIMIT 1"
+            ),
+            {
+                "keys": list(keys),
+                "window": SCAN_RATE_WINDOW_SECONDS,
+                "limit": SCAN_RATE_LIMIT,
+            },
+        ).mappings().first()
+
+        if row is not None:
+            elapsed = (datetime.now(timezone.utc) - row["oldest"]).total_seconds()
+            retry_after = max(1, round(SCAN_RATE_WINDOW_SECONDS - elapsed))
+            raise HTTPException(
+                status_code=429,
+                detail="Free scan limit reached. Please try again later.",
+                headers={"Retry-After": str(retry_after)},
+            )
+
+        conn.execute(
+            text("INSERT INTO scan_attempts (bucket_key) SELECT unnest(CAST(:keys AS text[]))"),
+            {"keys": list(keys)},
+        )
+
+
+def daily_scan_count() -> int:
+    """Scans started over the last rolling day, used as the spend ceiling."""
+    if db_engine is None:
+        cutoff = time.monotonic() - 24 * 60 * 60
+        while DAILY_SCAN_TIMES and DAILY_SCAN_TIMES[0] < cutoff:
+            DAILY_SCAN_TIMES.popleft()
+        return len(DAILY_SCAN_TIMES)
+
+    with db_engine.connect() as conn:
+        return conn.execute(
+            text("SELECT count(*) FROM reports WHERE created_at > now() - interval '24 hours'")
+        ).scalar_one()
+
+
+async def enforce_daily_scan_budget() -> None:
+    if await asyncio.to_thread(daily_scan_count) < DAILY_SCAN_LIMIT:
+        return
+    raise HTTPException(
+        status_code=503,
+        detail="The free scan quota for today is used up. Please try again tomorrow.",
+        headers={"Retry-After": "3600"},
+    )
+
+
 async def enforce_scan_rate_limit(http_request: Request, payload: OnboardingRequest) -> None:
     hostname = urlsplit(str(payload.websiteUrl)).hostname or "unknown"
     keys = {
@@ -210,6 +303,11 @@ async def enforce_scan_rate_limit(http_request: Request, payload: OnboardingRequ
         f"email:{payload.email.strip().lower()}",
         f"site:{hostname.rstrip('.').lower()}",
     }
+
+    if db_engine is not None:
+        await asyncio.to_thread(enforce_scan_rate_limit_db, keys)
+        return
+
     now = time.monotonic()
     cutoff = now - SCAN_RATE_WINDOW_SECONDS
 
@@ -228,6 +326,8 @@ async def enforce_scan_rate_limit(http_request: Request, payload: OnboardingRequ
         for key in keys:
             SCAN_ATTEMPTS[key].append(now)
 
+
+DAILY_SCAN_TIMES: deque[float] = deque()
 
 # In-memory fallback when no database is configured (local development).
 MEMORY_DB: dict[str, DashboardData] = {}
@@ -769,7 +869,7 @@ async def generate_recommendations_llm(
 async def run_live_scan(site_id: str, request: OnboardingRequest) -> DashboardData:
     from openai import AsyncOpenAI
 
-    client = AsyncOpenAI(api_key=OPENAI_API_KEY)
+    client = AsyncOpenAI(api_key=OPENAI_API_KEY, base_url=OPENAI_BASE_URL or None)
     # The website audit runs alongside query generation — it never blocks the scan.
     site_task = asyncio.create_task(
         audit_site(
@@ -787,7 +887,14 @@ async def run_live_scan(site_id: str, request: OnboardingRequest) -> DashboardDa
     if ANTHROPIC_API_KEY:
         from anthropic import AsyncAnthropic
 
-        engines.append(("Claude", "anthropic", AsyncAnthropic(api_key=ANTHROPIC_API_KEY), 5))
+        engines.append(
+            (
+                "Claude",
+                "anthropic",
+                AsyncAnthropic(api_key=ANTHROPIC_API_KEY, base_url=ANTHROPIC_BASE_URL or None),
+                5,
+            )
+        )
     if PERPLEXITY_API_KEY:
         engines.append(
             (
@@ -1080,6 +1187,7 @@ async def dispatch_scan_emails(dashboard: DashboardData, requester_email: str) -
 @app.post("/api/onboarding")
 async def onboard_site(payload: OnboardingRequest, http_request: Request):
     await enforce_scan_rate_limit(http_request, payload)
+    await enforce_daily_scan_budget()
     try:
         await validate_public_http_url(str(payload.websiteUrl))
     except UnsafeWebsiteUrl as exc:
@@ -1095,6 +1203,7 @@ async def onboard_site(payload: OnboardingRequest, http_request: Request):
         ) from exc
 
     site_id = str(uuid.uuid4())
+    DAILY_SCAN_TIMES.append(time.monotonic())
     try:
         dashboard = None
         if LIVE_MODE:
@@ -1311,6 +1420,11 @@ async def stripe_webhook(
     return {"received": True}
 
 
+def provider_endpoint(configured: str, default: str) -> str:
+    """Host actually billed for a provider, so a redirected base URL is visible."""
+    return urlsplit(configured or default).hostname or default
+
+
 @app.get("/api/admin/stats")
 def admin_stats(
     days: int = 30,
@@ -1330,12 +1444,23 @@ def admin_stats(
     days = min(max(days, 1), 365)
     limit = min(max(limit, 1), 100)
 
+    # Which host each key is really billed against — a redirected base URL is
+    # otherwise invisible, since the SDKs pick it up from the environment.
+    engine_endpoints = {
+        "openai": provider_endpoint(OPENAI_BASE_URL, "https://api.openai.com/v1"),
+        "anthropic": provider_endpoint(ANTHROPIC_BASE_URL, "https://api.anthropic.com"),
+        "perplexity": "api.perplexity.ai" if PERPLEXITY_API_KEY else None,
+        "gemini": "generativelanguage.googleapis.com" if GEMINI_API_KEY else None,
+    }
+
     if db_engine is None:
         # Without DATABASE_URL, reports live in memory and vanish on every restart.
         reports = list(MEMORY_DB.values())
         return {
             "persistent": False,
             "warning": "DATABASE_URL is not configured: reports are kept in memory and lost on restart.",
+            "engine_endpoints": engine_endpoints,
+            "daily_scan_budget": {"used": daily_scan_count(), "limit": DAILY_SCAN_LIMIT},
             "totals": {
                 "scans": len(reports),
                 "unique_emails": len(set(MEMORY_EMAILS.values())),
@@ -1405,6 +1530,8 @@ def admin_stats(
     return {
         "persistent": True,
         "window_days": days,
+        "engine_endpoints": engine_endpoints,
+        "daily_scan_budget": {"used": daily_scan_count(), "limit": DAILY_SCAN_LIMIT},
         "totals": {
             "scans": totals["scans"],
             "unique_emails": totals["unique_emails"],
