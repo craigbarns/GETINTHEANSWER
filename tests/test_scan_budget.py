@@ -56,3 +56,15 @@ class ProviderEndpointTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class ProviderHeaderTests(unittest.TestCase):
+    def test_labels_scans_so_a_reseller_can_attribute_them(self):
+        headers = main.provider_headers("scan")
+        self.assertEqual(headers["X-Title"], "GetInTheAnswer scan")
+        self.assertTrue(headers["HTTP-Referer"])
+
+    def test_weekly_rescans_carry_their_own_label(self):
+        self.assertEqual(
+            main.provider_headers("weekly rescan")["X-Title"], "GetInTheAnswer weekly rescan"
+        )

@@ -866,10 +866,25 @@ async def generate_recommendations_llm(
         return None
 
 
-async def run_live_scan(site_id: str, request: OnboardingRequest) -> DashboardData:
+def provider_headers(source: str) -> dict:
+    """Label outgoing LLM calls so a reseller's dashboard can attribute them.
+
+    OpenRouter groups spend by the X-Title header; without it every request
+    from this API lands in a single "Unknown" bucket, indistinguishable from
+    any other tool sharing the key.
+    """
+    return {"HTTP-Referer": FRONTEND_URL, "X-Title": f"GetInTheAnswer {source}"}
+
+
+async def run_live_scan(
+    site_id: str, request: OnboardingRequest, source: str = "scan"
+) -> DashboardData:
     from openai import AsyncOpenAI
 
-    client = AsyncOpenAI(api_key=OPENAI_API_KEY, base_url=OPENAI_BASE_URL or None)
+    headers = provider_headers(source)
+    client = AsyncOpenAI(
+        api_key=OPENAI_API_KEY, base_url=OPENAI_BASE_URL or None, default_headers=headers
+    )
     # The website audit runs alongside query generation — it never blocks the scan.
     site_task = asyncio.create_task(
         audit_site(
@@ -891,7 +906,11 @@ async def run_live_scan(site_id: str, request: OnboardingRequest) -> DashboardDa
             (
                 "Claude",
                 "anthropic",
-                AsyncAnthropic(api_key=ANTHROPIC_API_KEY, base_url=ANTHROPIC_BASE_URL or None),
+                AsyncAnthropic(
+                    api_key=ANTHROPIC_API_KEY,
+                    base_url=ANTHROPIC_BASE_URL or None,
+                    default_headers=headers,
+                ),
                 5,
             )
         )
@@ -900,7 +919,11 @@ async def run_live_scan(site_id: str, request: OnboardingRequest) -> DashboardDa
             (
                 "Perplexity",
                 "perplexity",
-                AsyncOpenAI(api_key=PERPLEXITY_API_KEY, base_url="https://api.perplexity.ai"),
+                AsyncOpenAI(
+                    api_key=PERPLEXITY_API_KEY,
+                    base_url="https://api.perplexity.ai",
+                    default_headers=headers,
+                ),
                 2,
             )
         )
@@ -1123,7 +1146,7 @@ async def rescan_report(site_id: str) -> None:
         industry=previous.industry,
         services=previous.services,
     )
-    dashboard = await run_live_scan(site_id, request)
+    dashboard = await run_live_scan(site_id, request, source="weekly rescan")
     dashboard.unlocked = True
     await asyncio.to_thread(save_report, dashboard, None)
     await asyncio.to_thread(record_history, dashboard)
