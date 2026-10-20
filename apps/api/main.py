@@ -35,6 +35,11 @@ GA_API_SECRET = os.getenv("GA_API_SECRET", "").strip()
 DATABASE_URL = os.getenv("DATABASE_URL", "").strip()
 STRIPE_SECRET_KEY = os.getenv("STRIPE_SECRET_KEY", "").strip()
 STRIPE_PRICE_ID = os.getenv("STRIPE_PRICE_ID", "").strip()
+# Optional second price, in euros. Stripe bills the currency the Price is
+# created in, so selling in both means one Price per currency; without this
+# set, every checkout falls back to STRIPE_PRICE_ID.
+STRIPE_PRICE_ID_EUR = os.getenv("STRIPE_PRICE_ID_EUR", "").strip()
+STRIPE_DEFAULT_CURRENCY = (os.getenv("STRIPE_DEFAULT_CURRENCY", "eur").strip().lower() or "eur")
 STRIPE_CHECKOUT_LOCALE = os.getenv("STRIPE_CHECKOUT_LOCALE", "en").strip() or "en"
 FRONTEND_URL = os.getenv("FRONTEND_URL", "https://getintheanswer.com").rstrip("/")
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "").strip()
@@ -57,7 +62,7 @@ OR_UTILITY_MODEL = os.getenv("OR_UTILITY_MODEL", "openai/gpt-4o-mini")
 TEXT_MODEL = OR_UTILITY_MODEL if USE_OPENROUTER else OPENAI_MODEL
 
 LIVE_MODE = bool(OPENAI_API_KEY or OPENROUTER_API_KEY)
-BILLING_ENABLED = bool(STRIPE_SECRET_KEY and STRIPE_PRICE_ID)
+BILLING_ENABLED = bool(STRIPE_SECRET_KEY and (STRIPE_PRICE_ID or STRIPE_PRICE_ID_EUR))
 STRIPE_WEBHOOK_SECRET = os.getenv("STRIPE_WEBHOOK_SECRET", "").strip()
 
 
@@ -1262,6 +1267,24 @@ async def onboard_site(payload: OnboardingRequest, http_request: Request):
 class CheckoutRequest(BaseModel):
     site_id: str
     ga_client_id: Optional[str] = None
+    currency: Optional[str] = None
+
+
+def price_for_currency(currency: Optional[str]) -> tuple[str, str]:
+    """Stripe price id and the currency it actually bills, for a requested currency.
+
+    An unknown or unconfigured currency silently falls back to the default
+    price rather than failing the checkout: a visitor who picked euros should
+    still be able to pay, even if only the dollar price exists.
+    """
+    wanted = (currency or STRIPE_DEFAULT_CURRENCY).strip().lower()
+    if wanted == "eur" and STRIPE_PRICE_ID_EUR:
+        return STRIPE_PRICE_ID_EUR, "eur"
+    if wanted == "usd" and STRIPE_PRICE_ID:
+        return STRIPE_PRICE_ID, "usd"
+    if STRIPE_PRICE_ID_EUR and not STRIPE_PRICE_ID:
+        return STRIPE_PRICE_ID_EUR, "eur"
+    return STRIPE_PRICE_ID, STRIPE_DEFAULT_CURRENCY
 
 
 class PortalRequest(BaseModel):
@@ -1280,10 +1303,12 @@ def create_checkout(body: CheckoutRequest):
     if load_report(body.site_id) is None:
         raise HTTPException(status_code=404, detail="Report not found")
 
+    price_id, _billed_currency = price_for_currency(body.currency)
+
     try:
         session = stripe.checkout.Session.create(
             mode="subscription",
-            line_items=[{"price": STRIPE_PRICE_ID, "quantity": 1}],
+            line_items=[{"price": price_id, "quantity": 1}],
             success_url=(
                 f"{FRONTEND_URL}/api/checkout/confirm?site_id={body.site_id}"
                 "&session_id={CHECKOUT_SESSION_ID}"
@@ -1384,7 +1409,9 @@ def stripe_identifier(value) -> Optional[str]:
     return identifier if isinstance(identifier, str) else None
 
 
-async def report_ga_purchase(client_id: str, session_id: str, amount_total: Optional[int]) -> None:
+async def report_ga_purchase(
+    client_id: str, session_id: str, amount_total: Optional[int], currency: Optional[str] = None
+) -> None:
     # Server-side GA4 purchase event, fired from the webhook rather than the
     # client redirect: it survives ad blockers and only fires on a Stripe-
     # confirmed payment, which is what a Google Ads conversion needs.
@@ -1403,7 +1430,7 @@ async def report_ga_purchase(client_id: str, session_id: str, amount_total: Opti
                             "params": {
                                 "transaction_id": session_id,
                                 "value": (amount_total or 0) / 100,
-                                "currency": "USD",
+                                "currency": (currency or STRIPE_DEFAULT_CURRENCY).upper(),
                                 "items": [
                                     {
                                         "item_id": "pro_monthly",
@@ -1465,6 +1492,7 @@ async def stripe_webhook(
                         ga_client_id,
                         stripe_attribute(stripe_object, "id", ""),
                         stripe_attribute(stripe_object, "amount_total"),
+                        stripe_attribute(stripe_object, "currency"),
                     )
                 )
     elif event_type in {"customer.subscription.updated", "customer.subscription.deleted"}:

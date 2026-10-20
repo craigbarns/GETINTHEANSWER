@@ -27,14 +27,15 @@ import { LogoMark } from "@/components/logo";
 import { BillingStatusBanner } from "@/components/billing-status-banner";
 import { ManageSubscriptionButton } from "@/components/manage-subscription-button";
 import { ShareScoreButton } from "@/components/share-score-button";
+import { Price } from "@/components/price";
 import { UnlockButton } from "@/components/unlock-button";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { PRICES } from "@/lib/pricing";
 import { getDashboardData, type Priority } from "@/lib/seenbyai";
 
-const PLAN_PRICE = "$29/mo";
 
 function maskName(name: string) {
   const trimmed = name.trim();
@@ -244,7 +245,7 @@ export default async function DashboardPage({
               </div>
             </div>
             <div className="shrink-0 text-center">
-              <UnlockButton siteId={data.site_id} placement="report_top" className="h-12 rounded-full px-6 font-extrabold">Débloquer le rapport complet — {PLAN_PRICE}</UnlockButton>
+              <UnlockButton siteId={data.site_id} placement="report_top" className="h-12 rounded-full px-6 font-extrabold">Débloquer le rapport complet — <Price amounts={PRICES.pro} suffix=" / mois" /></UnlockButton>
               <p className="mt-2 text-[11px] text-muted-foreground">
                 Abonnement professionnel. En continuant, vous acceptez les{" "}
                 <Link className="font-bold underline" href="/terms">CGU</Link>.
@@ -325,7 +326,7 @@ export default async function DashboardPage({
                   <span className="flex items-center gap-2 font-bold text-muted-foreground">
                     <LockKeyhole className="size-4" aria-hidden="true" /> {data.site_audit.checks.length - 2} more website checks are hidden in the preview
                   </span>
-                  <UnlockButton siteId={data.site_id} placement="website_audit" size="sm" className="rounded-full px-5">Débloquer le rapport complet — {PLAN_PRICE}</UnlockButton>
+                  <UnlockButton siteId={data.site_id} placement="website_audit" size="sm" className="rounded-full px-5">Débloquer le rapport complet — <Price amounts={PRICES.pro} suffix=" / mois" /></UnlockButton>
                 </div>
               )}
             </div>
@@ -379,7 +380,7 @@ export default async function DashboardPage({
                   <h3 className="mt-6 text-xl font-extrabold tracking-[-0.025em] text-muted-foreground">Recommendation #{index + 1}</h3>
                   <p className="mt-3 flex-1 text-sm leading-6 text-muted-foreground">Unlock the full report to reveal this action, its priority and its expected impact on your AI visibility.</p>
                   <div className="mt-6 border-t border-foreground/8 pt-4">
-                    <UnlockButton siteId={data.site_id} placement={`recommendation_${index + 1}`} size="sm" variant="outline" className="w-full rounded-full">Unlock — {PLAN_PRICE}</UnlockButton>
+                    <UnlockButton siteId={data.site_id} placement={`recommendation_${index + 1}`} size="sm" variant="outline" className="w-full rounded-full">Débloquer — <Price amounts={PRICES.pro} suffix=" / mois" /></UnlockButton>
                   </div>
                 </article>
               ),
@@ -420,7 +421,7 @@ export default async function DashboardPage({
                       <TableCell colSpan={4} className="p-0">
                         <div className="flex flex-col items-center justify-center gap-3 bg-[#f8f8f3] px-6 py-8 sm:flex-row sm:gap-5">
                           <span className="flex items-center gap-2 font-bold text-muted-foreground"><LockKeyhole className="size-4" aria-hidden="true" /> {data.queries.length - 3} more answer checks — plus what each AI actually said — are hidden in the preview</span>
-                          <UnlockButton siteId={data.site_id} placement="scan_data" size="sm" className="rounded-full px-5">Débloquer le rapport complet — {PLAN_PRICE}</UnlockButton>
+                          <UnlockButton siteId={data.site_id} placement="scan_data" size="sm" className="rounded-full px-5">Débloquer le rapport complet — <Price amounts={PRICES.pro} suffix=" / mois" /></UnlockButton>
                         </div>
                       </TableCell>
                     </TableRow>

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Loader2, LockKeyhole } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { PRICES, readStoredCurrency } from "@/lib/pricing";
 
 interface UnlockButtonProps {
   siteId: string;
@@ -38,16 +39,20 @@ export function UnlockButton({
   const handleClick = async () => {
     setError(null);
     setLoading(true);
+    // The visitor pays in the currency the page was showing them, so the
+    // analytics event and the checkout have to agree on which one that is.
+    const currency = readStoredCurrency();
+    const value = PRICES.pro[currency];
     window.gtag?.("event", "begin_checkout", {
-      currency: "USD",
-      value: 29,
+      currency: currency.toUpperCase(),
+      value,
       site_id: siteId,
       checkout_placement: placement,
       items: [
         {
           item_id: "pro_monthly",
           item_name: "GetInTheAnswer Pro Monitoring",
-          price: 29,
+          price: value,
           quantity: 1,
         },
       ],
@@ -56,7 +61,7 @@ export function UnlockButton({
       const response = await fetch("/api/checkout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ site_id: siteId, ga_client_id: readGaClientId() }),
+        body: JSON.stringify({ site_id: siteId, ga_client_id: readGaClientId(), currency }),
       });
       const data = (await response.json()) as { url?: string; message?: string };
       if (response.ok && data.url) {

@@ -16,8 +16,11 @@ import {
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { CurrencyToggle } from "@/components/currency-toggle";
 import { HeroForm } from "@/components/hero-form";
+import { Price } from "@/components/price";
 import { LogoMark } from "@/components/logo";
+import { CURRENCIES, PRICES } from "@/lib/pricing";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 
 const faqs = [
@@ -29,7 +32,7 @@ const faqs = [
   {
     question: "L'analyse gratuite est-elle vraiment gratuite ?",
     answer:
-      "Oui. Nous générons 10 questions clients adaptées à votre marché et nous les testons sur les moteurs IA disponibles, ce qui représente jusqu'à 30 vérifications de réponses. Vous obtenez votre score de visibilité et votre concurrent n°1 sans payer et sans carte bancaire. Le plan Pro (29 $/mois) débloque tous les concurrents, toutes les réponses et toutes les actions, ainsi que les analyses hebdomadaires.",
+      "Oui. Nous générons 10 questions clients adaptées à votre marché et nous les testons sur les moteurs IA disponibles, ce qui représente jusqu'à 30 vérifications de réponses. Vous obtenez votre score de visibilité et votre concurrent n°1 sans payer et sans carte bancaire. Le plan Pro (29 €/mois, ou 29 $/mois) débloque tous les concurrents, toutes les réponses et toutes les actions, ainsi que les analyses hebdomadaires.",
   },
   {
     question: "Comment le score de visibilité est-il calculé ?",
@@ -109,22 +112,22 @@ const structuredData = {
         {
           "@type": "Offer",
           price: "0",
-          priceCurrency: "USD",
+          priceCurrency: "EUR",
           description: "Analyse découverte gratuite — 10 questions clients sur mesure testées sur jusqu'à 4 moteurs IA, sans carte bancaire.",
         },
-        {
+        ...CURRENCIES.map((currency) => ({
           "@type": "Offer",
-          name: "Pro Monitoring",
+          name: "Suivi Pro",
           url: `${SITE_URL}/#pricing`,
-          price: "29",
-          priceCurrency: "USD",
+          price: String(PRICES.pro[currency]),
+          priceCurrency: currency.toUpperCase(),
           priceSpecification: {
             "@type": "UnitPriceSpecification",
-            price: "29",
-            priceCurrency: "USD",
+            price: String(PRICES.pro[currency]),
+            priceCurrency: currency.toUpperCase(),
             unitText: "MONTH",
           },
-        },
+        })),
       ],
     },
   ],
@@ -404,11 +407,15 @@ export default function Home() {
             <h2 className="mt-4 text-balance text-4xl font-extrabold tracking-[-0.045em] sm:text-5xl">Votre première analyse est offerte.</h2>
             <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-muted-foreground">Découvrez gratuitement où vous en êtes, puis suivez et améliorez votre visibilité IA dans la durée.</p>
 
+            <div className="mt-7 flex justify-center">
+              <CurrencyToggle />
+            </div>
+
             <div className="mx-auto mt-10 grid max-w-6xl gap-5 text-left lg:grid-cols-3">
               <div className="flex flex-col overflow-hidden rounded-[1.75rem] border border-foreground/10 bg-white shadow-sm">
                 <div className="p-6 sm:p-7">
                   <p className="text-sm font-extrabold uppercase tracking-[0.12em] text-emerald-700">Analyse découverte</p>
-                  <div className="mt-2 flex items-end gap-2"><span className="text-4xl font-black tracking-[-0.06em]">$0</span><span className="pb-1 text-xs font-semibold text-muted-foreground">sans carte bancaire</span></div>
+                  <div className="mt-2 flex items-end gap-2"><span className="text-4xl font-black tracking-[-0.06em]"><Price amounts={{ eur: 0, usd: 0 }} /></span><span className="pb-1 text-xs font-semibold text-muted-foreground">sans carte bancaire</span></div>
                   <div className="mt-6 grid gap-3 text-sm font-semibold">
                     {["10 questions clients sur mesure", "Analyse sur les vrais moteurs IA", "Votre score de visibilité", "Votre concurrent n°1 révélé"].map((item) => (
                       <span className="flex items-center gap-2" key={item}><Check className="size-4 text-emerald-700" aria-hidden="true" /> {item}</span>
@@ -434,7 +441,7 @@ export default function Home() {
                     <p className="text-sm font-extrabold uppercase tracking-[0.12em] text-lime-300">Suivi Pro</p>
                     <span className="shrink-0 whitespace-nowrap rounded-full bg-lime-300 px-3 py-1 text-[11px] font-black uppercase tracking-[0.08em] text-[#173b35]">Le plus choisi</span>
                   </div>
-                  <div className="mt-2 flex items-end gap-2"><span className="text-4xl font-black tracking-[-0.06em]">$29</span><span className="pb-1 text-xs font-semibold text-white/60">/ mois · résiliable à tout moment</span></div>
+                  <div className="mt-2 flex items-end gap-2"><Price amounts={PRICES.pro} className="text-4xl font-black tracking-[-0.06em]" /><span className="pb-1 text-xs font-semibold text-white/60">/ mois · résiliable à tout moment</span></div>
                   <div className="mt-6 grid gap-3 text-sm font-semibold text-white/85">
                     {["Tous les concurrents nommés", "Les réponses réelles des moteurs, citées", "Plan d'action issu des réponses IA en direct", "Nouvelle analyse automatique chaque semaine", "Historique de votre score"].map((item) => (
                       <span className="flex items-center gap-2" key={item}><Check className="size-4 text-lime-300" aria-hidden="true" /> {item}</span>
@@ -457,7 +464,7 @@ export default function Home() {
               <div className="flex flex-col overflow-hidden rounded-[1.75rem] border border-foreground/10 bg-white shadow-sm">
                 <div className="p-6 sm:p-7">
                   <p className="text-sm font-extrabold uppercase tracking-[0.12em] text-emerald-700">Agence &amp; multi-établissements</p>
-                  <div className="mt-2 flex items-end gap-2"><span className="text-4xl font-black tracking-[-0.06em]">$149</span><span className="pb-1 text-xs font-semibold text-muted-foreground">/ mois</span></div>
+                  <div className="mt-2 flex items-end gap-2"><Price amounts={PRICES.agency} className="text-4xl font-black tracking-[-0.06em]" /><span className="pb-1 text-xs font-semibold text-muted-foreground">/ mois</span></div>
                   <div className="mt-6 grid gap-3 text-sm font-semibold">
                     {["Jusqu'à 25 établissements", "Rapports clients en marque blanche", "Analyses IA par lots", "Suivi des concurrents par ville", "Support agence prioritaire"].map((item) => (
                       <span className="flex items-center gap-2" key={item}><Check className="size-4 text-emerald-700" aria-hidden="true" /> {item}</span>
@@ -478,7 +485,7 @@ export default function Home() {
               </div>
             </div>
             <p className="mx-auto mt-6 max-w-3xl text-sm font-semibold text-muted-foreground">
-              Les prix sont indiqués en dollars américains. Les paiements Pro sont traités de façon sécurisée par Stripe, les taxes applicables sont calculées au moment du paiement, et vous pouvez résilier en ligne à tout moment.
+              Choisissez votre devise ci-dessus : vous êtes débité dans celle que vous avez sélectionnée. Les paiements Pro sont traités de façon sécurisée par Stripe, les taxes applicables sont calculées au moment du paiement, et vous pouvez résilier en ligne à tout moment.
             </p>
           </div>
         </section>

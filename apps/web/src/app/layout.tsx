@@ -3,6 +3,7 @@ import "./globals.css";
 
 import { Analytics } from "@/components/analytics";
 import { SiteFooter } from "@/components/site-footer";
+import { CURRENCY_STORAGE_KEY, DEFAULT_CURRENCY } from "@/lib/pricing";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -69,7 +70,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className="h-full antialiased">
+    <html lang="fr" className="h-full antialiased" data-currency={DEFAULT_CURRENCY}>
+      <head>
+        {/* Applies the stored currency before first paint, so a visitor who
+            chose dollars never sees euros flash first. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{var c=localStorage.getItem(${JSON.stringify(CURRENCY_STORAGE_KEY)});if(c==="eur"||c==="usd"){document.documentElement.dataset.currency=c}}catch(e){}`,
+          }}
+        />
+      </head>
       <body className="min-h-full flex flex-col overflow-x-hidden font-sans">
         <a className="skip-link" href="#main-content">
           Aller au contenu principal

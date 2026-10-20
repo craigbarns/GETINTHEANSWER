@@ -69,7 +69,11 @@ Variables principales de l'API :
 
 - `DATABASE_URL` : PostgreSQL persistant.
 - `OPENAI_API_KEY`, `ANTHROPIC_API_KEY`, `PERPLEXITY_API_KEY` : moteurs du scan live.
-- `STRIPE_SECRET_KEY`, `STRIPE_PRICE_ID` : abonnement Pro.
+- `STRIPE_SECRET_KEY`, `STRIPE_PRICE_ID` : abonnement Pro (prix en dollars).
+- `STRIPE_PRICE_ID_EUR` : prix Stripe en euros du même abonnement. Stripe facture la devise
+  dans laquelle le Price a été créé : vendre dans les deux devises demande donc un Price par
+  devise. Sans cette variable, tous les paiements retombent sur `STRIPE_PRICE_ID`.
+- `STRIPE_DEFAULT_CURRENCY` : devise utilisée quand le visiteur n'a rien choisi (`eur` par défaut).
 - `STRIPE_WEBHOOK_SECRET` : signature du webhook Stripe.
 - `STRIPE_CHECKOUT_LOCALE` : langue du Checkout Stripe (`en` par défaut pour le marché US).
 - `FRONTEND_URL` : URL canonique du frontend.

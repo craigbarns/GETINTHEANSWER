@@ -146,3 +146,14 @@
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Currency switching. Every price ships both variants; the attribute on <html>
+   decides which one is visible, so no price depends on JavaScript having run. */
+[data-price-currency] {
+  display: none;
+}
+
+:root[data-currency="eur"] [data-price-currency="eur"],
+:root[data-currency="usd"] [data-price-currency="usd"] {
+  display: inline;
+}
