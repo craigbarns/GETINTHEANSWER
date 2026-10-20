@@ -47,9 +47,9 @@ export function ManageSubscriptionButton({ siteId, className }: ManageSubscripti
       aria-live="polite"
     >
       {loading ? (
-        <><Loader2 className="mr-2 size-4 animate-spin" aria-hidden="true" /> Opening…</>
+        <><Loader2 className="mr-2 size-4 animate-spin" aria-hidden="true" /> Ouverture…</>
       ) : (
-        <><CreditCard className="mr-2 size-4" aria-hidden="true" /> {failed ? "Try billing again" : "Manage billing"}</>
+        <><CreditCard className="mr-2 size-4" aria-hidden="true" /> {failed ? "Réessayer" : "Gérer l'abonnement"}</>
       )}
     </Button>
   );

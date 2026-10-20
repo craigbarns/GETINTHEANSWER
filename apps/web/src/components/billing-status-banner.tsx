@@ -15,18 +15,18 @@ interface BillingStatusBannerProps {
 const content: Record<BillingStatus, { event: string; title: string; copy: string }> = {
   cancelled: {
     event: "checkout_cancelled",
-    title: "Checkout cancelled — nothing was charged.",
-    copy: "Your report preview is still here. You can unlock it whenever you're ready.",
+    title: "Paiement annulé — rien n'a été débité.",
+    copy: "L'aperçu de votre rapport est toujours là. Vous pourrez le débloquer quand vous le souhaitez.",
   },
   confirmation_error: {
     event: "checkout_confirmation_failed",
-    title: "We couldn't confirm the payment yet.",
-    copy: "If Stripe charged you, refresh this page in a moment. Otherwise, you can safely try again.",
+    title: "Nous n'avons pas encore pu confirmer le paiement.",
+    copy: "Si Stripe vous a débité, actualisez cette page dans un instant. Sinon, vous pouvez réessayer sans risque.",
   },
   success: {
     event: "checkout_confirmed",
-    title: "Your full report is unlocked.",
-    copy: "Every answer and recommendation is now visible, and weekly monitoring is active.",
+    title: "Votre rapport complet est débloqué.",
+    copy: "Toutes les réponses et recommandations sont visibles, et le suivi hebdomadaire est actif.",
   },
 };
 

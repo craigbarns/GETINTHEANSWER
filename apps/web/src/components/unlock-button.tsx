@@ -67,13 +67,13 @@ export function UnlockButton({
         checkout_placement: placement,
         status_code: response.status,
       });
-      setError(data.message ?? "Checkout couldn't open. Please try again in a moment.");
+      setError(data.message ?? "Le paiement n'a pas pu s'ouvrir. Merci de réessayer dans un instant.");
     } catch {
       window.gtag?.("event", "checkout_error", {
         checkout_placement: placement,
         status_code: 0,
       });
-      setError("Checkout couldn't open. Please check your connection and try again.");
+      setError("Le paiement n'a pas pu s'ouvrir. Vérifiez votre connexion et réessayez.");
     }
     setLoading(false);
   };
@@ -89,7 +89,7 @@ export function UnlockButton({
         aria-describedby={error ? errorId : undefined}
       >
         {loading ? (
-          <><Loader2 className="mr-2 size-4 animate-spin" aria-hidden="true" /> Redirecting…</>
+          <><Loader2 className="mr-2 size-4 animate-spin" aria-hidden="true" /> Redirection…</>
         ) : (
           <><LockKeyhole className="mr-2 size-4" aria-hidden="true" /> {children}</>
         )}

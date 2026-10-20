@@ -8,11 +8,11 @@ import { SITE_NAME, SITE_URL } from "@/lib/site";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "GetInTheAnswer — Is Your Business Recommended by ChatGPT, Claude & Perplexity?",
+    default: "GetInTheAnswer — ChatGPT recommande-t-il votre entreprise ?",
     template: "%s | GetInTheAnswer",
   },
   description:
-    "Check if AI engines like ChatGPT, Claude, Gemini and Perplexity recommend your local business. Get your free AI visibility score, competitor benchmark and prioritized action plan in minutes.",
+    "Vérifiez si les moteurs IA comme ChatGPT, Claude, Gemini et Perplexity recommandent votre entreprise locale. Score de visibilité IA gratuit, comparaison des concurrents et plan d'action priorisé en quelques minutes.",
   keywords: [
     "AI visibility",
     "AI SEO",
@@ -39,19 +39,19 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "GetInTheAnswer — Is your business visible in AI answers?",
+    title: "GetInTheAnswer — Votre entreprise est-elle visible dans les réponses des IA ?",
     description:
-      "Measure your visibility in ChatGPT, Claude, Gemini and Perplexity in minutes. Free AI visibility score, no credit card required.",
+      "Mesurez votre visibilité dans ChatGPT, Claude, Gemini et Perplexity en quelques minutes. Score de visibilité IA gratuit, sans carte bancaire.",
     url: SITE_URL,
     siteName: SITE_NAME,
-    locale: "en_US",
+    locale: "fr_FR",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "GetInTheAnswer — Is your business visible in AI answers?",
+    title: "GetInTheAnswer — Votre entreprise est-elle visible dans les réponses des IA ?",
     description:
-      "Measure your visibility in ChatGPT, Claude, Gemini and Perplexity in minutes. Free AI visibility score, no credit card required.",
+      "Mesurez votre visibilité dans ChatGPT, Claude, Gemini et Perplexity en quelques minutes. Score de visibilité IA gratuit, sans carte bancaire.",
   },
   ...(process.env.GOOGLE_SITE_VERIFICATION
     ? { verification: { google: process.env.GOOGLE_SITE_VERIFICATION } }
@@ -69,10 +69,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full antialiased">
+    <html lang="fr" className="h-full antialiased">
       <body className="min-h-full flex flex-col overflow-x-hidden font-sans">
         <a className="skip-link" href="#main-content">
-          Skip to main content
+          Aller au contenu principal
         </a>
         {children}
         <SiteFooter />

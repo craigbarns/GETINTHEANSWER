@@ -42,8 +42,8 @@ function maskName(name: string) {
 }
 
 export const metadata: Metadata = {
-  title: "AI Visibility Report",
-  description: "Your visibility score, mentions and GetInTheAnswer action plan.",
+  title: "Rapport de visibilité IA",
+  description: "Votre score de visibilité, vos mentions et votre plan d'action GetInTheAnswer.",
   robots: {
     index: false,
     follow: false,
@@ -70,9 +70,9 @@ const priorityStyles: Record<Priority, string> = {
 };
 
 function getScoreSummary(score: number) {
-  if (score >= 75) return { label: "Excellent visibility", copy: "Your brand is already well understood and frequently recommended." };
-  if (score >= 50) return { label: "Room to grow", copy: "Your brand shows up, but several strategic queries are still up for grabs." };
-  return { label: "Strong potential", copy: "AI engines still lack reliable signals to recommend your brand." };
+  if (score >= 75) return { label: "Excellente visibilité", copy: "Votre marque est déjà bien identifiée et fréquemment recommandée." };
+  if (score >= 50) return { label: "Marge de progression", copy: "Votre marque apparaît, mais plusieurs questions stratégiques restent à conquérir." };
+  return { label: "Fort potentiel", copy: "Les moteurs IA manquent encore de signaux fiables pour recommander votre marque." };
 }
 
 export default async function DashboardPage({
@@ -112,13 +112,13 @@ export default async function DashboardPage({
           <span className="mx-auto flex size-14 items-center justify-center rounded-2xl bg-amber-100 text-amber-800">
             <CircleAlert className="size-7" aria-hidden="true" />
           </span>
-          <h1 className="mt-6 text-3xl font-extrabold tracking-[-0.04em]">Report unavailable</h1>
+          <h1 className="mt-6 text-3xl font-extrabold tracking-[-0.04em]">Rapport indisponible</h1>
           <p className="mt-3 leading-7 text-muted-foreground">
             We can&apos;t retrieve this analysis. The link may have expired, or the service is temporarily unavailable.
           </p>
           <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:justify-center">
             <Button asChild className="rounded-full"><a href={`/dashboard?site_id=${encodeURIComponent(siteId)}`}><RotateCcw className="mr-2 size-4" aria-hidden="true" /> Try again</a></Button>
-            <Button asChild variant="outline" className="rounded-full"><Link href="/onboarding">New analysis</Link></Button>
+            <Button asChild variant="outline" className="rounded-full"><Link href="/onboarding">Nouvelle analyse</Link></Button>
           </div>
         </div>
       </main>
@@ -148,19 +148,19 @@ export default async function DashboardPage({
     <div className="min-h-screen bg-[#f8f8f3] pb-20">
       <header className="sticky top-0 z-50 border-b border-foreground/8 bg-[#f8f8f3]/90 backdrop-blur-xl">
         <div className="mx-auto flex h-[72px] max-w-7xl items-center px-5 sm:px-8 lg:px-10">
-          <Link className="flex items-center gap-2.5" href="/" aria-label="GetInTheAnswer, home">
+          <Link className="flex items-center gap-2.5" href="/" aria-label="GetInTheAnswer, accueil">
             <LogoMark className="size-9" />
             <span className="text-xl font-extrabold tracking-[-0.04em]">GetInTheAnswer</span>
           </Link>
           {data?.mode === "live" ? (
             <Badge variant="outline" className="ml-auto border-emerald-200 bg-emerald-50 px-3 py-1.5 text-emerald-800">
               <Sparkles className="mr-1.5 size-3" aria-hidden="true" />
-              <span className="hidden sm:inline">Live AI report</span><span className="sm:hidden">Live</span>
+              <span className="hidden sm:inline">Rapport IA en direct</span><span className="sm:hidden">Direct</span>
             </Badge>
           ) : (
             <Badge variant="outline" className="ml-auto border-amber-200 bg-amber-50 px-3 py-1.5 text-amber-800">
               <Sparkles className="mr-1.5 size-3" aria-hidden="true" />
-              <span className="hidden sm:inline">Simulation report</span><span className="sm:hidden">Simulation</span>
+              <span className="hidden sm:inline">Rapport de simulation</span><span className="sm:hidden">Simulation</span>
             </Badge>
           )}
           <Button asChild variant="ghost" size="sm" className="ml-2 hidden rounded-full sm:inline-flex">
@@ -188,14 +188,14 @@ export default async function DashboardPage({
           <div className="relative grid items-center gap-8 lg:grid-cols-[1fr_auto]">
             <div>
               <div className="flex flex-wrap items-center gap-2">
-                <Badge className="border-0 bg-lime-300 text-[#173b35] hover:bg-lime-300"><Check className="mr-1 size-3" aria-hidden="true" /> Analysis complete</Badge>
+                <Badge className="border-0 bg-lime-300 text-[#173b35] hover:bg-lime-300"><Check className="mr-1 size-3" aria-hidden="true" /> Analyse terminée</Badge>
                 <span className="flex items-center gap-1.5 text-sm font-semibold text-white/55"><MapPin className="size-3.5" aria-hidden="true" /> {data.city} · {data.industry}</span>
               </div>
-              <h1 className="mt-5 text-balance text-3xl font-extrabold tracking-[-0.045em] sm:text-5xl">Here&apos;s how AI engines see {data.company_name}.</h1>
+              <h1 className="mt-5 text-balance text-3xl font-extrabold tracking-[-0.045em] sm:text-5xl">Voici comment les moteurs IA voient {data.company_name}.</h1>
               <p className="mt-4 max-w-2xl text-base leading-7 text-white/65 sm:text-lg">
                 {data.mode === "live"
-                  ? `${uniqueQuestionCount} customer questions tested across ${engineNames.length} AI engines, for ${data.total_queries} answer checks.`
-                  : `${uniqueQuestionCount} customer questions simulated across ${engineNames.length} AI engines, for ${data.total_queries} answer checks.`}
+                  ? `${uniqueQuestionCount} questions clients testées sur ${engineNames.length} moteurs IA, soit ${data.total_queries} vérifications de réponses.`
+                  : `${uniqueQuestionCount} questions clients simulées sur ${engineNames.length} moteurs IA, soit ${data.total_queries} vérifications de réponses.`}
               </p>
               {data.mode === "live" && data.scanned_at && (
                 <p className="mt-2 text-xs font-semibold text-white/55">
@@ -213,7 +213,7 @@ export default async function DashboardPage({
               <div className="flex size-28 shrink-0 items-center justify-center rounded-full p-2" style={{ background: `conic-gradient(#bef264 ${safeScore * 3.6}deg, rgba(255,255,255,.12) 0deg)` }} aria-label={`Visibility score ${safeScore} out of 100`}>
                 <div className="flex size-full flex-col items-center justify-center rounded-full bg-[#173b35]">
                   <span className="text-4xl font-black tracking-[-0.06em]">{safeScore}</span>
-                  <span className="text-[11px] font-bold text-white/75">OUT OF 100</span>
+                  <span className="text-[11px] font-bold text-white/75">SUR 100</span>
                 </div>
               </div>
               <div className="max-w-56 sm:max-w-40">
@@ -239,31 +239,31 @@ export default async function DashboardPage({
                 <LockKeyhole className="size-5" aria-hidden="true" />
               </span>
               <div>
-                <h2 className="text-xl font-extrabold tracking-[-0.03em]">This is a preview of your report</h2>
-                <p className="mt-1 text-sm leading-6 text-muted-foreground">Unlock every competitor name, all {data.total_queries} answer checks and your full action plan. Cancel anytime.</p>
+                <h2 className="text-xl font-extrabold tracking-[-0.03em]">Ceci est un aperçu de votre rapport</h2>
+                <p className="mt-1 text-sm leading-6 text-muted-foreground">Débloquez le nom de tous vos concurrents, les {data.total_queries} vérifications et votre plan d’action complet. Résiliable à tout moment.</p>
               </div>
             </div>
             <div className="shrink-0 text-center">
-              <UnlockButton siteId={data.site_id} placement="report_top" className="h-12 rounded-full px-6 font-extrabold">Unlock full report — {PLAN_PRICE}</UnlockButton>
+              <UnlockButton siteId={data.site_id} placement="report_top" className="h-12 rounded-full px-6 font-extrabold">Débloquer le rapport complet — {PLAN_PRICE}</UnlockButton>
               <p className="mt-2 text-[11px] text-muted-foreground">
-                Professional subscription. By continuing, you accept the{" "}
-                <Link className="font-bold underline" href="/terms">terms</Link>.
+                Abonnement professionnel. En continuant, vous acceptez les{" "}
+                <Link className="font-bold underline" href="/terms">CGU</Link>.
               </p>
             </div>
           </section>
         )}
 
-        <section className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4" aria-label="Key metrics">
-          <Card className="border-foreground/8 bg-white py-0 shadow-sm"><CardContent className="p-5 sm:p-6"><div className="flex items-center justify-between"><span className="text-sm font-bold text-muted-foreground">Mentions</span><Target className="size-5 text-emerald-700" aria-hidden="true" /></div><p className="mt-4 text-4xl font-black tracking-[-0.05em]">{data.brand_mentions}<span className="text-base font-bold text-muted-foreground">/{data.total_queries}</span></p><p className="mt-2 text-sm text-muted-foreground">Your brand is cited in {mentionRate}% of tests.</p></CardContent></Card>
-          <Card className="border-foreground/8 bg-white py-0 shadow-sm"><CardContent className="p-5 sm:p-6"><div className="flex items-center justify-between"><span className="text-sm font-bold text-muted-foreground">Leading competitor</span><Trophy className="size-5 text-amber-500" aria-hidden="true" /></div><p className="mt-4 truncate text-2xl font-black tracking-[-0.04em]">{data.top_competitor}</p><p className="mt-2 text-sm text-muted-foreground">{data.top_competitor_mentions} mentions detected.</p></CardContent></Card>
-          <Card className="border-foreground/8 bg-white py-0 shadow-sm"><CardContent className="p-5 sm:p-6"><div className="flex items-center justify-between"><span className="text-sm font-bold text-muted-foreground">Competitive gap</span><TrendingUp className="size-5 text-primary" aria-hidden="true" /></div><p className="mt-4 text-4xl font-black tracking-[-0.05em]">{competitorGap > 0 ? `-${competitorGap}` : `+${Math.abs(competitorGap)}`}</p><p className="mt-2 text-sm text-muted-foreground">{competitorGap > 0 ? "mentions behind" : "mentions ahead of"} the leader.</p></CardContent></Card>
-          <Card className="border-foreground/8 bg-lime-200 py-0 shadow-sm"><CardContent className="p-5 sm:p-6"><div className="flex items-center justify-between"><span className="text-sm font-bold text-primary/70">Priority actions</span><FileText className="size-5 text-primary" aria-hidden="true" /></div><p className="mt-4 text-4xl font-black tracking-[-0.05em]">{data.recommendations.length}</p><p className="mt-2 text-sm text-primary/70">Your roadmap is ready.</p></CardContent></Card>
+        <section className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4" aria-label="Indicateurs clés">
+          <Card className="border-foreground/8 bg-white py-0 shadow-sm"><CardContent className="p-5 sm:p-6"><div className="flex items-center justify-between"><span className="text-sm font-bold text-muted-foreground">Mentions</span><Target className="size-5 text-emerald-700" aria-hidden="true" /></div><p className="mt-4 text-4xl font-black tracking-[-0.05em]">{data.brand_mentions}<span className="text-base font-bold text-muted-foreground">/{data.total_queries}</span></p><p className="mt-2 text-sm text-muted-foreground">Votre marque est citée dans {mentionRate} % des tests.</p></CardContent></Card>
+          <Card className="border-foreground/8 bg-white py-0 shadow-sm"><CardContent className="p-5 sm:p-6"><div className="flex items-center justify-between"><span className="text-sm font-bold text-muted-foreground">Concurrent en tête</span><Trophy className="size-5 text-amber-500" aria-hidden="true" /></div><p className="mt-4 truncate text-2xl font-black tracking-[-0.04em]">{data.top_competitor}</p><p className="mt-2 text-sm text-muted-foreground">{data.top_competitor_mentions} mentions détectées.</p></CardContent></Card>
+          <Card className="border-foreground/8 bg-white py-0 shadow-sm"><CardContent className="p-5 sm:p-6"><div className="flex items-center justify-between"><span className="text-sm font-bold text-muted-foreground">Écart concurrentiel</span><TrendingUp className="size-5 text-primary" aria-hidden="true" /></div><p className="mt-4 text-4xl font-black tracking-[-0.05em]">{competitorGap > 0 ? `-${competitorGap}` : `+${Math.abs(competitorGap)}`}</p><p className="mt-2 text-sm text-muted-foreground">{competitorGap > 0 ? "mentions de retard sur" : "mentions d'avance sur"} le leader.</p></CardContent></Card>
+          <Card className="border-foreground/8 bg-lime-200 py-0 shadow-sm"><CardContent className="p-5 sm:p-6"><div className="flex items-center justify-between"><span className="text-sm font-bold text-primary/70">Actions prioritaires</span><FileText className="size-5 text-primary" aria-hidden="true" /></div><p className="mt-4 text-4xl font-black tracking-[-0.05em]">{data.recommendations.length}</p><p className="mt-2 text-sm text-primary/70">Votre feuille de route est prête.</p></CardContent></Card>
         </section>
 
         <section className="grid gap-6 lg:grid-cols-[0.78fr_1.22fr]">
           <div className="rounded-[1.75rem] border border-foreground/8 bg-white p-6 shadow-sm">
             <div className="flex items-start justify-between gap-4">
-              <div><p className="text-sm font-extrabold uppercase tracking-[0.12em] text-emerald-700">Coverage by engine</p><h2 className="mt-2 text-2xl font-extrabold tracking-[-0.035em]">Where are you visible?</h2></div>
+              <div><p className="text-sm font-extrabold uppercase tracking-[0.12em] text-emerald-700">Couverture par moteur</p><h2 className="mt-2 text-2xl font-extrabold tracking-[-0.035em]">Où êtes-vous visible ?</h2></div>
               <Gauge className="size-5 text-muted-foreground" aria-hidden="true" />
             </div>
             <div className="mt-7 space-y-6">
@@ -278,7 +278,7 @@ export default async function DashboardPage({
 
           <div className="rounded-[1.75rem] border border-foreground/8 bg-white p-6 shadow-sm sm:p-7">
             <div className="flex items-start justify-between gap-4">
-              <div><p className="text-sm font-extrabold uppercase tracking-[0.12em] text-emerald-700">Quick read</p><h2 className="mt-2 text-2xl font-extrabold tracking-[-0.035em]">What this scan reveals</h2></div>
+              <div><p className="text-sm font-extrabold uppercase tracking-[0.12em] text-emerald-700">Lecture rapide</p><h2 className="mt-2 text-2xl font-extrabold tracking-[-0.035em]">Ce que révèle cette analyse</h2></div>
               <MessageSquareText className="size-5 text-muted-foreground" aria-hidden="true" />
             </div>
             <div className="mt-6 grid gap-3 sm:grid-cols-2">
@@ -296,8 +296,8 @@ export default async function DashboardPage({
           <section className="rounded-[1.75rem] border border-foreground/8 bg-white p-6 shadow-sm sm:p-7">
             <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
               <div>
-                <p className="text-sm font-extrabold uppercase tracking-[0.12em] text-emerald-700">Website audit</p>
-                <h2 className="mt-2 text-2xl font-extrabold tracking-[-0.035em] sm:text-3xl">Your site vs what AI engines need</h2>
+                <p className="text-sm font-extrabold uppercase tracking-[0.12em] text-emerald-700">Audit du site</p>
+                <h2 className="mt-2 text-2xl font-extrabold tracking-[-0.035em] sm:text-3xl">Votre site face aux attentes des moteurs IA</h2>
                 <p className="mt-2 text-sm leading-6 text-muted-foreground">We fetched your homepage and checked the signals engines use to verify and recommend a business.</p>
               </div>
               <Badge variant="outline" className="w-fit bg-white px-3 py-1.5">
@@ -325,7 +325,7 @@ export default async function DashboardPage({
                   <span className="flex items-center gap-2 font-bold text-muted-foreground">
                     <LockKeyhole className="size-4" aria-hidden="true" /> {data.site_audit.checks.length - 2} more website checks are hidden in the preview
                   </span>
-                  <UnlockButton siteId={data.site_id} placement="website_audit" size="sm" className="rounded-full px-5">Unlock full report — {PLAN_PRICE}</UnlockButton>
+                  <UnlockButton siteId={data.site_id} placement="website_audit" size="sm" className="rounded-full px-5">Débloquer le rapport complet — {PLAN_PRICE}</UnlockButton>
                 </div>
               )}
             </div>
@@ -335,10 +335,10 @@ export default async function DashboardPage({
         {data.unlocked && data.history.length > 1 && (
           <section className="rounded-[1.75rem] border border-foreground/8 bg-white p-6 shadow-sm sm:p-7">
             <div className="flex items-start justify-between gap-4">
-              <div><p className="text-sm font-extrabold uppercase tracking-[0.12em] text-emerald-700">Weekly tracking</p><h2 className="mt-2 text-2xl font-extrabold tracking-[-0.035em]">Score history</h2></div>
+              <div><p className="text-sm font-extrabold uppercase tracking-[0.12em] text-emerald-700">Suivi hebdomadaire</p><h2 className="mt-2 text-2xl font-extrabold tracking-[-0.035em]">Historique du score</h2></div>
               <TrendingUp className="size-5 text-muted-foreground" aria-hidden="true" />
             </div>
-            <div className="mt-7 flex items-end gap-3 overflow-x-auto pb-2" aria-label="Visibility score over time">
+            <div className="mt-7 flex items-end gap-3 overflow-x-auto pb-2" aria-label="Évolution du score de visibilité">
               {data.history.map((point, index) => (
                 <div className="flex min-w-14 flex-col items-center gap-2" key={`${point.date}-${index}`}>
                   <span className="text-sm font-extrabold tabular-nums">{point.score}</span>
@@ -354,7 +354,7 @@ export default async function DashboardPage({
 
         <section className="pt-4">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-            <div><p className="text-sm font-extrabold uppercase tracking-[0.12em] text-emerald-700">Action plan</p><h2 className="mt-2 text-3xl font-extrabold tracking-[-0.04em]">Your next moves</h2><p className="mt-2 text-muted-foreground">Ranked by urgency and estimated impact.</p></div>
+            <div><p className="text-sm font-extrabold uppercase tracking-[0.12em] text-emerald-700">Plan d’action</p><h2 className="mt-2 text-3xl font-extrabold tracking-[-0.04em]">Vos prochaines actions</h2><p className="mt-2 text-muted-foreground">Classées par urgence et impact estimé.</p></div>
             <Badge variant="outline" className="w-fit bg-white px-3 py-1.5">{data.recommendations.length} recommendations</Badge>
           </div>
 
@@ -368,7 +368,7 @@ export default async function DashboardPage({
                   </div>
                   <h3 className="mt-6 text-xl font-extrabold tracking-[-0.025em]">{recommendation.title}</h3>
                   <p className="mt-3 flex-1 text-sm leading-6 text-muted-foreground">{recommendation.description}</p>
-                  <div className="mt-6 flex items-center justify-between border-t border-foreground/8 pt-4 text-xs font-bold uppercase tracking-[0.08em] text-muted-foreground"><span>Estimated impact</span><span className="text-emerald-700">{recommendation.estimated_impact}</span></div>
+                  <div className="mt-6 flex items-center justify-between border-t border-foreground/8 pt-4 text-xs font-bold uppercase tracking-[0.08em] text-muted-foreground"><span>Impact estimé</span><span className="text-emerald-700">{recommendation.estimated_impact}</span></div>
                 </article>
               ) : (
                 <article className="flex flex-col rounded-[1.5rem] border border-dashed border-foreground/15 bg-white/60 p-6" key={`locked-${index}`}>
@@ -388,11 +388,11 @@ export default async function DashboardPage({
         </section>
 
         <section className="pt-4">
-          <div><p className="text-sm font-extrabold uppercase tracking-[0.12em] text-emerald-700">Scan data</p><h2 className="mt-2 text-3xl font-extrabold tracking-[-0.04em]">{data.mode === "live" ? "Scan details" : "Simulation details"}</h2><p className="mt-2 text-muted-foreground">Every question-and-engine check used to calculate your score.</p></div>
+          <div><p className="text-sm font-extrabold uppercase tracking-[0.12em] text-emerald-700">Données de l’analyse</p><h2 className="mt-2 text-3xl font-extrabold tracking-[-0.04em]">{data.mode === "live" ? "Détail de l'analyse" : "Détail de la simulation"}</h2><p className="mt-2 text-muted-foreground">Chaque couple question-moteur utilisé pour calculer votre score.</p></div>
           <div className="mt-6 overflow-hidden rounded-[1.5rem] border border-foreground/8 bg-white shadow-sm">
             <div className="overflow-x-auto">
               <Table className="min-w-[900px]">
-                <TableHeader className="bg-[#f3f4ed]"><TableRow className="hover:bg-transparent"><TableHead className="w-[420px] px-6 py-4 font-extrabold text-foreground">Question tested</TableHead><TableHead className="font-extrabold text-foreground">Engine</TableHead><TableHead className="text-center font-extrabold text-foreground">Mention</TableHead><TableHead className="pr-6 font-extrabold text-foreground">Recommended instead</TableHead></TableRow></TableHeader>
+                <TableHeader className="bg-[#f3f4ed]"><TableRow className="hover:bg-transparent"><TableHead className="w-[420px] px-6 py-4 font-extrabold text-foreground">Question testée</TableHead><TableHead className="font-extrabold text-foreground">Moteur</TableHead><TableHead className="text-center font-extrabold text-foreground">Mention</TableHead><TableHead className="pr-6 font-extrabold text-foreground">Recommandé à votre place</TableHead></TableRow></TableHeader>
                 <TableBody>
                   {(data.unlocked ? data.queries : data.queries.slice(0, 3)).map((query, index) => (
                     <TableRow className="hover:bg-[#f8f8f3]" key={`${query.engine}-${query.query}-${index}`}>
@@ -411,8 +411,8 @@ export default async function DashboardPage({
                         )}
                       </TableCell>
                       <TableCell><Badge variant="outline" className="bg-white"><span className={`mr-2 size-2 rounded-full ${engineColors[query.engine] ?? "bg-slate-400"}`} />{query.engine}</Badge></TableCell>
-                      <TableCell className="text-center">{query.brand_mentioned ? <span className="inline-flex size-8 items-center justify-center rounded-full bg-emerald-50 text-emerald-600" aria-label="Brand mentioned"><CheckCircle2 className="size-5" aria-hidden="true" /></span> : <span className="inline-flex size-8 items-center justify-center rounded-full bg-red-50 text-red-500" aria-label="Brand not mentioned"><XCircle className="size-5" aria-hidden="true" /></span>}</TableCell>
-                      <TableCell className="pr-6">{query.competitors_detected.length ? <div className="flex flex-wrap gap-1.5">{query.competitors_detected.map((competitor) => data.unlocked || competitor === data.top_competitor ? <span className="rounded-md border border-amber-100 bg-amber-50 px-2 py-1 text-xs font-bold text-amber-800" key={competitor}>{competitor}</span> : <span className="inline-flex items-center gap-1 rounded-md border border-foreground/10 bg-foreground/5 px-2 py-1 text-xs font-bold text-muted-foreground" key={competitor}><LockKeyhole className="size-3" aria-hidden="true" />{maskName(competitor)}</span>)}</div> : <span className="text-sm italic text-muted-foreground">No business named</span>}</TableCell>
+                      <TableCell className="text-center">{query.brand_mentioned ? <span className="inline-flex size-8 items-center justify-center rounded-full bg-emerald-50 text-emerald-600" aria-label="Marque citée"><CheckCircle2 className="size-5" aria-hidden="true" /></span> : <span className="inline-flex size-8 items-center justify-center rounded-full bg-red-50 text-red-500" aria-label="Marque non citée"><XCircle className="size-5" aria-hidden="true" /></span>}</TableCell>
+                      <TableCell className="pr-6">{query.competitors_detected.length ? <div className="flex flex-wrap gap-1.5">{query.competitors_detected.map((competitor) => data.unlocked || competitor === data.top_competitor ? <span className="rounded-md border border-amber-100 bg-amber-50 px-2 py-1 text-xs font-bold text-amber-800" key={competitor}>{competitor}</span> : <span className="inline-flex items-center gap-1 rounded-md border border-foreground/10 bg-foreground/5 px-2 py-1 text-xs font-bold text-muted-foreground" key={competitor}><LockKeyhole className="size-3" aria-hidden="true" />{maskName(competitor)}</span>)}</div> : <span className="text-sm italic text-muted-foreground">Aucune entreprise citée</span>}</TableCell>
                     </TableRow>
                   ))}
                   {!data.unlocked && data.queries.length > 3 && (
@@ -420,7 +420,7 @@ export default async function DashboardPage({
                       <TableCell colSpan={4} className="p-0">
                         <div className="flex flex-col items-center justify-center gap-3 bg-[#f8f8f3] px-6 py-8 sm:flex-row sm:gap-5">
                           <span className="flex items-center gap-2 font-bold text-muted-foreground"><LockKeyhole className="size-4" aria-hidden="true" /> {data.queries.length - 3} more answer checks — plus what each AI actually said — are hidden in the preview</span>
-                          <UnlockButton siteId={data.site_id} placement="scan_data" size="sm" className="rounded-full px-5">Unlock full report — {PLAN_PRICE}</UnlockButton>
+                          <UnlockButton siteId={data.site_id} placement="scan_data" size="sm" className="rounded-full px-5">Débloquer le rapport complet — {PLAN_PRICE}</UnlockButton>
                         </div>
                       </TableCell>
                     </TableRow>
@@ -434,7 +434,7 @@ export default async function DashboardPage({
         {data.has_subscription && (
           <section className="flex flex-col items-start justify-between gap-4 rounded-[1.5rem] border border-foreground/8 bg-white p-6 sm:flex-row sm:items-center">
             <div>
-              <h2 className="font-extrabold tracking-[-0.02em]">Your Pro subscription</h2>
+              <h2 className="font-extrabold tracking-[-0.02em]">Votre abonnement Pro</h2>
               <p className="mt-1 text-sm text-muted-foreground">Update your payment method, view invoices or cancel from Stripe&apos;s secure portal.</p>
             </div>
             <ManageSubscriptionButton siteId={data.site_id} className="shrink-0 rounded-full border border-foreground/10 bg-[#f8f8f3] px-5" />
@@ -442,8 +442,8 @@ export default async function DashboardPage({
         )}
 
         <section className="flex flex-col items-start justify-between gap-5 rounded-[1.75rem] bg-lime-200 p-6 sm:flex-row sm:items-center sm:p-8">
-          <div><h2 className="text-2xl font-extrabold tracking-[-0.035em]">Want to measure another business?</h2><p className="mt-1 text-sm text-primary/70">Create a new report in minutes.</p></div>
-          <Button asChild className="rounded-full"><Link href="/onboarding">Run a new scan <ArrowRight className="ml-2 size-4" aria-hidden="true" /></Link></Button>
+          <div><h2 className="text-2xl font-extrabold tracking-[-0.035em]">Envie de mesurer une autre entreprise ?</h2><p className="mt-1 text-sm text-primary/70">Créez un nouveau rapport en quelques minutes.</p></div>
+          <Button asChild className="rounded-full"><Link href="/onboarding">Lancer une nouvelle analyse <ArrowRight className="ml-2 size-4" aria-hidden="true" /></Link></Button>
         </section>
       </main>
     </div>

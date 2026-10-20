@@ -26,12 +26,12 @@ export function HeroForm() {
           type="text"
           value={company}
           onChange={(e) => setCompany(e.target.value)}
-          placeholder="Enter your business name..."
+          placeholder="Entrez le nom de votre entreprise…"
           required
           className="h-14 w-full min-w-[200px] flex-1 rounded-full border-2 border-foreground/15 bg-white/80 px-6 text-base shadow-sm focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all"
         />
         <Button type="submit" size="lg" className="h-14 shrink-0 rounded-full px-7 text-base shadow-lg shadow-primary/15">
-          Start free analysis
+          Lancer mon analyse gratuite
           <ArrowRight className="ml-2 size-5" aria-hidden="true" />
         </Button>
       </form>
@@ -41,7 +41,7 @@ export function HeroForm() {
           data-analytics-event="select_content"
           data-analytics-label="hero_sample_report"
         >
-          Explore a report
+          Voir un exemple de rapport
         </Link>
       </Button>
     </div>

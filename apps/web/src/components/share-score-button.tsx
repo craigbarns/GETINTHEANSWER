@@ -78,7 +78,7 @@ export function ShareScoreButton({ companyName, score, city, siteId }: ShareScor
               onClick={() => trackShare("linkedin")}
               className="flex items-center justify-between rounded-xl px-3 py-2 text-xs font-bold transition-colors hover:bg-[#f8f8f3]"
             >
-              <span>Share on LinkedIn</span>
+              <span>Partager sur LinkedIn</span>
               <span className="text-[10px] text-muted-foreground">↗</span>
             </a>
             <a
@@ -95,7 +95,7 @@ export function ShareScoreButton({ companyName, score, city, siteId }: ShareScor
               onClick={handleCopy}
               className="flex w-full items-center justify-between rounded-xl px-3 py-2 text-left text-xs font-bold transition-colors hover:bg-[#f8f8f3]"
             >
-              <span>{copied ? "Link Copied!" : "Copy Report Link"}</span>
+              <span>{copied ? "Lien copié !" : "Copier le lien du rapport"}</span>
               {copied ? <Check className="size-3 text-emerald-600" /> : <Copy className="size-3 text-muted-foreground" />}
             </button>
           </div>

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Free AI Visibility Analysis",
+  title: "Analyse de visibilité IA gratuite",
   description:
-    "Describe your business and get a free AI visibility report: real customer questions tested across ChatGPT, Claude, Gemini and Perplexity, with recommendations ranked by impact.",
+    "Décrivez votre entreprise et obtenez un rapport de visibilité IA gratuit : de vraies questions clients testées sur ChatGPT, Claude, Gemini et Perplexity, avec des recommandations classées par impact.",
   alternates: {
     canonical: "/onboarding",
   },
