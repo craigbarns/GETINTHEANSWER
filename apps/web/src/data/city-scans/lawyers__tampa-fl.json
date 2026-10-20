@@ -1,0 +1,142 @@
+{
+  "industry": "lawyers",
+  "city": "tampa-fl",
+  "cityLabel": "Tampa, FL",
+  "query": "Top personal injury lawyer in Tampa, FL with a proven track record",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Dennis Hernandez Injury Attorneys",
+        "Farah & Farah",
+        "Fernandez Law Group",
+        "Jessica C. Fernandez, P.A"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Dennis Hernandez Injury Attorneys",
+        "The Fernandez Law Group",
+        "Team Farah",
+        "MANEY | GORDON Trial Lawyers"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Dennis Hernandez Injury Attorneys",
+        "The Fernandez Law Group",
+        "TampaLaw.com",
+        "Jessica C. Fernandez, P.A",
+        "Farah & Farah"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Martin J. Hernandez, P.A",
+        "Matthews Injury Law",
+        "The Yerrid Law Firm, P.A",
+        "Farah & Farah",
+        "Alexander T. Lewis / TampaLaw.com",
+        "Alley, Clark & Greiwe",
+        "Jack Gordon / MANEY | GORDON Trial Lawyers"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Dennis Hernandez Injury Attorneys",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Farah & Farah",
+      "engines": [
+        "ChatGPT",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Jessica C. Fernandez, P.A",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "The Fernandez Law Group",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Alexander T. Lewis / TampaLaw.com",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Alley, Clark & Greiwe",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Fernandez Law Group",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Jack Gordon / MANEY | GORDON Trial Lawyers",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "MANEY | GORDON Trial Lawyers",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Martin J. Hernandez, P.A",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Matthews Injury Law",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "TampaLaw.com",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Team Farah",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "The Yerrid Law Firm, P.A",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 20
+}

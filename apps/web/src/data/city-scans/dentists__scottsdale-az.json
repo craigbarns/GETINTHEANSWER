@@ -1,0 +1,128 @@
+{
+  "industry": "dentists",
+  "city": "scottsdale-az",
+  "cityLabel": "Scottsdale, AZ",
+  "query": "Best cosmetic dentist for porcelain veneers in Scottsdale, AZ",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Scottsdale Cosmetic Dentistry",
+        "S&C Dental",
+        "Sonoran Dental Design",
+        "Kallos Dental Aesthetics",
+        "Serenity Smiles"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Kallos Dental Aesthetics",
+        "Sonoran Dental Design",
+        "Serenity Smiles",
+        "S&C Dental",
+        "Scottsdale Cosmetic Dentistry"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Kallos Dental Aesthetics",
+        "Scottsdale Cosmetic Dentistry",
+        "S&C Dental",
+        "Serenity Smiles",
+        "Sonoran Dental Design"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Dental Studio 101",
+        "Scottsdale Smile Center",
+        "North Scottsdale Dentist / Gregory Graber DDS",
+        "Scottsdale Dental Aesthetics",
+        "Kallos Dental Aesthetics",
+        "Davis Dentistry",
+        "Serenity Smiles",
+        "Sonoran Dental Design"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Kallos Dental Aesthetics",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Serenity Smiles",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Sonoran Dental Design",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "S&C Dental",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Scottsdale Cosmetic Dentistry",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Davis Dentistry",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Dental Studio 101",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "North Scottsdale Dentist / Gregory Graber DDS",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Scottsdale Dental Aesthetics",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Scottsdale Smile Center",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 23
+}

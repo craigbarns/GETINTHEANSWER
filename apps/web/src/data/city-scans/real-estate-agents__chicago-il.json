@@ -1,0 +1,90 @@
+{
+  "industry": "real-estate-agents",
+  "city": "chicago-il",
+  "cityLabel": "Chicago, IL",
+  "query": "Who is the best real estate agent to sell a luxury home in Chicago, IL?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Chezi Rafaeli",
+        "Carrie McCormick",
+        "Nancy Tassone"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Carrie McCormick",
+        "Nancy Tassone",
+        "Chezi Rafaeli",
+        "Brant Booker"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Carrie McCormick",
+        "Nancy Tassone",
+        "Chezi Rafaeli",
+        "Rafael Murillo"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Emily Sachs Wong",
+        "Carrie McCormick",
+        "Rafael Murillo"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Carrie McCormick",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Chezi Rafaeli",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Nancy Tassone",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Rafael Murillo",
+      "engines": [
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Brant Booker",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Emily Sachs Wong",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 14
+}

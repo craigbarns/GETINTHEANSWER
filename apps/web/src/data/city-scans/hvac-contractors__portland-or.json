@@ -1,0 +1,148 @@
+{
+  "industry": "hvac-contractors",
+  "city": "portland-or",
+  "cityLabel": "Portland, OR",
+  "query": "Who offers 24/7 emergency AC repair near me in Portland, OR?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "First Call Heating & Cooling",
+        "Deluxe Heating and Cooling",
+        "Efficiency Heating & Cooling",
+        "D&F Plumbing, Heating, and Cooling",
+        "Central Air Heating, Cooling & Plumbing"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "First Call Heating & Cooling",
+        "D&F Plumbing, Heating and Cooling",
+        "Efficiency Heating & Cooling (EHC)",
+        "Deluxe Heating and Cooling",
+        "A-TEMP Heating, Cooling & Electrical"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "First Call Heating & Cooling",
+        "Deluxe Heating and Cooling",
+        "D&F Plumbing, Heating and Cooling",
+        "Efficiency Heating & Cooling (EHC)",
+        "Aviator Heating & Cooling"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Efficiency Heating & Cooling / EHC",
+        "Jacobs Heating & Air Conditioning",
+        "Vanport Mechanical and Fire Sprinkler",
+        "Aire Serv of Portland",
+        "Conrad Heating & Cooling",
+        "Wolcott Services",
+        "First Call Heating & Cooling",
+        "Polar Heating & Cooling"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "First Call Heating & Cooling",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "D&F Plumbing, Heating, and Cooling",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Deluxe Heating and Cooling",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Efficiency Heating & Cooling (EHC)",
+      "engines": [
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "A-TEMP Heating, Cooling & Electrical",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Aire Serv of Portland",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Aviator Heating & Cooling",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Central Air Heating, Cooling & Plumbing",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Conrad Heating & Cooling",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Efficiency Heating & Cooling",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Jacobs Heating & Air Conditioning",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Polar Heating & Cooling",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Vanport Mechanical and Fire Sprinkler",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Wolcott Services",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 23
+}

@@ -1,0 +1,123 @@
+{
+  "industry": "real-estate-agents",
+  "city": "las-vegas-nv",
+  "cityLabel": "Las Vegas, NV",
+  "query": "Who is the best real estate agent to sell a luxury home in Las Vegas, NV?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "IS LUXURY",
+        "Vegas Luxury Real Estate",
+        "Simply Vegas",
+        "Sotheby's International Realty",
+        "Douglas Elliman"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "IS LUXURY",
+        "Douglas Elliman",
+        "Simply Vegas",
+        "Sotheby's International Realty"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "IS LUXURY",
+        "Douglas Elliman USA",
+        "Simply Vegas",
+        "Las Vegas Sotheby's International Realty",
+        "Douglas Elliman"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Kristen Routh-Silberman",
+        "Ivan Sher",
+        "Mahsheed Parsons",
+        "Huntington & Ellis Team"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Douglas Elliman",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "IS LUXURY",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Simply Vegas",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Sotheby's International Realty",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Douglas Elliman USA",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Huntington & Ellis Team",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Ivan Sher",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Kristen Routh-Silberman",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Las Vegas Sotheby's International Realty",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Mahsheed Parsons",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Vegas Luxury Real Estate",
+      "engines": [
+        "ChatGPT"
+      ]
+    }
+  ],
+  "totalNamed": 18
+}

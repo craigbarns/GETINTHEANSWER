@@ -1,0 +1,117 @@
+{
+  "industry": "lawyers",
+  "city": "san-antonio-tx",
+  "cityLabel": "San Antonio, TX",
+  "query": "Top personal injury lawyer in San Antonio, TX with a proven track record",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Pat Maloney: Accident & Injury Attorney",
+        "Fid Rodriguez Law",
+        "Cowen Law"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Pat Maloney: Accident & Injury Attorney",
+        "Trevino Injury Law",
+        "Fidel Rodriguez, Jr",
+        "Sonia Rodriguez - Cowen Law"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Pat Maloney: Accident & Injury Attorney",
+        "Hill Law Firm Accident and Injury Lawyers",
+        "Fidel Rodriguez, Jr",
+        "Sonia Rodriguez (Cowen Law)"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Thomas J. Henry",
+        "Justin Hill (Hill Law Firm)",
+        "The Warrior Law Firm",
+        "Carabin Shaw"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Pat Maloney: Accident & Injury Attorney",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Fidel Rodriguez, Jr",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Sonia Rodriguez - Cowen Law",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Carabin Shaw",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Cowen Law",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Fid Rodriguez Law",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Hill Law Firm Accident and Injury Lawyers",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Justin Hill (Hill Law Firm)",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "The Warrior Law Firm",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Thomas J. Henry",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Trevino Injury Law",
+      "engines": [
+        "Claude"
+      ]
+    }
+  ],
+  "totalNamed": 15
+}

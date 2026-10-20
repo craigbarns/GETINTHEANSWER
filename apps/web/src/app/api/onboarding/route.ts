@@ -13,11 +13,18 @@ function getClientIp(request: Request) {
 export async function POST(request: Request) {
   try {
     const payload = await request.json();
+
+    // Internal prospecting runs authenticate with this header; the API verifies
+    // it and only then honours notify=false and returns an un-redacted summary.
+    // Forwarding an unrecognised value is harmless — the API rejects it.
+    const outreachKey = request.headers.get("x-outreach-key");
+
     const response = await fetch(`${API_BASE_URL}/api/onboarding`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         "X-Client-IP": getClientIp(request),
+        ...(outreachKey ? { "X-Outreach-Key": outreachKey } : {}),
       },
       body: JSON.stringify(payload),
       cache: "no-store",

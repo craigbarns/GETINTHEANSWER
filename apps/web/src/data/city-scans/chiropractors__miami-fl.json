@@ -1,0 +1,102 @@
+{
+  "industry": "chiropractors",
+  "city": "miami-fl",
+  "cityLabel": "Miami, FL",
+  "query": "Best chiropractor in Miami, FL for lower back pain and sciatica",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Loucil Chiropractic",
+        "Coral Way Disc Center",
+        "Aventura Wellness & Rehab Center",
+        "Dynamic Chiropractic Center",
+        "Disc Relief Center of Kendall"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Loucil Chiropractic",
+        "Coral Way Disc Center",
+        "Aventura Wellness & Rehab Center",
+        "Disc Relief Center of Kendall"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Loucil Chiropractic",
+        "Coral Way Disc Center",
+        "Aventura Wellness & Rehab Center"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Shin Wellness",
+        "Cafe of Life Chiropractic",
+        "Trujillo Chiropractic Center"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Aventura Wellness & Rehab Center",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Coral Way Disc Center",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Loucil Chiropractic",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Disc Relief Center of Kendall",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Cafe of Life Chiropractic",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Dynamic Chiropractic Center",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Shin Wellness",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Trujillo Chiropractic Center",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 15
+}

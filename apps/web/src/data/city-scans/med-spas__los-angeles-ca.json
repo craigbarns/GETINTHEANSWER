@@ -1,0 +1,127 @@
+{
+  "industry": "med-spas",
+  "city": "los-angeles-ca",
+  "cityLabel": "Los Angeles, CA",
+  "query": "Best med spa in Los Angeles, CA for Botox and dermal fillers",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Cienega Medical",
+        "OU Beauty",
+        "Vanity Look Skin Center",
+        "Nassif MD Medical Spa",
+        "Dr. Refresh Med Spa"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Beverly Wilshire Aesthetics",
+        "OU Beauty",
+        "Vanity Look Skin Center",
+        "Cienega Medical",
+        "Dr. Paul Yamauchi Dermatology"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "OU Beauty",
+        "Vanity Look Skin Center",
+        "Cienega Medical",
+        "NassifMD Medical Spa®",
+        "Stoker Aesthetics"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Beverly Wilshire Aesthetics",
+        "Cienega Medical",
+        "Cienega Med Spa",
+        "Marina Medspa",
+        "Smooth Skin Lounge"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Cienega Medical",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "OU Beauty",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Vanity Look Skin Center",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Beverly Wilshire Aesthetics",
+      "engines": [
+        "Claude",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Nassif MD Medical Spa",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Cienega Med Spa",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Dr. Paul Yamauchi Dermatology",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Dr. Refresh Med Spa",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Marina Medspa",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Smooth Skin Lounge",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Stoker Aesthetics",
+      "engines": [
+        "Gemini"
+      ]
+    }
+  ],
+  "totalNamed": 20
+}

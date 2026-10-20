@@ -1,0 +1,139 @@
+{
+  "industry": "dentists",
+  "city": "dallas-tx",
+  "cityLabel": "Dallas, TX",
+  "query": "Best cosmetic dentist for porcelain veneers in Dallas, TX",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Spring Valley Dental",
+        "Buckner Family Dental",
+        "Randall Dentistry",
+        "DTX Dental Studio",
+        "Stewart Dentistry"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Spring Valley Dental",
+        "Redefine Dental Aesthetic and Wellness Center",
+        "DTX Dental Studio",
+        "Katy Trail Dental",
+        "Randall Dentistry"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Dallas Laser Dentistry",
+        "Spring Valley Dental",
+        "Randall Dentistry",
+        "Stewart Dentistry",
+        "DTX Dental Studio"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Dallas Laser Dentistry",
+        "Royal Lane Dental",
+        "Park Central Dental",
+        "East Quarter Dental",
+        "Ashly Cothern DDS",
+        "MINT Highland Hotel"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "DTX Dental Studio",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Randall Dentistry",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Spring Valley Dental",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Dallas Laser Dentistry",
+      "engines": [
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Stewart Dentistry",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Ashly Cothern DDS",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Buckner Family Dental",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "East Quarter Dental",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Katy Trail Dental",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "MINT Highland Hotel",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Park Central Dental",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Redefine Dental Aesthetic and Wellness Center",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Royal Lane Dental",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 21
+}

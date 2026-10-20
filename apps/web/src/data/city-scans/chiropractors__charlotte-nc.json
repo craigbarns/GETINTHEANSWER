@@ -1,0 +1,118 @@
+{
+  "industry": "chiropractors",
+  "city": "charlotte-nc",
+  "cityLabel": "Charlotte, NC",
+  "query": "Best chiropractor in Charlotte, NC for lower back pain and sciatica",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Keith Clinic",
+        "Innovation Health",
+        "Proactive Chiropractic",
+        "Bowker Clinic",
+        "Limitless Chiropractic"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Keith Clinic",
+        "Innovation Health",
+        "Limitless Chiropractic",
+        "Proactive Chiropractic",
+        "Bowker Clinic"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Keith Clinic",
+        "Innovation Health",
+        "Limitless Chiropractic",
+        "Bowker Clinic of Chiropractic"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Jaffe Chiropractic",
+        "Clearview Family Chiropractic",
+        "Greater Life Chiropractic",
+        "Active Life NC"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Innovation Health",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Keith Clinic",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Limitless Chiropractic",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Bowker Clinic",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Proactive Chiropractic",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Active Life NC",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Bowker Clinic of Chiropractic",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Clearview Family Chiropractic",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Greater Life Chiropractic",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Jaffe Chiropractic",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 18
+}

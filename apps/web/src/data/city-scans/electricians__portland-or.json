@@ -1,0 +1,118 @@
+{
+  "industry": "electricians",
+  "city": "portland-or",
+  "cityLabel": "Portland, OR",
+  "query": "Who is the best licensed electrician in Portland, OR for an emergency callout?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Pokorski Electric",
+        "Electric Avenue LLC",
+        "Portland Metro Electric",
+        "Cloud City Electric",
+        "Emergency Electrician Portland"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Pokorski Electric",
+        "Portland Metro Electric",
+        "Electric Avenue LLC",
+        "Cloud City Electric"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Coy Electric",
+        "Pokorski Electric",
+        "Portland Metro Electric",
+        "PMT Electric",
+        "Cloud City Electric"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Electric Avenue PNW",
+        "Smiley Electric",
+        "Coy Electric",
+        "Mr. Electric of Portland"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Cloud City Electric",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Pokorski Electric",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Portland Metro Electric",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Coy Electric",
+      "engines": [
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Electric Avenue LLC",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Electric Avenue PNW",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Emergency Electrician Portland",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Mr. Electric of Portland",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "PMT Electric",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Smiley Electric",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 18
+}

@@ -1,0 +1,124 @@
+{
+  "industry": "pest-control",
+  "city": "tampa-fl",
+  "cityLabel": "Tampa, FL",
+  "query": "Best pest control company in Tampa, FL for a termite infestation",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Bingham Pest Control",
+        "Turner Pest Control",
+        "Terminix",
+        "Haskell Termite & Pest Control",
+        "Cross Pest Control of Tampa"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Bingham Pest Control",
+        "Turner Pest Control",
+        "Cross Pest Control of Tampa",
+        "Haskell Termite & Pest Control",
+        "Terminix"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Bingham Pest Control",
+        "Turner Pest Control",
+        "Terminix",
+        "Haskell Termite & Pest Control",
+        "Cross Pest Control of Tampa"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Terminix",
+        "Best Termite & Pest Control, Inc",
+        "The Rodent Pros",
+        "Greenhouse Termite and Pest Control",
+        "Tier 1 Pest Solutions",
+        "Chet’s Termite & Pest Management"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Terminix",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Bingham Pest Control",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Cross Pest Control of Tampa",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Haskell Termite & Pest Control",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Turner Pest Control",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Best Termite & Pest Control, Inc",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Chet’s Termite & Pest Management",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Greenhouse Termite and Pest Control",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "The Rodent Pros",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Tier 1 Pest Solutions",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 21
+}

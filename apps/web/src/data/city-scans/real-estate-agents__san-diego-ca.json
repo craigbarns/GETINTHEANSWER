@@ -1,0 +1,145 @@
+{
+  "industry": "real-estate-agents",
+  "city": "san-diego-ca",
+  "cityLabel": "San Diego, CA",
+  "query": "Who is the best real estate agent to sell a luxury home in San Diego, CA?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Laura Barry & Jim Graves",
+        "Malena Boetel",
+        "Joy Aumann",
+        "Tracey Ross"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Laura Barry & Jim Graves",
+        "Malena Boetel",
+        "Joy Aumann",
+        "Tracey Ross"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Barry Estates",
+        "SERHANT. California",
+        "LUXURYSOCALREALTY",
+        "Compass"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Clinton Selfridge",
+        "Battiata Real Estate Group",
+        "Robert and Joy Aumann",
+        "Marilyn Comiskey / The Comiskey Group",
+        "Craig Lotzof & Associates",
+        "Luxury Coast Group Barry Estates",
+        "Bree Bornstein"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Joy Aumann",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Laura Barry & Jim Graves",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Malena Boetel",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Tracey Ross",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Barry Estates",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Battiata Real Estate Group",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Bree Bornstein",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Clinton Selfridge",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Compass",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Craig Lotzof & Associates",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "LUXURYSOCALREALTY",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Luxury Coast Group Barry Estates",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Marilyn Comiskey / The Comiskey Group",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Robert and Joy Aumann",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "SERHANT. California",
+      "engines": [
+        "Gemini"
+      ]
+    }
+  ],
+  "totalNamed": 19
+}

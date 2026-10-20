@@ -1,0 +1,132 @@
+{
+  "industry": "roofers",
+  "city": "columbus-oh",
+  "cityLabel": "Columbus, OH",
+  "query": "Who is the best roofing contractor in Columbus, OH for storm damage repair?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Dynasty Roofing and Restoration",
+        "Muth & Company Roofing",
+        "FairWeather Roofing",
+        "Mid Ohio Roofing",
+        "Brazen Roofing"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Dynasty Roofing and Restoration",
+        "FairWeather Roofing Columbus",
+        "Mid Ohio Roofing",
+        "Precision 1 Roofing",
+        "Brazen Roofing"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Dynasty Roofing and Restoration",
+        "FairWeather Roofing Columbus",
+        "Mid Ohio Roofing",
+        "Precision 1 Roofing",
+        "Muth & Company Roofing"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Feazel",
+        "Roof King & Restoration",
+        "Home Value Renovation",
+        "Coldstream Exteriors",
+        "Ascent Roofing"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Dynasty Roofing and Restoration",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Mid Ohio Roofing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Brazen Roofing",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "FairWeather Roofing Columbus",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Muth & Company Roofing",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Precision 1 Roofing",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Ascent Roofing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Coldstream Exteriors",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "FairWeather Roofing",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Feazel",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Home Value Renovation",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Roof King & Restoration",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 20
+}

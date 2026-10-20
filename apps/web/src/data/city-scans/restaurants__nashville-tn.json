@@ -1,0 +1,100 @@
+{
+  "industry": "restaurants",
+  "city": "nashville-tn",
+  "cityLabel": "Nashville, TN",
+  "query": "Best romantic Italian restaurant with outdoor seating in Nashville, TN",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Valentino's Ristorante",
+        "Bella Napoli",
+        "IL Forno"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Bella Napoli",
+        "Valentino's Ristorante",
+        "IL Forno"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Valentino's Ristorante",
+        "Bella Napoli",
+        "IL Forno",
+        "Slice of Italy"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Pelato",
+        "Caffé Nonna",
+        "Luogo",
+        "Ella’s on 2nd"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Bella Napoli",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "IL Forno",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Valentino's Ristorante",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Caffé Nonna",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Ella’s on 2nd",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Luogo",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Pelato",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Slice of Italy",
+      "engines": [
+        "Gemini"
+      ]
+    }
+  ],
+  "totalNamed": 14
+}

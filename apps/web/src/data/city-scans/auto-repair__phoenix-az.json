@@ -1,0 +1,117 @@
+{
+  "industry": "auto-repair",
+  "city": "phoenix-az",
+  "cityLabel": "Phoenix, AZ",
+  "query": "Best independent auto repair shop in Phoenix, AZ for European cars",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "EuroComp Garage",
+        "Ultimate European Repair",
+        "Tanner Motors",
+        "Elite Bimmer Auto Repair",
+        "Import Car Specialists"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "EuroComp Garage",
+        "Ultimate European Repair",
+        "Tanner Motors",
+        "Import Car Specialists"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "EuroComp Garage",
+        "Ultimate European Repair",
+        "Ray's European Garage",
+        "Tanner Motors",
+        "Elite Bimmer Auto Repair"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Precision European Auto Repair",
+        "Tanner Motors",
+        "EuroComp Garage",
+        "Bell Road Automotive",
+        "Import Car Specialists",
+        "Elite Bimmer"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "EuroComp Garage",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Tanner Motors",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Import Car Specialists",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Ultimate European Repair",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Elite Bimmer Auto Repair",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Bell Road Automotive",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Elite Bimmer",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Precision European Auto Repair",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Ray's European Garage",
+      "engines": [
+        "Gemini"
+      ]
+    }
+  ],
+  "totalNamed": 20
+}

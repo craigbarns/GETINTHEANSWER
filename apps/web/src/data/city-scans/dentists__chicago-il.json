@@ -1,0 +1,143 @@
+{
+  "industry": "dentists",
+  "city": "chicago-il",
+  "cityLabel": "Chicago, IL",
+  "query": "Best cosmetic dentist for porcelain veneers in Chicago, IL",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Chicago Aesthetic Dentistry",
+        "Mitchell Dental Spa",
+        "EVER Dental Studio",
+        "Wentworth Dental Clinic",
+        "Smile Chicago"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Dr. Brittany Dickinson - Chicago Aesthetic Dentistry",
+        "Mitchell Dental Spa - Dr. Margaret Mitchell",
+        "EVER Dental Studio - Dr. Renee Alhakim",
+        "Smile Chicago",
+        "Chicago Dental Arts"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Chicago Aesthetic Dentistry",
+        "EVER Dental Studio",
+        "Dr. Bianca Clark"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Dr. Margaret Mitchell / Mitchell Dental Spa",
+        "Dr. Brittany Dickinson at Chicago Aesthetic Dentistry",
+        "Dr. Kevin Landers at Cosmetic Dentist Chicago",
+        "Dr. Nechama Brand at Premier Dentistry Chicago",
+        "Chicago Loop Dentistry with Dr. Jessica Mehta"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Chicago Aesthetic Dentistry",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "EVER Dental Studio",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Smile Chicago",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Chicago Dental Arts",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Chicago Loop Dentistry with Dr. Jessica Mehta",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Dr. Bianca Clark",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Dr. Brittany Dickinson - Chicago Aesthetic Dentistry",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Dr. Brittany Dickinson at Chicago Aesthetic Dentistry",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Dr. Kevin Landers at Cosmetic Dentist Chicago",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Dr. Margaret Mitchell / Mitchell Dental Spa",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Dr. Nechama Brand at Premier Dentistry Chicago",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "EVER Dental Studio - Dr. Renee Alhakim",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Mitchell Dental Spa",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Mitchell Dental Spa - Dr. Margaret Mitchell",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Wentworth Dental Clinic",
+      "engines": [
+        "ChatGPT"
+      ]
+    }
+  ],
+  "totalNamed": 18
+}

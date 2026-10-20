@@ -1,0 +1,96 @@
+{
+  "industry": "restaurants",
+  "city": "charlotte-nc",
+  "cityLabel": "Charlotte, NC",
+  "query": "Best romantic Italian restaurant with outdoor seating in Charlotte, NC",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Toscana Ristorante Italiano",
+        "North Italia - Charlotte - South End",
+        "Dolce Ristorante"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Toscana Ristorante Italiano"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Toscana Ristorante Italiano",
+        "Fiamma Ristorante",
+        "Dolce Ristorante",
+        "Angeline's",
+        "Maggiano's - Charlotte"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Toscana",
+        "Via Roma",
+        "Angeline’s"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Toscana Ristorante Italiano",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Angeline's",
+      "engines": [
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Dolce Ristorante",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Fiamma Ristorante",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Maggiano's - Charlotte",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "North Italia - Charlotte - South End",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Toscana",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Via Roma",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 12
+}

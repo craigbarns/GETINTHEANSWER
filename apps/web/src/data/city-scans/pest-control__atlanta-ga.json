@@ -1,0 +1,116 @@
+{
+  "industry": "pest-control",
+  "city": "atlanta-ga",
+  "cityLabel": "Atlanta, GA",
+  "query": "Best pest control company in Atlanta, GA for a termite infestation",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Brooks Pest Solutions",
+        "Smart Solutions Pest Control",
+        "Massey Services",
+        "Monitor Pest Control",
+        "Great American Pest Solutions"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Massey Services",
+        "Orkin",
+        "Brooks Pest Solutions",
+        "Smart Solutions Pest Control",
+        "Moxie Pest Control"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Monitor Pest Control",
+        "Massey Services",
+        "Smart Solutions Pest Control"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "North Fulton Pest Solutions",
+        "Orkin",
+        "Terminix",
+        "Breda Pest Management"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Massey Services",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Smart Solutions Pest Control",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Brooks Pest Solutions",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Monitor Pest Control",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Orkin",
+      "engines": [
+        "Claude",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Breda Pest Management",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Great American Pest Solutions",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Moxie Pest Control",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "North Fulton Pest Solutions",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Terminix",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 17
+}

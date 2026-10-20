@@ -1,0 +1,122 @@
+{
+  "industry": "auto-repair",
+  "city": "orlando-fl",
+  "cityLabel": "Orlando, FL",
+  "query": "Best independent auto repair shop in Orlando, FL for European cars",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Dealer Service Alternative",
+        "JSI European Specialist",
+        "Europa Auto",
+        "Eurocraft Automotive",
+        "Corsa Automotive"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Corsa Automotive",
+        "Dealer Service Alternative",
+        "JSI European",
+        "Europa Auto",
+        "EuroCraft Automotive"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Dealer Service Alternative (DSA)",
+        "Eurocraft Automotive",
+        "JSI European",
+        "Europa Auto",
+        "Corsa Automotive"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "JSI European Specialist",
+        "Dealer Service Alternative",
+        "Euro Motors",
+        "Irish Mike’s Automotive",
+        "C & S Euro Shop"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Corsa Automotive",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Dealer Service Alternative",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Eurocraft Automotive",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Europa Auto",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "JSI European",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "JSI European Specialist",
+      "engines": [
+        "ChatGPT",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "C & S Euro Shop",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Dealer Service Alternative (DSA)",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Euro Motors",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Irish Mike’s Automotive",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 20
+}

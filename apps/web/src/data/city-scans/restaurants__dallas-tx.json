@@ -1,0 +1,109 @@
+{
+  "industry": "restaurants",
+  "city": "dallas-tx",
+  "cityLabel": "Dallas, TX",
+  "query": "Best romantic Italian restaurant with outdoor seating in Dallas, TX",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Dolce Riviera",
+        "Avanti Restaurant",
+        "Eataly Dallas - Terra",
+        "La Stella Cucina Verace",
+        "Bugatti Ristorante"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Avanti Restaurant",
+        "Dolce Riviera",
+        "Sassetta"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Dolce Riviera",
+        "Avanti Restaurant",
+        "Ravenna Italian Grille & Bar",
+        "Sassetta",
+        "Bugatti Ristorante"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Sassetta",
+        "Lucia",
+        "Terilli’s Restaurant & Bar"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Avanti Restaurant",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Dolce Riviera",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Sassetta",
+      "engines": [
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Bugatti Ristorante",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Eataly Dallas - Terra",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "La Stella Cucina Verace",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Lucia",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Ravenna Italian Grille & Bar",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Terilli’s Restaurant & Bar",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 16
+}

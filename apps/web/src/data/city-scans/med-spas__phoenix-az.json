@@ -1,0 +1,131 @@
+{
+  "industry": "med-spas",
+  "city": "phoenix-az",
+  "cityLabel": "Phoenix, AZ",
+  "query": "Best med spa in Phoenix, AZ for Botox and dermal fillers",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Phoenix Med Spa",
+        "Suddenly Slimmer Med Spa",
+        "Royal Aesthetics & Injectables",
+        "Brazilian Touch MedSpa"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Phoenix Med Spa",
+        "Beauty Bar Aesthetics",
+        "Skin Serenity and Aesthetics"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Phoenix Med Spa (Esthetic Finesse)",
+        "Suddenly Slimmer Med Spa Phoenix",
+        "Phoenix Medspa",
+        "Brazilian Touch MedSpa"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Look Lab Med Spa",
+        "UNITS Injection Spa",
+        "SkinSpirit Biltmore",
+        "All About Me Aesthetics & Wellness",
+        "Royal Aesthetics",
+        "Suddenly Slimmer Med Spa"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Phoenix Med Spa",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Brazilian Touch MedSpa",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Suddenly Slimmer Med Spa",
+      "engines": [
+        "ChatGPT",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "All About Me Aesthetics & Wellness",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Beauty Bar Aesthetics",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Look Lab Med Spa",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Phoenix Med Spa (Esthetic Finesse)",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Royal Aesthetics",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Royal Aesthetics & Injectables",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Skin Serenity and Aesthetics",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "SkinSpirit Biltmore",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Suddenly Slimmer Med Spa Phoenix",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "UNITS Injection Spa",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 17
+}

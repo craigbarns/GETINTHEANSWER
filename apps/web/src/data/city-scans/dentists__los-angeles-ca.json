@@ -1,0 +1,102 @@
+{
+  "industry": "dentists",
+  "city": "los-angeles-ca",
+  "cityLabel": "Los Angeles, CA",
+  "query": "Best cosmetic dentist for porcelain veneers in Los Angeles, CA",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Dr. Jon Marashi",
+        "Dr. Dani B",
+        "Brentwood Dentistry",
+        "Avenue Dental"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Dr. Jon Marashi",
+        "Dr. Anthony Mobasser",
+        "Dr. Bill Dorfman"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Dr. Jon Marashi",
+        "Zakhor Dental Group",
+        "Brentwood Dentistry"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Dr. Bill Dorfman",
+        "Dr. Kevin Sands",
+        "Dr. Jon Marashi",
+        "Dr. Dani B",
+        "Dr. Anthony Mobasser"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Dr. Jon Marashi",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Brentwood Dentistry",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Dr. Anthony Mobasser",
+      "engines": [
+        "Claude",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Dr. Bill Dorfman",
+      "engines": [
+        "Claude",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Dr. Dani B",
+      "engines": [
+        "ChatGPT",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Avenue Dental",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Dr. Kevin Sands",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Zakhor Dental Group",
+      "engines": [
+        "Gemini"
+      ]
+    }
+  ],
+  "totalNamed": 15
+}

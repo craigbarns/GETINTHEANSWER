@@ -1,0 +1,84 @@
+name: Refresh city scans
+
+# Engine answers move. A study dated once and never touched again quietly stops
+# being true, which is the failure mode this whole page exists to avoid.
+#
+# Monthly rather than weekly on purpose: 240 pairs cost roughly $8 a run, and
+# the answers do not turn over fast enough to justify four times that.
+#
+# Required repository secrets:
+#   OPENROUTER_API_KEY  same key the api service uses
+#   RAILWAY_TOKEN       optional; without it the data lands in main and ships
+#                       on the next manual deploy
+on:
+  schedule:
+    - cron: "0 6 1 * *" # 06:00 UTC on the 1st
+  workflow_dispatch:
+    inputs:
+      industry:
+        description: "Limit to one industry slug (blank = all)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-city-scans
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Rescan every industry x city pair
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: |
+          if [ -z "$OPENROUTER_API_KEY" ]; then
+            echo "OPENROUTER_API_KEY is not set — add it to repository secrets."
+            exit 1
+          fi
+          python3 scripts/generate_city_scans.py --force --workers 4 \
+            ${{ inputs.industry && format('--industry {0}', inputs.industry) || '' }}
+
+      - name: Commit refreshed data
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add apps/web/src/data/city-scans
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No change in engine answers this month."
+            exit 0
+          fi
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+          git commit -m "chore(data): refresh city scans $(date -u +%Y-%m-%d)
+
+          Re-ran every industry x city pair against the live engines. /study
+          recomputes its figures from these files at build time, so publishing
+          them is what keeps the published numbers true."
+          git push
+
+      # Without this the refreshed data sits in main until someone deploys.
+      # The api service is deployed by CLI upload, not from the repo.
+      - name: Redeploy the web service
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+        run: |
+          if [ -z "$RAILWAY_TOKEN" ]; then
+            echo "RAILWAY_TOKEN not set — data is committed but not deployed."
+            echo "Add the secret, or run: railway up --service web --ci"
+            exit 0
+          fi
+          npm i -g @railway/cli
+          railway up --service web --ci

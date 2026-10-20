@@ -1,0 +1,119 @@
+{
+  "industry": "real-estate-agents",
+  "city": "denver-co",
+  "cityLabel": "Denver, CO",
+  "query": "Who is the best real estate agent to sell a luxury home in Denver, CO?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Rick Janson",
+        "Gwenivere Snyder",
+        "Coleen Sanders",
+        "Peter Hauben"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Jessica Northrop - Compass",
+        "Gwenivere Snyder - LIV Sotheby's International Realty",
+        "Coleen Sanders",
+        "Rick Janson - Independent Luxury Advisor",
+        "Peter Hauben - Denver Realty, LLC"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Gwenivere Snyder",
+        "Coleen Sanders",
+        "Rick Janson",
+        "Peter Hauben"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Shannon Tiger",
+        "Casey Karsh Perry",
+        "Brendan Bartic"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Coleen Sanders",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Gwenivere Snyder",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Peter Hauben",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Rick Janson",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Brendan Bartic",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Casey Karsh Perry",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Gwenivere Snyder - LIV Sotheby's International Realty",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Jessica Northrop - Compass",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Peter Hauben - Denver Realty, LLC",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Rick Janson - Independent Luxury Advisor",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Shannon Tiger",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 16
+}

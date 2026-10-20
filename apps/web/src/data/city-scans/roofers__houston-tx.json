@@ -1,0 +1,123 @@
+{
+  "industry": "roofers",
+  "city": "houston-tx",
+  "cityLabel": "Houston, TX",
+  "query": "Who is the best roofing contractor in Houston, TX for storm damage repair?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Achilles Roofing & Exterior",
+        "Integrity Storm Experts",
+        "Bustamante Roofing",
+        "Affluent Contractors",
+        "Blue Ribbon Roofing"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Achilles Roofing & Exterior",
+        "Blue Ribbon Roofing",
+        "Bustamante Roofing",
+        "Integrity Storm Experts & Restoration"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Achilles Roofing & Exterior",
+        "Bustamante Roofing",
+        "Integrity Storm Experts",
+        "Blue Ribbon Roofing"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "EZ Roof and Construction",
+        "RAFTRx Roofing + Exteriors",
+        "Amstill Roofing",
+        "Shultz Roofing & Construction",
+        "Onpoint Roofing"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Achilles Roofing & Exterior",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Blue Ribbon Roofing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Bustamante Roofing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Integrity Storm Experts",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Affluent Contractors",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Amstill Roofing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "EZ Roof and Construction",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Integrity Storm Experts & Restoration",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Onpoint Roofing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "RAFTRx Roofing + Exteriors",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Shultz Roofing & Construction",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 18
+}

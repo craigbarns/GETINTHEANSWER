@@ -1,0 +1,116 @@
+{
+  "industry": "auto-repair",
+  "city": "dallas-tx",
+  "cityLabel": "Dallas, TX",
+  "query": "Best independent auto repair shop in Dallas, TX for European cars",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Taylor Auto Repair",
+        "Hance's European",
+        "Louden Motorcars",
+        "Dallas European Auto"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Taylor Auto Repair",
+        "Hance's European",
+        "Louden Motorcars",
+        "AutoScope Car Care"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Taylor Auto Repair",
+        "Hance's European",
+        "Autoscope Car Care",
+        "Louden Motorcars",
+        "European Car Care DFW"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Hance’s European Auto Repair",
+        "Autoscope European Car Care",
+        "European Service Center",
+        "Blair Automotive"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Hance's European",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Louden Motorcars",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Taylor Auto Repair",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "AutoScope Car Care",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Autoscope European Car Care",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Blair Automotive",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Dallas European Auto",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "European Car Care DFW",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "European Service Center",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Hance’s European Auto Repair",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 17
+}

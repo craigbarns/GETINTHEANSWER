@@ -1,0 +1,120 @@
+{
+  "industry": "electricians",
+  "city": "seattle-wa",
+  "cityLabel": "Seattle, WA",
+  "query": "Who is the best licensed electrician in Seattle, WA for an emergency callout?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Pokorski Electric",
+        "Konsker Electric",
+        "Outstanding Electric",
+        "Larry's Electric",
+        "Fischer Electric"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Pokorski Electric",
+        "Konsker Electric",
+        "Outstanding Electric",
+        "Larry's Electric",
+        "Fischer Electric"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Pokorski Electric",
+        "Konsker Electric",
+        "Outstanding Electric",
+        "Fischer Electric",
+        "Live Wire Electric"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "As You Wish Electric",
+        "In-House Electric",
+        "Compliance Electric LLC",
+        "LT Electric"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Fischer Electric",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Konsker Electric",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Outstanding Electric",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Pokorski Electric",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Larry's Electric",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "As You Wish Electric",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Compliance Electric LLC",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "In-House Electric",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "LT Electric",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Live Wire Electric",
+      "engines": [
+        "Gemini"
+      ]
+    }
+  ],
+  "totalNamed": 19
+}

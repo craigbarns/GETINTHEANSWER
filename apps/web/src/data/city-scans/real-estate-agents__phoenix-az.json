@@ -1,0 +1,103 @@
+{
+  "industry": "real-estate-agents",
+  "city": "phoenix-az",
+  "cityLabel": "Phoenix, AZ",
+  "query": "Who is the best real estate agent to sell a luxury home in Phoenix, AZ?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Katrina Barrett",
+        "Chris Karas",
+        "Joan Levinson",
+        "Mike Domer",
+        "Marta Walsh"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Katrina Barrett",
+        "Joan Levinson",
+        "Chris Karas",
+        "Mike Domer",
+        "Marta Walsh"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Katrina Barrett",
+        "Joan Levinson",
+        "Chris Karas",
+        "Mike Domer",
+        "Marta Walsh"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Katrina Barrett",
+        "Scott Grigg",
+        "Stacy Dragos"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Katrina Barrett",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Chris Karas",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Joan Levinson",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Marta Walsh",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Mike Domer",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Scott Grigg",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Stacy Dragos",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 18
+}

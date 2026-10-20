@@ -1,0 +1,97 @@
+{
+  "industry": "electricians",
+  "city": "san-diego-ca",
+  "cityLabel": "San Diego, CA",
+  "query": "Who is the best licensed electrician in San Diego, CA for an emergency callout?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Keil Electric San Diego",
+        "Dawson Electric",
+        "United Plumbing Heating Air & Electric",
+        "Premo Electric",
+        "CLD Electric"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "CLD Electric",
+        "Keil Electric San Diego",
+        "Dawson Electric",
+        "United Plumbing Heating Air & Electric"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Keil Electric San Diego",
+        "Premo Electric",
+        "CLD Electric"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "SRP Electric Inc",
+        "Premo Electric",
+        "Allstate Electric"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "CLD Electric",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Keil Electric San Diego",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Premo Electric",
+      "engines": [
+        "ChatGPT",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Dawson Electric",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "United Plumbing Heating Air & Electric",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Allstate Electric",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "SRP Electric Inc",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 15
+}

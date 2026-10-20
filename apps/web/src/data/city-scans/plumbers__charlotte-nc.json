@@ -1,0 +1,103 @@
+{
+  "industry": "plumbers",
+  "city": "charlotte-nc",
+  "cityLabel": "Charlotte, NC",
+  "query": "Who is the most reliable emergency plumber in Charlotte, NC for a burst pipe?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Roto-Rooter",
+        "WyattWorks",
+        "Keystone Plumbing Charlotte",
+        "Providence Plumbing & Restoration",
+        "Superior Plumbing & Drains"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Keystone Plumbing Charlotte",
+        "Providence Plumbing & Restoration",
+        "Roto-Rooter",
+        "WyattWorks",
+        "Superior Plumbing & Drains"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Roto-Rooter",
+        "WyattWorks",
+        "Providence Plumbing & Restoration",
+        "Superior Plumbing & Drains"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Roto-Rooter Charlotte",
+        "Providence Plumbing & Restoration",
+        "Charlotte Plumbing Squad",
+        "WyattWorks"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Providence Plumbing & Restoration",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "WyattWorks",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Roto-Rooter",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Superior Plumbing & Drains",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Keystone Plumbing Charlotte",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Charlotte Plumbing Squad",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Roto-Rooter Charlotte",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 18
+}

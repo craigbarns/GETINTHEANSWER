@@ -1,0 +1,145 @@
+{
+  "industry": "lawyers",
+  "city": "dallas-tx",
+  "cityLabel": "Dallas, TX",
+  "query": "Top personal injury lawyer in Dallas, TX with a proven track record",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Jay Murray",
+        "Michael P. Lyons",
+        "Bill Curtis",
+        "Laura Benitez Geisler",
+        "Mark D. Frenkel"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Lyons & Simmons, LLP",
+        "Jay Murray",
+        "Laura Benitez Geisler",
+        "Curtis Law Group",
+        "Frenkel Firm"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Lyons & Simmons, LLP",
+        "Curtis Law Group",
+        "Jay Murray Personal Injury Lawyers",
+        "Frenkel & Frenkel"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Hamilton Wingo",
+        "Aldous Law",
+        "Mullen & Mullen",
+        "Lyons & Simmons",
+        "Emery Brett Ledger"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Curtis Law Group",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Jay Murray",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Laura Benitez Geisler",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Lyons & Simmons, LLP",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Aldous Law",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Bill Curtis",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Emery Brett Ledger",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Frenkel & Frenkel",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Frenkel Firm",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Hamilton Wingo",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Jay Murray Personal Injury Lawyers",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Lyons & Simmons",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Mark D. Frenkel",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Michael P. Lyons",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Mullen & Mullen",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 19
+}

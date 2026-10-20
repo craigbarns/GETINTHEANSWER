@@ -71,18 +71,14 @@ Variables principales de l'API :
 - `OPENAI_API_KEY`, `ANTHROPIC_API_KEY`, `PERPLEXITY_API_KEY` : moteurs du scan live.
 - `STRIPE_SECRET_KEY`, `STRIPE_PRICE_ID` : abonnement Pro.
 - `STRIPE_WEBHOOK_SECRET` : signature du webhook Stripe.
+- `STRIPE_CHECKOUT_LOCALE` : langue du Checkout Stripe (`en` par défaut pour le marché US).
 - `FRONTEND_URL` : URL canonique du frontend.
 - `SCAN_RATE_LIMIT` : scans gratuits autorisés par IP, email et domaine sur la fenêtre (3 par défaut).
 - `SCAN_RATE_WINDOW_SECONDS` : fenêtre de limitation (24 heures par défaut).
 - `MAX_CONCURRENT_SCANS` : scans exécutés simultanément par instance API (3 par défaut).
-- `DAILY_SCAN_LIMIT` : plafond de scans démarrés par jour glissant (100 par défaut). Chaque scan
-  coûte une douzaine d'appels LLM facturés : au-delà du plafond l'API répond 503 au lieu de dépenser.
-- `OPENAI_BASE_URL` / `ANTHROPIC_BASE_URL` : à ne définir que pour passer par un revendeur
-  (OpenRouter par exemple). Les SDK lisent ces variables même sans code dédié, donc une valeur
-  oubliée ici redirige — et refacture — tous les scans. `/api/admin/stats` affiche l'hôte réellement
-  appelé dans `engine_endpoints`.
-- `ADMIN_STATS_TOKEN` : active `GET /api/admin/stats` (volume de scans, mode live/simulation,
-  rapports débloqués, budget du jour). Sans ce token, la route répond 404.
+- `CONTACT_RATE_LIMIT` : demandes Agency autorisées par IP et email sur la fenêtre (5 par défaut).
+- `CONTACT_RATE_WINDOW_SECONDS` : fenêtre de limitation des demandes Agency (24 heures par défaut).
+- `RESEND_API_KEY`, `RESEND_FROM_ADDRESS`, `NOTIFY_EMAIL` : envoi des rapports et des demandes Agency.
 
 Le webhook Stripe doit pointer vers :
 

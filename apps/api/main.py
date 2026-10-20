@@ -17,18 +17,13 @@ import httpx
 import stripe
 from fastapi import FastAPI, Header, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import AnyHttpUrl, BaseModel, Field
-from email_service import NOTIFY_ADDRESS, notify_scan_completed_email, report_ready_email, send_email
+from pydantic import AnyHttpUrl, BaseModel, ConfigDict, Field
+from email_service import NOTIFY_ADDRESS, agency_inquiry_email, notify_scan_completed_email, report_ready_email, send_email
 from site_audit import SiteAudit, UnsafeWebsiteUrl, audit_site, validate_public_http_url
 from sqlalchemy import create_engine, text
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "").strip()
 OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
-# Read explicitly rather than left to the SDK: both clients silently honour these
-# variables, so an OPENAI_BASE_URL pointing at a reseller (OpenRouter and the
-# like) reroutes -- and rebills -- every scan without appearing anywhere in code.
-OPENAI_BASE_URL = os.getenv("OPENAI_BASE_URL", "").strip()
-ANTHROPIC_BASE_URL = os.getenv("ANTHROPIC_BASE_URL", "").strip()
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY", "").strip()
 ANTHROPIC_MODEL = os.getenv("ANTHROPIC_MODEL", "claude-haiku-4-5")
 PERPLEXITY_API_KEY = os.getenv("PERPLEXITY_API_KEY", "").strip()
@@ -40,11 +35,30 @@ GA_API_SECRET = os.getenv("GA_API_SECRET", "").strip()
 DATABASE_URL = os.getenv("DATABASE_URL", "").strip()
 STRIPE_SECRET_KEY = os.getenv("STRIPE_SECRET_KEY", "").strip()
 STRIPE_PRICE_ID = os.getenv("STRIPE_PRICE_ID", "").strip()
+STRIPE_CHECKOUT_LOCALE = os.getenv("STRIPE_CHECKOUT_LOCALE", "en").strip() or "en"
 FRONTEND_URL = os.getenv("FRONTEND_URL", "https://getintheanswer.com").rstrip("/")
-LIVE_MODE = bool(OPENAI_API_KEY)
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "").strip()
+OPENROUTER_BASE_URL = os.getenv("OPENROUTER_BASE_URL", "https://openrouter.ai/api/v1")
+USE_OPENROUTER = bool(OPENROUTER_API_KEY)
+
+# One key, one bill, every engine. The ":online" suffix is the point: without
+# retrieval a model answers "I don't have real-time data" and names no local
+# business at all, so a scan measures training-data recall rather than what a
+# customer actually sees. Perplexity retrieves natively and needs no suffix.
+OR_CHATGPT_MODEL = os.getenv("OR_CHATGPT_MODEL", "openai/gpt-4o-mini:online")
+OR_CLAUDE_MODEL = os.getenv("OR_CLAUDE_MODEL", "anthropic/claude-haiku-4.5:online")
+OR_GEMINI_MODEL = os.getenv("OR_GEMINI_MODEL", "google/gemini-2.5-flash:online")
+OR_PERPLEXITY_MODEL = os.getenv("OR_PERPLEXITY_MODEL", "perplexity/sonar")
+# Query generation, mention extraction and recommendations are text tasks over
+# text we already hold: no retrieval, no ":online", cheaper call.
+OR_UTILITY_MODEL = os.getenv("OR_UTILITY_MODEL", "openai/gpt-4o-mini")
+
+# Model used for every non-engine LLM call.
+TEXT_MODEL = OR_UTILITY_MODEL if USE_OPENROUTER else OPENAI_MODEL
+
+LIVE_MODE = bool(OPENAI_API_KEY or OPENROUTER_API_KEY)
 BILLING_ENABLED = bool(STRIPE_SECRET_KEY and STRIPE_PRICE_ID)
 STRIPE_WEBHOOK_SECRET = os.getenv("STRIPE_WEBHOOK_SECRET", "").strip()
-ADMIN_STATS_TOKEN = os.getenv("ADMIN_STATS_TOKEN", "").strip()
 
 
 def env_int(name: str, default: int) -> int:
@@ -57,13 +71,13 @@ def env_int(name: str, default: int) -> int:
 SCAN_RATE_LIMIT = env_int("SCAN_RATE_LIMIT", 3)
 SCAN_RATE_WINDOW_SECONDS = env_int("SCAN_RATE_WINDOW_SECONDS", 24 * 60 * 60)
 MAX_CONCURRENT_SCANS = env_int("MAX_CONCURRENT_SCANS", 3)
-# Hard ceiling on scans started per rolling day. Each scan costs a dozen or more
-# billed LLM calls, and the per-client limits below cannot stop a caller that
-# rotates IPs and throwaway emails, so this is the backstop on the bill.
-DAILY_SCAN_LIMIT = env_int("DAILY_SCAN_LIMIT", 100)
 SCAN_GATE = asyncio.Semaphore(MAX_CONCURRENT_SCANS)
 SCAN_RATE_LOCK = asyncio.Lock()
 SCAN_ATTEMPTS: dict[str, deque[float]] = defaultdict(deque)
+CONTACT_RATE_LIMIT = env_int("CONTACT_RATE_LIMIT", 5)
+CONTACT_RATE_WINDOW_SECONDS = env_int("CONTACT_RATE_WINDOW_SECONDS", 24 * 60 * 60)
+CONTACT_RATE_LOCK = asyncio.Lock()
+CONTACT_ATTEMPTS: dict[str, deque[float]] = defaultdict(deque)
 SUBSCRIPTION_ACCESS_STATUSES = {"active", "trialing"}
 
 if STRIPE_SECRET_KEY:
@@ -132,20 +146,21 @@ def init_db() -> None:
             )
         )
         conn.execute(text("CREATE INDEX IF NOT EXISTS score_history_site_idx ON score_history (site_id, created_at)"))
-        conn.execute(
-            text(
-                "CREATE TABLE IF NOT EXISTS scan_attempts ("
-                "id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY, "
-                "bucket_key TEXT NOT NULL, "
-                "created_at TIMESTAMPTZ NOT NULL DEFAULT now())"
-            )
-        )
-        conn.execute(
-            text(
-                "CREATE INDEX IF NOT EXISTS scan_attempts_key_idx "
-                "ON scan_attempts (bucket_key, created_at)"
-            )
-        )
+
+
+OUTREACH_API_KEY = os.getenv("OUTREACH_API_KEY", "").strip()
+
+
+def is_internal_caller(http_request: Request) -> bool:
+    """True when the caller presents the internal prospecting key.
+
+    Guards both e-mail suppression and the un-redacted scan summary, so the
+    paywall stays intact for the public endpoint.
+    """
+    if not OUTREACH_API_KEY:
+        return False
+    presented = (http_request.headers.get("x-outreach-key") or "").strip()
+    return bool(presented) and secrets.compare_digest(presented, OUTREACH_API_KEY)
 
 
 class OnboardingRequest(BaseModel):
@@ -155,6 +170,22 @@ class OnboardingRequest(BaseModel):
     city: str = Field(min_length=2, max_length=100)
     industry: str = Field(min_length=2, max_length=120)
     services: Optional[str] = Field(default=None, max_length=500)
+    # Internal prospecting runs set this to False so that scanning a business we
+    # contacted ourselves never emails them from the transactional domain.
+    # Only honoured for callers presenting a valid X-Outreach-Key header.
+    notify: bool = True
+
+
+class AgencyInquiryRequest(BaseModel):
+    model_config = ConfigDict(str_strip_whitespace=True)
+
+    fullName: str = Field(min_length=2, max_length=100)
+    workEmail: str = Field(min_length=5, max_length=200, pattern=r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
+    companyName: str = Field(min_length=2, max_length=120)
+    websiteUrl: Optional[AnyHttpUrl] = None
+    locationCount: int = Field(ge=2, le=10000)
+    message: Optional[str] = Field(default=None, max_length=2000)
+    companyWebsite: Optional[str] = Field(default="", max_length=200)
 
 
 class QueryResult(BaseModel):
@@ -226,76 +257,6 @@ def client_identifier(http_request: Request) -> str:
     return "unknown"
 
 
-def enforce_scan_rate_limit_db(keys: set[str]) -> None:
-    """Rate limit backed by the database.
-
-    The in-memory buckets below reset on every restart and are per-instance, so a
-    deploy — or a second replica — hands a caller a fresh quota. Counting rows
-    keeps the window honest across both.
-    """
-    with db_engine.begin() as conn:
-        conn.execute(
-            text(
-                "DELETE FROM scan_attempts "
-                "WHERE created_at < now() - make_interval(secs => :window)"
-            ),
-            {"window": SCAN_RATE_WINDOW_SECONDS},
-        )
-        row = conn.execute(
-            text(
-                "SELECT bucket_key, count(*) AS attempts, min(created_at) AS oldest "
-                "FROM scan_attempts "
-                "WHERE bucket_key = ANY(:keys) "
-                "AND created_at > now() - make_interval(secs => :window) "
-                "GROUP BY bucket_key HAVING count(*) >= :limit "
-                "ORDER BY attempts DESC LIMIT 1"
-            ),
-            {
-                "keys": list(keys),
-                "window": SCAN_RATE_WINDOW_SECONDS,
-                "limit": SCAN_RATE_LIMIT,
-            },
-        ).mappings().first()
-
-        if row is not None:
-            elapsed = (datetime.now(timezone.utc) - row["oldest"]).total_seconds()
-            retry_after = max(1, round(SCAN_RATE_WINDOW_SECONDS - elapsed))
-            raise HTTPException(
-                status_code=429,
-                detail="Free scan limit reached. Please try again later.",
-                headers={"Retry-After": str(retry_after)},
-            )
-
-        conn.execute(
-            text("INSERT INTO scan_attempts (bucket_key) SELECT unnest(CAST(:keys AS text[]))"),
-            {"keys": list(keys)},
-        )
-
-
-def daily_scan_count() -> int:
-    """Scans started over the last rolling day, used as the spend ceiling."""
-    if db_engine is None:
-        cutoff = time.monotonic() - 24 * 60 * 60
-        while DAILY_SCAN_TIMES and DAILY_SCAN_TIMES[0] < cutoff:
-            DAILY_SCAN_TIMES.popleft()
-        return len(DAILY_SCAN_TIMES)
-
-    with db_engine.connect() as conn:
-        return conn.execute(
-            text("SELECT count(*) FROM reports WHERE created_at > now() - interval '24 hours'")
-        ).scalar_one()
-
-
-async def enforce_daily_scan_budget() -> None:
-    if await asyncio.to_thread(daily_scan_count) < DAILY_SCAN_LIMIT:
-        return
-    raise HTTPException(
-        status_code=503,
-        detail="The free scan quota for today is used up. Please try again tomorrow.",
-        headers={"Retry-After": "3600"},
-    )
-
-
 async def enforce_scan_rate_limit(http_request: Request, payload: OnboardingRequest) -> None:
     hostname = urlsplit(str(payload.websiteUrl)).hostname or "unknown"
     keys = {
@@ -303,11 +264,6 @@ async def enforce_scan_rate_limit(http_request: Request, payload: OnboardingRequ
         f"email:{payload.email.strip().lower()}",
         f"site:{hostname.rstrip('.').lower()}",
     }
-
-    if db_engine is not None:
-        await asyncio.to_thread(enforce_scan_rate_limit_db, keys)
-        return
-
     now = time.monotonic()
     cutoff = now - SCAN_RATE_WINDOW_SECONDS
 
@@ -327,7 +283,29 @@ async def enforce_scan_rate_limit(http_request: Request, payload: OnboardingRequ
             SCAN_ATTEMPTS[key].append(now)
 
 
-DAILY_SCAN_TIMES: deque[float] = deque()
+async def enforce_contact_rate_limit(http_request: Request, payload: AgencyInquiryRequest) -> None:
+    keys = {
+        f"ip:{client_identifier(http_request)}",
+        f"email:{payload.workEmail.strip().lower()}",
+    }
+    now = time.monotonic()
+    cutoff = now - CONTACT_RATE_WINDOW_SECONDS
+
+    async with CONTACT_RATE_LOCK:
+        for key in keys:
+            bucket = CONTACT_ATTEMPTS[key]
+            while bucket and bucket[0] < cutoff:
+                bucket.popleft()
+            if len(bucket) >= CONTACT_RATE_LIMIT:
+                retry_after = max(1, round(bucket[0] + CONTACT_RATE_WINDOW_SECONDS - now))
+                raise HTTPException(
+                    status_code=429,
+                    detail="Agency inquiry limit reached. Please try again later.",
+                    headers={"Retry-After": str(retry_after)},
+                )
+        for key in keys:
+            CONTACT_ATTEMPTS[key].append(now)
+
 
 # In-memory fallback when no database is configured (local development).
 MEMORY_DB: dict[str, DashboardData] = {}
@@ -655,7 +633,7 @@ async def generate_queries_llm(client, request: OnboardingRequest) -> Optional[L
     )
     try:
         response = await client.chat.completions.create(
-            model=OPENAI_MODEL,
+            model=TEXT_MODEL,
             messages=[
                 {"role": "system", "content": QUERY_GENERATION_SYSTEM_PROMPT},
                 {"role": "user", "content": f"{details}\n\nGenerate exactly 10 queries."},
@@ -755,7 +733,7 @@ async def extract_mentions_batch(client, brand: str, batch: List[tuple]) -> list
     )
     try:
         response = await client.chat.completions.create(
-            model=OPENAI_MODEL,
+            model=TEXT_MODEL,
             messages=[
                 {"role": "system", "content": EXTRACTION_SYSTEM_PROMPT},
                 {"role": "user", "content": f'Target brand: "{brand}"\n\n{numbered}'},
@@ -830,7 +808,7 @@ async def generate_recommendations_llm(
         )
     try:
         response = await client.chat.completions.create(
-            model=OPENAI_MODEL,
+            model=TEXT_MODEL,
             messages=[
                 {"role": "system", "content": RECOMMENDATION_SYSTEM_PROMPT},
                 {
@@ -866,24 +844,13 @@ async def generate_recommendations_llm(
         return None
 
 
-def provider_headers(source: str) -> dict:
-    """Label outgoing LLM calls so a reseller's dashboard can attribute them.
-
-    OpenRouter groups spend by the X-Title header; without it every request
-    from this API lands in a single "Unknown" bucket, indistinguishable from
-    any other tool sharing the key.
-    """
-    return {"HTTP-Referer": FRONTEND_URL, "X-Title": f"GetInTheAnswer {source}"}
-
-
-async def run_live_scan(
-    site_id: str, request: OnboardingRequest, source: str = "scan"
-) -> DashboardData:
+async def run_live_scan(site_id: str, request: OnboardingRequest) -> DashboardData:
     from openai import AsyncOpenAI
 
-    headers = provider_headers(source)
-    client = AsyncOpenAI(
-        api_key=OPENAI_API_KEY, base_url=OPENAI_BASE_URL or None, default_headers=headers
+    client = (
+        AsyncOpenAI(api_key=OPENROUTER_API_KEY, base_url=OPENROUTER_BASE_URL)
+        if USE_OPENROUTER
+        else AsyncOpenAI(api_key=OPENAI_API_KEY)
     )
     # The website audit runs alongside query generation — it never blocks the scan.
     site_task = asyncio.create_task(
@@ -896,59 +863,58 @@ async def run_live_scan(
     )
     queries = await generate_queries_llm(client, request) or build_queries(request)
 
-    # Each engine gets its own concurrency budget: Perplexity rate-limits hard
-    # above ~3 parallel requests, and a shared semaphore let it starve.
-    engines: list[tuple[str, str, object, int]] = [("ChatGPT", "openai", client, 5)]
-    if ANTHROPIC_API_KEY:
-        from anthropic import AsyncAnthropic
-
-        engines.append(
-            (
-                "Claude",
-                "anthropic",
-                AsyncAnthropic(
-                    api_key=ANTHROPIC_API_KEY,
-                    base_url=ANTHROPIC_BASE_URL or None,
-                    default_headers=headers,
-                ),
-                5,
-            )
-        )
-    if PERPLEXITY_API_KEY:
-        engines.append(
-            (
-                "Perplexity",
-                "perplexity",
-                AsyncOpenAI(
-                    api_key=PERPLEXITY_API_KEY,
-                    base_url="https://api.perplexity.ai",
-                    default_headers=headers,
-                ),
-                2,
-            )
-        )
+    # (label, kind, client, model, concurrency). Each engine gets its own
+    # concurrency budget: Perplexity rate-limits hard above ~3 parallel
+    # requests, and a shared semaphore let it starve.
+    engines: list[tuple[str, str, object, Optional[str], int]] = []
     gemini_client = None
-    if GEMINI_API_KEY:
-        gemini_client = httpx.AsyncClient(timeout=90)
-        engines.append(("Gemini", "gemini", gemini_client, 4))
 
-    async def guarded_ask(kind: str, engine_client, query: str, gate: asyncio.Semaphore) -> Optional[str]:
+    if USE_OPENROUTER:
+        # Every engine over one OpenAI-compatible endpoint, all web-grounded.
+        engines = [
+            ("ChatGPT", "openai", client, OR_CHATGPT_MODEL, 4),
+            ("Claude", "openai", client, OR_CLAUDE_MODEL, 4),
+            ("Gemini", "openai", client, OR_GEMINI_MODEL, 4),
+            ("Perplexity", "openai", client, OR_PERPLEXITY_MODEL, 2),
+        ]
+    else:
+        engines.append(("ChatGPT", "openai", client, OPENAI_MODEL, 5))
+        if ANTHROPIC_API_KEY:
+            from anthropic import AsyncAnthropic
+
+            engines.append(("Claude", "anthropic", AsyncAnthropic(api_key=ANTHROPIC_API_KEY), None, 5))
+        if PERPLEXITY_API_KEY:
+            engines.append(
+                (
+                    "Perplexity",
+                    "perplexity",
+                    AsyncOpenAI(api_key=PERPLEXITY_API_KEY, base_url="https://api.perplexity.ai"),
+                    PERPLEXITY_MODEL,
+                    2,
+                )
+            )
+        if GEMINI_API_KEY:
+            gemini_client = httpx.AsyncClient(timeout=90)
+            engines.append(("Gemini", "gemini", gemini_client, None, 4))
+
+    async def guarded_ask(
+        kind: str, engine_client, model: Optional[str], query: str, gate: asyncio.Semaphore
+    ) -> Optional[str]:
         async with gate:
             if kind == "anthropic":
                 return await ask_claude(engine_client, query)
-            if kind == "perplexity":
-                return await ask_engine(engine_client, query, model=PERPLEXITY_MODEL, attempts=3)
             if kind == "gemini":
                 return await ask_gemini(engine_client, query)
-            return await ask_engine(engine_client, query)
+            # Web-grounded calls are slower and rate-limit more, so retry twice.
+            return await ask_engine(engine_client, query, model=model or OPENAI_MODEL, attempts=3)
 
     labels: list[tuple[str, str]] = []
     tasks = []
-    for engine_name, kind, engine_client, concurrency in engines:
+    for engine_name, kind, engine_client, engine_model, concurrency in engines:
         gate = asyncio.Semaphore(concurrency)
         for query in queries:
             labels.append((engine_name, query))
-            tasks.append(guarded_ask(kind, engine_client, query, gate))
+            tasks.append(guarded_ask(kind, engine_client, engine_model, query, gate))
 
     try:
         answers = await asyncio.gather(*tasks)
@@ -1146,7 +1112,7 @@ async def rescan_report(site_id: str) -> None:
         industry=previous.industry,
         services=previous.services,
     )
-    dashboard = await run_live_scan(site_id, request, source="weekly rescan")
+    dashboard = await run_live_scan(site_id, request)
     dashboard.unlocked = True
     await asyncio.to_thread(save_report, dashboard, None)
     await asyncio.to_thread(record_history, dashboard)
@@ -1184,6 +1150,37 @@ def healthcheck():
     }
 
 
+@app.post("/api/contact")
+async def submit_agency_inquiry(payload: AgencyInquiryRequest, http_request: Request):
+    # Bots commonly fill every field. Return a normal-looking response without
+    # sending email so the endpoint cannot be used to create notification spam.
+    if payload.companyWebsite:
+        return {"status": "received"}
+
+    await enforce_contact_rate_limit(http_request, payload)
+    if not NOTIFY_ADDRESS:
+        raise HTTPException(status_code=503, detail="Contact service is not configured")
+
+    subject, html = agency_inquiry_email(
+        payload.fullName,
+        payload.workEmail,
+        payload.companyName,
+        str(payload.websiteUrl) if payload.websiteUrl else None,
+        payload.locationCount,
+        payload.message,
+    )
+    delivered = await send_email(
+        NOTIFY_ADDRESS,
+        subject,
+        html,
+        reply_to=payload.workEmail,
+    )
+    if not delivered:
+        raise HTTPException(status_code=502, detail="Agency inquiry could not be delivered")
+
+    return {"status": "received"}
+
+
 async def dispatch_scan_emails(dashboard: DashboardData, requester_email: str) -> None:
     # Fire-and-forget: a failed or slow email must never affect the scan
     # response, so this runs as a background task and swallows its own errors.
@@ -1209,8 +1206,9 @@ async def dispatch_scan_emails(dashboard: DashboardData, requester_email: str) -
 
 @app.post("/api/onboarding")
 async def onboard_site(payload: OnboardingRequest, http_request: Request):
-    await enforce_scan_rate_limit(http_request, payload)
-    await enforce_daily_scan_budget()
+    internal = is_internal_caller(http_request)
+    if not internal:
+        await enforce_scan_rate_limit(http_request, payload)
     try:
         await validate_public_http_url(str(payload.websiteUrl))
     except UnsafeWebsiteUrl as exc:
@@ -1226,7 +1224,6 @@ async def onboard_site(payload: OnboardingRequest, http_request: Request):
         ) from exc
 
     site_id = str(uuid.uuid4())
-    DAILY_SCAN_TIMES.append(time.monotonic())
     try:
         dashboard = None
         if LIVE_MODE:
@@ -1241,8 +1238,23 @@ async def onboard_site(payload: OnboardingRequest, http_request: Request):
         dashboard.unlocked = not BILLING_ENABLED
         save_report(dashboard, email=payload.email)
         record_history(dashboard)
-        asyncio.create_task(dispatch_scan_emails(dashboard, payload.email))
-        return {"site_id": site_id, "status": "completed", "mode": dashboard.mode}
+
+        if payload.notify or not internal:
+            asyncio.create_task(dispatch_scan_emails(dashboard, payload.email))
+
+        response = {"site_id": site_id, "status": "completed", "mode": dashboard.mode}
+        if internal:
+            # Real numbers, so outbound copy can state facts instead of guesses.
+            response["summary"] = {
+                "visibility_score": dashboard.visibility_score,
+                "brand_mentions": dashboard.brand_mentions,
+                "total_queries": dashboard.total_queries,
+                "top_competitor": dashboard.top_competitor,
+                "top_competitor_mentions": dashboard.top_competitor_mentions,
+                "engines_used": dashboard.engines_used,
+                "sample_query": dashboard.queries[0].query if dashboard.queries else None,
+            }
+        return response
     finally:
         SCAN_GATE.release()
 
@@ -1268,18 +1280,32 @@ def create_checkout(body: CheckoutRequest):
     if load_report(body.site_id) is None:
         raise HTTPException(status_code=404, detail="Report not found")
 
-    session = stripe.checkout.Session.create(
-        mode="subscription",
-        line_items=[{"price": STRIPE_PRICE_ID, "quantity": 1}],
-        success_url=(
-            f"{FRONTEND_URL}/api/checkout/confirm?site_id={body.site_id}"
-            "&session_id={CHECKOUT_SESSION_ID}"
-        ),
-        cancel_url=f"{FRONTEND_URL}/dashboard?site_id={body.site_id}",
-        customer_email=get_report_email(body.site_id),
-        metadata={"site_id": body.site_id, "ga_client_id": body.ga_client_id or ""},
-        allow_promotion_codes=True,
-    )
+    try:
+        session = stripe.checkout.Session.create(
+            mode="subscription",
+            line_items=[{"price": STRIPE_PRICE_ID, "quantity": 1}],
+            success_url=(
+                f"{FRONTEND_URL}/api/checkout/confirm?site_id={body.site_id}"
+                "&session_id={CHECKOUT_SESSION_ID}"
+            ),
+            cancel_url=f"{FRONTEND_URL}/dashboard?site_id={body.site_id}&checkout=cancelled",
+            client_reference_id=body.site_id,
+            customer_email=get_report_email(body.site_id),
+            locale=STRIPE_CHECKOUT_LOCALE,
+            automatic_tax={"enabled": True},
+            billing_address_collection="required",
+            branding_settings={
+                "display_name": "GetInTheAnswer",
+                "background_color": "#f8f8f3",
+                "button_color": "#173b35",
+                "font_family": "inter",
+            },
+            metadata={"site_id": body.site_id, "ga_client_id": body.ga_client_id or ""},
+            subscription_data={"metadata": {"site_id": body.site_id}},
+            allow_promotion_codes=True,
+        )
+    except stripe.error.StripeError as exc:
+        raise HTTPException(status_code=502, detail="Checkout is temporarily unavailable") from exc
     return {"url": session.url}
 
 
@@ -1378,7 +1404,14 @@ async def report_ga_purchase(client_id: str, session_id: str, amount_total: Opti
                                 "transaction_id": session_id,
                                 "value": (amount_total or 0) / 100,
                                 "currency": "USD",
-                                "items": [{"item_name": "GetInTheAnswer Pro Monitoring"}],
+                                "items": [
+                                    {
+                                        "item_id": "pro_monthly",
+                                        "item_name": "GetInTheAnswer Pro Monitoring",
+                                        "price": (amount_total or 0) / 100,
+                                        "quantity": 1,
+                                    }
+                                ],
                             },
                         }
                     ],
@@ -1441,151 +1474,6 @@ async def stripe_webhook(
             set_subscription_status_by_id(subscription, status)
 
     return {"received": True}
-
-
-def provider_endpoint(configured: str, default: str) -> str:
-    """Host actually billed for a provider, so a redirected base URL is visible."""
-    return urlsplit(configured or default).hostname or default
-
-
-@app.get("/api/admin/stats")
-def admin_stats(
-    days: int = 30,
-    limit: int = 20,
-    x_admin_token: Optional[str] = Header(default=None),
-):
-    """Usage counters for the operator: how many scans ran, by whom, and how many converted.
-
-    Disabled entirely unless ADMIN_STATS_TOKEN is set. A wrong or missing token
-    answers 404 rather than 401, so the route stays invisible to scanners.
-    """
-    if not ADMIN_STATS_TOKEN or not x_admin_token or not secrets.compare_digest(
-        x_admin_token, ADMIN_STATS_TOKEN
-    ):
-        raise HTTPException(status_code=404, detail="Not found")
-
-    days = min(max(days, 1), 365)
-    limit = min(max(limit, 1), 100)
-
-    # Which host each key is really billed against — a redirected base URL is
-    # otherwise invisible, since the SDKs pick it up from the environment.
-    engine_endpoints = {
-        "openai": provider_endpoint(OPENAI_BASE_URL, "https://api.openai.com/v1"),
-        "anthropic": provider_endpoint(ANTHROPIC_BASE_URL, "https://api.anthropic.com"),
-        "perplexity": "api.perplexity.ai" if PERPLEXITY_API_KEY else None,
-        "gemini": "generativelanguage.googleapis.com" if GEMINI_API_KEY else None,
-    }
-
-    if db_engine is None:
-        # Without DATABASE_URL, reports live in memory and vanish on every restart.
-        reports = list(MEMORY_DB.values())
-        return {
-            "persistent": False,
-            "warning": "DATABASE_URL is not configured: reports are kept in memory and lost on restart.",
-            "engine_endpoints": engine_endpoints,
-            "daily_scan_budget": {"used": daily_scan_count(), "limit": DAILY_SCAN_LIMIT},
-            "totals": {
-                "scans": len(reports),
-                "unique_emails": len(set(MEMORY_EMAILS.values())),
-                "live_scans": sum(1 for report in reports if report.mode == "live"),
-                "unlocked": sum(1 for report in reports if report.unlocked),
-            },
-            "recent_scans": [
-                {
-                    "email": MEMORY_EMAILS.get(report.site_id),
-                    "company_name": report.company_name,
-                    "city": report.city,
-                    "industry": report.industry,
-                    "mode": report.mode,
-                    "visibility_score": report.visibility_score,
-                    "unlocked": report.unlocked,
-                }
-                for report in reports[-limit:]
-            ],
-        }
-
-    with db_engine.connect() as conn:
-        totals = conn.execute(
-            text(
-                "SELECT count(*) AS scans, "
-                "count(DISTINCT email) AS unique_emails, "
-                "count(*) FILTER (WHERE payload->>'mode' = 'live') AS live_scans, "
-                "count(*) FILTER (WHERE unlocked) AS unlocked, "
-                "count(*) FILTER (WHERE subscription_status = 'active') AS active_subscriptions, "
-                "count(*) FILTER (WHERE created_at > now() - interval '7 days') AS scans_last_7_days, "
-                "count(*) FILTER (WHERE created_at > now() - make_interval(days => :days)) AS scans_in_window, "
-                "min(created_at) AS first_scan, max(created_at) AS last_scan "
-                "FROM reports"
-            ),
-            {"days": days},
-        ).mappings().one()
-
-        per_day = conn.execute(
-            text(
-                "SELECT date_trunc('day', created_at)::date AS day, count(*) AS scans, "
-                "count(DISTINCT email) AS unique_emails "
-                "FROM reports WHERE created_at > now() - make_interval(days => :days) "
-                "GROUP BY 1 ORDER BY 1 DESC"
-            ),
-            {"days": days},
-        ).mappings().all()
-
-        recent = conn.execute(
-            text(
-                "SELECT created_at, email, unlocked, subscription_status, "
-                "payload->>'company_name' AS company_name, "
-                "payload->>'city' AS city, "
-                "payload->>'industry' AS industry, "
-                "payload->>'mode' AS mode, "
-                "(payload->>'visibility_score')::int AS visibility_score "
-                "FROM reports ORDER BY created_at DESC LIMIT :limit"
-            ),
-            {"limit": limit},
-        ).mappings().all()
-
-        repeat_scans = conn.execute(
-            text(
-                "SELECT count(*) FROM (SELECT site_id FROM score_history "
-                "GROUP BY site_id HAVING count(*) > 1) AS tracked"
-            )
-        ).scalar_one()
-
-    return {
-        "persistent": True,
-        "window_days": days,
-        "engine_endpoints": engine_endpoints,
-        "daily_scan_budget": {"used": daily_scan_count(), "limit": DAILY_SCAN_LIMIT},
-        "totals": {
-            "scans": totals["scans"],
-            "unique_emails": totals["unique_emails"],
-            "live_scans": totals["live_scans"],
-            "unlocked": totals["unlocked"],
-            "active_subscriptions": totals["active_subscriptions"],
-            "scans_last_7_days": totals["scans_last_7_days"],
-            "scans_in_window": totals["scans_in_window"],
-            "reports_rescanned": repeat_scans,
-            "first_scan": totals["first_scan"].isoformat() if totals["first_scan"] else None,
-            "last_scan": totals["last_scan"].isoformat() if totals["last_scan"] else None,
-        },
-        "scans_per_day": [
-            {"day": row["day"].isoformat(), "scans": row["scans"], "unique_emails": row["unique_emails"]}
-            for row in per_day
-        ],
-        "recent_scans": [
-            {
-                "created_at": row["created_at"].isoformat() if row["created_at"] else None,
-                "email": row["email"],
-                "company_name": row["company_name"],
-                "city": row["city"],
-                "industry": row["industry"],
-                "mode": row["mode"],
-                "visibility_score": row["visibility_score"],
-                "unlocked": row["unlocked"],
-                "subscription_status": row["subscription_status"],
-            }
-            for row in recent
-        ],
-    }
 
 
 @app.get("/api/dashboard/{site_id}", response_model=DashboardData)

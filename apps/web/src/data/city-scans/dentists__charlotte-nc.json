@@ -1,0 +1,110 @@
+{
+  "industry": "dentists",
+  "city": "charlotte-nc",
+  "cityLabel": "Charlotte, NC",
+  "query": "Best cosmetic dentist for porcelain veneers in Charlotte, NC",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Advanced Dentistry of Blakeney",
+        "Charlotte Dental Arts",
+        "Porter Dental Group",
+        "Dentistry on Monroe",
+        "Cosmetic Dentistry of the Carolinas"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Advanced Dentistry of Blakeney",
+        "Porter Dental Group",
+        "Charlotte Dental Arts",
+        "Dentistry on Monroe"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Advanced Dentistry of Blakeney",
+        "Porter Dental Group",
+        "Charlotte Dental Arts",
+        "Cosmetic Dentistry of the Carolinas",
+        "Dentistry on Monroe"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Ballantyne Center for Dentistry",
+        "Pearl Charlotte",
+        "Advanced Dentistry of Blakeney",
+        "Charlotte Dental Arts",
+        "Inspired Dentistry of Charlotte"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Advanced Dentistry of Blakeney",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Charlotte Dental Arts",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Dentistry on Monroe",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Porter Dental Group",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Cosmetic Dentistry of the Carolinas",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Ballantyne Center for Dentistry",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Inspired Dentistry of Charlotte",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Pearl Charlotte",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 19
+}

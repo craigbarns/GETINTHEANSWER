@@ -1,0 +1,115 @@
+{
+  "industry": "electricians",
+  "city": "charlotte-nc",
+  "cityLabel": "Charlotte, NC",
+  "query": "Who is the best licensed electrician in Charlotte, NC for an emergency callout?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Travis Crawford Heating, Cooling & Plumbing",
+        "Mister Sparky® of Charlotte",
+        "Pokorski Electric",
+        "Mr. Electric of Charlotte Metro",
+        "ARC Electric Company"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Pokorski Electric",
+        "ARC Electric Company",
+        "LiveWire Electrical",
+        "Mr. Electric of Charlotte Metro",
+        "Travis Crawford Heating, Cooling & Plumbing"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Ewing Electric Co",
+        "Mr. Electric of Charlotte Metro",
+        "Mister Sparky® of Charlotte",
+        "ARC Electric Company",
+        "Pokorski Electric"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "LiveWire Electrical",
+        "Carolinas Current",
+        "Mr. Electric of Charlotte Metro",
+        "ARC Electric"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Mr. Electric of Charlotte Metro",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "ARC Electric Company",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Pokorski Electric",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "LiveWire Electrical",
+      "engines": [
+        "Claude",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Mister Sparky® of Charlotte",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Travis Crawford Heating, Cooling & Plumbing",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "ARC Electric",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Carolinas Current",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Ewing Electric Co",
+      "engines": [
+        "Gemini"
+      ]
+    }
+  ],
+  "totalNamed": 19
+}

@@ -1,0 +1,104 @@
+{
+  "industry": "electricians",
+  "city": "orlando-fl",
+  "cityLabel": "Orlando, FL",
+  "query": "Who is the best licensed electrician in Orlando, FL for an emergency callout?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Palmer Electric",
+        "Super Fast Electric",
+        "Brandon Electric",
+        "Pokorski Electric",
+        "Thomas Edison Electric"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Palmer Electric Company",
+        "Super Fast Electric",
+        "Brandon Electric",
+        "Thomas Edison Electric"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Palmer Electric Company",
+        "Thomas Edison Electric",
+        "Pokorski Electric",
+        "Super Fast Electric"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Palmer Electric Company",
+        "Mister Sparky",
+        "Happy Home Electric"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Palmer Electric Company",
+      "engines": [
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Super Fast Electric",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Thomas Edison Electric",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Brandon Electric",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Pokorski Electric",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Happy Home Electric",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Mister Sparky",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Palmer Electric",
+      "engines": [
+        "ChatGPT"
+      ]
+    }
+  ],
+  "totalNamed": 16
+}

@@ -1,0 +1,116 @@
+{
+  "industry": "plumbers",
+  "city": "tampa-fl",
+  "cityLabel": "Tampa, FL",
+  "query": "Who is the most reliable emergency plumber in Tampa, FL for a burst pipe?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Everyday Plumber",
+        "All Hours Plumber",
+        "Home Therapist Cooling, Heating, and Plumbing",
+        "Benjamin Franklin Plumbing",
+        "Grable Plumbing & Air"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Home Therapist Cooling, Heating, and Plumbing",
+        "EVERYDAYPLUMBER.com",
+        "All Hours Plumber",
+        "Grable Plumbing & Air"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Home Therapist Cooling, Heating, and Plumbing",
+        "EVERYDAYPLUMBER.com",
+        "TRP + Plumbing",
+        "All Hours Plumber",
+        "Grable Plumbing & Air"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Llona Plumbing",
+        "ABC Plumbing, Air & Heat",
+        "Roto-Rooter Tampa"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "All Hours Plumber",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Grable Plumbing & Air",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Home Therapist Cooling, Heating, and Plumbing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "EVERYDAYPLUMBER.com",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "ABC Plumbing, Air & Heat",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Benjamin Franklin Plumbing",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Everyday Plumber",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Llona Plumbing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Roto-Rooter Tampa",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "TRP + Plumbing",
+      "engines": [
+        "Gemini"
+      ]
+    }
+  ],
+  "totalNamed": 17
+}

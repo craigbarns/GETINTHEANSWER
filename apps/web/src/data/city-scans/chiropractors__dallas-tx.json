@@ -1,0 +1,106 @@
+{
+  "industry": "chiropractors",
+  "city": "dallas-tx",
+  "cityLabel": "Dallas, TX",
+  "query": "Best chiropractor in Dallas, TX for lower back pain and sciatica",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Moseley Chiropractic and Wellness Center",
+        "Dr. Mark Harris, DC",
+        "Woodward Chiropractic",
+        "Axis Chiropractic"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Moseley Chiropractic and Wellness Center",
+        "Dr. Mark Harris DC",
+        "Woodward Chiropractic",
+        "An Chiropractic & Spine Center",
+        "Hanks Chiropractic Center"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Dr. Mark Harris DC",
+        "Moseley Chiropractic and Wellness Center",
+        "Woodward Chiropractic",
+        "Hanks Chiropractic Center",
+        "Axis Chiropractic"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "North Dallas Chiropractic Clinic / Trinity Mills Chiropractic",
+        "CoreHealth Wellness",
+        "Woodward Chiropractic"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Woodward Chiropractic",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Dr. Mark Harris, DC",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Moseley Chiropractic and Wellness Center",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Axis Chiropractic",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Hanks Chiropractic Center",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "An Chiropractic & Spine Center",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "CoreHealth Wellness",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "North Dallas Chiropractic Clinic / Trinity Mills Chiropractic",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 17
+}

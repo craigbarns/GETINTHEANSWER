@@ -1,0 +1,116 @@
+{
+  "industry": "roofers",
+  "city": "chicago-il",
+  "cityLabel": "Chicago, IL",
+  "query": "Who is the best roofing contractor in Chicago, IL for storm damage repair?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "C&N Construction",
+        "Chicago Roofing Team",
+        "Green Roofing Chicago",
+        "American Premier Restoration & Remodeling"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "C&N Construction",
+        "Green Roofing Chicago",
+        "Chicago Roofing Team",
+        "Skyline Exteriors and Construction"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "C&N Construction",
+        "Green Roofing Chicago",
+        "Skyline Exteriors and Construction",
+        "Chicago Roofing Team"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Horizon Restoration",
+        "Champion Roofing",
+        "Expert Roofing",
+        "Showalter Roofing Service",
+        "Capital Roofing and Chicago Storm Restoration"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "C&N Construction",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Chicago Roofing Team",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Green Roofing Chicago",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Skyline Exteriors and Construction",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "American Premier Restoration & Remodeling",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Capital Roofing and Chicago Storm Restoration",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Champion Roofing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Expert Roofing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Horizon Restoration",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Showalter Roofing Service",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 17
+}

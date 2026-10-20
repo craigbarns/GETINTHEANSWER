@@ -1,0 +1,122 @@
+{
+  "industry": "roofers",
+  "city": "atlanta-ga",
+  "cityLabel": "Atlanta, GA",
+  "query": "Who is the best roofing contractor in Atlanta, GA for storm damage repair?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Dr. Roof",
+        "Mosaic Roofing",
+        "Peachtree Roofing and Exteriors",
+        "Atlanta Premier Roofing",
+        "Rosie's Roofing and Restoration"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Mosaic Roofing",
+        "DJK Restoration",
+        "Dr. Roof",
+        "Peachtree Roofing and Exteriors",
+        "Atlanta Premier Roofing"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Dr. Roof",
+        "Mosaic Roofing",
+        "Peachtree Roofing and Exteriors",
+        "Atlanta Premier Roofing",
+        "DJK Restoration"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Dr. Roof",
+        "Stone Mountain Roofing",
+        "Mosaic Roofing Company",
+        "Atlanta Metro Roofing",
+        "Colony Roofers"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Dr. Roof",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Atlanta Premier Roofing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Mosaic Roofing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Peachtree Roofing and Exteriors",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "DJK Restoration",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Atlanta Metro Roofing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Colony Roofers",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Mosaic Roofing Company",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Rosie's Roofing and Restoration",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Stone Mountain Roofing",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 20
+}

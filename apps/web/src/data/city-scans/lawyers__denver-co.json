@@ -1,0 +1,124 @@
+{
+  "industry": "lawyers",
+  "city": "denver-co",
+  "cityLabel": "Denver, CO",
+  "query": "Top personal injury lawyer in Denver, CO with a proven track record",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Tim Garvey",
+        "Fuicelli & Lee Injury Lawyers",
+        "The Denver Trial Lawyers",
+        "Chalat Law",
+        "Bachus & Schanker, LLC"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Stephen W. Wahlberg",
+        "Jim Chalat",
+        "Kyle Bachus"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "The Denver Trial Lawyers",
+        "Chalat Law",
+        "Bachus & Schanker, LLC",
+        "Fuicelli & Lee Injury Lawyers"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Dan Caplis",
+        "Jordan Law",
+        "Bachus & Schanker",
+        "Burg Simpson"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Bachus & Schanker, LLC",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Chalat Law",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Fuicelli & Lee Injury Lawyers",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "The Denver Trial Lawyers",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Bachus & Schanker",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Burg Simpson",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Dan Caplis",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Jim Chalat",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Jordan Law",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Kyle Bachus",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Stephen W. Wahlberg",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Tim Garvey",
+      "engines": [
+        "ChatGPT"
+      ]
+    }
+  ],
+  "totalNamed": 16
+}

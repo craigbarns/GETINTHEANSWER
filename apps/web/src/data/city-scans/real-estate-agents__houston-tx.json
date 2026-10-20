@@ -1,0 +1,135 @@
+{
+  "industry": "real-estate-agents",
+  "city": "houston-tx",
+  "cityLabel": "Houston, TX",
+  "query": "Who is the best real estate agent to sell a luxury home in Houston, TX?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Nan and Company Properties",
+        "Tahira Syed",
+        "JD Adamson",
+        "Clayton Katz",
+        "Michelle Hinton"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Nan and Company Properties",
+        "Compass Houston Luxury Advisors",
+        "Tahira Syed",
+        "JD Adamson",
+        "Compass Luxury Houston"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Nan and Company Properties",
+        "Compass Houston Luxury Advisors"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Clayton Katz",
+        "Martha Turner Sotheby’s International Realty",
+        "Greenwood King Properties",
+        "Caroline Bean",
+        "Marc Zachrau",
+        "Lisa Marie Sanders",
+        "Sahar Khatib"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Nan and Company Properties",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Clayton Katz",
+      "engines": [
+        "ChatGPT",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Compass Houston Luxury Advisors",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "JD Adamson",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Tahira Syed",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Caroline Bean",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Compass Luxury Houston",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Greenwood King Properties",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Lisa Marie Sanders",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Marc Zachrau",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Martha Turner Sotheby’s International Realty",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Michelle Hinton",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Sahar Khatib",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 19
+}

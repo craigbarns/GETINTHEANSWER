@@ -1,0 +1,159 @@
+{
+  "industry": "dentists",
+  "city": "las-vegas-nv",
+  "cityLabel": "Las Vegas, NV",
+  "query": "Best cosmetic dentist for porcelain veneers in Las Vegas, NV",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Dr. Todd Snyder, DDS",
+        "Dr. Marianne Cohan, AACD Accredited",
+        "Dr. Douglas Sandquist, DDS",
+        "Dr. Pouyan Shahrokh, DMD",
+        "Vegas Smile Suite"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Summerlin Dental Solutions",
+        "Premier Cosmetic Dentistry",
+        "Custom Dental Solution",
+        "Sandquist Dentistry",
+        "Dental Atelier"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Summerlin Dental Solutions",
+        "Dr. Todd Snyder, DDS",
+        "Dental Atelier",
+        "Sandquist Dentistry",
+        "Las Vegas Dental Group"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Smile Design Center LV",
+        "True Dentistry",
+        "Nevada Dental Esthetics",
+        "Sedona Ranch Dental & Orthodontics",
+        "Naylor Family Dental",
+        "Gardens Cosmetic & Family Dentistry"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Dental Atelier",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Dr. Todd Snyder, DDS",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Sandquist Dentistry",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Summerlin Dental Solutions",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Custom Dental Solution",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Dr. Douglas Sandquist, DDS",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Dr. Marianne Cohan, AACD Accredited",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Dr. Pouyan Shahrokh, DMD",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Gardens Cosmetic & Family Dentistry",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Las Vegas Dental Group",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Naylor Family Dental",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Nevada Dental Esthetics",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Premier Cosmetic Dentistry",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Sedona Ranch Dental & Orthodontics",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Smile Design Center LV",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "True Dentistry",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Vegas Smile Suite",
+      "engines": [
+        "ChatGPT"
+      ]
+    }
+  ],
+  "totalNamed": 21
+}

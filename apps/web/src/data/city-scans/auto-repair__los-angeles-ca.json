@@ -1,0 +1,117 @@
+{
+  "industry": "auto-repair",
+  "city": "los-angeles-ca",
+  "cityLabel": "Los Angeles, CA",
+  "query": "Best independent auto repair shop in Los Angeles, CA for European cars",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "John’s European Auto Service",
+        "European Motors",
+        "Ingolstadt West",
+        "Otto's European Auto",
+        "Armando’s European Automotive"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "John's European Auto Service",
+        "Euro-Tech Motors",
+        "Ingolstadt West",
+        "Automed Euro",
+        "Otto's European Auto"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "John's European Auto Service",
+        "Ingolstadt West",
+        "European Motors",
+        "Automed Euro",
+        "Otto's European Auto"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Automed Euro",
+        "Euro-Tech Motors",
+        "Otto’s European Auto",
+        "D&A European Car Care",
+        "West Coast Tire & Service"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Otto's European Auto",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Automed Euro",
+      "engines": [
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Ingolstadt West",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "John’s European Auto Service",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Euro-Tech Motors",
+      "engines": [
+        "Claude",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "European Motors",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Armando’s European Automotive",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "D&A European Car Care",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "West Coast Tire & Service",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 20
+}

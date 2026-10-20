@@ -1,0 +1,132 @@
+{
+  "industry": "roofers",
+  "city": "portland-or",
+  "cityLabel": "Portland, OR",
+  "query": "Who is the best roofing contractor in Portland, OR for storm damage repair?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Elements Roofing",
+        "Greater Purpose Construction",
+        "ELM Construction",
+        "IronHead Roofing",
+        "Western Pacific Roofing"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "ELM Construction",
+        "Greater Purpose Roofing",
+        "Elements Roofing",
+        "Western Pacific Roofing",
+        "IronHead Roofing"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Elements Roofing",
+        "Greater Purpose",
+        "ELM Construction",
+        "IronHead Roofing",
+        "Western Pacific Roofing"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Interstate Roofing",
+        "Roof & Nail",
+        "Sawtooth Roofing",
+        "Clear Vision Construction LLC",
+        "Kenai Construction"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "ELM Construction",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Elements Roofing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "IronHead Roofing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Western Pacific Roofing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Clear Vision Construction LLC",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Greater Purpose",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Greater Purpose Construction",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Greater Purpose Roofing",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Interstate Roofing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Kenai Construction",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Roof & Nail",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Sawtooth Roofing",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 20
+}

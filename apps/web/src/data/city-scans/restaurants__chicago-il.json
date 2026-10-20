@@ -1,0 +1,115 @@
+{
+  "industry": "restaurants",
+  "city": "chicago-il",
+  "cityLabel": "Chicago, IL",
+  "query": "Best romantic Italian restaurant with outdoor seating in Chicago, IL",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "A Tavola",
+        "Acanto"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "A Tavola",
+        "Acanto Restaurant + Wine Bar",
+        "Adalina"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "A Tavola",
+        "Acanto Restaurant + Wine Bar",
+        "Carmine's Italian Restaurant",
+        "Quartino Ristorante",
+        "Pizzeria Portofino"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Piccolo Sogno",
+        "Ciccio Mio",
+        "Gibsons Italia",
+        "Sapori Trattoria"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "A Tavola",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Acanto Restaurant + Wine Bar",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Acanto",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Adalina",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Carmine's Italian Restaurant",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Ciccio Mio",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Gibsons Italia",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Piccolo Sogno",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Pizzeria Portofino",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Quartino Ristorante",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Sapori Trattoria",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 14
+}

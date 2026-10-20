@@ -1,0 +1,111 @@
+{
+  "industry": "chiropractors",
+  "city": "orlando-fl",
+  "cityLabel": "Orlando, FL",
+  "query": "Best chiropractor in Orlando, FL for lower back pain and sciatica",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Orlando Spine and Wellness Center",
+        "Allcare Medical & Injury",
+        "ProSpine Orlando",
+        "Bellomo Family Chiropractic"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Orlando Spine and Wellness Center",
+        "ProSpine Orlando",
+        "Bellomo Family Chiropractic Life Center",
+        "Allcare Medical & Injury"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Orlando Spine and Wellness Center",
+        "Allcare Medical & Injury",
+        "ProSpine Orlando",
+        "Bellomo Family Chiropractic Life Center"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Orlando Spine and Wellness Center",
+        "Pavlik Health + Wellness",
+        "New Horizon Wellness Center",
+        "Better Care Chiropractic Center",
+        "Orange Wellness"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Orlando Spine and Wellness Center",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Allcare Medical & Injury",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "ProSpine Orlando",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Bellomo Family Chiropractic Life Center",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Bellomo Family Chiropractic",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Better Care Chiropractic Center",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "New Horizon Wellness Center",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Orange Wellness",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Pavlik Health + Wellness",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 17
+}

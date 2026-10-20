@@ -1,0 +1,120 @@
+{
+  "industry": "pest-control",
+  "city": "seattle-wa",
+  "cityLabel": "Seattle, WA",
+  "query": "Best pest control company in Seattle, WA for a termite infestation",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Moxie Pest Control",
+        "Orkin",
+        "Redi National Pest Eliminators",
+        "Bulwark Exterminating",
+        "Western Exterminator"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Redi National Pest",
+        "Moxie Pest Control",
+        "Orkin"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Moxie Pest Control",
+        "Orkin",
+        "Redi National Pest Eliminators",
+        "Western Exterminator",
+        "Bulwark Exterminating"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Cascade Pest Control",
+        "Moxie Pest Control",
+        "Alta Pest Control",
+        "Terminix",
+        "Eastside Exterminators",
+        "Bulwark Exterminating"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Moxie Pest Control",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Bulwark Exterminating",
+      "engines": [
+        "ChatGPT",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Orkin",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Redi National Pest Eliminators",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Western Exterminator",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Alta Pest Control",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Cascade Pest Control",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Eastside Exterminators",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Redi National Pest",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Terminix",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 19
+}

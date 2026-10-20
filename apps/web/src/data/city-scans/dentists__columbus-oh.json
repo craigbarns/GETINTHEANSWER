@@ -1,0 +1,101 @@
+{
+  "industry": "dentists",
+  "city": "columbus-oh",
+  "cityLabel": "Columbus, OH",
+  "query": "Best cosmetic dentist for porcelain veneers in Columbus, OH",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Schindler Smile Studio",
+        "Firouzian Dentistry",
+        "Blank Dental Group",
+        "Polaris Dental Care"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Schindler Smile Studio",
+        "Polaris Dental Care",
+        "Firouzian Dentistry",
+        "Blank Dental Group"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Schindler Smile Studio",
+        "Firouzian Dentistry",
+        "Blank Dental Group",
+        "Polaris Dental Care"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Schindler Smile Studio",
+        "New Albany Elite Dental",
+        "Wooten Dentistry",
+        "Polaris Dental Care",
+        "iSmile Dental Group"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Polaris Dental Care",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Schindler Smile Studio",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Blank Dental Group",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Firouzian Dentistry",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "New Albany Elite Dental",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Wooten Dentistry",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "iSmile Dental Group",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 17
+}

@@ -1,0 +1,123 @@
+{
+  "industry": "lawyers",
+  "city": "atlanta-ga",
+  "cityLabel": "Atlanta, GA",
+  "query": "Top personal injury lawyer in Atlanta, GA with a proven track record",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Goldstein Hayes, LLC",
+        "Rafi Law Firm",
+        "Suggs Law Firm P.C",
+        "McArthur Law Firm",
+        "Spaulding Injury Law"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "McArthur Law Firm",
+        "Goldstein Hayes, LLC",
+        "Rafi Law Firm"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "LAW & MORAN",
+        "McArthur Law Firm",
+        "Goldstein Hayes, LLC",
+        "Rafi Law Firm",
+        "Spaulding Injury Law"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "The Baer Law Firm",
+        "Tobin Injury Law",
+        "Hammers Law Firm",
+        "Scott Pryor Law Group",
+        "Stewart Miller Simmons Trial Attorneys"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Goldstein Hayes, LLC",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "McArthur Law Firm",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Rafi Law Firm",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Spaulding Injury Law",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Hammers Law Firm",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "LAW & MORAN",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Scott Pryor Law Group",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Stewart Miller Simmons Trial Attorneys",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Suggs Law Firm P.C",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "The Baer Law Firm",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Tobin Injury Law",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 18
+}

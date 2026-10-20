@@ -1,0 +1,109 @@
+{
+  "industry": "restaurants",
+  "city": "denver-co",
+  "cityLabel": "Denver, CO",
+  "query": "Best romantic Italian restaurant with outdoor seating in Denver, CO",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Venice Ristorante & Wine Bar",
+        "Cattivella",
+        "Tavernetta",
+        "Bruno's Italian Bistro",
+        "DiCicco's"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Osteria Marco",
+        "Cattivella"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Cattivella",
+        "Osteria Marco",
+        "Bruno's Italian Bistro",
+        "Venice Ristorante",
+        "Tavernetta"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Tavernetta",
+        "Odyssey Italian Restaurant",
+        "Quality Italian",
+        "Venice Ristorante"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Cattivella",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Tavernetta",
+      "engines": [
+        "ChatGPT",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Bruno's Italian Bistro",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Osteria Marco",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Venice Ristorante",
+      "engines": [
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "DiCicco's",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Odyssey Italian Restaurant",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Quality Italian",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Venice Ristorante & Wine Bar",
+      "engines": [
+        "ChatGPT"
+      ]
+    }
+  ],
+  "totalNamed": 16
+}

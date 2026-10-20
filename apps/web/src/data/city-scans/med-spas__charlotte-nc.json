@@ -1,0 +1,130 @@
+{
+  "industry": "med-spas",
+  "city": "charlotte-nc",
+  "cityLabel": "Charlotte, NC",
+  "query": "Best med spa in Charlotte, NC for Botox and dermal fillers",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Charlotte Medical Aesthetics",
+        "Genevieve & Co",
+        "Fanous MedSpa",
+        "VIO Med Spa",
+        "Beautify Charlotte"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Charlotte Medical Aesthetics",
+        "Genevieve & Co",
+        "Fanous MedSpa",
+        "Ageless Remedies"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Charlotte Medical Aesthetics",
+        "Fanous MedSpa",
+        "Genevieve & Co",
+        "The Modern Aesthetic Med Spa",
+        "VIO Med Spa Charlotte"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Miramae Medical Skin Care Studio",
+        "SkinSpirit Charlotte",
+        "OVME South End Charlotte",
+        "Fanous MedSpa",
+        "Aesthetica Med Spa"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Fanous MedSpa",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Charlotte Medical Aesthetics",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Genevieve & Co",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Aesthetica Med Spa",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Ageless Remedies",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Beautify Charlotte",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Miramae Medical Skin Care Studio",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "OVME South End Charlotte",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "SkinSpirit Charlotte",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "The Modern Aesthetic Med Spa",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "VIO Med Spa",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "VIO Med Spa Charlotte",
+      "engines": [
+        "Gemini"
+      ]
+    }
+  ],
+  "totalNamed": 19
+}

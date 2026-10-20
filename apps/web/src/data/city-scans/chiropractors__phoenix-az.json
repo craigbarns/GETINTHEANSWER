@@ -1,0 +1,115 @@
+{
+  "industry": "chiropractors",
+  "city": "phoenix-az",
+  "cityLabel": "Phoenix, AZ",
+  "query": "Best chiropractor in Phoenix, AZ for lower back pain and sciatica",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Hansen Chiropractic",
+        "Hatlen Family Chiropractic",
+        "Gonstead Physical Medicine",
+        "Desert Shadows Chiropractic",
+        "Dr. Douglas Tanner, Chiropractor"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Gonstead Physical Medicine",
+        "Hatlen Family Chiropractic",
+        "Hansen Chiropractic",
+        "Dr. Douglas Tanner, Chiropractor"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Hansen Chiropractic",
+        "Hatlen Family Chiropractic",
+        "Gonstead Physical Medicine",
+        "Desert Shadows Chiropractic",
+        "Dr. Douglas Tanner, Chiropractor"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Gonstead Physical Medicine",
+        "Desert Valley Chiropractic",
+        "Mountain Park Chiropractic",
+        "Arizona Life Chiropractic Center",
+        "Tramonto Chiropractic"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Gonstead Physical Medicine",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Dr. Douglas Tanner, Chiropractor",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Hansen Chiropractic",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Hatlen Family Chiropractic",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Desert Shadows Chiropractic",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Arizona Life Chiropractic Center",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Desert Valley Chiropractic",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Mountain Park Chiropractic",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Tramonto Chiropractic",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 19
+}

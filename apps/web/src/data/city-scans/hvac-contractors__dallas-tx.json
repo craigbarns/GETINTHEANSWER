@@ -1,0 +1,131 @@
+{
+  "industry": "hvac-contractors",
+  "city": "dallas-tx",
+  "cityLabel": "Dallas, TX",
+  "query": "Who offers 24/7 emergency AC repair near me in Dallas, TX?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Ellis AC & Furnace Repair",
+        "Total Air & Heat",
+        "Berkeys",
+        "Rescue Air and Plumbing",
+        "Willard Cooling, Heating, Plumbing, & Electrical"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Ellis AC & Furnace Repair",
+        "Total Air & Heat",
+        "Cornerstone HVAC Dallas",
+        "Rescue Air and Plumbing",
+        "Willard Cooling, Heating, Plumbing, & Electrical"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Ellis AC & Furnace Repair",
+        "Total Air & Heat",
+        "Willard Cooling, Heating, Plumbing, & Electrical",
+        "Cornerstone HVAC Dallas"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Rescue Air and Plumbing",
+        "Willard Cooling, Heating, Plumbing, & Electrical",
+        "Jade Air",
+        "Elite Clean & Restoration",
+        "Proactive Air Conditioning",
+        "Berkeys",
+        "billyGO",
+        "Harlen Johnson HVAC, Plumbing & Electrical"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Willard Cooling, Heating, Plumbing, & Electrical",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Ellis AC & Furnace Repair",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Rescue Air and Plumbing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Total Air & Heat",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Berkeys",
+      "engines": [
+        "ChatGPT",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Cornerstone HVAC Dallas",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Elite Clean & Restoration",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Harlen Johnson HVAC, Plumbing & Electrical",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Jade Air",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Proactive Air Conditioning",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "billyGO",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 22
+}

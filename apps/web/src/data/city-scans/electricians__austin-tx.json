@@ -1,0 +1,140 @@
+{
+  "industry": "electricians",
+  "city": "austin-tx",
+  "cityLabel": "Austin, TX",
+  "query": "Who is the best licensed electrician in Austin, TX for an emergency callout?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Malco Electric",
+        "Keil Electric",
+        "Pokorski Electric",
+        "Mr. Electric of Austin",
+        "Astral Electric"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Mister Sparky",
+        "Malco Electric",
+        "Keil Electric Austin",
+        "Pokorski Electric"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Keil Electric Austin",
+        "Mr. Electric of Austin",
+        "Dial One Electrical Services",
+        "Pokorski Electric",
+        "Irwin Electric"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "DC Electric",
+        "Austin Electricians",
+        "Mister Sparky Austin",
+        "Texas Electric and Light",
+        "Global Electric Services"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Pokorski Electric",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Keil Electric Austin",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Malco Electric",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Mr. Electric of Austin",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Astral Electric",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Austin Electricians",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "DC Electric",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Dial One Electrical Services",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Global Electric Services",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Irwin Electric",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Keil Electric",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Mister Sparky",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Mister Sparky Austin",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Texas Electric and Light",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 19
+}

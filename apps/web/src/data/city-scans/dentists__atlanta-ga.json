@@ -1,0 +1,103 @@
+{
+  "industry": "dentists",
+  "city": "atlanta-ga",
+  "cityLabel": "Atlanta, GA",
+  "query": "Best cosmetic dentist for porcelain veneers in Atlanta, GA",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Goldstein Dental Center",
+        "Cosmetic Dentistry of Atlanta",
+        "Flax Dental",
+        "Atlanta Smiles",
+        "BrightWorks Dentistry"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Goldstein Dental Center",
+        "Flax Dental",
+        "Cosmetic Dentistry of Atlanta",
+        "Atlanta Smiles",
+        "BrightWorks Dentistry"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Goldstein Dental Center",
+        "Cosmetic Dentistry of Atlanta",
+        "Flax Dental",
+        "BrightWorks Dentistry"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Dunson Dental Design",
+        "Atlanta Dental Studio",
+        "Atlanta Smiles",
+        "Goldstein Dental Center"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Goldstein Dental Center",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Atlanta Smiles",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "BrightWorks Dentistry",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Cosmetic Dentistry of Atlanta",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Flax Dental",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Atlanta Dental Studio",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Dunson Dental Design",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 18
+}

@@ -1,0 +1,122 @@
+{
+  "industry": "med-spas",
+  "city": "san-antonio-tx",
+  "cityLabel": "San Antonio, TX",
+  "query": "Best med spa in San Antonio, TX for Botox and dermal fillers",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "My Best Face Forward Med Spa (MYBFF Med Spa)",
+        "Jovem Med Spa",
+        "Skin by Design Dermatology",
+        "Stadia Med Spa",
+        "Med Spa of San Antonio"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "My Best Face Forward Med Spa (MYBFF Med Spa)",
+        "Skin by Design Dermatology",
+        "Jovem Med Spa",
+        "Medspa of San Antonio",
+        "The Injection Room"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Skin by Design Dermatology",
+        "Stadia Med Spa",
+        "My Best Face Forward Med Spa (MYBFF Med Spa)",
+        "Jovem Med Spa",
+        "Medspa of San Antonio"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "The Lotus Aesthetics And Wellness",
+        "Jules Aesthetics & Wellness",
+        "Magnolia Medical & Aesthetics",
+        "My Best Face Forward Med Spa",
+        "The Injection Room"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Jovem Med Spa",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Med Spa of San Antonio",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "My Best Face Forward Med Spa (MYBFF Med Spa)",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Skin by Design Dermatology",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Stadia Med Spa",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "The Injection Room",
+      "engines": [
+        "Claude",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Jules Aesthetics & Wellness",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Magnolia Medical & Aesthetics",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "My Best Face Forward Med Spa",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "The Lotus Aesthetics And Wellness",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 20
+}

@@ -1,0 +1,109 @@
+{
+  "industry": "restaurants",
+  "city": "portland-or",
+  "cityLabel": "Portland, OR",
+  "query": "Best romantic Italian restaurant with outdoor seating in Portland, OR",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Il Terrazzo",
+        "Tartuca",
+        "Artigiano",
+        "Piattino"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Il Terrazzo",
+        "Tartuca Restaurant",
+        "Piattino"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Il Terrazzo",
+        "Tartuca",
+        "Piattino",
+        "Portofino Cafe Italiano"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Nostrana",
+        "Tartuca",
+        "Il Terrazzo",
+        "Lucca",
+        "Piazza Italia"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Il Terrazzo",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Piattino",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Tartuca",
+      "engines": [
+        "ChatGPT",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Artigiano",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Lucca",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Nostrana",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Piazza Italia",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Portofino Cafe Italiano",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Tartuca Restaurant",
+      "engines": [
+        "Claude"
+      ]
+    }
+  ],
+  "totalNamed": 16
+}

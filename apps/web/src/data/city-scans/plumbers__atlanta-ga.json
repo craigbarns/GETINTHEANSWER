@@ -1,0 +1,109 @@
+{
+  "industry": "plumbers",
+  "city": "atlanta-ga",
+  "cityLabel": "Atlanta, GA",
+  "query": "Who is the most reliable emergency plumber in Atlanta, GA for a burst pipe?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Roto-Rooter",
+        "Peach Plumbing & Drain",
+        "R.S. Andrews",
+        "The Plumbers Guild"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Plumb Works Inc",
+        "R.S. Andrews",
+        "Roto-Rooter"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Roto-Rooter",
+        "R.S. Andrews",
+        "Mr. Rooter Plumbing of Atlanta",
+        "Peach Plumbing & Drain",
+        "Atlanta Plumbing Plus"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Roto-Rooter",
+        "Plumb Works Inc",
+        "Allgood Plumbing",
+        "Atlanta Plumbing & Drain"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Roto-Rooter",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "R.S. Andrews",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Peach Plumbing & Drain",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Plumb Works Inc",
+      "engines": [
+        "Claude",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Allgood Plumbing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Atlanta Plumbing & Drain",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Atlanta Plumbing Plus",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Mr. Rooter Plumbing of Atlanta",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "The Plumbers Guild",
+      "engines": [
+        "ChatGPT"
+      ]
+    }
+  ],
+  "totalNamed": 16
+}

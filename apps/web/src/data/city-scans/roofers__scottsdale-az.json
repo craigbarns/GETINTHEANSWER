@@ -1,0 +1,107 @@
+{
+  "industry": "roofers",
+  "city": "scottsdale-az",
+  "cityLabel": "Scottsdale, AZ",
+  "query": "Who is the best roofing contractor in Scottsdale, AZ for storm damage repair?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Lyons Roofing",
+        "XRP Roofing",
+        "Zona Roofing",
+        "All Storm Roofing"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "HailCo Roofing",
+        "XRP Roofing",
+        "Lyons Roofing"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "XRP Roofing",
+        "All Storm Roofing",
+        "Zona Roofing"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Canyon State Roofing & Consulting",
+        "Phoenix Roofing & Repair",
+        "Behmer Roofing",
+        "Triumph Roofing",
+        "Hailco Roofing"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "XRP Roofing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "All Storm Roofing",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "HailCo Roofing",
+      "engines": [
+        "Claude",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Lyons Roofing",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Zona Roofing",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Behmer Roofing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Canyon State Roofing & Consulting",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Phoenix Roofing & Repair",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Triumph Roofing",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 15
+}

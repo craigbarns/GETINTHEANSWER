@@ -1,0 +1,132 @@
+{
+  "industry": "auto-repair",
+  "city": "tampa-fl",
+  "cityLabel": "Tampa, FL",
+  "query": "Best independent auto repair shop in Tampa, FL for European cars",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Heights Auto Imports",
+        "Fox Motors",
+        "EuroStar Motors",
+        "Rennen Imports",
+        "European Autohaus"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Fox Motors BMW & Porsche Service",
+        "Heights Auto Imports",
+        "Rennen Imports",
+        "EuroStar Motors"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Heights Auto Imports",
+        "Fox Motors Bimmer Specialists",
+        "Rennen Imports",
+        "Just German Automotive",
+        "EuroStar Motors"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Heights Auto Imports",
+        "DAS Autowerks",
+        "Euro Car Service",
+        "Rennen Imports",
+        "Ludek’s European Auto",
+        "German Auto Service"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Heights Auto Imports",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Rennen Imports",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "EuroStar Motors",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "DAS Autowerks",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Euro Car Service",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "European Autohaus",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Fox Motors",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Fox Motors BMW & Porsche Service",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Fox Motors Bimmer Specialists",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "German Auto Service",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Just German Automotive",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Ludek’s European Auto",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 20
+}

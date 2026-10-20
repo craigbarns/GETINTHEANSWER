@@ -1,0 +1,106 @@
+{
+  "industry": "pest-control",
+  "city": "san-antonio-tx",
+  "cityLabel": "San Antonio, TX",
+  "query": "Best pest control company in San Antonio, TX for a termite infestation",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Accurate Pest Control",
+        "Orkin",
+        "Truly Nolen",
+        "Moxie Pest Control",
+        "Massey Services"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Accurate Pest Control",
+        "Orkin",
+        "Moxie Pest Control",
+        "Truly Nolen"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Accurate Pest Control",
+        "Terminix",
+        "Truly Nolen Pest & Termite Control",
+        "Moxie Pest Control",
+        "Orkin"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "ABC Home & Commercial Services",
+        "Terminix",
+        "Orkin"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Orkin",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Accurate Pest Control",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Moxie Pest Control",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Terminix",
+      "engines": [
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Truly Nolen",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "ABC Home & Commercial Services",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Massey Services",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Truly Nolen Pest & Termite Control",
+      "engines": [
+        "Gemini"
+      ]
+    }
+  ],
+  "totalNamed": 17
+}

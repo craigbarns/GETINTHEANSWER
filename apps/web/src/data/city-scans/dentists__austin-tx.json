@@ -1,0 +1,132 @@
+{
+  "industry": "dentists",
+  "city": "austin-tx",
+  "cityLabel": "Austin, TX",
+  "query": "Best cosmetic dentist for porcelain veneers in Austin, TX",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "The Cosmetic Dentists of Austin",
+        "Contemporary Cosmetic Dentistry",
+        "Austin Dental Spa - Dr. Mark Sweeney",
+        "Austin Cosmetic Dentistry - Dr. Tejas Patel",
+        "Austin City Dental - Dr. Steve Cook and Dr. Melissa Hernandez"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Austin Dental Spa",
+        "Contemporary Cosmetic Dentistry",
+        "Austin Artistic Dental",
+        "Austin Cosmetic Dentistry"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Austin Dental Spa",
+        "Austin Cosmetic Dentistry",
+        "Contemporary Cosmetic Dentistry",
+        "Austin Prosthodontics",
+        "Austin City Dental"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Austin Cosmetic Dentistry",
+        "The Cosmetic Dentists of Austin",
+        "Austin Dental Spa",
+        "BridgeView Dental",
+        "Austin City Dental",
+        "Walden Dental"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Austin Cosmetic Dentistry",
+      "engines": [
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Austin Dental Spa",
+      "engines": [
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Contemporary Cosmetic Dentistry",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Austin City Dental",
+      "engines": [
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "The Cosmetic Dentists of Austin",
+      "engines": [
+        "ChatGPT",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Austin Artistic Dental",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Austin City Dental - Dr. Steve Cook and Dr. Melissa Hernandez",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Austin Cosmetic Dentistry - Dr. Tejas Patel",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Austin Dental Spa - Dr. Mark Sweeney",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Austin Prosthodontics",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "BridgeView Dental",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Walden Dental",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 20
+}

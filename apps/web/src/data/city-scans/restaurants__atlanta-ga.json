@@ -1,0 +1,112 @@
+{
+  "industry": "restaurants",
+  "city": "atlanta-ga",
+  "cityLabel": "Atlanta, GA",
+  "query": "Best romantic Italian restaurant with outdoor seating in Atlanta, GA",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "La Grotta Ristorante Italiano",
+        "Amalfi Cucina + Mercato",
+        "Gianni & Mac’s Ristorante Piazza Nostra",
+        "Pendolino"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "La Grotta Ristorante Italiano",
+        "Amalfi Cucina + Mercato",
+        "Valenza"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "La Grotta Ristorante Italiano",
+        "The Americano",
+        "Amalfi Cucina + Mercato / Buckhead",
+        "Pendolino"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Sotto Sotto",
+        "La Grotta Ristorante Italiano",
+        "Capolinea",
+        "Amore e Amore"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "La Grotta Ristorante Italiano",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Amalfi Cucina + Mercato",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Pendolino",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Amalfi Cucina + Mercato / Buckhead",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Amore e Amore",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Capolinea",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Gianni & Mac’s Ristorante Piazza Nostra",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Sotto Sotto",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "The Americano",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Valenza",
+      "engines": [
+        "Claude"
+      ]
+    }
+  ],
+  "totalNamed": 15
+}

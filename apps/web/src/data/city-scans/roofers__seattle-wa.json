@@ -1,0 +1,97 @@
+{
+  "industry": "roofers",
+  "city": "seattle-wa",
+  "cityLabel": "Seattle, WA",
+  "query": "Who is the best roofing contractor in Seattle, WA for storm damage repair?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "State Roofing & Exteriors",
+        "Squatch Roofing",
+        "Stout Roofing",
+        "G & H Roofing"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Stout Roofing",
+        "Squatch Roofing",
+        "State Roofing & Exteriors",
+        "The Seattle Roofing Company"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "State Roofing & Exteriors",
+        "Squatch Roofing",
+        "Stout Roofing",
+        "The Seattle Roofing Company"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "State Roofing & Exteriors",
+        "Second Chance Roofs",
+        "Restoration Medix"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "State Roofing & Exteriors",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Squatch Roofing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Stout Roofing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "The Seattle Roofing Company",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "G & H Roofing",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Restoration Medix",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Second Chance Roofs",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 15
+}

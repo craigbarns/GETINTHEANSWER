@@ -1,0 +1,115 @@
+{
+  "industry": "med-spas",
+  "city": "san-diego-ca",
+  "cityLabel": "San Diego, CA",
+  "query": "Best med spa in San Diego, CA for Botox and dermal fillers",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "La Jolla Cosmetic Medical Spa",
+        "Neu Look Med Spa",
+        "Dermacare",
+        "Revive Med Spa",
+        "SDBotox"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "La Jolla Cosmetic Medical Spa",
+        "Dermacare Medical Aesthetics",
+        "Botoxie",
+        "Neu Look Med Spa & Skin Center"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "La Jolla Cosmetic Medical Spa",
+        "Dermacare",
+        "Neu Look Med Spa & Skin Center",
+        "SDBotox",
+        "Revive Med Spa"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "The Laser Cafe Medical Spa",
+        "Revive Med Spa",
+        "La Jolla Cosmetic Medical Spa",
+        "Dermacare Medical Aesthetics",
+        "SDBotox"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "La Jolla Cosmetic Medical Spa",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Revive Med Spa",
+      "engines": [
+        "ChatGPT",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "SDBotox",
+      "engines": [
+        "ChatGPT",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Dermacare",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Dermacare Medical Aesthetics",
+      "engines": [
+        "Claude",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Neu Look Med Spa & Skin Center",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Botoxie",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Neu Look Med Spa",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "The Laser Cafe Medical Spa",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 19
+}

@@ -1,0 +1,144 @@
+{
+  "industry": "lawyers",
+  "city": "phoenix-az",
+  "cityLabel": "Phoenix, AZ",
+  "query": "Top personal injury lawyer in Phoenix, AZ with a proven track record",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Jennifer Rebholz",
+        "Jack Hirsch",
+        "Patrick J. McGroder III",
+        "Joseph D’Aguanno",
+        "Mark P. Breyer"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Hirsch & Lyon Accident Law P.L.L.C",
+        "Beus O'Connor McGroder PLLC",
+        "Jennifer Rebholz",
+        "Lamber Goodnow Injury Lawyers",
+        "The Husband & Wife Law Team"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Beus O’Connor McGroder PLLC",
+        "Hirsch & Lyon Accident Law P.L.L.C",
+        "The Husband & Wife Law Team",
+        "Jennifer Rebholz",
+        "Joseph D'Aguanno"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Gage Mathers",
+        "Torgenson Law",
+        "Saguaro Injury Law",
+        "Lerner and Rowe",
+        "Lamber Goodnow Injury Lawyers",
+        "Gary Phillips"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Jennifer Rebholz",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Beus O'Connor McGroder PLLC",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Hirsch & Lyon Accident Law P.L.L.C",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Joseph D’Aguanno",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Lamber Goodnow Injury Lawyers",
+      "engines": [
+        "Claude",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "The Husband & Wife Law Team",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Gage Mathers",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Gary Phillips",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Jack Hirsch",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Lerner and Rowe",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Mark P. Breyer",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Patrick J. McGroder III",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Saguaro Injury Law",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Torgenson Law",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 21
+}

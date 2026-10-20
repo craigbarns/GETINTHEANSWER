@@ -1,0 +1,113 @@
+{
+  "industry": "real-estate-agents",
+  "city": "tampa-fl",
+  "cityLabel": "Tampa, FL",
+  "query": "Who is the best real estate agent to sell a luxury home in Tampa, FL?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Jennifer Zales",
+        "Dania Perry",
+        "Nick Janovsky",
+        "Donna Miller",
+        "Mark Middleton"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Jennifer Zales",
+        "Dania Perry",
+        "Nick Janovsky",
+        "Donna Miller"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Dania Perry",
+        "Jennifer Zales",
+        "Nick Janovsky",
+        "Donna Miller"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Jennifer Zales",
+        "Smith & Associates Real Estate",
+        "Kelli Welch",
+        "Greg Margliano",
+        "The Sails Team"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Jennifer Zales",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Dania Perry",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Donna Miller",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Nick Janovsky",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Greg Margliano",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Kelli Welch",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Mark Middleton",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Smith & Associates Real Estate",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "The Sails Team",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 18
+}

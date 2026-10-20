@@ -1,0 +1,120 @@
+{
+  "industry": "pest-control",
+  "city": "columbus-oh",
+  "cityLabel": "Columbus, OH",
+  "query": "Best pest control company in Columbus, OH for a termite infestation",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "EarthRite Pest Control",
+        "Stryker Pest Control",
+        "Moxie Pest Control",
+        "Quality Pest Control",
+        "Champion Pest & Termite Control"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Stryker Pest Control",
+        "EarthRite Pest Control",
+        "Quality Pest Control"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Stryker Pest Control",
+        "EarthRite Pest Control",
+        "Truly Nolen",
+        "Moxie Pest Control",
+        "Orkin"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Terminix",
+        "TORCO Termite and Pest Control",
+        "Tri-City Termite and Pest Control LTD",
+        "Champion Pest & Termite Control",
+        "Orkin",
+        "Stryker Pest Control"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Stryker Pest Control",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "EarthRite Pest Control",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Champion Pest & Termite Control",
+      "engines": [
+        "ChatGPT",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Moxie Pest Control",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Orkin",
+      "engines": [
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Quality Pest Control",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "TORCO Termite and Pest Control",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Terminix",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Tri-City Termite and Pest Control LTD",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Truly Nolen",
+      "engines": [
+        "Gemini"
+      ]
+    }
+  ],
+  "totalNamed": 19
+}

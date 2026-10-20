@@ -1,0 +1,125 @@
+{
+  "industry": "electricians",
+  "city": "columbus-oh",
+  "cityLabel": "Columbus, OH",
+  "query": "Who is the best licensed electrician in Columbus, OH for an emergency callout?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Pokorski Electric",
+        "We Power Electric LLC",
+        "Weekley Electric",
+        "Safe Electric",
+        "Mr. Electric of Columbus"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "We Power Electric LLC",
+        "Pokorski Electric",
+        "West Jefferson Plumbing and Heating, Inc",
+        "Weekley Electric"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Weekley Electric",
+        "Mr. Electric of Columbus",
+        "We Power Electric LLC",
+        "Pokorski Electric",
+        "Safe Electric"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Safe Electric and Plumbing",
+        "Buckeye Electric",
+        "Mister Sparky Greater Columbus",
+        "Kellogg Electric",
+        "Apex Pros"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Pokorski Electric",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "We Power Electric LLC",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Weekley Electric",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Mr. Electric of Columbus",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Safe Electric",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Apex Pros",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Buckeye Electric",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Kellogg Electric",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Mister Sparky Greater Columbus",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Safe Electric and Plumbing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "West Jefferson Plumbing and Heating, Inc",
+      "engines": [
+        "Claude"
+      ]
+    }
+  ],
+  "totalNamed": 19
+}

@@ -1,0 +1,143 @@
+{
+  "industry": "lawyers",
+  "city": "houston-tx",
+  "cityLabel": "Houston, TX",
+  "query": "Top personal injury lawyer in Houston, TX with a proven track record",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Jim Adler",
+        "Arnold & Itkin LLP",
+        "Joe Stephens",
+        "Zehl Law",
+        "The Lanier Law Firm"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "The Lanier Law Firm",
+        "The Texas Hammer®",
+        "Zehl & Associates",
+        "The Stephens Law Firm"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Arnold & Itkin LLP",
+        "Zehl & Associates",
+        "Joe Stephens Law",
+        "Ramsey Law Group",
+        "Jim Adler & Associates"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Zehl & Associates Injury & Accident Lawyers",
+        "The Kishinevsky Law Firm",
+        "Perdue & Kidd",
+        "Gustin Law Firm"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Arnold & Itkin LLP",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "The Lanier Law Firm",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Zehl & Associates",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Gustin Law Firm",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Jim Adler",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Jim Adler & Associates",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Joe Stephens",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Joe Stephens Law",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Perdue & Kidd",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Ramsey Law Group",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "The Kishinevsky Law Firm",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "The Stephens Law Firm",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "The Texas Hammer®",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Zehl & Associates Injury & Accident Lawyers",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Zehl Law",
+      "engines": [
+        "ChatGPT"
+      ]
+    }
+  ],
+  "totalNamed": 18
+}

@@ -1,0 +1,125 @@
+{
+  "industry": "electricians",
+  "city": "nashville-tn",
+  "cityLabel": "Nashville, TN",
+  "query": "Who is the best licensed electrician in Nashville, TN for an emergency callout?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Bates Electric",
+        "Pokorski Electric",
+        "West Side Electric",
+        "Li Electric of TN",
+        "Jacob the Electrician"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Bates Electric",
+        "Pokorski Electric",
+        "WestSide Electric Service",
+        "Li Electric of TN"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Bates Electric",
+        "Pokorski Electric",
+        "West Side Electric Service",
+        "Li Electric of TN",
+        "JJC Electric"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Amprite Electric",
+        "Hoffmann Brothers",
+        "Bates Electric",
+        "Hiller",
+        "Coolray"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Bates Electric",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Li Electric of TN",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Pokorski Electric",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "WestSide Electric Service",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Amprite Electric",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Coolray",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Hiller",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Hoffmann Brothers",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "JJC Electric",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Jacob the Electrician",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "West Side Electric",
+      "engines": [
+        "ChatGPT"
+      ]
+    }
+  ],
+  "totalNamed": 19
+}

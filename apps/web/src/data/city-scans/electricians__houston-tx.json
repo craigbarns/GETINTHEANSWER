@@ -1,0 +1,113 @@
+{
+  "industry": "electricians",
+  "city": "houston-tx",
+  "cityLabel": "Houston, TX",
+  "query": "Who is the best licensed electrician in Houston, TX for an emergency callout?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "JNL Electric",
+        "Pokorski Electric",
+        "Colwell Electric",
+        "ENE Electrical",
+        "SEAR Electric"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "JN'L Electric",
+        "Colwell Electric",
+        "ENE Electrical",
+        "SEAR Electric",
+        "Pokorski Electric"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "JN'L Electric",
+        "Southern Electrical Services",
+        "Colwell Electric",
+        "ENE Electrical",
+        "Pokorski Electric"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Mister Sparky Houston",
+        "Emergency Electrician Houston",
+        "Houston Electric Experts"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Colwell Electric",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "ENE Electrical",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "JNL Electric",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Pokorski Electric",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "SEAR Electric",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Emergency Electrician Houston",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Houston Electric Experts",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Mister Sparky Houston",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Southern Electrical Services",
+      "engines": [
+        "Gemini"
+      ]
+    }
+  ],
+  "totalNamed": 18
+}

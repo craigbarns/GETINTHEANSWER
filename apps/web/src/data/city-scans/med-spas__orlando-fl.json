@@ -1,0 +1,125 @@
+{
+  "industry": "med-spas",
+  "city": "orlando-fl",
+  "cityLabel": "Orlando, FL",
+  "query": "Best med spa in Orlando, FL for Botox and dermal fillers",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "The Princess Injectors®",
+        "Luxe Med Spa Aesthetics",
+        "Winter Park Skin®",
+        "Nectar Aesthetics",
+        "Celine Med Spa"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Winter Park Skin®",
+        "Nectar Aesthetics",
+        "The Princess Injectors®",
+        "Luxe Med Spa Aesthetics",
+        "Très Jolie Medical Spa"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "The Princess Injectors®",
+        "Winter Park Skin® Luxury Med Spa",
+        "Luxe Med Spa Aesthetics",
+        "Très Jolie Medical Spa"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "The Palm Medspa + Wellness",
+        "Misk Med Spa & Wellness",
+        "Viomed Spa SoDo",
+        "Luxe Med Spa Aesthetics",
+        "Solum Aesthetics Orlando"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Luxe Med Spa Aesthetics",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "The Princess Injectors®",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Nectar Aesthetics",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Très Jolie Medical Spa",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Winter Park Skin®",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Celine Med Spa",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Misk Med Spa & Wellness",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Solum Aesthetics Orlando",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "The Palm Medspa + Wellness",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Viomed Spa SoDo",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Winter Park Skin® Luxury Med Spa",
+      "engines": [
+        "Gemini"
+      ]
+    }
+  ],
+  "totalNamed": 19
+}

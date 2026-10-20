@@ -1,0 +1,126 @@
+{
+  "industry": "dentists",
+  "city": "miami-fl",
+  "cityLabel": "Miami, FL",
+  "query": "Best cosmetic dentist for porcelain veneers in Miami, FL",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Art Dental Studio",
+        "Dr. Patty Miami",
+        "Dr. Ramon Bana",
+        "Cosmetistry by Dr. P"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Art Dental Studio",
+        "Dr. Patty Miami Cosmetic Dentistry",
+        "Real Smile Dentistry",
+        "Miami Sedation and Cosmetic Dentistry"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Art Dental Studio",
+        "Miami Sedation and Cosmetic Dentistry",
+        "Dr. Patty Miami Cosmetic Dentistry",
+        "Cosmetistry by Dr. P"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Smile Design Miami",
+        "Miami Veneers",
+        "Smile Dental Center Group",
+        "Miami Center for Cosmetic and Implant Dentistry",
+        "Just Smile Miami"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Art Dental Studio",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Cosmetistry by Dr. P",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Dr. Patty Miami Cosmetic Dentistry",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Miami Sedation and Cosmetic Dentistry",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Dr. Patty Miami",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Dr. Ramon Bana",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Just Smile Miami",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Miami Center for Cosmetic and Implant Dentistry",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Miami Veneers",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Real Smile Dentistry",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Smile Dental Center Group",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Smile Design Miami",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 17
+}

@@ -1,0 +1,123 @@
+{
+  "industry": "pest-control",
+  "city": "charlotte-nc",
+  "cityLabel": "Charlotte, NC",
+  "query": "Best pest control company in Charlotte, NC for a termite infestation",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Terminix Service, Inc",
+        "Triangle Pest Control",
+        "Killo Exterminating Co",
+        "Go-Forth Home Services",
+        "Lookout Pest Control"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Terminix",
+        "Triangle Pest Control",
+        "Go-Forth Home Services",
+        "Lookout Pest Control"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Terminix",
+        "Triangle Pest Control",
+        "Killo Exterminating Co",
+        "Lookout Pest Control"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Carolina Pest Management",
+        "Noosa Pest Management",
+        "Foremost Pest & Wildlife",
+        "HomeTeam Pest Defense",
+        "Terminix Charlotte"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Lookout Pest Control",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Triangle Pest Control",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Go-Forth Home Services",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Killo Exterminating Co",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Terminix",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Carolina Pest Management",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Foremost Pest & Wildlife",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "HomeTeam Pest Defense",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Noosa Pest Management",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Terminix Charlotte",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Terminix Service, Inc",
+      "engines": [
+        "ChatGPT"
+      ]
+    }
+  ],
+  "totalNamed": 18
+}

@@ -1,0 +1,97 @@
+{
+  "industry": "plumbers",
+  "city": "los-angeles-ca",
+  "cityLabel": "Los Angeles, CA",
+  "query": "Who is the most reliable emergency plumber in Los Angeles, CA for a burst pipe?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Conover Plumbing & Mechanical",
+        "Expertise Plumbing & Rooter",
+        "John’s Plumbing & Drain Services",
+        "24/7 Rooter Service",
+        "Plumbing Geeks"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Conover Plumbing & Mechanical",
+        "Expertise Plumbing & Rooter",
+        "EZ Plumbing"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Conover Plumbing & Mechanical",
+        "Expertise Plumbing & Rooter",
+        "EZ Plumbing",
+        "John's Plumbing & Drain Services",
+        "24/7 Rooter Service"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Roto-Rooter Los Angeles",
+        "Expertise Plumbing & Rooter"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Expertise Plumbing & Rooter",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Conover Plumbing & Mechanical",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "24/7 Rooter Service",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "EZ Plumbing",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "John’s Plumbing & Drain Services",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Plumbing Geeks",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Roto-Rooter Los Angeles",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 15
+}

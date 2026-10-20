@@ -1,0 +1,143 @@
+{
+  "industry": "lawyers",
+  "city": "portland-or",
+  "cityLabel": "Portland, OR",
+  "query": "Top personal injury lawyer in Portland, OR with a proven track record",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Kaplan Law, LLC",
+        "Tim Jones PC",
+        "Paulson Coletti",
+        "Mandekor Law Firm"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Matthew D. Kaplan",
+        "Paulson Coletti Trial Attorneys",
+        "Tim Jones PC",
+        "Mandekor Law Firm"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Dr. Aaron DeShaw, Esq. P.C",
+        "Paulson Coletti Trial Attorneys PC",
+        "Kaplan Law",
+        "Tim Jones PC",
+        "Gregory Zeuthen Law Office"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Dr. Aaron DeShaw / DeShaw Law",
+        "Johnston Law Firm",
+        "Matthew D. Kaplan / Kaplan Law",
+        "Rosenbaum Law Group",
+        "Law Offices of Jon Friedman"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Tim Jones PC",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Mandekor Law Firm",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Dr. Aaron DeShaw / DeShaw Law",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Dr. Aaron DeShaw, Esq. P.C",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Gregory Zeuthen Law Office",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Johnston Law Firm",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Kaplan Law",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Kaplan Law, LLC",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Law Offices of Jon Friedman",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Matthew D. Kaplan",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Matthew D. Kaplan / Kaplan Law",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Paulson Coletti",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Paulson Coletti Trial Attorneys",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Paulson Coletti Trial Attorneys PC",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Rosenbaum Law Group",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 18
+}

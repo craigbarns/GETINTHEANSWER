@@ -1,0 +1,118 @@
+{
+  "industry": "chiropractors",
+  "city": "tampa-fl",
+  "cityLabel": "Tampa, FL",
+  "query": "Best chiropractor in Tampa, FL for lower back pain and sciatica",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Spartan Chiropractic",
+        "Disc Doctor Tampa",
+        "Redefine Your Spine",
+        "Tampa Disc Center",
+        "Farkas Chiropractic Clinic"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Redefine Your Spine",
+        "Disc Doctor Tampa",
+        "Tampa Disc Center",
+        "Spartan Chiropractic"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Disc Doctor Tampa",
+        "Redefine Your Spine",
+        "Farkas Chiropractic Clinic",
+        "Spartan Chiropractic",
+        "Total Health Chiropractic Center"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Chiropractic Care Centre",
+        "Tampa Bay Spine & Sport",
+        "Lifehack Wellness Chiropractic",
+        "Tampa Spine and Wellness"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Disc Doctor Tampa",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Redefine Your Spine",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Spartan Chiropractic",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Farkas Chiropractic Clinic",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Tampa Disc Center",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Chiropractic Care Centre",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Lifehack Wellness Chiropractic",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Tampa Bay Spine & Sport",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Tampa Spine and Wellness",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Total Health Chiropractic Center",
+      "engines": [
+        "Gemini"
+      ]
+    }
+  ],
+  "totalNamed": 18
+}

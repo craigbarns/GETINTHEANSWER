@@ -1,0 +1,127 @@
+{
+  "industry": "hvac-contractors",
+  "city": "miami-fl",
+  "cityLabel": "Miami, FL",
+  "query": "Who offers 24/7 emergency AC repair near me in Miami, FL?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Colder of Miami",
+        "Prestige Plumbing, LLC",
+        "One Hour Air Conditioning & Heating® of Miami",
+        "Crestline HVAC Miami",
+        "24 Hr Air Service, Inc"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Colder of Miami",
+        "Prestige Plumbing, LLC",
+        "Crestline HVAC Miami",
+        "One Hour Heating & Air Conditioning of Miami",
+        "24 Hr Air Service, Inc"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Prestige Plumbing, LLC",
+        "One Hour Air Conditioning & Heating of Miami",
+        "Colder of Miami",
+        "Crestline HVAC Miami",
+        "24 Hr Air Service, Inc"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Sunny Bliss",
+        "HVAC Loyalty",
+        "One Hour® of Miami",
+        "Weathermakers",
+        "Coldlife AC"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "24 Hr Air Service, Inc",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Colder of Miami",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Crestline HVAC Miami",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Prestige Plumbing, LLC",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "One Hour Air Conditioning & Heating® of Miami",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Coldlife AC",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "HVAC Loyalty",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "One Hour Heating & Air Conditioning of Miami",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "One Hour® of Miami",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Sunny Bliss",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Weathermakers",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 20
+}

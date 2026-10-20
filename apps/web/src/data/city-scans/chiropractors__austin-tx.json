@@ -1,0 +1,112 @@
+{
+  "industry": "chiropractors",
+  "city": "austin-tx",
+  "cityLabel": "Austin, TX",
+  "query": "Best chiropractor in Austin, TX for lower back pain and sciatica",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Touch of Life Chiropractic",
+        "Schroder Chiropractic",
+        "King Chiropractic",
+        "Limitless Chiropractic"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Touch of Life Chiropractic",
+        "South Lamar Chiropractic",
+        "Schroeder Chiropractic",
+        "King Chiropractic"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Touch of Life Chiropractic",
+        "Schroeder Chiropractic",
+        "Limitless Chiropractic"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Austin Chiropractic & Rehab",
+        "Austin Disc & Spine",
+        "Lifespring Chiropractic",
+        "Discover Chiropractic"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Touch of Life Chiropractic",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "King Chiropractic",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Limitless Chiropractic",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Schroeder Chiropractic",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Austin Chiropractic & Rehab",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Austin Disc & Spine",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Discover Chiropractic",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Lifespring Chiropractic",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Schroder Chiropractic",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "South Lamar Chiropractic",
+      "engines": [
+        "Claude"
+      ]
+    }
+  ],
+  "totalNamed": 15
+}

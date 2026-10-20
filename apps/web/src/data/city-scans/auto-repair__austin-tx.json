@@ -1,0 +1,107 @@
+{
+  "industry": "auto-repair",
+  "city": "austin-tx",
+  "cityLabel": "Austin, TX",
+  "query": "Best independent auto repair shop in Austin, TX for European cars",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Hill Country European Autoworks",
+        "DR Euromaster",
+        "Terry Sayther Automotive",
+        "European Motorwerks",
+        "European Automotive ATX"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Hill Country European Autoworks",
+        "DR Euromaster",
+        "Terry Sayther Automotive",
+        "European Motorwerks",
+        "European Automotive ATX"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Terry Sayther Automotive",
+        "DR Euromaster",
+        "European Motorwerks",
+        "Hill Country European Autoworks",
+        "European Automotive ATX"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Hill Country European Autoworks",
+        "DR Euromaster",
+        "European Motorwerks",
+        "Luxury Auto Works",
+        "Ben White Automotive"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "DR Euromaster",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "European Motorwerks",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Hill Country European Autoworks",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "European Automotive ATX",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Terry Sayther Automotive",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Ben White Automotive",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Luxury Auto Works",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 20
+}

@@ -1,0 +1,104 @@
+{
+  "industry": "roofers",
+  "city": "orlando-fl",
+  "cityLabel": "Orlando, FL",
+  "query": "Who is the best roofing contractor in Orlando, FL for storm damage repair?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Revildor",
+        "Thomas Roofing and Repair, Inc",
+        "One World Roofing",
+        "Rhyne Roofing",
+        "Central Florida Equity Builders"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Thomas Roofing and Repair, Inc",
+        "One World Roofing",
+        "Revildor"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Thomas Roofing and Repair, Inc",
+        "Revildor",
+        "One World Roofing",
+        "Central Florida Equity Builders",
+        "Orlando Roof Co"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Bynum Roofing",
+        "Revildor",
+        "APC Roofing"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Revildor",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "One World Roofing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Thomas Roofing and Repair, Inc",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Central Florida Equity Builders",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "APC Roofing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Bynum Roofing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Orlando Roof Co",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Rhyne Roofing",
+      "engines": [
+        "ChatGPT"
+      ]
+    }
+  ],
+  "totalNamed": 16
+}

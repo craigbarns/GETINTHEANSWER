@@ -1,0 +1,125 @@
+{
+  "industry": "electricians",
+  "city": "phoenix-az",
+  "cityLabel": "Phoenix, AZ",
+  "query": "Who is the best licensed electrician in Phoenix, AZ for an emergency callout?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Mr. Electric of Phoenix Metro",
+        "Sparks by Rabbit LLC",
+        "RES Arizona",
+        "Kelley Electrical Services",
+        "Sharp Electric"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "RES Arizona",
+        "Sparks by Rabbit LLC",
+        "George Brazil Plumbing & Electrical",
+        "Mr. Electric of Phoenix Metro"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Mr. Electric of Phoenix Metro",
+        "Sparks by Rabbit LLC",
+        "George Brazil Plumbing & Electrical",
+        "Sharp Electric",
+        "Kellogg Electric"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Gideon Service Company",
+        "Phoenix Electric",
+        "Mr. Electric of Phoenix Metro",
+        "Parker & Sons",
+        "AZ State Electric"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Mr. Electric of Phoenix Metro",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Sparks by Rabbit LLC",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "George Brazil Plumbing & Electrical",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "RES Arizona",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Sharp Electric",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "AZ State Electric",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Gideon Service Company",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Kelley Electrical Services",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Kellogg Electric",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Parker & Sons",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Phoenix Electric",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 19
+}

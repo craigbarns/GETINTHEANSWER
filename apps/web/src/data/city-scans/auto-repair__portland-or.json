@@ -1,0 +1,107 @@
+{
+  "industry": "auto-repair",
+  "city": "portland-or",
+  "cityLabel": "Portland, OR",
+  "query": "Best independent auto repair shop in Portland, OR for European cars",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Matrix Integrated",
+        "European Motor Werks",
+        "Hartmann Motors",
+        "Marque Motors",
+        "A & P Specialties"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Matrix Integrated",
+        "A & P Specialties",
+        "Hartmann Motors",
+        "European Motor Werks",
+        "Marque Motors"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Matrix Integrated",
+        "European Motor Werks",
+        "Hartmann Motors",
+        "Marque Motors",
+        "A & P Specialties"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Matrix Integrated",
+        "Hartmann Motors",
+        "Botta Motor Works",
+        "A & P Specialties",
+        "Heckmann & Thiemann Motors"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "A & P Specialties",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Hartmann Motors",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Matrix Integrated",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "European Motor Werks",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Marque Motors",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Botta Motor Works",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Heckmann & Thiemann Motors",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 20
+}

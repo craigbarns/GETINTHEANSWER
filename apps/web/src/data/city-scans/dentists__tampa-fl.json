@@ -1,0 +1,140 @@
+{
+  "industry": "dentists",
+  "city": "tampa-fl",
+  "cityLabel": "Tampa, FL",
+  "query": "Best cosmetic dentist for porcelain veneers in Tampa, FL",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Dr. Eric Arias, DDS",
+        "Dr. Christine Grant",
+        "Upshaw Dental Studio",
+        "Dr. Larry Saylor",
+        "North Pointe Dental"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Dr. Eric Arias, DDS",
+        "Dr. Christine Grant, DMD",
+        "Upshaw Dental Studio",
+        "Dr. Larry Saylor",
+        "North Pointe Dental"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Dr. Eric Arias (Eric Arias, DDS)",
+        "Dr. Christine Grant (The Hyde Park Center for Aesthetic Dentistry)",
+        "Dr. Rebecca Benedict (Historic Hyde Park Dentistry)",
+        "Dr. Larry Saylor"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Tampa Smile Clinic",
+        "Historic Hyde Park Dentistry",
+        "Bauer Dentistry",
+        "Wang and Cortes Dental",
+        "Tampa Dental Wellness"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Dr. Larry Saylor",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Dr. Eric Arias, DDS",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "North Pointe Dental",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Upshaw Dental Studio",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Bauer Dentistry",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Dr. Christine Grant",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Dr. Christine Grant (The Hyde Park Center for Aesthetic Dentistry)",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Dr. Christine Grant, DMD",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Dr. Eric Arias (Eric Arias, DDS)",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Dr. Rebecca Benedict (Historic Hyde Park Dentistry)",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Historic Hyde Park Dentistry",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Tampa Dental Wellness",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Tampa Smile Clinic",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Wang and Cortes Dental",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 19
+}

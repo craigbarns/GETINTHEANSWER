@@ -1,0 +1,102 @@
+{
+  "industry": "electricians",
+  "city": "miami-fl",
+  "cityLabel": "Miami, FL",
+  "query": "Who is the best licensed electrician in Miami, FL for an emergency callout?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Solomon Electric",
+        "Langer Electric Service Co",
+        "Pokorski Electric",
+        "Xmart Power"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Pokorski Electric",
+        "Solomon Electric",
+        "Langer Electric Service Co",
+        "Xmart Power",
+        "S.E. Bates Electric"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Langer Electric Service Co",
+        "Pokorski Electric",
+        "Solomon Electric"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Miami Electrical Contractors LLC",
+        "South Florida Electrical",
+        "Bates Electric of Miami"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Langer Electric Service Co",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Pokorski Electric",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Solomon Electric",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Xmart Power",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Bates Electric of Miami",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Miami Electrical Contractors LLC",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "S.E. Bates Electric",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "South Florida Electrical",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 15
+}

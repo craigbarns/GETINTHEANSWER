@@ -1,0 +1,117 @@
+{
+  "industry": "med-spas",
+  "city": "dallas-tx",
+  "cityLabel": "Dallas, TX",
+  "query": "Best med spa in Dallas, TX for Botox and dermal fillers",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Sanjiva Med Spa",
+        "Mara's Med Spa",
+        "Just Injected Medical Spa",
+        "Viva Day Spa + Med Spa",
+        "Rejuve Med Spa"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Just Injected Medical Spa",
+        "Mara's Med Spa",
+        "Rejuve Med-Spa",
+        "Lily Medical Aesthetics & Wellness",
+        "Viva Day Spa + Med Spa"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Sanjiva Medical Spa",
+        "Lily Medical Aesthetics & Wellness",
+        "Just Injected Medical Spa",
+        "Mara's Med Spa",
+        "Viva Day Spa + Med Spa"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Sanjiva Med Spa",
+        "Injectco",
+        "Rejuve Med Spa",
+        "AestheticSelect",
+        "Mara’s Med Spa"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Mara's Med Spa",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Just Injected Medical Spa",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Rejuve Med Spa",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Viva Day Spa + Med Spa",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Lily Medical Aesthetics & Wellness",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Sanjiva Med Spa",
+      "engines": [
+        "ChatGPT",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "AestheticSelect",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Injectco",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Sanjiva Medical Spa",
+      "engines": [
+        "Gemini"
+      ]
+    }
+  ],
+  "totalNamed": 20
+}

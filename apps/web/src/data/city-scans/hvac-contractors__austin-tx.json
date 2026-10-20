@@ -1,0 +1,158 @@
+{
+  "industry": "hvac-contractors",
+  "city": "austin-tx",
+  "cityLabel": "Austin, TX",
+  "query": "Who offers 24/7 emergency AC repair near me in Austin, TX?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Austin Air Conditioning",
+        "ABC Austin Service Express",
+        "Texas Air Repair",
+        "Air Motions Heating & Air Conditioning",
+        "All Pro HVAC Austin"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Austin Air Conditioning",
+        "ABC Austin AC and Heating",
+        "Texas Air Repair",
+        "Air Motion HVAC",
+        "All Pro HVAC Austin"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "ABC Austin Service Express",
+        "Texas Air Repair",
+        "Austin Air Conditioning",
+        "All Pro HVAC Austin",
+        "Air Motions Heating & Air Conditioning of Central Texas"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Abacus Plumbing, Air Conditioning & Electrical",
+        "Efficient Texas",
+        "Infinity AC",
+        "Livinon Mechanical",
+        "ABC Home & Commercial Services",
+        "Goettl / Hill Country Cooling Pros",
+        "Fox Service Company",
+        "Precision Heating & Air"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "All Pro HVAC Austin",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Austin Air Conditioning",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Texas Air Repair",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "ABC Austin Service Express",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "ABC Austin AC and Heating",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "ABC Home & Commercial Services",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Abacus Plumbing, Air Conditioning & Electrical",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Air Motion HVAC",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Air Motions Heating & Air Conditioning",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Air Motions Heating & Air Conditioning of Central Texas",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Efficient Texas",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Fox Service Company",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Goettl / Hill Country Cooling Pros",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Infinity AC",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Livinon Mechanical",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Precision Heating & Air",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 23
+}

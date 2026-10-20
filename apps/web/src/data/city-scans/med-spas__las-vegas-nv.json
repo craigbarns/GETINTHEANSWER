@@ -1,0 +1,135 @@
+{
+  "industry": "med-spas",
+  "city": "las-vegas-nv",
+  "cityLabel": "Las Vegas, NV",
+  "query": "Best med spa in Las Vegas, NV for Botox and dermal fillers",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Estevez Aesthetics",
+        "White Coat Aesthetics",
+        "Dr. K Beauty",
+        "Center for Aesthetic Medicine",
+        "Boca Med Spa"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "The Look Med Spa",
+        "Center for Aesthetic Medicine",
+        "Estevez Aesthetics",
+        "White Coat Aesthetics"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Advanced Aesthetics",
+        "Estevez Aesthetics",
+        "Beauty Goals LV",
+        "Boca Med Spa",
+        "Dr. K Beauty"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Beauty Factory Medspa",
+        "LuxeFactor Aesthetics",
+        "Medspa LV",
+        "Flawless MedSpa",
+        "Chic la Vie Med Spa"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Estevez Aesthetics",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Boca Med Spa",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Center for Aesthetic Medicine",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Dr. K Beauty",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "White Coat Aesthetics",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Advanced Aesthetics",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Beauty Factory Medspa",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Beauty Goals LV",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Chic la Vie Med Spa",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Flawless MedSpa",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "LuxeFactor Aesthetics",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Medspa LV",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "The Look Med Spa",
+      "engines": [
+        "Claude"
+      ]
+    }
+  ],
+  "totalNamed": 19
+}

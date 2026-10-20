@@ -1,0 +1,132 @@
+{
+  "industry": "hvac-contractors",
+  "city": "los-angeles-ca",
+  "cityLabel": "Los Angeles, CA",
+  "query": "Who offers 24/7 emergency AC repair near me in Los Angeles, CA?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "A Plus HVAC Los Angeles",
+        "Mike Diamond Plumbing & HVAC",
+        "AIRLA",
+        "LC Heating & Air",
+        "Cloud Comfort"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "A Plus HVAC Los Angeles",
+        "Upright Heating and Air Conditioning",
+        "Air LA",
+        "Mike Diamond Services",
+        "LA HVAC LLC"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "A Plus HVAC Los Angeles",
+        "LC Heating & Air",
+        "Mike Diamond Plumbing & HVAC",
+        "Upright HVAC",
+        "AIRLA"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Brody Pennell Heating & Air Conditioning",
+        "LC Heating & Air",
+        "Mike Diamond Plumbing & HVAC",
+        "Anison Air Master",
+        "United Heating and Cooling"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "A Plus HVAC Los Angeles",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "AIRLA",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "LC Heating & Air",
+      "engines": [
+        "ChatGPT",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Mike Diamond Plumbing & HVAC",
+      "engines": [
+        "ChatGPT",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Anison Air Master",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Brody Pennell Heating & Air Conditioning",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Cloud Comfort",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "LA HVAC LLC",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Mike Diamond Services",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "United Heating and Cooling",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Upright HVAC",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Upright Heating and Air Conditioning",
+      "engines": [
+        "Claude"
+      ]
+    }
+  ],
+  "totalNamed": 20
+}

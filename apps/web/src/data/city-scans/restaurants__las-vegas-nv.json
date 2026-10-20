@@ -1,0 +1,126 @@
+{
+  "industry": "restaurants",
+  "city": "las-vegas-nv",
+  "cityLabel": "Las Vegas, NV",
+  "query": "Best romantic Italian restaurant with outdoor seating in Las Vegas, NV",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Ai Pazzi",
+        "Locale Italian Kitchen + Craft Cocktails",
+        "LAVO Italian Restaurant",
+        "Brio Italian Grille"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "ai PAZZI",
+        "Locale Italian Kitchen + Craft Cocktails",
+        "Maggiano's"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Ai Pazzi",
+        "Locale Italian Kitchen + Craft Cocktails",
+        "Basilico Ristorante Italiano",
+        "Maggiano's - Las Vegas",
+        "Brio Italian Grille - Las Vegas - Town Square"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "LAVO Italian Restaurant",
+        "Canaletto",
+        "Nora’s Cuisine",
+        "Casa Di Amore",
+        "Carmella Italian Restaurant and Lounge"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Ai Pazzi",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Locale Italian Kitchen + Craft Cocktails",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "LAVO Italian Restaurant",
+      "engines": [
+        "ChatGPT",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Basilico Ristorante Italiano",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Brio Italian Grille",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Brio Italian Grille - Las Vegas - Town Square",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Canaletto",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Carmella Italian Restaurant and Lounge",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Casa Di Amore",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Maggiano's",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Maggiano's - Las Vegas",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Nora’s Cuisine",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 17
+}

@@ -1,0 +1,113 @@
+{
+  "industry": "chiropractors",
+  "city": "houston-tx",
+  "cityLabel": "Houston, TX",
+  "query": "Best chiropractor in Houston, TX for lower back pain and sciatica",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "CORE Chiropractic",
+        "Lone Star Chiropractic",
+        "Dr. Richard Werner",
+        "Advanced Chiropractic Relief"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "CORE Chiropractic",
+        "Lone Star Chiropractic",
+        "Dr. Richard Werner",
+        "Heights Chiropractic Center",
+        "Cesak Chiropractic Family Wellness Center"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "CORE Chiropractic",
+        "Lone Star Chiropractic",
+        "Advanced Chiropractic Relief",
+        "Dr. Richard Werner",
+        "Heights Chiropractic Center"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Woodway Wellness",
+        "Peak Potential Family Chiropractic",
+        "CORE Chiropractic",
+        "Elite Spine Houston"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "CORE Chiropractic",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Dr. Richard Werner",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Lone Star Chiropractic",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Advanced Chiropractic Relief",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Heights Chiropractic Center",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Cesak Chiropractic Family Wellness Center",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Elite Spine Houston",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Peak Potential Family Chiropractic",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Woodway Wellness",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 18
+}

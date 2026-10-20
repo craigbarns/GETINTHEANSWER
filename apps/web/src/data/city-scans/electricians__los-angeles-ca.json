@@ -1,0 +1,115 @@
+{
+  "industry": "electricians",
+  "city": "los-angeles-ca",
+  "cityLabel": "Los Angeles, CA",
+  "query": "Who is the best licensed electrician in Los Angeles, CA for an emergency callout?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "911 Construction & Electric Inc",
+        "Pokorski Electric",
+        "Service Sam Electric",
+        "Kord Electric",
+        "Kellogg Electric"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Pokorski Electric",
+        "911 Construction & Electric Inc",
+        "Service Sam Electric",
+        "Kellogg Electric",
+        "Kord Electric"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "911 Construction & Electric Inc",
+        "Pokorski Electric",
+        "Service Sam Electric",
+        "Kord Electric",
+        "Kellogg Electric"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Express Electrical Services",
+        "LA Electrician",
+        "A+ Electric & Plumbing",
+        "AMY Electric"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "911 Construction & Electric Inc",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Kellogg Electric",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Kord Electric",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Pokorski Electric",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Service Sam Electric",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "A+ Electric & Plumbing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "AMY Electric",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Express Electrical Services",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "LA Electrician",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 19
+}

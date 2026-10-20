@@ -1,0 +1,109 @@
+{
+  "industry": "auto-repair",
+  "city": "miami-fl",
+  "cityLabel": "Miami, FL",
+  "query": "Best independent auto repair shop in Miami, FL for European cars",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Roly's European Auto Center",
+        "Miami Euro Auto Center",
+        "European Autobahn",
+        "MasterClass Automotive",
+        "Green's Garage"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Miami Euro Auto Center",
+        "MasterClass Automotive",
+        "Leader Service",
+        "European Autobahn",
+        "Roly's European Auto Center"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Roly's European Auto Center",
+        "Miami Euro Auto Center",
+        "MasterClass Automotive",
+        "European Autobahn",
+        "Green's Garage"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "MasterClass Automotive",
+        "Roly’s European Auto Center",
+        "Miami Euro Auto Center",
+        "Green’s Garage",
+        "German Auto-Tech",
+        "European Autobahn"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "European Autobahn",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "MasterClass Automotive",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Miami Euro Auto Center",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Roly's European Auto Center",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Green's Garage",
+      "engines": [
+        "ChatGPT",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "German Auto-Tech",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Leader Service",
+      "engines": [
+        "Claude"
+      ]
+    }
+  ],
+  "totalNamed": 21
+}

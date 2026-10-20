@@ -1,0 +1,148 @@
+{
+  "industry": "real-estate-agents",
+  "city": "charlotte-nc",
+  "cityLabel": "Charlotte, NC",
+  "query": "Who is the best real estate agent to sell a luxury home in Charlotte, NC?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Sally Awad",
+        "Mitch Boraski",
+        "Abigail Hines Miller",
+        "Stephen Lonnen",
+        "Matthew Alexander"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Sally Awad - Sotheby's International Realty",
+        "Mitch Boraski - Senior Real Estate Advisor",
+        "Stephen Lonnen - Real Broker, LLC",
+        "Bre Gaither - BG Luxe Realty"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Matthew Alexander (Premier Sotheby's International Realty)",
+        "Sally Awad (Sotheby's International Realty)",
+        "Mitch Boraski (eXp Realty)",
+        "Abigail Hines Miller (The Agency Charlotte)",
+        "Stephen Lonnen (Real Broker, LLC)"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Gina Lorenzo",
+        "Josh Finigan",
+        "Ivester Jackson | Christie’s International Real Estate",
+        "Dickens Mitchener Private Brokerage"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Sally Awad - Sotheby's International Realty",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Stephen Lonnen - Real Broker, LLC",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Abigail Hines Miller",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Abigail Hines Miller (The Agency Charlotte)",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Bre Gaither - BG Luxe Realty",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Dickens Mitchener Private Brokerage",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Gina Lorenzo",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Ivester Jackson | Christie’s International Real Estate",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Josh Finigan",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Matthew Alexander",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Matthew Alexander (Premier Sotheby's International Realty)",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Mitch Boraski",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Mitch Boraski (eXp Realty)",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Mitch Boraski - Senior Real Estate Advisor",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Sally Awad",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Stephen Lonnen",
+      "engines": [
+        "ChatGPT"
+      ]
+    }
+  ],
+  "totalNamed": 18
+}

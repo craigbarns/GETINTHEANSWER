@@ -1,0 +1,127 @@
+{
+  "industry": "chiropractors",
+  "city": "portland-or",
+  "cityLabel": "Portland, OR",
+  "query": "Best chiropractor in Portland, OR for lower back pain and sciatica",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Rogue Chiropractic",
+        "Solutions Sports & Spine",
+        "Bridgetown Chiropractic",
+        "Portland Backsmith Chiropractic",
+        "Wise Chiropractic"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Solutions Sports & Spine",
+        "Rogue Chiropractic",
+        "Portland Wellness Care",
+        "Portland Backsmith Chiropractic",
+        "Bridgetown Chiropractic"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Solutions Sports & Spine",
+        "Wise Chiropractic",
+        "Portland Wellness Care",
+        "Portland Backsmith Chiropractic Care",
+        "Bridgetown Chiropractic"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Rogue Chiropractic",
+        "Calm Chiropractic and Wellness",
+        "Sunstone Chiropractic and Massage",
+        "Concordia Chiropractic Center",
+        "Back To Life Chiropractic"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Bridgetown Chiropractic",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Rogue Chiropractic",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Solutions Sports & Spine",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Portland Backsmith Chiropractic",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Portland Wellness Care",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Wise Chiropractic",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Back To Life Chiropractic",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Calm Chiropractic and Wellness",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Concordia Chiropractic Center",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Portland Backsmith Chiropractic Care",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Sunstone Chiropractic and Massage",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 20
+}

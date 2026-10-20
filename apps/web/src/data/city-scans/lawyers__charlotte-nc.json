@@ -1,0 +1,114 @@
+{
+  "industry": "lawyers",
+  "city": "charlotte-nc",
+  "cityLabel": "Charlotte, NC",
+  "query": "Top personal injury lawyer in Charlotte, NC with a proven track record",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Schehr Law PLLC",
+        "Speaks Law Firm",
+        "The Devin Law Firm",
+        "Chandler Volta Personal Injury Lawyers"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Schehr Law PLLC",
+        "Speaks Law Firm",
+        "Chandler Volta Personal Injury Lawyers"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Schehr Law PLLC",
+        "Speaks Law Firm",
+        "Chandler Volta Personal Injury Lawyers",
+        "Shane Smith Law",
+        "The Devin Law Firm, P.A"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Rosensteel Fleishman Car Accident & Injury Lawyers",
+        "Matthew C. Berthold",
+        "Brown Moore & Associates",
+        "Christopher Layton / The Layton Law Firm"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Chandler Volta Personal Injury Lawyers",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Schehr Law PLLC",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Speaks Law Firm",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Brown Moore & Associates",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Christopher Layton / The Layton Law Firm",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Matthew C. Berthold",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Rosensteel Fleishman Car Accident & Injury Lawyers",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Shane Smith Law",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "The Devin Law Firm",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "The Devin Law Firm, P.A",
+      "engines": [
+        "Gemini"
+      ]
+    }
+  ],
+  "totalNamed": 16
+}

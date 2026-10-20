@@ -1,0 +1,115 @@
+{
+  "industry": "chiropractors",
+  "city": "columbus-oh",
+  "cityLabel": "Columbus, OH",
+  "query": "Best chiropractor in Columbus, OH for lower back pain and sciatica",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Potent Chiropractic",
+        "Mission Chiropractic",
+        "Osborn Chiropractic Orthopedics",
+        "Dr. Scot Chiropractic",
+        "Northtowne Chiropractic"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Potent Chiropractic",
+        "Mission Chiropractic",
+        "Osborn Chiropractic Orthopedics",
+        "Northtowne Chiropractic",
+        "Dr. Scot Chiropractic"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Mission Chiropractic",
+        "Potent Chiropractic",
+        "Dr. Scot Chiropractic",
+        "Osborn Chiropractic Orthopedics",
+        "Northtowne Chiropractic"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Capital City Chiropractic",
+        "Graceland Chiropractic",
+        "Inner Health Chiropractic",
+        "Spine & Sports Family Chiropractic"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Dr. Scot Chiropractic",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Mission Chiropractic",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Northtowne Chiropractic",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Osborn Chiropractic Orthopedics",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Potent Chiropractic",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Capital City Chiropractic",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Graceland Chiropractic",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Inner Health Chiropractic",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Spine & Sports Family Chiropractic",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 19
+}

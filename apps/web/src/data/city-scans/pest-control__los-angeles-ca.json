@@ -1,0 +1,108 @@
+{
+  "industry": "pest-control",
+  "city": "los-angeles-ca",
+  "cityLabel": "Los Angeles, CA",
+  "query": "Best pest control company in Los Angeles, CA for a termite infestation",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Ultimate Termite",
+        "My Termite Company",
+        "LA Bugs Pest & Termite Control",
+        "Reliant Pest Control",
+        "Orkin"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Ultimate Termite",
+        "My Termite Company",
+        "LA Bugs Pest & Termite Control",
+        "Reliant Pest Control"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Ultimate Termite",
+        "My Termite Company",
+        "LA Bugs Pest & Termite Control",
+        "Reliant Pest Control",
+        "Orkin"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Orkin",
+        "A1 Termite & Pest Control",
+        "Pacific Coast Termite",
+        "Western Exterminator"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "LA Bugs Pest & Termite Control",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "My Termite Company",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Orkin",
+      "engines": [
+        "ChatGPT",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Reliant Pest Control",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Ultimate Termite",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "A1 Termite & Pest Control",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Pacific Coast Termite",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Western Exterminator",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 18
+}

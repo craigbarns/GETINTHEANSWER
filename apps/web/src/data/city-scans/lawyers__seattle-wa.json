@@ -1,0 +1,122 @@
+{
+  "industry": "lawyers",
+  "city": "seattle-wa",
+  "cityLabel": "Seattle, WA",
+  "query": "Top personal injury lawyer in Seattle, WA with a proven track record",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Coluccio Law",
+        "Luvera Law Firm",
+        "Bishop Legal",
+        "Dubin Law Group",
+        "Darrell Cochran Personal Injury Lawyer"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Darrell Cochran Personal Injury Lawyer",
+        "Luvera Law Firm",
+        "Dubin Law Group",
+        "Coluccio Law",
+        "Bishop Legal"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Luvera Law Firm",
+        "Coluccio Law",
+        "Bishop Legal",
+        "PCVA",
+        "Dubin Law Group"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Darrell Cochran",
+        "Stritmatter Law",
+        "Heather Cover (Rogers & Cover, PLLC)",
+        "Bernard Law Group",
+        "Dubin Law Group"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Dubin Law Group",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Bishop Legal",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Coluccio Law",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Luvera Law Firm",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Darrell Cochran Personal Injury Lawyer",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Bernard Law Group",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Darrell Cochran",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Heather Cover (Rogers & Cover, PLLC)",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "PCVA",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Stritmatter Law",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 20
+}

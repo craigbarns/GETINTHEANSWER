@@ -1,0 +1,111 @@
+{
+  "industry": "roofers",
+  "city": "san-antonio-tx",
+  "cityLabel": "San Antonio, TX",
+  "query": "Who is the best roofing contractor in San Antonio, TX for storm damage repair?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Safepro Roofing",
+        "Storm Roofing LLC",
+        "Alexander's Roofing",
+        "Ideal Precision Roofing & Exteriors",
+        "Champion Roofing"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Alexander's Roofing",
+        "Storm Roofing LLC",
+        "Champion Roofing",
+        "Ideal Precision Roofing & Exteriors"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Alexander's Roofing",
+        "Ideal Precision Roofing & Exteriors",
+        "Safepro",
+        "Storm Roofing LLC",
+        "Champion Roofing"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Rhino Roofers",
+        "Presidio Roofing",
+        "Two Brothers Roofing"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Alexander's Roofing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Champion Roofing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Ideal Precision Roofing & Exteriors",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Storm Roofing LLC",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Presidio Roofing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Rhino Roofers",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Safepro",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Safepro Roofing",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Two Brothers Roofing",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 17
+}

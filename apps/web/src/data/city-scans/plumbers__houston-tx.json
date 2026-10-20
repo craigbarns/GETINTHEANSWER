@@ -1,0 +1,121 @@
+{
+  "industry": "plumbers",
+  "city": "houston-tx",
+  "cityLabel": "Houston, TX",
+  "query": "Who is the most reliable emergency plumber in Houston, TX for a burst pipe?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Roto-Rooter",
+        "Spencer's Plumbing Services",
+        "Strutton Plumbing",
+        "1-Tom-Plumber"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Spencer's Plumbing Services",
+        "Roto-Rooter Houston",
+        "Strutton Plumbing"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Roto-Rooter",
+        "Strutton Plumbing",
+        "Spencer's Plumbing Services",
+        "1-Tom-Plumber Houston",
+        "Nick's Plumbing"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Roto-Rooter Houston",
+        "Abacus Plumbing, Air Conditioning & Electrical",
+        "John Moore Services",
+        "Santhoff Plumbing",
+        "Village Plumbing, Air & Electric"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Spencer's Plumbing Services",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Strutton Plumbing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Roto-Rooter",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Roto-Rooter Houston",
+      "engines": [
+        "Claude",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "1-Tom-Plumber",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "1-Tom-Plumber Houston",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Abacus Plumbing, Air Conditioning & Electrical",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "John Moore Services",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Nick's Plumbing",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Santhoff Plumbing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Village Plumbing, Air & Electric",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 17
+}

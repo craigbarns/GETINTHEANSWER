@@ -1,0 +1,127 @@
+{
+  "industry": "hvac-contractors",
+  "city": "scottsdale-az",
+  "cityLabel": "Scottsdale, AZ",
+  "query": "Who offers 24/7 emergency AC repair near me in Scottsdale, AZ?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Worlock Air Conditioning & Heating",
+        "Action Mechanical Services",
+        "One Hour Air Conditioning & Heating",
+        "ACE Cooling, Heating, Plumbing and Electrical",
+        "Mountainside Air"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Action Mechanical Services",
+        "One Hour Air Conditioning & Heating®",
+        "Mountainside Air",
+        "ACE Cooling, Heating, Plumbing and Electrical",
+        "Worlock Air Conditioning & Heating"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Worlock Air Conditioning & Heating",
+        "One Hour Air Conditioning & Heating® of Scottsdale",
+        "Action Mechanical Services",
+        "ACE Cooling, Heating, Plumbing and Electrical",
+        "Mountainside Air"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Scottsdale AC Pros",
+        "Arcadia Air",
+        "Desert Comfort Mechanical",
+        "Scottsdale HVAC Pros",
+        "Arizona AC & Heating"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "ACE Cooling, Heating, Plumbing and Electrical",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Action Mechanical Services",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Mountainside Air",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Worlock Air Conditioning & Heating",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "One Hour Air Conditioning & Heating",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Arcadia Air",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Arizona AC & Heating",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Desert Comfort Mechanical",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "One Hour Air Conditioning & Heating® of Scottsdale",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Scottsdale AC Pros",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Scottsdale HVAC Pros",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 20
+}

@@ -1,0 +1,122 @@
+{
+  "industry": "med-spas",
+  "city": "portland-or",
+  "cityLabel": "Portland, OR",
+  "query": "Best med spa in Portland, OR for Botox and dermal fillers",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Fresh Faces RX Med Spa",
+        "Cosmetiq Medicine",
+        "Aura Aesthetics",
+        "Rivière Med Spa",
+        "SkinSpirit"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Fresh Faces RX",
+        "Cosmetiq Medicine",
+        "Aura Aesthetics",
+        "Aluma Aesthetic Medicine"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Fresh Faces RX Med Spa",
+        "Cosmetiq Medicine",
+        "Aluma Aesthetic Medicine",
+        "SkinSpirit",
+        "Rivière Med Spa & Lasers"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Rivière Med Spa",
+        "Cosmetiq Medicine",
+        "SkinSpirit",
+        "Aura Aesthetics",
+        "MD Beauty Lab",
+        "Love Medical Spa"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Cosmetiq Medicine",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Aura Aesthetics",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "SkinSpirit",
+      "engines": [
+        "ChatGPT",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Aluma Aesthetic Medicine",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Fresh Faces RX Med Spa",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Rivière Med Spa",
+      "engines": [
+        "ChatGPT",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Fresh Faces RX",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Love Medical Spa",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "MD Beauty Lab",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Rivière Med Spa & Lasers",
+      "engines": [
+        "Gemini"
+      ]
+    }
+  ],
+  "totalNamed": 20
+}

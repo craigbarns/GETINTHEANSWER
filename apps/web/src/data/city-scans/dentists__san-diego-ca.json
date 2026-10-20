@@ -1,0 +1,162 @@
+{
+  "industry": "dentists",
+  "city": "san-diego-ca",
+  "cityLabel": "San Diego, CA",
+  "query": "Best cosmetic dentist for porcelain veneers in San Diego, CA",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Dr. David Eshom",
+        "Dr. Nidhi Pai",
+        "Dr. Kohani at La Jolla Cosmetic Dentistry & Orthodontics",
+        "Dr. Jeff Gray at Espire Dental",
+        "Dr. Lynne Thomas at Pearls of Dentistry"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Dr. David Eshom - Advanced Porcelain Veneers",
+        "Dr. Nidhi Pai - Smiles by Pai",
+        "Dr. Jeff Gray - Espire Dental (La Mesa)",
+        "Dr. Kohani - La Jolla Cosmetic Dentistry & Orthodontics",
+        "Drs. Lynne Thomas & Juergen Langenbach - Pearls of Dentistry"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Dr. David Eshom",
+        "Dr. Nidhi Pai at Smiles by Pai",
+        "Dr. Jeff Gray at Espire Dental",
+        "Dr. Georgina Carrasco at Blyss Dental",
+        "Scripps Center for Dental Care"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Pearls of Dentistry",
+        "Dovey Dental",
+        "Balboa Dental Care",
+        "Classic Dental Smiles",
+        "Dr. Richard Feinberg / Veneers San Diego"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Dr. David Eshom",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Dr. Jeff Gray at Espire Dental",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Balboa Dental Care",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Classic Dental Smiles",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Dovey Dental",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Dr. David Eshom - Advanced Porcelain Veneers",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Dr. Georgina Carrasco at Blyss Dental",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Dr. Jeff Gray - Espire Dental (La Mesa)",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Dr. Kohani - La Jolla Cosmetic Dentistry & Orthodontics",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Dr. Kohani at La Jolla Cosmetic Dentistry & Orthodontics",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Dr. Lynne Thomas at Pearls of Dentistry",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Dr. Nidhi Pai",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Dr. Nidhi Pai - Smiles by Pai",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Dr. Nidhi Pai at Smiles by Pai",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Dr. Richard Feinberg / Veneers San Diego",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Drs. Lynne Thomas & Juergen Langenbach - Pearls of Dentistry",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Pearls of Dentistry",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Scripps Center for Dental Care",
+      "engines": [
+        "Gemini"
+      ]
+    }
+  ],
+  "totalNamed": 20
+}

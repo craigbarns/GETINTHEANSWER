@@ -1,0 +1,129 @@
+{
+  "industry": "chiropractors",
+  "city": "scottsdale-az",
+  "cityLabel": "Scottsdale, AZ",
+  "query": "Best chiropractor in Scottsdale, AZ for lower back pain and sciatica",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Better Health Solutions LLC",
+        "Life Chiropractic AZ",
+        "Ally Spine Center",
+        "Scottsdale Disc Center",
+        "Aligned Integrated Health"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Aligned Integrated Health",
+        "Ally Spine Center",
+        "Better Health Solutions LLC",
+        "Life Chiropractic AZ"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Aligned Integrated Health",
+        "Better Health Solutions LLC",
+        "Ally Spine Center",
+        "Life Chiropractic AZ",
+        "Scottsdale Disc Center"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Ally Spine Center",
+        "Hudson Chiropractic",
+        "Peak & Valley Chiropractic",
+        "Arizona Chiropractic & Holistic Health Center",
+        "Price Chiropractic",
+        "Maynard Chiropractic & Wellness Center",
+        "The Healing Joint"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Ally Spine Center",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Aligned Integrated Health",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Better Health Solutions LLC",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Life Chiropractic AZ",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Scottsdale Disc Center",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Arizona Chiropractic & Holistic Health Center",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Hudson Chiropractic",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Maynard Chiropractic & Wellness Center",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Peak & Valley Chiropractic",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Price Chiropractic",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "The Healing Joint",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 21
+}

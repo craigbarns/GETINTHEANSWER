@@ -1,0 +1,134 @@
+{
+  "industry": "lawyers",
+  "city": "san-diego-ca",
+  "cityLabel": "San Diego, CA",
+  "query": "Top personal injury lawyer in San Diego, CA with a proven track record",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Singleton Schreiber",
+        "McClellan Law",
+        "Gomez Trial Attorneys",
+        "Hulburt Law",
+        "Mission Personal Injury Lawyers"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Singleton Schreiber",
+        "The Gomez Firm",
+        "McClellan Law",
+        "Hulburt Law",
+        "Mission Legal Center"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Singleton Schreiber",
+        "McClellan Law",
+        "Gomez Trial Attorneys",
+        "The Hulburt Law Firm",
+        "Mission Personal Injury Lawyers"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "HHJ Trial Attorneys",
+        "The McClellan Law Firm",
+        "Gomez Trial Attorneys",
+        "Pines Salomon Personal Injury Lawyers",
+        "Mission Personal Injury Lawyers",
+        "Jurewitz Law Group"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Gomez Trial Attorneys",
+      "engines": [
+        "ChatGPT",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "McClellan Law",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Mission Personal Injury Lawyers",
+      "engines": [
+        "ChatGPT",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Singleton Schreiber",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Hulburt Law",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "HHJ Trial Attorneys",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Jurewitz Law Group",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Mission Legal Center",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Pines Salomon Personal Injury Lawyers",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "The Gomez Firm",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "The Hulburt Law Firm",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "The McClellan Law Firm",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 21
+}

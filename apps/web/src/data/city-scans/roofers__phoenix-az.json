@@ -1,0 +1,109 @@
+{
+  "industry": "roofers",
+  "city": "phoenix-az",
+  "cityLabel": "Phoenix, AZ",
+  "query": "Who is the best roofing contractor in Phoenix, AZ for storm damage repair?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Phoenix Roofing & Repair",
+        "Four Peaks Roofing",
+        "Mikku & Sons",
+        "Avid Roofing Solutions",
+        "Everguard Roofing & Repair"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Phoenix Roofing & Repair",
+        "Four Peaks Roofing",
+        "Mikku & Sons",
+        "Avid Roofing Solutions"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Four Peaks Roofing",
+        "Phoenix Roofing & Repair",
+        "Mikku & Sons"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Power Peak Roofing",
+        "Pinnacle Roofing",
+        "Thomas Roofing",
+        "Overson Roofing"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Four Peaks Roofing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Mikku & Sons",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Phoenix Roofing & Repair",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Avid Roofing Solutions",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Everguard Roofing & Repair",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Overson Roofing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Pinnacle Roofing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Power Peak Roofing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Thomas Roofing",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 16
+}

@@ -1,0 +1,127 @@
+{
+  "industry": "lawyers",
+  "city": "scottsdale-az",
+  "cityLabel": "Scottsdale, AZ",
+  "query": "Top personal injury lawyer in Scottsdale, AZ with a proven track record",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Scottsdale Injury Lawyers LLC",
+        "Yearin Law Office",
+        "Knapp & Roberts",
+        "Lawrence Lazzara",
+        "Gallagher & Kennedy"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Scottsdale Injury Lawyers LLC",
+        "Yearin Law Office",
+        "Knapp & Roberts",
+        "KRLG Injury Lawyers",
+        "Blackwell Ruiz"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Yearin Law Office",
+        "Knapp & Roberts",
+        "Scottsdale Injury Lawyers LLC",
+        "KRLG Injury Lawyers"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Donald G. Yearin",
+        "Gallagher & Kennedy",
+        "Ed Parra",
+        "Freddy Saavedra",
+        "Skiver Bradley",
+        "Yearin Law Office"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Yearin Law Office",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Knapp & Roberts",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Scottsdale Injury Lawyers LLC",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Gallagher & Kennedy",
+      "engines": [
+        "ChatGPT",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "KRLG Injury Lawyers",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Blackwell Ruiz",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Donald G. Yearin",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Ed Parra",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Freddy Saavedra",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Lawrence Lazzara",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Skiver Bradley",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 20
+}

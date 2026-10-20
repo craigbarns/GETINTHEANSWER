@@ -1,0 +1,117 @@
+{
+  "industry": "auto-repair",
+  "city": "chicago-il",
+  "cityLabel": "Chicago, IL",
+  "query": "Best independent auto repair shop in Chicago, IL for European cars",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Euro Auto Plex, Inc",
+        "European Auto Ltd",
+        "J and A Automotive",
+        "VFC Engineering",
+        "Midwest Performance Cars"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "J and A Automotive",
+        "VFC Engineering",
+        "Euro Auto Plex, Inc",
+        "European Auto Ltd",
+        "E & J Foreign Cars Ltd"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Midwest Performance Cars",
+        "Autonology",
+        "Euro Auto Plex, Inc",
+        "J and A Automotive",
+        "European Auto Ltd"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Midwest Performance Cars",
+        "European Auto Ltd",
+        "Melbar Foreign Cars",
+        "Autonology",
+        "E & J Foreign Cars"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "European Auto Ltd",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Euro Auto Plex, Inc",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "J and A Automotive",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Midwest Performance Cars",
+      "engines": [
+        "ChatGPT",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Autonology",
+      "engines": [
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "VFC Engineering",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "E & J Foreign Cars",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "E & J Foreign Cars Ltd",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Melbar Foreign Cars",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 20
+}

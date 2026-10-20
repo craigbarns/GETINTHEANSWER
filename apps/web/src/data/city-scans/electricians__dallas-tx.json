@@ -1,0 +1,106 @@
+{
+  "industry": "electricians",
+  "city": "dallas-tx",
+  "cityLabel": "Dallas, TX",
+  "query": "Who is the best licensed electrician in Dallas, TX for an emergency callout?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "ElectricMan",
+        "Habit 24 Hour Electrician",
+        "Kellogg Electric",
+        "Mister Sparky DFW"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Habit 24 Hour Electrician",
+        "Mister Sparky DFW",
+        "Kellogg Electric",
+        "Lakewood Electrical"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "ElectricMan",
+        "Habit 24 Hour Electrician",
+        "Kellogg Electric",
+        "Lakewood Electrical",
+        "Mister Sparky"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Mister Sparky DFW",
+        "W3 Electric",
+        "Berkeys",
+        "ElectricMan"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "ElectricMan",
+      "engines": [
+        "ChatGPT",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Habit 24 Hour Electrician",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Kellogg Electric",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Mister Sparky DFW",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Lakewood Electrical",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Berkeys",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Mister Sparky",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "W3 Electric",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 17
+}

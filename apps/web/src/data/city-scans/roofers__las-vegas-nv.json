@@ -1,0 +1,101 @@
+{
+  "industry": "roofers",
+  "city": "las-vegas-nv",
+  "cityLabel": "Las Vegas, NV",
+  "query": "Who is the best roofing contractor in Las Vegas, NV for storm damage repair?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Professional Roofing Services",
+        "Fortitude Roofing",
+        "Presto Roofing LV",
+        "DiSalvo Roofing"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Fortitude Roofing",
+        "Professional Roofing Services",
+        "DISALVO ROOFING",
+        "Presto Roofing LV"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Professional Roofing Services",
+        "Fortitude Roofing",
+        "DISALVO ROOFING",
+        "Presto Roofing LV"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Bartlett Roofing",
+        "DiSalvo Roofing",
+        "Prestige Roofing",
+        "Fortitude Roofing",
+        "The Roof Doctor, LLC"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "DiSalvo Roofing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Fortitude Roofing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Presto Roofing LV",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Professional Roofing Services",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Bartlett Roofing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Prestige Roofing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "The Roof Doctor, LLC",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 17
+}

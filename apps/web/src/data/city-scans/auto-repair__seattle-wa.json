@@ -1,0 +1,115 @@
+{
+  "industry": "auto-repair",
+  "city": "seattle-wa",
+  "cityLabel": "Seattle, WA",
+  "query": "Best independent auto repair shop in Seattle, WA for European cars",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Precision Motorworks",
+        "EuroCar Service",
+        "Finesse Auto",
+        "Scanwest Autosport",
+        "Car Tender"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Precision Motorworks",
+        "EuroCar Service",
+        "Finesse Auto",
+        "Scanwest Autosport"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Precision Motorworks",
+        "EuroCar Service",
+        "Finesse Auto",
+        "Scanwest Autosport Seattle",
+        "Autowerkstatt German Auto Repair"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Precision Motorworks",
+        "EuroCar Service",
+        "Scanwest Autosport",
+        "Pacific Rim Automotive",
+        "Swedish Automotive"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "EuroCar Service",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Precision Motorworks",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Finesse Auto",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Scanwest Autosport",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Autowerkstatt German Auto Repair",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Car Tender",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Pacific Rim Automotive",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Scanwest Autosport Seattle",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Swedish Automotive",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 19
+}

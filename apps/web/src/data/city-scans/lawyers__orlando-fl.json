@@ -1,0 +1,148 @@
+{
+  "industry": "lawyers",
+  "city": "orlando-fl",
+  "cityLabel": "Orlando, FL",
+  "query": "Top personal injury lawyer in Orlando, FL with a proven track record",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "C. Richard Newsome, Esq",
+        "Todd Miner, Esq",
+        "John C. Willis IV, Esq",
+        "Steven Maher, Esq",
+        "Juan J. Cordero, Esq"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Newsome Law, P.A",
+        "Todd Miner Law",
+        "Maher Law Firm",
+        "John C. Willis IV",
+        "NeJame Law"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Newsome Law, P.A",
+        "Maher Law Firm",
+        "John C. Willis IV, P.A"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Dan Newlin Injury Attorneys",
+        "Law Offices of James O. Cunningham, P.A",
+        "Orlando Injury Law Firm",
+        "Emery Brett Ledger",
+        "Wooten, Kimbrough, Damaso, and Dennis, P.A"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Maher Law Firm",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Newsome Law, P.A",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "C. Richard Newsome, Esq",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Dan Newlin Injury Attorneys",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Emery Brett Ledger",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "John C. Willis IV",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "John C. Willis IV, Esq",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "John C. Willis IV, P.A",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Juan J. Cordero, Esq",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Law Offices of James O. Cunningham, P.A",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "NeJame Law",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Orlando Injury Law Firm",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Steven Maher, Esq",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Todd Miner Law",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Todd Miner, Esq",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Wooten, Kimbrough, Damaso, and Dennis, P.A",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 18
+}

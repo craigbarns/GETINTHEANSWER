@@ -1,0 +1,141 @@
+{
+  "industry": "pest-control",
+  "city": "scottsdale-az",
+  "cityLabel": "Scottsdale, AZ",
+  "query": "Best pest control company in Scottsdale, AZ for a termite infestation",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Bill's Pest Termite Control",
+        "Terminix",
+        "Atomic Pest Control",
+        "Green Home Pest Control",
+        "Uni-Tech Pest Control"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Bill's Pest Termite Control",
+        "Cummings Pest Control",
+        "Green Home Pest Control",
+        "Atomic Pest Control"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Bill's Pest Termite Control",
+        "Terminix",
+        "Atomic Pest Control",
+        "Green Home Pest Control",
+        "Uni-Tech Pest Control"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Orange Pest Control",
+        "Urban Desert Pest Control",
+        "Insectek Pest Solutions",
+        "Poor Boy Termite Control",
+        "Arizona Termite Specialists",
+        "Orkin",
+        "Terminix",
+        "Truly Nolen"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Atomic Pest Control",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Bill's Pest Termite Control",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Green Home Pest Control",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Terminix",
+      "engines": [
+        "ChatGPT",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Uni-Tech Pest Control",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Arizona Termite Specialists",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Cummings Pest Control",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Insectek Pest Solutions",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Orange Pest Control",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Orkin",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Poor Boy Termite Control",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Truly Nolen",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Urban Desert Pest Control",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 22
+}

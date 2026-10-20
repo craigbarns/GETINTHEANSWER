@@ -1,0 +1,125 @@
+{
+  "industry": "chiropractors",
+  "city": "las-vegas-nv",
+  "cityLabel": "Las Vegas, NV",
+  "query": "Best chiropractor in Las Vegas, NV for lower back pain and sciatica",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Spinal Care of Nevada",
+        "Back Care Chiropractic",
+        "Wright Chiropractic",
+        "Simpson Chiropractic",
+        "Spine Center Las Vegas"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Back in Action Chiropractic",
+        "Spinal Care of Nevada",
+        "Back Care Chiropractic",
+        "Simpson Chiropractic",
+        "Wright Chiropractic"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Back in Action Chiropractic",
+        "Back Care Chiropractic",
+        "Spinal Care of Nevada"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "NUYU Chiropractic",
+        "Spine Wellness Center",
+        "Wright Chiropractic",
+        "Red Rock Chiropractic",
+        "The Spine Center",
+        "Lake Mead Chiropractic"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Back Care Chiropractic",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Spinal Care of Nevada",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Wright Chiropractic",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Back in Action Chiropractic",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Simpson Chiropractic",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Lake Mead Chiropractic",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "NUYU Chiropractic",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Red Rock Chiropractic",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Spine Center Las Vegas",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Spine Wellness Center",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "The Spine Center",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 19
+}

@@ -1,0 +1,111 @@
+{
+  "industry": "pest-control",
+  "city": "denver-co",
+  "cityLabel": "Denver, CO",
+  "query": "Best pest control company in Denver, CO for a termite infestation",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "EnviroPest",
+        "Moxie Pest Control",
+        "Greyhawk Pest Control",
+        "Denver Termite",
+        "Solatera Home Services"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Greyhawk Pest Control",
+        "Moxie Pest Control",
+        "EnviroPest"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "EnviroPest",
+        "Moxie Pest Control",
+        "Greyhawk Pest Control",
+        "Denver Termite",
+        "Environmental Pest Control"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Orkin",
+        "Side by Side Pest Control",
+        "EnviroPest",
+        "Terminix"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "EnviroPest",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Greyhawk Pest Control",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Moxie Pest Control",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Denver Termite",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Environmental Pest Control",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Orkin",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Side by Side Pest Control",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Solatera Home Services",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Terminix",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 17
+}

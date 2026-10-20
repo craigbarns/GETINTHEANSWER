@@ -1,0 +1,118 @@
+{
+  "industry": "chiropractors",
+  "city": "atlanta-ga",
+  "cityLabel": "Atlanta, GA",
+  "query": "Best chiropractor in Atlanta, GA for lower back pain and sciatica",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Buckhead Spine Specialists",
+        "Back To Basics",
+        "The Roeske Clinic",
+        "Alive and Wellness",
+        "Georgia Spinal Health & Wellness"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Buckhead Pain Specialists",
+        "Back To Basics",
+        "Georgia Spinal Health & Wellness",
+        "Alive and Wellness"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Buckhead Pain Specialists",
+        "Back To Basics",
+        "Georgia Spinal Health & Wellness",
+        "The Roeske Clinic Atlanta",
+        "Alive and Wellness"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Total Wellness Solutions",
+        "Buckhead Spine Specialists",
+        "Georgia Spinal",
+        "Taylor Chiropractic & Wellness"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Alive and Wellness",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Back To Basics",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Georgia Spinal Health & Wellness",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Buckhead Pain Specialists",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Buckhead Spine Specialists",
+      "engines": [
+        "ChatGPT",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Georgia Spinal",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Taylor Chiropractic & Wellness",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "The Roeske Clinic",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "The Roeske Clinic Atlanta",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Total Wellness Solutions",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 18
+}

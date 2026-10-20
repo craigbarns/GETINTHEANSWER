@@ -1,0 +1,143 @@
+{
+  "industry": "hvac-contractors",
+  "city": "san-diego-ca",
+  "cityLabel": "San Diego, CA",
+  "query": "Who offers 24/7 emergency AC repair near me in San Diego, CA?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Same Day Heating & Air",
+        "ASI Heating and Air",
+        "Anderson Plumbing, Heating & Air",
+        "Bill Howe",
+        "Elite HVAC San Diego"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Same Day Heating & Air",
+        "ASI",
+        "Anderson Plumbing, Heating & Air",
+        "Bill Howe",
+        "Elite HVAC San Diego"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Same Day Heating & Air",
+        "ASI",
+        "Elite HVAC San Diego",
+        "Anderson Plumbing, Heating & Air",
+        "United Plumbing Heating Air & Electric"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Mauzy Heating, Air & Solar",
+        "Bill Howe",
+        "Anderson Plumbing, Heating & Air",
+        "Ruiz Air Conditioning & Heating",
+        "Progressive Heating & Air",
+        "Sky Clean Air",
+        "Elite HVAC San Diego / Elite Heating & Air Conditioning",
+        "JPM Heating & Air"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Anderson Plumbing, Heating & Air",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Bill Howe",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Elite HVAC San Diego",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Same Day Heating & Air",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "ASI",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "ASI Heating and Air",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Elite HVAC San Diego / Elite Heating & Air Conditioning",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "JPM Heating & Air",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Mauzy Heating, Air & Solar",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Progressive Heating & Air",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Ruiz Air Conditioning & Heating",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Sky Clean Air",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "United Plumbing Heating Air & Electric",
+      "engines": [
+        "Gemini"
+      ]
+    }
+  ],
+  "totalNamed": 23
+}

@@ -1,0 +1,104 @@
+{
+  "industry": "roofers",
+  "city": "dallas-tx",
+  "cityLabel": "Dallas, TX",
+  "query": "Who is the best roofing contractor in Dallas, TX for storm damage repair?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Bert Roofing",
+        "EDP Roofing",
+        "JRH Construction",
+        "Bold Roofing",
+        "T-Rock Roofing"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "EDP Roofing",
+        "JRH Construction",
+        "Bert Roofing"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "EDP Roofing",
+        "JRH Construction",
+        "Bert Roofing",
+        "Bold Roofing",
+        "Roof Raiders & Co"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "KPost Company",
+        "Bold Roofing",
+        "Dane Roofing"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Bert Roofing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Bold Roofing",
+      "engines": [
+        "ChatGPT",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "EDP Roofing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "JRH Construction",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Dane Roofing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "KPost Company",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Roof Raiders & Co",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "T-Rock Roofing",
+      "engines": [
+        "ChatGPT"
+      ]
+    }
+  ],
+  "totalNamed": 16
+}

@@ -1,0 +1,106 @@
+{
+  "industry": "plumbers",
+  "city": "orlando-fl",
+  "cityLabel": "Orlando, FL",
+  "query": "Who is the most reliable emergency plumber in Orlando, FL for a burst pipe?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Choice Plumbing Orlando",
+        "Shamrock Plumbing",
+        "P and M Plumbing",
+        "Rainaldi Home Services",
+        "Benjamin Franklin Plumbing"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Choice Plumbing Orlando",
+        "Shamrock Plumbing",
+        "Benjamin Franklin Plumbing"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Choice Plumbing Orlando",
+        "Roto-Rooter",
+        "Shamrock Plumbing",
+        "Rainaldi Home Services",
+        "P and M Plumbing"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Choice Plumbing Orlando",
+        "Roto-Rooter Orlando",
+        "Shamrock Plumbing",
+        "Herrell Plumbing"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Choice Plumbing Orlando",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Shamrock Plumbing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Benjamin Franklin Plumbing",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "P and M Plumbing",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Rainaldi Home Services",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Herrell Plumbing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Roto-Rooter",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Roto-Rooter Orlando",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 17
+}

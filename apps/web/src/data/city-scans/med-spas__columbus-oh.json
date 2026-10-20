@@ -1,0 +1,111 @@
+{
+  "industry": "med-spas",
+  "city": "columbus-oh",
+  "cityLabel": "Columbus, OH",
+  "query": "Best med spa in Columbus, OH for Botox and dermal fillers",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "The Luxe MedSpa",
+        "Gold Bar Aesthetics",
+        "Muse Med Spa",
+        "ALFA Med Spa",
+        "Reverse Aesthetics"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Muse Med Spa",
+        "Gold Bar Aesthetics",
+        "The Luxe MedSpa",
+        "Reverse Aesthetics"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Nina Deep, MD Aesthetics",
+        "The Luxe MedSpa",
+        "Gold Bar Aesthetics",
+        "Muse Med Spa",
+        "Medspa of Columbus"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Jiva Med Spa Columbus",
+        "Strok’D By Adonis LLC",
+        "The Luxe MedSpa"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "The Luxe MedSpa",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Gold Bar Aesthetics",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Muse Med Spa",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Reverse Aesthetics",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "ALFA Med Spa",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Jiva Med Spa Columbus",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Medspa of Columbus",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Nina Deep, MD Aesthetics",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Strok’D By Adonis LLC",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 17
+}

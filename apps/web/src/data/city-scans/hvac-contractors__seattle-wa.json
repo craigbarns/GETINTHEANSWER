@@ -1,0 +1,168 @@
+{
+  "industry": "hvac-contractors",
+  "city": "seattle-wa",
+  "cityLabel": "Seattle, WA",
+  "query": "Who offers 24/7 emergency AC repair near me in Seattle, WA?",
+  "scannedAt": "2026-09-06",
+  "engines": [
+    {
+      "engine": "ChatGPT",
+      "businesses": [
+        "Peak HVAC Seattle",
+        "Fischer Heating & Cooling",
+        "Allred Heating Cooling Electric",
+        "DEAR Services",
+        "One Hour Heating & Air Conditioning"
+      ]
+    },
+    {
+      "engine": "Claude",
+      "businesses": [
+        "Peak HVAC",
+        "Fischer Heating",
+        "Trust Allred",
+        "Dear Services",
+        "One Hour Heat and Air"
+      ]
+    },
+    {
+      "engine": "Gemini",
+      "businesses": [
+        "Peak HVAC Seattle",
+        "Fischer Heating & Air",
+        "Allred Heating Cooling Electric",
+        "DEAR Services",
+        "One Hour Heating & Air Conditioning of Central Seattle"
+      ]
+    },
+    {
+      "engine": "Perplexity",
+      "businesses": [
+        "Essential Heating & Air",
+        "HotWire Repair",
+        "Home Comfort Alliance",
+        "Product Air Heating",
+        "Zip Mechanical",
+        "Glacier Heating & Cooling",
+        "One Hour Heating & Air Conditioning of Central Seattle",
+        "Hunt’s Services"
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "name": "DEAR Services",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Allred Heating Cooling Electric",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "One Hour Heating & Air Conditioning of Central Seattle",
+      "engines": [
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Peak HVAC Seattle",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Essential Heating & Air",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Fischer Heating",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Fischer Heating & Air",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Fischer Heating & Cooling",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Glacier Heating & Cooling",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Home Comfort Alliance",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "HotWire Repair",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Hunt’s Services",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "One Hour Heat and Air",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "One Hour Heating & Air Conditioning",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Peak HVAC",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Product Air Heating",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Trust Allred",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Zip Mechanical",
+      "engines": [
+        "Perplexity"
+      ]
+    }
+  ],
+  "totalNamed": 23
+}
