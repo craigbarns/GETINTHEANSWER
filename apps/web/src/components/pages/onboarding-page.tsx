@@ -34,6 +34,19 @@ interface FormData {
 interface OnboardingResponse {
   site_id?: string;
   message?: string;
+  details?: { detail?: unknown } | null;
+}
+
+type ScanFailure = "limit" | "website" | "invalid" | "busy" | "unavailable";
+
+/** Which failure an error response describes, so the visitor sees the real
+ *  reason (and a code they can pass on) instead of a generic "try again". */
+function classifyFailure(status: number): ScanFailure {
+  if (status === 429) return "limit";
+  if (status === 400) return "website";
+  if (status === 422) return "invalid";
+  if (status === 503) return "busy";
+  return "unavailable";
 }
 
 const initialFormData: FormData = {
@@ -82,8 +95,14 @@ const COPY = {
     errStep1: "Please enter your business name and website.",
     errStep2: "Please enter your city and your trade.",
     errUrl: "Please check your website address, for example yourbusiness.com.",
-    errStart: "We couldn’t start the scan right now.",
-    errUnexpected: "Something went wrong. Please try again in a moment.",
+    errors: {
+      limit: "You’ve reached the free scan limit (3 a day for the same connection, email or website). Please try again tomorrow.",
+      website: "We can’t reach this website. Check the address, for example yourbusiness.com.",
+      invalid: "Some of the information looks invalid. Please check each field and try again.",
+      busy: "Our scanner is busy right now. Please try again in a minute.",
+      unavailable: "The scan service is temporarily unavailable. Please try again in a few minutes.",
+    } satisfies Record<ScanFailure, string>,
+    errCode: (code: string) => `Error code: ${code}`,
     backButton: "Back",
     next: "Next step",
     submit: "Run my free scan",
@@ -126,8 +145,14 @@ const COPY = {
     errStep1: "Merci d’indiquer le nom de votre entreprise et votre site.",
     errStep2: "Merci d’indiquer votre ville et votre métier.",
     errUrl: "Vérifiez l’adresse de votre site, par exemple mon-entreprise.fr.",
-    errStart: "Nous n’avons pas pu lancer l’analyse pour le moment.",
-    errUnexpected: "Une erreur inattendue s’est produite. Merci de réessayer dans un instant.",
+    errors: {
+      limit: "Vous avez atteint la limite d’analyses gratuites (3 par jour pour une même connexion, une même adresse email ou un même site). Réessayez demain.",
+      website: "Nous n’arrivons pas à joindre ce site. Vérifiez l’adresse, par exemple mon-entreprise.fr.",
+      invalid: "Certaines informations semblent invalides. Vérifiez chaque champ et réessayez.",
+      busy: "Notre service d’analyse est très sollicité. Réessayez dans une minute.",
+      unavailable: "Le service d’analyse est momentanément indisponible. Réessayez dans quelques minutes.",
+    } satisfies Record<ScanFailure, string>,
+    errCode: (code: string) => `Code d’erreur : ${code}`,
     backButton: "Retour",
     next: "Étape suivante",
     submit: "Lancer mon analyse gratuite",
@@ -153,6 +178,7 @@ export function OnboardingPage({ locale }: { locale: Locale }) {
   const [step, setStep] = useState(1);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [errorCode, setErrorCode] = useState<string | null>(null);
 
   // Prefill from the links that lead here: the hero form passes the business
   // name, the industry and city pages pass the trade and the city.
@@ -205,6 +231,7 @@ export function OnboardingPage({ locale }: { locale: Locale }) {
     }
 
     setError(null);
+    setErrorCode(null);
 
     const normalizedUrl = normalizeWebsiteUrl(formData.websiteUrl);
     if (!normalizedUrl) {
@@ -217,26 +244,38 @@ export function OnboardingPage({ locale }: { locale: Locale }) {
     setLoading(true);
     window.gtag?.("event", "scan_started", { city: formData.city, industry: formData.industry, language: locale });
 
+    let response: Response;
     try {
-      const response = await fetch("/api/onboarding", {
+      response = await fetch("/api/onboarding", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...formData, websiteUrl: normalizedUrl, locale }),
       });
-      const data = (await response.json()) as OnboardingResponse;
-
-      if (!response.ok || !data.site_id) {
-        throw new Error(locale === "en" && data.message ? data.message : copy.errStart);
-      }
-
-      window.gtag?.("event", "generate_lead", { lead_source: "free_ai_visibility_scan" });
-      window.gtag?.("event", "scan_completed", { site_id: data.site_id });
-      router.push(localePath(locale, `/dashboard?site_id=${encodeURIComponent(data.site_id)}`));
-    } catch (submissionError) {
-      window.gtag?.("event", "scan_failed", { reason: "api_or_network" });
-      setError(submissionError instanceof Error ? submissionError.message : copy.errUnexpected);
+    } catch {
+      window.gtag?.("event", "scan_failed", { reason: "network" });
+      setError(copy.errors.unavailable);
+      setErrorCode("network");
       setLoading(false);
+      return;
     }
+
+    // A proxy timeout or crash returns an HTML page, not JSON.
+    const data = (await response.json().catch(() => null)) as OnboardingResponse | null;
+
+    if (!response.ok || !data?.site_id) {
+      const failure = response.ok ? "unavailable" : classifyFailure(response.status);
+      const detail = typeof data?.details?.detail === "string" ? data.details.detail : null;
+      if (detail) console.warn("Scan failed:", response.status, detail);
+      window.gtag?.("event", "scan_failed", { reason: failure, status_code: response.status });
+      setError(copy.errors[failure]);
+      setErrorCode(String(response.status));
+      setLoading(false);
+      return;
+    }
+
+    window.gtag?.("event", "generate_lead", { lead_source: "free_ai_visibility_scan" });
+    window.gtag?.("event", "scan_completed", { site_id: data.site_id });
+    router.push(localePath(locale, `/dashboard?site_id=${encodeURIComponent(data.site_id)}`));
   };
 
   const inputClass = "h-12 rounded-xl border-foreground/10 bg-white px-4 shadow-sm focus-visible:border-primary";
@@ -378,7 +417,10 @@ export function OnboardingPage({ locale }: { locale: Locale }) {
                 {error && (
                   <div className="flex items-start gap-3 rounded-xl border border-red-200 bg-red-50 p-3.5 text-sm font-semibold text-red-800" role="alert" aria-live="polite">
                     <CircleAlert className="mt-0.5 size-4 shrink-0" aria-hidden="true" />
-                    {error}
+                    <span>
+                      {error}
+                      {errorCode && <span className="mt-1 block text-xs font-medium text-red-800/70">{copy.errCode(errorCode)}</span>}
+                    </span>
                   </div>
                 )}
 

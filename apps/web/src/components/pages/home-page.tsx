@@ -24,6 +24,12 @@ import { DATE_LOCALE, DEFAULT_CURRENCY_BY_LOCALE, localePath, type Locale } from
 import { CURRENCIES, DONE_FOR_YOU_PRICE, PRICES } from "@/lib/pricing";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 
+/** French translations of the hero questions. The engines were asked in
+ *  English; the French page shows the translation and says so. */
+const HERO_QUERY_FR: Record<string, string> = {
+  "plumbers__dallas-tx": "Quel est le plombier d’urgence le plus fiable à Dallas, au Texas, pour une canalisation qui a éclaté\u202f?",
+};
+
 /** The real scan shown in the hero. Falls back to any published scan. */
 function getHeroScan(): CityScan | null {
   const preferred = getCityScan("plumbers", "dallas-tx");
@@ -64,12 +70,15 @@ function getCopy(locale: Locale, stats: ReturnType<typeof getBenchmarkStats>) {
       ],
       eyebrow: "La visibilité IA pour les entreprises locales",
       titleA: "ChatGPT recommande vos concurrents.",
-      titleB: "Et vous ?",
+      titleB: "Et vous\u00a0?",
       intro:
         "Vos clients demandent désormais à une IA quel artisan, quel dentiste ou quel avocat choisir. GetInTheAnswer vous montre en 2 minutes qui elle recommande à votre place, et ce qu’il faut corriger pour être dans la réponse.",
       trust: ["Gratuit, sans carte bancaire", "Résultat en 1 à 2 minutes", "ChatGPT, Claude, Gemini, Perplexity"],
       proofLabel: "Question réelle posée aux IA",
       proofCity: "Étude GetInTheAnswer",
+      proofCountry: " (États-Unis)",
+      proofTranslated: "Question posée en anglais aux IA, traduite ici. Les réponses sont reproduites telles quelles.",
+      proofOriginal: "Question posée en anglais aux IA.",
       proofNamed: (count: number) => `${count} entreprises citées — et aucune autre.`,
       proofFoot: "Si votre entreprise n’est pas dans ces listes, ces clients ne vous voient pas.",
       measured: (date: string) => `Mesuré le ${date}`,
@@ -224,6 +233,9 @@ function getCopy(locale: Locale, stats: ReturnType<typeof getBenchmarkStats>) {
     trust: ["Free, no credit card", "Results in 1–2 minutes", "ChatGPT, Claude, Gemini, Perplexity"],
     proofLabel: "A real question we asked the AIs",
     proofCity: "GetInTheAnswer study",
+    proofCountry: "",
+    proofTranslated: "",
+    proofOriginal: "",
     proofNamed: (count: number) => `${count} businesses named — and nobody else.`,
     proofFoot: "If your business isn’t on these lists, these customers never hear your name.",
     measured: (date: string) => `Measured on ${date}`,
@@ -377,6 +389,8 @@ export function HomePage({ locale }: { locale: Locale }) {
   const copy = getCopy(locale, stats);
   const onboarding = localePath(locale, "/onboarding");
   const homeUrl = `${SITE_URL}${localePath(locale, "/")}`;
+  const heroQuery =
+    scan && locale === "fr" ? (HERO_QUERY_FR[`${scan.industry}__${scan.city}`] ?? scan.query) : (scan?.query ?? "");
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -480,11 +494,18 @@ export function HomePage({ locale }: { locale: Locale }) {
                 <div className="relative overflow-hidden rounded-[1.75rem] border border-foreground/10 bg-[#173b35] p-3 shadow-2xl shadow-primary/20 sm:p-4">
                   <div className="flex flex-wrap items-center justify-between gap-2 px-3 py-2">
                     <p className="text-xs font-extrabold uppercase tracking-[0.12em] text-lime-300">{copy.proofLabel}</p>
-                    <p className="text-xs font-semibold text-white/60">{scan.cityLabel} · {copy.proofCity}</p>
+                    <p className="text-xs font-semibold text-white/60">{scan.cityLabel}{copy.proofCountry} · {copy.proofCity}</p>
                   </div>
 
                   <div className="mt-2 rounded-[1.35rem] bg-white p-4 sm:p-6">
-                    <p className="text-lg font-extrabold leading-7 tracking-tight sm:text-xl">&ldquo;{scan.query}&rdquo;</p>
+                    <p className="text-lg font-extrabold leading-7 tracking-tight sm:text-xl" lang={heroQuery === scan.query ? "en" : undefined}>
+                      {locale === "fr" ? `«\u00a0${heroQuery}\u00a0»` : `“${heroQuery}”`}
+                    </p>
+                    {locale === "fr" && (
+                      <p className="mt-2 text-xs font-semibold leading-5 text-muted-foreground">
+                        {heroQuery === scan.query ? copy.proofOriginal : copy.proofTranslated}
+                      </p>
+                    )}
 
                     <div className="mt-5 grid gap-2.5 sm:grid-cols-2">
                       {scan.engines.map((engine) => (
@@ -493,11 +514,10 @@ export function HomePage({ locale }: { locale: Locale }) {
                             <span className={`size-2 rounded-full ${engineDots[engine.engine] ?? "bg-slate-400"}`} />
                             {engine.engine}
                           </p>
-                          <ol className="mt-2 space-y-1 text-sm font-semibold">
-                            {engine.businesses.slice(0, 3).map((business, index) => (
-                              <li className="flex gap-2" key={business}>
-                                <span className="text-muted-foreground">{index + 1}.</span>
-                                <span className="truncate">{business}</span>
+                          <ol className="mt-2 list-decimal space-y-1 pl-5 text-sm font-semibold marker:font-semibold marker:text-muted-foreground">
+                            {engine.businesses.slice(0, 3).map((business) => (
+                              <li className="break-words pl-0.5" key={business}>
+                                {business}
                               </li>
                             ))}
                           </ol>

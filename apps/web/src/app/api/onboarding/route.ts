@@ -40,10 +40,16 @@ export async function POST(request: Request) {
     }
 
     return NextResponse.json(data, { status: response.status });
-  } catch {
+  } catch (error) {
+    // 504 when the API took too long to answer (a live scan that overran),
+    // 502 when it could not be reached at all: the code shown to the visitor
+    // tells the two apart.
+    const code = (error as { cause?: { code?: string } })?.cause?.code ?? "";
+    const timedOut = code.includes("TIMEOUT") || (error as Error)?.name === "TimeoutError";
+    console.error("Onboarding proxy failed:", code || (error as Error)?.message);
     return NextResponse.json(
       { message: "The analysis service is temporarily unavailable. Please try again in a moment." },
-      { status: 502 },
+      { status: timedOut ? 504 : 502 },
     );
   }
 }
