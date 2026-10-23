@@ -6,6 +6,7 @@ httpx
 pydantic
 pydantic-settings
 sqlalchemy
+psycopg[binary]>=3.2,<4
 psycopg2-binary
 alembic
 supabase
