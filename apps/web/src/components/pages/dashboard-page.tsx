@@ -28,6 +28,7 @@ import { LanguageSwitcher } from "@/components/language-switcher";
 import { LogoMark } from "@/components/logo";
 import { ManageSubscriptionButton } from "@/components/manage-subscription-button";
 import { Price } from "@/components/price";
+import { ReportMomentOfTruth } from "@/components/report-moment-of-truth";
 import { ShareScoreButton } from "@/components/share-score-button";
 import { UnlockButton } from "@/components/unlock-button";
 import { Badge } from "@/components/ui/badge";
@@ -363,6 +364,7 @@ export async function DashboardPage({ locale, searchParams }: { locale: Locale; 
         </div>
 
         {billingStatus && <BillingStatusBanner siteId={data.site_id} status={billingStatus} locale={locale} />}
+        <ReportMomentOfTruth data={data} locale={locale} />
 
         <section className="relative overflow-hidden rounded-[2rem] bg-[#173b35] p-6 text-white shadow-xl shadow-primary/10 sm:p-9 lg:p-10">
           <div className="pointer-events-none absolute -right-24 -top-32 size-96 rounded-full bg-lime-300/12 blur-3xl" aria-hidden="true" />
