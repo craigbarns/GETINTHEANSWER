@@ -30,6 +30,10 @@ export function HeroForm({ locale = "en", showSample = true }: { locale?: Locale
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
+    window.gtag?.("event", "scan_intent", {
+      language: locale,
+      entry_point: "hero_form",
+    });
     const onboarding = localePath(locale, "/onboarding");
     router.push(company.trim() ? `${onboarding}?companyName=${encodeURIComponent(company.trim())}` : onboarding);
   };
