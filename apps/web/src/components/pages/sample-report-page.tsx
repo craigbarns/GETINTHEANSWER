@@ -26,16 +26,16 @@ import { SITE_NAME, SITE_URL } from "@/lib/site";
 
 export const SAMPLE_REPORT_META: Record<Locale, { title: string; description: string; ogTitle: string; ogDescription: string }> = {
   en: {
-    title: "Sample AI Visibility Report — See What You Get",
+    title: "Sample AI Visibility Report",
     description:
-      "A complete example of a GetInTheAnswer report: AI visibility score, coverage by engine, competitor benchmark, website audit and the prioritized action plan. Illustrative sample for a fictional business.",
+      "Explore an illustrative AI visibility report for a fictitious business: score, model comparison, competitors, website audit and action plan.",
     ogTitle: "Sample AI Visibility Report — GetInTheAnswer",
     ogDescription: "See exactly what a GetInTheAnswer report contains before you run your own free scan.",
   },
   fr: {
-    title: "Exemple de rapport de visibilité IA — ce que vous obtenez",
+    title: "Exemple de rapport de visibilité IA",
     description:
-      "Un exemple complet de rapport GetInTheAnswer : score de visibilité IA, couverture par moteur, comparaison avec les concurrents, audit du site et plan d’action priorisé. Exemple illustratif pour une entreprise fictive.",
+      "Découvrez un rapport illustratif pour une entreprise fictive : score de visibilité IA, réponses par modèle, concurrents, audit et plan d’action.",
     ogTitle: "Exemple de rapport de visibilité IA — GetInTheAnswer",
     ogDescription: "Voyez exactement ce que contient un rapport GetInTheAnswer avant de lancer votre analyse gratuite.",
   },

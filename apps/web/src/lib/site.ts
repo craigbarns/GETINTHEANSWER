@@ -1,4 +1,4 @@
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://getintheanswer.com";
+export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://www.getintheanswer.com").replace(/\/+$/, "");
 
 export const SITE_NAME = "GetInTheAnswer";
 

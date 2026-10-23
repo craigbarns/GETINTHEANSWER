@@ -6,6 +6,7 @@ import { ArrowLeft, ArrowRight, Check } from "lucide-react";
 import { LogoMark } from "@/components/logo";
 import { Button } from "@/components/ui/button";
 import { HeroForm } from "@/components/hero-form";
+import { formatScanDate } from "@/lib/city-scans";
 import { getGuide, guides } from "@/lib/guides";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 
@@ -67,7 +68,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
         "headline": guide.title,
         "description": guide.description,
         "datePublished": guide.datePublished,
-        "dateModified": guide.datePublished,
+        "dateModified": guide.dateModified ?? guide.datePublished,
         "mainEntityOfPage": `${SITE_URL}/guides/${guide.slug}`,
         "inLanguage": "en-US",
         "author": { "@type": "Organization", "name": SITE_NAME, "url": SITE_URL },
@@ -101,6 +102,13 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
         <article className="mt-8">
           <p className="text-sm font-extrabold uppercase tracking-[0.16em] text-emerald-700">Guide · {guide.readingMinutes} min read</p>
           <h1 className="mt-4 text-balance text-4xl font-extrabold leading-[1.05] tracking-[-0.045em] sm:text-5xl">{guide.title}</h1>
+          <p className="mt-4 text-sm text-muted-foreground">
+            By <Link className="font-semibold hover:underline" href="/legal">{SITE_NAME}</Link>
+            {" · Updated "}
+            <time dateTime={guide.dateModified ?? guide.datePublished}>
+              {formatScanDate(guide.dateModified ?? guide.datePublished)}
+            </time>
+          </p>
 
           <div className="mt-8 space-y-5">
             {guide.intro.map((paragraph, index) => (

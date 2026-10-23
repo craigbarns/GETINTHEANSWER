@@ -10,14 +10,14 @@ import { SITE_URL } from "@/lib/site";
 
 export const AGENCY_META: Record<Locale, { title: string; description: string }> = {
   en: {
-    title: "White-label AI visibility tool for local SEO agencies",
+    title: "AI Visibility Reports for SEO Agencies",
     description:
       "Generate white-label ChatGPT and Claude visibility reports for your local clients. Batch scans and priority support for SEO agencies.",
   },
   fr: {
-    title: "Outil de visibilité IA en marque blanche pour agences locales",
+    title: "Rapports de visibilité IA pour agences",
     description:
-      "Générez des rapports de visibilité ChatGPT et Claude en marque blanche pour vos clients locaux. Analyses par lots et support prioritaire pour les agences SEO.",
+      "Mesurez la visibilité IA de vos clients locaux. Rapports en marque blanche, analyses par lots et support pour les agences SEO.",
   },
 };
 

@@ -12,7 +12,7 @@ const ROOT_COPY: Record<Locale, { title: string; template: string; description: 
     title: "GetInTheAnswer — Is ChatGPT recommending your business?",
     template: "%s | GetInTheAnswer",
     description:
-      "Find out whether ChatGPT, Claude, Gemini and Perplexity recommend your local business. Free AI visibility score, competitor comparison and a prioritized action plan in minutes.",
+      "Check whether AI models recommend your local business. Get a free visibility score, competitor comparison and action plan.",
     ogTitle: "GetInTheAnswer — Is your business in the AI answer?",
     ogDescription:
       "Measure your visibility in ChatGPT, Claude, Gemini and Perplexity in minutes. Free AI visibility score, no credit card.",
@@ -22,7 +22,7 @@ const ROOT_COPY: Record<Locale, { title: string; template: string; description: 
     title: "GetInTheAnswer — ChatGPT recommande-t-il votre entreprise ?",
     template: "%s | GetInTheAnswer",
     description:
-      "Vérifiez si ChatGPT, Claude, Gemini et Perplexity recommandent votre entreprise locale. Score de visibilité IA gratuit, comparaison des concurrents et plan d'action priorisé en quelques minutes.",
+      "Vérifiez si les IA recommandent votre entreprise. Analyse gratuite de votre visibilité, concurrents cités et plan d’action.",
     ogTitle: "GetInTheAnswer — Votre entreprise est-elle dans la réponse des IA ?",
     ogDescription:
       "Mesurez votre visibilité dans ChatGPT, Claude, Gemini et Perplexity en quelques minutes. Score de visibilité IA gratuit, sans carte bancaire.",

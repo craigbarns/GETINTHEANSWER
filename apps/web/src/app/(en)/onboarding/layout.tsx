@@ -5,7 +5,7 @@ import { localizedAlternates } from "@/lib/i18n";
 export const metadata: Metadata = {
   title: "Free AI visibility scan",
   description:
-    "Describe your business and get a free AI visibility report: real customer questions tested on ChatGPT, Claude, Gemini and Perplexity, with recommendations ranked by impact.",
+    "Get a free AI visibility report for your business. Compare model responses, discover named competitors and review recommended actions.",
   alternates: localizedAlternates("en", "/onboarding"),
 };
 

@@ -32,9 +32,9 @@ export const industries: Industry[] = [
     slug: "plumbers",
     name: "Plumbing Contractors & Plumbers",
     singularName: "Plumber",
-    metaTitle: "AI SEO for Plumbers: How to Get Recommended by ChatGPT & Perplexity",
+    metaTitle: "AI SEO for Plumbers",
     metaDescription:
-      "Actionable guide to optimizing your plumbing business for ChatGPT, Claude, Gemini, and Perplexity recommendations. Boost your local AI visibility score today.",
+      "See which AI models recommend plumbers. Compare measured local results and check your business with a free AI visibility scan.",
     heroSubtitle:
       "When homeowners ask ChatGPT “who is the best emergency plumber near me?”, make sure your plumbing company is the #1 recommendation.",
     schemaType: "Plumber",
@@ -92,9 +92,9 @@ export const industries: Industry[] = [
     slug: "dentists",
     name: "Dental Clinics & Orthodontists",
     singularName: "Dentist",
-    metaTitle: "AI SEO for Dentists: Getting Recommended by ChatGPT & Claude",
+    metaTitle: "AI SEO for Dentists",
     metaDescription:
-      "Learn how dental practices, cosmetic dentists, and orthodontists can dominate ChatGPT, Claude, and Perplexity local search recommendations.",
+      "See which AI models recommend dentists. Compare measured local results and check your business with a free AI visibility scan.",
     heroSubtitle:
       "When patients ask AI assistants for dental implant specialists or top-rated dentists in your city, win the recommendation.",
     schemaType: "Dentist",
@@ -152,9 +152,9 @@ export const industries: Industry[] = [
     slug: "lawyers",
     name: "Law Firms & Attorneys",
     singularName: "Lawyer",
-    metaTitle: "AI SEO for Law Firms: Dominate ChatGPT & AI Search Recommendations",
+    metaTitle: "AI SEO for Law Firms",
     metaDescription:
-      "How personal injury, family, criminal defense, and business lawyers can get cited and recommended by generative AI engines.",
+      "See which AI models recommend law firms. Compare measured local results and check your business with a free AI visibility scan.",
     heroSubtitle:
       "When prospective clients ask ChatGPT for legal representation, ensure your law firm is named as the trusted authority.",
     schemaType: "Attorney",
@@ -212,9 +212,9 @@ export const industries: Industry[] = [
     slug: "real-estate-agents",
     name: "Real Estate Agents & Brokerages",
     singularName: "Real Estate Agent",
-    metaTitle: "AI SEO for Real Estate Agents: ChatGPT & Perplexity Optimization",
+    metaTitle: "AI SEO for Real Estate Agents",
     metaDescription:
-      "Discover how real estate agents and brokerages can rank in AI recommendations when buyers and sellers search in their city or neighborhood.",
+      "See which AI models recommend real estate agents. Compare measured local results and check your business with a free AI visibility scan.",
     heroSubtitle:
       "When buyers and sellers ask AI assistants for the top real estate agent in your area, be the name they trust.",
     schemaType: "RealEstateAgent",
@@ -272,9 +272,9 @@ export const industries: Industry[] = [
     slug: "restaurants",
     name: "Restaurants, Bistros & Cafes",
     singularName: "Restaurant",
-    metaTitle: "AI SEO for Restaurants: How to Get Recommended by ChatGPT & Gemini",
+    metaTitle: "AI SEO for Restaurants",
     metaDescription:
-      "Get your restaurant recommended when diners ask ChatGPT, Claude, and Gemini for the best dining, brunch, or romantic spots in town.",
+      "See which AI models recommend restaurants. Compare measured local results and check your business with a free AI visibility scan.",
     heroSubtitle:
       "When foodies ask AI “where should we go for dinner tonight?”, get your restaurant served in the top 3 recommendations.",
     schemaType: "Restaurant",
@@ -332,9 +332,9 @@ export const industries: Industry[] = [
     slug: "hvac-contractors",
     name: "HVAC Contractors & AC Repair",
     singularName: "HVAC Contractor",
-    metaTitle: "AI SEO for HVAC Contractors: ChatGPT & Perplexity Visibility",
+    metaTitle: "AI SEO for HVAC Contractors",
     metaDescription:
-      "Master generative engine optimization for heating, ventilation, and air conditioning companies. Get recommended for emergency AC and furnace repair.",
+      "See which AI models recommend hvac contractors. Compare measured local results and check your business with a free AI visibility scan.",
     heroSubtitle:
       "When homeowners face a broken air conditioner or furnace, ensure AI assistants name your HVAC business first.",
     schemaType: "HVACBusiness",
@@ -392,9 +392,9 @@ export const industries: Industry[] = [
     slug: "roofers",
     name: "Roofing Contractors",
     singularName: "Roofer",
-    metaTitle: "AI SEO for Roofers: Get Recommended by ChatGPT & Perplexity",
+    metaTitle: "AI SEO for Roofers",
     metaDescription:
-      "How roofing contractors get named when homeowners ask ChatGPT, Claude, Gemini and Perplexity for a roofer. Free AI visibility scan.",
+      "See which AI models recommend roofers. Compare measured local results and check your business with a free AI visibility scan.",
     heroSubtitle:
       "After a storm, homeowners now ask an AI who to call before they ask a neighbour. Make sure your name is the one it gives.",
     schemaType: "RoofingContractor",
@@ -452,9 +452,9 @@ export const industries: Industry[] = [
     slug: "electricians",
     name: "Electricians & Electrical Contractors",
     singularName: "Electrician",
-    metaTitle: "AI SEO for Electricians: Get Recommended by ChatGPT & Perplexity",
+    metaTitle: "AI SEO for Electricians",
     metaDescription:
-      "How electrical contractors get named when homeowners ask ChatGPT, Claude, Gemini and Perplexity for an electrician. Free AI visibility scan.",
+      "See which AI models recommend electricians. Compare measured local results and check your business with a free AI visibility scan.",
     heroSubtitle:
       "When someone asks an AI who can install their EV charger or fix a dead circuit, your name should be in the answer.",
     schemaType: "Electrician",
@@ -512,9 +512,9 @@ export const industries: Industry[] = [
     slug: "med-spas",
     name: "Med Spas & Aesthetic Clinics",
     singularName: "Med Spa",
-    metaTitle: "AI SEO for Med Spas: Get Recommended by ChatGPT & Perplexity",
+    metaTitle: "AI SEO for Med Spas",
     metaDescription:
-      "How med spas and aesthetic clinics get named when patients ask ChatGPT, Claude, Gemini and Perplexity where to go. Free AI visibility scan.",
+      "See which AI models recommend med spas. Compare measured local results and check your business with a free AI visibility scan.",
     heroSubtitle:
       "Patients research injectables through AI before they ever book a consult. Be the clinic it names.",
     schemaType: "MedicalBusiness",
@@ -572,9 +572,9 @@ export const industries: Industry[] = [
     slug: "chiropractors",
     name: "Chiropractors",
     singularName: "Chiropractor",
-    metaTitle: "AI SEO for Chiropractors: Get Recommended by ChatGPT & Perplexity",
+    metaTitle: "AI SEO for Chiropractors",
     metaDescription:
-      "How chiropractic clinics get named when patients ask ChatGPT, Claude, Gemini and Perplexity for a chiropractor. Free AI visibility scan.",
+      "See which AI models recommend chiropractors. Compare measured local results and check your business with a free AI visibility scan.",
     heroSubtitle:
       "People describe their pain to an AI before they book anything. Make sure it points them to your clinic.",
     schemaType: "Chiropractic",
@@ -632,9 +632,9 @@ export const industries: Industry[] = [
     slug: "pest-control",
     name: "Pest Control Companies",
     singularName: "Pest Control Company",
-    metaTitle: "AI SEO for Pest Control: Get Recommended by ChatGPT & Perplexity",
+    metaTitle: "AI SEO for Pest Control",
     metaDescription:
-      "How pest control companies get named when homeowners ask ChatGPT, Claude, Gemini and Perplexity who to call. Free AI visibility scan.",
+      "See which AI models recommend pest control. Compare measured local results and check your business with a free AI visibility scan.",
     heroSubtitle:
       "Termites, roaches, rodents — people ask an AI what to do before they call anyone. Be the company it suggests.",
     schemaType: "LocalBusiness",
@@ -692,9 +692,9 @@ export const industries: Industry[] = [
     slug: "auto-repair",
     name: "Auto Repair Shops",
     singularName: "Auto Repair Shop",
-    metaTitle: "AI SEO for Auto Repair Shops: Get Recommended by ChatGPT & Perplexity",
+    metaTitle: "AI SEO for Auto Repair Shops",
     metaDescription:
-      "How independent auto repair shops get named when drivers ask ChatGPT, Claude, Gemini and Perplexity where to take their car. Free AI visibility scan.",
+      "See which AI models recommend auto repair shops. Compare measured local results and check your business with a free AI visibility scan.",
     heroSubtitle:
       "Drivers describe a noise to an AI and ask who can fix it. Your shop should be the answer.",
     schemaType: "AutoRepair",

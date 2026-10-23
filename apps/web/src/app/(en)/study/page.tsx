@@ -6,6 +6,7 @@ import { ArrowRight } from "lucide-react";
 import { LogoMark } from "@/components/logo";
 import { Button } from "@/components/ui/button";
 import { formatScanDate, getBenchmarkStats } from "@/lib/city-scans";
+import { STUDY_METHOD_UPDATED_AT } from "@/lib/content-dates";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 
 const TITLE = "AI Visibility Benchmark: do four AI engines recommend the same local businesses?";
@@ -13,11 +14,11 @@ const TITLE = "AI Visibility Benchmark: do four AI engines recommend the same lo
 export function generateMetadata(): Metadata {
   const stats = getBenchmarkStats();
   const description = stats
-    ? `We asked ChatGPT, Claude, Gemini and Perplexity the same ${stats.scans} local questions and recorded every business they named. ${stats.soleMentionShare}% of businesses were named by only one engine.`
+    ? `Compare ${stats.scans} local searches across ${stats.cities} US cities and ${stats.engines.length} AI models. Explore dated recommendations, methods and engine comparisons.`
     : "Measured comparison of the local businesses ChatGPT, Claude, Gemini and Perplexity recommend.";
 
   return {
-    title: TITLE,
+    title: "Local AI Visibility Benchmark",
     description,
     alternates: { canonical: "/study" },
     openGraph: { title: TITLE, description, type: "article", url: `${SITE_URL}/study`, siteName: SITE_NAME },
@@ -27,6 +28,7 @@ export function generateMetadata(): Metadata {
 export default function StudyPage() {
   const stats = getBenchmarkStats();
   if (!stats) notFound();
+  const articleModifiedAt = stats.lastScanDate > STUDY_METHOD_UPDATED_AT ? stats.lastScanDate : STUDY_METHOD_UPDATED_AT;
 
   // Dataset markup: this page exists to be cited, so describe it as data.
   const structuredData = {
@@ -46,7 +48,7 @@ export default function StudyPage() {
         "@type": "Article",
         headline: TITLE,
         datePublished: stats.firstScanDate,
-        dateModified: stats.lastScanDate,
+        dateModified: articleModifiedAt,
         mainEntityOfPage: `${SITE_URL}/study`,
         inLanguage: "en-US",
         author: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
@@ -147,6 +149,10 @@ export default function StudyPage() {
 
         <section id="methodology" className="mt-14 scroll-mt-24 rounded-2xl border border-foreground/10 bg-white p-7 shadow-sm">
           <h2 className="text-2xl font-extrabold tracking-[-0.03em]">Method</h2>
+          <p className="mt-2 text-sm text-foreground/60">
+            Method clarified <time dateTime={STUDY_METHOD_UPDATED_AT}>{formatScanDate(STUDY_METHOD_UPDATED_AT)}</time>.
+            {" "}Measurements remain dated {formatScanDate(stats.lastScanDate)}.
+          </p>
           <p className="mt-3 text-foreground/70">
             Stated in full so anyone can reproduce or dispute it.
           </p>

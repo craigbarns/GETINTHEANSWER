@@ -8,7 +8,7 @@ import { guides } from "@/lib/guides";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "AI Visibility Guides — GEO & AI SEO for Local Businesses",
+  title: "AI Visibility and Local GEO Guides",
   description:
     "Practical guides on generative engine optimization (GEO): how to get recommended by ChatGPT, AI SEO playbooks and structured data for local businesses.",
   alternates: {

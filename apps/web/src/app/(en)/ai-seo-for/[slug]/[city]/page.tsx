@@ -30,8 +30,8 @@ export async function generateMetadata({
   const city = getCity(citySlug);
   if (!industry || !city) return {};
 
-  const title = `AI SEO for ${industry.name} in ${city.name}, ${city.stateCode} — Get Recommended by ChatGPT`;
-  const description = `Discover how ${industry.name.toLowerCase()} in ${city.name}, ${city.stateCode} can rank in ChatGPT, Claude, Gemini, and Perplexity local recommendations. Free AI scan.`;
+  const title = `AI SEO for ${industry.singularName} in ${city.name}, ${city.stateCode}`;
+  const description = `Explore ${industry.singularName.toLowerCase()} recommendations in ${city.name}, ${city.stateCode} from AI models. See recorded results and run a free visibility scan.`;
 
   // Until a pair has measured data it is the industry template with the city
   // name swapped in. Keep those out of the index rather than asking Google to
@@ -39,7 +39,7 @@ export async function generateMetadata({
   const measured = hasCityScan(industry.slug, city.slug);
 
   return {
-    title,
+    title: { absolute: title },
     description,
     robots: measured ? undefined : { index: false, follow: true },
     alternates: { canonical: `/ai-seo-for/${industry.slug}/${city.slug}` },
@@ -137,6 +137,7 @@ export default async function IndustryCityPage({
         "headline": `AI SEO for ${industry.name} in ${formattedCity}`,
         "description": `How ${industry.name.toLowerCase()} in ${formattedCity} can get recommended by ChatGPT, Claude, and Perplexity.`,
         "mainEntityOfPage": `${SITE_URL}/ai-seo-for/${industry.slug}/${city.slug}`,
+        "dateModified": scan?.scannedAt,
         "inLanguage": "en-US",
         "author": { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
         "publisher": { "@type": "Organization", name: SITE_NAME, url: SITE_URL },

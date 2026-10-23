@@ -10,6 +10,7 @@ export interface Guide {
   metaTitle: string;
   description: string;
   datePublished: string;
+  dateModified?: string;
   readingMinutes: number;
   intro: string[];
   sections: GuideSection[];
@@ -19,7 +20,7 @@ export const guides: Guide[] = [
   {
     slug: "get-recommended-by-chatgpt",
     title: "How to Get Your Business Recommended by ChatGPT",
-    metaTitle: "How to Get Recommended by ChatGPT (2026 Guide for Local Businesses)",
+    metaTitle: "Get Recommended by ChatGPT: Local Guide",
     description:
       "A practical, step-by-step guide to getting your local business mentioned and recommended in ChatGPT, Claude and Perplexity answers.",
     datePublished: "2026-08-17",
@@ -69,9 +70,9 @@ export const guides: Guide[] = [
   {
     slug: "what-is-generative-engine-optimization",
     title: "What Is Generative Engine Optimization (GEO)?",
-    metaTitle: "What Is GEO? Generative Engine Optimization Explained (2026)",
+    metaTitle: "What Is GEO? A Local Business Guide",
     description:
-      "Generative Engine Optimization (GEO) is the practice of making your business visible in AI-generated answers. Here's what it is, how it differs from SEO, and how to start.",
+      "Learn what generative engine optimization (GEO) means, how it relates to local SEO and how to measure your business in AI recommendations.",
     datePublished: "2026-08-17",
     readingMinutes: 6,
     intro: [
@@ -114,9 +115,9 @@ export const guides: Guide[] = [
   {
     slug: "ai-seo-for-local-business",
     title: "AI SEO for Local Businesses: The Practical Playbook",
-    metaTitle: "AI SEO for Local Businesses: Practical Playbook (2026)",
+    metaTitle: "AI SEO for Local Businesses: A Playbook",
     description:
-      "The concrete playbook local businesses can follow to show up in ChatGPT, Claude and Perplexity answers: profiles, reviews, content, structured data and measurement.",
+      "A local business AI SEO playbook: answer customer questions, maintain accurate profiles and measure recommendations across AI models.",
     datePublished: "2026-08-17",
     readingMinutes: 8,
     intro: [
@@ -161,11 +162,12 @@ export const guides: Guide[] = [
   {
     slug: "localbusiness-schema-ai-visibility",
     title: "LocalBusiness Schema: Structured Data That Makes AI Trust Your Business",
-    metaTitle: "LocalBusiness Schema for AI Visibility: Complete Guide (2026)",
+    metaTitle: "LocalBusiness Schema for AI Visibility",
     description:
       "How LocalBusiness structured data helps ChatGPT, Perplexity and Google's AI verify and recommend your business — with a copy-paste JSON-LD example.",
     datePublished: "2026-08-17",
     readingMinutes: 5,
+    dateModified: "2026-10-23",
     intro: [
       "Structured data is the difference between an AI engine reading your website and an AI engine trusting it. LocalBusiness schema turns your key facts — who you are, where you are, what you do, when you're open — into a format machines can verify instantly.",
     ],
