@@ -24,6 +24,8 @@ export interface DashboardData {
   website_url: string;
   city: string;
   industry: string;
+  services?: string | null;
+  locale?: "en" | "fr";
   visibility_score: number;
   total_queries: number;
   brand_mentions: number;

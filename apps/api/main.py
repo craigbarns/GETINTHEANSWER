@@ -258,6 +258,7 @@ class DashboardData(BaseModel):
     has_subscription: bool = False
     scanned_at: Optional[str] = None
     engines_used: List[str] = Field(default_factory=list)
+    locale: str = "en"
 
 
 def client_identifier(http_request: Request) -> str:
@@ -489,6 +490,19 @@ def build_queries(request: OnboardingRequest) -> List[str]:
     city = request.city.strip().title()
     industry = request.industry.strip()
     service = (request.services or industry).split(",")[0].strip()
+    if normalize_locale(request.locale) == "fr":
+        return [
+            f"Quel professionnel de {industry.lower()} recommanderiez-vous à {city} ?",
+            f"Quelle entreprise choisir pour {service.lower()} à {city} ?",
+            f"Quelles entreprises de {industry.lower()} sont fiables à {city} ?",
+            f"Je cherche un spécialiste de {service.lower()} à {city}, qui contacter ?",
+            f"Quels professionnels de {industry.lower()} sont bien notés à {city} ?",
+            f"Qui contacter rapidement pour {service.lower()} à {city} ?",
+            f"Comparez les prestataires de {industry.lower()} à {city}.",
+            f"Qui choisir pour des prestations de {industry.lower()} dans le secteur de {city} ?",
+            f"Quel expert local en {industry.lower()} choisir à {city} ?",
+            f"Quels prestataires recommandez-vous pour {service.lower()} à {city} ?",
+        ]
     return [
         f"Who is the best {industry.lower()} professional in {city}?",
         f"Who would you recommend for {service.lower()} in {city}?",
@@ -507,6 +521,24 @@ def build_recommendations(request: OnboardingRequest) -> List[Recommendation]:
     city = request.city.strip().title()
     industry = request.industry.strip()
     service = (request.services or industry).split(",")[0].strip()
+    if normalize_locale(request.locale) == "fr":
+        return [
+            Recommendation(
+                title="Créer une page FAQ locale",
+                description=f"Répondez aux questions de vos clients sur {service.lower()} et les secteurs desservis autour de {city}.",
+                priority="high", estimated_impact="high",
+            ),
+            Recommendation(
+                title="Ajouter les données structurées LocalBusiness",
+                description="Balisez le nom de votre entreprise, son adresse, son téléphone et ses prestations pour rendre ces informations lisibles par les IA.",
+                priority="medium", estimated_impact="medium",
+            ),
+            Recommendation(
+                title="Enrichir votre page Prestations",
+                description=f"Présentez vos spécialités en {industry.lower()}, vos références et vos réalisations à {city}.",
+                priority="low", estimated_impact="low",
+            ),
+        ]
     return [
         Recommendation(
             title="Create a local FAQ page",
@@ -572,7 +604,8 @@ RECOMMENDATION_SYSTEM_PROMPT = (
     "recommendations that will increase how often AI engines recommend this business. "
     "Be concrete: name the competitors that dominate the answers, reference what the engines actually "
     "said, and tie each recommendation to evidence from the answers. Each description is 2-4 sentences "
-    "written directly to the business owner. Write in the same language as the consumer queries. "
+    "written directly to the business owner. Use the report language specified below, independently "
+    "of the language of the consumer queries or quoted answers. "
     'Respond with JSON only: {"recommendations": [{"title": "...", "description": "...", '
     '"priority": "high|medium|low", "estimated_impact": "high|medium|low"}]} — 3 to 5 items, '
     "highest priority first."
@@ -836,7 +869,11 @@ async def generate_recommendations_llm(
         response = await client.chat.completions.create(
             model=TEXT_MODEL,
             messages=[
-                {"role": "system", "content": RECOMMENDATION_SYSTEM_PROMPT},
+                {"role": "system", "content": RECOMMENDATION_SYSTEM_PROMPT + (
+                    " Write every recommendation title and description in French."
+                    if normalize_locale(request.locale) == "fr"
+                    else " Write every recommendation title and description in English."
+                )},
                 {
                     "role": "user",
                     "content": f"{profile}\n\n--- REAL AI ANSWERS ---\n\n"
@@ -1036,6 +1073,7 @@ async def run_live_scan(site_id: str, request: OnboardingRequest) -> DashboardDa
         site_audit=site,
         scanned_at=datetime.now(timezone.utc).isoformat(),
         engines_used=sorted({engine_name for engine_name, _, _, _ in engines}),
+        locale=normalize_locale(request.locale),
     )
 
 
@@ -1098,6 +1136,7 @@ def generate_mock_dashboard_data(site_id: str, request: OnboardingRequest) -> Da
         mode="simulation",
         scanned_at=datetime.now(timezone.utc).isoformat(),
         engines_used=sorted(set(engines)),
+        locale=normalize_locale(request.locale),
     )
 
 
@@ -1137,6 +1176,7 @@ async def rescan_report(site_id: str) -> None:
         city=previous.city,
         industry=previous.industry,
         services=previous.services,
+        locale=previous.locale,
     )
     dashboard = await run_live_scan(site_id, request)
     dashboard.unlocked = True

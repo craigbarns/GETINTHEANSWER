@@ -36,6 +36,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { DATE_LOCALE, localePath, type Locale } from "@/lib/i18n";
 import { DONE_FOR_YOU_PRICE, PRICES } from "@/lib/pricing";
+import { localizeRecommendation, localizeSiteCheck } from "@/lib/report-localization";
 import { getDashboardData, type Priority } from "@/lib/seenbyai";
 
 export const DASHBOARD_META: Record<Locale, { title: string; description: string }> = {
@@ -139,6 +140,7 @@ const COPY = {
     recCount: (count: number) => `${count} recommendations`,
     priority: { high: "High priority", medium: "Medium priority", low: "Low priority" } as Record<Priority, string>,
     impact: "Estimated impact",
+    impactLevels: { high: "High", medium: "Medium", low: "Low" },
     locked: "Locked",
     lockedTitle: (index: number) => `Recommendation #${index}`,
     lockedText: "Unlock the full report to reveal this action, its priority and its expected impact on your AI visibility.",
@@ -231,6 +233,7 @@ const COPY = {
     recCount: (count: number) => `${count} recommandations`,
     priority: { high: "Priorité haute", medium: "Priorité moyenne", low: "Priorité basse" } as Record<Priority, string>,
     impact: "Impact estimé",
+    impactLevels: { high: "Élevé", medium: "Moyen", low: "Faible" },
     locked: "Verrouillé",
     lockedTitle: (index: number) => `Recommandation n°${index}`,
     lockedText: "Débloquez le rapport complet pour découvrir cette action, sa priorité et son impact attendu sur votre visibilité IA.",
@@ -476,7 +479,7 @@ export async function DashboardPage({ locale, searchParams }: { locale: Locale; 
             </div>
 
             <div className="mt-6 grid gap-3 sm:grid-cols-2">
-              {(data.unlocked ? data.site_audit.checks : data.site_audit.checks.slice(0, 2)).map((check) => (
+              {(data.unlocked ? data.site_audit.checks : data.site_audit.checks.slice(0, 2)).map((item) => localizeSiteCheck(item, data.city, locale)).map((check) => (
                 <div className={`flex items-start gap-3 rounded-2xl border p-4 ${check.passed ? "border-emerald-200 bg-emerald-50/60" : "border-amber-200 bg-amber-50/60"}`} key={check.key}>
                   <span className={`mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full ${check.passed ? "bg-emerald-600 text-white" : "bg-amber-500 text-white"}`}>
                     {check.passed ? <Check className="size-3.5" aria-hidden="true" /> : <AlertTriangle className="size-3.5" aria-hidden="true" />}
@@ -526,7 +529,7 @@ export async function DashboardPage({ locale, searchParams }: { locale: Locale; 
           </div>
 
           <div className="mt-6 grid gap-4 lg:grid-cols-3">
-            {data.recommendations.map((recommendation, index) =>
+            {data.recommendations.map((item) => localizeRecommendation(item, locale)).map((recommendation, index) =>
               data.unlocked || index === 0 ? (
                 <article className="flex flex-col rounded-[1.5rem] border border-foreground/8 bg-white p-6 shadow-sm transition-transform hover:-translate-y-1" key={recommendation.title}>
                   <div className="flex items-start justify-between gap-4">
@@ -535,7 +538,7 @@ export async function DashboardPage({ locale, searchParams }: { locale: Locale; 
                   </div>
                   <h3 className="mt-6 text-xl font-extrabold tracking-[-0.025em]">{recommendation.title}</h3>
                   <p className="mt-3 flex-1 text-sm leading-6 text-muted-foreground">{recommendation.description}</p>
-                  <div className="mt-6 flex items-center justify-between border-t border-foreground/8 pt-4 text-xs font-bold uppercase tracking-[0.08em] text-muted-foreground"><span>{copy.impact}</span><span className="text-emerald-700">{recommendation.estimated_impact}</span></div>
+                  <div className="mt-6 flex items-center justify-between border-t border-foreground/8 pt-4 text-xs font-bold uppercase tracking-[0.08em] text-muted-foreground"><span>{copy.impact}</span><span className="text-emerald-700">{copy.impactLevels[recommendation.estimated_impact]}</span></div>
                 </article>
               ) : (
                 <article className="flex flex-col rounded-[1.5rem] border border-dashed border-foreground/15 bg-white/60 p-6" key={`locked-${index}`}>
