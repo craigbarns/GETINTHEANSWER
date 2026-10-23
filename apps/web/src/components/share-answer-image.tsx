@@ -1,8 +1,10 @@
 "use client";
 
-import { useState } from "react";
-import { Share2 } from "lucide-react";
+import Image from "next/image";
+import { useEffect, useState } from "react";
+import { Download, Share2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogClose, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import type { Locale } from "@/lib/i18n";
 
 type Props = { company: string; city: string; engine: string; query: string; excerpt: string; measured: string; locale: Locale };
@@ -22,7 +24,9 @@ function lines(context: CanvasRenderingContext2D, text: string, width: number): 
 export function ShareAnswerImage(props: Props) {
   const [busy, setBusy] = useState(false);
   const [status, setStatus] = useState("");
+  const [preview, setPreview] = useState<{ file: File; url: string; height: number } | null>(null);
   const fr = props.locale === "fr";
+  useEffect(() => () => { if (preview) URL.revokeObjectURL(preview.url); }, [preview]);
 
   async function share() {
     setBusy(true);
@@ -63,21 +67,29 @@ export function ShareAnswerImage(props: Props) {
       context.fillText([fr ? "Extrait original" : "Original excerpt", props.measured].filter(Boolean).join(" · "), 72, canvas.height - 54);
       const blob = await new Promise<Blob>((resolve, reject) => canvas.toBlob((value) => value ? resolve(value) : reject(new Error("Image unavailable")), "image/png"));
       const file = new File([blob], "getintheanswer-reponse-ia.png", { type: "image/png" });
-      if (navigator.canShare?.({ files: [file] })) {
-        await navigator.share({ files: [file], title: "GetInTheAnswer" });
-      } else {
-        const url = URL.createObjectURL(blob);
-        const link = document.createElement("a");
-        link.href = url; link.download = file.name; link.click();
-        setTimeout(() => URL.revokeObjectURL(url), 1000);
-        setStatus(fr ? "Image téléchargée." : "Image downloaded.");
-      }
-      window.gtag?.("event", "share", { method: "answer_image", content_type: "ai_answer_excerpt", language: props.locale });
+      setPreview({ file, url: URL.createObjectURL(blob), height: canvas.height });
     } catch (error) {
+      console.warn("Could not export the answer image", error);
       if (!(error instanceof DOMException && error.name === "AbortError")) {
         setStatus(fr ? "L’image n’a pas pu être créée. Réessayez." : "The image could not be created. Try again.");
       }
     } finally { setBusy(false); }
+  }
+
+  async function sharePreparedImage() {
+    if (!preview) return;
+    try {
+      if (!navigator.canShare?.({ files: [preview.file] })) {
+        setStatus(fr ? "Téléchargez le PNG pour le partager." : "Download the PNG to share it.");
+        return;
+      }
+      await navigator.share({ files: [preview.file], title: "GetInTheAnswer" });
+      window.gtag?.("event", "share", { method: "answer_image", content_type: "ai_answer_excerpt", language: props.locale });
+    } catch (error) {
+      if (!(error instanceof DOMException && error.name === "AbortError")) {
+        setStatus(fr ? "Le partage natif est indisponible. Vous pouvez télécharger le PNG." : "Native sharing is unavailable. You can download the PNG.");
+      }
+    }
   }
 
   return <div className="flex flex-wrap items-center gap-3">
@@ -86,5 +98,20 @@ export function ShareAnswerImage(props: Props) {
       {busy ? (fr ? "Préparation…" : "Preparing…") : (fr ? "Partager en image" : "Share as an image")}
     </Button>
     <span className="text-sm text-muted-foreground" role="status">{status}</span>
+    <Dialog open={Boolean(preview)} onOpenChange={(open) => { if (!open) setPreview(null); }}>
+      <DialogContent showCloseButton={false} className="max-h-[calc(100vh-2rem)] overflow-y-auto sm:max-w-3xl">
+        <DialogHeader>
+          <DialogTitle>{fr ? "Partager cette réponse en image" : "Share this answer as an image"}</DialogTitle>
+          <DialogDescription>{fr ? "La citation et la date de votre relevé sont conservées dans l’image." : "The image preserves the quote and the date of your scan."}</DialogDescription>
+        </DialogHeader>
+        {preview && <Image src={preview.url} width={1200} height={preview.height} unoptimized className="h-auto w-full rounded-xl" alt={fr ? "Aperçu de la citation à partager" : "Preview of the quote to share"} />}
+        <p role="status" className="text-sm text-muted-foreground">{status}</p>
+        <DialogFooter>
+          <DialogClose render={<Button variant="ghost" />}>{fr ? "Fermer" : "Close"}</DialogClose>
+          {preview && <Button asChild variant="outline"><a href={preview.url} download={preview.file.name}><Download className="mr-2 size-4" />{fr ? "Télécharger le PNG" : "Download PNG"}</a></Button>}
+          <Button onClick={sharePreparedImage}><Share2 className="mr-2 size-4" />{fr ? "Ouvrir le partage" : "Open sharing"}</Button>
+        </DialogFooter>
+      </DialogContent>
+    </Dialog>
   </div>;
 }
