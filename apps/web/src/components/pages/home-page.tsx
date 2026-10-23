@@ -26,17 +26,19 @@ import { SITE_NAME, SITE_URL } from "@/lib/site";
 
 /** French translations of the hero questions. The engines were asked in
  *  English; the French page shows the translation and says so. */
-const HERO_QUERY_FR: Record<string, string> = {
+const HERO_QUERY_FR: Partial<Record<string, string>> = {
   "plumbers__dallas-tx": "Quel est le plombier d’urgence le plus fiable à Dallas, au Texas, pour une canalisation qui a éclaté\u202f?",
 };
 
 /** The real scan shown in the hero. Falls back to any published scan. */
-function getHeroScan(): CityScan | null {
+function getHeroScan(locale: Locale): CityScan | null {
+  const hasTranslation = (scan: CityScan) =>
+    locale === "en" || Boolean(HERO_QUERY_FR[`${scan.industry}__${scan.city}`]);
   const preferred = getCityScan("plumbers", "dallas-tx");
-  if (preferred) return preferred;
+  if (preferred && hasTranslation(preferred)) return preferred;
   for (const pair of getScannedPairs()) {
     const scan = getCityScan(pair.industry, pair.city);
-    if (scan) return scan;
+    if (scan && hasTranslation(scan)) return scan;
   }
   return null;
 }
@@ -77,10 +79,9 @@ function getCopy(locale: Locale, stats: ReturnType<typeof getBenchmarkStats>) {
       proofLabel: "Question réelle posée aux IA",
       proofCity: "Étude GetInTheAnswer",
       proofCountry: " (États-Unis)",
-      proofTranslated: "Question posée en anglais aux IA, traduite ici. Les réponses sont reproduites telles quelles.",
-      proofOriginal: "Question posée en anglais aux IA.",
-      proofNamed: (count: number) => `${count} entreprises citées — et aucune autre.`,
-      proofFoot: "Si votre entreprise n’est pas dans ces listes, ces clients ne vous voient pas.",
+      proofNote: "Question traduite en français. Les entreprises sont affichées sous leur nom d’origine.",
+      proofNamed: (count: number) => `${count} noms d’entreprises relevés dans ces réponses.`,
+      proofFoot: "Vérifiez si les IA citent votre entreprise dans votre ville.",
       measured: (date: string) => `Mesuré le ${date}`,
       statsLabel: "Ce que montre notre étude",
       stats: stats
@@ -115,13 +116,13 @@ function getCopy(locale: Locale, stats: ReturnType<typeof getBenchmarkStats>) {
       demoIntro: "Le rapport relie chaque faiblesse détectée à une action éditoriale ou technique, avec une priorité et un impact estimé.",
       demoCta: "Créer mon premier rapport",
       demoSample: "Voir l’exemple de rapport complet",
-      demoPlan: "Plan d’action recommandé",
+      demoPlan: "Exemple de plan d’action",
       demoHeading: "3 opportunités à fort impact",
       demoPriority: "Priorité haute",
       demoActions: [
-        ["Créer une page FAQ locale", "Répondre aux 8 questions clients les plus fréquentes", "+8 pts"],
-        ["Structurer vos données", "Ajouter le balisage schema LocalBusiness", "+3 pts"],
-        ["Renforcer votre page Prestations", "Détailler vos zones d’intervention et spécialités", "+1 pt"],
+        ["Créer une page FAQ locale", "Répondre aux questions fréquentes de vos clients", "Contenu"],
+        ["Structurer vos données", "Ajouter le balisage schema LocalBusiness", "Balisage"],
+        ["Renforcer votre page Prestations", "Détailler vos zones d’intervention et spécialités", "Services"],
       ],
       benefits: [
         { title: "Un score compréhensible", text: "Votre position en un coup d’œil." },
@@ -234,10 +235,9 @@ function getCopy(locale: Locale, stats: ReturnType<typeof getBenchmarkStats>) {
     proofLabel: "A real question we asked the AIs",
     proofCity: "GetInTheAnswer study",
     proofCountry: "",
-    proofTranslated: "",
-    proofOriginal: "",
-    proofNamed: (count: number) => `${count} businesses named — and nobody else.`,
-    proofFoot: "If your business isn’t on these lists, these customers never hear your name.",
+    proofNote: "",
+    proofNamed: (count: number) => `${count} business names recorded in these responses.`,
+    proofFoot: "Check whether AI engines name your business in your city.",
     measured: (date: string) => `Measured on ${date}`,
     statsLabel: "What our study found",
     stats: stats
@@ -272,13 +272,13 @@ function getCopy(locale: Locale, stats: ReturnType<typeof getBenchmarkStats>) {
     demoIntro: "The report ties every weakness it finds to an editorial or technical action, with a priority and an estimated impact.",
     demoCta: "Create my first report",
     demoSample: "See the full sample report",
-    demoPlan: "Recommended action plan",
+    demoPlan: "Example action plan",
     demoHeading: "3 high-impact opportunities",
     demoPriority: "High priority",
     demoActions: [
-      ["Publish a local FAQ page", "Answer your customers’ 8 most common questions", "+8 pts"],
-      ["Structure your data", "Add LocalBusiness schema markup", "+3 pts"],
-      ["Strengthen your Services page", "Spell out your service areas and specialties", "+1 pt"],
+      ["Publish a local FAQ page", "Answer your customers’ common questions", "Content"],
+      ["Structure your data", "Add LocalBusiness schema markup", "Markup"],
+      ["Strengthen your Services page", "Spell out your service areas and specialties", "Services"],
     ],
     benefits: [
       { title: "A score you understand", text: "Where you stand, at a glance." },
@@ -385,12 +385,12 @@ const engineDots: Record<string, string> = {
 
 export function HomePage({ locale }: { locale: Locale }) {
   const stats = getBenchmarkStats();
-  const scan = getHeroScan();
+  const scan = getHeroScan(locale);
   const copy = getCopy(locale, stats);
   const onboarding = localePath(locale, "/onboarding");
   const homeUrl = `${SITE_URL}${localePath(locale, "/")}`;
   const heroQuery =
-    scan && locale === "fr" ? (HERO_QUERY_FR[`${scan.industry}__${scan.city}`] ?? scan.query) : (scan?.query ?? "");
+    scan && locale === "fr" ? HERO_QUERY_FR[`${scan.industry}__${scan.city}`] : scan?.query;
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -498,12 +498,12 @@ export function HomePage({ locale }: { locale: Locale }) {
                   </div>
 
                   <div className="mt-2 rounded-[1.35rem] bg-white p-4 sm:p-6">
-                    <p className="text-lg font-extrabold leading-7 tracking-tight sm:text-xl" lang={heroQuery === scan.query ? "en" : undefined}>
+                    <p className="text-lg font-extrabold leading-7 tracking-tight sm:text-xl" lang={locale}>
                       {locale === "fr" ? `«\u00a0${heroQuery}\u00a0»` : `“${heroQuery}”`}
                     </p>
-                    {locale === "fr" && (
+                    {copy.proofNote && (
                       <p className="mt-2 text-xs font-semibold leading-5 text-muted-foreground">
-                        {heroQuery === scan.query ? copy.proofOriginal : copy.proofTranslated}
+                        {copy.proofNote}
                       </p>
                     )}
 
@@ -515,7 +515,7 @@ export function HomePage({ locale }: { locale: Locale }) {
                             {engine.engine}
                           </p>
                           <ol className="mt-2 list-decimal space-y-1 pl-5 text-sm font-semibold marker:font-semibold marker:text-muted-foreground">
-                            {engine.businesses.slice(0, 3).map((business) => (
+                            {engine.businesses.map((business) => (
                               <li className="break-words pl-0.5" key={business}>
                                 {business}
                               </li>
@@ -630,14 +630,14 @@ export function HomePage({ locale }: { locale: Locale }) {
                   <span className="w-fit rounded-full bg-red-50 px-3 py-1.5 text-xs font-bold text-red-700">{copy.demoPriority}</span>
                 </div>
                 <div className="mt-5 space-y-3">
-                  {copy.demoActions.map(([title, detail, impact], index) => (
+                  {copy.demoActions.map(([title, detail, category], index) => (
                     <div className="flex items-center gap-3 rounded-2xl border border-foreground/10 bg-white p-4" key={title}>
                       <span className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-primary text-sm font-black text-primary-foreground">{index + 1}</span>
                       <div className="min-w-0 flex-1">
                         <p className="font-extrabold">{title}</p>
                         <p className="mt-0.5 text-sm text-muted-foreground">{detail}</p>
                       </div>
-                      <span className="hidden rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-extrabold text-emerald-700 sm:block">{impact}</span>
+                      <span className="hidden rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-extrabold text-emerald-700 sm:block">{category}</span>
                       <ChevronRight className="size-4 shrink-0 text-muted-foreground" aria-hidden="true" />
                     </div>
                   ))}

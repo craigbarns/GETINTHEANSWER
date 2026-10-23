@@ -199,7 +199,7 @@ export const guides: Guide[] = [
       {
         heading: "Does it actually move your AI visibility?",
         paragraphs: [
-          "Structured data alone won't make an AI recommend you — reputation and content do the heavy lifting. But it removes doubt at the exact moment an engine decides whether you're safe to name. In our scans, businesses with complete, consistent markup are disproportionately represented in retrieval-backed answers.",
+          "Structured data describes your business facts in a machine-readable format. Our published benchmark records business names returned by models; it does not measure those businesses’ schema markup or establish that adding markup increases recommendations.",
           "Measure the effect yourself: run a free GetInTheAnswer scan before and a few weeks after adding markup, and watch your mention rate.",
         ],
       },

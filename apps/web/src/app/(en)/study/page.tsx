@@ -110,9 +110,8 @@ export default function StudyPage() {
           </p>
           <p className="mt-4 text-foreground/70">
             So &quot;being recommended by AI&quot; is not one status. A business can be the first name
-            ChatGPT gives and be absent from Perplexity entirely. Checking one engine tells you almost
-            nothing about the others, and a business that only checks ChatGPT is measuring roughly a
-            quarter of the surface its customers use.
+            ChatGPT gives and be absent from Perplexity entirely. Checking one engine leaves the
+            others unmeasured; this benchmark does not measure how often customers use each engine.
           </p>
         </section>
 
@@ -146,7 +145,7 @@ export default function StudyPage() {
           </div>
         </section>
 
-        <section className="mt-14 rounded-2xl border border-foreground/10 bg-white p-7 shadow-sm">
+        <section id="methodology" className="mt-14 scroll-mt-24 rounded-2xl border border-foreground/10 bg-white p-7 shadow-sm">
           <h2 className="text-2xl font-extrabold tracking-[-0.03em]">Method</h2>
           <p className="mt-3 text-foreground/70">
             Stated in full so anyone can reproduce or dispute it.
@@ -159,10 +158,16 @@ export default function StudyPage() {
               printed on its own city page.
             </li>
             <li>
-              <strong className="text-foreground">Engines.</strong> ChatGPT, Claude, Gemini and
-              Perplexity, each queried with live web retrieval enabled. Without retrieval a model
-              answers from training data and names no local business at all, which measures memory
-              rather than recommendation.
+              <strong className="text-foreground">Engines.</strong> The collection script labels
+              model responses as ChatGPT, Claude, Gemini and Perplexity. It requests web retrieval
+              through OpenRouter&apos;s online model routes and Perplexity Sonar. Retrieval can consult
+              current pages; answers without retrieval may rely on training data.
+            </li>
+            <li>
+              <strong className="text-foreground">API scope.</strong> The collection script queries
+              models through OpenRouter. These are snapshots of API responses, not controlled tests
+              of the providers&apos; consumer apps. The historical files retain extracted names,
+              questions and dates; full answer text, cited URLs and model versions were not retained.
             </li>
             <li>
               <strong className="text-foreground">Extraction.</strong> Business names are taken from

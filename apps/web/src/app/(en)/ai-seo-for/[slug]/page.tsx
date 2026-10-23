@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ArrowRight, CheckCircle2, HelpCircle, Sparkles, TrendingUp, Zap } from "lucide-react";
+import { ArrowLeft, ArrowRight, CheckCircle2, HelpCircle, Sparkles, Zap } from "lucide-react";
 
 import { LogoMark } from "@/components/logo";
 import { Button } from "@/components/ui/button";
@@ -190,10 +190,6 @@ export default async function IndustryPage({ params }: { params: Promise<{ slug:
                     <p className="mt-0.5 text-sm text-muted-foreground">{step.description}</p>
                   </div>
                 </div>
-                <span className="inline-flex items-center gap-1.5 self-start rounded-full bg-emerald-50 px-3 py-1 text-xs font-bold text-emerald-700 sm:self-auto">
-                  <TrendingUp className="size-3.5" aria-hidden="true" />
-                  {step.impact}
-                </span>
               </div>
             ))}
           </div>

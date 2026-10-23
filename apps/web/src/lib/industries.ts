@@ -6,7 +6,6 @@ export interface IndustryRankingFactor {
 export interface IndustryActionStep {
   title: string;
   description: string;
-  impact: string;
 }
 
 export interface IndustryFAQ {
@@ -66,17 +65,14 @@ export const industries: Industry[] = [
       {
         title: "Add Plumber Schema Markup",
         description: "Embed JSON-LD with opening hours, emergency status, and service areas.",
-        impact: "+15% AI Citations",
       },
       {
         title: "Publish an Emergency Plumbing FAQ",
         description: "Answer real local questions regarding pricing, response times, and permits.",
-        impact: "+20% Query Matching",
       },
       {
         title: "Standardize Google Business & Yelp Profiles",
         description: "Align NAP (Name, Address, Phone) data perfectly to eliminate AI ambiguity.",
-        impact: "+10% Trust Factor",
       },
     ],
     faq: [
@@ -129,17 +125,14 @@ export const industries: Industry[] = [
       {
         title: "Deploy Dentist Schema with MedicalSpecialty",
         description: "Tag your practice with Dentist, Orthodontics, or Pediatric Dentistry schema.",
-        impact: "+18% AI Relevance",
       },
       {
         title: "Create Treatment & Pricing Guides",
         description: "Provide transparent price ranges and procedure walkthroughs on your site.",
-        impact: "+25% AI Citations",
       },
       {
         title: "Encourage Specialty-Focused Reviews",
         description: "Prompt patients to mention specific treatments like Invisalign or dental implants.",
-        impact: "+15% Recommendation Rate",
       },
     ],
     faq: [
@@ -192,17 +185,14 @@ export const industries: Industry[] = [
       {
         title: "Implement LegalService & Attorney Schema",
         description: "Add schema data detailing practice areas, attorney names, and jurisdictions.",
-        impact: "+20% Authority Score",
       },
       {
         title: "Build Practice Area FAQ Hubs",
         description: "Answer high-intent client questions (e.g. 'What to do after a car accident in {city}').",
-        impact: "+30% AI Answer Inclusions",
       },
       {
         title: "Unify Legal Directory Profiles",
         description: "Synchronize Avvo, Justia, Google Business, and website attorney bios.",
-        impact: "+15% Verification Confidence",
       },
     ],
     faq: [
@@ -255,17 +245,14 @@ export const industries: Industry[] = [
       {
         title: "Add RealEstateAgent Schema with areaServed",
         description: "Specify exact neighborhoods, cities, and zip codes in your structured data.",
-        impact: "+22% Local Relevance",
       },
       {
         title: "Publish Neighborhood Market Reports",
         description: "Create quarterly market stats and buyer guides that AI models can quote.",
-        impact: "+25% Source Citations",
       },
       {
         title: "Gather Hyperlocal Reviews",
         description: "Ask clients to name the exact community or neighborhood in their review.",
-        impact: "+18% Query Matching",
       },
     ],
     faq: [
@@ -318,17 +305,14 @@ export const industries: Industry[] = [
       {
         title: "Add Restaurant Schema with hasMenu & servesCuisine",
         description: "Structure your menu items, opening hours, and cuisine classifications.",
-        impact: "+30% Dietary Query Match",
       },
       {
         title: "Connect OpenTable / Resy / Google Reserve",
         description: "Allow AI agents to identify direct booking capability.",
-        impact: "+15% Conversion Rate",
       },
       {
         title: "Highlight Signature Dishes on Your Site",
         description: "Create dedicated sections for must-try dishes and customer favorites.",
-        impact: "+20% AI Recommendation Rate",
       },
     ],
     faq: [
@@ -381,17 +365,14 @@ export const industries: Industry[] = [
       {
         title: "Deploy HVACBusiness Structured Data",
         description: "Add schema covering furnace repair, AC maintenance, heat pumps, and ductwork.",
-        impact: "+18% AI Accuracy",
       },
       {
         title: "Publish Seasonal Maintenance Guides",
         description: "Provide DIY troubleshooting vs when to call a pro to establish authority.",
-        impact: "+22% Search Quotations",
       },
       {
         title: "Streamline Directory Information",
         description: "Keep hours, licensing, and emergency service terms aligned across all platforms.",
-        impact: "+12% Trust Ranking",
       },
     ],
     faq: [
@@ -444,17 +425,14 @@ export const industries: Industry[] = [
       {
         title: "Publish a storm response page",
         description: "One page per common event: hail, wind, leak. These match the exact questions asked after weather.",
-        impact: "+20% AI Citations",
       },
       {
         title: "Add RoofingContractor schema",
         description: "JSON-LD with service area, certifications and emergency availability.",
-        impact: "+15% AI Citations",
       },
       {
         title: "Document three recent jobs",
         description: "Address-level detail — neighbourhood, roof type, outcome — gives engines something specific to cite.",
-        impact: "+10% Visibility",
       },
     ],
     faq: [
@@ -507,17 +485,14 @@ export const industries: Industry[] = [
       {
         title: "Name every modern service explicitly",
         description: "EV charger install, panel upgrade, whole-home surge, battery storage — one section each.",
-        impact: "+20% AI Citations",
       },
       {
         title: "Add Electrician schema with licence",
         description: "JSON-LD carrying licence number, service area and hours.",
-        impact: "+15% AI Citations",
       },
       {
         title: "Answer the pricing questions",
         description: "Publish honest ranges for the five jobs people ask about most. Engines cite pages that answer directly.",
-        impact: "+12% Visibility",
       },
     ],
     faq: [
@@ -570,17 +545,14 @@ export const industries: Industry[] = [
       {
         title: "Build a page per treatment brand",
         description: "One page each for the named treatments you actually offer, with pricing ranges.",
-        impact: "+22% AI Citations",
       },
       {
         title: "Publish provider credentials",
         description: "Full name, qualification and training for each injector, in text rather than an image.",
-        impact: "+18% AI Citations",
       },
       {
         title: "Add MedicalBusiness schema",
         description: "JSON-LD with specialties, provider names and location.",
-        impact: "+12% Visibility",
       },
     ],
     faq: [
@@ -633,17 +605,14 @@ export const industries: Industry[] = [
       {
         title: "Write one page per condition",
         description: "Sciatica, lower back pain, neck pain, headaches, sports injury. Symptoms in, treatment out.",
-        impact: "+22% AI Citations",
       },
       {
         title: "List accepted insurers by name",
         description: "A large share of queries include insurance. Naming carriers makes you the answer.",
-        impact: "+15% AI Citations",
       },
       {
         title: "Add Chiropractic schema",
         description: "JSON-LD with practitioner, specialties, hours and location.",
-        impact: "+12% Visibility",
       },
     ],
     faq: [
@@ -696,17 +665,14 @@ export const industries: Industry[] = [
       {
         title: "Build a page for each pest you treat",
         description: "Termites, bed bugs, roaches, rodents, mosquitoes, wasps. One page each.",
-        impact: "+22% AI Citations",
       },
       {
         title: "Publish your treatment safety policy",
         description: "What you use, why, and how it affects pets and children.",
-        impact: "+15% AI Citations",
       },
       {
         title: "Add LocalBusiness schema",
         description: "JSON-LD with service area, licence and emergency availability.",
-        impact: "+10% Visibility",
       },
     ],
     faq: [
@@ -759,17 +725,14 @@ export const industries: Industry[] = [
       {
         title: "State the makes you specialise in",
         description: "Name them explicitly on the homepage and in a page each for your top three.",
-        impact: "+20% AI Citations",
       },
       {
         title: "Publish common repair pricing",
         description: "Brakes, timing belt, diagnostics, transmission. Ranges are enough.",
-        impact: "+15% AI Citations",
       },
       {
         title: "Add AutoRepair schema",
         description: "JSON-LD with certifications, hours, service area and warranty terms.",
-        impact: "+12% Visibility",
       },
     ],
     faq: [
