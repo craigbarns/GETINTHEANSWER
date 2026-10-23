@@ -42,6 +42,20 @@ SeenByAI est une application SaaS B2B destinée aux PME locales pour mesurer et 
 - [x] Stripe Checkout, webhook et portail d'abonnement
 - [ ] Weekly Report (Mock/Stub)
 
+## Langues
+
+- Anglais par défaut à la racine (`/`), français sous `/fr`.
+- Pages bilingues : accueil, analyse gratuite, exemple de rapport, agences, contact et rapport
+  (liste dans `apps/web/src/lib/i18n.ts`). Les pages de contenu SEO (métiers, villes, guides, étude)
+  restent en anglais et visent le marché américain.
+- Chaque langue a sa propre mise en page racine (`app/(en)/layout.tsx` et `app/fr/layout.tsx`),
+  d'où le `global-not-found.tsx` pour les URL inconnues.
+- La langue suit le visiteur jusqu'au bout : e-mail du rapport, Stripe Checkout, retour après
+  paiement et portail d'abonnement (champ `locale` envoyé à l'API).
+- L'offre « on corrige pour vous » (490 € / 490 $, paiement unique) passe par le formulaire de
+  contact (`/contact?plan=done-for-you`). Son prix se règle dans `DONE_FOR_YOU_PRICE`
+  (`apps/web/src/lib/pricing.ts`).
+
 ## Lancement local
 
 ```bash

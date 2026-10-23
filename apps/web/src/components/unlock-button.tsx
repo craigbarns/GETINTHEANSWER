@@ -4,7 +4,21 @@ import { useState } from "react";
 import { Loader2, LockKeyhole } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import type { Locale } from "@/lib/i18n";
 import { PRICES, readStoredCurrency } from "@/lib/pricing";
+
+const COPY: Record<Locale, { failed: string; offline: string; redirecting: string }> = {
+  en: {
+    failed: "Checkout couldn’t open. Please try again in a moment.",
+    offline: "Checkout couldn’t open. Check your connection and try again.",
+    redirecting: "Redirecting…",
+  },
+  fr: {
+    failed: "Le paiement n’a pas pu s’ouvrir. Merci de réessayer dans un instant.",
+    offline: "Le paiement n’a pas pu s’ouvrir. Vérifiez votre connexion et réessayez.",
+    redirecting: "Redirection…",
+  },
+};
 
 interface UnlockButtonProps {
   siteId: string;
@@ -12,6 +26,7 @@ interface UnlockButtonProps {
   className?: string;
   size?: "default" | "sm" | "lg";
   variant?: "default" | "outline";
+  locale?: Locale;
   children: React.ReactNode;
 }
 
@@ -30,8 +45,10 @@ export function UnlockButton({
   className,
   size = "default",
   variant = "default",
+  locale = "en",
   children,
 }: UnlockButtonProps) {
+  const copy = COPY[locale];
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const errorId = `checkout-error-${placement.replace(/[^a-zA-Z0-9-]/g, "-")}`;
@@ -61,7 +78,7 @@ export function UnlockButton({
       const response = await fetch("/api/checkout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ site_id: siteId, ga_client_id: readGaClientId(), currency }),
+        body: JSON.stringify({ site_id: siteId, ga_client_id: readGaClientId(), currency, locale }),
       });
       const data = (await response.json()) as { url?: string; message?: string };
       if (response.ok && data.url) {
@@ -72,13 +89,13 @@ export function UnlockButton({
         checkout_placement: placement,
         status_code: response.status,
       });
-      setError(data.message ?? "Le paiement n'a pas pu s'ouvrir. Merci de réessayer dans un instant.");
+      setError(locale === "en" && data.message ? data.message : copy.failed);
     } catch {
       window.gtag?.("event", "checkout_error", {
         checkout_placement: placement,
         status_code: 0,
       });
-      setError("Le paiement n'a pas pu s'ouvrir. Vérifiez votre connexion et réessayez.");
+      setError(copy.offline);
     }
     setLoading(false);
   };
@@ -94,7 +111,7 @@ export function UnlockButton({
         aria-describedby={error ? errorId : undefined}
       >
         {loading ? (
-          <><Loader2 className="mr-2 size-4 animate-spin" aria-hidden="true" /> Redirection…</>
+          <><Loader2 className="mr-2 size-4 animate-spin" aria-hidden="true" /> {copy.redirecting}</>
         ) : (
           <><LockKeyhole className="mr-2 size-4" aria-hidden="true" /> {children}</>
         )}

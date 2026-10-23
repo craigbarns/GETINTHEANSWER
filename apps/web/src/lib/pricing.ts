@@ -13,6 +13,11 @@ export const PRICES: Record<"pro" | "agency", Record<Currency, number>> = {
   agency: { eur: 149, usd: 149 },
 };
 
+/** One-time "done for you" service: we implement the action plan ourselves.
+ *  Sold on request through the contact form, not through Stripe Checkout, so
+ *  this is the only place the amount lives. */
+export const DONE_FOR_YOU_PRICE: Record<Currency, number> = { eur: 490, usd: 490 };
+
 const SYMBOLS: Record<Currency, string> = { eur: "€", usd: "$" };
 
 /** French convention puts the euro sign after the amount, the dollar before. */

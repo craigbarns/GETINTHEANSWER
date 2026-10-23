@@ -4,7 +4,7 @@ import { ArrowRight, BookOpen, SearchX } from "lucide-react";
 import { LogoMark } from "@/components/logo";
 import { Button } from "@/components/ui/button";
 
-export default function NotFound() {
+export function NotFoundPage() {
   return (
     <main id="main-content" className="flex min-h-[78vh] items-center bg-[#f8f8f3] px-5 py-16 sm:px-8">
       <div className="mx-auto w-full max-w-3xl text-center">

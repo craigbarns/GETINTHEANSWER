@@ -23,11 +23,14 @@ export async function GET(request: NextRequest) {
   const siteId = request.nextUrl.searchParams.get("site_id");
   const sessionId = request.nextUrl.searchParams.get("session_id");
 
+  // Stripe returns here with lang=fr when the visitor paid from the French site.
+  const prefix = request.nextUrl.searchParams.get("lang") === "fr" ? "/fr" : "";
+
   if (!siteId || !sessionId) {
-    return redirectTo("/onboarding");
+    return redirectTo(`${prefix}/onboarding`);
   }
 
-  const dashboardPath = `/dashboard?site_id=${encodeURIComponent(siteId)}`;
+  const dashboardPath = `${prefix}/dashboard?site_id=${encodeURIComponent(siteId)}`;
 
   try {
     const confirmationUrl = new URL("/api/checkout/confirm", API_BASE_URL);

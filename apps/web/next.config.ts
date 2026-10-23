@@ -16,6 +16,11 @@ const contentSecurityPolicy = [
 
 const nextConfig: NextConfig = {
   output: "standalone",
+  experimental: {
+    // English and French each have their own root layout, so unmatched URLs
+    // are served by app/global-not-found.tsx.
+    globalNotFound: true,
+  },
   turbopack: {
     root: process.cwd(),
   },

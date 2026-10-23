@@ -10,14 +10,14 @@ import time
 import unicodedata
 import uuid
 from collections import Counter, defaultdict, deque
-from typing import List, Optional
+from typing import List, Literal, Optional
 from urllib.parse import urlsplit
 
 import httpx
 import stripe
 from fastapi import FastAPI, Header, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import AnyHttpUrl, BaseModel, ConfigDict, Field
+from pydantic import AnyHttpUrl, BaseModel, ConfigDict, Field, model_validator
 from email_service import NOTIFY_ADDRESS, agency_inquiry_email, notify_scan_completed_email, report_ready_email, send_email
 from site_audit import SiteAudit, UnsafeWebsiteUrl, audit_site, validate_public_http_url
 from sqlalchemy import create_engine, text
@@ -179,6 +179,18 @@ class OnboardingRequest(BaseModel):
     # contacted ourselves never emails them from the transactional domain.
     # Only honoured for callers presenting a valid X-Outreach-Key header.
     notify: bool = True
+    # Site language the visitor scanned from ("en" or "fr"): decides which
+    # dashboard URL the report email links to and the email's language.
+    locale: Optional[str] = None
+
+
+def normalize_locale(value: Optional[str]) -> str:
+    """The frontend serves English at the root and French under /fr."""
+    return "fr" if (value or "").strip().lower() == "fr" else "en"
+
+
+def frontend_path(path: str, locale: Optional[str]) -> str:
+    return f"/fr{path}" if normalize_locale(locale) == "fr" else path
 
 
 class AgencyInquiryRequest(BaseModel):
@@ -188,9 +200,18 @@ class AgencyInquiryRequest(BaseModel):
     workEmail: str = Field(min_length=5, max_length=200, pattern=r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
     companyName: str = Field(min_length=2, max_length=120)
     websiteUrl: Optional[AnyHttpUrl] = None
-    locationCount: int = Field(ge=2, le=10000)
+    locationCount: int = Field(ge=1, le=10000)
     message: Optional[str] = Field(default=None, max_length=2000)
     companyWebsite: Optional[str] = Field(default="", max_length=200)
+    # "agency" for the multi-location plan, "done_for_you" for the one-time
+    # service where we implement the action plan for a single business.
+    inquiryType: Literal["agency", "done_for_you"] = "agency"
+
+    @model_validator(mode="after")
+    def agency_needs_several_locations(self):
+        if self.inquiryType == "agency" and self.locationCount < 2:
+            raise ValueError("Agency inquiries need at least 2 locations")
+        return self
 
 
 class QueryResult(BaseModel):
@@ -1173,6 +1194,7 @@ async def submit_agency_inquiry(payload: AgencyInquiryRequest, http_request: Req
         str(payload.websiteUrl) if payload.websiteUrl else None,
         payload.locationCount,
         payload.message,
+        inquiry_type=payload.inquiryType,
     )
     delivered = await send_email(
         NOTIFY_ADDRESS,
@@ -1186,12 +1208,14 @@ async def submit_agency_inquiry(payload: AgencyInquiryRequest, http_request: Req
     return {"status": "received"}
 
 
-async def dispatch_scan_emails(dashboard: DashboardData, requester_email: str) -> None:
+async def dispatch_scan_emails(
+    dashboard: DashboardData, requester_email: str, locale: Optional[str] = None
+) -> None:
     # Fire-and-forget: a failed or slow email must never affect the scan
     # response, so this runs as a background task and swallows its own errors.
-    dashboard_url = f"{FRONTEND_URL}/dashboard?site_id={dashboard.site_id}"
+    dashboard_url = f"{FRONTEND_URL}{frontend_path('/dashboard', locale)}?site_id={dashboard.site_id}"
     try:
-        subject, html = report_ready_email(dashboard.company_name, dashboard_url)
+        subject, html = report_ready_email(dashboard.company_name, dashboard_url, normalize_locale(locale))
         await send_email(requester_email, subject, html)
 
         if NOTIFY_ADDRESS:
@@ -1245,7 +1269,7 @@ async def onboard_site(payload: OnboardingRequest, http_request: Request):
         record_history(dashboard)
 
         if payload.notify or not internal:
-            asyncio.create_task(dispatch_scan_emails(dashboard, payload.email))
+            asyncio.create_task(dispatch_scan_emails(dashboard, payload.email, payload.locale))
 
         response = {"site_id": site_id, "status": "completed", "mode": dashboard.mode}
         if internal:
@@ -1268,6 +1292,7 @@ class CheckoutRequest(BaseModel):
     site_id: str
     ga_client_id: Optional[str] = None
     currency: Optional[str] = None
+    locale: Optional[str] = None
 
 
 def price_for_currency(currency: Optional[str]) -> tuple[str, str]:
@@ -1290,6 +1315,20 @@ def price_for_currency(currency: Optional[str]) -> tuple[str, str]:
 class PortalRequest(BaseModel):
     site_id: str
     checkout_session_id: str
+    locale: Optional[str] = None
+
+
+def checkout_urls(site_id: str, locale: Optional[str]) -> dict:
+    """Where Stripe sends the visitor back, in the language they paid from."""
+    lang = normalize_locale(locale)
+    confirm = f"{FRONTEND_URL}/api/checkout/confirm?site_id={site_id}"
+    if lang == "fr":
+        confirm += "&lang=fr"
+    return {
+        "success_url": confirm + "&session_id={CHECKOUT_SESSION_ID}",
+        "cancel_url": f"{FRONTEND_URL}{frontend_path('/dashboard', lang)}?site_id={site_id}&checkout=cancelled",
+        "locale": "fr" if lang == "fr" else STRIPE_CHECKOUT_LOCALE,
+    }
 
 
 @app.post("/api/checkout")
@@ -1309,14 +1348,9 @@ def create_checkout(body: CheckoutRequest):
         session = stripe.checkout.Session.create(
             mode="subscription",
             line_items=[{"price": price_id, "quantity": 1}],
-            success_url=(
-                f"{FRONTEND_URL}/api/checkout/confirm?site_id={body.site_id}"
-                "&session_id={CHECKOUT_SESSION_ID}"
-            ),
-            cancel_url=f"{FRONTEND_URL}/dashboard?site_id={body.site_id}&checkout=cancelled",
+            **checkout_urls(body.site_id, body.locale),
             client_reference_id=body.site_id,
             customer_email=get_report_email(body.site_id),
-            locale=STRIPE_CHECKOUT_LOCALE,
             automatic_tax={"enabled": True},
             billing_address_collection="required",
             branding_settings={
@@ -1360,9 +1394,11 @@ def create_billing_portal(body: PortalRequest):
             or payment_status not in {"paid", "no_payment_required"}
         ):
             raise HTTPException(status_code=403, detail="Billing access could not be verified")
+        portal_options = {"locale": "fr"} if normalize_locale(body.locale) == "fr" else {}
         session = stripe.billing_portal.Session.create(
             customer=customer,
-            return_url=f"{FRONTEND_URL}/dashboard?site_id={body.site_id}",
+            return_url=f"{FRONTEND_URL}{frontend_path('/dashboard', body.locale)}?site_id={body.site_id}",
+            **portal_options,
         )
     except HTTPException:
         raise

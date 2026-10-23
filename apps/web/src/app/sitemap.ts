@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getScannedPairs } from "@/lib/city-scans";
 import { guides } from "@/lib/guides";
+import { localePath } from "@/lib/i18n";
 import { industries } from "@/lib/industries";
 import { SITE_URL } from "@/lib/site";
 
@@ -16,25 +17,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.75,
   }));
 
+  // Pages that exist in both languages: one entry per language, each listing
+  // the other as its hreflang alternate.
+  const bilingual = (
+    path: string,
+    changeFrequency: "weekly" | "monthly",
+    priority: number,
+  ): MetadataRoute.Sitemap => {
+    const languages = {
+      en: `${SITE_URL}${path === "/" ? "" : path}`,
+      fr: `${SITE_URL}${localePath("fr", path)}`,
+    };
+    return [
+      { url: languages.en || SITE_URL, lastModified: now, changeFrequency, priority, alternates: { languages } },
+      { url: languages.fr, lastModified: now, changeFrequency, priority: Math.max(0.1, priority - 0.1), alternates: { languages } },
+    ];
+  };
+
   return [
-    {
-      url: SITE_URL,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 1,
-    },
-    {
-      url: `${SITE_URL}/onboarding`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${SITE_URL}/sample-report`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.85,
-    },
+    ...bilingual("/", "weekly", 1),
+    ...bilingual("/onboarding", "monthly", 0.9),
+    ...bilingual("/sample-report", "monthly", 0.85),
+    ...bilingual("/agency", "monthly", 0.7),
     {
       url: `${SITE_URL}/guides`,
       lastModified: now,

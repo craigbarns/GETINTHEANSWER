@@ -1,10 +1,27 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "GetInTheAnswer — Is your business recommended by ChatGPT, Claude & Perplexity?";
-export const size = { width: 1200, height: 630 };
-export const contentType = "image/png";
+import type { Locale } from "@/lib/i18n";
 
-export default function OpengraphImage() {
+export const OG_SIZE = { width: 1200, height: 630 };
+
+export const OG_ALT: Record<Locale, string> = {
+  en: "GetInTheAnswer — Is your business recommended by ChatGPT, Claude & Perplexity?",
+  fr: "GetInTheAnswer — Votre entreprise est-elle recommandée par ChatGPT, Claude et Perplexity ?",
+};
+
+const OG_TEXT: Record<Locale, { title: string; subtitle: string }> = {
+  en: {
+    title: "ChatGPT is recommending your competitors. Is it recommending you?",
+    subtitle: "Measure your visibility in ChatGPT, Claude, Gemini & Perplexity. Free scan, instant score.",
+  },
+  fr: {
+    title: "ChatGPT recommande vos concurrents. Et vous ?",
+    subtitle: "Mesurez votre visibilité dans ChatGPT, Claude, Gemini et Perplexity. Analyse gratuite, score immédiat.",
+  },
+};
+
+export function renderOgImage(locale: Locale) {
+  const text = OG_TEXT[locale];
   return new ImageResponse(
     (
       <div
@@ -31,11 +48,11 @@ export default function OpengraphImage() {
         </div>
 
         <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
-          <div style={{ color: "#ffffff", fontSize: 76, fontWeight: 800, letterSpacing: -3, lineHeight: 1.05, maxWidth: 980 }}>
-            When customers ask an AI, are you in the answer?
+          <div style={{ color: "#ffffff", fontSize: 68, fontWeight: 800, letterSpacing: -3, lineHeight: 1.05, maxWidth: 1050 }}>
+            {text.title}
           </div>
           <div style={{ color: "rgba(255,255,255,0.65)", fontSize: 32, lineHeight: 1.4, maxWidth: 900 }}>
-            Measure your visibility in ChatGPT, Claude & Perplexity. Free scan, instant score.
+            {text.subtitle}
           </div>
         </div>
 
@@ -56,6 +73,6 @@ export default function OpengraphImage() {
         </div>
       </div>
     ),
-    { ...size },
+    { ...OG_SIZE },
   );
 }

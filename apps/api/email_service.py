@@ -45,9 +45,16 @@ def agency_inquiry_email(
     website_url: Optional[str],
     location_count: int,
     message: Optional[str],
+    inquiry_type: str = "agency",
 ) -> tuple[str, str]:
     safe_company = " ".join(company_name.split())
-    subject = f"Agency inquiry: {safe_company} ({location_count} locations)"
+    done_for_you = inquiry_type == "done_for_you"
+    subject = (
+        f"Done-for-you request: {safe_company}"
+        if done_for_you
+        else f"Agency inquiry: {safe_company} ({location_count} locations)"
+    )
+    heading = "New done-for-you request" if done_for_you else "New agency inquiry"
 
     def safe(value: Optional[str], fallback: str = "Not provided") -> str:
         if not value or not value.strip():
@@ -66,7 +73,7 @@ def agency_inquiry_email(
         <span style="color:#bef264;font-weight:800;font-size:20px;">GetInTheAnswer</span>
       </div>
       <div style="background:#f8f8f3;padding:28px;border-radius:0 0 16px 16px;">
-        <h1 style="font-size:22px;margin:0 0 20px;">New agency inquiry</h1>
+        <h1 style="font-size:22px;margin:0 0 20px;">{heading}</h1>
         <table style="border-collapse:collapse;width:100%;line-height:1.5;">
           <tr><td style="padding:6px 16px 6px 0;color:#66736f;">Name</td><td><b>{safe(full_name)}</b></td></tr>
           <tr><td style="padding:6px 16px 6px 0;color:#66736f;">Work email</td><td>{safe(work_email)}</td></tr>
@@ -85,25 +92,51 @@ def agency_inquiry_email(
     return subject, html
 
 
-def report_ready_email(company_name: str, dashboard_url: str) -> tuple[str, str]:
-    subject = f"Your AI visibility report for {company_name} is ready"
+REPORT_READY_COPY = {
+    "en": {
+        "subject": "Your AI visibility report for {company} is ready",
+        "title": "Your report for {company} is ready",
+        "body": (
+            "We asked ChatGPT, Claude, Gemini and Perplexity the questions your customers actually ask. "
+            "Here's what they said about {company} — and who they recommended instead."
+        ),
+        "cta": "View your report",
+        "footer": "This link is private to you — keep it handy, it always points to your latest results.",
+    },
+    "fr": {
+        "subject": "Votre rapport de visibilité IA pour {company} est prêt",
+        "title": "Votre rapport pour {company} est prêt",
+        "body": (
+            "Nous avons posé à ChatGPT, Claude, Gemini et Perplexity les questions que vos clients posent vraiment. "
+            "Voici ce qu'ils disent de {company} — et qui ils recommandent à votre place."
+        ),
+        "cta": "Voir mon rapport",
+        "footer": "Ce lien vous est personnel : gardez-le, il mène toujours à vos derniers résultats.",
+    },
+}
+
+
+def report_ready_email(company_name: str, dashboard_url: str, locale: str = "en") -> tuple[str, str]:
+    copy = REPORT_READY_COPY.get(locale, REPORT_READY_COPY["en"])
+    plain_company = " ".join(company_name.split())
+    company = escape(plain_company)
+    subject = copy["subject"].format(company=plain_company)
     html = f"""
     <div style="font-family:-apple-system,Segoe UI,Roboto,sans-serif;max-width:560px;margin:0 auto;color:#111;">
       <div style="background:#173b35;padding:28px 32px;border-radius:16px 16px 0 0;">
         <span style="color:#bef264;font-weight:800;font-size:20px;">GetInTheAnswer</span>
       </div>
       <div style="background:#f8f8f3;padding:32px;border-radius:0 0 16px 16px;">
-        <h1 style="font-size:22px;margin:0 0 12px;">Your report for {company_name} is ready</h1>
+        <h1 style="font-size:22px;margin:0 0 12px;">{copy["title"].format(company=company)}</h1>
         <p style="line-height:1.6;color:#444;">
-          We asked ChatGPT, Claude, Gemini and Perplexity the questions your customers actually ask.
-          Here's what they said about {company_name} — and who they recommended instead.
+          {copy["body"].format(company=company)}
         </p>
-        <a href="{dashboard_url}" style="display:inline-block;margin-top:16px;background:#173b35;color:#bef264;
+        <a href="{escape(dashboard_url)}" style="display:inline-block;margin-top:16px;background:#173b35;color:#bef264;
            padding:14px 24px;border-radius:999px;text-decoration:none;font-weight:800;">
-          View your report
+          {copy["cta"]}
         </a>
         <p style="margin-top:28px;font-size:13px;color:#888;">
-          This link is private to you — keep it handy, it always points to your latest results.
+          {copy["footer"]}
         </p>
       </div>
     </div>

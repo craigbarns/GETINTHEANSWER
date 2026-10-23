@@ -3,35 +3,63 @@
 import { useEffect } from "react";
 import { CheckCircle2, CircleAlert, XCircle } from "lucide-react";
 
+import { Price } from "@/components/price";
 import { UnlockButton } from "@/components/unlock-button";
+import type { Locale } from "@/lib/i18n";
+import { PRICES } from "@/lib/pricing";
 
 type BillingStatus = "cancelled" | "confirmation_error" | "success";
 
 interface BillingStatusBannerProps {
   siteId: string;
   status: BillingStatus;
+  locale?: Locale;
 }
 
-const content: Record<BillingStatus, { event: string; title: string; copy: string }> = {
-  cancelled: {
-    event: "checkout_cancelled",
-    title: "Paiement annulé — rien n'a été débité.",
-    copy: "L'aperçu de votre rapport est toujours là. Vous pourrez le débloquer quand vous le souhaitez.",
+const EVENTS: Record<BillingStatus, string> = {
+  cancelled: "checkout_cancelled",
+  confirmation_error: "checkout_confirmation_failed",
+  success: "checkout_confirmed",
+};
+
+const CONTENT: Record<Locale, Record<BillingStatus, { title: string; copy: string }> & { retry: string; perMonth: string }> = {
+  en: {
+    cancelled: {
+      title: "Checkout cancelled — you haven’t been charged.",
+      copy: "Your report preview is still here. You can unlock it whenever you like.",
+    },
+    confirmation_error: {
+      title: "We couldn’t confirm the payment yet.",
+      copy: "If Stripe charged you, refresh this page in a moment. Otherwise you can safely try again.",
+    },
+    success: {
+      title: "Your full report is unlocked.",
+      copy: "Every answer and recommendation is visible, and weekly tracking is on.",
+    },
+    retry: "Try checkout again —",
+    perMonth: "/mo",
   },
-  confirmation_error: {
-    event: "checkout_confirmation_failed",
-    title: "Nous n'avons pas encore pu confirmer le paiement.",
-    copy: "Si Stripe vous a débité, actualisez cette page dans un instant. Sinon, vous pouvez réessayer sans risque.",
-  },
-  success: {
-    event: "checkout_confirmed",
-    title: "Votre rapport complet est débloqué.",
-    copy: "Toutes les réponses et recommandations sont visibles, et le suivi hebdomadaire est actif.",
+  fr: {
+    cancelled: {
+      title: "Paiement annulé — rien n’a été débité.",
+      copy: "L’aperçu de votre rapport est toujours là. Vous pourrez le débloquer quand vous le souhaitez.",
+    },
+    confirmation_error: {
+      title: "Nous n’avons pas encore pu confirmer le paiement.",
+      copy: "Si Stripe vous a débité, actualisez cette page dans un instant. Sinon, vous pouvez réessayer sans risque.",
+    },
+    success: {
+      title: "Votre rapport complet est débloqué.",
+      copy: "Toutes les réponses et recommandations sont visibles, et le suivi hebdomadaire est actif.",
+    },
+    retry: "Réessayer le paiement —",
+    perMonth: " / mois",
   },
 };
 
-export function BillingStatusBanner({ siteId, status }: BillingStatusBannerProps) {
-  const details = content[status];
+export function BillingStatusBanner({ siteId, status, locale = "en" }: BillingStatusBannerProps) {
+  const text = CONTENT[locale];
+  const details = { ...text[status], event: EVENTS[status] };
 
   useEffect(() => {
     const storageKey = `seenbyai_${details.event}_${siteId}`;
@@ -67,8 +95,9 @@ export function BillingStatusBanner({ siteId, status }: BillingStatusBannerProps
           placement={`checkout_${status}`}
           size="sm"
           className="shrink-0 rounded-full px-5"
+          locale={locale}
         >
-          Try checkout again — $29/mo
+          {text.retry} <Price amounts={PRICES.pro} suffix={text.perMonth} />
         </UnlockButton>
       )}
     </section>

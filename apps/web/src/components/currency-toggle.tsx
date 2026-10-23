@@ -21,11 +21,19 @@ function subscribe(onChange: () => void) {
   return () => window.removeEventListener(CHANGE_EVENT, onChange);
 }
 
-export function CurrencyToggle({ className }: { className?: string }) {
+export function CurrencyToggle({
+  className,
+  defaultCurrency = DEFAULT_CURRENCY,
+  label = "Display currency",
+}: {
+  className?: string;
+  defaultCurrency?: Currency;
+  label?: string;
+}) {
   const currency = useSyncExternalStore(
     subscribe,
     readStoredCurrency,
-    () => DEFAULT_CURRENCY,
+    () => defaultCurrency,
   );
 
   const choose = useCallback((next: Currency) => {
@@ -43,7 +51,7 @@ export function CurrencyToggle({ className }: { className?: string }) {
     <div
       className={`inline-flex items-center gap-1 rounded-full border border-foreground/10 bg-white p-1 shadow-sm ${className ?? ""}`}
       role="group"
-      aria-label="Devise d’affichage"
+      aria-label={label}
     >
       {CURRENCIES.map((option) => (
         <button
