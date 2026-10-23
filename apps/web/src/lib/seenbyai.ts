@@ -1,4 +1,5 @@
 import "server-only";
+import type { Locale } from "@/lib/i18n";
 
 export type Priority = "high" | "medium" | "low";
 
@@ -25,7 +26,7 @@ export interface DashboardData {
   city: string;
   industry: string;
   services?: string | null;
-  locale?: "en" | "fr";
+  locale?: "en" | "fr" | null;
   visibility_score: number;
   total_queries: number;
   brand_mentions: number;
@@ -65,9 +66,9 @@ export interface ScorePoint {
 
 const API_BASE_URL = process.env.SEENBYAI_API_URL ?? "http://127.0.0.1:8000";
 
-export async function getDashboardData(siteId: string): Promise<DashboardData | null> {
+export async function getDashboardData(siteId: string, locale: Locale = "en"): Promise<DashboardData | null> {
   try {
-    const response = await fetch(`${API_BASE_URL}/api/dashboard/${encodeURIComponent(siteId)}`, {
+    const response = await fetch(`${API_BASE_URL}/api/dashboard/${encodeURIComponent(siteId)}?locale=${locale}`, {
       cache: "no-store",
     });
 

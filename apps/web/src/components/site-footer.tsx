@@ -66,7 +66,7 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
               </Link>
             ))}
             <a className="hover:text-foreground" href={locale === "en" ? "/fr" : "/"} hrefLang={locale === "en" ? "fr" : "en"}>
-              {locale === "en" ? "Français" : "English"}
+              {locale === "en" ? "Français" : "Anglais"}
             </a>
           </nav>
         </div>

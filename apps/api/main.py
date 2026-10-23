@@ -260,7 +260,7 @@ class DashboardData(BaseModel):
     has_subscription: bool = False
     scanned_at: Optional[str] = None
     engines_used: List[str] = Field(default_factory=list)
-    locale: str = "en"
+    locale: Optional[str] = None
 
 
 def client_identifier(http_request: Request) -> str:
@@ -382,6 +382,20 @@ def load_report(site_id: str) -> Optional[DashboardData]:
     dashboard.has_subscription = bool(row[2]) and row[3] in SUBSCRIPTION_ACCESS_STATUSES
     dashboard.history = load_history(site_id)
     return dashboard
+
+
+def remember_legacy_report_locale(site_id: str, locale: str) -> None:
+    """Fill missing language metadata without overwriting results or billing."""
+    if db_engine is None:
+        report = MEMORY_DB.get(site_id)
+        if report is not None and report.locale is None:
+            report.locale = locale
+        return
+    with db_engine.begin() as conn:
+        conn.execute(text(
+            "UPDATE reports SET payload = jsonb_set(payload, '{locale}', to_jsonb(CAST(:locale AS text)), true) "
+            "WHERE site_id = :site_id AND payload->>'locale' IS NULL"
+        ), {"site_id": site_id, "locale": locale})
 
 
 def record_history(dashboard: DashboardData) -> None:
@@ -1595,7 +1609,7 @@ async def stripe_webhook(
 
 
 @app.get("/api/dashboard/{site_id}", response_model=DashboardData)
-def get_dashboard(site_id: str):
+def get_dashboard(site_id: str, locale: Optional[str] = None):
     try:
         uuid.UUID(site_id)
     except ValueError:
@@ -1603,6 +1617,10 @@ def get_dashboard(site_id: str):
     dashboard = load_report(site_id)
     if dashboard is None:
         raise HTTPException(status_code=404, detail="Report not found")
+    if dashboard.locale is None and locale and locale.strip().lower() in ("en", "fr"):
+        preferred = normalize_locale(locale)
+        remember_legacy_report_locale(site_id, preferred)
+        dashboard.locale = preferred
     return dashboard
 
 

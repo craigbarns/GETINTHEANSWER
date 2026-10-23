@@ -282,7 +282,7 @@ export async function DashboardPage({ locale, searchParams }: { locale: Locale; 
     );
   }
 
-  const data = await getDashboardData(siteId);
+  const data = await getDashboardData(siteId, locale);
 
   if (!data) {
     return (
@@ -431,7 +431,7 @@ export async function DashboardPage({ locale, searchParams }: { locale: Locale; 
 
         <section className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4" aria-label={copy.metricsAria}>
           <Card className="border-foreground/8 bg-white py-0 shadow-sm"><CardContent className="p-5 sm:p-6"><div className="flex items-center justify-between"><span className="text-sm font-bold text-muted-foreground">{copy.mentions}</span><Target className="size-5 text-emerald-700" aria-hidden="true" /></div><p className="mt-4 text-4xl font-black tracking-[-0.05em]">{data.brand_mentions}<span className="text-base font-bold text-muted-foreground">/{data.total_queries}</span></p><p className="mt-2 text-sm text-muted-foreground">{copy.mentionRate(mentionRate)}</p></CardContent></Card>
-          <Card className="border-foreground/8 bg-white py-0 shadow-sm"><CardContent className="p-5 sm:p-6"><div className="flex items-center justify-between"><span className="text-sm font-bold text-muted-foreground">{copy.leader}</span><Trophy className="size-5 text-amber-500" aria-hidden="true" /></div><p className="mt-4 truncate text-2xl font-black tracking-[-0.04em]">{data.top_competitor}</p><p className="mt-2 text-sm text-muted-foreground">{copy.leaderMentions(data.top_competitor_mentions)}</p></CardContent></Card>
+          <Card className="border-foreground/8 bg-white py-0 shadow-sm"><CardContent className="p-5 sm:p-6"><div className="flex items-center justify-between"><span className="text-sm font-bold text-muted-foreground">{copy.leader}</span><Trophy className="size-5 text-amber-500" aria-hidden="true" /></div><p className="mt-4 truncate text-2xl font-black tracking-[-0.04em]">{data.top_competitor_mentions === 0 && data.top_competitor === "No competitor detected" ? copy.noBusiness : data.top_competitor}</p><p className="mt-2 text-sm text-muted-foreground">{copy.leaderMentions(data.top_competitor_mentions)}</p></CardContent></Card>
           <Card className="border-foreground/8 bg-white py-0 shadow-sm"><CardContent className="p-5 sm:p-6"><div className="flex items-center justify-between"><span className="text-sm font-bold text-muted-foreground">{copy.gap}</span><TrendingUp className="size-5 text-primary" aria-hidden="true" /></div><p className="mt-4 text-4xl font-black tracking-[-0.05em]">{competitorGap > 0 ? `-${competitorGap}` : `+${Math.abs(competitorGap)}`}</p><p className="mt-2 text-sm text-muted-foreground">{competitorGap > 0 ? copy.gapBehind : copy.gapAhead}</p></CardContent></Card>
           <Card className="border-foreground/8 bg-lime-200 py-0 shadow-sm"><CardContent className="p-5 sm:p-6"><div className="flex items-center justify-between"><span className="text-sm font-bold text-primary/70">{copy.actions}</span><FileText className="size-5 text-primary" aria-hidden="true" /></div><p className="mt-4 text-4xl font-black tracking-[-0.05em]">{data.recommendations.length}</p><p className="mt-2 text-sm text-primary/70">{copy.actionsText}</p></CardContent></Card>
         </section>

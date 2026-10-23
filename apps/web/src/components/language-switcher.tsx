@@ -37,8 +37,8 @@ export function LanguageSwitcher({
       } ${className ?? ""}`}
       href={href}
       hrefLang={target}
-      lang={target}
-      aria-label={target === "fr" ? "Voir cette page en français" : "View this page in English"}
+      lang={locale === "fr" ? "fr" : target}
+      aria-label={locale === "fr" ? "Voir cette page en anglais" : "View this page in French"}
       onClick={(event) => {
         if (!window.location.search && !window.location.hash) return;
         event.preventDefault();
@@ -52,7 +52,7 @@ export function LanguageSwitcher({
     >
       <Globe className="size-3.5" aria-hidden="true" />
       <span className="sm:hidden">{LABELS[target].short}</span>
-      <span className="hidden sm:inline">{LABELS[target].name}</span>
+      <span className="hidden sm:inline">{locale === "fr" ? "Anglais" : LABELS[target].name}</span>
     </a>
   );
 }

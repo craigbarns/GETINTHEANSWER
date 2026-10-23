@@ -18,6 +18,17 @@ def profile(locale="fr"):
 
 
 class ReportLanguageTests(unittest.TestCase):
+    def test_legacy_report_remembers_its_first_explicit_display_language(self):
+        site_id = "11111111-1111-4111-8111-111111111111"
+        report = main.generate_mock_dashboard_data(site_id, profile()).model_copy(update={"locale": None})
+        original = report.recommendations[0].model_dump()
+        with patch.object(main, "db_engine", None), patch.dict(main.MEMORY_DB, {site_id: report}, clear=True):
+            result = main.get_dashboard(site_id, "fr")
+            self.assertEqual(main.MEMORY_DB[site_id].locale, "fr")
+            self.assertEqual(result.recommendations[0].model_dump(), original)
+            main.get_dashboard(site_id, "en")
+            self.assertEqual(main.MEMORY_DB[site_id].locale, "fr")
+
     def test_french_fallback_preserves_profile_and_machine_readable_levels(self):
         recommendations = main.build_recommendations(profile(" FR "))
         self.assertEqual(recommendations[0].title, "Créer une page FAQ locale")
