@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 
 import { CurrencyToggle } from "@/components/currency-toggle";
+import { FrenchAnalysisPreview } from "@/components/french-analysis-preview";
 import { HeroForm } from "@/components/hero-form";
 import { Price } from "@/components/price";
 import { SiteHeader } from "@/components/site-header";
@@ -24,21 +25,13 @@ import { DATE_LOCALE, DEFAULT_CURRENCY_BY_LOCALE, localePath, type Locale } from
 import { CURRENCIES, DONE_FOR_YOU_PRICE, PRICES } from "@/lib/pricing";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 
-/** French translations of the hero questions. The engines were asked in
- *  English; the French page shows the translation and says so. */
-const HERO_QUERY_FR: Partial<Record<string, string>> = {
-  "plumbers__dallas-tx": "Quel est le plombier d’urgence le plus fiable à Dallas, au Texas, pour une canalisation qui a éclaté\u202f?",
-};
-
 /** The real scan shown in the hero. Falls back to any published scan. */
-function getHeroScan(locale: Locale): CityScan | null {
-  const hasTranslation = (scan: CityScan) =>
-    locale === "en" || Boolean(HERO_QUERY_FR[`${scan.industry}__${scan.city}`]);
+function getHeroScan(): CityScan | null {
   const preferred = getCityScan("plumbers", "dallas-tx");
-  if (preferred && hasTranslation(preferred)) return preferred;
+  if (preferred) return preferred;
   for (const pair of getScannedPairs()) {
     const scan = getCityScan(pair.industry, pair.city);
-    if (scan && hasTranslation(scan)) return scan;
+    if (scan) return scan;
   }
   return null;
 }
@@ -79,7 +72,6 @@ function getCopy(locale: Locale, stats: ReturnType<typeof getBenchmarkStats>) {
       proofLabel: "Question réelle posée aux IA",
       proofCity: "Étude GetInTheAnswer",
       proofCountry: " (États-Unis)",
-      proofNote: "Question traduite en français. Les entreprises sont affichées sous leur nom d’origine.",
       proofNamed: (count: number) => `${count} noms d’entreprises relevés dans ces réponses.`,
       proofFoot: "Vérifiez si les IA citent votre entreprise dans votre ville.",
       measured: (date: string) => `Mesuré le ${date}`,
@@ -235,7 +227,6 @@ function getCopy(locale: Locale, stats: ReturnType<typeof getBenchmarkStats>) {
     proofLabel: "A real question we asked the AIs",
     proofCity: "GetInTheAnswer study",
     proofCountry: "",
-    proofNote: "",
     proofNamed: (count: number) => `${count} business names recorded in these responses.`,
     proofFoot: "Check whether AI engines name your business in your city.",
     measured: (date: string) => `Measured on ${date}`,
@@ -385,12 +376,11 @@ const engineDots: Record<string, string> = {
 
 export function HomePage({ locale }: { locale: Locale }) {
   const stats = getBenchmarkStats();
-  const scan = getHeroScan(locale);
+  const scan = locale === "en" ? getHeroScan() : null;
   const copy = getCopy(locale, stats);
   const onboarding = localePath(locale, "/onboarding");
   const homeUrl = `${SITE_URL}${localePath(locale, "/")}`;
-  const heroQuery =
-    scan && locale === "fr" ? HERO_QUERY_FR[`${scan.industry}__${scan.city}`] : scan?.query;
+  const heroQuery = scan?.query;
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -488,6 +478,7 @@ export function HomePage({ locale }: { locale: Locale }) {
               </div>
             </div>
 
+            {locale === "fr" && <FrenchAnalysisPreview />}
             {scan && (
               <div id="proof" className="relative mx-auto w-full min-w-0 max-w-2xl scroll-mt-24 animate-fade-in-up lg:mx-0" style={{ animationDelay: "120ms" }}>
                 <div className="absolute -inset-5 -rotate-2 rounded-[2.25rem] bg-primary/8" aria-hidden="true" />
@@ -498,14 +489,9 @@ export function HomePage({ locale }: { locale: Locale }) {
                   </div>
 
                   <div className="mt-2 rounded-[1.35rem] bg-white p-4 sm:p-6">
-                    <p className="text-lg font-extrabold leading-7 tracking-tight sm:text-xl" lang={locale}>
-                      {locale === "fr" ? `«\u00a0${heroQuery}\u00a0»` : `“${heroQuery}”`}
+                    <p className="text-lg font-extrabold leading-7 tracking-tight sm:text-xl" lang="en">
+                      {`“${heroQuery}”`}
                     </p>
-                    {copy.proofNote && (
-                      <p className="mt-2 text-xs font-semibold leading-5 text-muted-foreground">
-                        {copy.proofNote}
-                      </p>
-                    )}
 
                     <div className="mt-5 grid gap-2.5 sm:grid-cols-2">
                       {scan.engines.map((engine) => (
