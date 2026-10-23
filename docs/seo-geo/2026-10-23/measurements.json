@@ -1,0 +1,57 @@
+{
+  "production_baseline": {
+    "commit": "c5c75da",
+    "sitemap_urls": 271,
+    "titles_over_60": 263,
+    "descriptions_over_155": 18,
+    "orphan_sitemap_urls": 0,
+    "noindex_sitemap_urls": 0
+  },
+  "lighthouse": {
+    "note": "One exploratory mobile run per URL, initially run in parallel; lab data, not field INP or a median.",
+    "results": [
+      {
+        "url": "https://www.getintheanswer.com/ai-seo-for/plumbers/dallas-tx",
+        "recorded_at": "2026-10-23T11:07:08.626Z",
+        "lighthouse_version": "13.5.0",
+        "performance_score": 99.0,
+        "lcp_ms": 1700.2485000000001,
+        "cls": 0,
+        "tbt_ms": 55,
+        "javascript_transfer_bytes": 175726,
+        "field_inp": null
+      },
+      {
+        "url": "https://www.getintheanswer.com/guides/get-recommended-by-chatgpt",
+        "recorded_at": "2026-10-23T11:07:08.626Z",
+        "lighthouse_version": "13.5.0",
+        "performance_score": 100,
+        "lcp_ms": 1770.524,
+        "cls": 0,
+        "tbt_ms": 14.5,
+        "javascript_transfer_bytes": 179507,
+        "field_inp": null
+      },
+      {
+        "url": "https://www.getintheanswer.com/",
+        "recorded_at": "2026-10-23T11:07:10.033Z",
+        "lighthouse_version": "13.5.0",
+        "performance_score": 100,
+        "lcp_ms": 1757.5175,
+        "cls": 0,
+        "tbt_ms": 8,
+        "javascript_transfer_bytes": 177525,
+        "field_inp": null
+      }
+    ]
+  },
+  "build_after_changes": {
+    "sitemap_urls": 273,
+    "titles_over_60": 0,
+    "descriptions_over_155": 0,
+    "max_title_length": 59,
+    "max_description_length": 151,
+    "errors": []
+  },
+  "analytics_data_status": "Supermetrics account discovery succeeded, data queries failed with LICENSE_NOT_FOUND; traffic and keyword volumes not measured."
+}
