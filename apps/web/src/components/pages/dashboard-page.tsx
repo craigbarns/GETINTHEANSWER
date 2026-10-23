@@ -29,6 +29,7 @@ import { LogoMark } from "@/components/logo";
 import { ManageSubscriptionButton } from "@/components/manage-subscription-button";
 import { Price } from "@/components/price";
 import { ReportMomentOfTruth } from "@/components/report-moment-of-truth";
+import { ReportDeliverables } from "@/components/report-deliverables";
 import { ShareScoreButton } from "@/components/share-score-button";
 import { UnlockButton } from "@/components/unlock-button";
 import { Badge } from "@/components/ui/badge";
@@ -558,6 +559,7 @@ export async function DashboardPage({ locale, searchParams }: { locale: Locale; 
             )}
           </div>
 
+          <div className="mt-5"><ReportDeliverables data={data} locale={locale} /></div>
           <div className="mt-5 flex flex-col items-start justify-between gap-4 rounded-[1.5rem] border-2 border-lime-300 bg-white p-6 sm:flex-row sm:items-center">
             <div className="flex items-start gap-4">
               <span className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-lime-200 text-primary">
