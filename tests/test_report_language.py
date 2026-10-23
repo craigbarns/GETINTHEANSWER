@@ -47,6 +47,8 @@ class GeneratedReportLanguageTests(unittest.IsolatedAsyncioTestCase):
 
     async def test_weekly_rescan_preserves_original_report_locale(self):
         previous = main.generate_mock_dashboard_data("test-language", profile())
+        previous.has_subscription = True
+        previous.mode = "live"
         run = AsyncMock(return_value=previous.model_copy(deep=True))
         with patch.object(main, "load_report", return_value=previous), patch.object(main, "get_report_email", return_value=None), patch.object(main, "run_live_scan", run), patch.object(main, "save_report"), patch.object(main, "record_history"):
             await main.rescan_report(previous.site_id)

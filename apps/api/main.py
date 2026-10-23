@@ -1,6 +1,7 @@
 import asyncio
 import ipaddress
 import json
+import logging
 from datetime import datetime, timezone
 import os
 import random
@@ -18,7 +19,8 @@ import stripe
 from fastapi import FastAPI, Header, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import AnyHttpUrl, BaseModel, ConfigDict, Field, model_validator
-from email_service import NOTIFY_ADDRESS, agency_inquiry_email, notify_scan_completed_email, report_ready_email, send_email
+from email_service import NOTIFY_ADDRESS, agency_inquiry_email, notify_scan_completed_email, report_ready_email, send_email, weekly_report_email
+from weekly_updates import build_weekly_changes
 from site_audit import SiteAudit, UnsafeWebsiteUrl, audit_site, validate_public_http_url
 from sqlalchemy import create_engine, text
 
@@ -907,7 +909,7 @@ async def generate_recommendations_llm(
         return None
 
 
-async def run_live_scan(site_id: str, request: OnboardingRequest) -> DashboardData:
+async def run_live_scan(site_id: str, request: OnboardingRequest, fixed_queries: Optional[List[str]] = None) -> DashboardData:
     from openai import AsyncOpenAI
 
     client = (
@@ -924,7 +926,7 @@ async def run_live_scan(site_id: str, request: OnboardingRequest) -> DashboardDa
             request.services or request.industry,
         )
     )
-    queries = await generate_queries_llm(client, request) or build_queries(request)
+    queries = list(dict.fromkeys(fixed_queries))[:10] if fixed_queries else (await generate_queries_llm(client, request) or build_queries(request))
 
     # (label, kind, client, model, concurrency). Each engine gets its own
     # concurrency budget: Perplexity rate-limits hard above ~3 parallel
@@ -1166,7 +1168,7 @@ def reports_due_for_rescan() -> List[str]:
 
 async def rescan_report(site_id: str) -> None:
     previous = await asyncio.to_thread(load_report, site_id)
-    if previous is None:
+    if previous is None or not previous.unlocked or not previous.has_subscription:
         return
     email = await asyncio.to_thread(get_report_email, site_id)
     request = OnboardingRequest(
@@ -1178,10 +1180,22 @@ async def rescan_report(site_id: str) -> None:
         services=previous.services,
         locale=previous.locale,
     )
-    dashboard = await run_live_scan(site_id, request)
+    fixed_queries = list(dict.fromkeys(q.query for q in previous.queries)) if previous.mode == "live" else None
+    dashboard = await run_live_scan(site_id, request, fixed_queries=fixed_queries)
+    if dashboard.mode != "live":
+        return
     dashboard.unlocked = True
+    dashboard.has_subscription = previous.has_subscription
     await asyncio.to_thread(save_report, dashboard, None)
     await asyncio.to_thread(record_history, dashboard)
+    if email:
+        history = await asyncio.to_thread(load_history, site_id)
+        changes = build_weekly_changes(previous.model_dump(), dashboard.model_dump())
+        url = f"{FRONTEND_URL}{frontend_path('/dashboard', previous.locale)}?site_id={site_id}"
+        subject, html = weekly_report_email(dashboard.company_name, url, changes, [point.model_dump() for point in history], previous.locale)
+        delivered = await send_email(email, subject, html, idempotency_key=f"weekly/{site_id}/{datetime.now(timezone.utc).strftime('%G-%V')}")
+        if not delivered:
+            logging.getLogger(__name__).warning("Weekly report email could not be delivered")
 
 
 async def weekly_rescan_loop() -> None:
