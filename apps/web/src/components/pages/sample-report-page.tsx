@@ -70,9 +70,9 @@ const SAMPLES = {
       { question: "Top-rated kitchen remodeling companies in Austin, TX?", engine: "Perplexity", mentioned: true, instead: "Hill Country Cabinetry, Barton Creek Kitchens" },
     ],
     recommendations: [
-      { title: "Publish a local FAQ page", description: "Answer the eight questions your customers actually ask — timelines, permits, budget ranges, neighborhoods you serve. Engines quote answer-shaped content far more readily than marketing copy.", priority: "high" as Priority, impact: "+8 pts" },
-      { title: "Add LocalBusiness structured data", description: "Mark up your name, address, phone, hours, price range and service area so engines can verify the business behind the website.", priority: "high" as Priority, impact: "+3 pts" },
-      { title: "Name your service areas on the Services page", description: "List the suburbs and neighborhoods you cover. Half the tested questions were neighborhood-specific, and your site names only one.", priority: "medium" as Priority, impact: "+1 pt" },
+      { title: "Publish a local FAQ page", description: "Answer the eight questions your customers actually ask — timelines, permits, budget ranges, neighborhoods you serve. Engines quote answer-shaped content far more readily than marketing copy.", priority: "high" as Priority, impact: "High" },
+      { title: "Add LocalBusiness structured data", description: "Mark up your name, address, phone, hours, price range and service area so engines can verify the business behind the website.", priority: "high" as Priority, impact: "Medium" },
+      { title: "Name your service areas on the Services page", description: "List the suburbs and neighborhoods you cover. Half the tested questions were neighborhood-specific, and your site names only one.", priority: "medium" as Priority, impact: "Low" },
     ],
   },
   fr: {
@@ -96,9 +96,9 @@ const SAMPLES = {
       { question: "Les cuisinistes les mieux notés à Marseille ?", engine: "Perplexity", mentioned: true, instead: "Atelier Lumen Cuisines, Maison Calanque Agencement" },
     ],
     recommendations: [
-      { title: "Publier une page FAQ locale", description: "Répondez aux huit questions que vos clients posent vraiment : délais, budget, démarches, quartiers desservis. Les IA citent bien plus volontiers un contenu rédigé en réponses qu’un texte commercial.", priority: "high" as Priority, impact: "+8 pts" },
-      { title: "Ajouter les données structurées LocalBusiness", description: "Balisez votre nom, votre adresse, votre téléphone, vos horaires, votre gamme de prix et votre zone d’intervention pour que les IA puissent vérifier l’entreprise derrière le site.", priority: "high" as Priority, impact: "+3 pts" },
-      { title: "Nommer vos zones d’intervention sur la page Prestations", description: "Listez les quartiers et communes que vous couvrez. La moitié des questions testées citaient un quartier, et votre site n’en nomme qu’un.", priority: "medium" as Priority, impact: "+1 pt" },
+      { title: "Publier une page FAQ locale", description: "Répondez aux huit questions que vos clients posent vraiment : délais, budget, démarches, quartiers desservis. Les IA citent bien plus volontiers un contenu rédigé en réponses qu’un texte commercial.", priority: "high" as Priority, impact: "Élevé" },
+      { title: "Ajouter les données structurées LocalBusiness", description: "Balisez votre nom, votre adresse, votre téléphone, vos horaires, votre gamme de prix et votre zone d’intervention pour que les IA puissent vérifier l’entreprise derrière le site.", priority: "high" as Priority, impact: "Moyen" },
+      { title: "Nommer vos zones d’intervention sur la page Prestations", description: "Listez les quartiers et communes que vous couvrez. La moitié des questions testées citaient un quartier, et votre site n’en nomme qu’un.", priority: "medium" as Priority, impact: "Faible" },
     ],
   },
 };
@@ -170,7 +170,7 @@ const COPY = {
     snapshot: "une mesure ponctuelle : les réponses des IA peuvent varier d’un test à l’autre.",
     scoreAria: (score: number) => `Score de visibilité ${score} sur 100`,
     outOf: "SUR 100",
-    scoreLabel: "Solide, mais fragile",
+    scoreLabel: "Bien placé, pas à l’abri",
     scoreCopy: "Vous apparaissez dans la plupart des réponses, mais le leader du marché est cité plus souvent.",
     metricsAria: "Indicateurs clés",
     mentions: "Mentions",
@@ -211,7 +211,7 @@ const COPY = {
 };
 
 const FIGURES = {
-  score: 68,
+  score: 67,
   totalChecks: 30,
   brandMentions: 20,
   questionCount: 10,
@@ -229,7 +229,7 @@ const scoreHistory = [
   { date: "05-19", score: 55 },
   { date: "05-26", score: 60 },
   { date: "06-02", score: 62 },
-  { date: "06-09", score: 68 },
+  { date: "06-09", score: 67 },
 ];
 
 export function SampleReportPage({ locale }: { locale: Locale }) {
