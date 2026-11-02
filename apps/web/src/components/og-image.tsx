@@ -5,18 +5,18 @@ import type { Locale } from "@/lib/i18n";
 export const OG_SIZE = { width: 1200, height: 630 };
 
 export const OG_ALT: Record<Locale, string> = {
-  en: "GetInTheAnswer — Is your business recommended by ChatGPT, Claude & Perplexity?",
-  fr: "GetInTheAnswer — Votre entreprise est-elle recommandée par ChatGPT, Claude et Perplexity ?",
+  en: "GetInTheAnswer — AI visibility, taken care of",
+  fr: "GetInTheAnswer — Votre visibilité IA, prise en charge",
 };
 
 const OG_TEXT: Record<Locale, { title: string; subtitle: string }> = {
   en: {
-    title: "ChatGPT is recommending your competitors. Is it recommending you?",
-    subtitle: "Measure your visibility in ChatGPT, Claude, Gemini & Perplexity. Free scan, instant score.",
+    title: "Make ChatGPT and Google AI new customer acquisition channels.",
+    subtitle: "A free visibility plan. Website improvements and useful content. You approve; we do the work.",
   },
   fr: {
-    title: "ChatGPT recommande vos concurrents. Et vous ?",
-    subtitle: "Mesurez votre visibilité dans ChatGPT, Claude, Gemini et Perplexity. Analyse gratuite, score immédiat.",
+    title: "Faites de ChatGPT et Google AI de nouveaux canaux d’acquisition.",
+    subtitle: "Un plan gratuit. Des corrections et des contenus utiles. Vous validez ; nous prenons en charge le travail.",
   },
 };
 

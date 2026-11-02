@@ -3,9 +3,9 @@ import type { Metadata } from "next";
 import { localizedAlternates } from "@/lib/i18n";
 
 export const metadata: Metadata = {
-  title: "Agency plan & done-for-you fix",
+  title: "Discuss AI Growth and your visibility plan",
   description:
-    "Request an AI visibility monitoring plan for agencies and multi-location businesses, or have us implement your AI visibility action plan for you.",
+    "Discuss a pilot AI Growth service, website improvements and monthly content, or request an agency monitoring plan. Scope and quote confirmed before payment.",
   alternates: localizedAlternates("en", "/contact"),
 };
 

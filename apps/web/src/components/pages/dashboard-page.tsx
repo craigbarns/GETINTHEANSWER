@@ -37,7 +37,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { DATE_LOCALE, localePath, type Locale } from "@/lib/i18n";
-import { DONE_FOR_YOU_PRICE, PRICES } from "@/lib/pricing";
+import { PRICES } from "@/lib/pricing";
+import { growthPrice } from "@/lib/growth";
 import { localizeRecommendation, localizeSiteCheck } from "@/lib/report-localization";
 import { getDashboardData, type Priority } from "@/lib/seenbyai";
 
@@ -146,10 +147,10 @@ const COPY = {
     locked: "Locked",
     lockedTitle: (index: number) => `Recommendation #${index}`,
     lockedText: "Unlock the full report to reveal this action, its priority and its expected impact on your AI visibility.",
-    dfyTitle: "Rather have us do it?",
-    dfyText: "We implement this action plan for you, then re-run the scan after 30 days to show what changed.",
-    dfyPrice: "one-time",
-    dfyCta: "Request the done-for-you fix",
+    dfyTitle: "Turn these opportunities into work delivered with AI Growth.",
+    dfyText: "Website fixes, 2 useful pages per month and weekly AI checks. Pilot offer with a 3-month initial commitment, scope confirmed before payment. You approve publication.",
+    dfyPrice: "excl. tax / month",
+    dfyCta: "Discuss my priorities",
     dataEyebrow: "Scan data",
     dataTitleLive: "Scan details",
     dataTitleSim: "Simulation details",
@@ -239,10 +240,10 @@ const COPY = {
     locked: "Verrouillé",
     lockedTitle: (index: number) => `Recommandation n°${index}`,
     lockedText: "Débloquez le rapport complet pour découvrir cette action, sa priorité et son impact attendu sur votre visibilité IA.",
-    dfyTitle: "Vous préférez qu’on s’en charge ?",
-    dfyText: "Nous appliquons ce plan d’action pour vous, puis nous refaisons l’analyse après 30 jours pour mesurer le résultat.",
-    dfyPrice: "paiement unique",
-    dfyCta: "Demander la prise en charge",
+    dfyTitle: "Passons de ces opportunités au travail réalisé avec AI Growth.",
+    dfyText: "Corrections du site, 2 pages utiles par mois et suivi IA hebdomadaire. Offre pilote, engagement initial de 3 mois, périmètre confirmé avant paiement. Vous validez les publications.",
+    dfyPrice: "HT / mois",
+    dfyCta: "Discuter de mes priorités",
     dataEyebrow: "Données de l’analyse",
     dataTitleLive: "Détail de l’analyse",
     dataTitleSim: "Détail de la simulation",
@@ -325,6 +326,10 @@ export async function DashboardPage({ locale, searchParams }: { locale: Locale; 
         ? "cancelled"
         : null;
   const proPrice = <Price amounts={PRICES.pro} suffix={copy.perMonth} />;
+  const hasGrowthOpportunity = data.mode === "live" && data.total_queries > 0 && (
+    data.brand_mentions < data.total_queries ||
+    (data.site_audit?.fetched && data.site_audit.checks.some((check) => !check.passed))
+  );
 
   return (
     <div className="min-h-screen bg-[#f8f8f3] pb-20">
@@ -533,7 +538,7 @@ export async function DashboardPage({ locale, searchParams }: { locale: Locale; 
 
           <div className="mt-6 grid gap-4 lg:grid-cols-3">
             {data.recommendations.map((item) => localizeRecommendation(item, locale)).map((recommendation, index) =>
-              data.unlocked || index === 0 ? (
+              data.unlocked || index < 3 ? (
                 <article className="flex flex-col rounded-[1.5rem] border border-foreground/8 bg-white p-6 shadow-sm transition-transform hover:-translate-y-1" key={recommendation.title}>
                   <div className="flex items-start justify-between gap-4">
                     <span className="flex size-10 items-center justify-center rounded-xl bg-primary text-sm font-black text-primary-foreground">{index + 1}</span>
@@ -560,7 +565,7 @@ export async function DashboardPage({ locale, searchParams }: { locale: Locale; 
           </div>
 
           <div className="mt-5"><ReportDeliverables data={data} locale={locale} /></div>
-          <div className="mt-5 flex flex-col items-start justify-between gap-4 rounded-[1.5rem] border-2 border-lime-300 bg-white p-6 sm:flex-row sm:items-center">
+          {hasGrowthOpportunity && <div className="mt-5 flex flex-col items-start justify-between gap-4 rounded-[1.5rem] border-2 border-lime-300 bg-white p-6 sm:flex-row sm:items-center">
             <div className="flex items-start gap-4">
               <span className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-lime-200 text-primary">
                 <Wrench className="size-5" aria-hidden="true" />
@@ -572,16 +577,16 @@ export async function DashboardPage({ locale, searchParams }: { locale: Locale; 
             </div>
             <div className="flex shrink-0 flex-col items-start gap-2 sm:items-end">
               <p className="flex items-end gap-1.5">
-                <Price amounts={DONE_FOR_YOU_PRICE} className="text-2xl font-black tracking-[-0.04em]" />
+                <span className="text-2xl font-black tracking-[-0.04em]">{growthPrice("ai_growth", locale)}</span>
                 <span className="pb-0.5 text-xs font-semibold text-muted-foreground">{copy.dfyPrice}</span>
               </p>
               <Button asChild variant="outline" className="rounded-full bg-white">
-                <Link href={localePath(locale, "/contact?plan=done-for-you")} data-analytics-event="select_content" data-analytics-label="report_done_for_you">
+                <Link href={localePath(locale, "/contact?plan=ai-growth")} data-analytics-event="select_content" data-analytics-label="report_ai_growth">
                   {copy.dfyCta} <ArrowRight className="ml-2 size-4" aria-hidden="true" />
                 </Link>
               </Button>
             </div>
-          </div>
+          </div>}
         </section>
 
         <section className="pt-4">

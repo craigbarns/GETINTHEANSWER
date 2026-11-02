@@ -4,6 +4,7 @@ from pathlib import Path
 from unittest.mock import AsyncMock, patch
 
 from fastapi import HTTPException, Request
+from pydantic import ValidationError
 
 API_DIR = Path(__file__).resolve().parents[1] / "apps" / "api"
 sys.path.insert(0, str(API_DIR))
@@ -58,6 +59,33 @@ class AgencyContactTests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(send_email.await_count, 1)
         self.assertEqual(send_email.await_args.args[0], "sales@getintheanswer.com")
         self.assertEqual(send_email.await_args.kwargs["reply_to"], "jordan@example.com")
+
+    async def test_growth_inquiries_keep_the_selected_offer_in_the_sales_notification(self):
+        for plan, name, amount in (
+            ("ai_growth", "AI Growth", 990),
+            ("ai_growth_plus", "AI Growth Plus", 1990),
+        ):
+            with self.subTest(plan=plan):
+                send_email = AsyncMock(return_value=True)
+                with (
+                    patch.object(main, "NOTIFY_ADDRESS", "sales@getintheanswer.com"),
+                    patch.object(main, "send_email", send_email),
+                ):
+                    result = await main.submit_agency_inquiry(
+                        make_payload(inquiryType=plan, locationCount=1), make_request()
+                    )
+                self.assertEqual(result, {"status": "received"})
+                _, subject, html = send_email.await_args.args
+                self.assertIn(f"{name} pilot inquiry:", subject)
+                self.assertIn(f"EUR {amount}/month excluding tax", html)
+                self.assertIn("quote must be confirmed before payment", html)
+                self.assertEqual(send_email.await_args.kwargs["reply_to"], "jordan@example.com")
+
+    def test_growth_inquiries_require_a_website_and_a_qualified_goal(self):
+        for plan in ("ai_growth", "ai_growth_plus"):
+            for missing in ({"websiteUrl": None}, {"message": None}, {"message": " "}, {"message": "Help"}):
+                with self.subTest(plan=plan, missing=missing), self.assertRaises(ValidationError):
+                    make_payload(inquiryType=plan, locationCount=1, **missing)
 
     async def test_honeypot_is_silently_accepted_without_sending(self):
         send_email = AsyncMock(return_value=True)

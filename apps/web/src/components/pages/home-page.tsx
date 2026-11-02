@@ -2,27 +2,24 @@ import Link from "next/link";
 import {
   ArrowRight,
   BarChart3,
-  Check,
   CheckCircle2,
   ChevronRight,
   CircleDot,
   ListChecks,
-  MessageSquareText,
   Search,
   ShieldCheck,
   Sparkles,
-  Wrench,
 } from "lucide-react";
 
-import { CurrencyToggle } from "@/components/currency-toggle";
+import { GrowthOffers } from "@/components/growth-offers";
 import { FrenchAnalysisPreview } from "@/components/french-analysis-preview";
 import { HeroForm } from "@/components/hero-form";
-import { Price } from "@/components/price";
 import { SiteHeader } from "@/components/site-header";
 import { Button } from "@/components/ui/button";
 import { formatScanDate, getBenchmarkStats, getCityScan, getScannedPairs, type CityScan } from "@/lib/city-scans";
 import { DATE_LOCALE, DEFAULT_CURRENCY_BY_LOCALE, localePath, type Locale } from "@/lib/i18n";
-import { CURRENCIES, DONE_FOR_YOU_PRICE, PRICES } from "@/lib/pricing";
+import { CURRENCIES, PRICES } from "@/lib/pricing";
+import { GROWTH_PLANS } from "@/lib/growth";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 
 /** The real scan shown in the hero. Falls back to any published scan. */
@@ -57,18 +54,18 @@ function getCopy(locale: Locale, stats: ReturnType<typeof getBenchmarkStats>) {
   if (locale === "fr") {
     return {
       nav: [
-        { href: "#proof", label: "Preuve" },
+        { href: "#proof", label: "Votre diagnostic" },
         { href: "#method", label: "Comment ça marche" },
         { href: "/fr/sample-report", label: "Exemple de rapport" },
         { href: "#pricing", label: "Tarifs" },
         { href: "/guides", label: "Guides" },
       ],
-      eyebrow: "La visibilité IA pour les entreprises locales",
-      titleA: "ChatGPT recommande vos concurrents.",
-      titleB: "Et vous\u00a0?",
+      eyebrow: "Votre visibilité IA, prise en charge",
+      titleA: "Faites de ChatGPT et Google AI",
+      titleB: "de nouveaux canaux d’acquisition.",
       intro:
-        "Vos clients demandent désormais à une IA quel artisan, quel dentiste ou quel avocat choisir. GetInTheAnswer vous montre en 2 minutes qui elle recommande à votre place, et ce qu’il faut corriger pour être dans la réponse.",
-      trust: ["Gratuit, sans carte bancaire", "Résultat en 1 à 2 minutes", "ChatGPT, Claude, Gemini, Perplexity"],
+        "Nous analysons votre visibilité, préparons les corrections de votre site et les contenus utiles à vos futurs clients, puis mesurons les changements chaque mois. Vous validez les publications ; nous prenons en charge le travail convenu.",
+      trust: ["Plan gratuit, sans carte bancaire", "Contenus validés avant publication", "Optimisations et suivi mensuels"],
       proofLabel: "Question réelle posée aux IA",
       proofCity: "Étude GetInTheAnswer",
       proofCountry: " (États-Unis)",
@@ -86,144 +83,88 @@ function getCopy(locale: Locale, stats: ReturnType<typeof getBenchmarkStats>) {
         : [],
       statsNote: "Étude menée sur des recherches locales aux États-Unis.",
       statsLink: "Voir l’étude complète",
-      methodEyebrow: "Simple par construction",
-      methodTitle: "De votre site à un plan d’action en trois étapes.",
+      methodEyebrow: "Un accompagnement concret",
+      methodTitle: "Nous détectons, optimisons et mesurons.",
       steps: [
         {
-          title: "Décrivez votre entreprise",
-          description: "Votre métier, votre ville et vos prestations suffisent pour générer les questions que vos prospects posent vraiment.",
+          title: "Un diagnostic et des priorités",
+          description: "L’audit gratuit révèle votre présence et les concurrents cités. Nous étudions ensuite votre site pour vous proposer un périmètre d’intervention adapté.",
         },
         {
-          title: "Nous interrogeons les IA",
-          description: "GetInTheAnswer pose ces questions à ChatGPT, Claude, Gemini et Perplexity, et relève qui est cité : vous ou vos concurrents.",
+          title: "Des corrections et des contenus",
+          description: "Dans l’offre mensuelle, nous préparons les optimisations techniques et les pages utiles à vos clients. Chaque publication attend votre validation et les accès convenus.",
         },
         {
-          title: "Vous savez quoi corriger",
-          description: "Chaque faiblesse est reliée à une action concrète, classée par priorité et par impact estimé.",
+          title: "Un suivi et des résultats documentés",
+          description: "Nous comparons des relevés IA sur les mêmes questions et documentons le travail réalisé. Le trafic et les demandes sont suivis lorsque vos outils de mesure sont connectés.",
         },
       ],
       step: "Étape",
-      demoEyebrow: "Un rapport qui mène quelque part",
-      demoTitle: "Voyez ce que voient les IA. Corrigez ce qu’elles ignorent.",
-      demoIntro: "Le rapport relie chaque faiblesse détectée à une action éditoriale ou technique, avec une priorité et un impact estimé.",
-      demoCta: "Créer mon premier rapport",
+      demoEyebrow: "Le plan devient du travail réalisé",
+      demoTitle: "Vos priorités sont claires. Nous pouvons les mettre en œuvre.",
+      demoIntro: "Avec AI Growth, le diagnostic sert à choisir les corrections et les contenus à produire. Nous convenons du périmètre avant de commencer, puis soumettons chaque publication à votre validation.",
+      demoCta: "Obtenir mon plan gratuit",
       demoSample: "Voir l’exemple de rapport complet",
       demoPlan: "Exemple de plan d’action",
-      demoHeading: "3 opportunités à fort impact",
-      demoPriority: "Priorité haute",
+      demoHeading: "3 exemples de travaux possibles",
+      demoPriority: "Exemple illustratif",
       demoActions: [
         ["Créer une page FAQ locale", "Répondre aux questions fréquentes de vos clients", "Contenu"],
         ["Structurer vos données", "Ajouter le balisage schema LocalBusiness", "Balisage"],
         ["Renforcer votre page Prestations", "Détailler vos zones d’intervention et spécialités", "Services"],
       ],
       benefits: [
-        { title: "Un score compréhensible", text: "Votre position en un coup d’œil." },
-        { title: "Des preuves, pas des intuitions", text: "Chaque réponse d’IA reste consultable." },
-        { title: "Des actions priorisées", text: "Commencez par ce qui compte le plus." },
+        { title: "Des optimisations prises en charge", text: "Un périmètre précis, du travail livré." },
+        { title: "Vous gardez la main", text: "Votre validation avant chaque publication." },
+        { title: "Des résultats mesurés", text: "Des relevés comparables, datés et consultables." },
       ],
-      pricingEyebrow: "Commencez sans risque",
-      pricingTitle: "Votre première analyse est offerte.",
-      pricingIntro: "Découvrez gratuitement où vous en êtes, puis suivez votre visibilité IA ou laissez-nous la corriger pour vous.",
-      currencyLabel: "Devise d’affichage",
-      free: {
-        name: "Analyse découverte",
-        note: "sans carte bancaire",
-        items: ["10 questions clients sur mesure", "Analyse sur les vrais moteurs IA", "Votre score de visibilité", "Votre concurrent n°1 révélé"],
-        cta: "Essayer gratuitement",
-      },
-      pro: {
-        name: "Suivi Pro",
-        badge: "Le plus choisi",
-        note: "/ mois · résiliable à tout moment",
-        items: ["Tous les concurrents nommés", "Les réponses réelles des IA, citées", "Le plan d’action complet", "Nouvelle analyse chaque semaine", "Historique de votre score"],
-        cta: "Commencer par l’analyse gratuite",
-      },
-      agency: {
-        name: "Agence & multi-établissements",
-        note: "/ mois",
-        items: ["Jusqu’à 25 établissements", "Rapports clients en marque blanche", "Analyses IA par lots", "Suivi des concurrents par ville", "Support agence prioritaire"],
-        cta: "Nous contacter",
-      },
-      dfy: {
-        eyebrow: "Pas le temps de vous en occuper ?",
-        title: "On corrige pour vous.",
-        text: "Nous appliquons nous-mêmes votre plan d’action, puis nous refaisons l’analyse 30 jours plus tard pour mesurer le résultat.",
-        items: [
-          "Page FAQ locale rédigée et publiée sur votre site",
-          "Données structurées LocalBusiness installées",
-          "Nom, adresse et téléphone harmonisés sur les principaux annuaires",
-          "Page Prestations renforcée pour les IA",
-          "Nouvelle analyse après 30 jours, avec le score avant/après",
-        ],
-        priceNote: "paiement unique",
-        cta: "Demander l’offre « on corrige pour vous »",
-        fine: "Nous vérifions d’abord votre site et confirmons le devis avant tout paiement.",
-      },
-      pricingFine:
-        "Choisissez votre devise ci-dessus : vous êtes débité dans celle que vous avez sélectionnée. Les paiements Pro sont traités de façon sécurisée par Stripe, les taxes applicables sont calculées au paiement, et vous pouvez résilier en ligne à tout moment.",
       faqTitle: "Vos questions, nos réponses.",
       faqMore: ["Envie d’aller plus loin ? Consultez nos", "guides sur la visibilité IA et le GEO", "(en anglais)."],
-      finalTitle: "Vos concurrents sont peut-être déjà dans la réponse.",
-      finalText: "Vérifiez gratuitement ce que ChatGPT, Claude, Gemini et Perplexity disent de votre marché.",
+      finalTitle: "Transformez le diagnostic en premières actions.",
+      finalText: "Obtenez votre plan de visibilité gratuit. Nous pourrons ensuite étudier les optimisations à réaliser avec vous.",
       faqs: [
         {
-          question: "Qu’est-ce qu’un score de visibilité IA ?",
-          answer:
-            "Votre score de visibilité IA (0–100) mesure la fréquence à laquelle les moteurs IA comme ChatGPT citent votre entreprise lorsqu’un consommateur demande une recommandation dans votre métier et votre ville. Nous posons les vraies questions que posent vos clients, puis nous calculons le pourcentage de réponses qui nomment votre entreprise.",
+          question: "Que comprend AI Growth ?",
+          answer: "Le pilote à 990 € HT par mois comprend un audit technique, les corrections du site convenues au devis, deux pages utiles par mois, un suivi hebdomadaire des moteurs IA disponibles et un rapport mensuel. L’engagement initial est de trois mois. Nous confirmons le périmètre et les accès avant tout paiement."
         },
         {
-          question: "L’analyse gratuite est-elle vraiment gratuite ?",
-          answer:
-            "Oui. Nous générons 10 questions clients adaptées à votre marché et nous les testons sur les moteurs IA disponibles. Vous obtenez votre score de visibilité et votre concurrent n°1 sans payer et sans carte bancaire. Le plan Pro débloque tous les concurrents, toutes les réponses et toutes les actions, ainsi que l’analyse hebdomadaire.",
+          question: "Le plan de visibilité est-il vraiment gratuit ?",
+          answer: "Oui, sans carte bancaire. L’analyse teste dix questions adaptées à votre entreprise sur les moteurs disponibles, affiche votre visibilité, les concurrents et jusqu’à trois premières opportunités. Vous êtes libre de réaliser les actions vous-même ou de demander un accompagnement."
         },
         {
-          question: "Comment savez-vous si une IA cite mon entreprise ?",
-          answer:
-            "Nous posons aux moteurs IA les questions que vos clients locaux posent réellement, dans leurs mots, puis nous analysons chaque réponse pour détecter les mentions de votre marque — y compris les variantes de votre nom — et pour identifier chaque concurrent recommandé à votre place.",
+          question: "Intervenez-vous sur Google AI Overviews et AI Mode ?",
+          answer: "Nous travaillons les fondamentaux du SEO utiles à Google : accès aux pages, contenu fiable, liens internes et données structurées conformes au contenu visible. Le suivi automatisé actuel porte sur les réponses des modèles disponibles, dont Gemini ; il ne mesure pas directement AI Overviews ou AI Mode. Leur examen est distinct du score de visibilité."
         },
         {
-          question: "Pourquoi ChatGPT ne recommande-t-il pas mon entreprise ?",
-          answer:
-            "Les moteurs IA recommandent les entreprises dont les signaux sont solides, cohérents et vérifiables : fiches d’établissement complètes, avis réguliers, contenu de site rédigé sous forme de réponses, et données structurées. Si ces signaux sont faibles ou incohérents, l’IA cite vos concurrents à votre place. Votre rapport indique précisément quels signaux corriger en premier.",
+          question: "Garantissez-vous des citations ou de nouveaux clients ?",
+          answer: "Non. Les moteurs décident des réponses qu’ils affichent et celles-ci varient. Nous nous engageons sur les livrables convenus et la transparence des mesures. Les exemples du site illustrent un diagnostic ; ils ne constituent pas des résultats clients avant/après."
         },
         {
-          question: "Que comprend l’offre « on corrige pour vous » ?",
-          answer:
-            "Nous appliquons nous-mêmes les actions de votre rapport : page FAQ locale, données structurées, harmonisation de vos coordonnées sur les principaux annuaires et renforcement de votre page Prestations. Trente jours plus tard, nous refaisons l’analyse pour vous montrer l’évolution de votre score. Nous confirmons le devis après avoir vu votre site, avant tout paiement.",
+          question: "Comment les contenus sont-ils publiés ?",
+          answer: "Nous vous soumettons les textes et les corrections avant publication. La mise en ligne dépend de votre validation et des accès prévus au devis. Les intégrations de publication automatique WordPress et Shopify ne sont pas proposées comme des fonctions déjà disponibles."
         },
         {
-          question: "À quelle fréquence ma visibilité est-elle revérifiée ?",
-          answer:
-            "Les abonnés Pro bénéficient d’une nouvelle analyse automatique chaque semaine. Les réponses des IA évoluent au rythme des mises à jour des modèles, donc un suivi hebdomadaire montre si vos améliorations portent leurs fruits et vous alerte quand un concurrent vous dépasse.",
-        },
-        {
-          question: "Quelles informations utilisez-vous pour l’analyse ?",
-          answer:
-            "Nous utilisons la fiche d’entreprise que vous renseignez, le contenu public de votre page d’accueil et les réponses renvoyées par les fournisseurs d’IA. Votre email sert à rattacher le rapport au paiement si vous passez au plan Pro. Nous ne vendons pas vos informations.",
-        },
-        {
-          question: "La TVA est-elle appliquée ?",
-          answer:
-            "Si une taxe s’applique, Stripe la calcule à partir de votre adresse de facturation et en affiche le montant exact avant la souscription. Vous voyez toujours le total complet avant de confirmer le paiement.",
-        },
+          question: "Le logiciel à 29 € par mois existe-t-il toujours ?",
+          answer: "Oui. Le Pro reste une offre autonome de rapport complet, de contenus à adapter et de suivi hebdomadaire. Il ne comprend pas le travail de mise en œuvre des offres AI Growth. Les taxes éventuelles sont affichées au paiement Stripe avant confirmation."
+        }
       ] satisfies Faq[],
     };
   }
 
   return {
     nav: [
-      { href: "#proof", label: "Proof" },
+      { href: "#proof", label: "Your audit" },
       { href: "#method", label: "How it works" },
       { href: "/sample-report", label: "Sample report" },
       { href: "#pricing", label: "Pricing" },
       { href: "/guides", label: "Guides" },
     ],
-    eyebrow: "AI visibility for local businesses",
-    titleA: "ChatGPT is recommending your competitors.",
-    titleB: "Is it recommending you?",
+    eyebrow: "AI visibility, taken care of",
+    titleA: "Make ChatGPT and Google AI",
+    titleB: "new customer acquisition channels.",
     intro:
-      "Your customers now ask AI which plumber, dentist or lawyer to call. GetInTheAnswer shows you in 2 minutes who it recommends instead of you — and exactly what to fix to get into the answer.",
-    trust: ["Free, no credit card", "Results in 1–2 minutes", "ChatGPT, Claude, Gemini, Perplexity"],
+      "We audit your visibility, prepare website improvements and useful content for your future customers, then measure changes each month. You approve publication; we handle the agreed work.",
+    trust: ["Free plan, no credit card", "You approve before publication", "Monthly improvements and reporting"],
     proofLabel: "A real question we asked the AIs",
     proofCity: "GetInTheAnswer study",
     proofCountry: "",
@@ -241,131 +182,75 @@ function getCopy(locale: Locale, stats: ReturnType<typeof getBenchmarkStats>) {
       : [],
     statsNote: "Study run on local searches across US cities.",
     statsLink: "Read the full study",
-    methodEyebrow: "Simple by design",
-    methodTitle: "From your website to an action plan in three steps.",
+    methodEyebrow: "Practical support",
+    methodTitle: "We find, improve and measure.",
     steps: [
       {
-        title: "Describe your business",
-        description: "Your trade, your city and your services are enough to generate the questions your prospects actually ask.",
+        title: "A diagnosis and clear priorities",
+        description: "Your free audit reveals your presence and the competitors named. We then review your website to propose an appropriate scope of work.",
       },
       {
-        title: "We ask the AI engines",
-        description: "GetInTheAnswer asks those questions to ChatGPT, Claude, Gemini and Perplexity, and records who gets named: you or your competitors.",
+        title: "Website fixes and useful content",
+        description: "With a monthly service plan, we prepare technical improvements and customer-focused pages. Publication follows your approval and the agreed website access.",
       },
       {
-        title: "You know what to fix",
-        description: "Every weakness is tied to a concrete action, ranked by priority and estimated impact.",
+        title: "Documented work and measured changes",
+        description: "We compare AI checks using the same questions and document the work delivered. Traffic and inquiries are tracked when your measurement tools are connected.",
       },
     ],
     step: "Step",
-    demoEyebrow: "A report that leads somewhere",
-    demoTitle: "See what AI sees. Fix what it ignores.",
-    demoIntro: "The report ties every weakness it finds to an editorial or technical action, with a priority and an estimated impact.",
-    demoCta: "Create my first report",
+    demoEyebrow: "From a plan to work delivered",
+    demoTitle: "Clear priorities. A team to implement them.",
+    demoIntro: "With AI Growth, the audit helps us choose the fixes and pages to produce. We agree on scope before starting and ask you to approve each publication.",
+    demoCta: "Get my free visibility plan",
     demoSample: "See the full sample report",
     demoPlan: "Example action plan",
-    demoHeading: "3 high-impact opportunities",
-    demoPriority: "High priority",
+    demoHeading: "3 examples of possible work",
+    demoPriority: "Illustrative example",
     demoActions: [
       ["Publish a local FAQ page", "Answer your customers’ common questions", "Content"],
       ["Structure your data", "Add LocalBusiness schema markup", "Markup"],
       ["Strengthen your Services page", "Spell out your service areas and specialties", "Services"],
     ],
     benefits: [
-      { title: "A score you understand", text: "Where you stand, at a glance." },
-      { title: "Evidence, not guesswork", text: "Every AI answer stays on record." },
-      { title: "Prioritized actions", text: "Start with what matters most." },
+      { title: "Improvements taken care of", text: "Clear scope. Work delivered." },
+      { title: "You stay in control", text: "Your approval before publication." },
+      { title: "Measured results", text: "Dated, comparable checks you can inspect." },
     ],
-    pricingEyebrow: "Start risk-free",
-    pricingTitle: "Your first scan is on us.",
-    pricingIntro: "See where you stand for free, then track your AI visibility — or let us fix it for you.",
-    currencyLabel: "Display currency",
-    free: {
-      name: "Discovery scan",
-      note: "no credit card",
-      items: ["10 tailored customer questions", "Run on the real AI engines", "Your visibility score", "Your #1 competitor revealed"],
-      cta: "Try it free",
-    },
-    pro: {
-      name: "Pro monitoring",
-      badge: "Most popular",
-      note: "/ month · cancel anytime",
-      items: ["Every competitor named", "The real AI answers, quoted", "The full action plan", "A fresh scan every week", "Your score history"],
-      cta: "Start with the free scan",
-    },
-    agency: {
-      name: "Agency & multi-location",
-      note: "/ month",
-      items: ["Up to 25 locations", "White-label client reports", "Batch AI scans", "City-level competitor tracking", "Priority agency support"],
-      cta: "Contact us",
-    },
-    dfy: {
-      eyebrow: "No time to do it yourself?",
-      title: "We fix it for you.",
-      text: "We implement your action plan ourselves, then re-run the scan 30 days later so you can see what changed.",
-      items: [
-        "Local FAQ page written and published on your site",
-        "LocalBusiness structured data installed",
-        "Name, address and phone made consistent on the main directories",
-        "Services page strengthened for AI engines",
-        "Re-scan after 30 days, with your before/after score",
-      ],
-      priceNote: "one-time",
-      cta: "Request the done-for-you fix",
-      fine: "We review your site and confirm the quote before you pay anything.",
-    },
-    pricingFine:
-      "Pick your currency above: you’re charged in the one you select. Pro payments are processed securely by Stripe, applicable taxes are calculated at checkout, and you can cancel online at any time.",
     faqTitle: "Your questions, answered.",
     faqMore: ["Want to go deeper? Read our", "guides on AI visibility and GEO", "."],
-    finalTitle: "Your competitors may already be in the answer.",
-    finalText: "Check for free what ChatGPT, Claude, Gemini and Perplexity say about your market.",
+    finalTitle: "Turn your diagnosis into the first improvements.",
+    finalText: "Get your free visibility plan. Then we can review the improvements we could carry out together.",
     faqs: [
       {
-        question: "What is an AI visibility score?",
-        answer:
-          "Your AI visibility score (0–100) measures how often AI engines like ChatGPT name your business when a consumer asks for a recommendation in your trade and city. We ask the real questions your customers ask, then calculate the share of answers that name your business.",
+        question: "What is included in AI Growth?",
+        answer: "The EUR 990 per month pilot, excluding tax, includes a technical audit, agreed website fixes, two useful pages per month, weekly tracking on available AI engines and a monthly report. The initial commitment is three months. Scope and required access are confirmed before any payment."
       },
       {
-        question: "Is the free scan really free?",
-        answer:
-          "Yes. We generate 10 customer questions tailored to your market and test them on the available AI engines. You get your visibility score and your #1 competitor without paying and without a credit card. The Pro plan unlocks every competitor, every answer and every action, plus a weekly re-scan.",
+        question: "Is the visibility plan really free?",
+        answer: "Yes, with no credit card. The audit tests ten questions tailored to your business on available engines, shows your visibility and competitors, and reveals up to three initial opportunities. You can implement them yourself or ask about a service plan."
       },
       {
-        question: "How do you know whether an AI mentions my business?",
-        answer:
-          "We ask AI engines the questions your local customers actually ask, in their own words, then analyze each answer to detect mentions of your brand — including partial or informal variations of your name — and to identify every competitor recommended instead of you.",
+        question: "Do you work on Google AI Overviews and AI Mode?",
+        answer: "We work on SEO fundamentals relevant to Google: accessible pages, reliable content, internal links and structured data matching visible content. Current automated tracking checks available model responses, including Gemini; it does not directly measure AI Overviews or AI Mode. Those reviews are separate from the visibility score."
       },
       {
-        question: "Why isn’t ChatGPT recommending my business?",
-        answer:
-          "AI engines recommend businesses whose signals are strong, consistent and verifiable: complete business listings, steady reviews, website content written as answers, and structured data. When those signals are weak or inconsistent, the AI names your competitors instead. Your report shows exactly which signals to fix first.",
+        question: "Do you guarantee AI mentions or new customers?",
+        answer: "No. Engines decide what to show and their answers vary. We commit to agreed deliverables and transparent measurement. The examples on this site illustrate an audit; they are not client before-and-after results."
       },
       {
-        question: "What does the done-for-you fix include?",
-        answer:
-          "We implement the actions from your report ourselves: a local FAQ page, structured data, consistent contact details across the main directories, and a stronger Services page. Thirty days later we re-run the scan to show how your score moved. We confirm the quote after reviewing your site, before you pay anything.",
+        question: "How is content published?",
+        answer: "We submit copy and fixes for your approval before publication. Publishing depends on your approval and the access specified in the quote. Automated WordPress and Shopify publishing integrations are not offered as existing features."
       },
       {
-        question: "How often is my visibility re-checked?",
-        answer:
-          "Pro subscribers get a new automatic scan every week. AI answers change as models and their indexes update, so weekly tracking shows whether your improvements are working and alerts you when a competitor pulls ahead.",
-      },
-      {
-        question: "What information do you use for the scan?",
-        answer:
-          "We use the business details you enter, the public content of your homepage and the answers returned by the AI providers. Your email links the report to your payment if you upgrade to Pro. We don’t sell your information.",
-      },
-      {
-        question: "Are taxes included?",
-        answer:
-          "If a tax applies, Stripe calculates it from your billing address and shows the exact amount before you subscribe. You always see the full total before confirming payment.",
-      },
+        question: "Is the 29 per month software plan still available?",
+        answer: "Yes. Pro remains a self-service full report, editable content and weekly tracking plan, priced at EUR 29 or USD 29 per month. It does not include the implementation work of AI Growth. Applicable taxes appear at Stripe checkout before confirmation."
+      }
     ] satisfies Faq[],
   };
 }
 
-const stepIcons = [Search, MessageSquareText, ListChecks];
+const stepIcons = [Search, ListChecks, BarChart3];
 const benefitIcons = [BarChart3, CircleDot, ShieldCheck];
 const engineDots: Record<string, string> = {
   ChatGPT: "bg-emerald-400",
@@ -411,6 +296,22 @@ export function HomePage({ locale }: { locale: Locale }) {
         inLanguage: locale === "fr" ? "fr-FR" : "en-US",
       },
       {
+        "@type": "Service",
+        "@id": `${homeUrl}#ai-growth`,
+        name: "AI Growth",
+        serviceType: locale === "fr" ? "Optimisation SEO et visibilité IA" : "SEO and AI visibility optimization",
+        provider: { "@id": `${SITE_URL}/#organization` },
+        url: `${homeUrl}#pricing`,
+        offers: Object.values(GROWTH_PLANS).map((plan) => ({
+          "@type": "Offer",
+          name: plan.name,
+          url: `${homeUrl}#pricing`,
+          price: String(plan.monthlyEur),
+          priceCurrency: "EUR",
+          description: locale === "fr" ? "Tarif pilote HT par mois, engagement initial de 3 mois, sur devis." : "Pilot monthly price excluding tax, 3-month initial commitment, subject to quote.",
+        })),
+      },
+      {
         "@type": "SoftwareApplication",
         "@id": `${SITE_URL}/#software`,
         name: SITE_NAME,
@@ -422,11 +323,11 @@ export function HomePage({ locale }: { locale: Locale }) {
             "@type": "Offer",
             price: "0",
             priceCurrency: DEFAULT_CURRENCY_BY_LOCALE[locale].toUpperCase(),
-            description: copy.free.name,
+            description: locale === "fr" ? "Audit IA gratuit" : "Free AI audit",
           },
           ...CURRENCIES.map((currency) => ({
             "@type": "Offer",
-            name: copy.pro.name,
+            name: "Pro monitoring",
             url: `${homeUrl}#pricing`,
             price: String(PRICES.pro[currency]),
             priceCurrency: currency.toUpperCase(),
@@ -445,7 +346,7 @@ export function HomePage({ locale }: { locale: Locale }) {
   return (
     <div className="min-h-screen bg-[#f8f8f3]">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
-      <SiteHeader locale={locale} path="/" links={copy.nav} />
+      <SiteHeader locale={locale} path="/" links={copy.nav} ctaLong={locale === "fr" ? "Mon plan gratuit" : "My free plan"} ctaShort={locale === "fr" ? "Plan gratuit" : "Free plan"} />
 
       <main id="main-content">
         <section className="relative overflow-hidden border-b border-foreground/8">
@@ -467,7 +368,7 @@ export function HomePage({ locale }: { locale: Locale }) {
 
               <p className="mt-7 max-w-xl text-pretty text-lg leading-8 text-muted-foreground sm:text-xl">{copy.intro}</p>
 
-              <HeroForm locale={locale} />
+              <HeroForm intent="growth" locale={locale} />
 
               <div className="mt-7 flex flex-wrap gap-x-5 gap-y-2 text-sm font-medium text-muted-foreground">
                 {copy.trust.map((item) => (
@@ -540,6 +441,14 @@ export function HomePage({ locale }: { locale: Locale }) {
           </div>
         </section>
 
+        <section className="border-b border-foreground/8 bg-[#f3f4ed] py-10" aria-labelledby="coverage-heading">
+          <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+            <h2 id="coverage-heading" className="text-xl font-extrabold">{locale === "fr" ? "Google AI, ChatGPT et les moteurs IA : un travail adapté à chaque canal." : "Google AI, ChatGPT and AI search: work suited to each channel."}</h2>
+            <p className="mt-3 max-w-4xl text-sm leading-7 text-muted-foreground">{locale === "fr" ? "Nous travaillons les fondamentaux SEO pour Google AI Overviews et AI Mode. Le suivi automatisé mesure les réponses des modèles disponibles : ChatGPT, Claude, Gemini et Perplexity, selon la configuration de l’analyse. Gemini n’est pas une mesure de Google AI Overviews ou d’AI Mode." : "We work on SEO fundamentals for Google AI Overviews and AI Mode. Automated tracking measures available model responses: ChatGPT, Claude, Gemini and Perplexity, depending on scan configuration. Gemini is not a measurement of Google AI Overviews or AI Mode."}</p>
+            <a className="mt-3 inline-block text-sm font-bold text-emerald-700 underline-offset-4 hover:underline" href="https://developers.google.com/search/docs/appearance/ai-features">{locale === "fr" ? "Les recommandations officielles de Google" : "Google’s official guidance"} →</a>
+          </div>
+        </section>
+
         {copy.stats.length > 0 && (
           <section className="bg-[#173b35] py-16 text-white sm:py-20" aria-labelledby="stats-heading">
             <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
@@ -553,7 +462,7 @@ export function HomePage({ locale }: { locale: Locale }) {
                 ))}
               </div>
               <p className="mt-10 text-sm text-white/60">
-                {copy.statsNote}{" "}
+                {copy.statsNote}{" "}{locale === "fr" ? "Ces relevés ne sont pas des résultats clients avant/après." : "These measurements are not client before-and-after results."}{" "}
                 <Link className="font-bold text-lime-300 hover:underline" href="/study">{copy.statsLink} →</Link>
               </p>
             </div>
@@ -633,117 +542,7 @@ export function HomePage({ locale }: { locale: Locale }) {
           </div>
         </section>
 
-        <section id="pricing" className="scroll-mt-20 bg-[#f8f8f3] py-20 sm:py-28">
-          <div className="mx-auto max-w-6xl px-5 text-center sm:px-8">
-            <p className="text-sm font-extrabold uppercase tracking-[0.16em] text-emerald-700">{copy.pricingEyebrow}</p>
-            <h2 className="mt-4 text-balance text-4xl font-extrabold tracking-[-0.045em] sm:text-5xl">{copy.pricingTitle}</h2>
-            <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-muted-foreground">{copy.pricingIntro}</p>
-
-            <div className="mt-7 flex justify-center">
-              <CurrencyToggle defaultCurrency={DEFAULT_CURRENCY_BY_LOCALE[locale]} label={copy.currencyLabel} />
-            </div>
-
-            <div className="mx-auto mt-10 grid gap-5 text-left lg:grid-cols-3">
-              <div className="flex flex-col overflow-hidden rounded-[1.75rem] border border-foreground/10 bg-white shadow-sm">
-                <div className="p-6 sm:p-7">
-                  <p className="text-sm font-extrabold uppercase tracking-[0.12em] text-emerald-700">{copy.free.name}</p>
-                  <div className="mt-2 flex items-end gap-2">
-                    <span className="text-4xl font-black tracking-[-0.06em]"><Price amounts={{ eur: 0, usd: 0 }} /></span>
-                    <span className="pb-1 text-xs font-semibold text-muted-foreground">{copy.free.note}</span>
-                  </div>
-                  <div className="mt-6 grid gap-3 text-sm font-semibold">
-                    {copy.free.items.map((item) => (
-                      <span className="flex items-center gap-2" key={item}><Check className="size-4 text-emerald-700" aria-hidden="true" /> {item}</span>
-                    ))}
-                  </div>
-                </div>
-                <div className="mt-auto border-t border-foreground/8 bg-[#f3f4ed] p-6">
-                  <Button asChild size="lg" variant="outline" className="h-12 w-full rounded-full bg-white px-6">
-                    <Link href={onboarding} data-analytics-event="select_content" data-analytics-label="pricing_free">
-                      {copy.free.cta} <ArrowRight className="ml-2 size-4" aria-hidden="true" />
-                    </Link>
-                  </Button>
-                </div>
-              </div>
-
-              <div data-testid="pricing-pro-card" className="flex flex-col overflow-hidden rounded-[1.75rem] bg-[#173b35] text-white shadow-xl shadow-primary/15">
-                <div className="p-6 sm:p-7">
-                  <div className="flex flex-col items-start gap-2 xl:flex-row xl:items-center xl:justify-between">
-                    <p className="text-sm font-extrabold uppercase tracking-[0.12em] text-lime-300">{copy.pro.name}</p>
-                    <span className="shrink-0 whitespace-nowrap rounded-full bg-lime-300 px-3 py-1 text-[11px] font-black uppercase tracking-[0.08em] text-[#173b35]">{copy.pro.badge}</span>
-                  </div>
-                  <div className="mt-2 flex items-end gap-2">
-                    <Price amounts={PRICES.pro} className="text-4xl font-black tracking-[-0.06em]" />
-                    <span className="pb-1 text-xs font-semibold text-white/60">{copy.pro.note}</span>
-                  </div>
-                  <div className="mt-6 grid gap-3 text-sm font-semibold text-white/85">
-                    {copy.pro.items.map((item) => (
-                      <span className="flex items-center gap-2" key={item}><Check className="size-4 text-lime-300" aria-hidden="true" /> {item}</span>
-                    ))}
-                  </div>
-                </div>
-                <div className="mt-auto border-t border-white/10 p-6">
-                  <Button asChild size="lg" className="h-12 w-full rounded-full bg-lime-300 px-6 font-extrabold text-[#173b35] hover:bg-lime-200">
-                    <Link href={onboarding} data-analytics-event="select_content" data-analytics-label="pricing_pro">
-                      {copy.pro.cta} <ArrowRight className="ml-2 size-4" aria-hidden="true" />
-                    </Link>
-                  </Button>
-                </div>
-              </div>
-
-              <div className="flex flex-col overflow-hidden rounded-[1.75rem] border border-foreground/10 bg-white shadow-sm">
-                <div className="p-6 sm:p-7">
-                  <p className="text-sm font-extrabold uppercase tracking-[0.12em] text-emerald-700">{copy.agency.name}</p>
-                  <div className="mt-2 flex items-end gap-2">
-                    <Price amounts={PRICES.agency} className="text-4xl font-black tracking-[-0.06em]" />
-                    <span className="pb-1 text-xs font-semibold text-muted-foreground">{copy.agency.note}</span>
-                  </div>
-                  <div className="mt-6 grid gap-3 text-sm font-semibold">
-                    {copy.agency.items.map((item) => (
-                      <span className="flex items-center gap-2" key={item}><Check className="size-4 text-emerald-700" aria-hidden="true" /> {item}</span>
-                    ))}
-                  </div>
-                </div>
-                <div className="mt-auto border-t border-foreground/8 bg-[#f3f4ed] p-6">
-                  <Button asChild size="lg" variant="outline" className="h-12 w-full rounded-full bg-white px-6">
-                    <Link href={localePath(locale, "/contact")} data-analytics-event="select_content" data-analytics-label="pricing_agency_contact">
-                      {copy.agency.cta} <ArrowRight className="ml-2 size-4" aria-hidden="true" />
-                    </Link>
-                  </Button>
-                </div>
-              </div>
-            </div>
-
-            <div className="mx-auto mt-5 grid gap-8 overflow-hidden rounded-[1.75rem] border-2 border-lime-300 bg-white p-6 text-left shadow-sm sm:p-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-              <div>
-                <p className="flex items-center gap-2 text-sm font-extrabold uppercase tracking-[0.12em] text-emerald-700">
-                  <Wrench className="size-4" aria-hidden="true" /> {copy.dfy.eyebrow}
-                </p>
-                <h3 className="mt-3 text-3xl font-extrabold tracking-[-0.04em]">{copy.dfy.title}</h3>
-                <p className="mt-3 leading-7 text-muted-foreground">{copy.dfy.text}</p>
-                <div className="mt-5 grid gap-2.5 text-sm font-semibold">
-                  {copy.dfy.items.map((item) => (
-                    <span className="flex items-start gap-2" key={item}><Check className="mt-0.5 size-4 shrink-0 text-emerald-700" aria-hidden="true" /> {item}</span>
-                  ))}
-                </div>
-              </div>
-              <div className="rounded-[1.5rem] bg-[#f3f4ed] p-6 text-center">
-                <div className="flex items-end justify-center gap-2">
-                  <Price amounts={DONE_FOR_YOU_PRICE} className="text-5xl font-black tracking-[-0.06em]" />
-                  <span className="pb-1.5 text-xs font-semibold text-muted-foreground">{copy.dfy.priceNote}</span>
-                </div>
-                <Button asChild size="lg" className="mt-5 h-12 w-full rounded-full px-6 font-extrabold">
-                  <Link href={localePath(locale, "/contact?plan=done-for-you")} data-analytics-event="select_content" data-analytics-label="pricing_done_for_you">
-                    {copy.dfy.cta} <ArrowRight className="ml-2 size-4" aria-hidden="true" />
-                  </Link>
-                </Button>
-                <p className="mt-3 text-xs leading-5 text-muted-foreground">{copy.dfy.fine}</p>
-              </div>
-            </div>
-
-            <p className="mx-auto mt-6 max-w-3xl text-sm font-semibold text-muted-foreground">{copy.pricingFine}</p>
-          </div>
-        </section>
+        <GrowthOffers locale={locale} />
 
         <section id="faq" className="scroll-mt-20 border-t border-foreground/8 bg-white py-20 sm:py-28" aria-labelledby="faq-heading">
           <div className="mx-auto max-w-3xl px-5 sm:px-8">
@@ -775,7 +574,7 @@ export function HomePage({ locale }: { locale: Locale }) {
             <h2 className="text-balance text-3xl font-extrabold tracking-[-0.045em] sm:text-4xl">{copy.finalTitle}</h2>
             <p className="mx-auto mt-4 max-w-xl text-lg leading-8 text-primary/75">{copy.finalText}</p>
             <div className="mx-auto max-w-xl text-left">
-              <HeroForm locale={locale} showSample={false} />
+              <HeroForm intent="growth" locale={locale} showSample={false} />
             </div>
           </div>
         </section>

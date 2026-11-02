@@ -12,7 +12,7 @@ const COPY: Record<Locale, {
 }> = {
   en: {
     home: "GetInTheAnswer, home",
-    tagline: "© 2026 WEMADE. AI visibility, made actionable.",
+    tagline: "© 2026 WEMADE. AI visibility, taken care of.",
     navLabel: "Footer navigation",
     links: [
       ["/agency", "For agencies"],
@@ -30,7 +30,7 @@ const COPY: Record<Locale, {
   },
   fr: {
     home: "GetInTheAnswer, accueil",
-    tagline: "© 2026 WEMADE. La visibilité IA, rendue actionnable.",
+    tagline: "© 2026 WEMADE. Votre visibilité IA, prise en charge.",
     navLabel: "Navigation de pied de page",
     links: [
       ["/agency", "Pour les agences"],

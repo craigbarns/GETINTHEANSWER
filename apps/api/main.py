@@ -205,14 +205,18 @@ class AgencyInquiryRequest(BaseModel):
     locationCount: int = Field(ge=1, le=10000)
     message: Optional[str] = Field(default=None, max_length=2000)
     companyWebsite: Optional[str] = Field(default="", max_length=200)
-    # "agency" for the multi-location plan, "done_for_you" for the one-time
-    # service where we implement the action plan for a single business.
-    inquiryType: Literal["agency", "done_for_you"] = "agency"
+    # Service inquiries are requests for a reviewed quote, never checkout.
+    inquiryType: Literal["agency", "done_for_you", "ai_growth", "ai_growth_plus"] = "agency"
 
     @model_validator(mode="after")
     def agency_needs_several_locations(self):
         if self.inquiryType == "agency" and self.locationCount < 2:
             raise ValueError("Agency inquiries need at least 2 locations")
+        if self.inquiryType in ("ai_growth", "ai_growth_plus"):
+            if self.websiteUrl is None:
+                raise ValueError("Growth inquiries need a website to review")
+            if not self.message or len(self.message) < 10:
+                raise ValueError("Growth inquiries need a market and business goal")
         return self
 
 

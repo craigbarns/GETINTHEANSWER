@@ -23,7 +23,7 @@ const COPY: Record<Locale, { placeholder: string; label: string; submit: string;
   },
 };
 
-export function HeroForm({ locale = "en", showSample = true }: { locale?: Locale; showSample?: boolean }) {
+export function HeroForm({ locale = "en", showSample = true, intent = "scan" }: { locale?: Locale; showSample?: boolean; intent?: "scan" | "growth" }) {
   const copy = COPY[locale];
   const [company, setCompany] = useState("");
   const router = useRouter();
@@ -33,14 +33,15 @@ export function HeroForm({ locale = "en", showSample = true }: { locale?: Locale
     window.gtag?.("event", "scan_intent", {
       language: locale,
       entry_point: "hero_form",
+      intent,
     });
     const onboarding = localePath(locale, "/onboarding");
     router.push(company.trim() ? `${onboarding}?companyName=${encodeURIComponent(company.trim())}` : onboarding);
   };
 
   return (
-    <div className="mt-9 flex flex-col gap-3 lg:flex-row lg:flex-wrap">
-      <form onSubmit={handleSubmit} className="flex min-w-fit flex-1 flex-col gap-3 sm:flex-row">
+    <div className={`mt-9 flex flex-col gap-3 ${intent === "scan" ? "lg:flex-row lg:flex-wrap" : ""}`}>
+      <form onSubmit={handleSubmit} className={`flex min-w-0 flex-1 flex-col gap-3 ${intent === "scan" ? "sm:flex-row" : ""}`}>
         <input
           type="text"
           value={company}
@@ -49,10 +50,10 @@ export function HeroForm({ locale = "en", showSample = true }: { locale?: Locale
           aria-label={copy.label}
           autoComplete="organization"
           required
-          className="h-14 w-full min-w-[200px] rounded-full sm:flex-1 border-2 border-foreground/15 bg-white/80 px-6 text-base shadow-sm transition-all focus:border-primary focus:outline-none focus:ring-4 focus:ring-primary/10"
+          className="h-14 w-full min-w-0 rounded-full sm:flex-1 border-2 border-foreground/15 bg-white/80 px-6 text-base shadow-sm transition-all focus:border-primary focus:outline-none focus:ring-4 focus:ring-primary/10"
         />
-        <Button type="submit" size="lg" className="h-14 shrink-0 rounded-full px-7 text-base shadow-lg shadow-primary/15">
-          {copy.submit}
+        <Button type="submit" size="lg" className="h-auto min-h-14 shrink-0 whitespace-normal rounded-full px-5 py-3 text-base shadow-lg shadow-primary/15">
+          {intent === "growth" ? (locale === "fr" ? "Obtenir mon plan de visibilité IA gratuit" : "Get my free AI visibility plan") : copy.submit}
           <ArrowRight className="ml-2 size-5" aria-hidden="true" />
         </Button>
       </form>

@@ -9,23 +9,23 @@ import { SITE_NAME, SITE_URL } from "@/lib/site";
 
 const ROOT_COPY: Record<Locale, { title: string; template: string; description: string; ogTitle: string; ogDescription: string; skip: string }> = {
   en: {
-    title: "GetInTheAnswer — Is ChatGPT recommending your business?",
+    title: "GetInTheAnswer — AI visibility, taken care of",
     template: "%s | GetInTheAnswer",
     description:
-      "Check whether AI models recommend your local business. Get a free visibility score, competitor comparison and action plan.",
-    ogTitle: "GetInTheAnswer — Is your business in the AI answer?",
+      "Get a free AI visibility plan, then let us handle website fixes, useful content and monthly measurement. AI Growth pilot service from EUR 990 per month.",
+    ogTitle: "GetInTheAnswer — Turn AI visibility into action",
     ogDescription:
-      "Measure your visibility in ChatGPT, Claude, Gemini and Perplexity in minutes. Free AI visibility score, no credit card.",
+      "A free visibility plan, website improvements and useful content. You approve publication; we handle the agreed work and measure changes.",
     skip: "Skip to main content",
   },
   fr: {
-    title: "GetInTheAnswer — ChatGPT recommande-t-il votre entreprise ?",
+    title: "GetInTheAnswer — Votre visibilité IA, prise en charge",
     template: "%s | GetInTheAnswer",
     description:
-      "Vérifiez si les IA recommandent votre entreprise. Analyse gratuite de votre visibilité, concurrents cités et plan d’action.",
-    ogTitle: "GetInTheAnswer — Votre entreprise est-elle dans la réponse des IA ?",
+      "Obtenez votre plan de visibilité IA gratuit, puis confiez-nous corrections, contenus utiles et suivi mensuel. Accompagnement pilote AI Growth dès 990 € HT par mois.",
+    ogTitle: "GetInTheAnswer — Du diagnostic aux optimisations",
     ogDescription:
-      "Mesurez votre visibilité dans ChatGPT, Claude, Gemini et Perplexity en quelques minutes. Score de visibilité IA gratuit, sans carte bancaire.",
+      "Un plan gratuit, des corrections du site et des contenus utiles. Vous validez les publications ; nous prenons en charge le travail convenu et mesurons les changements.",
     skip: "Aller au contenu principal",
   },
 };

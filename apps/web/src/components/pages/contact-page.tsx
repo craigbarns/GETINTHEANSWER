@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import {
   ArrowLeft,
@@ -28,7 +28,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { localePath, type Locale } from "@/lib/i18n";
 import { DONE_FOR_YOU_PRICE } from "@/lib/pricing";
 
-type Plan = "agency" | "done_for_you";
+import { GROWTH_PLANS, growthPrice, isGrowthPlan, type ContactPlan as Plan } from "@/lib/growth";
 
 interface FormData {
   fullName: string;
@@ -186,6 +186,37 @@ const COPY = {
   },
 };
 
+const GROWTH_COPY = {
+  fr: {
+    title: "Confiez-nous les premières optimisations de votre visibilité IA.",
+    text: "Nous étudions votre site et vos objectifs, puis nous proposons un échange pour confirmer les priorités, le périmètre et les accès nécessaires. Aucun paiement à cette étape.",
+    formEyebrow: "Parlons de votre projet",
+    formTitle: "Qu’aimeriez-vous développer ?",
+    formIntro: "Indiquez votre site, votre zone d’intervention et les prestations que vous souhaitez développer. Si vous avez déjà fait l’audit, mentionnez-le dans le message.",
+    icons: ["Corrections et contenus préparés pour votre validation", "Suivi hebdomadaire des moteurs IA disponibles", "Rapport mensuel du travail livré et des résultats"],
+    submit: "Demander un échange sur mon plan",
+    thanks: "Merci — votre demande d’accompagnement est reçue.",
+    fine: "Tarif pilote HT par mois · engagement initial de 3 mois. Périmètre confirmé au devis avant tout paiement. Publications après votre validation. Aucun résultat de visibilité ou commercial garanti.",
+    goals: "Votre ville, vos principales prestations et votre objectif commercial…",
+    message: "Votre marché et votre objectif",
+    switchPlan: "Vous gérez plusieurs établissements ? Voir l’offre agence.",
+  },
+  en: {
+    title: "Let us handle your first AI visibility improvements.",
+    text: "We review your website and goals, then arrange a conversation to confirm priorities, scope and required access. No payment at this stage.",
+    formEyebrow: "Let’s discuss your project",
+    formTitle: "What would you like to grow?",
+    formIntro: "Share your website, service area and the services you want to grow. If you have already run an audit, mention it in your message.",
+    icons: ["Website fixes and content prepared for your approval", "Weekly tracking on available AI engines", "Monthly report of work delivered and measured results"],
+    submit: "Request a conversation about my plan",
+    thanks: "Thanks — your service inquiry is received.",
+    fine: "Pilot price excluding tax per month · 3-month initial commitment. Scope confirmed in a quote before payment. Publication follows your approval. Visibility and commercial results are not guaranteed.",
+    goals: "Your city, main services and business goal…",
+    message: "Your market and goal",
+    switchPlan: "Managing several locations? See the agency plan.",
+  },
+};
+
 const asideIconSets = {
   agency: [MapPinned, FileChartColumnIncreasing, MessagesSquare],
   done_for_you: [Wrench, ShieldCheck, RefreshCcw],
@@ -204,24 +235,41 @@ function normalizeOptionalWebsite(value: string) {
   }
 }
 
-export function ContactPage({ locale }: { locale: Locale }) {
+export function ContactPage({ locale, initialPlan = "agency" }: { locale: Locale; initialPlan?: Plan }) {
   const copy = COPY[locale];
-  const [plan, setPlan] = useState<Plan>("agency");
+  const [plan, setPlan] = useState<Plan>(initialPlan);
+  const growth = isGrowthPlan(plan);
+  const legacyPlan = plan === "agency" ? "agency" : "done_for_you";
+  const service = GROWTH_COPY[locale];
+  const details = growth ? {
+    eyebrow: GROWTH_PLANS[plan].name,
+    title: service.title,
+    text: service.text,
+    formEyebrow: service.formEyebrow,
+    formTitle: service.formTitle,
+    formIntro: service.formIntro,
+    icons: service.icons,
+    submit: service.submit,
+    thanks: service.thanks,
+    switchPlan: service.switchPlan,
+  } : {
+    eyebrow: copy.asideEyebrow[legacyPlan],
+    title: copy.asideTitle[legacyPlan],
+    text: copy.asideText[legacyPlan],
+    formEyebrow: copy.formEyebrow[legacyPlan],
+    formTitle: copy.formTitle[legacyPlan],
+    formIntro: copy.formIntro[legacyPlan],
+    icons: copy.asideIcons[legacyPlan],
+    submit: copy.submit[legacyPlan],
+    thanks: copy.thanks[legacyPlan],
+    switchPlan: copy.switchPlan[legacyPlan],
+  };
+  const price = growth ? growthPrice(plan, locale) : <Price amounts={DONE_FOR_YOU_PRICE} />;
+  const priceLabel = growth ? (locale === "fr" ? "HT / mois" : "excl. tax / month") : copy.priceLabel;
   const [formData, setFormData] = useState<FormData>(initialFormData);
   const [loading, setLoading] = useState(false);
   const [submittedEmail, setSubmittedEmail] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    if (new URLSearchParams(window.location.search).get("plan") !== "done-for-you") return;
-    let active = true;
-    queueMicrotask(() => {
-      if (active) setPlan("done_for_you");
-    });
-    return () => {
-      active = false;
-    };
-  }, []);
 
   const switchPlan = () => {
     const next: Plan = plan === "agency" ? "done_for_you" : "agency";
@@ -248,19 +296,19 @@ export function ContactPage({ locale }: { locale: Locale }) {
       setError(copy.errUrl);
       return;
     }
-    if (plan === "done_for_you" && normalizedUrl === null) {
+    if (plan !== "agency" && normalizedUrl === null) {
       setError(copy.errUrlRequired);
       return;
     }
 
-    const locationCount = plan === "done_for_you" ? 1 : Number(formData.locationCount);
+    const locationCount = plan !== "agency" ? 1 : Number(formData.locationCount);
     if (plan === "agency" && (!Number.isInteger(locationCount) || locationCount < 2 || locationCount > 10000)) {
       setError(copy.errLocations);
       return;
     }
 
     setLoading(true);
-    window.gtag?.("event", plan === "agency" ? "agency_contact_submit" : "done_for_you_submit", { location_count: locationCount });
+    window.gtag?.("event", growth ? "growth_contact_submit" : plan === "agency" ? "agency_contact_submit" : "done_for_you_submit", { location_count: locationCount, service_plan: plan, language: locale });
 
     try {
       const trimmedEmail = formData.workEmail.trim();
@@ -284,11 +332,12 @@ export function ContactPage({ locale }: { locale: Locale }) {
         throw new Error(locale === "en" && data.message ? data.message : copy.errSend);
       }
 
-      window.gtag?.("event", "generate_lead", { lead_source: plan === "agency" ? "agency_contact_form" : "done_for_you_form" });
+      window.gtag?.("event", "generate_lead", { lead_source: growth ? "growth_contact_form" : plan === "agency" ? "agency_contact_form" : "done_for_you_form", service_plan: plan, language: locale });
+      if (growth) window.gtag?.("event", "growth_inquiry_received", { service_plan: plan, language: locale });
       setSubmittedEmail(trimmedEmail);
       setFormData(initialFormData);
     } catch (submissionError) {
-      window.gtag?.("event", "agency_contact_failed", { reason: "api_or_network" });
+      window.gtag?.("event", "contact_failed", { reason: "api_or_network", service_plan: plan });
       setError(submissionError instanceof Error ? submissionError.message : copy.errUnexpected);
     } finally {
       setLoading(false);
@@ -296,7 +345,7 @@ export function ContactPage({ locale }: { locale: Locale }) {
   };
 
   const inputClass = "h-12 rounded-xl border-foreground/10 bg-white px-4 shadow-sm focus-visible:border-primary";
-  const icons = asideIconSets[plan];
+  const icons = asideIconSets[legacyPlan];
   const reply = copy.reply(submittedEmail ?? "");
 
   return (
@@ -312,20 +361,20 @@ export function ContactPage({ locale }: { locale: Locale }) {
           </Link>
 
           <div className="mt-16 max-w-lg xl:mt-20">
-            <p className="text-sm font-extrabold uppercase tracking-[0.16em] text-lime-300">{copy.asideEyebrow[plan]}</p>
-            <h1 className="mt-5 text-5xl font-extrabold leading-[1.02] tracking-[-0.05em] xl:text-6xl">{copy.asideTitle[plan]}</h1>
-            <p className="mt-7 text-lg leading-8 text-white/65">{copy.asideText[plan]}</p>
-            {plan === "done_for_you" && (
+            <p className="text-sm font-extrabold uppercase tracking-[0.16em] text-lime-300">{details.eyebrow}</p>
+            <h1 className="mt-5 text-5xl font-extrabold leading-[1.02] tracking-[-0.05em] xl:text-6xl">{details.title}</h1>
+            <p className="mt-7 text-lg leading-8 text-white/65">{details.text}</p>
+            {plan !== "agency" && (
               <p className="mt-6 flex items-end gap-2">
-                <Price amounts={DONE_FOR_YOU_PRICE} className="text-5xl font-black tracking-[-0.06em] text-lime-300" />
-                <span className="pb-1.5 text-sm font-semibold text-white/60">{copy.priceLabel}</span>
+                <span className="text-5xl font-black tracking-[-0.06em] text-lime-300">{price}</span>
+                <span className="pb-1.5 text-sm font-semibold text-white/60">{priceLabel}</span>
               </p>
             )}
           </div>
         </div>
 
         <div className="relative grid gap-3">
-          {copy.asideIcons[plan].map((text, index) => {
+          {details.icons.map((text, index) => {
             const Icon = icons[index];
             return (
               <div className="flex items-center gap-3 text-sm font-semibold text-white/80" key={text}>
@@ -365,7 +414,7 @@ export function ContactPage({ locale }: { locale: Locale }) {
                   <CheckCircle2 className="size-8" aria-hidden="true" />
                 </span>
                 <p className="mt-6 text-sm font-extrabold uppercase tracking-[0.14em] text-emerald-700">{copy.received}</p>
-                <h2 className="mt-3 text-3xl font-extrabold tracking-[-0.04em] sm:text-4xl">{copy.thanks[plan]}</h2>
+                <h2 className="mt-3 text-3xl font-extrabold tracking-[-0.04em] sm:text-4xl">{details.thanks}</h2>
                 <p className="mx-auto mt-4 max-w-lg leading-7 text-muted-foreground">
                   {reply[0]} <span className="font-bold text-foreground">{reply[1]}</span> {reply[2]}
                 </p>
@@ -385,17 +434,19 @@ export function ContactPage({ locale }: { locale: Locale }) {
                     {plan === "agency" ? <Building2 className="size-6" aria-hidden="true" /> : <Wrench className="size-6" aria-hidden="true" />}
                   </span>
                   <div>
-                    <p className="text-sm font-extrabold uppercase tracking-[0.14em] text-emerald-700">{copy.formEyebrow[plan]}</p>
-                    <h2 className="mt-2 text-3xl font-extrabold tracking-[-0.04em] sm:text-4xl">{copy.formTitle[plan]}</h2>
-                    <p className="mt-2 text-base leading-7 text-muted-foreground">{copy.formIntro[plan]}</p>
-                    {plan === "done_for_you" && (
+                    <p className="text-sm font-extrabold uppercase tracking-[0.14em] text-emerald-700">{details.formEyebrow}</p>
+                    <h2 className="mt-2 text-3xl font-extrabold tracking-[-0.04em] sm:text-4xl">{details.formTitle}</h2>
+                    <p className="mt-2 text-base leading-7 text-muted-foreground">{details.formIntro}</p>
+                    {plan !== "agency" && (
                       <p className="mt-3 flex items-end gap-2 lg:hidden">
-                        <Price amounts={DONE_FOR_YOU_PRICE} className="text-3xl font-black tracking-[-0.05em]" />
-                        <span className="pb-1 text-xs font-semibold text-muted-foreground">{copy.priceLabel}</span>
+                        <span className="text-3xl font-black tracking-[-0.05em]">{price}</span>
+                        <span className="pb-1 text-xs font-semibold text-muted-foreground">{priceLabel}</span>
                       </p>
                     )}
                   </div>
                 </div>
+
+                {growth && <p className="mt-5 rounded-xl bg-emerald-50 p-4 text-sm leading-6 text-emerald-900">{service.fine}</p>}
 
                 <form className="mt-8 space-y-5" onSubmit={handleSubmit} data-testid="agency-contact-form">
                   <div className="grid gap-5 sm:grid-cols-2">
@@ -411,8 +462,8 @@ export function ContactPage({ locale }: { locale: Locale }) {
 
                   <div className={`grid gap-5 ${plan === "agency" ? "sm:grid-cols-2" : ""}`}>
                     <div className="min-w-0 space-y-2">
-                      <Label htmlFor="companyName" className="text-sm font-bold">{copy.company[plan]}</Label>
-                      <Input id="companyName" autoComplete="organization" placeholder={copy.companyPlaceholder[plan]} value={formData.companyName} onChange={handleChange} required minLength={2} maxLength={120} className={inputClass} />
+                      <Label htmlFor="companyName" className="text-sm font-bold">{copy.company[legacyPlan]}</Label>
+                      <Input id="companyName" autoComplete="organization" placeholder={copy.companyPlaceholder[legacyPlan]} value={formData.companyName} onChange={handleChange} required minLength={2} maxLength={120} className={inputClass} />
                     </div>
                     {plan === "agency" && (
                       <div className="min-w-0 space-y-2">
@@ -424,18 +475,18 @@ export function ContactPage({ locale }: { locale: Locale }) {
 
                   <div className="space-y-2">
                     <div className="flex items-baseline justify-between gap-3">
-                      <Label htmlFor="websiteUrl" className="text-sm font-bold">{copy.website[plan]}</Label>
+                      <Label htmlFor="websiteUrl" className="text-sm font-bold">{copy.website[legacyPlan]}</Label>
                       {plan === "agency" && <span className="text-xs font-medium text-muted-foreground">{copy.optional}</span>}
                     </div>
-                    <Input id="websiteUrl" autoComplete="url" inputMode="url" placeholder={copy.websitePlaceholder} value={formData.websiteUrl} onChange={handleChange} required={plan === "done_for_you"} maxLength={300} className={inputClass} />
+                    <Input id="websiteUrl" autoComplete="url" inputMode="url" placeholder={copy.websitePlaceholder} value={formData.websiteUrl} onChange={handleChange} required={plan !== "agency"} maxLength={300} className={inputClass} />
                   </div>
 
                   <div className="space-y-2">
                     <div className="flex items-baseline justify-between gap-3">
-                      <Label htmlFor="message" className="text-sm font-bold">{copy.message[plan]}</Label>
-                      <span className="text-xs font-medium text-muted-foreground">{copy.optional}</span>
+                      <Label htmlFor="message" className="text-sm font-bold">{growth ? service.message : copy.message[legacyPlan]}</Label>
+                      {!growth && <span className="text-xs font-medium text-muted-foreground">{copy.optional}</span>}
                     </div>
-                    <Textarea id="message" placeholder={copy.messagePlaceholder[plan]} value={formData.message} onChange={handleChange} maxLength={2000} className="min-h-28 resize-y rounded-xl border-foreground/10 bg-white px-4 py-3 shadow-sm focus-visible:border-primary" />
+                    <Textarea id="message" required={growth} minLength={growth ? 10 : undefined} placeholder={growth ? service.goals : copy.messagePlaceholder[legacyPlan]} value={formData.message} onChange={handleChange} maxLength={2000} className="min-h-28 resize-y rounded-xl border-foreground/10 bg-white px-4 py-3 shadow-sm focus-visible:border-primary" />
                   </div>
 
                   <div className="absolute -left-[10000px] top-auto size-px overflow-hidden" aria-hidden="true">
@@ -454,7 +505,7 @@ export function ContactPage({ locale }: { locale: Locale }) {
                     {loading ? (
                       <><Loader2 className="mr-2 size-5 animate-spin" aria-hidden="true" /> {copy.sending}</>
                     ) : (
-                      <>{copy.submit[plan]} <ArrowRight className="ml-2 size-5" aria-hidden="true" /></>
+                      <>{details.submit} <ArrowRight className="ml-2 size-5" aria-hidden="true" /></>
                     )}
                   </Button>
 
@@ -468,7 +519,7 @@ export function ContactPage({ locale }: { locale: Locale }) {
 
                   <p className="text-center text-sm">
                     <button className="font-bold text-emerald-700 underline-offset-4 hover:underline" type="button" onClick={switchPlan}>
-                      {copy.switchPlan[plan]}
+                      {details.switchPlan}
                     </button>
                   </p>
                 </form>
