@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
 
 import { ContactPage } from "@/components/pages/contact-page";
+import { parseContactPlan } from "@/lib/growth";
 import { localizedAlternates } from "@/lib/i18n";
 
 export const metadata: Metadata = {
-  title: "Offre agence et prise en charge complète",
+  title: "Parlons de votre accompagnement AI Growth",
   description:
-    "Demandez une offre de suivi de visibilité IA pour agences et réseaux d’établissements, ou confiez-nous la mise en œuvre de votre plan d’action.",
+    "Étudions votre projet AI Growth : corrections du site, contenus utiles et suivi mensuel, ou offre agence. Périmètre et devis confirmés avant paiement.",
   alternates: localizedAlternates("fr", "/contact"),
 };
 
-export default function ContactFr() {
-  return <ContactPage locale="fr" />;
+export default async function ContactFr({ searchParams }: { searchParams: Promise<{ plan?: string | string[] }> }) {
+  const plan = parseContactPlan((await searchParams).plan);
+  return <ContactPage key={plan} locale="fr" initialPlan={plan} />;
 }

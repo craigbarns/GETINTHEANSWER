@@ -3,6 +3,7 @@ import { guides } from "@/lib/guides";
 import { getIndustry, industries } from "@/lib/industries";
 import { getCity } from "@/lib/cities";
 import { DONE_FOR_YOU_PRICE, PRICES } from "@/lib/pricing";
+import { GROWTH_PLANS } from "@/lib/growth";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 
 export const dynamic = "force-static";
@@ -43,8 +44,9 @@ export function GET() {
 
   const body = `# ${SITE_NAME}
 
-> Measures mentions of local businesses in AI model responses and records which
-> competitors are named. Published results are dated snapshots of API responses;
+> Helps businesses act on AI visibility audits through scoped SEO improvements
+> and useful content, subject to client approval. The software measures mentions
+> of businesses in model responses and records which competitors are named. Published results are dated snapshots of API responses;
 > they are not guarantees of what a consumer assistant will answer today.
 
 This is the full version of /llms.txt. Everything the site can substantiate is
@@ -52,7 +54,9 @@ here: measured results, guides, methodology, plans and tools.
 
 ## What this site is
 
-${SITE_NAME} runs the questions a customer would ask ("who is the best plumber
+${SITE_NAME} offers a free visibility plan and monthly AI Growth pilot services.
+Website improvements and content are agreed in a quote and approved by the client
+before publication. The software runs the questions a customer would ask ("who is the best plumber
 in Phoenix?") through four AI engines, records which businesses each one names,
 and reports where a given business stands. English is served at the root;
 the French product pages are under /fr.
@@ -76,11 +80,26 @@ the French product pages are under /fr.
 
 ## Product and plans
 
-- [Free analysis](${SITE_URL}/onboarding): first business visibility scan, no
-  credit card required.
+- [AI Growth](${SITE_URL}/contact?plan=ai-growth): EUR ${GROWTH_PLANS.ai_growth.monthlyEur}/month,
+  excluding tax, 3-month initial commitment. Pilot proposal: technical audit,
+  scoped website fixes, 2 useful pages per month, weekly model checks and a
+  monthly report. Scope and quote confirmed before payment.
+- [AI Growth Plus](${SITE_URL}/contact?plan=ai-growth-plus): EUR ${GROWTH_PLANS.ai_growth_plus.monthlyEur}/month,
+  excluding tax, 3-month initial commitment. Expanded editorial program,
+  legitimate external visibility opportunities and monthly strategic support,
+  with the scope confirmed in the quote.
+- Service prices are in EUR regardless of the Pro software currency toggle.
+- Clients approve publication. Automated WordPress/Shopify publishing is not
+  currently a product feature. No AI mentions, traffic or customers are guaranteed.
+- Google AI Overviews and AI Mode are addressed through SEO fundamentals.
+  Current automated tracking measures model responses, including Gemini;
+  it does not directly measure AI Overviews or AI Mode.
+
+- [Free analysis](${SITE_URL}/onboarding): first business visibility scan and up to 3 initial
+  opportunities, no credit card required.
 - [Sample report](${SITE_URL}/sample-report): illustrative report for a fictional
   business, not a customer testimonial or a measured client result.
-- [Pro](${SITE_URL}/#pricing): $${PRICES.pro.usd} or EUR ${PRICES.pro.eur} per month.
+- [Self-service Pro software](${SITE_URL}/#software): $${PRICES.pro.usd} or EUR ${PRICES.pro.eur} per month.
 - [Agency](${SITE_URL}/agency): $${PRICES.agency.usd} or EUR ${PRICES.agency.eur} per month.
 - [Done-for-you service](${SITE_URL}/contact?plan=done-for-you): $${DONE_FOR_YOU_PRICE.usd} or
   EUR ${DONE_FOR_YOU_PRICE.eur} one time, subject to site review and quote confirmation.

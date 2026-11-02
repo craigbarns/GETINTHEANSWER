@@ -83,6 +83,12 @@ Variables principales de l'API :
 
 - `DATABASE_URL` : PostgreSQL persistant.
 - `OPENAI_API_KEY`, `ANTHROPIC_API_KEY`, `PERPLEXITY_API_KEY` : moteurs du scan live.
+- `OPENROUTER_API_KEY` : si présente, utilise OpenRouter pour les appels IA.
+- `OR_UTILITY_MODEL` : génération des questions et extraction des mentions (`openai/gpt-4o-mini` par défaut).
+- `OR_RECOMMENDATION_MODEL` : modèle des recommandations (modèle utilitaire par défaut).
+  Sur Railway, `z-ai/glm-5.3` utilise un effort de raisonnement faible, un plafond de
+  8 192 tokens et un délai de 90 secondes. Les modèles mesurant la visibilité restent distincts.
+  En cas d'échec ou de réponse inexploitable, le rapport conserve ses recommandations de secours.
 - `STRIPE_SECRET_KEY`, `STRIPE_PRICE_ID` : abonnement Pro (prix en dollars).
 - `STRIPE_PRICE_ID_EUR` : prix Stripe en euros du même abonnement. Stripe facture la devise
   dans laquelle le Price a été créé : vendre dans les deux devises demande donc un Price par

@@ -66,6 +66,20 @@ def agency_inquiry_email(
         else f"Agency inquiry: {safe_company} ({location_count} locations)"
     )
     heading = "New done-for-you request" if done_for_you else "New agency inquiry"
+    growth_plans = {
+        "ai_growth": ("AI Growth", 990),
+        "ai_growth_plus": ("AI Growth Plus", 1990),
+    }
+    service_row = ""
+    if inquiry_type in growth_plans:
+        plan_name, monthly_eur = growth_plans[inquiry_type]
+        subject = f"{plan_name} pilot inquiry: {safe_company}"
+        heading = f"New {plan_name} pilot inquiry"
+        service_row = (
+            '<tr><td style="padding:6px 16px 6px 0;color:#66736f;">Pilot offer</td>'
+            f'<td><b>{plan_name}</b> — EUR {monthly_eur}/month excluding tax; '
+            '3-month initial commitment. Scope and quote must be confirmed before payment.</td></tr>'
+        )
 
     def safe(value: Optional[str], fallback: str = "Not provided") -> str:
         if not value or not value.strip():
@@ -86,6 +100,7 @@ def agency_inquiry_email(
       <div style="background:#f8f8f3;padding:28px;border-radius:0 0 16px 16px;">
         <h1 style="font-size:22px;margin:0 0 20px;">{heading}</h1>
         <table style="border-collapse:collapse;width:100%;line-height:1.5;">
+          {service_row}
           <tr><td style="padding:6px 16px 6px 0;color:#66736f;">Name</td><td><b>{safe(full_name)}</b></td></tr>
           <tr><td style="padding:6px 16px 6px 0;color:#66736f;">Work email</td><td>{safe(work_email)}</td></tr>
           <tr><td style="padding:6px 16px 6px 0;color:#66736f;">Company</td><td>{safe(company_name)}</td></tr>
