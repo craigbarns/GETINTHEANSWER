@@ -23,7 +23,7 @@ GetInTheAnswer propose aux dirigeants d’entreprises de services un audit IA gr
 - Une demande de prestation ne crée aucun paiement Stripe ni abonnement. Le devis, les accès et les conditions contractuelles sont confirmés avant signature et paiement.
 - Les trois premières recommandations sont visibles dans le rapport gratuit, lorsqu’elles existent. Les contenus prêts à adapter restent soumis aux droits Pro existants.
 - Les simulations et les rapports sans opportunité observée ne déclenchent pas la proposition contextuelle AI Growth. Les exemples et relevés d’étude ne sont jamais présentés comme des résultats clients.
-- Aucun changement de base, de secrets, de fournisseur IA ou de configuration Railway n’est nécessaire à cette version.
+- Aucun changement de base ni nouvelle clé n’est nécessaire. La clé OpenRouter existante reste côté API ; la variable `OR_RECOMMENDATION_MODEL=z-ai/glm-5.3` sélectionne le modèle des recommandations.
 
 ## Contrat d’implémentation
 
@@ -53,7 +53,7 @@ Cette version livre le parcours public et la demande qualifiée. Le cycle de pro
 
 Le suivi automatisé actuel porte sur les réponses des modèles disponibles, dont Gemini. **Gemini n’est pas une mesure de Google AI Overviews ni d’AI Mode.** Le travail sur Google repose sur les fondamentaux SEO : exploration et indexation, contenu utile, liens internes et données structurées cohérentes. Une présence n’est pas garantie. Référence : [Google Search Central — AI features and your website](https://developers.google.com/search/docs/appearance/ai-features).
 
-[GLM 5.3 existe bien chez Z.ai](https://z.ai/blog/glm-5.3). Son intérêt économique pour cette activité doit être mesuré sur nos tâches, avec le coût API, les reprises et le temps de contrôle humain. L’application dispose déjà d’un modèle utilitaire configurable via `OR_UTILITY_MODEL` dans le parcours OpenRouter ; cette version ne modifie pas sa valeur. Un changement de modèle exige de vérifier l’identifiant disponible chez le fournisseur et de comparer les recommandations et extractions sur des cas connus. La génération interne et la mesure de visibilité restent deux fonctions distinctes.
+[GLM 5.3 est disponible sur OpenRouter](https://openrouter.ai/z-ai/glm-5.3) sous l’identifiant `z-ai/glm-5.3`. Cette version permet de le sélectionner pour les recommandations via `OR_RECOMMENDATION_MODEL`, avec effort de raisonnement faible et budget borné. `OR_UTILITY_MODEL` conserve les tâches de génération des questions et d’extraction des mentions. Les moteurs de mesure restent distincts. Le rapport conserve ses recommandations de secours en cas d’échec. Le coût, la pertinence et le temps de contrôle humain doivent être mesurés sur les pilotes ; cette intégration ne constitue pas un système de publication WordPress ou Shopify.
 
 Les connecteurs WordPress et Shopify viendront après validation du pilote : brouillon par défaut, autorisation limitée au site concerné, validation attachée à une version précise, publication traçable, prévention des doublons et retour arrière. Aucun accès CMS ne doit être demandé dans le formulaire public.
 
@@ -88,7 +88,7 @@ Cette livraison n’ajoute ni acquisition de prospects, ni prospection envoyée,
 
 Projet existant `seenbyai`, environnement `production`, services `web`, `api` et `Postgres`, constatés via le CLI Railway. Le web est associé au dépôt GitHub ; l’API utilise le parcours de déploiement par téléversement existant. Ne pas créer un nouveau projet.
 
-Après validation de la version, déployer **l’API avant le web** : l’API accepte les nouvelles offres tout en restant compatible avec l’ancien frontend. Déployer le web ensuite pour exposer les nouveaux formulaires. Aucun changement de base ni de variable n’est requis. En cas de retour arrière, rétablir le web d’abord ; l’API élargie reste compatible.
+Après validation de la version, déployer **l’API avant le web** : l’API accepte les nouvelles offres tout en restant compatible avec l’ancien frontend. Déployer le web ensuite pour exposer les nouveaux formulaires. Aucun changement de base n’est requis. Configurer `OR_RECOMMENDATION_MODEL=z-ai/glm-5.3` sur le service API avant son déploiement, avec la clé OpenRouter déjà présente. En cas de retour arrière, rétablir le web d’abord ; l’API élargie reste compatible.
 
 Vérifier `/`, `/fr`, les deux offres dans `/contact` et `/fr/contact`, le changement de langue et un parcours d’audit. Une vérification réelle de remise des notifications commerciales doit être explicitement autorisée avant d’envoyer un message via le service de production.
 

@@ -47,6 +47,26 @@ class ReportLanguageTests(unittest.TestCase):
 
 
 class GeneratedReportLanguageTests(unittest.IsolatedAsyncioTestCase):
+    async def test_glm_recommendations_have_room_for_reasoning_and_valid_json(self):
+        items = [r.model_dump() for r in main.build_recommendations(profile())]
+        create = AsyncMock(return_value=SimpleNamespace(choices=[SimpleNamespace(message=SimpleNamespace(content=json.dumps({"recommendations": items})))]))
+        client = SimpleNamespace(chat=SimpleNamespace(completions=SimpleNamespace(create=create)))
+        with patch.object(main, "USE_OPENROUTER", True), patch.object(main, "RECOMMENDATION_MODEL", "z-ai/glm-5.3"):
+            result = await main.generate_recommendations_llm(client, profile(), [], [])
+        self.assertEqual(len(result), 3)
+        self.assertEqual(create.call_args.kwargs["model"], "z-ai/glm-5.3")
+        self.assertEqual(create.call_args.kwargs["extra_body"], {"reasoning": {"effort": "low"}})
+        self.assertEqual(create.call_args.kwargs["max_tokens"], 8192)
+
+    async def test_other_recommendation_models_keep_existing_request_budget(self):
+        create = AsyncMock(return_value=SimpleNamespace(choices=[SimpleNamespace(message=SimpleNamespace(content="{}"))]))
+        client = SimpleNamespace(chat=SimpleNamespace(completions=SimpleNamespace(create=create)))
+        with patch.object(main, "USE_OPENROUTER", False), patch.object(main, "RECOMMENDATION_MODEL", "gpt-4o-mini"):
+            result = await main.generate_recommendations_llm(client, profile(), [], [])
+        self.assertIsNone(result)
+        self.assertNotIn("extra_body", create.call_args.kwargs)
+        self.assertEqual(create.call_args.kwargs["max_tokens"], 1200)
+
     async def test_recommendation_language_follows_report_not_quoted_queries(self):
         items = [r.model_dump() for r in main.build_recommendations(profile())]
         create = AsyncMock(return_value=SimpleNamespace(choices=[SimpleNamespace(message=SimpleNamespace(content=json.dumps({"recommendations": items})))]))

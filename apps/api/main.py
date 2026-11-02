@@ -60,8 +60,11 @@ OR_PERPLEXITY_MODEL = os.getenv("OR_PERPLEXITY_MODEL", "perplexity/sonar")
 # text we already hold: no retrieval, no ":online", cheaper call.
 OR_UTILITY_MODEL = os.getenv("OR_UTILITY_MODEL", "openai/gpt-4o-mini")
 
-# Model used for every non-engine LLM call.
+# Recommendations can use a stronger model without changing the engines being
+# measured or the inexpensive query-generation and mention-extraction tasks.
+OR_RECOMMENDATION_MODEL = os.getenv("OR_RECOMMENDATION_MODEL", "").strip() or OR_UTILITY_MODEL
 TEXT_MODEL = OR_UTILITY_MODEL if USE_OPENROUTER else OPENAI_MODEL
+RECOMMENDATION_MODEL = OR_RECOMMENDATION_MODEL if USE_OPENROUTER else OPENAI_MODEL
 
 LIVE_MODE = bool(OPENAI_API_KEY or OPENROUTER_API_KEY)
 BILLING_ENABLED = bool(STRIPE_SECRET_KEY and (STRIPE_PRICE_ID or STRIPE_PRICE_ID_EUR))
@@ -885,9 +888,13 @@ async def generate_recommendations_llm(
             "Ground your recommendations in these verified findings: never tell the owner to add something "
             "the audit shows they already have, and prioritize the checks that failed."
         )
+    # GLM 5.3 always reasons; its budget includes reasoning and final JSON.
+    # Keep a bounded budget and low effort so recommendations fit a live scan.
+    glm_reasoning = USE_OPENROUTER and RECOMMENDATION_MODEL == "z-ai/glm-5.3"
+    model_options = {"extra_body": {"reasoning": {"effort": "low"}}} if glm_reasoning else {}
     try:
         response = await client.chat.completions.create(
-            model=TEXT_MODEL,
+            model=RECOMMENDATION_MODEL,
             messages=[
                 {"role": "system", "content": RECOMMENDATION_SYSTEM_PROMPT + (
                     " Write every recommendation title and description in French."
@@ -902,9 +909,10 @@ async def generate_recommendations_llm(
                 },
             ],
             response_format={"type": "json_object"},
-            max_tokens=1200,
+            max_tokens=8192 if glm_reasoning else 1200,
             temperature=0.3,
-            timeout=60,
+            timeout=90 if glm_reasoning else 60,
+            **model_options,
         )
         payload = json.loads(response.choices[0].message.content or "{}")
         items = payload.get("recommendations")
