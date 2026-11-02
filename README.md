@@ -86,7 +86,7 @@ Variables principales de l'API :
 - `OPENROUTER_API_KEY` : si présente, utilise OpenRouter pour les appels IA.
 - `OR_UTILITY_MODEL` : génération des questions et extraction des mentions (`openai/gpt-4o-mini` par défaut).
 - `OR_RECOMMENDATION_MODEL` : modèle des recommandations (modèle utilitaire par défaut).
-  Sur Railway, `z-ai/glm-5.3` utilise un effort de raisonnement faible, un plafond de
+  Sur Railway, `z-ai/glm-5.3-flash` utilise un effort de raisonnement faible, un plafond de
   8 192 tokens et un délai de 90 secondes. Les modèles mesurant la visibilité restent distincts.
   En cas d'échec ou de réponse inexploitable, le rapport conserve ses recommandations de secours.
 - `STRIPE_SECRET_KEY`, `STRIPE_PRICE_ID` : abonnement Pro (prix en dollars).

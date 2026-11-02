@@ -51,10 +51,10 @@ class GeneratedReportLanguageTests(unittest.IsolatedAsyncioTestCase):
         items = [r.model_dump() for r in main.build_recommendations(profile())]
         create = AsyncMock(return_value=SimpleNamespace(choices=[SimpleNamespace(message=SimpleNamespace(content=json.dumps({"recommendations": items})))]))
         client = SimpleNamespace(chat=SimpleNamespace(completions=SimpleNamespace(create=create)))
-        with patch.object(main, "USE_OPENROUTER", True), patch.object(main, "RECOMMENDATION_MODEL", "z-ai/glm-5.3"):
+        with patch.object(main, "USE_OPENROUTER", True), patch.object(main, "RECOMMENDATION_MODEL", "z-ai/glm-5.3-flash"):
             result = await main.generate_recommendations_llm(client, profile(), [], [])
         self.assertEqual(len(result), 3)
-        self.assertEqual(create.call_args.kwargs["model"], "z-ai/glm-5.3")
+        self.assertEqual(create.call_args.kwargs["model"], "z-ai/glm-5.3-flash")
         self.assertEqual(create.call_args.kwargs["extra_body"], {"reasoning": {"effort": "low"}})
         self.assertEqual(create.call_args.kwargs["max_tokens"], 8192)
 
