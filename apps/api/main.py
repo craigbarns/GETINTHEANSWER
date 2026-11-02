@@ -888,9 +888,9 @@ async def generate_recommendations_llm(
             "Ground your recommendations in these verified findings: never tell the owner to add something "
             "the audit shows they already have, and prioritize the checks that failed."
         )
-    # GLM 5.3 always reasons; its budget includes reasoning and final JSON.
+    # Allow room for both reasoning and final JSON on the GLM 5.3 models.
     # Keep a bounded budget and low effort so recommendations fit a live scan.
-    glm_reasoning = USE_OPENROUTER and RECOMMENDATION_MODEL == "z-ai/glm-5.3"
+    glm_reasoning = USE_OPENROUTER and RECOMMENDATION_MODEL in {"z-ai/glm-5.3", "z-ai/glm-5.3-flash"}
     model_options = {"extra_body": {"reasoning": {"effort": "low"}}} if glm_reasoning else {}
     try:
         response = await client.chat.completions.create(
