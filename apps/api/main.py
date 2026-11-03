@@ -1100,7 +1100,7 @@ async def run_live_scan(site_id: str, request: OnboardingRequest, fixed_queries:
         mode="live",
         site_audit=site,
         scanned_at=datetime.now(timezone.utc).isoformat(),
-        engines_used=sorted({engine_name for engine_name, _, _, _ in engines}),
+        engines_used=sorted({engine[0] for engine in engines}),
         locale=normalize_locale(request.locale),
     )
 
