@@ -36,6 +36,16 @@ const nextConfig: NextConfig = {
         destination: "/study",
         permanent: true,
       },
+      {
+        // Once the apex domain is pointed at Railway instead of the registrar's
+        // redirect service, the server itself consolidates every URL on the
+        // canonical www host. Path and query string are preserved; a 301 so the
+        // SEO signal is permanent.
+        source: "/:path*",
+        has: [{ type: "host", value: "getintheanswer.com" }],
+        destination: "https://www.getintheanswer.com/:path*",
+        permanent: true,
+      },
     ];
   },
   async headers() {
