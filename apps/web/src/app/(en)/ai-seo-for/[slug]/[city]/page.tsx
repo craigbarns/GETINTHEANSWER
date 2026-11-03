@@ -156,7 +156,10 @@ export default async function IndustryCityPage({
     ],
   };
 
-  const otherCities = cities.filter((c) => c.slug !== city.slug).slice(0, 5);
+  // Cross-link every other city of this industry: each city page is a hub for
+  // its industry, and a complete grid gives every city two internal links from
+  // its siblings instead of the arbitrary five before.
+  const otherCities = cities.filter((c) => c.slug !== city.slug);
 
   return (
     <div className="min-h-screen bg-[#f8f8f3]">
@@ -339,7 +342,7 @@ export default async function IndustryCityPage({
         {/* Other Cities */}
         <section className="mt-14 border-t border-foreground/10 pt-10">
           <h2 className="text-xl font-extrabold tracking-[-0.03em]">Explore {industry.name} in other US cities</h2>
-          <div className="mt-5 grid gap-3 sm:grid-cols-2">
+          <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {otherCities.map((otherCity) => (
               <Link
                 className="group flex items-center justify-between rounded-2xl border border-foreground/8 bg-white p-4 transition-colors hover:border-primary/30"
