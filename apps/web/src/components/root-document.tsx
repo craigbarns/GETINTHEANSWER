@@ -9,7 +9,7 @@ import { SITE_NAME, SITE_URL } from "@/lib/site";
 
 const ROOT_COPY: Record<Locale, { title: string; template: string; description: string; ogTitle: string; ogDescription: string; skip: string }> = {
   en: {
-    title: "GetInTheAnswer — AI visibility, taken care of",
+    title: "AI Visibility Audit & GEO for Local Businesses | GetInTheAnswer",
     template: "%s | GetInTheAnswer",
     description:
       "Get a free AI visibility plan, then let us handle website fixes, useful content and monthly measurement. AI Growth pilot service from EUR 990 per month.",
@@ -19,7 +19,7 @@ const ROOT_COPY: Record<Locale, { title: string; template: string; description: 
     skip: "Skip to main content",
   },
   fr: {
-    title: "GetInTheAnswer — Votre visibilité IA, prise en charge",
+    title: "Audit de visibilité IA & GEO pour PME locales | GetInTheAnswer",
     template: "%s | GetInTheAnswer",
     description:
       "Obtenez votre plan de visibilité IA gratuit, puis confiez-nous corrections, contenus utiles et suivi mensuel. Accompagnement pilote AI Growth dès 990 € HT par mois.",
