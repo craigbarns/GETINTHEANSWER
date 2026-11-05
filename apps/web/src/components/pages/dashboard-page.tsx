@@ -40,7 +40,7 @@ import { DATE_LOCALE, localePath, type Locale } from "@/lib/i18n";
 import { PRICES } from "@/lib/pricing";
 import { growthPrice } from "@/lib/growth";
 import { localizeRecommendation, localizeSiteCheck } from "@/lib/report-localization";
-import { getDashboardData, type Priority } from "@/lib/seenbyai";
+import { getAiAgentSummary, getDashboardData, type Priority } from "@/lib/seenbyai";
 
 export const DASHBOARD_META: Record<Locale, { title: string; description: string }> = {
   en: { title: "AI visibility report", description: "Your GetInTheAnswer visibility score, mentions and action plan." },
@@ -130,6 +130,11 @@ const COPY = {
     opportunity: "Opportunity",
     opportunityText: (count: number) => `${count} AI answers don’t mention your business yet.`,
     auditEyebrow: "Website audit",
+    agentTitle: "How AI engines visit your site",
+    agentText: "Real visits from AI crawlers and real visitors coming from AI chats, over the last 30 days.",
+    agentCrawlerVisits: "AI crawler visits",
+    agentReferralVisits: "Visits from AI chats",
+    agentEmpty: "No AI crawler visits recorded yet. They usually appear within days of your first report.",
     auditTitle: "Your site vs what AI engines need",
     auditText: "We fetched your homepage and checked the signals engines use to verify and recommend a business.",
     signals: (passed: number, total: number) => `${passed}/${total} signals present`,
@@ -223,6 +228,11 @@ const COPY = {
     opportunity: "Opportunité",
     opportunityText: (count: number) => `${count} réponses d’IA ne mentionnent pas encore votre entreprise.`,
     auditEyebrow: "Audit du site",
+    agentTitle: "Comment les IA visitent votre site",
+    agentText: "Visites réelles des crawlers IA et vrais visiteurs venant des chats IA, sur les 30 derniers jours.",
+    agentCrawlerVisits: "Visites de crawlers IA",
+    agentReferralVisits: "Visites depuis les chats IA",
+    agentEmpty: "Aucune visite de crawler IA enregistrée pour l'instant. Elles apparaissent généralement quelques jours après votre premier rapport.",
     auditTitle: "Votre site face aux attentes des moteurs IA",
     auditText: "Nous avons analysé votre page d’accueil et vérifié les signaux qu’utilisent les IA pour vérifier et recommander une entreprise.",
     signals: (passed: number, total: number) => `${passed}/${total} signaux présents`,
@@ -284,6 +294,7 @@ export async function DashboardPage({ locale, searchParams }: { locale: Locale; 
   }
 
   const data = await getDashboardData(siteId, locale);
+  const aiAgentSummary = await getAiAgentSummary(siteId);
 
   if (!data) {
     return (
@@ -473,6 +484,25 @@ export async function DashboardPage({ locale, searchParams }: { locale: Locale; 
           </div>
         </section>
 
+        {aiAgentSummary && aiAgentSummary.crawler_visits + aiAgentSummary.ai_referral_visits > 0 && (
+          <section className="rounded-[1.75rem] border border-foreground/8 bg-white p-6 shadow-sm sm:p-7">
+            <p className="text-sm font-extrabold uppercase tracking-[0.12em] text-emerald-700">{copy.agentTitle}</p>
+            <p className="mt-2 text-sm leading-6 text-muted-foreground">{copy.agentText}</p>
+            <div className="mt-5 grid gap-4 sm:grid-cols-2">
+              <div className="rounded-2xl bg-[#f8f8f3] p-5">
+                <p className="text-3xl font-extrabold tracking-[-0.03em] text-[#173b35]">{aiAgentSummary.crawler_visits}</p>
+                <p className="mt-1 text-sm font-semibold text-muted-foreground">{copy.agentCrawlerVisits}</p>
+              </div>
+              <div className="rounded-2xl bg-[#f8f8f3] p-5">
+                <p className="text-3xl font-extrabold tracking-[-0.03em] text-[#173b35]">{aiAgentSummary.ai_referral_visits}</p>
+                <p className="mt-1 text-sm font-semibold text-muted-foreground">{copy.agentReferralVisits}</p>
+              </div>
+            </div>
+            {aiAgentSummary.crawler_visits === 0 && aiAgentSummary.ai_referral_visits === 0 && (
+              <p className="mt-4 text-sm text-muted-foreground">{copy.agentEmpty}</p>
+            )}
+          </section>
+        )}
         {data.site_audit?.fetched && data.site_audit.checks.length > 0 && (
           <section className="rounded-[1.75rem] border border-foreground/8 bg-white p-6 shadow-sm sm:p-7">
             <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
