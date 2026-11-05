@@ -89,7 +89,7 @@ export default async function IndustryPage({ params }: { params: Promise<{ slug:
     ],
   };
 
-  const otherIndustries = industries.filter((other) => other.slug !== industry.slug).slice(0, 4);
+  const otherIndustries = industries.filter((other) => other.slug !== industry.slug);
 
   return (
     <div className="min-h-screen bg-[#f8f8f3]">

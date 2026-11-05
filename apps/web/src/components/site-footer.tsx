@@ -1,6 +1,8 @@
 import Link from "next/link";
 
 import { LogoMark } from "@/components/logo";
+import { contractorSeoCities, getContractorSeoCity } from "@/lib/contractor-seo";
+import { getCity } from "@/lib/cities";
 import { localePath, type Locale } from "@/lib/i18n";
 
 const COPY: Record<Locale, {
@@ -21,6 +23,8 @@ const COPY: Record<Locale, {
       ["/study", "Study"],
       ["/guides", "Guides"],
       ["/onboarding", "Run a free scan"],
+      ["/sample-report", "See a sample report"],
+      ["/contact", "Contact"],
       ["/legal", "Legal notice"],
       ["/privacy", "Privacy"],
       ["/terms", "Terms"],
@@ -39,6 +43,8 @@ const COPY: Record<Locale, {
       ["/study", "Étude"],
       ["/guides", "Guides"],
       ["/onboarding", "Lancer une analyse"],
+      ["/sample-report", "Voir un exemple de rapport"],
+      ["/contact", "Contact"],
       ["/legal", "Mentions légales"],
       ["/privacy", "Confidentialité"],
       ["/terms", "CGU"],
@@ -71,6 +77,26 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
           </nav>
         </div>
         <p className="text-xs leading-5 text-muted-foreground">{copy.publisher}</p>
+        {locale === "en" ? (
+          <div className="border-t border-foreground/8 pt-6">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
+              Contractor SEO
+            </h3>
+            <ul className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm text-muted-foreground">
+              {contractorSeoCities.map(({ city: slug }) => {
+                const city = getCity(slug);
+                if (!city) return null;
+                return (
+                  <li key={slug}>
+                    <Link href={`/contractor-seo/${slug}`} className="hover:text-foreground">
+                      Contractor SEO in {city.name}, {city.stateCode}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        ) : null}
       </div>
     </footer>
   );
