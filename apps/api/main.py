@@ -24,6 +24,9 @@ from weekly_updates import build_weekly_changes
 from site_audit import SiteAudit, UnsafeWebsiteUrl, audit_site, validate_public_http_url
 from sqlalchemy import create_engine, text
 
+import ai_agents
+from ai_agents import AiAgentHit, AiAgentSummary
+
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "").strip()
 OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY", "").strip()
@@ -156,6 +159,18 @@ def init_db() -> None:
             )
         )
         conn.execute(text("CREATE INDEX IF NOT EXISTS score_history_site_idx ON score_history (site_id, created_at)"))
+        conn.execute(
+            text(
+                "CREATE TABLE IF NOT EXISTS ai_agent_hits ("
+                "id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY, "
+                "site_id UUID NOT NULL, "
+                "agent TEXT NOT NULL, "
+                "referral_engine TEXT, "
+                "path TEXT NOT NULL, "
+                "created_at TIMESTAMPTZ DEFAULT now())"
+            )
+        )
+        conn.execute(text("CREATE INDEX IF NOT EXISTS ai_agent_hits_site_idx ON ai_agent_hits (site_id, created_at)"))
 
 
 OUTREACH_API_KEY = os.getenv("OUTREACH_API_KEY", "").strip()
@@ -1634,6 +1649,79 @@ def get_dashboard(site_id: str, locale: Optional[str] = None):
         remember_legacy_report_locale(site_id, preferred)
         dashboard.locale = preferred
     return dashboard
+
+
+AI_AGENT_SUMMARY_DAYS = 30
+
+
+@app.post("/api/ai-analytics/log")
+def log_ai_agent_hits(hits: list[AiAgentHit]):
+    """Record AI crawler visits and AI-chat referrals for a site.
+
+    Called by the site middleware (only hits where an AI agent or an
+    AI-chat referrer is detected) and by integrations.
+    """
+    if not hits:
+        return {"inserted": 0}
+    inserted = 0
+    with db_engine.begin() as conn:
+        for hit in hits:
+            try:
+                site_id = str(uuid.UUID(hit.site_id))
+            except ValueError:
+                raise HTTPException(status_code=400, detail="Invalid site_id")
+            agent = ai_agents.detect_agent(hit.user_agent)
+            engine = ai_agents.detect_referrer_engine(hit.referrer)
+            if agent is None and engine is None:
+                continue
+            conn.execute(
+                text(
+                    "INSERT INTO ai_agent_hits (site_id, agent, referral_engine, path) "
+                    "VALUES (:site_id, :agent, :referral_engine, :path)"
+                ),
+                {
+                    "site_id": site_id,
+                    "agent": agent or "Unknown AI agent",
+                    "referral_engine": engine,
+                    "path": hit.path[:500],
+                },
+            )
+            inserted += 1
+    return {"inserted": inserted}
+
+
+@app.get("/api/ai-analytics/summary/{site_id}", response_model=AiAgentSummary)
+def ai_agent_summary(site_id: str):
+    """Aggregate the last 30 days of AI agent visits and referrals."""
+    if db_engine is None:
+        raise HTTPException(status_code=503, detail="Database not configured")
+    try:
+        site_id = str(uuid.UUID(site_id))
+    except ValueError:
+        raise HTTPException(status_code=404, detail="Site not found")
+    with db_engine.begin() as conn:
+        rows = conn.execute(
+            text(
+                "SELECT agent, referral_engine, path FROM ai_agent_hits "
+                "WHERE site_id = :site_id "
+                "AND created_at >= now() - interval '30 days'"
+            ),
+            {"site_id": site_id},
+        ).mappings().all()
+    crawlers: dict[str, int] = {}
+    engines: dict[str, int] = {}
+    for row in rows:
+        crawlers[row["agent"]] = crawlers.get(row["agent"], 0) + 1
+        if row["referral_engine"]:
+            engines[row["referral_engine"]] = engines.get(row["referral_engine"], 0) + 1
+    return AiAgentSummary(
+        site_id=site_id,
+        crawler_visits=sum(crawlers.values()),
+        ai_referral_visits=sum(engines.values()),
+        crawlers=crawlers,
+        referral_engines=engines,
+        top_crawled_paths=[],
+    )
 
 
 if __name__ == "__main__":
