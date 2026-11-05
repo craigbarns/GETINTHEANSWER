@@ -3,46 +3,53 @@
   "city": "portland-or",
   "cityLabel": "Portland, OR",
   "query": "Who is the most reliable emergency plumber in Portland, OR for a burst pipe?",
-  "scannedAt": "2026-09-06",
+  "scannedAt": "2026-11-05",
   "engines": [
     {
       "engine": "ChatGPT",
       "businesses": [
-        "Sarkinen Plumbing",
-        "Lovett Plumbing",
-        "Roto-Rooter",
-        "Vision Plumbing"
+        "Roto-Rooter Plumbing & Water Cleanup",
+        "PDX Plumber",
+        "D&F Plumbing",
+        "Clog Pro Plumbing & Drain",
+        "3 Mountains Plumbing"
       ]
     },
     {
       "engine": "Claude",
       "businesses": [
-        "Lovett Plumbing",
-        "Sarkinen Plumbing",
-        "D&F Plumbing"
+        "PDX Plumber",
+        "Pipe Systems Plumbing",
+        "Clog Pro Plumbing & Drain",
+        "Roto-Rooter"
       ]
     },
     {
       "engine": "Gemini",
       "businesses": [
-        "Sarkinen Plumbing",
-        "Roto-Rooter",
-        "Lovett Plumbing",
-        "Portland Plumbing & Drain (Vision Plumbing)"
+        "Roto-Rooter Plumbing & Water Cleanup",
+        "PDX Plumber",
+        "D&F Plumbing, Heating and Cooling",
+        "Lovett Inc",
+        "Henco Plumbing Services",
+        "Clog Pro Plumbing & Drain",
+        "Service Plus Plumbing",
+        "3 Mountains Plumbing"
       ]
     },
     {
       "engine": "Perplexity",
       "businesses": [
         "Roto-Rooter Plumbing & Water Cleanup",
-        "Mr. Rooter Plumbing of Portland",
-        "D&F Plumbing, Heating and Cooling"
+        "Rescue Rooter (ARS/Rescue Rooter Portland)",
+        "Central Air Heating, Cooling & Plumbing",
+        "Perfect Service Plumbing and Drain Cleaning"
       ]
     }
   ],
   "businesses": [
     {
-      "name": "Lovett Plumbing",
+      "name": "Clog Pro Plumbing & Drain",
       "engines": [
         "ChatGPT",
         "Claude",
@@ -50,56 +57,88 @@
       ]
     },
     {
-      "name": "Sarkinen Plumbing",
+      "name": "PDX Plumber",
       "engines": [
         "ChatGPT",
         "Claude",
-        "Gemini"
-      ]
-    },
-    {
-      "name": "Roto-Rooter",
-      "engines": [
-        "ChatGPT",
-        "Gemini"
-      ]
-    },
-    {
-      "name": "D&F Plumbing",
-      "engines": [
-        "Claude"
-      ]
-    },
-    {
-      "name": "D&F Plumbing, Heating and Cooling",
-      "engines": [
-        "Perplexity"
-      ]
-    },
-    {
-      "name": "Mr. Rooter Plumbing of Portland",
-      "engines": [
-        "Perplexity"
-      ]
-    },
-    {
-      "name": "Portland Plumbing & Drain (Vision Plumbing)",
-      "engines": [
         "Gemini"
       ]
     },
     {
       "name": "Roto-Rooter Plumbing & Water Cleanup",
       "engines": [
+        "ChatGPT",
+        "Gemini",
         "Perplexity"
       ]
     },
     {
-      "name": "Vision Plumbing",
+      "name": "3 Mountains Plumbing",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Central Air Heating, Cooling & Plumbing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "D&F Plumbing",
       "engines": [
         "ChatGPT"
       ]
+    },
+    {
+      "name": "D&F Plumbing, Heating and Cooling",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Henco Plumbing Services",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Lovett Inc",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Perfect Service Plumbing and Drain Cleaning",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Pipe Systems Plumbing",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Rescue Rooter (ARS/Rescue Rooter Portland)",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Roto-Rooter",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Service Plus Plumbing",
+      "engines": [
+        "Gemini"
+      ]
     }
   ],
-  "totalNamed": 14
+  "totalNamed": 21
 }

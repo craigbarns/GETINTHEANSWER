@@ -3,49 +3,46 @@
   "city": "scottsdale-az",
   "cityLabel": "Scottsdale, AZ",
   "query": "Who is the most reliable emergency plumber in Scottsdale, AZ for a burst pipe?",
-  "scannedAt": "2026-09-06",
+  "scannedAt": "2026-11-05",
   "engines": [
     {
       "engine": "ChatGPT",
       "businesses": [
-        "Local Roots AC & Plumbing",
-        "Phoenician Plumbing",
-        "Ryerson Plumbing",
-        "Desert Flow Plumbing",
-        "Mountain AZ Plumbing"
+        "Zest Plumbing & Drain",
+        "Lawson Family Plumbing",
+        "Simon's Plumbing",
+        "Flush King Plumbing"
       ]
     },
     {
       "engine": "Claude",
       "businesses": [
-        "Local Roots AC & Plumbing",
-        "Phoenician Plumbing",
-        "Ryerson Plumbing",
-        "Mountain AZ Plumbing"
+        "Zest Plumbing & Drain",
+        "Lawson Family Plumbing",
+        "Simon's Plumbing"
       ]
     },
     {
       "engine": "Gemini",
       "businesses": [
-        "Local Roots AC & Plumbing",
         "Zest Plumbing & Drain",
-        "Phoenician Plumbing",
-        "Ryerson Plumbing",
-        "Mr. Rooter Plumbing of Phoenix Arizona"
+        "Lawson Family Plumbing",
+        "Simon's Plumbing"
       ]
     },
     {
       "engine": "Perplexity",
       "businesses": [
-        "Roto-Rooter Plumbing & Water Cleanup",
-        "Omnia Plumbing",
-        "Zest Plumbing & Drain"
+        "Parker & Sons",
+        "Hobaica Services",
+        "Roto-Rooter",
+        "Mr. Rooter"
       ]
     }
   ],
   "businesses": [
     {
-      "name": "Local Roots AC & Plumbing",
+      "name": "Lawson Family Plumbing",
       "engines": [
         "ChatGPT",
         "Claude",
@@ -53,59 +50,51 @@
       ]
     },
     {
-      "name": "Phoenician Plumbing",
+      "name": "Simon's Plumbing",
       "engines": [
         "ChatGPT",
         "Claude",
         "Gemini"
-      ]
-    },
-    {
-      "name": "Ryerson Plumbing",
-      "engines": [
-        "ChatGPT",
-        "Claude",
-        "Gemini"
-      ]
-    },
-    {
-      "name": "Mountain AZ Plumbing",
-      "engines": [
-        "ChatGPT",
-        "Claude"
       ]
     },
     {
       "name": "Zest Plumbing & Drain",
       "engines": [
-        "Gemini",
-        "Perplexity"
+        "ChatGPT",
+        "Claude",
+        "Gemini"
       ]
     },
     {
-      "name": "Desert Flow Plumbing",
+      "name": "Flush King Plumbing",
       "engines": [
         "ChatGPT"
       ]
     },
     {
-      "name": "Mr. Rooter Plumbing of Phoenix Arizona",
-      "engines": [
-        "Gemini"
-      ]
-    },
-    {
-      "name": "Omnia Plumbing",
+      "name": "Hobaica Services",
       "engines": [
         "Perplexity"
       ]
     },
     {
-      "name": "Roto-Rooter Plumbing & Water Cleanup",
+      "name": "Mr. Rooter",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Parker & Sons",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Roto-Rooter",
       "engines": [
         "Perplexity"
       ]
     }
   ],
-  "totalNamed": 17
+  "totalNamed": 14
 }

@@ -3,43 +3,47 @@
   "city": "orlando-fl",
   "cityLabel": "Orlando, FL",
   "query": "Who is the most reliable emergency plumber in Orlando, FL for a burst pipe?",
-  "scannedAt": "2026-09-06",
+  "scannedAt": "2026-11-05",
   "engines": [
     {
       "engine": "ChatGPT",
       "businesses": [
+        "Pompa Plumbing Group",
+        "J&G Plumbing",
         "Choice Plumbing Orlando",
-        "Shamrock Plumbing",
-        "P and M Plumbing",
-        "Rainaldi Home Services",
-        "Benjamin Franklin Plumbing"
+        "Harvey Baker Plumbing, Inc",
+        "Blessed Solutions Plumbing"
       ]
     },
     {
       "engine": "Claude",
       "businesses": [
         "Choice Plumbing Orlando",
-        "Shamrock Plumbing",
-        "Benjamin Franklin Plumbing"
+        "J&G Plumbing",
+        "Pompa Plumbing Group",
+        "Blessed Solutions Plumbing",
+        "Harvey Baker Plumbing"
       ]
     },
     {
       "engine": "Gemini",
       "businesses": [
         "Choice Plumbing Orlando",
+        "Blessed Solutions Plumbing (BSP1 Plumbing)",
         "Roto-Rooter",
-        "Shamrock Plumbing",
-        "Rainaldi Home Services",
-        "P and M Plumbing"
+        "Harvey Baker Plumbing, Inc",
+        "J&G Plumbing",
+        "The Leak Doctor Inc"
       ]
     },
     {
       "engine": "Perplexity",
       "businesses": [
-        "Choice Plumbing Orlando",
-        "Roto-Rooter Orlando",
-        "Shamrock Plumbing",
-        "Herrell Plumbing"
+        "Roto-Rooter Plumbing & Water Cleanup",
+        "Harvey Baker Plumbing",
+        "Benjamin Franklin Plumbing of Orlando",
+        "Mr. Rooter Plumbing of Orlando",
+        "Swift Brothers"
       ]
     }
   ],
@@ -49,42 +53,59 @@
       "engines": [
         "ChatGPT",
         "Claude",
-        "Gemini",
-        "Perplexity"
+        "Gemini"
       ]
     },
     {
-      "name": "Shamrock Plumbing",
+      "name": "J&G Plumbing",
       "engines": [
         "ChatGPT",
         "Claude",
-        "Gemini",
-        "Perplexity"
+        "Gemini"
       ]
     },
     {
-      "name": "Benjamin Franklin Plumbing",
+      "name": "Blessed Solutions Plumbing",
       "engines": [
         "ChatGPT",
         "Claude"
       ]
     },
     {
-      "name": "P and M Plumbing",
+      "name": "Harvey Baker Plumbing",
+      "engines": [
+        "Claude",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Harvey Baker Plumbing, Inc",
       "engines": [
         "ChatGPT",
         "Gemini"
       ]
     },
     {
-      "name": "Rainaldi Home Services",
+      "name": "Pompa Plumbing Group",
       "engines": [
         "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Benjamin Franklin Plumbing of Orlando",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Blessed Solutions Plumbing (BSP1 Plumbing)",
+      "engines": [
         "Gemini"
       ]
     },
     {
-      "name": "Herrell Plumbing",
+      "name": "Mr. Rooter Plumbing of Orlando",
       "engines": [
         "Perplexity"
       ]
@@ -96,11 +117,23 @@
       ]
     },
     {
-      "name": "Roto-Rooter Orlando",
+      "name": "Roto-Rooter Plumbing & Water Cleanup",
       "engines": [
         "Perplexity"
       ]
+    },
+    {
+      "name": "Swift Brothers",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "The Leak Doctor Inc",
+      "engines": [
+        "Gemini"
+      ]
     }
   ],
-  "totalNamed": 17
+  "totalNamed": 21
 }

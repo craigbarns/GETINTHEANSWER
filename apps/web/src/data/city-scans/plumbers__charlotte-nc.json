@@ -3,68 +3,53 @@
   "city": "charlotte-nc",
   "cityLabel": "Charlotte, NC",
   "query": "Who is the most reliable emergency plumber in Charlotte, NC for a burst pipe?",
-  "scannedAt": "2026-09-06",
+  "scannedAt": "2026-11-05",
   "engines": [
     {
       "engine": "ChatGPT",
       "businesses": [
-        "Roto-Rooter",
-        "WyattWorks",
-        "Keystone Plumbing Charlotte",
-        "Providence Plumbing & Restoration",
-        "Superior Plumbing & Drains"
+        "E.R. Services",
+        "Mr. Rooter Plumbing of Charlotte",
+        "Roto-Rooter Plumbing & Water Cleanup",
+        "Benjamin Franklin Plumbing of Charlotte",
+        "Charlotte Plumbing"
       ]
     },
     {
       "engine": "Claude",
       "businesses": [
-        "Keystone Plumbing Charlotte",
-        "Providence Plumbing & Restoration",
-        "Roto-Rooter",
-        "WyattWorks",
-        "Superior Plumbing & Drains"
+        "E.R. Services",
+        "Roto-Rooter Plumbing & Water Cleanup",
+        "Benjamin Franklin Plumbing of Charlotte",
+        "Charlotte Plumbing"
       ]
     },
     {
       "engine": "Gemini",
       "businesses": [
-        "Roto-Rooter",
-        "WyattWorks",
-        "Providence Plumbing & Restoration",
-        "Superior Plumbing & Drains"
+        "E.R. Services",
+        "Roto-Rooter Plumbing & Water Cleanup",
+        "Mr. Rooter Plumbing of Charlotte",
+        "Benjamin Franklin Plumbing of Charlotte",
+        "Charlotte Plumbing",
+        "All Hours Plumbing, Inc"
       ]
     },
     {
       "engine": "Perplexity",
       "businesses": [
-        "Roto-Rooter Charlotte",
-        "Providence Plumbing & Restoration",
-        "Charlotte Plumbing Squad",
-        "WyattWorks"
+        "Roto-Rooter Plumbing & Water Cleanup (Charlotte)",
+        "24 HR Emergency Plumber Charlotte",
+        "AAA City Plumbing",
+        "Rapid Rooter",
+        "Queen Charlotte Plumbing",
+        "Benjamin Franklin Plumbing – Charlotte"
       ]
     }
   ],
   "businesses": [
     {
-      "name": "Providence Plumbing & Restoration",
-      "engines": [
-        "ChatGPT",
-        "Claude",
-        "Gemini",
-        "Perplexity"
-      ]
-    },
-    {
-      "name": "WyattWorks",
-      "engines": [
-        "ChatGPT",
-        "Claude",
-        "Gemini",
-        "Perplexity"
-      ]
-    },
-    {
-      "name": "Roto-Rooter",
+      "name": "Benjamin Franklin Plumbing of Charlotte",
       "engines": [
         "ChatGPT",
         "Claude",
@@ -72,7 +57,7 @@
       ]
     },
     {
-      "name": "Superior Plumbing & Drains",
+      "name": "Charlotte Plumbing",
       "engines": [
         "ChatGPT",
         "Claude",
@@ -80,24 +65,70 @@
       ]
     },
     {
-      "name": "Keystone Plumbing Charlotte",
+      "name": "E.R. Services",
       "engines": [
         "ChatGPT",
-        "Claude"
+        "Claude",
+        "Gemini"
       ]
     },
     {
-      "name": "Charlotte Plumbing Squad",
+      "name": "Roto-Rooter Plumbing & Water Cleanup",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Mr. Rooter Plumbing of Charlotte",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "24 HR Emergency Plumber Charlotte",
       "engines": [
         "Perplexity"
       ]
     },
     {
-      "name": "Roto-Rooter Charlotte",
+      "name": "AAA City Plumbing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "All Hours Plumbing, Inc",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Benjamin Franklin Plumbing – Charlotte",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Queen Charlotte Plumbing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Rapid Rooter",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Roto-Rooter Plumbing & Water Cleanup (Charlotte)",
       "engines": [
         "Perplexity"
       ]
     }
   ],
-  "totalNamed": 18
+  "totalNamed": 21
 }

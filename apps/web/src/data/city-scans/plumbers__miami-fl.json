@@ -3,123 +3,107 @@
   "city": "miami-fl",
   "cityLabel": "Miami, FL",
   "query": "Who is the most reliable emergency plumber in Miami, FL for a burst pipe?",
-  "scannedAt": "2026-09-06",
+  "scannedAt": "2026-11-05",
   "engines": [
     {
       "engine": "ChatGPT",
       "businesses": [
-        "Douglas Orr Plumbing",
-        "EZ Plumbing",
-        "Romain's Plumbing",
-        "Roto-Rooter",
-        "Hernandez Plumbing"
+        "Roto-Rooter Plumbing & Water Cleanup",
+        "Main Plumbing Services",
+        "Miami 24/7 Plumbing",
+        "Emergency Plumbing Repair"
       ]
     },
     {
       "engine": "Claude",
       "businesses": [
-        "Hernandez Plumbing",
-        "Douglas Orr Plumbing",
-        "EZ Plumbing"
+        "Main Plumbing Services",
+        "Roto-Rooter Plumbing & Water Cleanup",
+        "Miami 24/7 Plumbing",
+        "Oasis Plumbing"
       ]
     },
     {
       "engine": "Gemini",
       "businesses": [
-        "Roto-Rooter",
-        "Douglas Orr Plumbing",
-        "EZ Plumbing",
-        "Hernandez Plumbing",
-        "Romain's Plumbing"
+        "Main Plumbing Services",
+        "Roto-Rooter Plumbing & Water Cleanup",
+        "Miami 24/7 Plumbing - Miami Emergency Plumbers",
+        "Diamond Plumbing",
+        "Cutler Bay Plumbing",
+        "Sunny Bliss Plumbing & Air"
       ]
     },
     {
       "engine": "Perplexity",
       "businesses": [
-        "Roto-Rooter Miami",
-        "Morata Plumbing",
-        "One Stop Plumbing",
-        "The Plumbers",
-        "Lion Plumbing",
-        "Miami Plumber"
+        "Main Plumbing Services",
+        "Roto-Rooter Plumbing & Water Cleanup"
       ]
     }
   ],
   "businesses": [
     {
-      "name": "Douglas Orr Plumbing",
+      "name": "Main Plumbing Services",
       "engines": [
         "ChatGPT",
         "Claude",
-        "Gemini"
+        "Gemini",
+        "Perplexity"
       ]
     },
     {
-      "name": "EZ Plumbing",
+      "name": "Roto-Rooter Plumbing & Water Cleanup",
       "engines": [
         "ChatGPT",
         "Claude",
-        "Gemini"
+        "Gemini",
+        "Perplexity"
       ]
     },
     {
-      "name": "Hernandez Plumbing",
+      "name": "Miami 24/7 Plumbing",
       "engines": [
         "ChatGPT",
-        "Claude",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Cutler Bay Plumbing",
+      "engines": [
         "Gemini"
       ]
     },
     {
-      "name": "Romain's Plumbing",
+      "name": "Diamond Plumbing",
       "engines": [
-        "ChatGPT",
         "Gemini"
       ]
     },
     {
-      "name": "Roto-Rooter",
+      "name": "Emergency Plumbing Repair",
       "engines": [
-        "ChatGPT",
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Miami 24/7 Plumbing - Miami Emergency Plumbers",
+      "engines": [
         "Gemini"
       ]
     },
     {
-      "name": "Lion Plumbing",
+      "name": "Oasis Plumbing",
       "engines": [
-        "Perplexity"
+        "Claude"
       ]
     },
     {
-      "name": "Miami Plumber",
+      "name": "Sunny Bliss Plumbing & Air",
       "engines": [
-        "Perplexity"
-      ]
-    },
-    {
-      "name": "Morata Plumbing",
-      "engines": [
-        "Perplexity"
-      ]
-    },
-    {
-      "name": "One Stop Plumbing",
-      "engines": [
-        "Perplexity"
-      ]
-    },
-    {
-      "name": "Roto-Rooter Miami",
-      "engines": [
-        "Perplexity"
-      ]
-    },
-    {
-      "name": "The Plumbers",
-      "engines": [
-        "Perplexity"
+        "Gemini"
       ]
     }
   ],
-  "totalNamed": 19
+  "totalNamed": 16
 }

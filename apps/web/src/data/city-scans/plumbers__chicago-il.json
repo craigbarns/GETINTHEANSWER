@@ -3,49 +3,53 @@
   "city": "chicago-il",
   "cityLabel": "Chicago, IL",
   "query": "Who is the most reliable emergency plumber in Chicago, IL for a burst pipe?",
-  "scannedAt": "2026-09-06",
+  "scannedAt": "2026-11-05",
   "engines": [
     {
       "engine": "ChatGPT",
       "businesses": [
-        "Roto-Rooter",
-        "Baethke Plumbing",
-        "J. Blanton Plumbing",
-        "Goode Plumbing",
-        "Rescue Plumbing"
+        "Rescue Plumbing",
+        "Roto-Rooter Plumbing & Water Cleanup",
+        "Sandoval Plumbing",
+        "MAS Plumbing"
       ]
     },
     {
       "engine": "Claude",
       "businesses": [
-        "Roto-Rooter",
-        "Baethke Plumbing",
-        "Callahan Pipe & Drain"
+        "Rescue Plumbing",
+        "MAS Plumbing",
+        "Roto-Rooter Plumbing & Water Cleanup",
+        "Sandoval Plumbing",
+        "Drain King",
+        "HI-FLO Water and Sewer LLC"
       ]
     },
     {
       "engine": "Gemini",
       "businesses": [
-        "Roto-Rooter",
-        "Baethke Plumbing",
-        "J. Blanton Plumbing",
-        "Callahan Pipe & Drain",
-        "Goode Plumbing"
+        "Rescue Plumbing",
+        "Roto-Rooter Plumbing & Water Cleanup",
+        "MAS Plumbing",
+        "Sandoval Plumbing",
+        "Drain King",
+        "24 HR Emergency Plumber Chicago INC",
+        "PSP Plumbing And Sewer, Inc",
+        "HI-FLO WATER AND SEWER LLC"
       ]
     },
     {
       "engine": "Perplexity",
       "businesses": [
+        "Roto-Rooter Plumbing & Water Cleanup",
         "Rescue Plumbing",
-        "Roto-Rooter",
-        "Four Seasons Heating, Cooling, Plumbing & Electric",
-        "Plumbers 911 Chicago"
+        "Vanguard Plumbing and Sewer"
       ]
     }
   ],
   "businesses": [
     {
-      "name": "Roto-Rooter",
+      "name": "Rescue Plumbing",
       "engines": [
         "ChatGPT",
         "Claude",
@@ -54,7 +58,16 @@
       ]
     },
     {
-      "name": "Baethke Plumbing",
+      "name": "Roto-Rooter Plumbing & Water Cleanup",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "MAS Plumbing",
       "engines": [
         "ChatGPT",
         "Claude",
@@ -62,45 +75,45 @@
       ]
     },
     {
-      "name": "Callahan Pipe & Drain",
+      "name": "Sandoval Plumbing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Drain King",
       "engines": [
         "Claude",
         "Gemini"
       ]
     },
     {
-      "name": "Goode Plumbing",
+      "name": "HI-FLO Water and Sewer LLC",
       "engines": [
-        "ChatGPT",
+        "Claude",
         "Gemini"
       ]
     },
     {
-      "name": "J. Blanton Plumbing",
+      "name": "24 HR Emergency Plumber Chicago INC",
       "engines": [
-        "ChatGPT",
         "Gemini"
       ]
     },
     {
-      "name": "Rescue Plumbing",
+      "name": "PSP Plumbing And Sewer, Inc",
       "engines": [
-        "ChatGPT",
-        "Perplexity"
+        "Gemini"
       ]
     },
     {
-      "name": "Four Seasons Heating, Cooling, Plumbing & Electric",
-      "engines": [
-        "Perplexity"
-      ]
-    },
-    {
-      "name": "Plumbers 911 Chicago",
+      "name": "Vanguard Plumbing and Sewer",
       "engines": [
         "Perplexity"
       ]
     }
   ],
-  "totalNamed": 17
+  "totalNamed": 21
 }

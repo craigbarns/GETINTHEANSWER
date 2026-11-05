@@ -3,49 +3,56 @@
   "city": "denver-co",
   "cityLabel": "Denver, CO",
   "query": "Who is the most reliable emergency plumber in Denver, CO for a burst pipe?",
-  "scannedAt": "2026-09-06",
+  "scannedAt": "2026-11-05",
   "engines": [
     {
       "engine": "ChatGPT",
       "businesses": [
-        "Roto-Rooter",
-        "Done Plumbing, Heating, Cooling & Electric",
-        "Prime Plumbing & Heating",
-        "Christopher’s Plumbing Inc",
-        "Brad Co. Plumbing & Heating"
+        "Roto-Rooter Plumbing & Water Cleanup",
+        "Emergency Plumbers Denver LLC",
+        "A Better Plumber (an Absolute Plumbing Company)",
+        "King Family Plumbing & HVAC",
+        "Hyper Flow Service"
       ]
     },
     {
       "engine": "Claude",
       "businesses": [
-        "Christopher's Plumbing Inc",
-        "Prime Plumbing & Heating",
-        "Done! Plumbing, Heating, Cooling & Electric"
+        "King Family Plumbing & HVAC",
+        "A Better Plumber",
+        "Hyper Flow Service",
+        "King Rooter & Plumbing"
       ]
     },
     {
       "engine": "Gemini",
       "businesses": [
-        "Roto-Rooter",
-        "Done! Plumbing, Heating, Cooling & Electric",
-        "Christopher's Plumbing Inc",
-        "Prime Plumbing & Heating",
-        "Brad Co. Plumbing & Heating"
+        "Roto-Rooter Plumbing & Water Cleanup",
+        "King Rooter & Plumbing",
+        "Hyper Flow Service Company",
+        "A Better Plumber (an Absolute Plumbing Company)",
+        "King Family Plumbing & HVAC",
+        "bluefrog Plumbing + Drain of Denver",
+        "Emergency Plumbers Denver LLC",
+        "Rooter Town Plumbing"
       ]
     },
     {
       "engine": "Perplexity",
       "businesses": [
-        "Blue Sky Plumbing, Heating, Cooling & Electric",
-        "Roto-Rooter Denver",
-        "Mr. Perfect Plumbing",
-        "AAA Service Plumbing, Heating & Electric"
+        "Roto-Rooter (Denver)",
+        "Plumbline Services",
+        "Plumb Pros Inc",
+        "Blue Sky Plumbing",
+        "Mr. Rooter Plumbing of Denver",
+        "Limelight Services",
+        "Colorado WaterWorks"
       ]
     }
   ],
   "businesses": [
     {
-      "name": "Christopher’s Plumbing Inc",
+      "name": "King Family Plumbing & HVAC",
       "engines": [
         "ChatGPT",
         "Claude",
@@ -53,59 +60,106 @@
       ]
     },
     {
-      "name": "Done Plumbing, Heating, Cooling & Electric",
+      "name": "A Better Plumber (an Absolute Plumbing Company)",
       "engines": [
         "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Emergency Plumbers Denver LLC",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Hyper Flow Service",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "King Rooter & Plumbing",
+      "engines": [
         "Claude",
         "Gemini"
       ]
     },
     {
-      "name": "Prime Plumbing & Heating",
-      "engines": [
-        "ChatGPT",
-        "Claude",
-        "Gemini"
-      ]
-    },
-    {
-      "name": "Brad Co. Plumbing & Heating",
+      "name": "Roto-Rooter Plumbing & Water Cleanup",
       "engines": [
         "ChatGPT",
         "Gemini"
       ]
     },
     {
-      "name": "Roto-Rooter",
+      "name": "A Better Plumber",
       "engines": [
-        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Blue Sky Plumbing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Colorado WaterWorks",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Hyper Flow Service Company",
+      "engines": [
         "Gemini"
       ]
     },
     {
-      "name": "AAA Service Plumbing, Heating & Electric",
+      "name": "Limelight Services",
       "engines": [
         "Perplexity"
       ]
     },
     {
-      "name": "Blue Sky Plumbing, Heating, Cooling & Electric",
+      "name": "Mr. Rooter Plumbing of Denver",
       "engines": [
         "Perplexity"
       ]
     },
     {
-      "name": "Mr. Perfect Plumbing",
+      "name": "Plumb Pros Inc",
       "engines": [
         "Perplexity"
       ]
     },
     {
-      "name": "Roto-Rooter Denver",
+      "name": "Plumbline Services",
       "engines": [
         "Perplexity"
+      ]
+    },
+    {
+      "name": "Rooter Town Plumbing",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Roto-Rooter (Denver)",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "bluefrog Plumbing + Drain of Denver",
+      "engines": [
+        "Gemini"
       ]
     }
   ],
-  "totalNamed": 17
+  "totalNamed": 24
 }

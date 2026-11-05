@@ -3,47 +3,56 @@
   "city": "tampa-fl",
   "cityLabel": "Tampa, FL",
   "query": "Who is the most reliable emergency plumber in Tampa, FL for a burst pipe?",
-  "scannedAt": "2026-09-06",
+  "scannedAt": "2026-11-05",
   "engines": [
     {
       "engine": "ChatGPT",
       "businesses": [
-        "Everyday Plumber",
+        "Olin Plumbing Inc",
         "All Hours Plumber",
-        "Home Therapist Cooling, Heating, and Plumbing",
-        "Benjamin Franklin Plumbing",
-        "Grable Plumbing & Air"
+        "EVERYDAYPLUMBER.com"
       ]
     },
     {
       "engine": "Claude",
       "businesses": [
-        "Home Therapist Cooling, Heating, and Plumbing",
-        "EVERYDAYPLUMBER.com",
+        "Olin Plumbing Inc",
         "All Hours Plumber",
-        "Grable Plumbing & Air"
+        "EVERYDAYPLUMBER.com",
+        "Formula Plumbing South Tampa, FL",
+        "Fast Track Plumbing"
       ]
     },
     {
       "engine": "Gemini",
       "businesses": [
-        "Home Therapist Cooling, Heating, and Plumbing",
-        "EVERYDAYPLUMBER.com",
-        "TRP + Plumbing",
+        "Olin Plumbing Inc",
+        "Mr. Rooter Plumbing of Tampa",
+        "Premium Plumbing",
+        "Formula Plumbing South Tampa, FL",
         "All Hours Plumber",
-        "Grable Plumbing & Air"
+        "EVERYDAYPLUMBER.com"
       ]
     },
     {
       "engine": "Perplexity",
       "businesses": [
-        "Llona Plumbing",
-        "ABC Plumbing, Air & Heat",
-        "Roto-Rooter Tampa"
+        "Roto-Rooter Plumbing & Water Cleanup Tampa",
+        "Olin Plumbing",
+        "EVERYDAYPLUMBER.com"
       ]
     }
   ],
   "businesses": [
+    {
+      "name": "EVERYDAYPLUMBER.com",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
     {
       "name": "All Hours Plumber",
       "engines": [
@@ -53,7 +62,7 @@
       ]
     },
     {
-      "name": "Grable Plumbing & Air",
+      "name": "Olin Plumbing Inc",
       "engines": [
         "ChatGPT",
         "Claude",
@@ -61,54 +70,40 @@
       ]
     },
     {
-      "name": "Home Therapist Cooling, Heating, and Plumbing",
-      "engines": [
-        "ChatGPT",
-        "Claude",
-        "Gemini"
-      ]
-    },
-    {
-      "name": "EVERYDAYPLUMBER.com",
+      "name": "Formula Plumbing South Tampa, FL",
       "engines": [
         "Claude",
         "Gemini"
       ]
     },
     {
-      "name": "ABC Plumbing, Air & Heat",
+      "name": "Fast Track Plumbing",
       "engines": [
-        "Perplexity"
+        "Claude"
       ]
     },
     {
-      "name": "Benjamin Franklin Plumbing",
-      "engines": [
-        "ChatGPT"
-      ]
-    },
-    {
-      "name": "Everyday Plumber",
-      "engines": [
-        "ChatGPT"
-      ]
-    },
-    {
-      "name": "Llona Plumbing",
-      "engines": [
-        "Perplexity"
-      ]
-    },
-    {
-      "name": "Roto-Rooter Tampa",
-      "engines": [
-        "Perplexity"
-      ]
-    },
-    {
-      "name": "TRP + Plumbing",
+      "name": "Mr. Rooter Plumbing of Tampa",
       "engines": [
         "Gemini"
+      ]
+    },
+    {
+      "name": "Olin Plumbing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Premium Plumbing",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Roto-Rooter Plumbing & Water Cleanup Tampa",
+      "engines": [
+        "Perplexity"
       ]
     }
   ],

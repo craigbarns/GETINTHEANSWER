@@ -3,57 +3,49 @@
   "city": "san-antonio-tx",
   "cityLabel": "San Antonio, TX",
   "query": "Who is the most reliable emergency plumber in San Antonio, TX for a burst pipe?",
-  "scannedAt": "2026-09-06",
+  "scannedAt": "2026-11-05",
   "engines": [
     {
       "engine": "ChatGPT",
       "businesses": [
-        "Aramendia Plumbing, Heating and Air",
-        "J.C. Enriquez Plumbing",
-        "Stultz Plumbing",
-        "Roto-Rooter",
-        "Crown Plumbing & Water Damage Restoration"
+        "Chambliss Plumbing Company",
+        "Big City Plumbing, LLC",
+        "PlumbSmart",
+        "Roto-Rooter Plumbing & Water Cleanup"
       ]
     },
     {
       "engine": "Claude",
       "businesses": [
-        "Stultz Plumbing",
-        "Goettl Air Conditioning and Plumbing",
-        "Aramendia Plumbing"
+        "Chambliss Plumbing Company",
+        "Roto-Rooter",
+        "Jon Wayne",
+        "Goettl"
       ]
     },
     {
       "engine": "Gemini",
       "businesses": [
-        "Aramendia Plumbing, Heating and Air",
+        "Chambliss Plumbing Company",
+        "Goettl",
         "Roto-Rooter",
-        "Stultz Plumbing",
-        "Crown Plumbing & Water Damage Restoration"
+        "Jon Wayne",
+        "Beyer Plumbing"
       ]
     },
     {
       "engine": "Perplexity",
       "businesses": [
-        "Roto-Rooter",
-        "PlumbSmart",
-        "Goettl",
-        "Champion Home Services",
-        "Reliant Plumbing"
+        "Roto-Rooter San Antonio",
+        "Reliant Plumbing",
+        "Benjamin Franklin Plumbing Northeast San Antonio",
+        "SewerTV Hydro Jetting and Plumbing"
       ]
     }
   ],
   "businesses": [
     {
-      "name": "Roto-Rooter",
-      "engines": [
-        "ChatGPT",
-        "Gemini",
-        "Perplexity"
-      ]
-    },
-    {
-      "name": "Stultz Plumbing",
+      "name": "Chambliss Plumbing Company",
       "engines": [
         "ChatGPT",
         "Claude",
@@ -61,45 +53,40 @@
       ]
     },
     {
-      "name": "Aramendia Plumbing, Heating and Air",
-      "engines": [
-        "ChatGPT",
-        "Gemini"
-      ]
-    },
-    {
-      "name": "Crown Plumbing & Water Damage Restoration",
-      "engines": [
-        "ChatGPT",
-        "Gemini"
-      ]
-    },
-    {
-      "name": "Aramendia Plumbing",
-      "engines": [
-        "Claude"
-      ]
-    },
-    {
-      "name": "Champion Home Services",
-      "engines": [
-        "Perplexity"
-      ]
-    },
-    {
       "name": "Goettl",
       "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Jon Wayne",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Roto-Rooter",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Benjamin Franklin Plumbing Northeast San Antonio",
+      "engines": [
         "Perplexity"
       ]
     },
     {
-      "name": "Goettl Air Conditioning and Plumbing",
+      "name": "Beyer Plumbing",
       "engines": [
-        "Claude"
+        "Gemini"
       ]
     },
     {
-      "name": "J.C. Enriquez Plumbing",
+      "name": "Big City Plumbing, LLC",
       "engines": [
         "ChatGPT"
       ]
@@ -107,11 +94,29 @@
     {
       "name": "PlumbSmart",
       "engines": [
-        "Perplexity"
+        "ChatGPT"
       ]
     },
     {
       "name": "Reliant Plumbing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Roto-Rooter Plumbing & Water Cleanup",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Roto-Rooter San Antonio",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "SewerTV Hydro Jetting and Plumbing",
       "engines": [
         "Perplexity"
       ]

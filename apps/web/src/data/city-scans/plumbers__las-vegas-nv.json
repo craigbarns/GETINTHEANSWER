@@ -3,52 +3,69 @@
   "city": "las-vegas-nv",
   "cityLabel": "Las Vegas, NV",
   "query": "Who is the most reliable emergency plumber in Las Vegas, NV for a burst pipe?",
-  "scannedAt": "2026-09-06",
+  "scannedAt": "2026-11-05",
   "engines": [
     {
       "engine": "ChatGPT",
       "businesses": [
-        "On Time Service Plumbing",
+        "Impact Plumbing",
         "Active Plumbing",
-        "Uncle E's Plumbing",
-        "Roto-Rooter",
-        "Hire The Hippo"
+        "Kingdom Plumbing",
+        "Monkey Wrench Plumbing",
+        "On Time Service Plumbing"
       ]
     },
     {
       "engine": "Claude",
       "businesses": [
-        "On Time Service Plumbing",
+        "Impact Plumbing",
         "Active Plumbing",
-        "Hire The Hippo",
-        "Uncle E's Plumbing",
-        "Rodeo Plumbing"
+        "Kingdom Plumbing",
+        "On Time Service Plumbing",
+        "Mike's Drain"
       ]
     },
     {
       "engine": "Gemini",
       "businesses": [
-        "On Time Service Plumbing",
         "Active Plumbing",
-        "Roto-Rooter",
-        "Uncle E's Plumbing",
-        "Rodeo Plumbing"
+        "Impact Plumbing",
+        "Kingdom Plumbing",
+        "On Time Service Plumbing",
+        "Mike's Drain"
       ]
     },
     {
       "engine": "Perplexity",
       "businesses": [
+        "Pure Plumbing & Air",
+        "Vegas Valley Plumbing",
+        "Active Plumbing",
         "Hawthorne Plumbing, Heating & Cooling",
-        "Roto-Rooter Las Vegas",
-        "RapidDrain Plumbing Las Vegas",
-        "Monkey Wrench Plumbing",
-        "Ideal Services"
+        "Roto-Rooter Las Vegas"
       ]
     }
   ],
   "businesses": [
     {
       "name": "Active Plumbing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Impact Plumbing",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Kingdom Plumbing",
       "engines": [
         "ChatGPT",
         "Claude",
@@ -64,31 +81,9 @@
       ]
     },
     {
-      "name": "Uncle E's Plumbing",
-      "engines": [
-        "ChatGPT",
-        "Claude",
-        "Gemini"
-      ]
-    },
-    {
-      "name": "Hire The Hippo",
-      "engines": [
-        "ChatGPT",
-        "Claude"
-      ]
-    },
-    {
-      "name": "Rodeo Plumbing",
+      "name": "Mike's Drain",
       "engines": [
         "Claude",
-        "Gemini"
-      ]
-    },
-    {
-      "name": "Roto-Rooter",
-      "engines": [
-        "ChatGPT",
         "Gemini"
       ]
     },
@@ -99,25 +94,25 @@
       ]
     },
     {
-      "name": "Ideal Services",
-      "engines": [
-        "Perplexity"
-      ]
-    },
-    {
       "name": "Monkey Wrench Plumbing",
       "engines": [
-        "Perplexity"
+        "ChatGPT"
       ]
     },
     {
-      "name": "RapidDrain Plumbing Las Vegas",
+      "name": "Pure Plumbing & Air",
       "engines": [
         "Perplexity"
       ]
     },
     {
       "name": "Roto-Rooter Las Vegas",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Vegas Valley Plumbing",
       "engines": [
         "Perplexity"
       ]

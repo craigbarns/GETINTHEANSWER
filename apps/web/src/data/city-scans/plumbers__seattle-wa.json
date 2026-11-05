@@ -3,49 +3,53 @@
   "city": "seattle-wa",
   "cityLabel": "Seattle, WA",
   "query": "Who is the most reliable emergency plumber in Seattle, WA for a burst pipe?",
-  "scannedAt": "2026-09-06",
+  "scannedAt": "2026-11-05",
   "engines": [
     {
       "engine": "ChatGPT",
       "businesses": [
-        "Bob Oates Plumbing, Sewer & Rooter",
+        "2 Sons Plumbing & Sewer",
+        "Mega Mushroom Plumbing and Mechanical",
+        "Water Heater Doctor",
         "Beacon Plumbing",
-        "Mr. Rooter Plumbing",
-        "Bee's Plumbing & Heating"
+        "Roto-Rooter"
       ]
     },
     {
       "engine": "Claude",
       "businesses": [
-        "Bob Oates Plumbing, Sewer & Rooter",
-        "Beacon Plumbing",
         "Roto-Rooter",
-        "Mr. Rooter Plumbing"
+        "2 Sons Plumbing & Sewer",
+        "Bee's Plumbing and Heating",
+        "Beacon Plumbing",
+        "True Blue Plumbing Northwest"
       ]
     },
     {
       "engine": "Gemini",
       "businesses": [
         "Beacon Plumbing",
+        "Roto-Rooter Plumbing & Water Cleanup",
         "Bob Oates Plumbing, Sewer & Rooter",
-        "Mr. Rooter Plumbing",
         "Bee's Plumbing and Heating",
-        "Gene Johnson Plumbing, Heating, Cooling & Electrical"
+        "2 Sons Plumbing & Sewer",
+        "O'Neill Plumbing"
       ]
     },
     {
       "engine": "Perplexity",
       "businesses": [
-        "Beacon Plumbing",
-        "Roto-Rooter Seattle",
-        "Bee’s Plumbing & Heating",
-        "Ally Plumbing"
+        "2 Sons Plumbing & Sewer",
+        "Gene Johnson Plumbing, Heating, Cooling & Electrical",
+        "I Need A Plumber Now",
+        "Raymark Plumbing & Sewer",
+        "Bob Oates Plumbing, Sewer & Rooter"
       ]
     }
   ],
   "businesses": [
     {
-      "name": "Beacon Plumbing",
+      "name": "2 Sons Plumbing & Sewer",
       "engines": [
         "ChatGPT",
         "Claude",
@@ -54,58 +58,82 @@
       ]
     },
     {
-      "name": "Bob Oates Plumbing, Sewer & Rooter",
+      "name": "Beacon Plumbing",
       "engines": [
         "ChatGPT",
         "Claude",
         "Gemini"
-      ]
-    },
-    {
-      "name": "Mr. Rooter Plumbing",
-      "engines": [
-        "ChatGPT",
-        "Claude",
-        "Gemini"
-      ]
-    },
-    {
-      "name": "Bee's Plumbing & Heating",
-      "engines": [
-        "ChatGPT",
-        "Perplexity"
-      ]
-    },
-    {
-      "name": "Ally Plumbing",
-      "engines": [
-        "Perplexity"
       ]
     },
     {
       "name": "Bee's Plumbing and Heating",
       "engines": [
+        "Claude",
         "Gemini"
       ]
     },
     {
-      "name": "Gene Johnson Plumbing, Heating, Cooling & Electrical",
+      "name": "Bob Oates Plumbing, Sewer & Rooter",
       "engines": [
-        "Gemini"
+        "Gemini",
+        "Perplexity"
       ]
     },
     {
       "name": "Roto-Rooter",
       "engines": [
+        "ChatGPT",
         "Claude"
       ]
     },
     {
-      "name": "Roto-Rooter Seattle",
+      "name": "Gene Johnson Plumbing, Heating, Cooling & Electrical",
       "engines": [
         "Perplexity"
       ]
+    },
+    {
+      "name": "I Need A Plumber Now",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Mega Mushroom Plumbing and Mechanical",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "O'Neill Plumbing",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Raymark Plumbing & Sewer",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Roto-Rooter Plumbing & Water Cleanup",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "True Blue Plumbing Northwest",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Water Heater Doctor",
+      "engines": [
+        "ChatGPT"
+      ]
     }
   ],
-  "totalNamed": 17
+  "totalNamed": 21
 }

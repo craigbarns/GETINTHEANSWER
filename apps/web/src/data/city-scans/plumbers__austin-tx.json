@@ -3,56 +3,54 @@
   "city": "austin-tx",
   "cityLabel": "Austin, TX",
   "query": "Who is the most reliable emergency plumber in Austin, TX for a burst pipe?",
-  "scannedAt": "2026-09-06",
+  "scannedAt": "2026-11-05",
   "engines": [
     {
       "engine": "ChatGPT",
       "businesses": [
-        "Abacus Plumbing",
-        "Roto-Rooter",
+        "Roto-Rooter Plumbing & Water Cleanup",
+        "Magic Plumbing ATX",
         "Clarke Kent Plumbing",
-        "Joe Hackney Plumbing"
+        "L & P Plumbing, LLC",
+        "1st Home & Commercial Services"
       ]
     },
     {
       "engine": "Claude",
       "businesses": [
+        "Austin's Greatest Plumbing",
+        "Brett & Sons Plumbing LLC",
+        "Plumbing Outfitters",
+        "Magic Plumbing ATX",
         "Clarke Kent Plumbing",
-        "Joe Hackney Professional Plumbing",
-        "Roto-Rooter",
-        "Abacus Plumbing"
+        "Johnny Rooter Plumbing",
+        "Cold Is On The Right Plumbing & Air"
       ]
     },
     {
       "engine": "Gemini",
       "businesses": [
-        "Roto-Rooter",
-        "Abacus Plumbing",
+        "Cold Is On The Right Plumbing & Air",
         "Clarke Kent Plumbing",
-        "Joe Hackney — Professional Plumbing & Technical Services"
+        "Reliant Plumbing",
+        "Johnny Rooter Plumbing",
+        "Goettl's",
+        "L & P Plumbing, LLC",
+        "Roto-Rooter Plumbing & Water Cleanup",
+        "Magic Plumbing ATX"
       ]
     },
     {
       "engine": "Perplexity",
       "businesses": [
-        "Roto-Rooter Austin",
-        "Abacus Plumbing",
-        "Austin Plumbing Masters",
-        "Lantz Home Services",
-        "Reliant Plumbing"
+        "Cold Is On The Right Plumbing & Air",
+        "OnCall Plumbing",
+        "Mr. Rooter of Austin",
+        "Radiant Plumbing, Air Conditioning, & Electrical"
       ]
     }
   ],
   "businesses": [
-    {
-      "name": "Abacus Plumbing",
-      "engines": [
-        "ChatGPT",
-        "Claude",
-        "Gemini",
-        "Perplexity"
-      ]
-    },
     {
       "name": "Clarke Kent Plumbing",
       "engines": [
@@ -62,7 +60,15 @@
       ]
     },
     {
-      "name": "Roto-Rooter",
+      "name": "Cold Is On The Right Plumbing & Air",
+      "engines": [
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Magic Plumbing ATX",
       "engines": [
         "ChatGPT",
         "Claude",
@@ -70,31 +76,70 @@
       ]
     },
     {
-      "name": "Austin Plumbing Masters",
+      "name": "Johnny Rooter Plumbing",
       "engines": [
-        "Perplexity"
+        "Claude",
+        "Gemini"
       ]
     },
     {
-      "name": "Joe Hackney Plumbing",
+      "name": "L & P Plumbing, LLC",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Roto-Rooter Plumbing & Water Cleanup",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "1st Home & Commercial Services",
       "engines": [
         "ChatGPT"
       ]
     },
     {
-      "name": "Joe Hackney Professional Plumbing",
+      "name": "Austin's Greatest Plumbing",
       "engines": [
         "Claude"
       ]
     },
     {
-      "name": "Joe Hackney — Professional Plumbing & Technical Services",
+      "name": "Brett & Sons Plumbing LLC",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Goettl's",
       "engines": [
         "Gemini"
       ]
     },
     {
-      "name": "Lantz Home Services",
+      "name": "Mr. Rooter of Austin",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "OnCall Plumbing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Plumbing Outfitters",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Radiant Plumbing, Air Conditioning, & Electrical",
       "engines": [
         "Perplexity"
       ]
@@ -102,15 +147,9 @@
     {
       "name": "Reliant Plumbing",
       "engines": [
-        "Perplexity"
-      ]
-    },
-    {
-      "name": "Roto-Rooter Austin",
-      "engines": [
-        "Perplexity"
+        "Gemini"
       ]
     }
   ],
-  "totalNamed": 17
+  "totalNamed": 24
 }

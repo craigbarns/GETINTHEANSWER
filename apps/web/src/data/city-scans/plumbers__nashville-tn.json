@@ -3,50 +3,47 @@
   "city": "nashville-tn",
   "cityLabel": "Nashville, TN",
   "query": "Who is the most reliable emergency plumber in Nashville, TN for a burst pipe?",
-  "scannedAt": "2026-09-06",
+  "scannedAt": "2026-11-05",
   "engines": [
     {
       "engine": "ChatGPT",
       "businesses": [
-        "Roto-Rooter",
-        "Benjamin Franklin Plumbing® of Nashville",
-        "Nashville Plumbing Co",
-        "Happy Hiller",
-        "Green Hills Plumbing"
+        "100 Percent Plumbing",
+        "Mr. Rooter Plumbing of South Nashville",
+        "Roto-Rooter Plumbing & Water Cleanup",
+        "Busy Bee Plumbing, Heating, & Air Conditioning"
       ]
     },
     {
       "engine": "Claude",
       "businesses": [
-        "Roto-Rooter",
-        "Ironwood Plumbing Nashville",
-        "Green Hills Plumbing",
-        "Nashville Plumbing Co"
+        "100 Percent Plumbing",
+        "Mr. Rooter Plumbing of South Nashville",
+        "Roto-Rooter"
       ]
     },
     {
       "engine": "Gemini",
       "businesses": [
-        "Roto-Rooter",
-        "Benjamin Franklin Plumbing® of Nashville",
-        "Nashville Plumbing Co",
-        "Green Hills Plumbing",
-        "Ironwood Plumbing Nashville"
+        "100 Percent Plumbing",
+        "Mr. Rooter Plumbing of South Nashville",
+        "Roto-Rooter Plumbing & Water Cleanup",
+        "Doctor Drips Plumbing - Nashville",
+        "Busy Bee Plumbing, Heating, & Air Conditioning"
       ]
     },
     {
       "engine": "Perplexity",
       "businesses": [
-        "Roto-Rooter Nashville",
-        "Happy Hiller",
-        "Nashville Plumbing Co",
-        "Lucky’s Plumbing Services"
+        "Mr. Rooter Plumbing of South Nashville",
+        "Roto-Rooter",
+        "Parthenon Plumbing, Heating, & AC Repair"
       ]
     }
   ],
   "businesses": [
     {
-      "name": "Nashville Plumbing Co",
+      "name": "Mr. Rooter Plumbing of South Nashville",
       "engines": [
         "ChatGPT",
         "Claude",
@@ -55,54 +52,46 @@
       ]
     },
     {
-      "name": "Green Hills Plumbing",
+      "name": "100 Percent Plumbing",
       "engines": [
         "ChatGPT",
         "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Busy Bee Plumbing, Heating, & Air Conditioning",
+      "engines": [
+        "ChatGPT",
         "Gemini"
       ]
     },
     {
       "name": "Roto-Rooter",
       "engines": [
-        "ChatGPT",
         "Claude",
-        "Gemini"
-      ]
-    },
-    {
-      "name": "Benjamin Franklin Plumbing® of Nashville",
-      "engines": [
-        "ChatGPT",
-        "Gemini"
-      ]
-    },
-    {
-      "name": "Happy Hiller",
-      "engines": [
-        "ChatGPT",
         "Perplexity"
       ]
     },
     {
-      "name": "Ironwood Plumbing Nashville",
+      "name": "Roto-Rooter Plumbing & Water Cleanup",
       "engines": [
-        "Claude",
+        "ChatGPT",
         "Gemini"
       ]
     },
     {
-      "name": "Lucky’s Plumbing Services",
+      "name": "Doctor Drips Plumbing - Nashville",
       "engines": [
-        "Perplexity"
+        "Gemini"
       ]
     },
     {
-      "name": "Roto-Rooter Nashville",
+      "name": "Parthenon Plumbing, Heating, & AC Repair",
       "engines": [
         "Perplexity"
       ]
     }
   ],
-  "totalNamed": 18
+  "totalNamed": 15
 }

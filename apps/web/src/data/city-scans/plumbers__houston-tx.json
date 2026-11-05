@@ -3,49 +3,49 @@
   "city": "houston-tx",
   "cityLabel": "Houston, TX",
   "query": "Who is the most reliable emergency plumber in Houston, TX for a burst pipe?",
-  "scannedAt": "2026-09-06",
+  "scannedAt": "2026-11-05",
   "engines": [
     {
       "engine": "ChatGPT",
       "businesses": [
+        "John Moore Services",
         "Roto-Rooter",
-        "Spencer's Plumbing Services",
-        "Strutton Plumbing",
-        "1-Tom-Plumber"
+        "Abacus Plumbing, Air Conditioning & Electrical",
+        "Spencer's Plumbing",
+        "Texas Quality Plumbing"
       ]
     },
     {
       "engine": "Claude",
       "businesses": [
-        "Spencer's Plumbing Services",
-        "Roto-Rooter Houston",
-        "Strutton Plumbing"
+        "John Moore Services",
+        "Abacus Plumbing, Air Conditioning, & Electrical",
+        "Texas Quality Plumbing",
+        "Spencer's Plumbing"
       ]
     },
     {
       "engine": "Gemini",
       "businesses": [
+        "John Moore Services",
+        "Abacus Plumbing, Air Conditioning, & Electrical",
         "Roto-Rooter",
-        "Strutton Plumbing",
         "Spencer's Plumbing Services",
-        "1-Tom-Plumber Houston",
-        "Nick's Plumbing"
+        "Texas Quality Plumbing"
       ]
     },
     {
       "engine": "Perplexity",
       "businesses": [
-        "Roto-Rooter Houston",
-        "Abacus Plumbing, Air Conditioning & Electrical",
-        "John Moore Services",
-        "Santhoff Plumbing",
-        "Village Plumbing, Air & Electric"
+        "Roto‑Rooter Houston",
+        "ARS/Rescue Rooter",
+        "bluefrog Plumbing + Drain of West Houston"
       ]
     }
   ],
   "businesses": [
     {
-      "name": "Spencer's Plumbing Services",
+      "name": "Abacus Plumbing, Air Conditioning & Electrical",
       "engines": [
         "ChatGPT",
         "Claude",
@@ -53,7 +53,15 @@
       ]
     },
     {
-      "name": "Strutton Plumbing",
+      "name": "John Moore Services",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Texas Quality Plumbing",
       "engines": [
         "ChatGPT",
         "Claude",
@@ -68,50 +76,32 @@
       ]
     },
     {
-      "name": "Roto-Rooter Houston",
+      "name": "Spencer's Plumbing",
       "engines": [
-        "Claude",
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "ARS/Rescue Rooter",
+      "engines": [
         "Perplexity"
       ]
     },
     {
-      "name": "1-Tom-Plumber",
+      "name": "Roto‑Rooter Houston",
       "engines": [
-        "ChatGPT"
+        "Perplexity"
       ]
     },
     {
-      "name": "1-Tom-Plumber Houston",
+      "name": "Spencer's Plumbing Services",
       "engines": [
         "Gemini"
       ]
     },
     {
-      "name": "Abacus Plumbing, Air Conditioning & Electrical",
-      "engines": [
-        "Perplexity"
-      ]
-    },
-    {
-      "name": "John Moore Services",
-      "engines": [
-        "Perplexity"
-      ]
-    },
-    {
-      "name": "Nick's Plumbing",
-      "engines": [
-        "Gemini"
-      ]
-    },
-    {
-      "name": "Santhoff Plumbing",
-      "engines": [
-        "Perplexity"
-      ]
-    },
-    {
-      "name": "Village Plumbing, Air & Electric",
+      "name": "bluefrog Plumbing + Drain of West Houston",
       "engines": [
         "Perplexity"
       ]

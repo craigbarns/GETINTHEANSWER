@@ -3,59 +3,80 @@
   "city": "columbus-oh",
   "cityLabel": "Columbus, OH",
   "query": "Who is the most reliable emergency plumber in Columbus, OH for a burst pipe?",
-  "scannedAt": "2026-09-06",
+  "scannedAt": "2026-11-05",
   "engines": [
     {
       "engine": "ChatGPT",
       "businesses": [
-        "Roto-Rooter",
-        "Allegiant Plumbing",
-        "Transit & Flow",
-        "Mr. Rooter Plumbing"
+        "Roto-Rooter Plumbing & Water Cleanup",
+        "ResQ 24",
+        "DrainMaster",
+        "Safe Electric and Plumbing",
+        "Transit & Flow"
       ]
     },
     {
       "engine": "Claude",
       "businesses": [
+        "ResQ 24",
+        "Parson Plumbing and Drains",
+        "Royal",
+        "R & T Yoder Plumbing, Inc",
+        "DrainMaster",
         "Roto-Rooter",
-        "Allegiant Plumbing",
-        "Transit & Flow",
-        "Mr. Rooter Plumbing"
+        "Safe Electric and Plumbing"
       ]
     },
     {
       "engine": "Gemini",
       "businesses": [
-        "Roto-Rooter",
-        "Allegiant Plumbing",
-        "Transit & Flow",
-        "Mr. Rooter Plumbing of Columbus",
-        "1-800-Plumber"
+        "Roto-Rooter Plumbing & Water Cleanup of Columbus",
+        "ResQ 24",
+        "Parson Plumbing and Drains",
+        "Safe Electric and Plumbing",
+        "West Jefferson Plumbing and Heating",
+        "Amanda Plumbing",
+        "DrainMaster",
+        "Transit & Flow"
       ]
     },
     {
       "engine": "Perplexity",
       "businesses": [
-        "The Waterworks",
-        "Allegiant Plumbing",
-        "Shorty’s Plumbing",
-        "Muetzel",
-        "Roto-Rooter Columbus"
+        "Parson Plumbing and Drains",
+        "Buckeye Heating, Cooling, Plumbing & Electrical",
+        "Roto-Rooter Columbus",
+        "Service Experts Columbus"
       ]
     }
   ],
   "businesses": [
     {
-      "name": "Allegiant Plumbing",
+      "name": "DrainMaster",
       "engines": [
         "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Parson Plumbing and Drains",
+      "engines": [
         "Claude",
         "Gemini",
         "Perplexity"
       ]
     },
     {
-      "name": "Roto-Rooter",
+      "name": "ResQ 24",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Safe Electric and Plumbing",
       "engines": [
         "ChatGPT",
         "Claude",
@@ -66,33 +87,31 @@
       "name": "Transit & Flow",
       "engines": [
         "ChatGPT",
-        "Claude",
         "Gemini"
       ]
     },
     {
-      "name": "Mr. Rooter Plumbing",
+      "name": "Amanda Plumbing",
       "engines": [
-        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Buckeye Heating, Cooling, Plumbing & Electrical",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "R & T Yoder Plumbing, Inc",
+      "engines": [
         "Claude"
       ]
     },
     {
-      "name": "1-800-Plumber",
+      "name": "Roto-Rooter",
       "engines": [
-        "Gemini"
-      ]
-    },
-    {
-      "name": "Mr. Rooter Plumbing of Columbus",
-      "engines": [
-        "Gemini"
-      ]
-    },
-    {
-      "name": "Muetzel",
-      "engines": [
-        "Perplexity"
+        "Claude"
       ]
     },
     {
@@ -102,17 +121,35 @@
       ]
     },
     {
-      "name": "Shorty’s Plumbing",
+      "name": "Roto-Rooter Plumbing & Water Cleanup",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Roto-Rooter Plumbing & Water Cleanup of Columbus",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Royal",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Service Experts Columbus",
       "engines": [
         "Perplexity"
       ]
     },
     {
-      "name": "The Waterworks",
+      "name": "West Jefferson Plumbing and Heating",
       "engines": [
-        "Perplexity"
+        "Gemini"
       ]
     }
   ],
-  "totalNamed": 18
+  "totalNamed": 24
 }

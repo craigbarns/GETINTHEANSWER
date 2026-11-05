@@ -3,109 +3,96 @@
   "city": "phoenix-az",
   "cityLabel": "Phoenix, AZ",
   "query": "Who is the most reliable emergency plumber in Phoenix, AZ for a burst pipe?",
-  "scannedAt": "2026-09-06",
+  "scannedAt": "2026-11-05",
   "engines": [
     {
       "engine": "ChatGPT",
       "businesses": [
-        "George Brazil Plumbing & Electrical",
-        "Roto-Rooter",
-        "Goettl Plumbing",
-        "Mr. Rooter Plumbing",
-        "Patriotic Plumbing & Rooter"
+        "Benjamin Franklin Plumbing",
+        "Goettl",
+        "Lawson Family Plumbing",
+        "Parker & Sons"
       ]
     },
     {
       "engine": "Claude",
       "businesses": [
+        "Benjamin Franklin Plumbing",
         "George Brazil Plumbing & Electrical",
-        "Patriotic Plumbing & Rooter",
-        "Goettl Plumbing",
-        "Roto-Rooter"
+        "Lawson Family Plumbing"
       ]
     },
     {
       "engine": "Gemini",
       "businesses": [
-        "Goettl Plumbing",
-        "Roto-Rooter",
-        "George Brazil Plumbing & Electrical",
-        "Patriotic Plumbing & Rooter",
-        "Mr. Rooter Plumbing of Phoenix"
+        "Benjamin Franklin Plumbing® of Phoenix",
+        "Goettl",
+        "Parker & Sons"
       ]
     },
     {
       "engine": "Perplexity",
       "businesses": [
-        "Roto-Rooter Phoenix",
-        "Goettl Phoenix",
-        "Parker & Sons"
+        "Roto-Rooter Plumbing & Water Cleanup",
+        "Parker & Sons",
+        "Mr. Rooter Plumbing of Phoenix"
       ]
     }
   ],
   "businesses": [
     {
-      "name": "George Brazil Plumbing & Electrical",
+      "name": "Parker & Sons",
       "engines": [
         "ChatGPT",
-        "Claude",
-        "Gemini"
-      ]
-    },
-    {
-      "name": "Goettl Plumbing",
-      "engines": [
-        "ChatGPT",
-        "Claude",
-        "Gemini"
-      ]
-    },
-    {
-      "name": "Patriotic Plumbing & Rooter",
-      "engines": [
-        "ChatGPT",
-        "Claude",
-        "Gemini"
-      ]
-    },
-    {
-      "name": "Roto-Rooter",
-      "engines": [
-        "ChatGPT",
-        "Claude",
-        "Gemini"
-      ]
-    },
-    {
-      "name": "Goettl Phoenix",
-      "engines": [
+        "Gemini",
         "Perplexity"
       ]
     },
     {
-      "name": "Mr. Rooter Plumbing",
+      "name": "Benjamin Franklin Plumbing",
       "engines": [
-        "ChatGPT"
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Goettl",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Lawson Family Plumbing",
+      "engines": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "name": "Benjamin Franklin Plumbing® of Phoenix",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "George Brazil Plumbing & Electrical",
+      "engines": [
+        "Claude"
       ]
     },
     {
       "name": "Mr. Rooter Plumbing of Phoenix",
       "engines": [
-        "Gemini"
-      ]
-    },
-    {
-      "name": "Parker & Sons",
-      "engines": [
         "Perplexity"
       ]
     },
     {
-      "name": "Roto-Rooter Phoenix",
+      "name": "Roto-Rooter Plumbing & Water Cleanup",
       "engines": [
         "Perplexity"
       ]
     }
   ],
-  "totalNamed": 17
+  "totalNamed": 13
 }

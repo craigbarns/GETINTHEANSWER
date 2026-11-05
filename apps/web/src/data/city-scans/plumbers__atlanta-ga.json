@@ -3,42 +3,47 @@
   "city": "atlanta-ga",
   "cityLabel": "Atlanta, GA",
   "query": "Who is the most reliable emergency plumber in Atlanta, GA for a burst pipe?",
-  "scannedAt": "2026-09-06",
+  "scannedAt": "2026-11-05",
   "engines": [
     {
       "engine": "ChatGPT",
       "businesses": [
-        "Roto-Rooter",
-        "Peach Plumbing & Drain",
         "R.S. Andrews",
-        "The Plumbers Guild"
+        "Plumb Works",
+        "Fix & Flow Plumbing Co",
+        "Roto-Rooter",
+        "Atlantis Plumbing LLC",
+        "Deep Dive Plumbing & Drain LLC"
       ]
     },
     {
       "engine": "Claude",
       "businesses": [
-        "Plumb Works Inc",
+        "Fix & Flow Plumbing Co",
         "R.S. Andrews",
-        "Roto-Rooter"
+        "Roto-Rooter",
+        "Plumb Works"
       ]
     },
     {
       "engine": "Gemini",
       "businesses": [
-        "Roto-Rooter",
         "R.S. Andrews",
-        "Mr. Rooter Plumbing of Atlanta",
-        "Peach Plumbing & Drain",
-        "Atlanta Plumbing Plus"
+        "Fix & Flow Plumbing Co",
+        "Roto-Rooter",
+        "Plumb Works",
+        "Plumbing Express",
+        "Zippy Plumber"
       ]
     },
     {
       "engine": "Perplexity",
       "businesses": [
-        "Roto-Rooter",
+        "Roto‑Rooter",
+        "Atlantis Plumbing",
+        "Rodeo Plumbing of Atlanta",
         "Plumb Works Inc",
-        "Allgood Plumbing",
-        "Atlanta Plumbing & Drain"
+        "Allgood Plumbing"
       ]
     }
   ],
@@ -53,25 +58,27 @@
       ]
     },
     {
+      "name": "Fix & Flow Plumbing Co",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Plumb Works",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
       "name": "R.S. Andrews",
       "engines": [
         "ChatGPT",
         "Claude",
         "Gemini"
-      ]
-    },
-    {
-      "name": "Peach Plumbing & Drain",
-      "engines": [
-        "ChatGPT",
-        "Gemini"
-      ]
-    },
-    {
-      "name": "Plumb Works Inc",
-      "engines": [
-        "Claude",
-        "Perplexity"
       ]
     },
     {
@@ -81,29 +88,47 @@
       ]
     },
     {
-      "name": "Atlanta Plumbing & Drain",
+      "name": "Atlantis Plumbing",
       "engines": [
         "Perplexity"
       ]
     },
     {
-      "name": "Atlanta Plumbing Plus",
-      "engines": [
-        "Gemini"
-      ]
-    },
-    {
-      "name": "Mr. Rooter Plumbing of Atlanta",
-      "engines": [
-        "Gemini"
-      ]
-    },
-    {
-      "name": "The Plumbers Guild",
+      "name": "Atlantis Plumbing LLC",
       "engines": [
         "ChatGPT"
       ]
+    },
+    {
+      "name": "Deep Dive Plumbing & Drain LLC",
+      "engines": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "name": "Plumb Works Inc",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Plumbing Express",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Rodeo Plumbing of Atlanta",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Zippy Plumber",
+      "engines": [
+        "Gemini"
+      ]
     }
   ],
-  "totalNamed": 16
+  "totalNamed": 21
 }

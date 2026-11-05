@@ -3,54 +3,53 @@
   "city": "los-angeles-ca",
   "cityLabel": "Los Angeles, CA",
   "query": "Who is the most reliable emergency plumber in Los Angeles, CA for a burst pipe?",
-  "scannedAt": "2026-09-06",
+  "scannedAt": "2026-11-05",
   "engines": [
     {
       "engine": "ChatGPT",
       "businesses": [
-        "Conover Plumbing & Mechanical",
-        "Expertise Plumbing & Rooter",
-        "John’s Plumbing & Drain Services",
-        "24/7 Rooter Service",
-        "Plumbing Geeks"
+        "Precision Emergency Plumber Los Angeles",
+        "JW Plumbing, Heating and Air",
+        "Red Lilly Plumbing",
+        "Velvet Plumbing",
+        "Conover Plumbing & Mechanical"
       ]
     },
     {
       "engine": "Claude",
       "businesses": [
+        "Precision Emergency Plumber Los Angeles",
+        "JW Plumbing, Heating and Air",
         "Conover Plumbing & Mechanical",
-        "Expertise Plumbing & Rooter",
-        "EZ Plumbing"
+        "Roto-Rooter"
       ]
     },
     {
       "engine": "Gemini",
       "businesses": [
+        "Roto-Rooter",
+        "JW Plumbing, Heating and Air",
+        "Precision Emergency Plumber Los Angeles",
+        "Velvet Plumbing",
+        "Ritz Plumbing",
         "Conover Plumbing & Mechanical",
-        "Expertise Plumbing & Rooter",
-        "EZ Plumbing",
-        "John's Plumbing & Drain Services",
-        "24/7 Rooter Service"
+        "A-1 Total Service Plumbing",
+        "Red Lilly Plumbing"
       ]
     },
     {
       "engine": "Perplexity",
       "businesses": [
-        "Roto-Rooter Los Angeles",
-        "Expertise Plumbing & Rooter"
+        "24/7 Rooter Service",
+        "24 HR Emergency Plumber Los Angeles Inc",
+        "John’s Plumbing & Drain Services",
+        "Roto‑Rooter Los Angeles",
+        "Sal’s Plumbing",
+        "Papa’s Plumbing Inc"
       ]
     }
   ],
   "businesses": [
-    {
-      "name": "Expertise Plumbing & Rooter",
-      "engines": [
-        "ChatGPT",
-        "Claude",
-        "Gemini",
-        "Perplexity"
-      ]
-    },
     {
       "name": "Conover Plumbing & Mechanical",
       "engines": [
@@ -60,38 +59,90 @@
       ]
     },
     {
-      "name": "24/7 Rooter Service",
+      "name": "JW Plumbing, Heating and Air",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Precision Emergency Plumber Los Angeles",
+      "engines": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Red Lilly Plumbing",
       "engines": [
         "ChatGPT",
         "Gemini"
       ]
     },
     {
-      "name": "EZ Plumbing",
+      "name": "Roto-Rooter",
       "engines": [
         "Claude",
         "Gemini"
       ]
     },
     {
-      "name": "John’s Plumbing & Drain Services",
+      "name": "Velvet Plumbing",
       "engines": [
         "ChatGPT",
         "Gemini"
       ]
     },
     {
-      "name": "Plumbing Geeks",
+      "name": "24 HR Emergency Plumber Los Angeles Inc",
       "engines": [
-        "ChatGPT"
+        "Perplexity"
       ]
     },
     {
-      "name": "Roto-Rooter Los Angeles",
+      "name": "24/7 Rooter Service",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "A-1 Total Service Plumbing",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "John’s Plumbing & Drain Services",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Papa’s Plumbing Inc",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Ritz Plumbing",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Roto‑Rooter Los Angeles",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Sal’s Plumbing",
       "engines": [
         "Perplexity"
       ]
     }
   ],
-  "totalNamed": 15
+  "totalNamed": 23
 }

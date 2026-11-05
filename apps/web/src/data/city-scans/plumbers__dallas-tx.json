@@ -3,48 +3,54 @@
   "city": "dallas-tx",
   "cityLabel": "Dallas, TX",
   "query": "Who is the most reliable emergency plumber in Dallas, TX for a burst pipe?",
-  "scannedAt": "2026-09-06",
+  "scannedAt": "2026-11-05",
   "engines": [
     {
       "engine": "ChatGPT",
       "businesses": [
-        "James Armstrong Plumbing",
-        "Pure Plumbing DFW",
-        "Dallas Water Restoration",
-        "Baker Brothers Plumbing",
-        "Roto-Rooter"
+        "Metro Flow Plumbing - Dallas Emergency Plumbers",
+        "Roto-Rooter Plumbing & Water Cleanup",
+        "Precision Emergency Plumber Dallas",
+        "Water Damage Restoration Dallas"
       ]
     },
     {
       "engine": "Claude",
       "businesses": [
-        "Baker Brothers",
-        "Dallas Water Restoration",
-        "Roto-Rooter"
+        "Metro Flow Plumbing",
+        "Water Damage Restoration Dallas",
+        "Roto-Rooter Plumbing & Water Cleanup",
+        "Workman Plumbing"
       ]
     },
     {
       "engine": "Gemini",
       "businesses": [
-        "James Armstrong Plumbing",
-        "Baker Brothers Plumbing, Air & Electric",
-        "Dallas Water Restoration",
-        "Roto-Rooter Plumbing Services",
-        "Pure Plumbing DFW"
+        "Workman Plumbing",
+        "Anchor Plumbing Company",
+        "Metro Flow Plumbing - Dallas Emergency Plumbers",
+        "Roto-Rooter Plumbing & Water Cleanup",
+        "Public Service Plumbers",
+        "Precision Emergency Plumber Dallas",
+        "Water Damage Restoration Dallas",
+        "Mr. Rooter Plumbing of Dallas"
       ]
     },
     {
       "engine": "Perplexity",
       "businesses": [
-        "Dial One Johnson Plumbing, Cooling & Heating",
-        "Roto-Rooter Dallas",
-        "Berkeys"
+        "Cody & Sons Plumbing, Heating & Air",
+        "Mr. Rooter Plumbing of Dallas",
+        "Pure Plumbing DFW",
+        "ARS/Rescue Rooter Dallas",
+        "Mother Modern Plumbing",
+        "Benjamin Franklin Plumbing of Dallas"
       ]
     }
   ],
   "businesses": [
     {
-      "name": "Dallas Water Restoration",
+      "name": "Roto-Rooter Plumbing & Water Cleanup",
       "engines": [
         "ChatGPT",
         "Claude",
@@ -52,68 +58,89 @@
       ]
     },
     {
-      "name": "James Armstrong Plumbing",
+      "name": "Water Damage Restoration Dallas",
       "engines": [
         "ChatGPT",
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Metro Flow Plumbing - Dallas Emergency Plumbers",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Mr. Rooter Plumbing of Dallas",
+      "engines": [
+        "Gemini",
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Precision Emergency Plumber Dallas",
+      "engines": [
+        "ChatGPT",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Workman Plumbing",
+      "engines": [
+        "Claude",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "ARS/Rescue Rooter Dallas",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Anchor Plumbing Company",
+      "engines": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Benjamin Franklin Plumbing of Dallas",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Cody & Sons Plumbing, Heating & Air",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Metro Flow Plumbing",
+      "engines": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Mother Modern Plumbing",
+      "engines": [
+        "Perplexity"
+      ]
+    },
+    {
+      "name": "Public Service Plumbers",
+      "engines": [
         "Gemini"
       ]
     },
     {
       "name": "Pure Plumbing DFW",
       "engines": [
-        "ChatGPT",
-        "Gemini"
-      ]
-    },
-    {
-      "name": "Roto-Rooter",
-      "engines": [
-        "ChatGPT",
-        "Claude"
-      ]
-    },
-    {
-      "name": "Baker Brothers",
-      "engines": [
-        "Claude"
-      ]
-    },
-    {
-      "name": "Baker Brothers Plumbing",
-      "engines": [
-        "ChatGPT"
-      ]
-    },
-    {
-      "name": "Baker Brothers Plumbing, Air & Electric",
-      "engines": [
-        "Gemini"
-      ]
-    },
-    {
-      "name": "Berkeys",
-      "engines": [
         "Perplexity"
-      ]
-    },
-    {
-      "name": "Dial One Johnson Plumbing, Cooling & Heating",
-      "engines": [
-        "Perplexity"
-      ]
-    },
-    {
-      "name": "Roto-Rooter Dallas",
-      "engines": [
-        "Perplexity"
-      ]
-    },
-    {
-      "name": "Roto-Rooter Plumbing Services",
-      "engines": [
-        "Gemini"
       ]
     }
   ],
-  "totalNamed": 16
+  "totalNamed": 22
 }
