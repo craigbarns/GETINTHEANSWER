@@ -17,6 +17,8 @@ import { HeroForm } from "@/components/hero-form";
 import { SiteHeader } from "@/components/site-header";
 import { Button } from "@/components/ui/button";
 import { formatScanDate, getBenchmarkStats, getCityScan, getScannedPairs, type CityScan } from "@/lib/city-scans";
+import { contractorSeoCities } from "@/lib/contractor-seo";
+import { getCity } from "@/lib/cities";
 import { DATE_LOCALE, DEFAULT_CURRENCY_BY_LOCALE, localePath, type Locale } from "@/lib/i18n";
 import { CURRENCIES, PRICES } from "@/lib/pricing";
 import { GROWTH_PLANS, growthPrice } from "@/lib/growth";
@@ -568,6 +570,32 @@ export function HomePage({ locale }: { locale: Locale }) {
             </div>
           </div>
         </section>
+
+        {locale === "en" && (
+          <section className="border-t border-foreground/8 bg-white py-14" aria-labelledby="contractor-seo-heading">
+            <div className="mx-auto max-w-3xl px-5 sm:px-8">
+              <h2 id="contractor-seo-heading" className="text-2xl font-extrabold tracking-[-0.03em]">
+                Contractor SEO by city
+              </h2>
+              <p className="mt-3 text-foreground/75">
+                How AI engines answer &ldquo;best contractor&rdquo; questions in each metro — measured across ChatGPT, Claude, Gemini and Perplexity.
+              </p>
+              <ul className="mt-5 grid gap-2 text-sm sm:grid-cols-2">
+                {contractorSeoCities.map(({ city }) => {
+                  const cityData = getCity(city);
+                  if (!cityData) return null;
+                  return (
+                    <li key={city}>
+                      <Link className="font-semibold text-emerald-700 hover:underline" href={`/contractor-seo/${city}`}>
+                        Contractor SEO in {cityData.name}, {cityData.stateCode}
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          </section>
+        )}
 
         <section className="bg-lime-200 py-16 sm:py-20">
           <div className="mx-auto max-w-3xl px-5 text-center sm:px-8">
