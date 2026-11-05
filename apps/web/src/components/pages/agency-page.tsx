@@ -125,7 +125,7 @@ export function AgencyPage({ locale }: { locale: Locale }) {
               </div>
 
               <h1 className="text-balance text-[2.9rem] font-extrabold leading-[0.98] tracking-[-0.055em] text-foreground sm:text-6xl lg:text-[4.2rem]">
-                {copy.titleA}
+                {copy.titleA}{" "}
                 <span className="mt-2 block text-emerald-700">{copy.titleB}</span>
               </h1>
 

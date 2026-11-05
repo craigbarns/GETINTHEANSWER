@@ -35,7 +35,7 @@ export async function generateMetadata({
   // Keep the title short enough that the scan suffix fits before truncation.
   const plural = pluralName(industry);
   const baseTitle = `AI SEO for ${plural} in ${city.name}, ${city.stateCode}`;
-  const title = baseTitle.length <= 55
+  const title = baseTitle.length <= 34
     ? `${baseTitle} | Free AI Visibility Scan`
     : baseTitle;
   const description =

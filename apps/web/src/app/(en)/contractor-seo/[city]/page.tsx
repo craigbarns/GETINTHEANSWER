@@ -5,8 +5,8 @@ import { ArrowRight, MapPin, Search, TrendingUp } from "lucide-react";
 
 import { LogoMark } from "@/components/logo";
 import { Button } from "@/components/ui/button";
-import { cities, getCity } from "@/lib/cities";
 import { contractorSeoCities, getContractorSeoCity } from "@/lib/contractor-seo";
+import { getCity } from "@/lib/cities";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 
 export function generateStaticParams() {
@@ -24,7 +24,7 @@ export async function generateMetadata({
   if (!entry || !city) return {};
 
   const title = `Contractor SEO in ${city.name}, ${city.stateCode} | Free AI Visibility Audit`;
-  const description = `GetInTheAnswer puts general contractors in ${city.name} in front of homeowners who ask ChatGPT and Google AI for recommendations. Free 60-second visibility audit — no account needed.`;
+  const description = `See which AI engines recommend contractors in ${city.name} across ChatGPT, Claude, Gemini and Perplexity. Run a free 60-second visibility audit — no account needed.`;
 
   return {
     title: { absolute: title },
@@ -51,7 +51,14 @@ export default async function ContractorSeoCityPage({
   if (!entry || !city) notFound();
 
   const formattedCity = `${city.name}, ${city.stateCode}`;
-  const otherCities = cities.filter((c) => c.slug !== city.slug).slice(0, 6);
+  // Link only to sibling pages that exist (the measured contractor SEO cities).
+  // The previous filter over all cities produced 404 links for 14 non-existent
+  // slugs like /contractor-seo/austin-tx.
+  const otherCities = contractorSeoCities
+    .filter((c) => c.city !== city.slug)
+    .map((c) => getCity(c.city))
+    .filter((c): c is NonNullable<typeof c> => Boolean(c))
+    .slice(0, 5);
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
@@ -112,7 +119,7 @@ export default async function ContractorSeoCityPage({
         ChatGPT, not Google
       </h1>
       <p className="mt-5 max-w-2xl text-lg text-muted-foreground">
-        Millions of {city.name} homeowners no longer scroll through ten blue
+        Thousands of {city.name} homeowners no longer scroll through ten blue
         links. They ask an AI assistant: <em>&ldquo;who&rsquo;s the best general contractor
         near me?&rdquo;</em> The assistant names two or three businesses.{" "}
         <strong>
@@ -189,6 +196,34 @@ export default async function ContractorSeoCityPage({
             </li>
           ))}
         </ul>
+      </section>
+      <section className="mt-14">
+        <h2 className="text-2xl font-bold tracking-tight">
+          Frequently asked questions
+        </h2>
+        <div className="mt-5 space-y-6">
+          <div>
+            <h3 className="text-lg font-bold">
+              What is contractor SEO in {city.name}?
+            </h3>
+            <p className="mt-2 text-sm leading-6 text-muted-foreground">
+              Contractor SEO in {city.name} means getting your construction
+              business found where homeowners actually search — including AI
+              assistants like ChatGPT, which now recommend specific contractors
+              by name.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-lg font-bold">
+              How do I know if AI assistants recommend my {city.name} business?
+            </h3>
+            <p className="mt-2 text-sm leading-6 text-muted-foreground">
+              GetInTheAnswer runs a free 60-second audit: real customer
+              questions asked across ChatGPT, Claude, Gemini and Perplexity,
+              and a report of whether your business is named in the answers.
+            </p>
+          </div>
+        </div>
       </section>
     </main>
   );

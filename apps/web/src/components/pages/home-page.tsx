@@ -362,7 +362,7 @@ export function HomePage({ locale }: { locale: Locale }) {
               </div>
 
               <h1 className="text-balance text-[2.6rem] font-extrabold leading-[1] tracking-[-0.055em] text-foreground sm:text-6xl lg:text-[4.1rem]">
-                {copy.titleA}
+                {copy.titleA}{" "}
                 <span className="mt-2 block text-emerald-700">{copy.titleB}</span>
               </h1>
 
