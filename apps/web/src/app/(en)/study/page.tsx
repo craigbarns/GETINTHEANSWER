@@ -6,6 +6,8 @@ import { ArrowRight } from "lucide-react";
 import { LogoMark } from "@/components/logo";
 import { Button } from "@/components/ui/button";
 import { formatScanDate, getBenchmarkStats } from "@/lib/city-scans";
+import { contractorSeoCities, getContractorSeoCity } from "@/lib/contractor-seo";
+import { getCity } from "@/lib/cities";
 import { STUDY_METHOD_UPDATED_AT } from "@/lib/content-dates";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 
@@ -217,6 +219,30 @@ export default function StudyPage() {
           </Link>
           .
         </p>
+
+        <section className="mt-12">
+          <h2 className="text-xl font-extrabold tracking-[-0.03em]">Contractor SEO in major US metros</h2>
+          <p className="mt-3 text-sm text-foreground/75">
+            Dedicated local playbooks for contractors: how the four AI engines answer &ldquo;best
+            contractor&rdquo; questions in each metro, and what it takes to get recommended.
+          </p>
+          <ul className="mt-4 grid gap-2 text-sm sm:grid-cols-2 lg:grid-cols-3">
+            {contractorSeoCities.map(({ city }) => {
+              const cityData = getCity(city);
+              if (!cityData) return null;
+              return (
+                <li key={city}>
+                  <Link
+                    className="font-semibold text-emerald-700 hover:underline"
+                    href={`/contractor-seo/${city}`}
+                  >
+                    Contractor SEO in {cityData.name}, {cityData.stateCode}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
       </main>
     </div>
   );
