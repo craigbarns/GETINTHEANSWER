@@ -1,10 +1,11 @@
 import type { Locale } from "@/lib/i18n";
 
-/** Service offers are quoted in EUR, independently of the SaaS currency toggle.
- * They are pilot proposals, never Stripe subscriptions created by the site. */
+/** Service offers are quoted per market: EUR for the French site, USD for the
+ * English site. They are pilot proposals, never Stripe subscriptions created
+ * by the site. The Pro software currency toggle does not affect these prices. */
 export const GROWTH_PLANS = {
-  ai_growth: { name: "AI Growth", monthlyEur: 990, initialMonths: 3 },
-  ai_growth_plus: { name: "AI Growth Plus", monthlyEur: 1990, initialMonths: 3 },
+  ai_growth: { name: "AI Growth", monthlyEur: 990, monthlyUsd: 990, initialMonths: 3 },
+  ai_growth_plus: { name: "AI Growth Plus", monthlyEur: 1990, monthlyUsd: 1990, initialMonths: 3 },
 } as const;
 
 export type GrowthPlan = keyof typeof GROWTH_PLANS;
@@ -23,9 +24,16 @@ export function parseContactPlan(value: string | string[] | undefined): ContactP
 }
 
 export function growthPrice(plan: GrowthPlan, locale: Locale) {
-  return new Intl.NumberFormat(locale === "fr" ? "fr-FR" : "en-IE", {
+  if (locale === "fr") {
+    return new Intl.NumberFormat("fr-FR", {
+      style: "currency",
+      currency: "EUR",
+      maximumFractionDigits: 0,
+    }).format(GROWTH_PLANS[plan].monthlyEur);
+  }
+  return new Intl.NumberFormat("en-US", {
     style: "currency",
-    currency: "EUR",
+    currency: "USD",
     maximumFractionDigits: 0,
-  }).format(GROWTH_PLANS[plan].monthlyEur);
+  }).format(GROWTH_PLANS[plan].monthlyUsd);
 }

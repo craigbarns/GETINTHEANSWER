@@ -3,6 +3,7 @@ import "@/app/globals.css";
 
 import { Analytics } from "@/components/analytics";
 import { SiteFooter } from "@/components/site-footer";
+import { growthPrice } from "@/lib/growth";
 import { DEFAULT_CURRENCY_BY_LOCALE, OG_LOCALE, localePath, type Locale } from "@/lib/i18n";
 import { CURRENCY_STORAGE_KEY } from "@/lib/pricing";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
@@ -12,7 +13,7 @@ const ROOT_COPY: Record<Locale, { title: string; template: string; description: 
     title: "AI Visibility Audit & GEO for Local Businesses | GetInTheAnswer",
     template: "%s | GetInTheAnswer",
     description:
-      "Get a free AI visibility plan, then let us handle website fixes, useful content and monthly measurement. AI Growth pilot service from EUR 990 per month.",
+      `Get a free AI visibility plan, then let us handle website fixes, useful content and monthly measurement. AI Growth pilot service from ${growthPrice("ai_growth", "en")} per month.`,
     ogTitle: "GetInTheAnswer — Turn AI visibility into action",
     ogDescription:
       "A free visibility plan, website improvements and useful content. You approve publication; we handle the agreed work and measure changes.",

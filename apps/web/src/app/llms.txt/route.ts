@@ -69,15 +69,15 @@ Method, stated plainly so it can be checked:
 
 ## Product and plans
 
-- [AI Growth](${SITE_URL}/contact?plan=ai-growth): EUR ${GROWTH_PLANS.ai_growth.monthlyEur}/month,
+- [AI Growth](${SITE_URL}/contact?plan=ai-growth): $${GROWTH_PLANS.ai_growth.monthlyUsd}/month,
   excluding tax, 3-month initial commitment. Pilot proposal: technical audit,
   scoped website fixes, 2 useful pages per month, weekly model checks and a
   monthly report. Scope and quote confirmed before payment.
-- [AI Growth Plus](${SITE_URL}/contact?plan=ai-growth-plus): EUR ${GROWTH_PLANS.ai_growth_plus.monthlyEur}/month,
+- [AI Growth Plus](${SITE_URL}/contact?plan=ai-growth-plus): $${GROWTH_PLANS.ai_growth_plus.monthlyUsd}/month,
   excluding tax, 3-month initial commitment. Expanded editorial program,
   legitimate external visibility opportunities and monthly strategic support,
   with the scope confirmed in the quote.
-- Service prices are in EUR regardless of the Pro software currency toggle.
+- Service prices are quoted per market: USD on the English site, EUR on the French site. The Pro software currency toggle does not change service prices.
 - Clients approve publication. Automated WordPress/Shopify publishing is not
   currently a product feature. No AI mentions, traffic or customers are guaranteed.
 - Google AI Overviews and AI Mode are addressed through SEO fundamentals.

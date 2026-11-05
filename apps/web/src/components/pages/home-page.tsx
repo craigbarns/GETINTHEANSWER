@@ -19,7 +19,7 @@ import { Button } from "@/components/ui/button";
 import { formatScanDate, getBenchmarkStats, getCityScan, getScannedPairs, type CityScan } from "@/lib/city-scans";
 import { DATE_LOCALE, DEFAULT_CURRENCY_BY_LOCALE, localePath, type Locale } from "@/lib/i18n";
 import { CURRENCIES, PRICES } from "@/lib/pricing";
-import { GROWTH_PLANS } from "@/lib/growth";
+import { GROWTH_PLANS, growthPrice } from "@/lib/growth";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 
 /** The real scan shown in the hero. Falls back to any published scan. */
@@ -224,7 +224,7 @@ function getCopy(locale: Locale, stats: ReturnType<typeof getBenchmarkStats>) {
     faqs: [
       {
         question: "What is included in AI Growth?",
-        answer: "The EUR 990 per month pilot, excluding tax, includes a technical audit, agreed website fixes, two useful pages per month, weekly tracking on available AI engines and a monthly report. The initial commitment is three months. Scope and required access are confirmed before any payment."
+        answer: `The ${growthPrice("ai_growth", "en")} per month pilot, excluding tax, includes a technical audit, agreed website fixes, two useful pages per month, weekly tracking on available AI engines and a monthly report. The initial commitment is three months. Scope and required access are confirmed before any payment.`
       },
       {
         question: "Is the visibility plan really free?",
@@ -243,8 +243,8 @@ function getCopy(locale: Locale, stats: ReturnType<typeof getBenchmarkStats>) {
         answer: "We submit copy and fixes for your approval before publication. Publishing depends on your approval and the access specified in the quote. Automated WordPress and Shopify publishing integrations are not offered as existing features."
       },
       {
-        question: "Is the 29 per month software plan still available?",
-        answer: "Yes. Pro remains a self-service full report, editable content and weekly tracking plan, priced at EUR 29 or USD 29 per month. It does not include the implementation work of AI Growth. Applicable taxes appear at Stripe checkout before confirmation."
+        question: "Is the $29 per month software plan still available?",
+        answer: "Yes. Pro remains a self-service full report, editable content and weekly tracking plan, priced at $29 per month (or €29 on the French site). It does not include the implementation work of AI Growth. Applicable taxes appear at Stripe checkout before confirmation."
       }
     ] satisfies Faq[],
   };
