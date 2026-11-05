@@ -750,6 +750,28 @@ export const industries: Industry[] = [
   },
 ];
 
+/** Plural names for titles and H1s. A singular in a plural slot reads like a
+ *  typo ("AI SEO for Roofer in Tampa") and costs CTR on live pages — the GSC
+ *  data shows pages ranking with the singular form got near-zero clicks. */
+const PLURAL_NAMES: Record<string, string> = {
+  plumbers: "Plumbers",
+  dentists: "Dentists",
+  lawyers: "Lawyers",
+  "real-estate-agents": "Real Estate Agents",
+  restaurants: "Restaurants",
+  "hvac-contractors": "HVAC Contractors",
+  roofers: "Roofers",
+  electricians: "Electricians",
+  "med-spas": "Med Spas",
+  chiropractors: "Chiropractors",
+  "pest-control": "Pest Control Companies",
+  "auto-repair": "Auto Repair Shops",
+};
+
+export function pluralName(industry: Industry): string {
+  return PLURAL_NAMES[industry.slug] ?? `${industry.singularName}s`;
+}
+
 export function getIndustry(slug: string): Industry | undefined {
   return industries.find((industry) => industry.slug === slug);
 }

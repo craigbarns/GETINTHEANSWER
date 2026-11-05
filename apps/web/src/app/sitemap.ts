@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getBenchmarkStats, getCityScan, getScannedPairs } from "@/lib/city-scans";
 import { getCity } from "@/lib/cities";
+import { contractorSeoCities } from "@/lib/contractor-seo";
 import { STUDY_METHOD_UPDATED_AT } from "@/lib/content-dates";
 import { guides } from "@/lib/guides";
 import { localePath } from "@/lib/i18n";
@@ -82,6 +83,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
     ...industries.map((industry) => ({
       url: `${SITE_URL}/ai-seo-for/${industry.slug}`,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    })),
+    ...contractorSeoCities.map(({ city }) => ({
+      url: `${SITE_URL}/contractor-seo/${city}`,
       changeFrequency: "monthly" as const,
       priority: 0.8,
     })),

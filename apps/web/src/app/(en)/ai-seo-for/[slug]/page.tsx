@@ -6,7 +6,7 @@ import { ArrowLeft, ArrowRight, CheckCircle2, HelpCircle, Sparkles, Zap } from "
 import { LogoMark } from "@/components/logo";
 import { Button } from "@/components/ui/button";
 import { cities } from "@/lib/cities";
-import { getIndustry, industries } from "@/lib/industries";
+import { getIndustry, industries, pluralName } from "@/lib/industries";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 
 export function generateStaticParams() {
@@ -17,9 +17,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const industry = getIndustry(slug);
   if (!industry) return {};
+  const plural = pluralName(industry);
+  const title = `AI SEO for ${plural} | Free AI Visibility Audit`;
+  const description =
+    `See which AI engines recommend ${plural.toLowerCase()} — and which they skip. Benchmark your industry, then run a free visibility scan for your business.`;
   return {
-    title: industry.metaTitle,
-    description: industry.metaDescription,
+    title: { absolute: title },
+    description,
     alternates: { canonical: `/ai-seo-for/${industry.slug}` },
     openGraph: {
       title: industry.metaTitle,

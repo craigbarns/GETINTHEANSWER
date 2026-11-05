@@ -7,7 +7,7 @@ import { LogoMark } from "@/components/logo";
 import { Button } from "@/components/ui/button";
 import { cities, getCity } from "@/lib/cities";
 import { formatScanDate, getCityScan, hasCityScan } from "@/lib/city-scans";
-import { getIndustry, industries } from "@/lib/industries";
+import { getIndustry, industries, pluralName } from "@/lib/industries";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 
 export function generateStaticParams() {
@@ -30,8 +30,16 @@ export async function generateMetadata({
   const city = getCity(citySlug);
   if (!industry || !city) return {};
 
-  const title = `AI SEO for ${industry.singularName} in ${city.name}, ${city.stateCode}`;
-  const description = `Explore ${industry.singularName.toLowerCase()} recommendations in ${city.name}, ${city.stateCode} from AI models. See recorded results and run a free visibility scan.`;
+  // The plural form reads naturally in titles and H1s; the singular ("Roofer
+  // in Tampa") read like a typo and showed a near-zero CTR in Search Console.
+  // Keep the title short enough that the scan suffix fits before truncation.
+  const plural = pluralName(industry);
+  const baseTitle = `AI SEO for ${plural} in ${city.name}, ${city.stateCode}`;
+  const title = baseTitle.length <= 55
+    ? `${baseTitle} | Free AI Visibility Scan`
+    : baseTitle;
+  const description =
+    `See which AI engines recommend ${plural.toLowerCase()} in ${city.name}, ${city.stateCode} — and which they skip. Then run a free visibility scan for your business.`;
 
   // Until a pair has measured data it is the industry template with the city
   // name swapped in. Keep those out of the index rather than asking Google to
@@ -75,11 +83,13 @@ export default async function IndustryCityPage({
   }
   hash = Math.abs(hash);
 
+  // The plural reads naturally ("Roofers", "Pest Control Companies") while the
+  // singular form showed a near-zero CTR in Search Console data.
   const h1Templates = [
-    `When ${formattedCity} residents ask an AI for a ${industry.singularName.toLowerCase()}, are you in the answer?`,
+    `When ${formattedCity} residents ask an AI for ${pluralName(industry).toLowerCase()}, are you in the answer?`,
     `Is your ${industry.singularName.toLowerCase()} business the top recommendation for AI users in ${formattedCity}?`,
-    `How ${formattedCity} customers use ChatGPT to find the best ${industry.singularName.toLowerCase()} today.`,
-    `Dominate AI search results for ${industry.singularName.toLowerCase()} services in ${formattedCity}.`
+    `How ${formattedCity} customers use ChatGPT to find the best ${pluralName(industry).toLowerCase()} today.`,
+    `Dominate AI search results for ${pluralName(industry).toLowerCase()} in ${formattedCity}.`
   ];
   
   const descTemplates = [
