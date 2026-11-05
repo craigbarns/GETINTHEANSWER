@@ -81,3 +81,28 @@ export async function getDashboardData(siteId: string, locale: Locale = "en"): P
     return null;
   }
 }
+
+export interface AiAgentSummary {
+  site_id: string;
+  crawler_visits: number;
+  ai_referral_visits: number;
+  crawlers: Record<string, number>;
+  referral_engines: Record<string, number>;
+  top_crawled_paths: string[];
+}
+
+export async function getAiAgentSummary(siteId: string): Promise<AiAgentSummary | null> {
+  try {
+    const response = await fetch(`${API_BASE_URL}/api/ai-analytics/summary/${encodeURIComponent(siteId)}`, {
+      cache: "no-store",
+    });
+
+    if (!response.ok) {
+      return null;
+    }
+
+    return (await response.json()) as AiAgentSummary;
+  } catch {
+    return null;
+  }
+}
