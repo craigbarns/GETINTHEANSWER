@@ -53,6 +53,15 @@ function getCopy(locale: Locale, stats: ReturnType<typeof getBenchmarkStats>) {
   const unanimous = stats ? `${stats.unanimousShare}` : "";
   const sole = stats ? `${stats.soleMentionShare}` : "";
 
+  const benchmarkLine =
+    stats
+      ? locale === "fr"
+        ? ` — la même mesure que notre étude de ${formatNumber(stats.scans, locale)} recherches locales dans ${formatNumber(stats.cities, locale)} villes américaines.`
+        : ` — the same four-engine measurement behind our benchmark of ${formatNumber(stats.scans, locale)} local searches in ${formatNumber(stats.cities, locale)} US cities.`
+      : locale === "fr"
+        ? " — la même mesure que notre étude de référence sur la visibilité IA locale."
+        : " — the same four-engine measurement behind our published AI visibility benchmark.";
+
   if (locale === "fr") {
     return {
       nav: [
@@ -66,7 +75,7 @@ function getCopy(locale: Locale, stats: ReturnType<typeof getBenchmarkStats>) {
       titleA: "Faites de ChatGPT et Google AI",
       titleB: "de nouveaux canaux d’acquisition.",
       intro:
-        "Nous analysons votre visibilité, préparons les corrections de votre site et les contenus utiles à vos futurs clients, puis mesurons les changements chaque mois. Vous validez les publications ; nous prenons en charge le travail convenu.",
+        `Nous analysons votre visibilité sur ChatGPT, Claude, Gemini et Perplexity, préparons les corrections de votre site et les contenus utiles à vos futurs clients, puis mesurons les changements chaque mois. Vous validez les publications ; nous prenons en charge le travail convenu${benchmarkLine}`,
       trust: ["Plan gratuit, sans carte bancaire", "Contenus validés avant publication", "Optimisations et suivi mensuels"],
       proofLabel: "Question réelle posée aux IA",
       proofCity: "Étude GetInTheAnswer",
@@ -165,7 +174,7 @@ function getCopy(locale: Locale, stats: ReturnType<typeof getBenchmarkStats>) {
     titleA: "Make ChatGPT and Google AI",
     titleB: "new customer acquisition channels.",
     intro:
-      "We audit your visibility, prepare website improvements and useful content for your future customers, then measure changes each month. You approve publication; we handle the agreed work.",
+      `We audit your visibility on ChatGPT, Claude, Gemini and Perplexity, prepare website improvements and useful content for your future customers, then measure changes each month. You approve publication; we handle the agreed work${benchmarkLine}`,
     trust: ["Free plan, no credit card", "You approve before publication", "Monthly improvements and reporting"],
     proofLabel: "A real question we asked the AIs",
     proofCity: "GetInTheAnswer study",

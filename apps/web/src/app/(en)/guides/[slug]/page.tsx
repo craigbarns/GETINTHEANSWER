@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { HeroForm } from "@/components/hero-form";
 import { formatScanDate } from "@/lib/city-scans";
 import { getGuide, guides } from "@/lib/guides";
-import { SITE_NAME, SITE_URL } from "@/lib/site";
+import { SITE_AUTHOR, SITE_NAME, SITE_URL } from "@/lib/site";
 
 export function generateStaticParams() {
   return guides.map((guide) => ({ slug: guide.slug }));
@@ -71,7 +71,13 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
         "dateModified": guide.dateModified ?? guide.datePublished,
         "mainEntityOfPage": `${SITE_URL}/guides/${guide.slug}`,
         "inLanguage": "en-US",
-        "author": { "@type": "Organization", "name": SITE_NAME, "url": SITE_URL },
+        "author": {
+          "@type": "Person",
+          "name": SITE_AUTHOR.name,
+          "jobTitle": SITE_AUTHOR.role,
+          "worksFor": { "@type": "Organization", "name": SITE_NAME, "url": SITE_URL },
+          ...(SITE_AUTHOR.linkedin ? { sameAs: [SITE_AUTHOR.linkedin] } : {}),
+        },
         "publisher": { "@type": "Organization", "name": SITE_NAME, "url": SITE_URL },
       },
     ],
@@ -103,7 +109,11 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
           <p className="text-sm font-extrabold uppercase tracking-[0.16em] text-emerald-700">Guide · {guide.readingMinutes} min read</p>
           <h1 className="mt-4 text-balance text-4xl font-extrabold leading-[1.05] tracking-[-0.045em] sm:text-5xl">{guide.title}</h1>
           <p className="mt-4 text-sm text-muted-foreground">
-            By <Link className="font-semibold hover:underline" href="/legal">{SITE_NAME}</Link>
+            By {SITE_AUTHOR.linkedin ? (
+              <a className="font-semibold hover:underline" href={SITE_AUTHOR.linkedin} target="_blank" rel="noopener noreferrer">{SITE_AUTHOR.name}</a>
+            ) : (
+              <span className="font-semibold">{SITE_AUTHOR.name}</span>
+            )}
             {" · Updated "}
             <time dateTime={guide.dateModified ?? guide.datePublished}>
               {formatScanDate(guide.dateModified ?? guide.datePublished)}
@@ -139,6 +149,20 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
             </section>
           ))}
         </article>
+
+        <section className="mt-12 rounded-2xl border border-foreground/8 bg-white p-6 sm:p-8" aria-label="About the author">
+          <h2 className="text-lg font-extrabold tracking-[-0.03em]">About the author</h2>
+          <p className="mt-3 text-sm leading-7 text-foreground/75">{SITE_AUTHOR.bio.en}</p>
+          <p className="mt-3 text-sm text-foreground/60">
+            {SITE_AUTHOR.name}, {SITE_AUTHOR.role}
+            {SITE_AUTHOR.linkedin ? (
+              <>
+                {" · "}
+                <a className="font-semibold text-emerald-700 hover:underline" href={SITE_AUTHOR.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              </>
+            ) : null}
+          </p>
+        </section>
 
         <section className="mt-14 rounded-[1.75rem] bg-emerald-50 border border-emerald-100 p-7 sm:p-9">
           <h2 className="text-2xl font-extrabold tracking-[-0.035em] text-emerald-950">Is your business visible in AI answers?</h2>
