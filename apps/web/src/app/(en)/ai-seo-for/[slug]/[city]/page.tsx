@@ -170,6 +170,9 @@ export default async function IndustryCityPage({
   // its industry, and a complete grid gives every city two internal links from
   // its siblings instead of the arbitrary five before.
   const otherCities = cities.filter((c) => c.slug !== city.slug);
+  // Cross-industry mesh: every other trade's page for THIS city, so each city
+  // page links to the 11 sibling industries (11 × 20 city pairs per page).
+  const siblingIndustries = industries.filter((other) => other.slug !== industry.slug);
 
   return (
     <div className="min-h-screen bg-[#f8f8f3]">
@@ -360,6 +363,25 @@ export default async function IndustryCityPage({
                 key={otherCity.slug}
               >
                 <span className="text-sm font-bold">{industry.singularName} in {otherCity.name}, {otherCity.stateCode}</span>
+                <ArrowRight className="size-4 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-1" aria-hidden="true" />
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        {/* Cross-industry mesh: the other trades serving this same city. */}
+        <section className="mt-14 border-t border-foreground/10 pt-10">
+          <h2 className="text-xl font-extrabold tracking-[-0.03em]">
+            Other local businesses we track in {formattedCity}
+          </h2>
+          <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {siblingIndustries.map((other) => (
+              <Link
+                className="group flex items-center justify-between rounded-2xl border border-foreground/8 bg-white p-4 transition-colors hover:border-primary/30"
+                href={`/ai-seo-for/${other.slug}/${city.slug}`}
+                key={other.slug}
+              >
+                <span className="text-sm font-bold">{other.singularName} in {city.name}</span>
                 <ArrowRight className="size-4 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-1" aria-hidden="true" />
               </Link>
             ))}
