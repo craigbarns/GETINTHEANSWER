@@ -4,9 +4,9 @@ import { OnboardingPage } from "@/components/pages/onboarding-page";
 import { localizedAlternates } from "@/lib/i18n";
 
 export const metadata: Metadata = {
-  title: "Analyse de visibilité IA gratuite",
+  title: "ChatGPT recommande-t-il votre entreprise ? Scan gratuit",
   description:
-    "Obtenez un rapport de visibilité IA gratuit : réponses des modèles, concurrents cités et actions recommandées pour votre entreprise.",
+    "Vérifiez en 2 minutes si ChatGPT, Claude, Gemini et Perplexity recommandent votre entreprise — ou vos concurrents. Sans carte bancaire.",
   alternates: localizedAlternates("fr", "/onboarding"),
 };
 
