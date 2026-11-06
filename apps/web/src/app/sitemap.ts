@@ -49,6 +49,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...bilingual("/sample-report", "monthly", 0.85),
     ...bilingual("/agency", "monthly", 0.7),
     ...bilingual("/contact", "monthly", 0.7),
+    ...bilingual("/pricing", "monthly", 0.7),
     {
       url: `${SITE_URL}/guides`,
       changeFrequency: "weekly",

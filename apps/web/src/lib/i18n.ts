@@ -10,7 +10,7 @@ export const DEFAULT_LOCALE: Locale = "en";
 
 /** Pages that exist in both languages. Every other path is English-only, so a
  *  French page linking to it keeps the plain English URL. */
-export const LOCALIZED_PATHS = ["/", "/onboarding", "/sample-report", "/agency", "/contact", "/dashboard"] as const;
+export const LOCALIZED_PATHS = ["/", "/onboarding", "/sample-report", "/agency", "/contact", "/dashboard", "/pricing"] as const;
 
 export const DEFAULT_CURRENCY_BY_LOCALE: Record<Locale, Currency> = {
   en: "usd",
