@@ -25,7 +25,9 @@ from site_audit import SiteAudit, UnsafeWebsiteUrl, audit_site, validate_public_
 from sqlalchemy import create_engine, text
 
 import ai_agents
+import chat_probe
 from ai_agents import AiAgentHit, AiAgentSummary
+from openai import AsyncOpenAI
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "").strip()
 OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
@@ -1652,6 +1654,23 @@ def get_dashboard(site_id: str, locale: Optional[str] = None):
 
 
 AI_AGENT_SUMMARY_DAYS = 30
+
+
+@app.post("/api/chat-probe")
+async def chat_probe_endpoint(body: chat_probe.ChatProbeRequest):
+    """One free question, one engine, no signup — the instant visibility chat."""
+    if not (USE_OPENROUTER or OPENAI_API_KEY):
+        raise HTTPException(status_code=503, detail="AI engines not configured")
+    client = (
+        AsyncOpenAI(api_key=OPENROUTER_API_KEY, base_url=OPENROUTER_BASE_URL)
+        if USE_OPENROUTER
+        else AsyncOpenAI(api_key=OPENAI_API_KEY)
+    )
+    model = OR_CHATGPT_MODEL if USE_OPENROUTER else OPENAI_MODEL
+    result = await chat_probe.run_chat_probe(client, model, body)
+    if result is None:
+        raise HTTPException(status_code=502, detail="AI engine unavailable, try again shortly")
+    return result
 
 
 @app.post("/api/ai-analytics/log")
