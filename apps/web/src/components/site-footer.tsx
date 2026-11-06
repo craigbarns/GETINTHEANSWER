@@ -77,6 +77,22 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
           </nav>
         </div>
         <p className="text-xs leading-5 text-muted-foreground">{copy.publisher}</p>
+        <a
+          className="w-fit"
+          href="https://geocitely.com/tools/getintheanswer?utm_source=badge&utm_medium=referral&utm_campaign=listed-on"
+          target="_blank"
+          rel="noopener"
+          title="GetInTheAnswer on Geocitely"
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="https://geocitely.com/badges/listed-on-geocitely-light.svg"
+            alt="GetInTheAnswer is listed on Geocitely, the GEO tools directory"
+            width={220}
+            height={56}
+            loading="lazy"
+          />
+        </a>
         {locale === "en" ? (
           <div className="border-t border-foreground/8 pt-6">
             <h3 className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
