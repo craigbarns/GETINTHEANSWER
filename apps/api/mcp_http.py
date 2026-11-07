@@ -7,7 +7,7 @@ connector. Tools read the same data as the dashboard — read-only.
 
 from mcp.server.fastmcp import FastMCP
 
-mcp = FastMCP("getintheanswer")
+mcp = FastMCP("getintheanswer", streamable_http_path="/")
 
 
 @mcp.tool()

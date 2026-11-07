@@ -1,4 +1,5 @@
 import asyncio
+from contextlib import asynccontextmanager
 import ipaddress
 import json
 import logging
@@ -126,6 +127,20 @@ app.add_middleware(
 # remote URL (no local install). Read-only tools over the same data as the
 # dashboard. Mounted after CORS so the middleware applies to the sub-app too.
 app.mount("/mcp", mcp_http.mcp.streamable_http_app())
+
+# Mounting a Starlette sub-app does not run its lifespan: the MCP session
+# manager (task group) must be started explicitly, so we wrap the router's
+# lifespan context around it.
+_original_lifespan = app.router.lifespan_context
+
+
+@asynccontextmanager
+async def mcp_lifespan(app_: FastAPI):
+    async with mcp_http.mcp.session_manager.run():
+        await _original_lifespan(app_)
+
+
+app.router.lifespan_context = mcp_lifespan
 
 db_engine = create_engine(DATABASE_URL, pool_pre_ping=True) if DATABASE_URL else None
 
