@@ -126,7 +126,6 @@ app.add_middleware(
 # MCP over Streamable HTTP: agencies connect Claude Desktop / Cursor with a
 # remote URL (no local install). Read-only tools over the same data as the
 # dashboard. Mounted after CORS so the middleware applies to the sub-app too.
-app.mount("/mcp", mcp_http.mcp.streamable_http_app())
 
 # Mounting a Starlette sub-app does not run its lifespan: the MCP session
 # manager (task group) must be started explicitly, so we wrap the router's
@@ -1773,6 +1772,12 @@ def ai_agent_summary(site_id: str):
         referral_engines=engines,
         top_crawled_paths=[],
     )
+
+
+# Catch-all mount LAST: unmatched paths fall through to the MCP server,
+# which serves /mcp natively (no redirect — strict MCP clients reject the
+# http->https redirect chain).
+app.mount("/", mcp_http.mcp.streamable_http_app())
 
 
 if __name__ == "__main__":

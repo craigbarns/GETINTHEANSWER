@@ -14,7 +14,6 @@ import os
 # domain in production (e.g. api.getintheanswer.com).
 mcp = FastMCP(
     "getintheanswer",
-    streamable_http_path="/",
     host=os.getenv("MCP_HOST", "127.0.0.1"),
 )
 
