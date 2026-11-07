@@ -135,12 +135,13 @@ _original_lifespan = app.router.lifespan_context
 
 
 @asynccontextmanager
-async def mcp_lifespan(app_: FastAPI):
+async def combined_lifespan(app_: FastAPI):
     async with mcp_http.mcp.session_manager.run():
-        await _original_lifespan(app_)
+        async with _original_lifespan(app_):
+            yield
 
 
-app.router.lifespan_context = mcp_lifespan
+app.router.lifespan_context = combined_lifespan
 
 db_engine = create_engine(DATABASE_URL, pool_pre_ping=True) if DATABASE_URL else None
 
