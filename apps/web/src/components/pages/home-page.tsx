@@ -114,7 +114,7 @@ function getCopy(locale: Locale, stats: ReturnType<typeof getBenchmarkStats>) {
       demoEyebrow: "Le plan devient du travail réalisé",
       demoTitle: "Vos priorités sont claires. Nous pouvons les mettre en œuvre.",
       demoIntro: "Avec AI Growth, le diagnostic sert à choisir les corrections et les contenus à produire. Nous convenons du périmètre avant de commencer, puis soumettons chaque publication à votre validation.",
-      demoCta: "Obtenir mon plan gratuit",
+      demoCta: "Obtenir mon scan gratuit",
       demoSample: "Voir l’exemple de rapport complet",
       demoPlan: "Exemple de plan d’action",
       demoHeading: "3 exemples de travaux possibles",
@@ -174,7 +174,7 @@ function getCopy(locale: Locale, stats: ReturnType<typeof getBenchmarkStats>) {
     titleA: "Is ChatGPT recommending you?",
     titleB: "Free scan. Two minutes.",
     intro:
-      `We audit your visibility on ChatGPT, Claude, Gemini and Perplexity, prepare website improvements and useful content for your future customers, then measure changes each month. You approve publication; we handle the agreed work${benchmarkLine}`,
+      `We measure whether AI engines recommend your business — then fix what keeps you invisible.${benchmarkLine}`,
     trust: ["Free plan, no credit card", "You approve before publication", "Monthly improvements and reporting"],
     proofLabel: "A real question we asked the AIs",
     proofCity: "GetInTheAnswer study",
@@ -213,7 +213,7 @@ function getCopy(locale: Locale, stats: ReturnType<typeof getBenchmarkStats>) {
     demoEyebrow: "From a plan to work delivered",
     demoTitle: "Clear priorities. A team to implement them.",
     demoIntro: "With AI Growth, the audit helps us choose the fixes and pages to produce. We agree on scope before starting and ask you to approve each publication.",
-    demoCta: "Get my free visibility plan",
+    demoCta: "Get my free scan",
     demoSample: "See the full sample report",
     demoPlan: "Example action plan",
     demoHeading: "3 examples of possible work",
@@ -231,7 +231,7 @@ function getCopy(locale: Locale, stats: ReturnType<typeof getBenchmarkStats>) {
     faqTitle: "Your questions, answered.",
     faqMore: ["Want to go deeper? Read our", "guides on AI visibility and GEO", "."],
     finalTitle: "Turn your diagnosis into the first improvements.",
-    finalText: "Get your free visibility plan. Then we can review the improvements we could carry out together.",
+    finalText: "Get your free scan. Then we can review the improvements we could carry out together.",
     faqs: [
       {
         question: "What is included in AI Growth?",
@@ -357,7 +357,7 @@ export function HomePage({ locale }: { locale: Locale }) {
   return (
     <div className="min-h-screen bg-[#f8f8f3]">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
-      <SiteHeader locale={locale} path="/" links={copy.nav} ctaLong={locale === "fr" ? "Mon plan gratuit" : "My free plan"} ctaShort={locale === "fr" ? "Plan gratuit" : "Free plan"} />
+      <SiteHeader locale={locale} path="/" links={copy.nav} ctaLong={locale === "fr" ? "Mon scan gratuit" : "My free scan"} ctaShort={locale === "fr" ? "Scan gratuit" : "Free scan"} />
 
       <main id="main-content">
         <section className="relative overflow-hidden border-b border-foreground/8">
@@ -392,7 +392,7 @@ export function HomePage({ locale }: { locale: Locale }) {
 
             {locale === "fr" && <FrenchAnalysisPreview />}
             {scan && (
-              <div id="proof" className="relative mx-auto w-full min-w-0 max-w-2xl scroll-mt-24 animate-fade-in-up lg:mx-0" style={{ animationDelay: "120ms" }}>
+              <div id="proof" className="relative mx-auto w-full min-w-0 max-w-2xl scroll-mt-24 animate-fade-in-up lg:mx-0">
                 <div className="absolute -inset-5 -rotate-2 rounded-[2.25rem] bg-primary/8" aria-hidden="true" />
                 <div className="relative overflow-hidden rounded-[1.75rem] border border-foreground/10 bg-[#173b35] p-3 shadow-2xl shadow-primary/20 sm:p-4">
                   <div className="flex flex-wrap items-center justify-between gap-2 px-3 py-2">
