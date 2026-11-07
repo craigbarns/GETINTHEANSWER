@@ -40,6 +40,15 @@ score history.
 
 ## ✅ Verified 2026-11-07 (Claude Desktop, macOS)
 
+Second, combined verification (skill + MCP): Claude loaded the
+getintheanswer-data skill, called all three tools and produced a
+client-ready analysis of superhome.fr (Marseille real estate): score
+2/100, competitors segmented by intent (Orpi/Pujol 10, Homki 9,
+beach-adjacent and rental agencies), site audit findings, the
+commission-donation insight, honest no-guarantee commitments and the
+AI Growth 990 / one-shot 490 recommendation. This transcript is the
+agency demo. 
+
 Live test against the production API returned, via get_client_report +
 get_ai_agent_activity + get_score_history: superhome.fr, score 2/100,
 1/40 mentions (Perplexity only, 75% confidence), Orpi 10 / Pujol 10 /
