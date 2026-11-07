@@ -1,5 +1,5 @@
 ---
-name: getintheanswer
+name: getintheanswer-data
 description: AI visibility data and GEO knowledge for GetInTheAnswer (getintheanswer.com). Use when the user asks about AI visibility scores, whether ChatGPT/Claude/Gemini/Perplexity recommends a business, GEO for local businesses, or references a client report, site_id, or the /study data.
 ---
 
