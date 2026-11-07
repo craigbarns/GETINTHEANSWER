@@ -23,6 +23,7 @@ from pydantic import AnyHttpUrl, BaseModel, ConfigDict, Field, model_validator
 from email_service import NOTIFY_ADDRESS, agency_inquiry_email, notify_scan_completed_email, report_ready_email, send_email, weekly_report_email
 from weekly_updates import build_weekly_changes
 from site_audit import SiteAudit, UnsafeWebsiteUrl, audit_site, validate_public_http_url
+import aeo_audit
 from sqlalchemy import create_engine, text
 
 import ai_agents
@@ -1702,6 +1703,39 @@ def get_dashboard_history(site_id: str):
     except ValueError:
         raise HTTPException(status_code=404, detail="Report not found")
     return load_history(site_id)
+
+
+@app.post("/api/aeo-audit")
+async def aeo_audit_endpoint(body: dict):
+    """On-site AEO audit: 16 deterministic checks + content-quality prior, A-F grade."""
+    url = str(body.get("url") or "").strip()
+    if not url:
+        raise HTTPException(status_code=422, detail="A website URL is required")
+    if not url.startswith(("http://", "https://")):
+        url = "https://" + url
+    try:
+        report = await aeo_audit.aeo_audit(url)
+    except aeo_audit.UnsafeWebsiteUrl as exc:
+        raise HTTPException(status_code=400, detail=str(exc))
+    return {
+        "url": report.url,
+        "fetched": report.fetched,
+        "pages_crawled": report.pages_crawled,
+        "foundational_score": report.foundational_score,
+        "intelligence_score": report.intelligence_score,
+        "final_score": report.final_score,
+        "grade": report.grade,
+        "checks": [
+            {"key": c.key, "label": c.label, "passed": c.passed,
+             "failed_pages": c.failed_pages, "detail": c.detail}
+            for c in report.checks
+        ],
+        "dimensions": [
+            {"key": d.key, "label": d.label, "score": round(d.score, 1), "rationale": d.rationale}
+            for d in report.dimensions
+        ],
+        "fixes": [{"title": f.title, "impact": f.impact, "why": f.why} for f in report.fixes],
+    }
 
 
 @app.post("/api/ai-analytics/log")
