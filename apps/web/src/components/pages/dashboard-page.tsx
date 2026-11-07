@@ -142,6 +142,10 @@ const COPY = {
     historyEyebrow: "Weekly tracking",
     historyTitle: "Score history",
     historyAria: "Visibility score over time",
+    sovEyebrow: "Share of voice",
+    sovTitle: "Who gets cited in your market",
+    sovText: "Mentions across every answer check: your brand vs the competitors AI engines name instead of you.",
+    sovYou: "You",
     planEyebrow: "Action plan",
     planTitle: "Your next moves",
     planText: "Ranked by urgency and estimated impact.",
@@ -240,6 +244,10 @@ const COPY = {
     historyEyebrow: "Suivi hebdomadaire",
     historyTitle: "Historique du score",
     historyAria: "Évolution du score de visibilité",
+    sovEyebrow: "Part de voix",
+    sovTitle: "Qui est cité sur votre marché",
+    sovText: "Mentions sur toutes les vérifications de réponses : votre marque face aux concurrents que les IA nomment à votre place.",
+    sovYou: "Vous",
     planEyebrow: "Plan d’action",
     planTitle: "Vos prochaines actions",
     planText: "Classées par urgence et impact estimé.",
@@ -329,6 +337,16 @@ export async function DashboardPage({ locale, searchParams }: { locale: Locale; 
     const mentions = queries.filter((query) => query.brand_mentioned).length;
     return { engine, mentions, total: queries.length, rate: queries.length ? Math.round((mentions / queries.length) * 100) : 0 };
   });
+  const sovCounts: Record<string, number> = {};
+  data.queries.forEach((query) => {
+    query.competitors_detected.forEach((competitor) => {
+      const name = (competitor || "").trim();
+      if (!name || name.includes("•")) return;
+      sovCounts[name] = (sovCounts[name] ?? 0) + 1;
+    });
+  });
+  const sovTop = Object.entries(sovCounts).sort((a, b) => b[1] - a[1]).slice(0, 5);
+  const sovMax = Math.max(1, data.brand_mentions, ...sovTop.map(([, count]) => count));
   const billingStatus = billingError
     ? "confirmation_error"
     : checkout === "success" && data.unlocked
@@ -556,6 +574,32 @@ export async function DashboardPage({ locale, searchParams }: { locale: Locale; 
                   <span className="text-[11px] font-bold text-muted-foreground">{point.date.slice(5)}</span>
                 </div>
               ))}
+            </div>
+          </section>
+        )}
+
+        {data.unlocked && sovTop.length > 0 && (
+          <section className="rounded-[1.75rem] border border-foreground/8 bg-white p-6 shadow-sm sm:p-7">
+            <p className="text-sm font-extrabold uppercase tracking-[0.12em] text-emerald-700">{copy.sovEyebrow}</p>
+            <h2 className="mt-2 text-2xl font-extrabold tracking-[-0.035em]">{copy.sovTitle}</h2>
+            <p className="mt-2 text-sm leading-6 text-muted-foreground">{copy.sovText}</p>
+            <div className="mt-6 space-y-3">
+              {sovTop.map(([name, count]) => (
+                <div className="flex items-center gap-3" key={name}>
+                  <span className="w-40 shrink-0 truncate text-sm font-bold">{name}</span>
+                  <div className="h-6 flex-1 overflow-hidden rounded-lg bg-foreground/6">
+                    <div className="h-full rounded-lg bg-[#173b35]" style={{ width: `${Math.round((count / sovMax) * 100)}%` }} />
+                  </div>
+                  <span className="w-8 shrink-0 text-right text-sm font-extrabold tabular-nums">{count}</span>
+                </div>
+              ))}
+              <div className="flex items-center gap-3">
+                <span className="w-40 shrink-0 truncate text-sm font-extrabold text-emerald-700">{copy.sovYou}</span>
+                <div className="h-6 flex-1 overflow-hidden rounded-lg bg-foreground/6">
+                  <div className="h-full rounded-lg bg-lime-500" style={{ width: `${Math.round((data.brand_mentions / sovMax) * 100)}%` }} />
+                </div>
+                <span className="w-8 shrink-0 text-right text-sm font-extrabold tabular-nums text-emerald-700">{data.brand_mentions}</span>
+              </div>
             </div>
           </section>
         )}
