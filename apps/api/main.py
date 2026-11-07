@@ -1673,6 +1673,16 @@ async def chat_probe_endpoint(body: chat_probe.ChatProbeRequest):
     return result
 
 
+@app.get("/api/dashboard/{site_id}/history")
+def get_dashboard_history(site_id: str):
+    """AI visibility score over time (last 12 measurements)."""
+    try:
+        uuid.UUID(site_id)
+    except ValueError:
+        raise HTTPException(status_code=404, detail="Report not found")
+    return load_history(site_id)
+
+
 @app.post("/api/ai-analytics/log")
 def log_ai_agent_hits(hits: list[AiAgentHit]):
     """Record AI crawler visits and AI-chat referrals for a site.
