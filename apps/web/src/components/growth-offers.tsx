@@ -34,6 +34,7 @@ const COPY = {
       },
     },
     fine: "Tarifs pilotes en euros hors taxes. Nous confirmons le périmètre, les accès nécessaires et le devis avant tout paiement. Les contenus et changements sont soumis à votre validation avant publication. Aucun volume de citations, de trafic ou de clients n’est garanti.",
+    diyEyebrow: "Pro — le logiciel en autonomie",
     diy: "Vous préférez agir vous-même ?",
     diyText: "Le logiciel Pro reste disponible : rapport complet, contenus à adapter et suivi hebdomadaire. Les optimisations sont à votre charge.",
     perMonth: " / mois",
@@ -67,6 +68,7 @@ const COPY = {
       },
     },
     fine: "Pilot prices exclude tax and match the currency shown. We confirm scope, required access and a quote before any payment. You approve content and changes before publication. AI mentions, traffic and new customers are not guaranteed.",
+    diyEyebrow: "Pro — the self-serve software",
     diy: "Prefer to do the work yourself?",
     diyText: "Pro software is still available: a full report, editable content and weekly tracking. You handle the improvements.",
     perMonth: " / month",
@@ -130,6 +132,7 @@ export function GrowthOffers({ locale }: { locale: Locale }) {
 
         <div id="software" className="mt-12 grid gap-6 rounded-3xl border border-foreground/10 bg-white p-6 sm:p-8 lg:grid-cols-[1fr_auto] lg:items-center">
           <div>
+            <p className="text-sm font-extrabold uppercase tracking-[0.12em] text-emerald-700">{copy.diyEyebrow}</p>
             <h3 className="text-xl font-extrabold">{copy.diy}</h3>
             <p className="mt-2 max-w-2xl text-sm leading-6 text-muted-foreground">{copy.diyText}</p>
             <p className="mt-3 text-sm font-bold"><Price amounts={PRICES.pro} suffix={copy.perMonth} /></p>
