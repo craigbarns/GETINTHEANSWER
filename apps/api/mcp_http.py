@@ -7,7 +7,16 @@ connector. Tools read the same data as the dashboard — read-only.
 
 from mcp.server.fastmcp import FastMCP
 
-mcp = FastMCP("getintheanswer", streamable_http_path="/")
+import os
+
+# The MCP SDK validates the Host header against this host (DNS rebinding
+# protection). Defaults to localhost; set MCP_HOST to the public API
+# domain in production (e.g. api.getintheanswer.com).
+mcp = FastMCP(
+    "getintheanswer",
+    streamable_http_path="/",
+    host=os.getenv("MCP_HOST", "127.0.0.1"),
+)
 
 
 @mcp.tool()
