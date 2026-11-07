@@ -20,7 +20,7 @@ import { formatScanDate, getBenchmarkStats, getCityScan, getScannedPairs, type C
 import { contractorSeoCities } from "@/lib/contractor-seo";
 import { getCity } from "@/lib/cities";
 import { DATE_LOCALE, DEFAULT_CURRENCY_BY_LOCALE, localePath, type Locale } from "@/lib/i18n";
-import { CURRENCIES, PRICES } from "@/lib/pricing";
+import { CURRENCIES, PRICES, formatPrice } from "@/lib/pricing";
 import { GROWTH_PLANS, growthPrice } from "@/lib/growth";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 
@@ -303,6 +303,7 @@ export function HomePage({ locale }: { locale: Locale }) {
         "@id": `${homeUrl}#website`,
         url: homeUrl,
         name: SITE_NAME,
+        dateModified: "2026-11-07",
         description: copy.intro,
         inLanguage: locale === "fr" ? "fr-FR" : "en-US",
       },
@@ -449,6 +450,45 @@ export function HomePage({ locale }: { locale: Locale }) {
                 </div>
               );
             })}
+          </div>
+        </section>
+
+        <section className="border-b border-foreground/8 bg-white py-14 sm:py-16" aria-labelledby="compare-heading">
+          <div className="mx-auto max-w-5xl px-5 sm:px-8">
+            <h2 id="compare-heading" className="text-xl font-extrabold tracking-tight">{locale === "fr" ? "Quelle offre pour quel site ?" : "Which plan fits which site?"}</h2>
+            <p className="mt-2 max-w-3xl text-sm leading-6 text-muted-foreground">{locale === "fr" ? "Trois façons d\u2019utiliser GetInTheAnswer, une seule mesure : la fréquence à laquelle les IA recommandent votre entreprise." : "Three ways to use GetInTheAnswer, one measurement: how often AI engines recommend your business."}</p>
+            <div className="mt-6 overflow-x-auto">
+              <table className="w-full min-w-[640px] border-collapse text-left text-sm">
+                <thead>
+                  <tr className="border-b border-foreground/15 text-xs font-extrabold uppercase tracking-[0.1em] text-muted-foreground">
+                    <th scope="col" className="py-3 pr-4">{locale === "fr" ? "Votre site" : "Your site"}</th>
+                    <th scope="col" className="py-3 pr-4">{locale === "fr" ? "Votre besoin" : "What you need"}</th>
+                    <th scope="col" className="py-3 pr-4">{locale === "fr" ? "Offre" : "Plan"}</th>
+                    <th scope="col" className="py-3">{locale === "fr" ? "Prix" : "Price"}</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-foreground/8">
+                  <tr>
+                    <th scope="row" className="py-4 pr-4 font-extrabold">{locale === "fr" ? "Commerce ou service local" : "Local business or service"}</th>
+                    <td className="py-4 pr-4 text-muted-foreground">{locale === "fr" ? "Être recommandé par les IA — site corrigé et contenu produit pour vous" : "Get recommended by AI engines — fixes and content done for you"}</td>
+                    <td className="py-4 pr-4 font-bold">AI Growth</td>
+                    <td className="py-4">{growthPrice("ai_growth", locale)}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" className="py-4 pr-4 font-extrabold">{locale === "fr" ? "Autonome" : "Self-serve"}</th>
+                    <td className="py-4 pr-4 text-muted-foreground">{locale === "fr" ? "Suivi hebdomadaire de votre visibilité IA, sans intervention" : "Weekly AI visibility tracking, no intervention"}</td>
+                    <td className="py-4 pr-4 font-bold">Pro</td>
+                    <td className="py-4">{formatPrice(PRICES.pro[DEFAULT_CURRENCY_BY_LOCALE[locale]], DEFAULT_CURRENCY_BY_LOCALE[locale])}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" className="py-4 pr-4 font-extrabold">{locale === "fr" ? "Agence SEO" : "SEO agency"}</th>
+                    <td className="py-4 pr-4 text-muted-foreground">{locale === "fr" ? "Suivi multi-clients avec connecteur MCP pour interroger Claude" : "Multi-client tracking with an MCP connector to query Claude"}</td>
+                    <td className="py-4 pr-4 font-bold">Agency</td>
+                    <td className="py-4">{formatPrice(PRICES.agency[DEFAULT_CURRENCY_BY_LOCALE[locale]], DEFAULT_CURRENCY_BY_LOCALE[locale])}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </section>
 
