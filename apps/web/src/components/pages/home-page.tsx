@@ -171,8 +171,8 @@ function getCopy(locale: Locale, stats: ReturnType<typeof getBenchmarkStats>) {
       { href: "/guides", label: "Guides" },
     ],
     eyebrow: "AI visibility, taken care of",
-    titleA: "Make ChatGPT and Google AI",
-    titleB: "new customer acquisition channels.",
+    titleA: "Is ChatGPT recommending you?",
+    titleB: "Free scan. Two minutes.",
     intro:
       `We audit your visibility on ChatGPT, Claude, Gemini and Perplexity, prepare website improvements and useful content for your future customers, then measure changes each month. You approve publication; we handle the agreed work${benchmarkLine}`,
     trust: ["Free plan, no credit card", "You approve before publication", "Monthly improvements and reporting"],
