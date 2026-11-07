@@ -96,6 +96,11 @@ CONTACT_RATE_LIMIT = env_int("CONTACT_RATE_LIMIT", 5)
 CONTACT_RATE_WINDOW_SECONDS = env_int("CONTACT_RATE_WINDOW_SECONDS", 24 * 60 * 60)
 CONTACT_RATE_LOCK = asyncio.Lock()
 CONTACT_ATTEMPTS: dict[str, deque[float]] = defaultdict(deque)
+
+AEO_AUDIT_RATE_WINDOW_SECONDS = env_int("AEO_AUDIT_RATE_WINDOW_SECONDS", 60 * 60)
+AEO_AUDIT_RATE_LIMIT = env_int("AEO_AUDIT_RATE_LIMIT", 5)
+AEO_AUDIT_RATE_LOCK = asyncio.Lock()
+AEO_AUDIT_ATTEMPTS: dict[str, deque[float]] = defaultdict(deque)
 SUBSCRIPTION_ACCESS_STATUSES = {"active", "trialing"}
 
 if STRIPE_SECRET_KEY:
@@ -356,6 +361,27 @@ async def enforce_scan_rate_limit(http_request: Request, payload: OnboardingRequ
                 )
         for key in keys:
             SCAN_ATTEMPTS[key].append(now)
+
+
+async def enforce_aeo_audit_rate_limit(http_request: Request) -> None:
+    keys = {f"ip:{client_identifier(http_request)}"}
+    now = time.monotonic()
+    cutoff = now - AEO_AUDIT_RATE_WINDOW_SECONDS
+
+    async with AEO_AUDIT_RATE_LOCK:
+        for key in keys:
+            bucket = AEO_AUDIT_ATTEMPTS[key]
+            while bucket and bucket[0] < cutoff:
+                bucket.popleft()
+            if len(bucket) >= AEO_AUDIT_RATE_LIMIT:
+                retry_after = max(1, round(bucket[0] + AEO_AUDIT_RATE_WINDOW_SECONDS - now))
+                raise HTTPException(
+                    status_code=429,
+                    detail="Audit limit reached. Please try again later.",
+                    headers={"Retry-After": str(retry_after)},
+                )
+        for key in keys:
+            AEO_AUDIT_ATTEMPTS[key].append(now)
 
 
 async def enforce_contact_rate_limit(http_request: Request, payload: AgencyInquiryRequest) -> None:
@@ -1706,8 +1732,9 @@ def get_dashboard_history(site_id: str):
 
 
 @app.post("/api/aeo-audit")
-async def aeo_audit_endpoint(body: dict):
+async def aeo_audit_endpoint(http_request: Request, body: dict):
     """On-site AEO audit: 16 deterministic checks + content-quality prior, A-F grade."""
+    await enforce_aeo_audit_rate_limit(http_request)
     url = str(body.get("url") or "").strip()
     if not url:
         raise HTTPException(status_code=422, detail="A website URL is required")

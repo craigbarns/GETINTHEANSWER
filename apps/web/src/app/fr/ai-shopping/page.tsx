@@ -9,13 +9,13 @@ import { localizedAlternates } from "@/lib/i18n";
 export const metadata: Metadata = {
   title: "Shopping Intelligence IA — ChatGPT recommande-t-il vos produits ?",
   description:
-    "Bientôt : suivez si ChatGPT, Gemini et Perplexity recommandent les produits de votre boutique quand un client demande quoi acheter — et quels concurrents passent devant vous. Rejoignez la liste d'attente.",
+    "Bientôt : suivez si ChatGPT, Gemini et Perplexity recommandent les produits de votre boutique quand un client demande quoi acheter — et quels concurrents passent devant vous. Rejoignez la liste d’attente.",
   alternates: localizedAlternates("fr", "/ai-shopping"),
 };
 
 const PILLARS = [
   { icon: ShoppingBag, title: "Import du catalogue", text: "Shopify, CSV ou flux Merchant Center — vos produits, prix et variantes." },
-  { icon: Target, title: "Questions d'achat", text: "20 à 50 vraies requêtes d'acheteurs par catégorie : quoi acheter, quelle marque, quelle boutique." },
+  { icon: Target, title: "Questions d’achat", text: "20 à 50 vraies requêtes d’acheteurs par catégorie : quoi acheter, quelle marque, quelle boutique." },
   { icon: BarChart3, title: "Visibilité par produit", text: "Quels de vos SKU sont recommandés, votre position moyenne, et qui est cité à votre place." },
   { icon: Wrench, title: "Corriger et re-mesurer", text: "Audit des fiches produits (schema Product/Offer, caractéristiques, comparatifs) puis nouvelle mesure après correction." },
 ];
@@ -37,7 +37,7 @@ export default function AiShoppingPageFr() {
         </Link>
         <div className="mt-6 max-w-3xl">
           <p className="text-sm font-extrabold uppercase tracking-[0.16em] text-emerald-700">Bientôt — Shopping Intelligence IA</p>
-          <h1 className="mt-4 text-balance text-4xl font-extrabold tracking-[-0.045em] sm:text-5xl">Vos concurrents apparaissent dans les recommandations d'achat de ChatGPT. Et vous ?</h1>
+          <h1 className="mt-4 text-balance text-4xl font-extrabold tracking-[-0.045em] sm:text-5xl">Vos concurrents apparaissent dans les recommandations d’achat de ChatGPT. Et vous ?</h1>
           <p className="mt-5 text-lg leading-8 text-muted-foreground">
             La plateforme qui mesure la visibilité IA des entreprises locales ouvre une verticale pour les boutiques en ligne : quels produits les IA recommandent, à quelle position, et quels concurrents elles placent devant vous.
           </p>
@@ -45,7 +45,7 @@ export default function AiShoppingPageFr() {
 
         <div className="mt-10">
           <AiShoppingWaitlist locale="fr" />
-          <p className="mt-3 text-center text-xs text-muted-foreground">Liste d'attente — ouverture de l'audit début 2027. Sans spam, sans carte.</p>
+          <p className="mt-3 text-center text-xs text-muted-foreground">Liste d’attente — ouverture de l’audit début 2027. Sans spam, sans carte.</p>
         </div>
 
         <div className="mt-14 rounded-[1.75rem] border border-foreground/10 bg-white p-7 shadow-sm sm:p-9">
@@ -78,7 +78,7 @@ export default function AiShoppingPageFr() {
         </div>
 
         <p className="mt-10 rounded-2xl bg-[#f8f8f3] p-5 text-xs leading-5 text-muted-foreground">
-          La mesure s'effectue via les API des modèles et couvre les réponses des IA, pas la surface commerciale ChatGPT Shopping. Cette page décrit un produit en développement — rejoignez la liste d'attente pour influencer son périmètre.
+          La mesure s’effectue via les API des modèles et couvre les réponses des IA, pas la surface commerciale ChatGPT Shopping. Cette page décrit un produit en développement — rejoignez la liste d’attente pour influencer son périmètre.
         </p>
       </main>
     </div>
