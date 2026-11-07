@@ -53,8 +53,8 @@
     }
   }
 
-  --animate-fade-in-up: fade-in-up 0.65s cubic-bezier(0.16, 1, 0.3, 1) both;
-  --animate-fade-in: fade-in 0.45s ease-out both;
+  --animate-fade-in-up: fade-in-up 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-fade-in: fade-in 0.3s ease-out both;
 }
 
 :root {
