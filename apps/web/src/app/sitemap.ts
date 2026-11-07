@@ -53,6 +53,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...bilingual("/tools/ai-chat", "weekly", 0.85),
     ...bilingual("/tools/aeo-audit", "weekly", 0.8),
     ...bilingual("/ai-shopping", "weekly", 0.6),
+    ...bilingual("/changelog", "weekly", 0.5),
     {
       url: `${SITE_URL}/guides`,
       changeFrequency: "weekly",
