@@ -38,6 +38,16 @@ score history.
 - « Has GPTBot visited my client's site this month? »
 - « Show my client's score trend over the last measurements. »
 
+## ✅ Verified 2026-11-07 (Claude Desktop, macOS)
+
+Live test against the production API returned, via get_client_report +
+get_ai_agent_activity + get_score_history: superhome.fr, score 2/100,
+1/40 mentions (Perplexity only, 75% confidence), Orpi 10 / Pujol 10 /
+Homki 9, site audit findings (no LocalBusiness schema, no phone on
+homepage, no FAQ), 0 AI crawler visits — with the correct caveat that
+agent analytics requires our proxy on the client's site (it is not
+installed on superhome.fr yet; it ships with AI Growth deployments).
+
 ## Roadmap
 
 - v2: authenticated per-agency keys (multi-client workspace)
