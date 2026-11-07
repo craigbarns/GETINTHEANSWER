@@ -25,7 +25,7 @@ const OFFERS = [
       "10 questions adaptées à votre entreprise",
       "Votre score sur ChatGPT, Claude, Gemini et Perplexity",
       "Les concurrents cités par les IA",
-      "Jusqu'à 3 premières opportunités",
+      "Jusqu’à 3 premières opportunités",
     ],
     cta: { label: "Obtenir mon audit gratuit", href: "/fr/onboarding" },
   },
@@ -35,18 +35,18 @@ const OFFERS = [
     note: "Logiciel en autonomie. Résiliable à tout moment.",
     items: [
       "Rapport complet avec les 40 vérifications de réponses",
-      "Brouillons prêts à l'emploi : page FAQ, LocalBusiness schema, description Google",
+      "Brouillons prêts à l’emploi : page FAQ, LocalBusiness schema, description Google",
       "Suivi hebdomadaire des moteurs IA",
       "Vous mettez en œuvre les recommandations vous-même",
     ],
-    cta: { label: "Commencer par l'audit gratuit", href: "/fr/onboarding" },
+    cta: { label: "Commencer par l’audit gratuit", href: "/fr/onboarding" },
   },
   {
     name: "AI Growth",
     price: () => growthPrice("ai_growth", "fr") + " HT / mois",
     note: "Fait pour vous. Engagement initial de 3 mois.",
     items: [
-      "Audit technique et plan d'action priorisé",
+      "Audit technique et plan d’action priorisé",
       "Corrections du site dans le périmètre convenu",
       "2 pages utiles à vos clients par mois",
       "Suivi hebdomadaire des moteurs IA + suivi des crawlers IA",
@@ -86,10 +86,10 @@ export default function PricingPageFr() {
         mainEntity: [
           {
             "@type": "Question",
-            name: "L'audit de visibilité IA est-il vraiment gratuit ?",
+            name: "L’audit de visibilité IA est-il vraiment gratuit ?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Oui. L'audit pose 10 questions à ChatGPT, Claude, Gemini et Perplexity et montre votre score, les concurrents cités et les premières opportunités. Sans carte bancaire.",
+              text: "Oui. L’audit pose 10 questions à ChatGPT, Claude, Gemini et Perplexity et montre votre score, les concurrents cités et les premières opportunités. Sans carte bancaire.",
             },
           },
           {
@@ -105,7 +105,7 @@ export default function PricingPageFr() {
             name: "Les résultats sont-ils garantis ?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Aucun volume de citations IA, de trafic ou de clients n'est garanti — méfiez-vous de qui le promet. Ce qui est garanti : le travail livré, mesuré et rapporté chaque mois.",
+              text: "Aucun volume de citations IA, de trafic ou de clients n’est garanti — méfiez-vous de qui le promet. Ce qui est garanti : le travail livré, mesuré et rapporté chaque mois.",
             },
           },
         ],
@@ -136,7 +136,7 @@ export default function PricingPageFr() {
           <p className="text-sm font-extrabold uppercase tracking-[0.16em] text-emerald-700">Tarifs</p>
           <h1 className="mt-4 text-balance text-4xl font-extrabold tracking-[-0.045em] sm:text-5xl">Commencez gratuitement. Évoluez quand ça marche.</h1>
           <p className="mt-5 text-lg leading-8 text-muted-foreground">
-            Chaque offre commence par le même audit gratuit. Prenez le logiciel pour agir vous-même, ou l'offre pilote fait-pour-vous pour déléguer.
+            Chaque offre commence par le même audit gratuit. Prenez le logiciel pour agir vous-même, ou l’offre pilote fait-pour-vous pour déléguer.
           </p>
         </div>
 
@@ -169,15 +169,15 @@ export default function PricingPageFr() {
           <div className="mt-5 grid gap-5 sm:grid-cols-2">
             <div>
               <p className="font-extrabold">Fait pour vous, en une fois — {formatPrice(DONE_FOR_YOU_PRICE.eur, "eur")}</p>
-              <p className="mt-2 text-sm leading-6 text-muted-foreground">Nous mettons en œuvre les corrections prioritaires de votre audit, sans abonnement. Sur demande après l'audit.</p>
+              <p className="mt-2 text-sm leading-6 text-muted-foreground">Nous mettons en œuvre les corrections prioritaires de votre audit, sans abonnement. Sur demande après l’audit.</p>
             </div>
             <div>
               <p className="font-extrabold">Agence ou multi-établissements — {formatPrice(PRICES.agency.eur, "eur")} / mois</p>
-              <p className="mt-2 text-sm leading-6 text-muted-foreground">Suivez plusieurs établissements ou clients depuis un seul espace. Voir <Link className="font-semibold text-emerald-700 underline" href="/fr/agency">l'offre agence</Link>.</p>
+              <p className="mt-2 text-sm leading-6 text-muted-foreground">Suivez plusieurs établissements ou clients depuis un seul espace. Voir <Link className="font-semibold text-emerald-700 underline" href="/fr/agency">l’offre agence</Link>.</p>
             </div>
           </div>
           <p className="mt-6 text-xs leading-5 text-muted-foreground">
-            Tarifs pilotes en euros hors taxes. Nous confirmons le périmètre, les accès nécessaires et le devis avant tout paiement. Les contenus et changements sont soumis à votre validation avant publication. Aucun volume de citations IA, de trafic ou de clients n'est garanti. Cette page sert de référence tarifaire aux annuaires indépendants.
+            Tarifs pilotes en euros hors taxes. Nous confirmons le périmètre, les accès nécessaires et le devis avant tout paiement. Les contenus et changements sont soumis à votre validation avant publication. Aucun volume de citations IA, de trafic ou de clients n’est garanti. Cette page sert de référence tarifaire aux annuaires indépendants.
           </p>
         </section>
       </main>

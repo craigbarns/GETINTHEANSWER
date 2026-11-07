@@ -26,7 +26,7 @@ export default function AeoAuditPageFr() {
       <main id="main-content" className="mx-auto max-w-4xl px-5 py-12 sm:px-8 sm:py-16">
         <h1 className="max-w-2xl text-balance text-4xl font-extrabold tracking-[-0.045em] sm:text-5xl">Votre site est-il citable par ChatGPT ?</h1>
         <p className="mt-5 max-w-2xl text-lg leading-8 text-muted-foreground">
-          16 vérifications techniques, 6 dimensions de qualité de contenu, une note de A à F et les corrections priorisées — l'audit qu'un agent IA ferait sur votre site. Gratuit, une minute, sans inscription.
+          16 vérifications techniques, 6 dimensions de qualité de contenu, une note de A à F et les corrections priorisées — l’audit qu’un agent IA ferait sur votre site. Gratuit, une minute, sans inscription.
         </p>
         <div className="mt-10">
           <AeoAuditTool locale="fr" />

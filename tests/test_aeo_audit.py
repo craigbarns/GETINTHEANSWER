@@ -110,6 +110,20 @@ class AeoAuditTests(unittest.TestCase):
         with self.assertRaises(aeo_audit.UnsafeWebsiteUrl):
             asyncio.run(aeo_audit.aeo_audit("http://localhost:8080/"))
 
+    def test_ai_crawlers_blocked_parsing(self):
+        # Groupe dedie GPTBot avec blocage complet -> bloque
+        self.assertTrue(aeo_audit._ai_crawlers_blocked("User-agent: GPTBot\nDisallow: /"))
+        # Wildcard blocage complet -> bloque (s applique aux IA aussi)
+        self.assertTrue(aeo_audit._ai_crawlers_blocked("User-agent: *\nDisallow: /"))
+        # Blocage partiel -> autorise
+        self.assertFalse(aeo_audit._ai_crawlers_blocked("User-agent: GPTBot\nDisallow: /admin/"))
+        # Disallow vide = autorise
+        self.assertFalse(aeo_audit._ai_crawlers_blocked("User-agent: *\nDisallow:"))
+        # Groupe sans rapport -> autorise
+        self.assertFalse(aeo_audit._ai_crawlers_blocked("User-agent: evilbot\nDisallow: /"))
+        # Commentaires ignores
+        self.assertFalse(aeo_audit._ai_crawlers_blocked("# Disallow: /\nUser-agent: GPTBot\nAllow: /"))
+
 
 if __name__ == "__main__":
     unittest.main()

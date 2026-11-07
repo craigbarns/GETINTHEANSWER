@@ -173,6 +173,27 @@ def _pick_pages(home_html: str, home_url: str, links: List[str]) -> List[str]:
     return [home_url] + ranked[: MAX_PAGES - 1]
 
 
+def _ai_crawlers_blocked(robots_txt: str) -> bool:
+    """True if any robots.txt group targeting all users (*) or a known AI
+    crawler carries a full 'Disallow: /' rule. Empty Disallow = allow."""
+    blocked = False
+    current_agents: List[str] = []
+    for raw_line in robots_txt.splitlines():
+        line = raw_line.split("#", 1)[0].strip()
+        if not line:
+            continue
+        ua_match = re.match(r"user-agent\s*:\s*(.+)", line, re.I)
+        if ua_match:
+            current_agents = [agent.strip().lower() for agent in ua_match.group(1).split(",")]
+            continue
+        disallow_match = re.match(r"disallow\s*:\s*(.*)", line, re.I)
+        if disallow_match and current_agents:
+            path = disallow_match.group(1).strip()
+            if path in ("/", "/*") and any(agent == "*" or agent in AI_CRAWLERS for agent in current_agents):
+                blocked = True
+    return blocked
+
+
 def _foundational_checks(pages: List[Dict[str, str]], home_url: str) -> List[AeoCheck]:
     """16 deterministic checks, site-wide across crawled pages."""
     n = len(pages) or 1
@@ -227,7 +248,7 @@ def _foundational_checks(pages: List[Dict[str, str]], home_url: str) -> List[Aeo
              pages_failing(lambda h: bool(re.search(r'name=["\']viewport["\']', h, re.I))),
              "Viewport meta missing — mobile rendering unknown to crawlers."),
         make("robots_ai", "robots.txt permits AI crawlers", 10,
-             [home_url] if any(re.search(rf"user-agent:\s*{c}\b.*?disallow:\s*/", robots_txt, re.I | re.S) for c in AI_CRAWLERS) else [],
+             [home_url] if _ai_crawlers_blocked(robots_txt) else [],
              "robots.txt explicitly blocks a major AI crawler (GPTBot/ClaudeBot/PerplexityBot…) — engines may not cite what they never crawled."),
         make("llms_txt", "llms.txt served", 4,
              [] if llms else [home_url],

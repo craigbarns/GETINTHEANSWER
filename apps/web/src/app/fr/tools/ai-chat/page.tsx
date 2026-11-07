@@ -9,7 +9,7 @@ import { localizedAlternates } from "@/lib/i18n";
 export const metadata: Metadata = {
   title: "ChatGPT recommande-t-il votre entreprise ? Réponse en direct",
   description:
-    "Entrez votre entreprise et votre ville : ChatGPT répond à la question que vos clients posent, et vous voyez instantanément si l'IA vous recommande — ou vos concurrents. Gratuit, sans carte.",
+    "Entrez votre entreprise et votre ville : ChatGPT répond à la question que vos clients posent, et vous voyez instantanément si l’IA vous recommande — ou vos concurrents. Gratuit, sans carte.",
   alternates: localizedAlternates("fr", "/tools/ai-chat"),
 };
 
@@ -32,7 +32,7 @@ export default function AiChatPageFr() {
           <p className="text-sm font-extrabold uppercase tracking-[0.16em] text-emerald-700">Vérification instantanée</p>
           <h1 className="mt-4 text-balance text-4xl font-extrabold tracking-[-0.045em] sm:text-5xl">ChatGPT vous recommande-t-il ?</h1>
           <p className="mt-5 text-lg leading-8 text-muted-foreground">
-            Entrez votre entreprise, et ChatGPT répond à la question que vos clients posent vraiment. En direct, gratuit, sans inscription — puis lancez l'audit complet pour corriger ce que la réponse révèle.
+            Entrez votre entreprise, et ChatGPT répond à la question que vos clients posent vraiment. En direct, gratuit, sans inscription — puis lancez l’audit complet pour corriger ce que la réponse révèle.
           </p>
         </div>
         <div className="mt-10">
