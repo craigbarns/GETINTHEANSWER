@@ -23,7 +23,6 @@ import { DATE_LOCALE, DEFAULT_CURRENCY_BY_LOCALE, localePath, type Locale } from
 import { CURRENCIES, PRICES } from "@/lib/pricing";
 import { GROWTH_PLANS, growthPrice } from "@/lib/growth";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
-import { AiAnswerScroll } from "@/components/ai-answer-scroll";
 
 /** The real scan shown in the hero. Falls back to any published scan. */
 function getHeroScan(): CityScan | null {
@@ -406,18 +405,29 @@ export function HomePage({ locale }: { locale: Locale }) {
                       {`“${heroQuery}”`}
                     </p>
 
-                    <AiAnswerScroll
-                      engines={scan.engines}
-                      heroQuery={heroQuery || ""}
-                      locale={locale}
-                      proofLabel={copy.proofLabel}
-                      proofCity={copy.proofCity}
-                      proofNamedText={copy.proofNamed(scan.businesses.length)}
-                      proofFoot={copy.proofFoot}
-                      cityLabel={scan.cityLabel ?? ""}
-                      proofCountry={copy.proofCountry ?? ""}
-                      measuredText={copy.measured(scanDate(scan.scannedAt, locale))}
-                    />
+                    <div className="mt-5 grid gap-2.5 sm:grid-cols-2">
+                      {scan.engines.map((engine) => (
+                        <div className="min-w-0 rounded-2xl bg-[#f3f4ed] p-3.5" key={engine.engine}>
+                          <p className="flex items-center gap-2 text-xs font-extrabold uppercase tracking-[0.08em] text-muted-foreground">
+                            <span className={`size-2 rounded-full ${engineDots[engine.engine] ?? "bg-slate-400"}`} />
+                            {engine.engine}
+                          </p>
+                          <ol className="mt-2 list-decimal space-y-1 pl-5 text-sm font-semibold marker:font-semibold marker:text-muted-foreground">
+                            {engine.businesses.map((business) => (
+                              <li className="break-words pl-0.5" key={business}>
+                                {business}
+                              </li>
+                            ))}
+                          </ol>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="mt-5 rounded-2xl border border-amber-200 bg-amber-50 p-4">
+                      <p className="font-extrabold text-amber-900">{copy.proofNamed(scan.businesses.length)}</p>
+                      <p className="mt-1 text-sm leading-6 text-amber-900/75">{copy.proofFoot}</p>
+                    </div>
+                    <p className="mt-3 text-xs font-semibold text-muted-foreground">{copy.measured(scanDate(scan.scannedAt, locale))}</p>
                   </div>
                 </div>
               </div>
