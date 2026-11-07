@@ -1714,7 +1714,15 @@ async def aeo_audit_endpoint(body: dict):
     if not url.startswith(("http://", "https://")):
         url = "https://" + url
     try:
-        report = await aeo_audit.aeo_audit(url)
+        report = await aeo_audit.aeo_audit(
+            url,
+            llm_client=(
+                AsyncOpenAI(api_key=OPENROUTER_API_KEY, base_url=OPENROUTER_BASE_URL)
+                if USE_OPENROUTER
+                else AsyncOpenAI(api_key=OPENAI_API_KEY)
+            ) if (USE_OPENROUTER or OPENAI_API_KEY) else None,
+            llm_model=TEXT_MODEL,
+        )
     except aeo_audit.UnsafeWebsiteUrl as exc:
         raise HTTPException(status_code=400, detail=str(exc))
     return {
@@ -1725,6 +1733,7 @@ async def aeo_audit_endpoint(body: dict):
         "intelligence_score": report.intelligence_score,
         "final_score": report.final_score,
         "grade": report.grade,
+        "intelligence_source": report.intelligence_source,
         "checks": [
             {"key": c.key, "label": c.label, "passed": c.passed,
              "failed_pages": c.failed_pages, "detail": c.detail}

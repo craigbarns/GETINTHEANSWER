@@ -12,6 +12,7 @@ Final score maps to an A-F grade, with prioritized fixes.
 """
 
 import asyncio
+import json
 import re
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional
@@ -64,9 +65,62 @@ class AeoReport:
     intelligence_score: int = 0
     final_score: int = 0
     grade: str = "F"
+    intelligence_source: str = "none"  # "llm" | "heuristic" | "none"
     checks: List[AeoCheck] = field(default_factory=list)
     dimensions: List[DimensionScore] = field(default_factory=list)
     fixes: List[AeoFix] = field(default_factory=list)
+
+
+LLM_DIMENSIONS_PROMPT = """You are an AI search engine evaluating whether this website deserves to be cited in your answers. Score each dimension 0-5 (one decimal allowed).
+
+Dimensions:
+- answer_readiness: does the content directly answer buyer questions, early in paragraphs? (answers in first paragraphs earn far more citations)
+- quotability: are there self-contained 40-60 word passages, comparison tables, FAQ blocks an engine could quote verbatim?
+- evidence_density: concrete figures, named sources, study citations a fact-checker could verify?
+- entity_clarity: is it unmistakable who/what the site is about (name, location, schema, about section)?
+- freshness: visible or structured dates, evergreen accuracy?
+- structure: heading hierarchy, lists, tables — easy to parse?
+
+Return STRICT JSON only: {{"answer_readiness": {{"score": 0.0, "rationale": "one sentence"}}, ...}} for all six keys.
+
+Page excerpts:
+{excerpts}"""
+
+
+async def score_with_llm(client, model: str, pages: List[Dict[str, str]]) -> Optional[List[DimensionScore]]:
+    """Score the 6 dimensions with a real model; None on any failure."""
+    excerpts = "\n\n---\n\n".join(
+        f"URL: {p['url']}\n{strip_html(p['html'])[:2200]}" for p in pages[:3]
+    )
+    try:
+        response = await client.chat.completions.create(
+            model=model,
+            messages=[{"role": "user", "content": LLM_DIMENSIONS_PROMPT.format(excerpts=excerpts)}],
+            temperature=0.1,
+            max_tokens=700,
+        )
+        raw = response.choices[0].message.content or ""
+        match = re.search(r"\{.*\}", raw, re.S)
+        if not match:
+            return None
+        data = json.loads(match.group(0))
+        dims = []
+        for key, label in (
+            ("answer_readiness", "Answer Readiness"),
+            ("quotability", "Quotability"),
+            ("evidence_density", "Evidence Density"),
+            ("entity_clarity", "Entity Clarity"),
+            ("freshness", "Freshness"),
+            ("structure", "Structure / Parseability"),
+        ):
+            entry = data.get(key) or {}
+            score = float(entry.get("score", 0))
+            if not 0 <= score <= 5:
+                return None
+            dims.append(DimensionScore(key, label, score, str(entry.get("rationale", ""))[:200]))
+        return dims if len(dims) == 6 else None
+    except Exception:
+        return None
 
 
 def _meta(html: str, name_pattern: str) -> Optional[str]:
@@ -279,7 +333,7 @@ def _fixes(checks: List[AeoCheck], dims: List[DimensionScore]) -> List[AeoFix]:
     return fixes[:6]
 
 
-async def aeo_audit(url: str) -> AeoReport:
+async def aeo_audit(url: str, llm_client=None, llm_model: str = "") -> AeoReport:
     await __import__("site_audit").validate_public_http_url(url)
     report = AeoReport(url=url, fetched=False)
 
@@ -301,7 +355,14 @@ async def aeo_audit(url: str) -> AeoReport:
 
     report.pages_crawled = len(pages)
     report.checks = _foundational_checks(pages, url)
+
+    report.intelligence_source = "heuristic"
     report.dimensions = _intelligence_prior(pages[0])
+    if llm_client and llm_model:
+        llm_dims = await score_with_llm(llm_client, llm_model, pages)
+        if llm_dims:
+            report.dimensions = llm_dims
+            report.intelligence_source = "llm"
 
     total_weight = sum(c.weight for c in report.checks)
     passed_weight = sum(c.weight for c in report.checks if c.passed)
