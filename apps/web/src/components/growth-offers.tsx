@@ -66,7 +66,7 @@ const COPY = {
         cta: "Discuss my Growth Plus plan",
       },
     },
-    fine: "Pilot prices in euros, excluding tax. We confirm scope, required access and a quote before any payment. You approve content and changes before publication. AI mentions, traffic and new customers are not guaranteed.",
+    fine: "Pilot prices exclude tax and match the currency shown. We confirm scope, required access and a quote before any payment. You approve content and changes before publication. AI mentions, traffic and new customers are not guaranteed.",
     diy: "Prefer to do the work yourself?",
     diyText: "Pro software is still available: a full report, editable content and weekly tracking. You handle the improvements.",
     perMonth: " / month",
