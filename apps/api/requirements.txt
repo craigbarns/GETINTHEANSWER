@@ -1,3 +1,4 @@
+mcp>=1.2,<2
 fastapi
 uvicorn
 openai
@@ -13,5 +14,3 @@ supabase
 redis
 celery
 stripe
-
-mcp>=1.2,<2
