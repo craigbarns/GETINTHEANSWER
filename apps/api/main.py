@@ -26,6 +26,7 @@ from sqlalchemy import create_engine, text
 
 import ai_agents
 import chat_probe
+import mcp_http
 from ai_agents import AiAgentHit, AiAgentSummary
 from openai import AsyncOpenAI
 
@@ -120,6 +121,11 @@ app.add_middleware(
     allow_methods=["GET", "POST"],
     allow_headers=["Content-Type"],
 )
+
+# MCP over Streamable HTTP: agencies connect Claude Desktop / Cursor with a
+# remote URL (no local install). Read-only tools over the same data as the
+# dashboard. Mounted after CORS so the middleware applies to the sub-app too.
+app.mount("/mcp", mcp_http.mcp.streamable_http_app())
 
 db_engine = create_engine(DATABASE_URL, pool_pre_ping=True) if DATABASE_URL else None
 
