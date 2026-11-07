@@ -13,3 +13,5 @@ supabase
 redis
 celery
 stripe
+
+mcp>=1.2,<2
