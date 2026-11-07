@@ -38,7 +38,20 @@ score history.
 - « Has GPTBot visited my client's site this month? »
 - « Show my client's score trend over the last measurements. »
 
-## ✅ Verified 2026-11-07 (Claude Desktop, macOS)
+
+### Remote connector verified (same day)
+
+The public URL (https://api-production-7abb4.up.railway.app/mcp) was added
+as a Claude Desktop custom connector ("No authentication" — the server is
+open; the SDK's DNS-rebinding host check is set via the MCP_HOST env var).
+Claude called all three tools through the remote connector and produced
+the full client-ready analysis (score 2/100, Orpi 10 / Pujol 10 / Homki 9
+with intent segments, site audit, honest no-guarantee commitments, and
+the AI Growth 990 / one-shot 490 recommendation).
+
+Fixes that made it work: uvicorn bound to 0.0.0.0 (Railway's public edge
+requires IPv4), MCP_HOST env for the SDK's host check, and /mcp served
+natively (catch-all mount) — strict MCP clients reject redirect chains.
 
 Second, combined verification (skill + MCP): Claude loaded the
 getintheanswer-data skill, called all three tools and produced a
