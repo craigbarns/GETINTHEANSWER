@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import { LogoMark } from "@/components/logo";
 import { ChangelogContent } from "@/components/changelog-content";
+import { WebPageSchema } from "@/components/web-page-schema";
 import { localizedAlternates } from "@/lib/i18n";
 
 export const metadata: Metadata = {
@@ -25,6 +26,7 @@ export default function ChangelogPage() {
       </header>
       <main id="main-content" className="mx-auto max-w-4xl px-5 py-12 sm:px-8 sm:py-16">
         <ChangelogContent locale="en" />
+              <WebPageSchema path="/changelog" title="Changelog — what we have built at GetInTheAnswer" />
       </main>
     </div>
   );

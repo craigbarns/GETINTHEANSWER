@@ -4,6 +4,7 @@ import Link from "next/link";
 import { LogoMark } from "@/components/logo";
 import { AeoAuditTool } from "@/components/aeo-audit-tool";
 import { localizedAlternates } from "@/lib/i18n";
+import { WebPageSchema } from "@/components/web-page-schema";
 
 export const metadata: Metadata = {
   title: "Audit AEO gratuit — votre site est-il citable par ChatGPT ?",
@@ -31,6 +32,7 @@ export default function AeoAuditPageFr() {
         <div className="mt-10">
           <AeoAuditTool locale="fr" />
         </div>
+              <WebPageSchema path="/tools/aeo-audit" title="Audit AEO gratuit — votre site est-il citable par ChatGPT ?" />
       </main>
     </div>
   );
