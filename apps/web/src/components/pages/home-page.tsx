@@ -22,7 +22,7 @@ import { getCity } from "@/lib/cities";
 import { DATE_LOCALE, DEFAULT_CURRENCY_BY_LOCALE, localePath, type Locale } from "@/lib/i18n";
 import { CURRENCIES, PRICES, formatPrice } from "@/lib/pricing";
 import { GROWTH_PLANS, growthPrice } from "@/lib/growth";
-import { SITE_NAME, SITE_URL } from "@/lib/site";
+import { SITE_AUTHOR, SITE_NAME, SITE_URL } from "@/lib/site";
 
 /** The real scan shown in the hero. Falls back to any published scan. */
 function getHeroScan(): CityScan | null {
@@ -285,8 +285,20 @@ export function HomePage({ locale }: { locale: Locale }) {
         "@type": "Organization",
         "@id": `${SITE_URL}/#organization`,
         name: SITE_NAME,
+        // Legal entity data mirrors the footer's legal notice (WEMADE, SIREN,
+        // Marseille RCS) so engines can resolve the publisher, not just the brand.
+        legalName: "WEMADE SASU",
         url: SITE_URL,
         logo: `${SITE_URL}/icon.svg`,
+        identifier: { "@type": "PropertyValue", propertyID: "SIREN", value: "832419428" },
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "41 rue Fongate",
+          postalCode: "13006",
+          addressLocality: "Marseille",
+          addressCountry: "FR",
+        },
+        founder: { "@type": "Person", name: SITE_AUTHOR.name, jobTitle: SITE_AUTHOR.role },
       },
       {
         "@type": "FAQPage",

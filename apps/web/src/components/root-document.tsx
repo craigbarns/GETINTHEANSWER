@@ -10,7 +10,9 @@ import { SITE_NAME, SITE_URL } from "@/lib/site";
 
 const ROOT_COPY: Record<Locale, { title: string; template: string; description: string; ogTitle: string; ogDescription: string; skip: string }> = {
   en: {
-    title: "AI Visibility Audit & GEO for Local Businesses | GetInTheAnswer",
+    // 57 chars: the previous 63-char title clipped the brand suffix in Google's
+    // ~580px title area. Both category keywords stay in the visible part.
+    title: "AI Visibility & GEO for Local Businesses | GetInTheAnswer",
     template: "%s | GetInTheAnswer",
     description:
       `Get a free AI visibility plan, then let us handle website fixes, useful content and monthly measurement. AI Growth pilot service from ${growthPrice("ai_growth", "en")} per month.`,
@@ -20,10 +22,11 @@ const ROOT_COPY: Record<Locale, { title: string; template: string; description: 
     skip: "Skip to main content",
   },
   fr: {
-    title: "Audit de visibilité IA & GEO pour PME locales | GetInTheAnswer",
+    // 53 chars (limite ~58) ; la description passe de 164 à 142 chars (limite ~158).
+    title: "Visibilité IA & GEO pour PME locales | GetInTheAnswer",
     template: "%s | GetInTheAnswer",
     description:
-      "Obtenez votre plan de visibilité IA gratuit, puis confiez-nous corrections, contenus utiles et suivi mensuel. Accompagnement pilote AI Growth dès 990 € HT par mois.",
+      "Obtenez votre plan de visibilité IA gratuit, puis confiez-nous corrections, contenus et suivi mensuel. Pilote AI Growth dès 990 € HT par mois.",
     ogTitle: "GetInTheAnswer — Du diagnostic aux optimisations",
     ogDescription:
       "Un plan gratuit, des corrections du site et des contenus utiles. Vous validez les publications ; nous prenons en charge le travail convenu et mesurons les changements.",

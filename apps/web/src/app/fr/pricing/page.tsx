@@ -70,6 +70,26 @@ const OFFERS = [
   },
 ];
 
+// Source unique de la FAQ : la section affichée sur la page et le JSON-LD
+// FAQPage ci-dessous, pour que le texte visible et le balisage ne divergent jamais.
+const FAQ_ITEMS = [
+  {
+    question: "L’audit de visibilité IA est-il vraiment gratuit ?",
+    answer:
+      "Oui. L’audit pose 10 questions à ChatGPT, Claude, Gemini et Perplexity et montre votre score, les concurrents cités et les premières opportunités. Sans carte bancaire.",
+  },
+  {
+    question: "Quelle différence entre Pro et AI Growth ?",
+    answer:
+      "Pro (29 €/mois) est le logiciel en autonomie : rapport complet, brouillons et suivi hebdomadaire, à vous de mettre en œuvre. AI Growth (990 € HT/mois, engagement initial de 3 mois) est fait pour vous : notre équipe corrige le site, publie les contenus et mesure chaque mois.",
+  },
+  {
+    question: "Les résultats sont-ils garantis ?",
+    answer:
+      "Aucun volume de citations IA, de trafic ou de clients n’est garanti — méfiez-vous de qui le promet. Ce qui est garanti : le travail livré, mesuré et rapporté chaque mois.",
+  },
+];
+
 export default function PricingPageFr() {
   const structuredData = {
     "@context": "https://schema.org",
@@ -83,32 +103,11 @@ export default function PricingPageFr() {
       },
       {
         "@type": "FAQPage",
-        mainEntity: [
-          {
-            "@type": "Question",
-            name: "L’audit de visibilité IA est-il vraiment gratuit ?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Oui. L’audit pose 10 questions à ChatGPT, Claude, Gemini et Perplexity et montre votre score, les concurrents cités et les premières opportunités. Sans carte bancaire.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Quelle différence entre Pro et AI Growth ?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Pro (29 €/mois) est le logiciel en autonomie : rapport complet, brouillons et suivi hebdomadaire, à vous de mettre en œuvre. AI Growth (990 € HT/mois, engagement initial de 3 mois) est fait pour vous : notre équipe corrige le site, publie les contenus et mesure chaque mois.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Les résultats sont-ils garantis ?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Aucun volume de citations IA, de trafic ou de clients n’est garanti — méfiez-vous de qui le promet. Ce qui est garanti : le travail livré, mesuré et rapporté chaque mois.",
-            },
-          },
-        ],
+        mainEntity: FAQ_ITEMS.map((item) => ({
+          "@type": "Question",
+          name: item.question,
+          acceptedAnswer: { "@type": "Answer", text: item.answer },
+        })),
       },
     ],
   };
@@ -179,6 +178,20 @@ export default function PricingPageFr() {
           <p className="mt-6 text-xs leading-5 text-muted-foreground">
             Tarifs pilotes en euros hors taxes. Nous confirmons le périmètre, les accès nécessaires et le devis avant tout paiement. Les contenus et changements sont soumis à votre validation avant publication. Aucun volume de citations IA, de trafic ou de clients n’est garanti. Cette page sert de référence tarifaire aux annuaires indépendants.
           </p>
+        </section>
+
+        {/* FAQ — rendue depuis le même tableau FAQ_ITEMS que le JSON-LD FAQPage ci-dessus */}
+        <section className="mt-12">
+          <p className="text-sm font-extrabold uppercase tracking-[0.16em] text-emerald-700">FAQ</p>
+          <h2 className="mt-2 text-2xl font-extrabold tracking-[-0.03em]">Questions fréquentes</h2>
+          <div className="mt-6 space-y-4">
+            {FAQ_ITEMS.map((item, index) => (
+              <div key={index} className="rounded-2xl border border-foreground/10 bg-white p-6 shadow-sm">
+                <h3 className="font-extrabold text-foreground">{item.question}</h3>
+                <p className="mt-3 leading-7 text-muted-foreground">{item.answer}</p>
+              </div>
+            ))}
+          </div>
         </section>
       </main>
     </div>

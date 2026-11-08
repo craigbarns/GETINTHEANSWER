@@ -70,6 +70,26 @@ const OFFERS = [
   },
 ];
 
+// One source for the FAQ: the section rendered on the page and the FAQPage
+// JSON-LD below, so the visible text and the markup can never diverge.
+const FAQ_ITEMS = [
+  {
+    question: "Is the AI visibility audit really free?",
+    answer:
+      "Yes. The audit runs 10 questions across ChatGPT, Claude, Gemini and Perplexity and shows your score, the competitors named and initial opportunities. No card required.",
+  },
+  {
+    question: "What is the difference between Pro and AI Growth?",
+    answer:
+      "Pro ($29/month) is self-serve software: you get the full report, drafts and weekly tracking, and you implement the changes yourself. AI Growth ($990/month, 3-month initial term) is done for you: our team implements the fixes, publishes content and reports monthly.",
+  },
+  {
+    question: "Are results guaranteed?",
+    answer:
+      "No volume of AI citations, traffic or customers is guaranteed — and be wary of anyone who promises that. What is guaranteed: the work delivered, measured and reported every month.",
+  },
+];
+
 export default function PricingPage() {
   const structuredData = {
     "@context": "https://schema.org",
@@ -83,32 +103,11 @@ export default function PricingPage() {
       },
       {
         "@type": "FAQPage",
-        mainEntity: [
-          {
-            "@type": "Question",
-            name: "Is the AI visibility audit really free?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Yes. The audit runs 10 questions across ChatGPT, Claude, Gemini and Perplexity and shows your score, the competitors named and initial opportunities. No card required.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "What is the difference between Pro and AI Growth?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Pro ($29/month) is self-serve software: you get the full report, drafts and weekly tracking, and you implement the changes yourself. AI Growth ($990/month, 3-month initial term) is done for you: our team implements the fixes, publishes content and reports monthly.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Are results guaranteed?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "No volume of AI citations, traffic or customers is guaranteed — and be wary of anyone who promises that. What is guaranteed: the work delivered, measured and reported every month.",
-            },
-          },
-        ],
+        mainEntity: FAQ_ITEMS.map((item) => ({
+          "@type": "Question",
+          name: item.question,
+          acceptedAnswer: { "@type": "Answer", text: item.answer },
+        })),
       },
     ],
   };
@@ -179,6 +178,20 @@ export default function PricingPage() {
           <p className="mt-6 text-xs leading-5 text-muted-foreground">
             Pilot prices exclude tax. We confirm scope, required access and a quote before any payment. You approve content and changes before publication. AI mentions, traffic and new customers are not guaranteed. Prices are checked against this page by independent directories.
           </p>
+        </section>
+
+        {/* FAQ — rendered from the same FAQ_ITEMS array as the FAQPage JSON-LD above */}
+        <section className="mt-12">
+          <p className="text-sm font-extrabold uppercase tracking-[0.16em] text-emerald-700">FAQ</p>
+          <h2 className="mt-2 text-2xl font-extrabold tracking-[-0.03em]">Frequently asked questions</h2>
+          <div className="mt-6 space-y-4">
+            {FAQ_ITEMS.map((item, index) => (
+              <div key={index} className="rounded-2xl border border-foreground/10 bg-white p-6 shadow-sm">
+                <h3 className="font-extrabold text-foreground">{item.question}</h3>
+                <p className="mt-3 leading-7 text-muted-foreground">{item.answer}</p>
+              </div>
+            ))}
+          </div>
         </section>
       </main>
     </div>

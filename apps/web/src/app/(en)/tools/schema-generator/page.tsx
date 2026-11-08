@@ -16,6 +16,26 @@ export const metadata: Metadata = {
   },
 };
 
+// One source for the FAQ: the section rendered on the page and the FAQPage
+// JSON-LD below, so the visible text and the markup can never diverge.
+const FAQ_ITEMS = [
+  {
+    question: "Why is Schema.org structured data essential for AI engines?",
+    answer:
+      "When AI models like ChatGPT and Perplexity search the web live, structured data (JSON-LD) provides clear, unambiguous facts about your business name, address, telephone, services, and opening hours without requiring the model to parse messy HTML.",
+  },
+  {
+    question: "Where should I place the generated JSON-LD code?",
+    answer:
+      "Copy the generated <script> code and paste it inside the <head> or <body> tags of your homepage or global website layout.",
+  },
+  {
+    question: "How do I verify if my schema is working?",
+    answer:
+      "You can test your website using Google's Rich Results Test tool or run a free scan with GetInTheAnswer to see if AI engines accurately cite your business.",
+  },
+];
+
 export default function SchemaGeneratorPage() {
   const structuredData = {
     "@context": "https://schema.org",
@@ -59,32 +79,14 @@ export default function SchemaGeneratorPage() {
       },
       {
         "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Why is Schema.org structured data essential for AI engines?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "When AI models like ChatGPT and Perplexity search the web live, structured data (JSON-LD) provides clear, unambiguous facts about your business name, address, telephone, services, and opening hours without requiring the model to parse messy HTML.",
-            },
+        "mainEntity": FAQ_ITEMS.map((item) => ({
+          "@type": "Question",
+          "name": item.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": item.answer,
           },
-          {
-            "@type": "Question",
-            "name": "Where should I place the generated JSON-LD code?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Copy the generated <script> code and paste it inside the <head> or <body> tags of your homepage or global website layout.",
-            },
-          },
-          {
-            "@type": "Question",
-            "name": "How do I verify if my schema is working?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "You can test your website using Google's Rich Results Test tool or run a free scan with GetInTheAnswer to see if AI engines accurately cite your business.",
-            },
-          },
-        ],
+        })),
       },
     ],
   };
@@ -157,6 +159,20 @@ export default function SchemaGeneratorPage() {
             <p className="mt-2 text-sm leading-6 text-muted-foreground">
               When an AI agent performs live web search to answer local queries, it quotes verified sources with structured data first.
             </p>
+          </div>
+        </section>
+
+        {/* FAQ — rendered from the same FAQ_ITEMS array as the FAQPage JSON-LD above */}
+        <section className="mt-16">
+          <p className="text-sm font-extrabold uppercase tracking-[0.16em] text-emerald-700">FAQ</p>
+          <h2 className="mt-2 text-3xl font-extrabold tracking-[-0.03em]">Frequently asked questions</h2>
+          <div className="mt-6 space-y-4">
+            {FAQ_ITEMS.map((item, index) => (
+              <div key={index} className="rounded-2xl border border-foreground/10 bg-white p-6 shadow-sm">
+                <h3 className="font-extrabold text-foreground">{item.question}</h3>
+                <p className="mt-3 leading-7 text-muted-foreground">{item.answer}</p>
+              </div>
+            ))}
           </div>
         </section>
 

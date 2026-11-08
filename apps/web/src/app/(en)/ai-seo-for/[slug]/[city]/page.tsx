@@ -110,6 +110,13 @@ export default async function IndustryCityPage({
   const descText = descTemplates[hash % descTemplates.length];
   const cardText = cardTemplates[hash % cardTemplates.length];
 
+  // The FAQ rendered on the page and the FAQPage JSON-LD below come from this
+  // one array, so the visible text and the markup can never diverge.
+  const cityFaq = industry.faq.map((item) => ({
+    question: item.question.replace(/\{city\}/g, formattedCity),
+    answer: item.answer.replace(/\{city\}/g, formattedCity),
+  }));
+
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
@@ -154,12 +161,12 @@ export default async function IndustryCityPage({
       },
       {
         "@type": "FAQPage",
-        "mainEntity": industry.faq.map((item) => ({
+        "mainEntity": cityFaq.map((item) => ({
           "@type": "Question",
-          "name": item.question.replace(/\{city\}/g, formattedCity),
+          "name": item.question,
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": item.answer.replace(/\{city\}/g, formattedCity),
+            "text": item.answer,
           },
         })),
       },
@@ -330,6 +337,20 @@ export default async function IndustryCityPage({
                 </div>
                 <h3 className="mt-4 font-extrabold">{factor.title}</h3>
                 <p className="mt-2 text-sm leading-6 text-muted-foreground">{factor.description}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* FAQ — rendered from the same cityFaq array as the FAQPage JSON-LD above */}
+        <section className="mt-14">
+          <p className="text-sm font-extrabold uppercase tracking-[0.16em] text-emerald-700">FAQ</p>
+          <h2 className="mt-2 text-3xl font-extrabold tracking-[-0.03em]">Frequently asked questions</h2>
+          <div className="mt-6 space-y-4">
+            {cityFaq.map((item, index) => (
+              <div key={index} className="rounded-2xl border border-foreground/10 bg-white p-6 shadow-sm">
+                <h3 className="font-extrabold text-foreground">{item.question}</h3>
+                <p className="mt-3 leading-7 text-muted-foreground">{item.answer}</p>
               </div>
             ))}
           </div>
