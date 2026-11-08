@@ -278,7 +278,7 @@ export function SchemaGeneratorForm() {
           <div className="mt-4 flex items-center justify-between rounded-2xl bg-white/10 p-4">
             <div>
               <p className="text-sm font-bold text-white">Want to test if AI engines see this?</p>
-              <p className="text-xs text-white/60">Run a free AI visibility scan in 60 seconds.</p>
+              <p className="text-xs text-white/60">Run a free AI visibility scan in two minutes.</p>
             </div>
             <Button asChild size="sm" className="rounded-full bg-lime-300 font-extrabold text-[#173b35] hover:bg-lime-200">
               <Link href="/onboarding">Scan Now <ArrowRight className="ml-1 size-3.5" /></Link>

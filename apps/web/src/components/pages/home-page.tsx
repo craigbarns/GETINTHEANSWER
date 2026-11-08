@@ -22,7 +22,7 @@ import { getCity } from "@/lib/cities";
 import { DATE_LOCALE, DEFAULT_CURRENCY_BY_LOCALE, localePath, type Locale } from "@/lib/i18n";
 import { CURRENCIES, PRICES, formatPrice } from "@/lib/pricing";
 import { GROWTH_PLANS, growthPrice } from "@/lib/growth";
-import { SITE_AUTHOR, SITE_NAME, SITE_URL } from "@/lib/site";
+import { SITE_AUTHOR, SITE_NAME, SITE_SAME_AS, SITE_URL } from "@/lib/site";
 
 /** The real scan shown in the hero. Falls back to any published scan. */
 function getHeroScan(): CityScan | null {
@@ -68,7 +68,7 @@ function getCopy(locale: Locale, stats: ReturnType<typeof getBenchmarkStats>) {
         { href: "#proof", label: "Votre diagnostic" },
         { href: "#method", label: "Comment ça marche" },
         { href: "/fr/sample-report", label: "Exemple de rapport" },
-        { href: "#pricing", label: "Tarifs" },
+        { href: "/fr/pricing", label: "Tarifs" },
         { href: "/guides", label: "Guides" },
       ],
       eyebrow: "Votre visibilité IA, prise en charge",
@@ -167,7 +167,7 @@ function getCopy(locale: Locale, stats: ReturnType<typeof getBenchmarkStats>) {
       { href: "#proof", label: "Your audit" },
       { href: "#method", label: "How it works" },
       { href: "/sample-report", label: "Sample report" },
-      { href: "#pricing", label: "Pricing" },
+      { href: "/pricing", label: "Pricing" },
       { href: "/guides", label: "Guides" },
     ],
     eyebrow: "AI visibility, taken care of",
@@ -276,6 +276,10 @@ export function HomePage({ locale }: { locale: Locale }) {
   const copy = getCopy(locale, stats);
   const onboarding = localePath(locale, "/onboarding");
   const homeUrl = `${SITE_URL}${localePath(locale, "/")}`;
+  const pricingUrl = `${SITE_URL}${localePath(locale, "/pricing")}`;
+  // Service prices follow the market of the page (USD in English, EUR in
+  // French), like the visible price; structured data must match the page.
+  const growthCurrency = locale === "fr" ? "EUR" : "USD";
   const heroQuery = scan?.query;
 
   const structuredData = {
@@ -298,7 +302,13 @@ export function HomePage({ locale }: { locale: Locale }) {
           addressLocality: "Marseille",
           addressCountry: "FR",
         },
-        founder: { "@type": "Person", name: SITE_AUTHOR.name, jobTitle: SITE_AUTHOR.role },
+        founder: {
+          "@type": "Person",
+          name: SITE_AUTHOR.name,
+          jobTitle: SITE_AUTHOR.role,
+          ...(SITE_AUTHOR.linkedin ? { sameAs: [SITE_AUTHOR.linkedin] } : {}),
+        },
+        ...(SITE_SAME_AS.length ? { sameAs: [...SITE_SAME_AS] } : {}),
       },
       {
         "@type": "FAQPage",
@@ -325,13 +335,13 @@ export function HomePage({ locale }: { locale: Locale }) {
         name: "AI Growth",
         serviceType: locale === "fr" ? "Optimisation SEO et visibilité IA" : "SEO and AI visibility optimization",
         provider: { "@id": `${SITE_URL}/#organization` },
-        url: `${homeUrl}#pricing`,
+        url: pricingUrl,
         offers: Object.values(GROWTH_PLANS).map((plan) => ({
           "@type": "Offer",
           name: plan.name,
-          url: `${homeUrl}#pricing`,
-          price: String(plan.monthlyEur),
-          priceCurrency: "EUR",
+          url: pricingUrl,
+          price: String(growthCurrency === "EUR" ? plan.monthlyEur : plan.monthlyUsd),
+          priceCurrency: growthCurrency,
           description: locale === "fr" ? "Tarif pilote HT par mois, engagement initial de 3 mois, sur devis." : "Pilot monthly price excluding tax, 3-month initial commitment, subject to quote.",
         })),
       },
@@ -352,7 +362,7 @@ export function HomePage({ locale }: { locale: Locale }) {
           ...CURRENCIES.map((currency) => ({
             "@type": "Offer",
             name: "Pro monitoring",
-            url: `${homeUrl}#pricing`,
+            url: pricingUrl,
             price: String(PRICES.pro[currency]),
             priceCurrency: currency.toUpperCase(),
             priceSpecification: {

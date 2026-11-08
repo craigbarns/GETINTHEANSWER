@@ -147,6 +147,39 @@ export function getBenchmarkStats(): BenchmarkStats | null {
   };
 }
 
+export interface CityScanSummary {
+  /** Engines whose answer named at least one business. */
+  answering: string[];
+  distinctNames: number;
+  /** Names present in every answering engine's list. */
+  unanimous: string[];
+  /** Most answers any single name appears in. */
+  topCount: number;
+  /** Names that reach topCount. */
+  topNames: string[];
+  /** Names present in exactly one answer. */
+  singleAnswer: number;
+}
+
+/**
+ * The figures of one measured search, for the dated summary at the top of its
+ * page. Names are counted as recorded: variants of one business stay separate
+ * entries, as in the measured block below it and in the study.
+ */
+export function summarizeCityScan(scan: CityScan): CityScanSummary {
+  const answering = scan.engines.filter((entry) => entry.businesses.length > 0).map((entry) => entry.engine);
+  const counts = scan.businesses.map((business) => ({ name: business.name, count: business.engines.length }));
+  const topCount = counts.reduce((max, row) => Math.max(max, row.count), 0);
+  return {
+    answering,
+    distinctNames: counts.length,
+    unanimous: answering.length > 1 ? counts.filter((row) => row.count === answering.length).map((row) => row.name) : [],
+    topCount,
+    topNames: counts.filter((row) => row.count === topCount).map((row) => row.name),
+    singleAnswer: counts.filter((row) => row.count === 1).length,
+  };
+}
+
 export function formatScanDate(iso: string): string {
   const date = new Date(`${iso}T00:00:00Z`);
   if (Number.isNaN(date.getTime())) return iso;

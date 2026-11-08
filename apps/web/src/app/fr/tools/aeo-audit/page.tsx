@@ -32,7 +32,7 @@ export default function AeoAuditPageFr() {
         <div className="mt-10">
           <AeoAuditTool locale="fr" />
         </div>
-              <WebPageSchema path="/tools/aeo-audit" title="Audit AEO gratuit — votre site est-il citable par ChatGPT ?" />
+              <WebPageSchema path="/fr/tools/aeo-audit" title="Audit AEO gratuit — votre site est-il citable par ChatGPT ?" />
       </main>
     </div>
   );

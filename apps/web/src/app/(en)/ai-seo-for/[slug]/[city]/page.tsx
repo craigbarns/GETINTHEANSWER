@@ -6,9 +6,52 @@ import { ArrowRight, CheckCircle2, HelpCircle, MapPin, Zap } from "lucide-react"
 import { LogoMark } from "@/components/logo";
 import { Button } from "@/components/ui/button";
 import { cities, getCity } from "@/lib/cities";
-import { formatScanDate, getCityScan, hasCityScan } from "@/lib/city-scans";
+import { formatScanDate, getCityScan, hasCityScan, summarizeCityScan, type CityScan } from "@/lib/city-scans";
 import { getIndustry, industries, pluralName } from "@/lib/industries";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
+
+const NUMBER_WORDS = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"];
+
+function numberWord(value: number) {
+  return NUMBER_WORDS[value] ?? String(value);
+}
+
+function joinNames(names: string[]) {
+  if (names.length <= 1) return names.join("");
+  return `${names.slice(0, -1).join(", ")} and ${names[names.length - 1]}`;
+}
+
+/**
+ * What the measurement found, in a few sentences, for the top of the page:
+ * the date, the question, how many names came back and how far the engines
+ * agree. It replaces the generic intro so each page opens on its own data.
+ */
+function measuredSummary(scan: CityScan): string {
+  const summary = summarizeCityScan(scan);
+  const answers = summary.answering.length;
+  const question = /[.?!]$/.test(scan.query.trim()) ? `“${scan.query.trim()}”` : `“${scan.query.trim()}”.`;
+  const sentences = [
+    `On ${formatScanDate(scan.scannedAt)}, we asked ${joinNames(summary.answering)}: ${question}`,
+    `Their ${numberWord(answers)} answers contained ${summary.distinctNames} different business names.`,
+  ];
+
+  if (summary.unanimous.length > 3) {
+    sentences.push(`${summary.unanimous.length} names came up in all ${numberWord(answers)} answers, including ${joinNames(summary.unanimous.slice(0, 3))}.`);
+  } else if (summary.unanimous.length > 0) {
+    sentences.push(`${joinNames(summary.unanimous)} came up in all ${numberWord(answers)} answers.`);
+  } else if (summary.topCount > 1 && summary.topNames.length > 3) {
+    sentences.push(`No name came up in all ${numberWord(answers)} answers; ${summary.topNames.length} names came up in ${numberWord(summary.topCount)}, including ${joinNames(summary.topNames.slice(0, 3))}.`);
+  } else if (summary.topCount > 1) {
+    sentences.push(`No name came up in all ${numberWord(answers)} answers; the most cited, ${joinNames(summary.topNames)}, came up in ${numberWord(summary.topCount)}.`);
+  } else {
+    sentences.push("No name came up in more than one answer.");
+  }
+
+  if (summary.topCount > 1 && summary.singleAnswer > 0) {
+    sentences.push(`Of the ${summary.distinctNames} names, ${summary.singleAnswer} came up in only one answer.`);
+  }
+  return sentences.join(" ");
+}
 
 export function generateStaticParams() {
   const params: { slug: string; city: string }[] = [];
@@ -107,7 +150,9 @@ export default async function IndustryCityPage({
   ];
 
   const h1Text = h1Templates[hash % h1Templates.length];
-  const descText = descTemplates[hash % descTemplates.length];
+  // A measured page opens on its own dated findings; the generic intro is only
+  // the fallback for a pair that has no scan yet (and is noindex).
+  const descText = scan ? measuredSummary(scan) : descTemplates[hash % descTemplates.length];
   const cardText = cardTemplates[hash % cardTemplates.length];
 
   // The FAQ rendered on the page and the FAQPage JSON-LD below come from this

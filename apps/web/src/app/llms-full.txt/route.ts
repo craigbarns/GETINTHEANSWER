@@ -80,6 +80,8 @@ the French product pages are under /fr.
 
 ## Product and plans
 
+- [Pricing](${SITE_URL}/pricing): every plan on one page — free audit, Pro
+  software, AI Growth, AI Growth Plus, Agency and the one-time fix.
 - [AI Growth](${SITE_URL}/contact?plan=ai-growth): $${GROWTH_PLANS.ai_growth.monthlyUsd}/month,
   excluding tax, 3-month initial commitment. Pilot proposal: technical audit,
   scoped website fixes, 2 useful pages per month, weekly model checks and a
@@ -99,7 +101,7 @@ the French product pages are under /fr.
   opportunities, no credit card required.
 - [Sample report](${SITE_URL}/sample-report): illustrative report for a fictional
   business, not a customer testimonial or a measured client result.
-- [Self-service Pro software](${SITE_URL}/#software): $${PRICES.pro.usd} or EUR ${PRICES.pro.eur} per month.
+- [Self-service Pro software](${SITE_URL}/pricing): $${PRICES.pro.usd} or EUR ${PRICES.pro.eur} per month.
 - [Agency](${SITE_URL}/agency): $${PRICES.agency.usd} or EUR ${PRICES.agency.eur} per month.
 - [Done-for-you service](${SITE_URL}/contact?plan=done-for-you): $${DONE_FOR_YOU_PRICE.usd} or
   EUR ${DONE_FOR_YOU_PRICE.eur} one time, subject to site review and quote confirmation.
@@ -118,12 +120,17 @@ ${guideSections}
 
 ## Tools
 
+- [Ask ChatGPT about your business](${SITE_URL}/tools/ai-chat): enter a business
+  and a city; ChatGPT answers the question customers ask, live. Free, no signup.
+- [AEO audit](${SITE_URL}/tools/aeo-audit): 16 technical checks and 6
+  content-quality dimensions, an A-F grade and prioritized fixes. Free, no signup.
 - [LocalBusiness schema generator](${SITE_URL}/tools/schema-generator): free, no
   account, produces Schema.org markup for a local business.
 
 ## Start here
 
 - [Run a free scan](${SITE_URL}/onboarding)
+- [Pricing](${SITE_URL}/pricing)
 - [All industries and cities](${SITE_URL}/ai-seo-for)
 - [Agencies and multi-location](${SITE_URL}/agency)
 - [Publisher and legal information](${SITE_URL}/legal): ${SITE_NAME} is published
