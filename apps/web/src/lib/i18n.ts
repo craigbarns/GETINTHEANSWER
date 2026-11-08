@@ -9,8 +9,24 @@ export const LOCALES: Locale[] = ["en", "fr"];
 export const DEFAULT_LOCALE: Locale = "en";
 
 /** Pages that exist in both languages. Every other path is English-only, so a
- *  French page linking to it keeps the plain English URL. */
-export const LOCALIZED_PATHS = ["/", "/onboarding", "/sample-report", "/agency", "/contact", "/dashboard", "/pricing"] as const;
+ *  French page linking to it keeps the plain English URL.
+ *
+ *  A path with a page under `app/fr/` must be listed here: otherwise
+ *  `localizedAlternates("fr", …)` gives the French page the English canonical
+ *  and the sitemap lists the English URL twice instead of the French one. */
+export const LOCALIZED_PATHS = [
+  "/",
+  "/onboarding",
+  "/sample-report",
+  "/agency",
+  "/contact",
+  "/dashboard",
+  "/pricing",
+  "/tools/ai-chat",
+  "/tools/aeo-audit",
+  "/ai-shopping",
+  "/changelog",
+] as const;
 
 export const DEFAULT_CURRENCY_BY_LOCALE: Record<Locale, Currency> = {
   en: "usd",

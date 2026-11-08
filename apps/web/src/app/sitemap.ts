@@ -37,9 +37,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       fr: `${SITE_URL}${localePath("fr", path)}`,
       "x-default": englishUrl,
     };
+    // Rounded: 0.8 - 0.1 is 0.7000000000000001 in floating point, and that
+    // is what ended up in the XML.
+    const frenchPriority = Math.max(0.1, Math.round((priority - 0.1) * 100) / 100);
     return [
       { url: languages.en, changeFrequency, priority, alternates: { languages } },
-      { url: languages.fr, changeFrequency, priority: Math.max(0.1, priority - 0.1), alternates: { languages } },
+      { url: languages.fr, changeFrequency, priority: frenchPriority, alternates: { languages } },
     ];
   };
 
