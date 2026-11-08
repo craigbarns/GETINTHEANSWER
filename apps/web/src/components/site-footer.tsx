@@ -17,7 +17,10 @@ const COPY: Record<Locale, {
     tagline: "© 2026 WEMADE. AI visibility, taken care of.",
     navLabel: "Footer navigation",
     links: [
+      ["/pricing", "Pricing"],
       ["/agency", "For agencies"],
+      ["/tools/ai-chat", "Ask ChatGPT about you"],
+      ["/tools/aeo-audit", "Free AEO audit"],
       ["/tools/schema-generator", "Schema generator"],
       ["/ai-seo-for", "Industries"],
       ["/study", "Study"],
@@ -38,7 +41,10 @@ const COPY: Record<Locale, {
     tagline: "© 2026 WEMADE. Votre visibilité IA, prise en charge.",
     navLabel: "Navigation de pied de page",
     links: [
+      ["/pricing", "Tarifs"],
       ["/agency", "Pour les agences"],
+      ["/tools/ai-chat", "Demander à ChatGPT"],
+      ["/tools/aeo-audit", "Audit AEO gratuit"],
       ["/tools/schema-generator", "Générateur de schema"],
       ["/ai-seo-for", "Métiers"],
       ["/study", "Étude"],

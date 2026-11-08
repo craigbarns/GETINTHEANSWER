@@ -25,7 +25,7 @@ const COPY = {
   en: {
     nav: [
       { href: "#features", label: "Features" },
-      { href: "/#pricing", label: "Pricing" },
+      { href: "/pricing", label: "Pricing" },
     ],
     ctaLong: "Try it free",
     ctaShort: "Try it",
@@ -59,7 +59,7 @@ const COPY = {
   fr: {
     nav: [
       { href: "#features", label: "Fonctionnalités" },
-      { href: "/fr#pricing", label: "Tarifs" },
+      { href: "/fr/pricing", label: "Tarifs" },
     ],
     ctaLong: "Essayer gratuitement",
     ctaShort: "Essayer",
