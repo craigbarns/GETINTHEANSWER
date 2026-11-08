@@ -4,6 +4,17 @@ export const SITE_NAME = "GetInTheAnswer";
 
 export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID?.trim() ?? "";
 
+/**
+ * Pages elsewhere on the web that identify GetInTheAnswer (Organization.sameAs).
+ * Engines use them to tie the brand to its profiles. Only add a URL after
+ * checking it is live and about this company: the company's own LinkedIn, X or
+ * Crunchbase page belong here once they exist.
+ * Geocitely: listing checked on 2026-11-08, also linked from the site footer.
+ */
+export const SITE_SAME_AS: readonly string[] = [
+  "https://geocitely.com/tools/getintheanswer",
+];
+
 export const SITE_AUTHOR = {
   name: "Gregory Baranes",
   role: "Founder, GetInTheAnswer",
