@@ -24,7 +24,7 @@ export async function generateMetadata({
   if (!entry || !city) return {};
 
   const title = `Contractor SEO in ${city.name}, ${city.stateCode} | Free AI Visibility Audit`;
-  const description = `See which AI engines recommend contractors in ${city.name} across ChatGPT, Claude, Gemini and Perplexity. Run a free 60-second visibility audit — no account needed.`;
+  const description = `See which AI engines recommend contractors in ${city.name} across ChatGPT, Claude, Gemini and Perplexity. Run a free two-minute visibility audit — no account needed.`;
 
   return {
     title: { absolute: title },
@@ -96,7 +96,7 @@ export default async function ContractorSeoCityPage({
             name: `How do I know if AI assistants recommend my ${city.name} business?`,
             acceptedAnswer: {
               "@type": "Answer",
-              text: "GetInTheAnswer runs a free 60-second audit: real customer questions asked across ChatGPT, Claude, Gemini and Perplexity, and a report of whether your business is named in the answers.",
+              text: "GetInTheAnswer runs a free two-minute audit: real customer questions asked across ChatGPT, Claude, Gemini and Perplexity, and a report of whether your business is named in the answers.",
             },
           },
         ],
@@ -218,7 +218,7 @@ export default async function ContractorSeoCityPage({
               How do I know if AI assistants recommend my {city.name} business?
             </h3>
             <p className="mt-2 text-sm leading-6 text-muted-foreground">
-              GetInTheAnswer runs a free 60-second audit: real customer
+              GetInTheAnswer runs a free two-minute audit: real customer
               questions asked across ChatGPT, Claude, Gemini and Perplexity,
               and a report of whether your business is named in the answers.
             </p>
