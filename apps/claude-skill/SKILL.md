@@ -7,8 +7,9 @@ description: AI visibility data and GEO knowledge for GetInTheAnswer (getinthean
 
 GetInTheAnswer measures whether AI engines (ChatGPT, Claude, Gemini,
 Perplexity) recommend a local business — and fixes what makes them
-invisible. 280 city × industry markets are benchmarked with a public,
-dated methodology: https://www.getintheanswer.com/study
+invisible. 240 local searches (12 industries × 20 US cities) are
+benchmarked with a public, dated methodology:
+https://www.getintheanswer.com/study
 
 ## Key facts (always accurate, never invent)
 
