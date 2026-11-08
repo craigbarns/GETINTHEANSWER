@@ -1,7 +1,6 @@
-import { getBenchmarkStats, getCityScan, getScannedPairs } from "@/lib/city-scans";
+import { getBenchmarkStats, getCityScan, getScannedPairs, type CityScan } from "@/lib/city-scans";
 import { guides } from "@/lib/guides";
-import { getIndustry } from "@/lib/industries";
-import { getCity } from "@/lib/cities";
+import { industries } from "@/lib/industries";
 import { DONE_FOR_YOU_PRICE, PRICES } from "@/lib/pricing";
 import { GROWTH_PLANS } from "@/lib/growth";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
@@ -14,18 +13,24 @@ export const dynamic = "force-static";
  * Built from the same measured scans the pages render, so an engine reading
  * this gets the actual figures rather than marketing copy. Every claim here is
  * one the site can substantiate.
+ *
+ * Kept short on purpose (llmstxt.org: an index, not a dump): measured results
+ * are summarised per industry here, and listed one by one in /llms-full.txt.
  */
 export function GET() {
   const pairs = getScannedPairs();
   const stats = getBenchmarkStats();
 
-  const measuredLines = pairs
-    .map((pair) => {
-      const scan = getCityScan(pair.industry, pair.city);
-      const industry = getIndustry(pair.industry);
-      const city = getCity(pair.city);
-      if (!scan || !industry || !city) return null;
-      return `- [${industry.name} in ${city.name}, ${city.stateCode}](${SITE_URL}/ai-seo-for/${pair.industry}/${pair.city}): ${scan.businesses.length} business names recorded across ${scan.engines.length} model responses, measured ${scan.scannedAt}. Question asked: "${scan.query}"`;
+  const measuredLines = industries
+    .map((industry) => {
+      const scans = pairs
+        .filter((pair) => pair.industry === industry.slug)
+        .map((pair) => getCityScan(pair.industry, pair.city))
+        .filter((scan): scan is CityScan => scan !== null);
+      if (!scans.length) return null;
+      const dates = scans.map((scan) => scan.scannedAt).sort();
+      const engineCount = new Set(scans.flatMap((scan) => scan.engines.map((entry) => entry.engine))).size;
+      return `- [${industry.name}](${SITE_URL}/ai-seo-for/${industry.slug}): ${scans.length} cities measured, one question per city asked to ${engineCount} AI models; latest measurement ${dates[dates.length - 1]}.`;
     })
     .filter(Boolean);
 
@@ -69,6 +74,8 @@ Method, stated plainly so it can be checked:
 
 ## Product and plans
 
+- [Pricing](${SITE_URL}/pricing): every plan on one page — free audit, Pro
+  software, AI Growth, AI Growth Plus, Agency and the one-time fix.
 - [AI Growth](${SITE_URL}/contact?plan=ai-growth): $${GROWTH_PLANS.ai_growth.monthlyUsd}/month,
   excluding tax, 3-month initial commitment. Pilot proposal: technical audit,
   scoped website fixes, 2 useful pages per month, weekly model checks and a
@@ -88,7 +95,7 @@ Method, stated plainly so it can be checked:
   opportunities, no credit card required.
 - [Sample report](${SITE_URL}/sample-report): illustrative report for a fictional
   business, not a customer testimonial or a measured client result.
-- [Self-service Pro software](${SITE_URL}/#software): $${PRICES.pro.usd} or EUR ${PRICES.pro.eur} per month.
+- [Self-service Pro software](${SITE_URL}/pricing): $${PRICES.pro.usd} or EUR ${PRICES.pro.eur} per month.
 - [Agency](${SITE_URL}/agency): $${PRICES.agency.usd} or EUR ${PRICES.agency.eur} per month.
 - [Done-for-you service](${SITE_URL}/contact?plan=done-for-you): $${DONE_FOR_YOU_PRICE.usd} or
   EUR ${DONE_FOR_YOU_PRICE.eur} one time, subject to site review and quote confirmation.
@@ -100,9 +107,18 @@ Method, stated plainly so it can be checked:
 - [Exemple de rapport](${SITE_URL}/fr/sample-report): exemple illustratif pour une
   entreprise fictive.
 - [Agences](${SITE_URL}/fr/agency): offre pour agences et multi-établissements.
+- [Tarifs](${SITE_URL}/fr/pricing): toutes les offres sur une page.
+- [Demander à ChatGPT](${SITE_URL}/fr/tools/ai-chat): la question de vos clients
+  posée en direct à ChatGPT.
+- [Audit AEO gratuit](${SITE_URL}/fr/tools/aeo-audit): votre site est-il citable
+  par les IA ?
 - [Contact](${SITE_URL}/fr/contact): demande agence ou prise en charge complète.
 
-## Measured results by city
+## Measured results by industry
+
+Each industry page links to its measured city pages: the question asked, the
+date and the businesses each engine named. Every measured search, with the
+names, is listed in [llms-full.txt](${SITE_URL}/llms-full.txt).
 
 ${measuredLines.length ? measuredLines.join("\n") : "- No city scans published yet."}
 
@@ -112,13 +128,19 @@ ${guideLines.join("\n")}
 
 ## Tools
 
+- [Ask ChatGPT about your business](${SITE_URL}/tools/ai-chat): enter a business
+  and a city; ChatGPT answers the question customers ask, live. Free, no signup.
+- [AEO audit](${SITE_URL}/tools/aeo-audit): 16 technical checks and 6
+  content-quality dimensions, an A-F grade and prioritized fixes. Free, no signup.
 - [LocalBusiness schema generator](${SITE_URL}/tools/schema-generator): free, no
   account, produces Schema.org markup for a local business.
 
 ## Start here
 
 - [Run a free scan](${SITE_URL}/onboarding)
+- [Pricing](${SITE_URL}/pricing)
 - [All industries and cities](${SITE_URL}/ai-seo-for)
+- [Full version of this file](${SITE_URL}/llms-full.txt)
 - [Agencies and multi-location](${SITE_URL}/agency)
 - [Publisher and legal information](${SITE_URL}/legal): ${SITE_NAME} is published
   by WEMADE. The legal notice identifies the publisher and publication director.
