@@ -20,7 +20,7 @@ import { formatScanDate, getBenchmarkStats, getCityScan, getScannedPairs, type C
 import { contractorSeoCities } from "@/lib/contractor-seo";
 import { getCity } from "@/lib/cities";
 import { DATE_LOCALE, DEFAULT_CURRENCY_BY_LOCALE, localePath, type Locale } from "@/lib/i18n";
-import { CURRENCIES, PRICES, formatPrice } from "@/lib/pricing";
+import { CURRENCIES, DONE_FOR_YOU_PRICE, PRICES, formatPrice } from "@/lib/pricing";
 import { GROWTH_PLANS, growthPrice } from "@/lib/growth";
 import { SITE_AUTHOR, SITE_NAME, SITE_URL } from "@/lib/site";
 
@@ -139,6 +139,10 @@ function getCopy(locale: Locale, stats: ReturnType<typeof getBenchmarkStats>) {
           answer: "Le pilote à 990 € HT par mois comprend un audit technique, les corrections du site convenues au devis, deux pages utiles par mois, un suivi hebdomadaire des moteurs IA disponibles et un rapport mensuel. L’engagement initial est de trois mois. Nous confirmons le périmètre et les accès avant tout paiement."
         },
         {
+          question: "Puis-je commencer sans engagement ?",
+          answer: `Oui. L’offre « on corrige pour vous » est une intervention payée une seule fois, à ${formatPrice(DONE_FOR_YOU_PRICE.eur, "eur")}, sans abonnement : nous appliquons les corrections prioritaires de votre audit (page FAQ locale, données structurées, annuaires), puis nous relançons l’analyse après 30 jours pour comparer le score avant/après. Le devis est confirmé après examen de votre site, avant tout paiement.`
+        },
+        {
           question: "Le plan de visibilité est-il vraiment gratuit ?",
           answer: "Oui, sans carte bancaire. L’analyse teste dix questions adaptées à votre entreprise sur les moteurs disponibles, affiche votre visibilité, les concurrents et jusqu’à trois premières opportunités. Vous êtes libre de réaliser les actions vous-même ou de demander un accompagnement."
         },
@@ -236,6 +240,10 @@ function getCopy(locale: Locale, stats: ReturnType<typeof getBenchmarkStats>) {
       {
         question: "What is included in AI Growth?",
         answer: `The ${growthPrice("ai_growth", "en")} per month pilot, excluding tax, includes a technical audit, agreed website fixes, two useful pages per month, weekly tracking on available AI engines and a monthly report. The initial commitment is three months. Scope and required access are confirmed before any payment.`
+      },
+      {
+        question: "Can I start without a commitment?",
+        answer: `Yes. The done-for-you fix is a one-time service at ${formatPrice(DONE_FOR_YOU_PRICE.usd, "usd")}, with no subscription: we implement the priority fixes from your audit (local FAQ page, structured data, listings), then re-scan after 30 days to compare the before/after score. The quote is confirmed after we review your site, before any payment.`
       },
       {
         question: "Is the visibility plan really free?",

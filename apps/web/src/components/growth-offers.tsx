@@ -6,7 +6,7 @@ import { Price } from "@/components/price";
 import { Button } from "@/components/ui/button";
 import { GROWTH_PLANS, growthPrice, type GrowthPlan } from "@/lib/growth";
 import { DEFAULT_CURRENCY_BY_LOCALE, localePath, type Locale } from "@/lib/i18n";
-import { PRICES } from "@/lib/pricing";
+import { DONE_FOR_YOU_PRICE, PRICES } from "@/lib/pricing";
 
 const COPY = {
   fr: {
@@ -34,6 +34,11 @@ const COPY = {
       },
     },
     fine: "Tarifs pilotes en euros hors taxes. Nous confirmons le périmètre, les accès nécessaires et le devis avant tout paiement. Les contenus et changements sont soumis à votre validation avant publication. Aucun volume de citations, de trafic ou de clients n’est garanti.",
+    starterEyebrow: "Pour commencer sans engagement",
+    starter: "Une première intervention, payée une seule fois.",
+    starterText: "Nous appliquons nous-mêmes les corrections prioritaires de votre audit : page FAQ locale, données structurées et annuaires. Nouvelle analyse après 30 jours, avec le score avant/après.",
+    starterNote: "en une fois · sans abonnement · devis confirmé avant tout paiement",
+    starterCta: "Demander la prise en charge",
     diyEyebrow: "Pro — le logiciel en autonomie",
     diy: "Vous préférez agir vous-même ?",
     diyText: "Le logiciel Pro reste disponible : rapport complet, contenus à adapter et suivi hebdomadaire. Les optimisations sont à votre charge.",
@@ -68,6 +73,11 @@ const COPY = {
       },
     },
     fine: "Pilot prices exclude tax and match the currency shown. We confirm scope, required access and a quote before any payment. You approve content and changes before publication. AI mentions, traffic and new customers are not guaranteed.",
+    starterEyebrow: "Start without a commitment",
+    starter: "A first fix, paid once.",
+    starterText: "We implement the priority fixes from your audit ourselves: local FAQ page, structured data and listings. Re-scan after 30 days with a before/after score.",
+    starterNote: "one-time · no subscription · quote confirmed before any payment",
+    starterCta: "Request the done-for-you fix",
     diyEyebrow: "Pro — the self-serve software",
     diy: "Prefer to do the work yourself?",
     diyText: "Pro software is still available: a full report, editable content and weekly tracking. You handle the improvements.",
@@ -130,7 +140,22 @@ export function GrowthOffers({ locale }: { locale: Locale }) {
         </div>
         <p className="mx-auto mt-6 max-w-4xl text-center text-sm leading-6 text-muted-foreground">{copy.fine}</p>
 
-        <div id="software" className="mt-12 grid gap-6 rounded-3xl border border-foreground/10 bg-white p-6 sm:p-8 lg:grid-cols-[1fr_auto] lg:items-center">
+        <div id="starter" className="mt-12 grid scroll-mt-24 gap-6 rounded-3xl border border-emerald-700/25 bg-emerald-50/60 p-6 sm:p-8 lg:grid-cols-[1fr_auto] lg:items-center">
+          <div>
+            <p className="text-sm font-extrabold uppercase tracking-[0.12em] text-emerald-700">{copy.starterEyebrow}</p>
+            <h3 className="mt-1 text-xl font-extrabold">{copy.starter}</h3>
+            <p className="mt-2 max-w-2xl text-sm leading-6 text-muted-foreground">{copy.starterText}</p>
+          </div>
+          <div className="flex flex-col items-start gap-3 lg:items-end">
+            <p className="text-4xl font-black tracking-[-0.05em]"><Price amounts={DONE_FOR_YOU_PRICE} /></p>
+            <p className="max-w-xs text-sm text-muted-foreground lg:text-right">{copy.starterNote}</p>
+            <Button asChild size="lg" className="h-auto min-h-12 whitespace-normal rounded-full py-3">
+              <Link href={localePath(locale, "/contact?plan=done-for-you")} data-analytics-event="select_content" data-analytics-label="pricing_done_for_you">{copy.starterCta}<ArrowRight className="ml-2 size-4 shrink-0" aria-hidden="true" /></Link>
+            </Button>
+          </div>
+        </div>
+
+        <div id="software" className="mt-6 grid gap-6 rounded-3xl border border-foreground/10 bg-white p-6 sm:p-8 lg:grid-cols-[1fr_auto] lg:items-center">
           <div>
             <p className="text-sm font-extrabold uppercase tracking-[0.12em] text-emerald-700">{copy.diyEyebrow}</p>
             <h3 className="text-xl font-extrabold">{copy.diy}</h3>
