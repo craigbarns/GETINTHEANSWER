@@ -10,6 +10,10 @@ Usage:
   export OUTREACH_API_KEY=...
   python3 scripts/scan_one.py --name "Somers Plumbers" \\
       --url https://somersplumbers.com --city "Phoenix, AZ" --industry Plumber
+
+French market (French report, /fr/dashboard link):
+  python3 scripts/scan_one.py --lang fr --name "Cuisines du Vieux-Port" \\
+      --url https://exemple.fr --city "Marseille" --industry "Rénovation de cuisine"
 """
 
 from __future__ import annotations
@@ -31,6 +35,7 @@ def main() -> int:
     parser.add_argument("--city", required=True, help='e.g. "Phoenix, AZ"')
     parser.add_argument("--industry", required=True, help='e.g. "Plumber"')
     parser.add_argument("--api", default=os.getenv("OUTREACH_API_BASE", DEFAULT_API))
+    parser.add_argument("--lang", choices=("en", "fr"), default="en", help="report language")
     parser.add_argument("--timeout", type=int, default=300)
     parser.add_argument("--json", action="store_true", help="machine-readable output only")
     args = parser.parse_args()
@@ -55,6 +60,7 @@ def main() -> int:
         "city": args.city,
         "industry": args.industry,
         "notify": False,
+        "locale": args.lang,
     }
 
     request = urllib.request.Request(
@@ -88,7 +94,8 @@ def main() -> int:
         )
         return 1
 
-    report_url = f"{args.api.rstrip('/')}/dashboard?site_id={result['site_id']}"
+    dashboard_path = "/fr/dashboard" if args.lang == "fr" else "/dashboard"
+    report_url = f"{args.api.rstrip('/')}{dashboard_path}?site_id={result['site_id']}"
     payload = {
         "company": args.name,
         "city": args.city,
