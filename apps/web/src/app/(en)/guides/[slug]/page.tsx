@@ -170,6 +170,12 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
             Find out in minutes: We ask ChatGPT, Claude and Perplexity the questions your customers ask, and score your visibility against your competitors. Free, no credit card.
           </p>
           <HeroForm />
+          <p className="mt-5 text-sm leading-6 text-emerald-800">
+            Want a quick answer first?{" "}
+            <Link className="font-bold underline underline-offset-4" href="/tools/ai-chat">Ask ChatGPT about your business</Link>
+            {" "}or{" "}
+            <Link className="font-bold underline underline-offset-4" href="/tools/aeo-audit">check whether your site is citation-worthy</Link>.
+          </p>
         </section>
 
         <section className="mt-14">

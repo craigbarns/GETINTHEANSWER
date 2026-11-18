@@ -366,9 +366,15 @@ export default async function IndustryCityPage({
           <p className="mt-3 text-sm leading-6 text-muted-foreground">
             Set your <code className="rounded bg-white px-1.5 py-0.5 text-xs font-bold">addressLocality</code> to &quot;{city.name}&quot; and <code className="rounded bg-white px-1.5 py-0.5 text-xs font-bold">addressRegion</code> to &quot;{city.stateCode}&quot;. Ensure your phone number matches your Google Business Profile.
           </p>
-          <div className="mt-5 flex gap-4">
+          <div className="mt-5 flex flex-wrap gap-x-6 gap-y-3">
             <Link className="text-sm font-extrabold text-emerald-700 hover:underline" href="/tools/schema-generator">
               Generate free schema with our tool →
+            </Link>
+            <Link className="text-sm font-extrabold text-emerald-700 hover:underline" href="/tools/ai-chat">
+              Ask ChatGPT about your business →
+            </Link>
+            <Link className="text-sm font-extrabold text-emerald-700 hover:underline" href="/tools/aeo-audit">
+              Check if your site is citation-worthy →
             </Link>
           </div>
         </section>

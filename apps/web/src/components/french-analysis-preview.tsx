@@ -55,9 +55,14 @@ export function FrenchAnalysisPreview() {
               </Link>
             </Button>
           </div>
-          <Link className="mt-3 block text-xs font-semibold text-emerald-700 hover:underline" href="/fr/sample-report">
-            Voir un exemple de rapport en français →
-          </Link>
+          <div className="mt-3 flex flex-wrap gap-x-5 gap-y-2">
+            <Link className="text-xs font-semibold text-emerald-700 hover:underline" href="/fr/tools/ai-chat" data-analytics-event="select_content" data-analytics-label="french_example_ai_chat">
+              Demander à ChatGPT s’il vous cite →
+            </Link>
+            <Link className="text-xs font-semibold text-emerald-700 hover:underline" href="/fr/sample-report">
+              Voir un exemple de rapport en français →
+            </Link>
+          </div>
         </div>
       </div>
     </div>

@@ -81,7 +81,7 @@ function getCopy(locale: Locale, stats: ReturnType<typeof getBenchmarkStats>) {
       proofCity: "Étude GetInTheAnswer",
       proofCountry: " (États-Unis)",
       proofNamed: (count: number) => `${count} noms d’entreprises relevés dans ces réponses.`,
-      proofFoot: "Vérifiez si les IA citent votre entreprise dans votre ville.",
+      proofFoot: "Demandez à ChatGPT s’il cite votre entreprise dans votre ville",
       measured: (date: string) => `Mesuré le ${date}`,
       statsLabel: "Ce que montre notre étude",
       stats: stats
@@ -184,7 +184,7 @@ function getCopy(locale: Locale, stats: ReturnType<typeof getBenchmarkStats>) {
     proofCity: "GetInTheAnswer study",
     proofCountry: "",
     proofNamed: (count: number) => `${count} business names recorded in these responses.`,
-    proofFoot: "Check whether AI engines name your business in your city.",
+    proofFoot: "Ask ChatGPT whether it names your business in your city",
     measured: (date: string) => `Measured on ${date}`,
     statsLabel: "What our study found",
     stats: stats
@@ -446,7 +446,7 @@ export function HomePage({ locale }: { locale: Locale }) {
 
                     <div className="mt-5 rounded-2xl border border-amber-200 bg-amber-50 p-4">
                       <p className="font-extrabold text-amber-900">{copy.proofNamed(scan.businesses.length)}</p>
-                      <p className="mt-1 text-sm leading-6 text-amber-900/75">{copy.proofFoot}</p>
+                      <Link className="mt-1 inline-flex items-center gap-1 text-sm font-semibold leading-6 text-amber-900 underline decoration-amber-900/30 underline-offset-4 hover:decoration-amber-900" href={localePath(locale, "/tools/ai-chat")} data-analytics-event="select_content" data-analytics-label="hero_proof_ai_chat">{copy.proofFoot}<ArrowRight className="size-3.5 shrink-0" aria-hidden="true" /></Link>
                     </div>
                     <p className="mt-3 text-xs font-semibold text-muted-foreground">{copy.measured(scanDate(scan.scannedAt, locale))}</p>
                   </div>
@@ -552,7 +552,7 @@ export function HomePage({ locale }: { locale: Locale }) {
                 const Icon = stepIcons[index];
                 return (
                   <article className="group relative overflow-hidden rounded-3xl border border-foreground/10 bg-[#f8f8f3] p-7 transition-transform hover:-translate-y-1" key={title}>
-                    <span className="absolute right-6 top-6 text-xs font-black uppercase tracking-[0.14em] text-emerald-700">{copy.step} 0{index + 1}</span>
+                    <span className="absolute right-6 top-6 text-xs font-black uppercase tracking-[0.14em] text-emerald-700">{`${copy.step} ${String(index + 1).padStart(2, "0")}`}</span>
                     <span className="relative flex size-12 items-center justify-center rounded-2xl bg-primary text-primary-foreground shadow-md">
                       <Icon className="size-5" aria-hidden="true" />
                     </span>
@@ -644,7 +644,7 @@ export function HomePage({ locale }: { locale: Locale }) {
           <section className="border-t border-foreground/8 bg-white py-14" aria-labelledby="contractor-seo-heading">
             <div className="mx-auto max-w-3xl px-5 sm:px-8">
               <h2 id="contractor-seo-heading" className="text-2xl font-extrabold tracking-[-0.03em]">
-                Contractor SEO by city
+                Which contractors do AI engines recommend in your city?
               </h2>
               <p className="mt-3 text-foreground/75">
                 How AI engines answer &ldquo;best contractor&rdquo; questions in each metro — measured across ChatGPT, Claude, Gemini and Perplexity.

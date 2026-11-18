@@ -101,6 +101,11 @@ Method, stated plainly so it can be checked:
   entreprise fictive.
 - [Agences](${SITE_URL}/fr/agency): offre pour agences et multi-établissements.
 - [Contact](${SITE_URL}/fr/contact): demande agence ou prise en charge complète.
+- [Tarifs](${SITE_URL}/fr/pricing): toutes les offres en euros.
+- [ChatGPT recommande-t-il votre entreprise ?](${SITE_URL}/fr/tools/ai-chat):
+  question posée en direct à ChatGPT, gratuite et sans inscription.
+- [Audit AEO gratuit](${SITE_URL}/fr/tools/aeo-audit): votre site est-il
+  citable par les IA ?
 
 ## Measured results by city
 
@@ -112,12 +117,18 @@ ${guideLines.join("\n")}
 
 ## Tools
 
+- [Ask ChatGPT about your business](${SITE_URL}/tools/ai-chat): free, no signup.
+  Enter a business, city and trade; ChatGPT answers the question a customer
+  would ask, live, so you can see whether it names that business.
+- [AEO audit](${SITE_URL}/tools/aeo-audit): free on-site audit of whether a web
+  page is easy for AI engines to read and cite, graded A to F with fixes.
 - [LocalBusiness schema generator](${SITE_URL}/tools/schema-generator): free, no
   account, produces Schema.org markup for a local business.
 
 ## Start here
 
 - [Run a free scan](${SITE_URL}/onboarding)
+- [Pricing](${SITE_URL}/pricing): every plan on one page.
 - [All industries and cities](${SITE_URL}/ai-seo-for)
 - [Agencies and multi-location](${SITE_URL}/agency)
 - [Publisher and legal information](${SITE_URL}/legal): ${SITE_NAME} is published
