@@ -47,7 +47,7 @@ export default async function OpengraphImage({ params }: { params: Promise<{ slu
               border: "1px solid rgba(190, 242, 100, 0.3)",
             }}
           >
-            {readingMinutes} min read · Guide
+            {`${readingMinutes} min read · Guide`}
           </div>
         </div>
 
